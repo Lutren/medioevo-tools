@@ -31,9 +31,9 @@ COMMANDS = [
         "private": False,
     },
     {
-        "name": "argus-npm-ci",
+        "name": "argus-install-dev-deps",
         "cwd": "apps/commercial/argus-desktop",
-        "command": ["npm", "ci", "--no-audit", "--no-fund"],
+        "command": ["npm", "install", "--include=dev", "--no-audit", "--no-fund"],
         "private": False,
     },
     {
