@@ -7,14 +7,68 @@ from _common import ROOT, add_common_args, print_json, run_command, validate_roo
 
 COMMANDS = [
     {
+        "name": "secret-scan",
+        "cwd": ".",
+        "command": ["python", "tools/release/scan_secrets.py"],
+        "private": False,
+    },
+    {
+        "name": "release-free-dev-dry-run",
+        "cwd": ".",
+        "command": ["python", "tools/release/package_free_dev.py"],
+        "private": False,
+    },
+    {
+        "name": "release-paid-apps-dry-run",
+        "cwd": ".",
+        "command": ["python", "tools/release/package_paid_apps.py"],
+        "private": False,
+    },
+    {
+        "name": "product-manifest",
+        "cwd": ".",
+        "command": ["python", "tools/release/product_manifest.py"],
+        "private": False,
+    },
+    {
+        "name": "argus-npm-ci",
+        "cwd": "apps/commercial/argus-desktop",
+        "command": ["npm", "ci", "--no-audit", "--no-fund"],
+        "private": False,
+    },
+    {
+        "name": "argus-typecheck",
+        "cwd": "apps/commercial/argus-desktop",
+        "command": ["npm", "run", "typecheck"],
+        "private": False,
+    },
+    {
         "name": "argus-build",
-        "cwd": "-=MEDIOEVO=-/-=LIBROS/claudio/apps/argus_desktop",
+        "cwd": "apps/commercial/argus-desktop",
         "command": ["npm", "run", "build"],
         "private": False,
     },
     {
+        "name": "argus-audit-high",
+        "cwd": "apps/commercial/argus-desktop",
+        "command": ["npm", "audit", "--omit=dev", "--audit-level=high"],
+        "private": False,
+    },
+    {
         "name": "asistente-public-safe-check",
-        "cwd": "-=MEDIOEVO=-/-=LIBROS/claudio/products/asistente_negocio",
+        "cwd": "apps/commercial/asistente-negocio",
+        "command": ["npm", "run", "check"],
+        "private": False,
+    },
+    {
+        "name": "asistente-audit-high",
+        "cwd": "apps/commercial/asistente-negocio",
+        "command": ["npm", "audit", "--omit=dev", "--audit-level=high"],
+        "private": False,
+    },
+    {
+        "name": "flujocrm-check",
+        "cwd": "apps/commercial/flujocrm",
         "command": ["npm", "run", "check"],
         "private": False,
     },

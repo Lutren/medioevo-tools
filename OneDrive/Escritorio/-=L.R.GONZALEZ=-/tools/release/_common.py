@@ -30,6 +30,7 @@ DENY_SUBSTRINGS = [
     "/_archive",
     "/_archivar",
     "/apps/residueos/runtime/",
+    "/packages/open-dev/residueos/runtime/",
     "/.claw/",
     "/.claude/",
     "/.wrangler/",
@@ -194,61 +195,113 @@ class Product:
 PRODUCTS = [
     Product(
         name="residueos",
-        classification="OPEN_OR_COMMERCIAL_CANDIDATE",
-        source="apps/residueos",
+        classification="OPEN",
+        source="packages/open-dev/residueos",
         lane="free-dev",
-        include=("apps/residueos",),
-        notes="Local AI action gate MVP; thresholds remain DEMO_ONLY until calibrated with real data.",
+        include=("packages/open-dev/residueos",),
+        notes="MIT local AI action gate MVP; thresholds remain DEMO_ONLY until calibrated with real data.",
     ),
     Product(
         name="obsai-core",
-        classification="OPEN_CANDIDATE",
-        source="packages/obsai-core",
+        classification="OPEN",
+        source="packages/open-dev/obsai-core",
         lane="free-dev",
-        include=("packages/obsai-core",),
-        notes="Dependency-free operational core; no research or consciousness product claims.",
+        include=("packages/open-dev/obsai-core",),
+        notes="MIT dependency-free operational core; no research or consciousness product claims.",
     ),
     Product(
         name="observacionismo-gate",
-        classification="OPEN_CANDIDATE",
-        source="-=MEDIOEVO=-/-=LIBROS/claudio/sdk",
+        classification="OPEN",
+        source="packages/open-dev/observacionismo-gate",
         lane="free-dev",
-        include=("-=MEDIOEVO=-/-=LIBROS/claudio/sdk",),
-        notes="Small SDK candidate; verify license and tests before publish.",
+        include=("packages/open-dev/observacionismo-gate",),
+        notes="MIT SDK candidate extracted from Claudio without runtime state.",
     ),
     Product(
         name="claudio-os-blueprint",
-        classification="OPEN_CANDIDATE",
-        source="PRODUCTOS_MEDIOEVO/claudio_os_blueprint",
+        classification="OPEN",
+        source="packages/open-dev/claudio-os-blueprint",
         lane="free-dev",
-        include=("PRODUCTOS_MEDIOEVO/claudio_os_blueprint",),
+        include=("packages/open-dev/claudio-os-blueprint",),
         notes="Blueprint only; do not claim finished ISO.",
+    ),
+    Product(
+        name="gemma-observacionismo-cleanup",
+        classification="OPEN",
+        source="packages/open-dev/gemma-observacionismo-cleanup",
+        lane="free-dev",
+        include=("packages/open-dev/gemma-observacionismo-cleanup",),
+        notes="MIT cleanup/observation toolkit with synthetic fixtures only; no weights, prompts or Claudio runtime.",
+    ),
+    Product(
+        name="argus-desktop",
+        classification="COMMERCIAL_OR_INTERNAL",
+        source="apps/commercial/argus-desktop",
+        lane="paid-apps",
+        include=("apps/commercial/argus-desktop",),
+        notes="Commercial/internal desktop app; generated artifacts denied.",
     ),
     Product(
         name="asistente-negocio",
         classification="COMMERCIAL",
-        source="-=MEDIOEVO=-/-=LIBROS/claudio/products/asistente_negocio",
+        source="apps/commercial/asistente-negocio",
         lane="paid-apps",
-        include=("-=MEDIOEVO=-/-=LIBROS/claudio/products/asistente_negocio",),
+        include=("apps/commercial/asistente-negocio",),
         notes="Commercial app candidate.",
     ),
     Product(
         name="flujocrm",
         classification="COMMERCIAL",
-        source="-=MEDIOEVO=-/-=LIBROS/claudio/products/crm",
+        source="apps/commercial/flujocrm",
         lane="paid-apps",
-        include=("-=MEDIOEVO=-/-=LIBROS/claudio/products/crm",),
+        include=("apps/commercial/flujocrm",),
         notes="Commercial app candidate.",
     ),
     Product(
         name="mini-office",
-        classification="COMMERCIAL_OR_OPEN_CORE",
-        source="-=MEDIOEVO=-/-=LIBROS/claudio/mini_office",
+        classification="COMMERCIAL",
+        source="apps/commercial/mini-office",
         lane="paid-apps",
-        include=("-=MEDIOEVO=-/-=LIBROS/claudio/mini_office",),
+        include=("apps/commercial/mini-office",),
         notes="Needs real smoke tests before release.",
     ),
 ]
+
+
+def collect_product_files(product: Product) -> tuple[list[Path], list[tuple[str, str]], list[tuple[str, str]]]:
+    allowed: list[Path] = []
+    blocked: list[tuple[str, str]] = []
+    excluded: list[tuple[str, str]] = []
+    for include in product.include:
+        base = ROOT / include
+        if not base.exists():
+            blocked.append((include, "missing"))
+            continue
+        for root, dirs, files in os.walk(base):
+            root_path = Path(root)
+            kept_dirs = []
+            for name in dirs:
+                path = root_path / name
+                if is_private_game(path):
+                    blocked.append((rel(path), "private_game"))
+                elif is_denied(path):
+                    excluded.append((rel(path), "denylist"))
+                elif is_secret_named(path):
+                    blocked.append((rel(path), "secret_like_name"))
+                else:
+                    kept_dirs.append(name)
+            dirs[:] = kept_dirs
+            for name in files:
+                path = root_path / name
+                if is_private_game(path):
+                    blocked.append((rel(path), "private_game"))
+                elif is_denied(path):
+                    excluded.append((rel(path), "denylist"))
+                elif is_secret_named(path):
+                    blocked.append((rel(path), "secret_like_name"))
+                else:
+                    allowed.append(path)
+    return allowed, blocked, excluded
 
 
 def product_by_name(name: str) -> Product:

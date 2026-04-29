@@ -7,15 +7,63 @@ from _common import ROOT, add_common_args, print_json, run_command, validate_roo
 
 COMMANDS = [
     {
+        "name": "obsai-core-pytest",
+        "cwd": "packages/open-dev/obsai-core",
+        "command": ["python", "-m", "pytest", "tests", "-q"],
+        "private": False,
+    },
+    {
+        "name": "residueos-pytest",
+        "cwd": "packages/open-dev/residueos",
+        "command": ["python", "-m", "pytest", "tests", "-q"],
+        "private": False,
+    },
+    {
+        "name": "gemma-cleanup-pytest",
+        "cwd": "packages/open-dev/gemma-observacionismo-cleanup",
+        "command": ["python", "-m", "pytest", "tests", "-q"],
+        "private": False,
+    },
+    {
+        "name": "observacionismo-gate-import",
+        "cwd": "packages/open-dev/observacionismo-gate",
+        "command": ["python", "-c", "import observacionismo_gate; print(observacionismo_gate.__name__)"],
+        "private": False,
+    },
+    {
+        "name": "mini-office-pytest",
+        "cwd": "apps/commercial/mini-office",
+        "command": ["python", "-m", "pytest", "tests", "-q"],
+        "private": False,
+    },
+    {
         "name": "claudio-pytest",
         "cwd": "-=MEDIOEVO=-/-=LIBROS/claudio",
         "command": ["python", "-m", "pytest", "tests/", "-x", "--quiet"],
         "private": False,
     },
     {
-        "name": "argus-typecheck",
-        "cwd": "-=MEDIOEVO=-/-=LIBROS/claudio/apps/argus_desktop",
-        "command": ["npm", "run", "typecheck"],
+        "name": "argus-npm-ci-dry-run",
+        "cwd": "apps/commercial/argus-desktop",
+        "command": ["npm", "ci", "--dry-run", "--ignore-scripts", "--no-audit", "--no-fund"],
+        "private": False,
+    },
+    {
+        "name": "asistente-negocio-check",
+        "cwd": "apps/commercial/asistente-negocio",
+        "command": ["npm", "run", "check"],
+        "private": False,
+    },
+    {
+        "name": "flujocrm-check",
+        "cwd": "apps/commercial/flujocrm",
+        "command": ["npm", "run", "check"],
+        "private": False,
+    },
+    {
+        "name": "hormiguero-flask-smoke",
+        "cwd": ".",
+        "command": ["python", "tools/release/hormiguero_smoke.py"],
         "private": False,
     },
     {
