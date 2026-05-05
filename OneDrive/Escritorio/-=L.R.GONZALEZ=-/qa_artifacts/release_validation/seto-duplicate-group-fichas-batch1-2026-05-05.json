@@ -1,0 +1,201 @@
+{
+  "schema": "medioevo.seto_duplicate_group_fichas.v1",
+  "generated_at_utc": "2026-05-05T08:21:51Z",
+  "status": "REVIEW_NO_DELETE_NO_MOVE",
+  "source_selector_report": "docs/intake/SETO_EXACT_DUPLICATE_CANDIDATES_2026-05-05.md",
+  "source_selector_json": "qa_artifacts/release_validation/seto-exact-duplicate-candidates-2026-05-05.json",
+  "source_manifest_csv": "qa_artifacts/release_validation/global-curador-file-manifest-2026-05-05.csv",
+  "batch_report": "docs/intake/SETO_DUPLICATE_GROUP_FICHAS_BATCH1_2026-05-05.md",
+  "policy": {
+    "action_gate": "REVIEW",
+    "exact_hash_state": "CERTEZA",
+    "canonical_choice_state": "INFERENCIA",
+    "no_delete": true,
+    "no_move": true,
+    "no_external_action": true,
+    "requires_owner_confirmation": true,
+    "requires_hash_refresh_before_delete": true
+  },
+  "summary": {
+    "fichas": 7,
+    "total_files_in_groups": 32,
+    "proposed_canonical_paths": 7,
+    "candidate_duplicate_paths": 25,
+    "approved_deletions": 0,
+    "review_groups": 7
+  },
+  "fichas": [
+    {
+      "id": "SETO-DUP-B1-001",
+      "lane": "wave_fc_demo_inputs",
+      "name": "sales_summary.csv",
+      "sha256": "88dc4d2132a2b9e2b2ec1f63d3aee4179119589d7bdac448392c08e83278747b",
+      "size_bytes": 60,
+      "group_count": 6,
+      "exact_hash_state": "CERTEZA",
+      "canonical_choice_state": "INFERENCIA",
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "proposed_canonical_rel": "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_fc_client_demos/wave_fc_client_demo_2026-04-30/inputs/sales_summary.csv",
+      "candidate_duplicate_rels": [
+        "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_fc_client_demos/wave_fc_evidence_pack_2026-05-01/inputs/sales_summary.csv",
+        "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/smoke_gate_2026-04-30/demo_packages/client_demo/inputs/sales_summary.csv",
+        "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/wave_wabi_gate_2026-05-01/demo_packages/client_demo/inputs/sales_summary.csv",
+        "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/wave_wabi_release_gate_2026-04-30-public-nrp-refresh/demo_packages/client_demo/inputs/sales_summary.csv",
+        "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/wave_wabi_release_gate_2026-04-30/demo_packages/client_demo/inputs/sales_summary.csv"
+      ],
+      "falsifiers": [
+        "any file hash differs from the ficha hash",
+        "Wave FC owner marks an evidence-pack copy canonical",
+        "a packaged demo requires self-contained duplicated input files"
+      ]
+    },
+    {
+      "id": "SETO-DUP-B1-002",
+      "lane": "claudio_os_blueprint_examples",
+      "name": "decision_safe.json",
+      "sha256": "746f5a28718df9c58f65665ad753df1062c6f6cf2b7240b14eb7f451f25797fc",
+      "size_bytes": 83,
+      "group_count": 4,
+      "exact_hash_state": "CERTEZA",
+      "canonical_choice_state": "INFERENCIA",
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "proposed_canonical_rel": "packages/open-dev/claudio-os-blueprint/examples/decision_safe.json",
+      "candidate_duplicate_rels": [
+        "-=MEDIOEVO=-/-=LIBROS/claudio/_workspace/claudio_os_blueprint/examples/decision_safe.json",
+        "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/claudio_os_build/staging/claudio_os_blueprint/examples/decision_safe.json",
+        "PRODUCTOS_MEDIOEVO/claudio_os_blueprint/examples/decision_safe.json"
+      ],
+      "falsifiers": [
+        "any file hash differs from the ficha hash",
+        "Claudio OS owner marks workspace, staging or PRODUCTOS copy canonical",
+        "staging copy is required for a reproducible build handoff"
+      ]
+    },
+    {
+      "id": "SETO-DUP-B1-003",
+      "lane": "claudio_os_blueprint_examples",
+      "name": "decision_publish_requires_approval.json",
+      "sha256": "7c715c9f5a758d429505419b690b6cb191191b42517f7ac0d1bf3a8c5d323ea4",
+      "size_bytes": 101,
+      "group_count": 4,
+      "exact_hash_state": "CERTEZA",
+      "canonical_choice_state": "INFERENCIA",
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "proposed_canonical_rel": "packages/open-dev/claudio-os-blueprint/examples/decision_publish_requires_approval.json",
+      "candidate_duplicate_rels": [
+        "-=MEDIOEVO=-/-=LIBROS/claudio/_workspace/claudio_os_blueprint/examples/decision_publish_requires_approval.json",
+        "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/claudio_os_build/staging/claudio_os_blueprint/examples/decision_publish_requires_approval.json",
+        "PRODUCTOS_MEDIOEVO/claudio_os_blueprint/examples/decision_publish_requires_approval.json"
+      ],
+      "falsifiers": [
+        "any file hash differs from the ficha hash",
+        "Claudio OS owner marks workspace, staging or PRODUCTOS copy canonical",
+        "staging copy is required for a reproducible build handoff"
+      ]
+    },
+    {
+      "id": "SETO-DUP-B1-004",
+      "lane": "asistente_negocio_packaging",
+      "name": "build-macos.sh",
+      "sha256": "1c07945efc4ea394fb091e88d7ac781330b9c8719b922846fb1f560c9d988ea8",
+      "size_bytes": 107,
+      "group_count": 2,
+      "exact_hash_state": "CERTEZA",
+      "canonical_choice_state": "INFERENCIA",
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "proposed_canonical_rel": "apps/commercial/asistente-negocio/packaging/build-macos.sh",
+      "candidate_duplicate_rels": [
+        "-=MEDIOEVO=-/-=LIBROS/claudio/products/asistente_negocio/packaging/build-macos.sh"
+      ],
+      "falsifiers": [
+        "any file hash differs from the ficha hash",
+        "commercial app owner keeps Claudio products tree as release source",
+        "macOS packaging is intentionally duplicated for customer handoff"
+      ]
+    },
+    {
+      "id": "SETO-DUP-B1-005",
+      "lane": "wave_fc_rollback_packs",
+      "name": "RESTORE.md",
+      "sha256": "956c5dfaafb60ae58739ee0efb188991930b7f7007a78e6e978faa18984706d6",
+      "size_bytes": 124,
+      "group_count": 10,
+      "exact_hash_state": "CERTEZA",
+      "canonical_choice_state": "INFERENCIA",
+      "action_gate": "REVIEW",
+      "decision": "REVIEW_RELEASE_EVIDENCE_BEFORE_DELETE",
+      "proposed_canonical_rel": "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_fc_client_demos/wave_fc_client_demo_2026-04-30/runs/20260430_042318_acme_case_2a9b713e65/rollback_pack/RESTORE.md",
+      "candidate_duplicate_rels": [
+        "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_fc_client_demos/wave_fc_evidence_pack_2026-05-01/runs/20260501_123821_acme_case_2a9b713e65/rollback_pack/RESTORE.md",
+        "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_fc_client_demos/wave_fc_evidence_pack_2026-05-01/runs/20260501_123821_operations_brief_d5f6877377/rollback_pack/RESTORE.md",
+        "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_function_collapse/docx_qa_smoke/runs/20260429_223453_wave_docx_smoke_source_ff7528fec4/rollback_pack/RESTORE.md",
+        "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_function_collapse/runs/20260429_221036_WAVE_DOCUMENT_COLLAPSE_CLI_2026-04-29_10a3dffc2a/rollback_pack/RESTORE.md",
+        "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/smoke_gate_2026-04-30/demo_packages/client_demo/runs/20260430_043030_acme_case_2a9b713e65/rollback_pack/RESTORE.md",
+        "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/wave_wabi_gate_2026-05-01/demo_packages/client_demo/runs/20260501_124009_acme_case_2a9b713e65/rollback_pack/RESTORE.md",
+        "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/wave_wabi_gate_2026-05-01/demo_packages/client_demo/runs/20260501_124009_operations_brief_336102c90d/rollback_pack/RESTORE.md",
+        "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/wave_wabi_release_gate_2026-04-30-public-nrp-refresh/demo_packages/client_demo/runs/20260430_045303_acme_case_2a9b713e65/rollback_pack/RESTORE.md",
+        "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/wave_wabi_release_gate_2026-04-30/demo_packages/client_demo/runs/20260430_043051_acme_case_2a9b713e65/rollback_pack/RESTORE.md"
+      ],
+      "falsifiers": [
+        "any file hash differs from the ficha hash",
+        "rollback pack is needed as immutable run evidence",
+        "release evidence map has not identified a canonical historical record"
+      ]
+    },
+    {
+      "id": "SETO-DUP-B1-006",
+      "lane": "claudio_os_blueprint_examples",
+      "name": "decision_browser_blocked.json",
+      "sha256": "044f93a31daebf3e243a3acfdb74156153830bd1309510f3540ef811f63a0a73",
+      "size_bytes": 125,
+      "group_count": 4,
+      "exact_hash_state": "CERTEZA",
+      "canonical_choice_state": "INFERENCIA",
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "proposed_canonical_rel": "packages/open-dev/claudio-os-blueprint/examples/decision_browser_blocked.json",
+      "candidate_duplicate_rels": [
+        "-=MEDIOEVO=-/-=LIBROS/claudio/_workspace/claudio_os_blueprint/examples/decision_browser_blocked.json",
+        "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/claudio_os_build/staging/claudio_os_blueprint/examples/decision_browser_blocked.json",
+        "PRODUCTOS_MEDIOEVO/claudio_os_blueprint/examples/decision_browser_blocked.json"
+      ],
+      "falsifiers": [
+        "any file hash differs from the ficha hash",
+        "Claudio OS owner marks workspace, staging or PRODUCTOS copy canonical",
+        "staging copy is required for a reproducible build handoff"
+      ]
+    },
+    {
+      "id": "SETO-DUP-B1-007",
+      "lane": "psi_archive_redundant_vault",
+      "name": "NEXT_SESSION_BRIEF.md",
+      "sha256": "5c7a951213069cd3b9c3c56a885a3144ef79154e46ce8b77a43c650579d8ec45",
+      "size_bytes": 244,
+      "group_count": 2,
+      "exact_hash_state": "CERTEZA",
+      "canonical_choice_state": "INFERENCIA",
+      "action_gate": "REVIEW",
+      "decision": "REPLACE_BY_FICHA_CANDIDATE_DELETE_AFTER_HASH",
+      "proposed_canonical_rel": "-=MEDIOEVO=-/-=LIBROS/-=CEREBRO=-/-=PSI=-/archive/templates/NEXT_SESSION_BRIEF.md",
+      "candidate_duplicate_rels": [
+        "-=MEDIOEVO=-/-=LIBROS/-=CEREBRO=-/-=PSI=-/archive/vault_redundante_2026-04-26/templates/NEXT_SESSION_BRIEF.md"
+      ],
+      "falsifiers": [
+        "any file hash differs from the ficha hash",
+        "PSI owner marks vault_redundante path as active handoff root",
+        "any session handoff points directly to the redundant vault copy"
+      ]
+    }
+  ],
+  "required_before_delete": [
+    "confirm owning lane and canonical source of truth",
+    "refresh SHA256 for every path",
+    "update DELETE_CANDIDATES.md with approved path-specific rows",
+    "run secret scan on touched docs/scripts",
+    "write DELETED_LOG only for actual deletion"
+  ]
+}

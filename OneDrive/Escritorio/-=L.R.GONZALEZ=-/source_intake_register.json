@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-05-05T07:36:17.106937+00:00",
+  "generated_at_utc": "2026-05-05T08:21:51Z",
   "workspace_root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
   "rules": [
     "Classify every new source before extracting or copying code.",
@@ -2735,6 +2735,93 @@
         "Local-agent lane continues Claudio-local implementation; SETO keeps write automation gated.",
         "SETO continues manifests, fichas, duplicate queues and cleanup evidence.",
         "No broad staging, cross-lane deletion or raw source canonization."
+      ]
+    }
+  ],
+  "seto_duplicate_group_fichas_passes": [
+    {
+      "date": "2026-05-05",
+      "status": "REVIEW_NO_DELETE_NO_MOVE",
+      "report": "docs/intake/SETO_DUPLICATE_GROUP_FICHAS_BATCH1_2026-05-05.md",
+      "json": "qa_artifacts/release_validation/seto-duplicate-group-fichas-batch1-2026-05-05.json",
+      "source_selector_json": "qa_artifacts/release_validation/seto-exact-duplicate-candidates-2026-05-05.json",
+      "artifact_hashes": {
+        "report": "DF05698941D331C0488ED778CA51BF67B907F6EDF98DEBDB005C7CED6BDED4B5",
+        "json": "34AE6CF2EE381EE4EA87FA0C518FFB97847F8AD2D875672979534401715EACA8"
+      },
+      "summary": {
+        "fichas": 7,
+        "total_files_in_groups": 32,
+        "proposed_canonical_paths": 7,
+        "candidate_duplicate_paths": 25,
+        "approved_deletions": 0,
+        "review_groups": 7
+      },
+      "policy": {
+        "action_gate": "REVIEW",
+        "exact_hash_state": "CERTEZA",
+        "canonical_choice_state": "INFERENCIA",
+        "no_delete": true,
+        "no_move": true,
+        "no_external_action": true,
+        "requires_owner_confirmation": true,
+        "requires_hash_refresh_before_delete": true
+      },
+      "fichas": [
+        {
+          "id": "SETO-DUP-B1-001",
+          "lane": "wave_fc_demo_inputs",
+          "sha256": "88dc4d2132a2b9e2b2ec1f63d3aee4179119589d7bdac448392c08e83278747b",
+          "files_in_group": 6,
+          "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION"
+        },
+        {
+          "id": "SETO-DUP-B1-002",
+          "lane": "claudio_os_blueprint_examples",
+          "sha256": "746f5a28718df9c58f65665ad753df1062c6f6cf2b7240b14eb7f451f25797fc",
+          "files_in_group": 4,
+          "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION"
+        },
+        {
+          "id": "SETO-DUP-B1-003",
+          "lane": "claudio_os_blueprint_examples",
+          "sha256": "7c715c9f5a758d429505419b690b6cb191191b42517f7ac0d1bf3a8c5d323ea4",
+          "files_in_group": 4,
+          "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION"
+        },
+        {
+          "id": "SETO-DUP-B1-004",
+          "lane": "asistente_negocio_packaging",
+          "sha256": "1c07945efc4ea394fb091e88d7ac781330b9c8719b922846fb1f560c9d988ea8",
+          "files_in_group": 2,
+          "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION"
+        },
+        {
+          "id": "SETO-DUP-B1-005",
+          "lane": "wave_fc_rollback_packs",
+          "sha256": "956c5dfaafb60ae58739ee0efb188991930b7f7007a78e6e978faa18984706d6",
+          "files_in_group": 10,
+          "decision": "REVIEW_RELEASE_EVIDENCE_BEFORE_DELETE"
+        },
+        {
+          "id": "SETO-DUP-B1-006",
+          "lane": "claudio_os_blueprint_examples",
+          "sha256": "044f93a31daebf3e243a3acfdb74156153830bd1309510f3540ef811f63a0a73",
+          "files_in_group": 4,
+          "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION"
+        },
+        {
+          "id": "SETO-DUP-B1-007",
+          "lane": "psi_archive_redundant_vault",
+          "sha256": "5c7a951213069cd3b9c3c56a885a3144ef79154e46ce8b77a43c650579d8ec45",
+          "files_in_group": 2,
+          "decision": "REPLACE_BY_FICHA_CANDIDATE_DELETE_AFTER_HASH"
+        }
+      ],
+      "decisions": [
+        "No deletion, movement, extraction or publication executed.",
+        "Exact hash equality is CERTEZA; canonical choice remains INFERENCIA.",
+        "Every group remains REVIEW until owner confirmation, refreshed SHA256 and ActionGate approval."
       ]
     }
   ]

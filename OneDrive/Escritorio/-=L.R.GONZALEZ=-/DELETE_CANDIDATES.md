@@ -324,3 +324,32 @@ Policy:
   low-risk set.
 - Every listed group still needs canonical confirmation, ficha, full SHA256,
   register update and ActionGate `APPROVE` before deletion.
+
+## SETO Duplicate Group Fichas Batch 1 2026-05-05
+
+This is a review queue, not deletion approval.
+
+Evidence:
+
+- `docs\intake\SETO_DUPLICATE_GROUP_FICHAS_BATCH1_2026-05-05.md`
+- `qa_artifacts\release_validation\seto-duplicate-group-fichas-batch1-2026-05-05.json`
+
+Review rows:
+
+| id | lane | files in group | duplicate candidates | gate | current decision |
+|---|---|---:|---:|---|---|
+| `SETO-DUP-B1-001` | Wave FC demo input `sales_summary.csv` | 6 | 5 | `REVIEW` | `CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION` |
+| `SETO-DUP-B1-002` | Claudio OS `decision_safe.json` | 4 | 3 | `REVIEW` | `CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION` |
+| `SETO-DUP-B1-003` | Claudio OS `decision_publish_requires_approval.json` | 4 | 3 | `REVIEW` | `CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION` |
+| `SETO-DUP-B1-004` | Asistente `build-macos.sh` | 2 | 1 | `REVIEW` | `CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION` |
+| `SETO-DUP-B1-005` | Wave FC rollback `RESTORE.md` | 10 | 9 | `REVIEW` | `REVIEW_RELEASE_EVIDENCE_BEFORE_DELETE` |
+| `SETO-DUP-B1-006` | Claudio OS `decision_browser_blocked.json` | 4 | 3 | `REVIEW` | `CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION` |
+| `SETO-DUP-B1-007` | PSI `NEXT_SESSION_BRIEF.md` redundant vault copy | 2 | 1 | `REVIEW` | `REPLACE_BY_FICHA_CANDIDATE_DELETE_AFTER_HASH` |
+
+Required before any path can become `DELETE_APPROVED_AFTER_HASH`:
+
+- Owning lane confirms canonical root.
+- SHA256 is refreshed for every path in the group.
+- Candidate path is recorded individually with replacement/canonical path.
+- Secret scan on touched docs/scripts reports no unallowed findings.
+- `DELETED_LOG` is written only after actual deletion.

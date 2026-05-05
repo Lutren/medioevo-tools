@@ -469,3 +469,44 @@ Decision:
 - `BLOQUEADO`/excluded: `E:\`, `Downloads`, Desktop, evidence/staging folders,
   tool/vendor/offensive paths, releases, envs, archives, private markers,
   secret-like names and boilerplate files.
+
+## SETO Duplicate Group Fichas Batch 1 2026-05-05
+
+No files deleted. This pass adds technical fichas for the first exact-duplicate
+groups selected by the SETO selector.
+
+Evidence:
+
+- Batch report:
+  `docs\intake\SETO_DUPLICATE_GROUP_FICHAS_BATCH1_2026-05-05.md`
+- Batch JSON:
+  `qa_artifacts\release_validation\seto-duplicate-group-fichas-batch1-2026-05-05.json`
+
+Counts:
+
+| metric | value |
+|---|---:|
+| fichas | 7 |
+| files represented | 32 |
+| proposed canonical paths | 7 |
+| candidate duplicate paths | 25 |
+| approved deletions | 0 |
+
+Fichas:
+
+| id | lane | short hash | gate | deletion state |
+|---|---|---|---|---|
+| `SETO-DUP-B1-001` | Wave FC demo inputs | `88dc4d2132a2b9e2` | `REVIEW` | pending owner confirmation |
+| `SETO-DUP-B1-002` | Claudio OS blueprint examples | `746f5a28718df9c5` | `REVIEW` | pending owner confirmation |
+| `SETO-DUP-B1-003` | Claudio OS blueprint examples | `7c715c9f5a758d42` | `REVIEW` | pending owner confirmation |
+| `SETO-DUP-B1-004` | Asistente Negocio packaging | `1c07945efc4ea394` | `REVIEW` | pending owner confirmation |
+| `SETO-DUP-B1-005` | Wave FC rollback packs | `956c5dfaafb60ae5` | `REVIEW` | release evidence review required |
+| `SETO-DUP-B1-006` | Claudio OS blueprint examples | `044f93a31daebf3e` | `REVIEW` | pending owner confirmation |
+| `SETO-DUP-B1-007` | PSI archive redundant vault | `5c7a951213069cd3` | `REVIEW` | pending PSI handoff check |
+
+Decision:
+
+- SHA256 match is recorded as `CERTEZA`.
+- Canonical path choice remains `INFERENCIA`.
+- `DELETE_APPROVED_AFTER_HASH` remains blocked until refreshed SHA256,
+  owner confirmation, `DELETE_CANDIDATES.md` path rows and ActionGate approval.

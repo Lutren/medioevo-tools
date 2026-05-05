@@ -468,3 +468,40 @@ Decisions:
 - SETO owns manifests, fichas, duplicate queues, ActionGate, WitnessLog and
   cleanup evidence.
 - No broad staging, no cross-lane deletion and no raw source canonization.
+
+## SETO Duplicate Group Fichas Batch 1 2026-05-05
+
+This pass converted the first selected exact-duplicate groups into fichas. It
+did not delete, move, extract or publish files.
+
+Artifacts:
+
+- `docs\intake\SETO_DUPLICATE_GROUP_FICHAS_BATCH1_2026-05-05.md`
+- `qa_artifacts\release_validation\seto-duplicate-group-fichas-batch1-2026-05-05.json`
+- Source selector:
+  `qa_artifacts\release_validation\seto-exact-duplicate-candidates-2026-05-05.json`
+
+Artifact hashes:
+
+| artifact | sha256 |
+|---|---|
+| `SETO_DUPLICATE_GROUP_FICHAS_BATCH1_2026-05-05.md` | `DF05698941D331C0488ED778CA51BF67B907F6EDF98DEBDB005C7CED6BDED4B5` |
+| `seto-duplicate-group-fichas-batch1-2026-05-05.json` | `34AE6CF2EE381EE4EA87FA0C518FFB97847F8AD2D875672979534401715EACA8` |
+
+Summary:
+
+- Status: `REVIEW_NO_DELETE_NO_MOVE`.
+- Fichas created: `7`.
+- Files represented by the groups: `32`.
+- Proposed canonical paths: `7`.
+- Candidate duplicate paths: `25`.
+- Approved deletions: `0`.
+
+Boundaries:
+
+- Exact-hash equality is `CERTEZA`.
+- Canonical choice remains `INFERENCIA`.
+- ActionGate remains `REVIEW`.
+- Wave FC rollback packs require release-evidence mapping before cleanup.
+- Claudio OS, Asistente and PSI groups require owner confirmation before any
+  file action.
