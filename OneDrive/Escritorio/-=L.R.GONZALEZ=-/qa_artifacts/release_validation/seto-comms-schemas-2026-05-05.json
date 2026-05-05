@@ -1,0 +1,29 @@
+{
+  "schema": "medioevo.seto_comms_schemas.v1",
+  "generated_at_utc": "2026-05-05T10:22:00Z",
+  "status": "SCHEMAS_CREATED_REVIEW_VALIDATED",
+  "artifacts": [
+    "COMMS/README.md",
+    "COMMS/schemas/observation-envelope.schema.json",
+    "COMMS/schemas/action-gate.schema.json",
+    "COMMS/schemas/witness-log-event.schema.json",
+    "qa_artifacts/release_validation/seto-comms-schemas-scan-2026-05-05.json"
+  ],
+  "artifact_hashes": {
+    "readme": "373546657C351452C33371DDDF431084FA0A576D3CD595C1ABDDDD6C66F8D919",
+    "observation_envelope_schema": "A5884ABCBD1127AFCA1835C6B8543380EDBF3C875144611125FA9E856D1B6B96",
+    "action_gate_schema": "B0EE69AA4AFDD4444EFDBFD69C03966FFAA9F22C2CE10449080101426847AB7C",
+    "witness_log_event_schema": "38ADBB03F56C506D2DAB419E43252CD4B8B179FCB800A8B93088EA9C34202ED1",
+    "scan_result": "0D5731B95504E6A24BC8A0BA51BD40C5015D7851D04D589600224C85A7C9AD03"
+  },
+  "validation": {
+    "json_parse": "PASS",
+    "contract_checks": "PASS",
+    "secret_scan": "PASS"
+  },
+  "action_gate": {
+    "decision": "REVIEW",
+    "no_runtime_execution": true,
+    "no_external_action": true
+  }
+}

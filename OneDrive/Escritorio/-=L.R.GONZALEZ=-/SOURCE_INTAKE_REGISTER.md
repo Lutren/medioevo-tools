@@ -611,6 +611,39 @@ Result:
 - Source moves/deletions: `0`.
 - External actions: `0`.
 
+## SETO COMMS Schemas 2026-05-05
+
+This pass added machine-readable schemas for the COMMS protocol so Claudio can
+validate envelopes before acting.
+
+Artifacts:
+
+- `COMMS\README.md`
+- `COMMS\schemas\observation-envelope.schema.json`
+- `COMMS\schemas\action-gate.schema.json`
+- `COMMS\schemas\witness-log-event.schema.json`
+- `qa_artifacts\release_validation\seto-comms-schemas-2026-05-05.json`
+- `qa_artifacts\release_validation\seto-comms-schemas-scan-2026-05-05.json`
+
+Artifact hashes:
+
+| artifact | sha256 |
+|---|---|
+| `COMMS\README.md` | `373546657C351452C33371DDDF431084FA0A576D3CD595C1ABDDDD6C66F8D919` |
+| `observation-envelope.schema.json` | `A5884ABCBD1127AFCA1835C6B8543380EDBF3C875144611125FA9E856D1B6B96` |
+| `action-gate.schema.json` | `B0EE69AA4AFDD4444EFDBFD69C03966FFAA9F22C2CE10449080101426847AB7C` |
+| `witness-log-event.schema.json` | `38ADBB03F56C506D2DAB419E43252CD4B8B179FCB800A8B93088EA9C34202ED1` |
+| `seto-comms-schemas-2026-05-05.json` | `D55282A376AEE179C4E0DE587D82930A2B3F639DDD89FC204E9AE2807E49F766` |
+| `seto-comms-schemas-scan-2026-05-05.json` | `0D5731B95504E6A24BC8A0BA51BD40C5015D7851D04D589600224C85A7C9AD03` |
+
+Result:
+
+- JSON parse: `PASS`.
+- ObservationEnvelope sample check: `PASS`.
+- WitnessLog sample check: `PASS`.
+- Secret scan: `0` findings.
+- Runtime execution: `0`.
+
 ## SETO PSI Redundant Vault Batch 3 Cleanup 2026-05-05
 
 This pass removed the final exact duplicates discovered in

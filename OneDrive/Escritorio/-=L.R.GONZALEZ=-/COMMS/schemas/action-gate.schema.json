@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "medioevo.seto.action-gate.v1",
+  "title": "SETO ActionGate",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "decision"
+  ],
+  "properties": {
+    "decision": {
+      "type": "string",
+      "enum": [
+        "APPROVE",
+        "REVIEW",
+        "BLOCK"
+      ]
+    },
+    "risk_flags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "required_evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "no_delete": {
+      "type": "boolean"
+    },
+    "no_move": {
+      "type": "boolean"
+    },
+    "no_external_action": {
+      "type": "boolean"
+    },
+    "no_write_to_concurrent_lane": {
+      "type": "boolean"
+    },
+    "requires_hash_refresh_before_future_action": {
+      "type": "boolean"
+    },
+    "requires_canonical_replacement_or_keep_decision": {
+      "type": "boolean"
+    },
+    "post_validation": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

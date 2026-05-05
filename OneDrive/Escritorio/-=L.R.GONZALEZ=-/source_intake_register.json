@@ -3013,5 +3013,37 @@
         "No Claudio source, language source, raw Downloads source, external publication or private asset was modified."
       ]
     }
+  ],
+  "seto_comms_schema_passes": [
+    {
+      "date": "2026-05-05",
+      "status": "SCHEMAS_CREATED_REVIEW_VALIDATED",
+      "scope": "Machine-readable schemas for COMMS and Claudio local-agent intake",
+      "readme": "COMMS/README.md",
+      "observation_envelope_schema": "COMMS/schemas/observation-envelope.schema.json",
+      "action_gate_schema": "COMMS/schemas/action-gate.schema.json",
+      "witness_log_event_schema": "COMMS/schemas/witness-log-event.schema.json",
+      "json": "qa_artifacts/release_validation/seto-comms-schemas-2026-05-05.json",
+      "scan_json": "qa_artifacts/release_validation/seto-comms-schemas-scan-2026-05-05.json",
+      "artifact_hashes": {
+        "readme": "373546657C351452C33371DDDF431084FA0A576D3CD595C1ABDDDD6C66F8D919",
+        "observation_envelope_schema": "A5884ABCBD1127AFCA1835C6B8543380EDBF3C875144611125FA9E856D1B6B96",
+        "action_gate_schema": "B0EE69AA4AFDD4444EFDBFD69C03966FFAA9F22C2CE10449080101426847AB7C",
+        "witness_log_event_schema": "38ADBB03F56C506D2DAB419E43252CD4B8B179FCB800A8B93088EA9C34202ED1",
+        "json": "D55282A376AEE179C4E0DE587D82930A2B3F639DDD89FC204E9AE2807E49F766",
+        "scan_json": "0D5731B95504E6A24BC8A0BA51BD40C5015D7851D04D589600224C85A7C9AD03"
+      },
+      "validation": {
+        "json_parse": "PASS",
+        "observation_envelope_sample_check": "PASS",
+        "witness_log_sample_check": "PASS",
+        "secret_scan_findings": 0
+      },
+      "decisions": [
+        "Schemas are local contracts only and do not execute runtime actions.",
+        "Claudio can use them to validate ObservationEnvelope, ActionGate and WitnessLog shapes.",
+        "Uncertain or blocked actions still route to REVIEW or BLOCK."
+      ]
+    }
   ]
 }

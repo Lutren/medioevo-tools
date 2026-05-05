@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "medioevo.seto.witness-log-event.v1",
+  "title": "SETO WitnessLog Event",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "action_gate",
+    "actor",
+    "artifact_hashes",
+    "event_type",
+    "outputs",
+    "previous_hash",
+    "rules",
+    "status",
+    "summary",
+    "timestamp_utc",
+    "event_hash"
+  ],
+  "properties": {
+    "action_gate": {
+      "type": "string",
+      "enum": [
+        "APPROVE",
+        "REVIEW",
+        "BLOCK"
+      ]
+    },
+    "actor": {
+      "type": "string",
+      "minLength": 1
+    },
+    "artifact_hashes": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^[A-Fa-f0-9]{64}$"
+      }
+    },
+    "event_type": {
+      "type": "string",
+      "minLength": 1
+    },
+    "outputs": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "previous_hash": {
+      "type": "string",
+      "pattern": "^[A-Fa-f0-9]{64}$"
+    },
+    "rules": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "status": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary": {
+      "type": "object"
+    },
+    "timestamp_utc": {
+      "type": "string"
+    },
+    "event_hash": {
+      "type": "string",
+      "pattern": "^[A-Fa-f0-9]{64}$"
+    }
+  }
+}

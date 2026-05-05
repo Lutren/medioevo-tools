@@ -22,5 +22,9 @@ Read:
 - `docs\intake\SETO_PSI_VAULT_RESIDUAL_REVIEW_2026-05-05.md`
 - `docs\developer\SETO_OBSERVACIONISMO_DECISION_LEARNING_2026-05-05.md`
 - `COMMS\handoffs\2026-05-05-claudio-local-agent-seto.md`
+- `COMMS\README.md`
+- `COMMS\schemas\observation-envelope.schema.json`
+- `COMMS\schemas\action-gate.schema.json`
+- `COMMS\schemas\witness-log-event.schema.json`
 
 Candidate first package: `observacionismo-gate`.
