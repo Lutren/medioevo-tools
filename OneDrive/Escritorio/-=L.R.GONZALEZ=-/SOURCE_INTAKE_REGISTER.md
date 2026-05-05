@@ -713,6 +713,32 @@ Result:
 - No Downloads prototype was copied wholesale.
 - No file move, delete, extraction, publication, push or external action was performed.
 
+## System Control Dashboard 2026-05-05
+
+This pass activated/verified Cloudflare WARP and generated a local static
+control dashboard for SETO, Claudio/Wabi-Sabi, VPN, COMMS, observacionismo,
+cleanup, security and publication gates.
+
+Artifacts:
+
+- `tools\control_dashboard.py`
+- `docs\control\CONTROL_DASHBOARD.html`
+- `qa_artifacts\control_dashboard\system-control-snapshot-2026-05-05.json`
+- `qa_artifacts\control_dashboard\system-control-dashboard-scan-2026-05-05.json`
+
+Result:
+
+- VPN command: `warp-cli connect; warp-cli status`.
+- WARP status: `Connected`, network `healthy`.
+- Cloudflare trace: `warp=on`, public country `US`, Cloudflare colo `DFW`.
+- Public geolocation from ipinfo: `Flower Mound, Texas, US`; IP is redacted in committed artifacts.
+- Dashboard generation:
+  `python tools\control_dashboard.py --write`.
+- Pending snapshot: `active_dedup=1708`, `claudio_open=60`.
+- Dashboard validation: JSON parse `PASS`; HTML smoke `PASS`.
+- Secret scan: `0` findings.
+- No daemon, publication, push, source move or deletion was performed.
+
 ## SETO PSI Redundant Vault Batch 3 Cleanup 2026-05-05
 
 This pass removed the final exact duplicates discovered in

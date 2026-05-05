@@ -1,0 +1,213 @@
+{
+  "schema": "medioevo.system_control_dashboard.v1",
+  "generated_at_utc": "2026-05-05T10:46:57Z",
+  "root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
+  "vpn": {
+    "provider": "Cloudflare WARP",
+    "connect_attempted": false,
+    "connect_result": null,
+    "status_command": {
+      "ok": true,
+      "returncode": 0,
+      "stdout": "Status update: Connected\nNetwork: healthy",
+      "stderr": ""
+    },
+    "connected": true,
+    "network_healthy": true,
+    "geo": {
+      "cloudflare_trace": {
+        "colo": "DFW",
+        "loc": "US",
+        "warp": "on",
+        "gateway": "off",
+        "rbi": "off",
+        "ip_redacted": "2a09:bac1:7680::redacted"
+      },
+      "ipinfo": {
+        "ip_redacted": "104.28.x.x",
+        "city": "Flower Mound",
+        "region": "Texas",
+        "country": "US",
+        "org": "AS13335 Cloudflare, Inc.",
+        "timezone": "America/Chicago"
+      }
+    }
+  },
+  "git": {
+    "git_root": "C:\\Users\\L-Tyr",
+    "branch": "codex/curador-seto-loops-2026-05-05",
+    "head": "4370e65 Add observacionista engine tests",
+    "branch_ok": true,
+    "head_ok": true
+  },
+  "pending": {
+    "generated_at": "2026-05-05T10:42:21+00:00",
+    "active_dedup": 1708,
+    "active_by_lane": {
+      "cleanup_migration": 11,
+      "commercial": 125,
+      "general": 200,
+      "open_source": 37,
+      "private_rpg": 9,
+      "research_claims": 1,
+      "runtime_claudio": 1305,
+      "wave_fc": 3,
+      "website_marketing": 17
+    },
+    "active_by_blocker": {
+      "external_or_gated": 183,
+      "host_or_heavy": 26,
+      "legal_or_human": 33,
+      "local_candidate": 1427,
+      "private_boundary": 39
+    },
+    "claudio_open": 60
+  },
+  "comms": {
+    "validator": {
+      "schema": "medioevo.seto_comms_validator_result.v1",
+      "status": "PASS",
+      "errors": [],
+      "counts": {
+        "schemas": 3,
+        "inbox_messages": 1,
+        "topic_events": 1,
+        "decision_examples": 7
+      },
+      "schema_hashes": {
+        "COMMS/schemas/observation-envelope.schema.json": "a5884abcbd1127afca1835c6b8543380edbf3c875144611125fa9e856d1b6b96",
+        "COMMS/schemas/action-gate.schema.json": "b0ee69aa4afdd4444efdbfd69c03966ffaa9f22c2ce10449080101426847ab7c",
+        "COMMS/schemas/witness-log-event.schema.json": "38adbb03f56c506d2dab419e43252cd4b8b179fcb800a8b93088ea9c34202ed1"
+      },
+      "witness_tail": {
+        "checked": true,
+        "event_type": "seto_observacionista_engine_tests",
+        "event_hash": "7bab094fa66906b29fe63546dbdefff621e61bdfce5021af8178873457d5f79f",
+        "hash_match": true
+      }
+    },
+    "observacionista_engine": {
+      "status": "REVIEW",
+      "action_gate": "REVIEW",
+      "claim_state": "INFERENCIA",
+      "phi_eff": 0.536696,
+      "risk_flags": [
+        "agent_autonomy",
+        "raw_theory"
+      ]
+    },
+    "engine_tests": {
+      "status": "PASS",
+      "total": 4,
+      "failures": 0,
+      "errors": 0
+    }
+  },
+  "controls": [
+    {
+      "lane": "Host",
+      "gate": "APPROVE",
+      "name": "Activar/verificar VPN WARP",
+      "command": "warp-cli connect; warp-cli status",
+      "effect": "Mantiene la red en Cloudflare WARP y verifica estado."
+    },
+    {
+      "lane": "Host",
+      "gate": "APPROVE",
+      "name": "Verificar geolocalizacion publica",
+      "command": "Invoke-RestMethod https://www.cloudflare.com/cdn-cgi/trace",
+      "effect": "Confirma warp=on, colo y pais sin tocar archivos."
+    },
+    {
+      "lane": "Curador",
+      "gate": "APPROVE",
+      "name": "Refrescar pendientes",
+      "command": "python tools\\release\\pending_review.py --write --quiet",
+      "effect": "Actualiza snapshot de backlog; no cierra tareas."
+    },
+    {
+      "lane": "COMMS",
+      "gate": "APPROVE",
+      "name": "Validar protocolo de agentes",
+      "command": "python COMMS\\tools\\validate_seto_comms.py --json --fail-on-errors",
+      "effect": "Valida envelopes, schemas, ejemplos y WitnessLog tail."
+    },
+    {
+      "lane": "Observacionismo",
+      "gate": "REVIEW",
+      "name": "Ejecutar motor observacionista inverso",
+      "command": "python COMMS\\tools\\observacionista_engine.py --input COMMS\\inbox\\claudio-local-agent.jsonl --json",
+      "effect": "Calcula R, Phi_eff, gate, perfiles de observador y falsadores."
+    },
+    {
+      "lane": "Observacionismo",
+      "gate": "APPROVE",
+      "name": "Benchmarks del motor",
+      "command": "python -m unittest COMMS\\tests\\test_observacionista_engine.py",
+      "effect": "Prueba REVIEW, BLOCK, control de secret scan y Phi_eff."
+    },
+    {
+      "lane": "Auditoria",
+      "gate": "REVIEW",
+      "name": "Inventario activo",
+      "command": "python tools\\release\\audit_repo.py",
+      "effect": "Inventario local sin publicar ni borrar."
+    },
+    {
+      "lane": "Seguridad",
+      "gate": "REVIEW",
+      "name": "Escaneo de secretos por ruta",
+      "command": "python tools\\release\\scan_secrets.py --path <ruta> --json --fail-on-findings",
+      "effect": "Debe usarse antes de publicar o empaquetar."
+    },
+    {
+      "lane": "Limpieza",
+      "gate": "REVIEW",
+      "name": "Candidatos de limpieza",
+      "command": "Get-Content DELETE_CANDIDATES.md",
+      "effect": "Revisar hashes, ficha y reemplazo antes de borrar."
+    },
+    {
+      "lane": "Limpieza",
+      "gate": "BLOCK",
+      "name": "Borrado libre",
+      "command": "N/A",
+      "effect": "Bloqueado sin ActionGate, hash, reemplazo y DELETED_LOG."
+    },
+    {
+      "lane": "Publicacion",
+      "gate": "BLOCK",
+      "name": "Push/deploy/publicacion externa",
+      "command": "N/A",
+      "effect": "Bloqueado hasta secret scan, licencia, checklist y autorizacion de destino."
+    },
+    {
+      "lane": "Claudio",
+      "gate": "REVIEW",
+      "name": "Preflight Claudio local",
+      "command": "cd \"-=MEDIOEVO=-\\-=LIBROS\\claudio\"; python tools\\host_observacionista.py --no-write",
+      "effect": "Verifica host antes de rutas pesadas o daemons."
+    },
+    {
+      "lane": "Claudio",
+      "gate": "REVIEW",
+      "name": "Claudio/Wabi-Sabi consume COMMS",
+      "command": "Get-Content COMMS\\handoffs\\2026-05-05-claudio-local-agent-seto.md",
+      "effect": "Contrato de lectura para agente local; writes siguen gated."
+    },
+    {
+      "lane": "Privado",
+      "gate": "BLOCK",
+      "name": "RPG/TCG hacia public/open",
+      "command": "N/A",
+      "effect": "Bloqueado por frontera privada."
+    }
+  ],
+  "policy": {
+    "local_only": true,
+    "no_daemon_started": true,
+    "external_publication_gate": "BLOCK",
+    "private_game_boundary": "BLOCK",
+    "unknown_sources": "UNKNOWN_REVIEW_REQUIRED"
+  }
+}

@@ -3108,5 +3108,41 @@
         "Downloads prototypes remain curated sources and were not copied wholesale."
       ]
     }
+  ],
+  "system_control_dashboard_passes": [
+    {
+      "date": "2026-05-05",
+      "status": "PASS_LOCAL_STATIC_DASHBOARD",
+      "scope": "Local control dashboard for SETO, Claudio/Wabi-Sabi, VPN, COMMS, cleanup and publication gates",
+      "tool": "tools/control_dashboard.py",
+      "html": "docs/control/CONTROL_DASHBOARD.html",
+      "snapshot_json": "qa_artifacts/control_dashboard/system-control-snapshot-2026-05-05.json",
+      "scan_json": "qa_artifacts/control_dashboard/system-control-dashboard-scan-2026-05-05.json",
+      "vpn": {
+        "provider": "Cloudflare WARP",
+        "status": "Connected",
+        "network": "healthy",
+        "cloudflare_warp": "on",
+        "cloudflare_colo": "DFW",
+        "public_country": "US",
+        "public_geo": "Flower Mound, Texas, US",
+        "ip_redacted": true
+      },
+      "summary": {
+        "active_dedup": 1708,
+        "claudio_open": 60,
+        "dashboard_validation": "PASS",
+        "secret_scan_findings": 0,
+        "no_daemon_started": true,
+        "source_moves": 0,
+        "source_deletions": 0,
+        "external_publications": 0
+      },
+      "decisions": [
+        "Dashboard buttons copy commands only; they do not execute host actions from the browser.",
+        "Deletion, publication, push and private RPG/TCG export remain BLOCK by default.",
+        "The dashboard is local operational evidence and not public copy."
+      ]
+    }
   ]
 }

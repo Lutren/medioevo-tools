@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MEDIOEVO Control Dashboard</title>
+  <style>
+    :root {
+      --bg: #f7f7f2;
+      --surface: #ffffff;
+      --text: #18201c;
+      --muted: #5d665f;
+      --line: #d9ddd6;
+      --ok: #0f766e;
+      --review: #b45309;
+      --block: #b91c1c;
+      --blue: #1d4ed8;
+      --shadow: 0 10px 22px rgba(22, 28, 24, .08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, Segoe UI, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      letter-spacing: 0;
+    }
+    header {
+      padding: 28px clamp(16px, 4vw, 52px);
+      background: #14211d;
+      color: #f7f7f2;
+      display: grid;
+      gap: 18px;
+    }
+    h1 {
+      font-size: clamp(28px, 4vw, 46px);
+      line-height: 1.05;
+      margin: 0;
+      letter-spacing: 0;
+    }
+    header p { max-width: 980px; margin: 0; color: #dce5dc; line-height: 1.55; }
+    main { padding: 22px clamp(16px, 4vw, 52px) 52px; }
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin: 0 0 22px;
+    }
+    .metric, .panel, .control {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+    .metric { padding: 16px; min-height: 92px; display: grid; align-content: space-between; }
+    .metric-label { color: var(--muted); font-size: 13px; }
+    .metric strong { font-size: 22px; line-height: 1.1; overflow-wrap: anywhere; }
+    .panel { padding: 18px; margin-bottom: 18px; }
+    .panel h2 { font-size: 18px; margin: 0 0 12px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+    }
+    dl { margin: 0; display: grid; gap: 10px; }
+    dt { color: var(--muted); font-size: 12px; text-transform: uppercase; }
+    dd { margin: 2px 0 0; font-weight: 650; overflow-wrap: anywhere; }
+    .toolbar {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin: 0 0 14px;
+    }
+    button {
+      min-height: 44px;
+      border: 1px solid #aab3ac;
+      background: #fff;
+      color: var(--text);
+      border-radius: 8px;
+      padding: 0 13px;
+      cursor: pointer;
+      font-weight: 650;
+    }
+    button:focus-visible { outline: 3px solid #2563eb; outline-offset: 2px; }
+    button:hover { border-color: var(--blue); }
+    .controls {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 12px;
+    }
+    .control { padding: 16px; display: grid; gap: 12px; min-height: 240px; }
+    .control-head { display: flex; justify-content: space-between; gap: 10px; align-items: center; }
+    .lane { font-size: 12px; color: var(--muted); text-transform: uppercase; font-weight: 700; }
+    .badge { border-radius: 999px; padding: 4px 9px; font-size: 12px; font-weight: 800; }
+    .ok { color: var(--ok); }
+    .review { color: var(--review); }
+    .block { color: var(--block); }
+    .badge.ok { color: #fff; background: var(--ok); }
+    .badge.review { color: #fff; background: var(--review); }
+    .badge.block { color: #fff; background: var(--block); }
+    h3 { margin: 0; font-size: 18px; line-height: 1.25; }
+    .control p { margin: 0; color: var(--muted); line-height: 1.5; }
+    .command-row {
+      align-self: end;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px;
+      align-items: stretch;
+    }
+    code {
+      display: block;
+      background: #111827;
+      color: #f9fafb;
+      padding: 10px;
+      border-radius: 6px;
+      overflow-wrap: anywhere;
+      font-size: 12px;
+      line-height: 1.4;
+    }
+    details { margin-top: 14px; }
+    summary { cursor: pointer; font-weight: 700; min-height: 44px; display: flex; align-items: center; }
+    pre {
+      overflow: auto;
+      max-height: 420px;
+      background: #111827;
+      color: #f9fafb;
+      padding: 14px;
+      border-radius: 8px;
+      font-size: 12px;
+    }
+    [hidden] { display: none; }
+    @media (max-width: 680px) {
+      .command-row { grid-template-columns: 1fr; }
+      .control { min-height: auto; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MEDIOEVO Control Dashboard</h1>
+    <p>Consola local para SETO, Claudio/Wabi-Sabi, VPN, seguridad, limpieza y publicacion gated. Los botones copian comandos; no ejecutan acciones destructivas ni publican nada.</p>
+  </header>
+  <main>
+    <section class="metrics" aria-label="Resumen">
+      
+      <section class="metric">
+        <span class="metric-label">VPN WARP</span>
+        <strong class="ok">Connected</strong>
+      </section>
+    
+      
+      <section class="metric">
+        <span class="metric-label">Geo publica</span>
+        <strong class="ok">Flower Mound, Texas US</strong>
+      </section>
+    
+      
+      <section class="metric">
+        <span class="metric-label">Pendientes activos</span>
+        <strong class="review">1708</strong>
+      </section>
+    
+      
+      <section class="metric">
+        <span class="metric-label">Claudio abiertos</span>
+        <strong class="review">60</strong>
+      </section>
+    
+      
+      <section class="metric">
+        <span class="metric-label">COMMS</span>
+        <strong class="ok">PASS</strong>
+      </section>
+    
+      
+      <section class="metric">
+        <span class="metric-label">Motor obs</span>
+        <strong class="review">REVIEW</strong>
+      </section>
+    
+    </section>
+
+    <section class="panel">
+      <h2>Estado de red y VPN</h2>
+      <div class="grid">
+        <dl>
+          <div><dt>Proveedor</dt><dd>Cloudflare WARP</dd></div>
+          <div><dt>WARP</dt><dd>on</dd></div>
+          <div><dt>Cloudflare colo</dt><dd>DFW</dd></div>
+        </dl>
+        <dl>
+          <div><dt>IP publica</dt><dd>104.28.x.x</dd></div>
+          <div><dt>Ciudad/region</dt><dd>Flower Mound / Texas</dd></div>
+          <div><dt>ASN</dt><dd>AS13335 Cloudflare, Inc.</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Opciones del sistema</h2>
+      <div class="toolbar" aria-label="Filtros">
+        <button type="button" data-filter="ALL">Todo</button>
+        <button type="button" data-filter="Auditoria">Auditoria</button>
+<button type="button" data-filter="COMMS">COMMS</button>
+<button type="button" data-filter="Claudio">Claudio</button>
+<button type="button" data-filter="Curador">Curador</button>
+<button type="button" data-filter="Host">Host</button>
+<button type="button" data-filter="Limpieza">Limpieza</button>
+<button type="button" data-filter="Observacionismo">Observacionismo</button>
+<button type="button" data-filter="Privado">Privado</button>
+<button type="button" data-filter="Publicacion">Publicacion</button>
+<button type="button" data-filter="Seguridad">Seguridad</button>
+      </div>
+      <div class="controls" id="controls">
+        
+        <article class="control" data-lane="Host" data-gate="APPROVE">
+          <div class="control-head">
+            <span class="lane">Host</span>
+            <span class="badge ok">APPROVE</span>
+          </div>
+          <h3>Activar/verificar VPN WARP</h3>
+          <p>Mantiene la red en Cloudflare WARP y verifica estado.</p>
+          <div class="command-row">
+            <code>warp-cli connect; warp-cli status</code>
+            <button type="button" data-copy="warp-cli connect; warp-cli status">Copiar</button>
+          </div>
+        </article>
+        
+
+        <article class="control" data-lane="Host" data-gate="APPROVE">
+          <div class="control-head">
+            <span class="lane">Host</span>
+            <span class="badge ok">APPROVE</span>
+          </div>
+          <h3>Verificar geolocalizacion publica</h3>
+          <p>Confirma warp=on, colo y pais sin tocar archivos.</p>
+          <div class="command-row">
+            <code>Invoke-RestMethod https://www.cloudflare.com/cdn-cgi/trace</code>
+            <button type="button" data-copy="Invoke-RestMethod https://www.cloudflare.com/cdn-cgi/trace">Copiar</button>
+          </div>
+        </article>
+        
+
+        <article class="control" data-lane="Curador" data-gate="APPROVE">
+          <div class="control-head">
+            <span class="lane">Curador</span>
+            <span class="badge ok">APPROVE</span>
+          </div>
+          <h3>Refrescar pendientes</h3>
+          <p>Actualiza snapshot de backlog; no cierra tareas.</p>
+          <div class="command-row">
+            <code>python tools\release\pending_review.py --write --quiet</code>
+            <button type="button" data-copy="python tools\release\pending_review.py --write --quiet">Copiar</button>
+          </div>
+        </article>
+        
+
+        <article class="control" data-lane="COMMS" data-gate="APPROVE">
+          <div class="control-head">
+            <span class="lane">COMMS</span>
+            <span class="badge ok">APPROVE</span>
+          </div>
+          <h3>Validar protocolo de agentes</h3>
+          <p>Valida envelopes, schemas, ejemplos y WitnessLog tail.</p>
+          <div class="command-row">
+            <code>python COMMS\tools\validate_seto_comms.py --json --fail-on-errors</code>
+            <button type="button" data-copy="python COMMS\tools\validate_seto_comms.py --json --fail-on-errors">Copiar</button>
+          </div>
+        </article>
+        
+
+        <article class="control" data-lane="Observacionismo" data-gate="REVIEW">
+          <div class="control-head">
+            <span class="lane">Observacionismo</span>
+            <span class="badge review">REVIEW</span>
+          </div>
+          <h3>Ejecutar motor observacionista inverso</h3>
+          <p>Calcula R, Phi_eff, gate, perfiles de observador y falsadores.</p>
+          <div class="command-row">
+            <code>python COMMS\tools\observacionista_engine.py --input COMMS\inbox\claudio-local-agent.jsonl --json</code>
+            <button type="button" data-copy="python COMMS\tools\observacionista_engine.py --input COMMS\inbox\claudio-local-agent.jsonl --json">Copiar</button>
+          </div>
+        </article>
+        
+
+        <article class="control" data-lane="Observacionismo" data-gate="APPROVE">
+          <div class="control-head">
+            <span class="lane">Observacionismo</span>
+            <span class="badge ok">APPROVE</span>
+          </div>
+          <h3>Benchmarks del motor</h3>
+          <p>Prueba REVIEW, BLOCK, control de secret scan y Phi_eff.</p>
+          <div class="command-row">
+            <code>python -m unittest COMMS\tests\test_observacionista_engine.py</code>
+            <button type="button" data-copy="python -m unittest COMMS\tests\test_observacionista_engine.py">Copiar</button>
+          </div>
+        </article>
+        
+
+        <article class="control" data-lane="Auditoria" data-gate="REVIEW">
+          <div class="control-head">
+            <span class="lane">Auditoria</span>
+            <span class="badge review">REVIEW</span>
+          </div>
+          <h3>Inventario activo</h3>
+          <p>Inventario local sin publicar ni borrar.</p>
+          <div class="command-row">
+            <code>python tools\release\audit_repo.py</code>
+            <button type="button" data-copy="python tools\release\audit_repo.py">Copiar</button>
+          </div>
+        </article>
+        
+
+        <article class="control" data-lane="Seguridad" data-gate="REVIEW">
+          <div class="control-head">
+            <span class="lane">Seguridad</span>
+            <span class="badge review">REVIEW</span>
+          </div>
+          <h3>Escaneo de secretos por ruta</h3>
+          <p>Debe usarse antes de publicar o empaquetar.</p>
+          <div class="command-row">
+            <code>python tools\release\scan_secrets.py --path &lt;ruta&gt; --json --fail-on-findings</code>
+            <button type="button" data-copy="python tools\release\scan_secrets.py --path &lt;ruta&gt; --json --fail-on-findings">Copiar</button>
+          </div>
+        </article>
+        
+
+        <article class="control" data-lane="Limpieza" data-gate="REVIEW">
+          <div class="control-head">
+            <span class="lane">Limpieza</span>
+            <span class="badge review">REVIEW</span>
+          </div>
+          <h3>Candidatos de limpieza</h3>
+          <p>Revisar hashes, ficha y reemplazo antes de borrar.</p>
+          <div class="command-row">
+            <code>Get-Content DELETE_CANDIDATES.md</code>
+            <button type="button" data-copy="Get-Content DELETE_CANDIDATES.md">Copiar</button>
+          </div>
+        </article>
+        
+
+        <article class="control" data-lane="Limpieza" data-gate="BLOCK">
+          <div class="control-head">
+            <span class="lane">Limpieza</span>
+            <span class="badge block">BLOCK</span>
+          </div>
+          <h3>Borrado libre</h3>
+          <p>Bloqueado sin ActionGate, hash, reemplazo y DELETED_LOG.</p>
+          <div class="command-row">
+            <code>N/A</code>
+            <button type="button" data-copy="N/A">Copiar</button>
+          </div>
+        </article>
+        
+
+        <article class="control" data-lane="Publicacion" data-gate="BLOCK">
+          <div class="control-head">
+            <span class="lane">Publicacion</span>
+            <span class="badge block">BLOCK</span>
+          </div>
+          <h3>Push/deploy/publicacion externa</h3>
+          <p>Bloqueado hasta secret scan, licencia, checklist y autorizacion de destino.</p>
+          <div class="command-row">
+            <code>N/A</code>
+            <button type="button" data-copy="N/A">Copiar</button>
+          </div>
+        </article>
+        
+
+        <article class="control" data-lane="Claudio" data-gate="REVIEW">
+          <div class="control-head">
+            <span class="lane">Claudio</span>
+            <span class="badge review">REVIEW</span>
+          </div>
+          <h3>Preflight Claudio local</h3>
+          <p>Verifica host antes de rutas pesadas o daemons.</p>
+          <div class="command-row">
+            <code>cd &quot;-=MEDIOEVO=-\-=LIBROS\claudio&quot;; python tools\host_observacionista.py --no-write</code>
+            <button type="button" data-copy="cd &quot;-=MEDIOEVO=-\-=LIBROS\claudio&quot;; python tools\host_observacionista.py --no-write">Copiar</button>
+          </div>
+        </article>
+        
+
+        <article class="control" data-lane="Claudio" data-gate="REVIEW">
+          <div class="control-head">
+            <span class="lane">Claudio</span>
+            <span class="badge review">REVIEW</span>
+          </div>
+          <h3>Claudio/Wabi-Sabi consume COMMS</h3>
+          <p>Contrato de lectura para agente local; writes siguen gated.</p>
+          <div class="command-row">
+            <code>Get-Content COMMS\handoffs\2026-05-05-claudio-local-agent-seto.md</code>
+            <button type="button" data-copy="Get-Content COMMS\handoffs\2026-05-05-claudio-local-agent-seto.md">Copiar</button>
+          </div>
+        </article>
+        
+
+        <article class="control" data-lane="Privado" data-gate="BLOCK">
+          <div class="control-head">
+            <span class="lane">Privado</span>
+            <span class="badge block">BLOCK</span>
+          </div>
+          <h3>RPG/TCG hacia public/open</h3>
+          <p>Bloqueado por frontera privada.</p>
+          <div class="command-row">
+            <code>N/A</code>
+            <button type="button" data-copy="N/A">Copiar</button>
+          </div>
+        </article>
+        
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Snapshot tecnico</h2>
+      <details>
+        <summary>Ver JSON del dashboard</summary>
+        <pre>{
+  &quot;schema&quot;: &quot;medioevo.system_control_dashboard.v1&quot;,
+  &quot;generated_at_utc&quot;: &quot;2026-05-05T10:46:57Z&quot;,
+  &quot;root&quot;: &quot;C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-&quot;,
+  &quot;vpn&quot;: {
+    &quot;provider&quot;: &quot;Cloudflare WARP&quot;,
+    &quot;connect_attempted&quot;: false,
+    &quot;connect_result&quot;: null,
+    &quot;status_command&quot;: {
+      &quot;ok&quot;: true,
+      &quot;returncode&quot;: 0,
+      &quot;stdout&quot;: &quot;Status update: Connected\nNetwork: healthy&quot;,
+      &quot;stderr&quot;: &quot;&quot;
+    },
+    &quot;connected&quot;: true,
+    &quot;network_healthy&quot;: true,
+    &quot;geo&quot;: {
+      &quot;cloudflare_trace&quot;: {
+        &quot;colo&quot;: &quot;DFW&quot;,
+        &quot;loc&quot;: &quot;US&quot;,
+        &quot;warp&quot;: &quot;on&quot;,
+        &quot;gateway&quot;: &quot;off&quot;,
+        &quot;rbi&quot;: &quot;off&quot;,
+        &quot;ip_redacted&quot;: &quot;2a09:bac1:7680::redacted&quot;
+      },
+      &quot;ipinfo&quot;: {
+        &quot;ip_redacted&quot;: &quot;104.28.x.x&quot;,
+        &quot;city&quot;: &quot;Flower Mound&quot;,
+        &quot;region&quot;: &quot;Texas&quot;,
+        &quot;country&quot;: &quot;US&quot;,
+        &quot;org&quot;: &quot;AS13335 Cloudflare, Inc.&quot;,
+        &quot;timezone&quot;: &quot;America/Chicago&quot;
+      }
+    }
+  },
+  &quot;git&quot;: {
+    &quot;git_root&quot;: &quot;C:\\Users\\L-Tyr&quot;,
+    &quot;branch&quot;: &quot;codex/curador-seto-loops-2026-05-05&quot;,
+    &quot;head&quot;: &quot;4370e65 Add observacionista engine tests&quot;,
+    &quot;branch_ok&quot;: true,
+    &quot;head_ok&quot;: true
+  },
+  &quot;pending&quot;: {
+    &quot;generated_at&quot;: &quot;2026-05-05T10:42:21+00:00&quot;,
+    &quot;active_dedup&quot;: 1708,
+    &quot;active_by_lane&quot;: {
+      &quot;cleanup_migration&quot;: 11,
+      &quot;commercial&quot;: 125,
+      &quot;general&quot;: 200,
+      &quot;open_source&quot;: 37,
+      &quot;private_rpg&quot;: 9,
+      &quot;research_claims&quot;: 1,
+      &quot;runtime_claudio&quot;: 1305,
+      &quot;wave_fc&quot;: 3,
+      &quot;website_marketing&quot;: 17
+    },
+    &quot;active_by_blocker&quot;: {
+      &quot;external_or_gated&quot;: 183,
+      &quot;host_or_heavy&quot;: 26,
+      &quot;legal_or_human&quot;: 33,
+      &quot;local_candidate&quot;: 1427,
+      &quot;private_boundary&quot;: 39
+    },
+    &quot;claudio_open&quot;: 60
+  },
+  &quot;comms&quot;: {
+    &quot;validator&quot;: {
+      &quot;schema&quot;: &quot;medioevo.seto_comms_validator_result.v1&quot;,
+      &quot;status&quot;: &quot;PASS&quot;,
+      &quot;errors&quot;: [],
+      &quot;counts&quot;: {
+        &quot;schemas&quot;: 3,
+        &quot;inbox_messages&quot;: 1,
+        &quot;topic_events&quot;: 1,
+        &quot;decision_examples&quot;: 7
+      },
+      &quot;schema_hashes&quot;: {
+        &quot;COMMS/schemas/observation-envelope.schema.json&quot;: &quot;a5884abcbd1127afca1835c6b8543380edbf3c875144611125fa9e856d1b6b96&quot;,
+        &quot;COMMS/schemas/action-gate.schema.json&quot;: &quot;b0ee69aa4afdd4444efdbfd69c03966ffaa9f22c2ce10449080101426847ab7c&quot;,
+        &quot;COMMS/schemas/witness-log-event.schema.json&quot;: &quot;38adbb03f56c506d2dab419e43252cd4b8b179fcb800a8b93088ea9c34202ed1&quot;
+      },
+      &quot;witness_tail&quot;: {
+        &quot;checked&quot;: true,
+        &quot;event_type&quot;: &quot;seto_observacionista_engine_tests&quot;,
+        &quot;event_hash&quot;: &quot;7bab094fa66906b29fe63546dbdefff621e61bdfce5021af8178873457d5f79f&quot;,
+        &quot;hash_match&quot;: true
+      }
+    },
+    &quot;observacionista_engine&quot;: {
+      &quot;status&quot;: &quot;REVIEW&quot;,
+      &quot;action_gate&quot;: &quot;REVIEW&quot;,
+      &quot;claim_state&quot;: &quot;INFERENCIA&quot;,
+      &quot;phi_eff&quot;: 0.536696,
+      &quot;risk_flags&quot;: [
+        &quot;agent_autonomy&quot;,
+        &quot;raw_theory&quot;
+      ]
+    },
+    &quot;engine_tests&quot;: {
+      &quot;status&quot;: &quot;PASS&quot;,
+      &quot;total&quot;: 4,
+      &quot;failures&quot;: 0,
+      &quot;errors&quot;: 0
+    }
+  },
+  &quot;controls&quot;: [
+    {
+      &quot;lane&quot;: &quot;Host&quot;,
+      &quot;gate&quot;: &quot;APPROVE&quot;,
+      &quot;name&quot;: &quot;Activar/verificar VPN WARP&quot;,
+      &quot;command&quot;: &quot;warp-cli connect; warp-cli status&quot;,
+      &quot;effect&quot;: &quot;Mantiene la red en Cloudflare WARP y verifica estado.&quot;
+    },
+    {
+      &quot;lane&quot;: &quot;Host&quot;,
+      &quot;gate&quot;: &quot;APPROVE&quot;,
+      &quot;name&quot;: &quot;Verificar geolocalizacion publica&quot;,
+      &quot;command&quot;: &quot;Invoke-RestMethod https://www.cloudflare.com/cdn-cgi/trace&quot;,
+      &quot;effect&quot;: &quot;Confirma warp=on, colo y pais sin tocar archivos.&quot;
+    },
+    {
+      &quot;lane&quot;: &quot;Curador&quot;,
+      &quot;gate&quot;: &quot;APPROVE&quot;,
+      &quot;name&quot;: &quot;Refrescar pendientes&quot;,
+      &quot;command&quot;: &quot;python tools\\release\\pending_review.py --write --quiet&quot;,
+      &quot;effect&quot;: &quot;Actualiza snapshot de backlog; no cierra tareas.&quot;
+    },
+    {
+      &quot;lane&quot;: &quot;COMMS&quot;,
+      &quot;gate&quot;: &quot;APPROVE&quot;,
+      &quot;name&quot;: &quot;Validar protocolo de agentes&quot;,
+      &quot;command&quot;: &quot;python COMMS\\tools\\validate_seto_comms.py --json --fail-on-errors&quot;,
+      &quot;effect&quot;: &quot;Valida envelopes, schemas, ejemplos y WitnessLog tail.&quot;
+    },
+    {
+      &quot;lane&quot;: &quot;Observacionismo&quot;,
+      &quot;gate&quot;: &quot;REVIEW&quot;,
+      &quot;name&quot;: &quot;Ejecutar motor observacionista inverso&quot;,
+      &quot;command&quot;: &quot;python COMMS\\tools\\observacionista_engine.py --input COMMS\\inbox\\claudio-local-agent.jsonl --json&quot;,
+      &quot;effect&quot;: &quot;Calcula R, Phi_eff, gate, perfiles de observador y falsadores.&quot;
+    },
+    {
+      &quot;lane&quot;: &quot;Observacionismo&quot;,
+      &quot;gate&quot;: &quot;APPROVE&quot;,
+      &quot;name&quot;: &quot;Benchmarks del motor&quot;,
+      &quot;command&quot;: &quot;python -m unittest COMMS\\tests\\test_observacionista_engine.py&quot;,
+      &quot;effect&quot;: &quot;Prueba REVIEW, BLOCK, control de secret scan y Phi_eff.&quot;
+    },
+    {
+      &quot;lane&quot;: &quot;Auditoria&quot;,
+      &quot;gate&quot;: &quot;REVIEW&quot;,
+      &quot;name&quot;: &quot;Inventario activo&quot;,
+      &quot;command&quot;: &quot;python tools\\release\\audit_repo.py&quot;,
+      &quot;effect&quot;: &quot;Inventario local sin publicar ni borrar.&quot;
+    },
+    {
+      &quot;lane&quot;: &quot;Seguridad&quot;,
+      &quot;gate&quot;: &quot;REVIEW&quot;,
+      &quot;name&quot;: &quot;Escaneo de secretos por ruta&quot;,
+      &quot;command&quot;: &quot;python tools\\release\\scan_secrets.py --path &lt;ruta&gt; --json --fail-on-findings&quot;,
+      &quot;effect&quot;: &quot;Debe usarse antes de publicar o empaquetar.&quot;
+    },
+    {
+      &quot;lane&quot;: &quot;Limpieza&quot;,
+      &quot;gate&quot;: &quot;REVIEW&quot;,
+      &quot;name&quot;: &quot;Candidatos de limpieza&quot;,
+      &quot;command&quot;: &quot;Get-Content DELETE_CANDIDATES.md&quot;,
+      &quot;effect&quot;: &quot;Revisar hashes, ficha y reemplazo antes de borrar.&quot;
+    },
+    {
+      &quot;lane&quot;: &quot;Limpieza&quot;,
+      &quot;gate&quot;: &quot;BLOCK&quot;,
+      &quot;name&quot;: &quot;Borrado libre&quot;,
+      &quot;command&quot;: &quot;N/A&quot;,
+      &quot;effect&quot;: &quot;Bloqueado sin ActionGate, hash, reemplazo y DELETED_LOG.&quot;
+    },
+    {
+      &quot;lane&quot;: &quot;Publicacion&quot;,
+      &quot;gate&quot;: &quot;BLOCK&quot;,
+      &quot;name&quot;: &quot;Push/deploy/publicacion externa&quot;,
+      &quot;command&quot;: &quot;N/A&quot;,
+      &quot;effect&quot;: &quot;Bloqueado hasta secret scan, licencia, checklist y autorizacion de destino.&quot;
+    },
+    {
+      &quot;lane&quot;: &quot;Claudio&quot;,
+      &quot;gate&quot;: &quot;REVIEW&quot;,
+      &quot;name&quot;: &quot;Preflight Claudio local&quot;,
+      &quot;command&quot;: &quot;cd \&quot;-=MEDIOEVO=-\\-=LIBROS\\claudio\&quot;; python tools\\host_observacionista.py --no-write&quot;,
+      &quot;effect&quot;: &quot;Verifica host antes de rutas pesadas o daemons.&quot;
+    },
+    {
+      &quot;lane&quot;: &quot;Claudio&quot;,
+      &quot;gate&quot;: &quot;REVIEW&quot;,
+      &quot;name&quot;: &quot;Claudio/Wabi-Sabi consume COMMS&quot;,
+      &quot;command&quot;: &quot;Get-Content COMMS\\handoffs\\2026-05-05-claudio-local-agent-seto.md&quot;,
+      &quot;effect&quot;: &quot;Contrato de lectura para agente local; writes siguen gated.&quot;
+    },
+    {
+      &quot;lane&quot;: &quot;Privado&quot;,
+      &quot;gate&quot;: &quot;BLOCK&quot;,
+      &quot;name&quot;: &quot;RPG/TCG hacia public/open&quot;,
+      &quot;command&quot;: &quot;N/A&quot;,
+      &quot;effect&quot;: &quot;Bloqueado por frontera privada.&quot;
+    }
+  ],
+  &quot;policy&quot;: {
+    &quot;local_only&quot;: true,
+    &quot;no_daemon_started&quot;: true,
+    &quot;external_publication_gate&quot;: &quot;BLOCK&quot;,
+    &quot;private_game_boundary&quot;: &quot;BLOCK&quot;,
+    &quot;unknown_sources&quot;: &quot;UNKNOWN_REVIEW_REQUIRED&quot;
+  }
+}</pre>
+      </details>
+    </section>
+  </main>
+  <script>
+    document.querySelectorAll('[data-filter]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const lane = button.getAttribute('data-filter');
+        document.querySelectorAll('.control').forEach((card) => {
+          card.hidden = lane !== 'ALL' && card.getAttribute('data-lane') !== lane;
+        });
+      });
+    });
+    document.querySelectorAll('[data-copy]').forEach((button) => {
+      button.addEventListener('click', async () => {
+        const command = button.getAttribute('data-copy') || '';
+        if (!navigator.clipboard || command === 'N/A') return;
+        await navigator.clipboard.writeText(command);
+        const old = button.textContent;
+        button.textContent = 'Copiado';
+        setTimeout(() => { button.textContent = old; }, 1200);
+      });
+    });
+  </script>
+</body>
+</html>
