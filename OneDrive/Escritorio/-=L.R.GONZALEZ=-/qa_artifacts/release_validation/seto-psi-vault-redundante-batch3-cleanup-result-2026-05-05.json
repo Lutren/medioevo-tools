@@ -1,0 +1,57 @@
+{
+  "schema": "medioevo.cleanup_result.v1",
+  "generated_at_utc": "2026-05-05T09:15:00Z",
+  "status": "EXECUTED_EXACT_DUPLICATE_DELETE",
+  "action_gate": "APPROVE",
+  "scope": "PSI redundant vault exact duplicates batch 3",
+  "deleted": [
+    {
+      "id": "SETO-PSI-VRB3-001",
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\vault_redundante_2026-04-26\\bonus\\psi_canon_compiler.py",
+      "sha256": "f70db5e207b51d8607e0b478452a5554fd5994cc9f59ec04c85223d4d0632ab7",
+      "bytes": 10798,
+      "replacement": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\psi_canon_compiler.py"
+    },
+    {
+      "id": "SETO-PSI-VRB3-002",
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\vault_redundante_2026-04-26\\templates\\SESSION_FINGERPRINT.schema.json",
+      "sha256": "7797a4a11d9fbd14e53dd7e1b7bd9da0e47d1e721438e5376a1a7dba31113770",
+      "bytes": 2465,
+      "replacement": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\templates\\SESSION_FINGERPRINT.schema.json"
+    }
+  ],
+  "residual_review": [
+    {
+      "path": "EML_EXTENSION_PACK_v0_1\\10_EML_SYMBOLIC_KERNEL.md",
+      "sha256": "2f4cfd81f254dd5b773a4c0105a2b0d8e7c6019714170b4a1dba27aa85cfeb4f",
+      "bytes": 4890,
+      "decision": "REVIEW_UNMATCHED"
+    },
+    {
+      "path": "templates\\HANDOFF_ANCHOR_GENERATED.txt",
+      "sha256": "aebc679f5f6415f46f917b766f6dbef6d4e01b82833a2037d21fc89223b65204",
+      "bytes": 895,
+      "decision": "REVIEW_UNMATCHED"
+    },
+    {
+      "path": "templates\\NEXT_SESSION_BRIEF.example.md",
+      "sha256": "7cf3e5857a038c8508b36b640de8fe24f282d3ee2fd0b0b70bb1ffee54cdda1f",
+      "bytes": 457,
+      "decision": "REVIEW_UNMATCHED"
+    },
+    {
+      "path": "templates\\SESSION_FINGERPRINT.example.json",
+      "sha256": "a9a9047f3b13e65b41b91211038c66afdc019d6a86968a02f15027e7183407ca",
+      "bytes": 1263,
+      "decision": "REVIEW_UNMATCHED"
+    }
+  ],
+  "post_validation": {
+    "delete_paths_exist": 0,
+    "canonical_paths_exist": 2,
+    "deleted_files": 2,
+    "deleted_bytes": 13263,
+    "residual_review_files": 4,
+    "errors": 0
+  }
+}

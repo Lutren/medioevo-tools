@@ -1,0 +1,39 @@
+{
+  "schema": "medioevo.actiongate.v1",
+  "generated_at_utc": "2026-05-05T09:14:00Z",
+  "action": "delete_exact_duplicate_files",
+  "status": "APPROVE",
+  "claim_level": "CERTEZA_FOR_HASH_MATCH",
+  "scope": "PSI redundant vault exact duplicates batch 3",
+  "deleted_files_planned": 2,
+  "deleted_bytes_planned": 13263,
+  "evidence": {
+    "canonical_exists_before_delete": true,
+    "duplicate_hashes_match_canonical": true,
+    "exact_reference_scan": "0 exact active references to the redundant vault paths in docs or PSI tree.",
+    "residual_unique_files_remain_review": 4
+  },
+  "items": [
+    {
+      "id": "SETO-PSI-VRB3-001",
+      "sha256": "f70db5e207b51d8607e0b478452a5554fd5994cc9f59ec04c85223d4d0632ab7",
+      "bytes": 10798,
+      "delete_path": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\vault_redundante_2026-04-26\\bonus\\psi_canon_compiler.py",
+      "replacement": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\psi_canon_compiler.py"
+    },
+    {
+      "id": "SETO-PSI-VRB3-002",
+      "sha256": "7797a4a11d9fbd14e53dd7e1b7bd9da0e47d1e721438e5376a1a7dba31113770",
+      "bytes": 2465,
+      "delete_path": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\vault_redundante_2026-04-26\\templates\\SESSION_FINGERPRINT.schema.json",
+      "replacement": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\templates\\SESSION_FINGERPRINT.schema.json"
+    }
+  ],
+  "blocked_or_review": [
+    "EML_EXTENSION_PACK_v0_1/10_EML_SYMBOLIC_KERNEL.md",
+    "templates/HANDOFF_ANCHOR_GENERATED.txt",
+    "templates/NEXT_SESSION_BRIEF.example.md",
+    "templates/SESSION_FINGERPRINT.example.json"
+  ],
+  "decision": "DELETE_APPROVED_AFTER_HASH"
+}
