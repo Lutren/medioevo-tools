@@ -54,3 +54,12 @@ def test_unknown_root_label_fails_closed(tmp_path: Path) -> None:
         assert "fixture" in str(exc)
     else:
         raise AssertionError("unknown root label should fail closed")
+
+
+def test_resume_output_paths_include_marker_fingerprint() -> None:
+    first = audit.default_output_paths({"workspace_lrgonzalez"}, 500, "C:/first/path.txt")
+    second = audit.default_output_paths({"workspace_lrgonzalez"}, 500, "C:/second/path.txt")
+
+    assert first != second
+    assert "resume" in first[0].name
+    assert "resume" in second[0].name

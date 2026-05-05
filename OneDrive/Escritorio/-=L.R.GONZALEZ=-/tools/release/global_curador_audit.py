@@ -683,7 +683,8 @@ def incremental_suffix(root_labels: set[str], max_files: int | None, start_after
     if max_files:
         parts.append(f"max{max_files}")
     if start_after:
-        parts.append("resume")
+        marker_hash = hashlib.sha256(start_after.encode("utf-8", errors="ignore")).hexdigest()[:10]
+        parts.append(f"resume{marker_hash}")
     clean = re.sub(r"[^A-Za-z0-9_-]+", "_", "_".join(parts)).strip("_")
     return f"-{clean}" if clean else "-incremental"
 
