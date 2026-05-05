@@ -353,3 +353,9 @@ Required before any path can become `DELETE_APPROVED_AFTER_HASH`:
 - Candidate path is recorded individually with replacement/canonical path.
 - Secret scan on touched docs/scripts reports no unallowed findings.
 - `DELETED_LOG` is written only after actual deletion.
+
+### Executed From Batch 1
+
+| id | deleted path | sha256 | bytes | replacement | result |
+|---|---|---|---:|---|---|
+| `SETO-DUP-B1-007` | `-=MEDIOEVO=-\-=LIBROS\-=CEREBRO=-\-=PSI=-\archive\vault_redundante_2026-04-26\templates\NEXT_SESSION_BRIEF.md` | `5c7a951213069cd31f6ecda115fe00789cb380ce63a51c296bbbb765ea928b7b` | 244 | `-=MEDIOEVO=-\-=LIBROS\-=CEREBRO=-\-=PSI=-\archive\templates\NEXT_SESSION_BRIEF.md` | `DELETE_APPROVED_AFTER_HASH_EXECUTED` |

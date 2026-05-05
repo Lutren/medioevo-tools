@@ -505,3 +505,38 @@ Boundaries:
 - Wave FC rollback packs require release-evidence mapping before cleanup.
 - Claudio OS, Asistente and PSI groups require owner confirmation before any
   file action.
+
+## SETO PSI Duplicate Cleanup 2026-05-05
+
+This pass executed the first exact duplicate deletion from Batch 1: the PSI
+redundant vault copy of `NEXT_SESSION_BRIEF.md`.
+
+Artifacts:
+
+- `qa_artifacts\release_validation\seto-psi-next-session-brief-actiongate-2026-05-05.json`
+- `qa_artifacts\release_validation\seto-psi-next-session-brief-cleanup-result-2026-05-05.json`
+- `qa_artifacts\release_validation\seto-psi-next-session-brief-secret-scan-2026-05-05.json`
+- `DELETED_LOG.md`
+- `MIGRATION_MAP.md`
+- `DELETED_OR_ARCHIVED.md`
+
+Artifact hashes:
+
+| artifact | sha256 |
+|---|---|
+| `seto-psi-next-session-brief-actiongate-2026-05-05.json` | `48B498C4580479D2B96157F3605FEF4EF392420A64DCAB3CE7CBCA41835E12D9` |
+| `seto-psi-next-session-brief-cleanup-result-2026-05-05.json` | `14156B3033984E81036FF72AB37C5007320AC8C38F939C899D2E32C3D422AA1B` |
+| `seto-psi-next-session-brief-secret-scan-2026-05-05.json` | `7CAFB6823744D5BD82C20ACC07544D8696BA1CB5C8076920DCA79FBCC587A6A2` |
+| `DELETED_LOG.md` | `24DE48679418A1BBE3EF6C665E1BF87657900E5E13F902C30FB517E90910C4A3` |
+
+Result:
+
+- ActionGate: `APPROVE`.
+- Deleted files: `1`.
+- Deleted bytes: `244`.
+- Deleted SHA256:
+  `5c7a951213069cd31f6ecda115fe00789cb380ce63a51c296bbbb765ea928b7b`.
+- Canonical copy retained:
+  `-=MEDIOEVO=-\-=LIBROS\-=CEREBRO=-\-=PSI=-\archive\templates\NEXT_SESSION_BRIEF.md`.
+- Secret scan on touched logs and evidence: `0` findings.
+- No external publication, extraction or source move was performed.

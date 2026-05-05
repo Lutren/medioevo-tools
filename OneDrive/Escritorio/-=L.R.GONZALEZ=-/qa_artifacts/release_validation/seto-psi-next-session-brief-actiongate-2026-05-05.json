@@ -1,0 +1,35 @@
+{
+  "schema": "medioevo.actiongate.v1",
+  "generated_at_utc": "2026-05-05T08:50:00Z",
+  "action": "delete_exact_duplicate_file",
+  "status": "APPROVE",
+  "claim_level": "CERTEZA_FOR_HASH_MATCH",
+  "source_ficha": "SETO-DUP-B1-007",
+  "canonical_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\templates\\NEXT_SESSION_BRIEF.md",
+  "delete_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\vault_redundante_2026-04-26\\templates\\NEXT_SESSION_BRIEF.md",
+  "sha256": "5c7a951213069cd31f6ecda115fe00789cb380ce63a51c296bbbb765ea928b7b",
+  "bytes": 244,
+  "evidence": {
+    "batch_ficha": "docs/intake/SETO_DUPLICATE_GROUP_FICHAS_BATCH1_2026-05-05.md",
+    "batch_json": "qa_artifacts/release_validation/seto-duplicate-group-fichas-batch1-2026-05-05.json",
+    "reference_scan": "No exact active reference to the redundant vault path outside SETO selector/ficha records.",
+    "canonical_exists_before_delete": true,
+    "duplicate_hash_matches_canonical": true
+  },
+  "risk_checks": {
+    "secret_like_path": false,
+    "private_game_or_tcg": false,
+    "release_package": false,
+    "env_or_git_history": false,
+    "external_action": false,
+    "publication": false,
+    "strong_medical_physical_social_claim": false
+  },
+  "falsifiers": [
+    "canonical file missing",
+    "duplicate SHA256 differs from canonical SHA256",
+    "active handoff references the redundant vault path directly",
+    "file is claimed by another agent as active source of truth"
+  ],
+  "decision": "DELETE_APPROVED_AFTER_HASH"
+}

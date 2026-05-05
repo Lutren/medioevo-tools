@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-05-05T08:21:51Z",
+  "generated_at_utc": "2026-05-05T08:51:00Z",
   "workspace_root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
   "rules": [
     "Classify every new source before extracting or copying code.",
@@ -2822,6 +2822,43 @@
         "No deletion, movement, extraction or publication executed.",
         "Exact hash equality is CERTEZA; canonical choice remains INFERENCIA.",
         "Every group remains REVIEW until owner confirmation, refreshed SHA256 and ActionGate approval."
+      ]
+    }
+  ],
+  "seto_exact_duplicate_cleanup_passes": [
+    {
+      "date": "2026-05-05",
+      "status": "EXECUTED_EXACT_DUPLICATE_DELETE",
+      "source_ficha": "SETO-DUP-B1-007",
+      "action_gate": "APPROVE",
+      "actiongate_json": "qa_artifacts/release_validation/seto-psi-next-session-brief-actiongate-2026-05-05.json",
+      "result_json": "qa_artifacts/release_validation/seto-psi-next-session-brief-cleanup-result-2026-05-05.json",
+      "secret_scan_json": "qa_artifacts/release_validation/seto-psi-next-session-brief-secret-scan-2026-05-05.json",
+      "deleted_log": "DELETED_LOG.md",
+      "artifact_hashes": {
+        "actiongate_json": "48B498C4580479D2B96157F3605FEF4EF392420A64DCAB3CE7CBCA41835E12D9",
+        "result_json": "14156B3033984E81036FF72AB37C5007320AC8C38F939C899D2E32C3D422AA1B",
+        "secret_scan_json": "7CAFB6823744D5BD82C20ACC07544D8696BA1CB5C8076920DCA79FBCC587A6A2",
+        "deleted_log": "24DE48679418A1BBE3EF6C665E1BF87657900E5E13F902C30FB517E90910C4A3"
+      },
+      "deleted": [
+        {
+          "path": "-=MEDIOEVO=-/-=LIBROS/-=CEREBRO=-/-=PSI=-/archive/vault_redundante_2026-04-26/templates/NEXT_SESSION_BRIEF.md",
+          "sha256": "5c7a951213069cd31f6ecda115fe00789cb380ce63a51c296bbbb765ea928b7b",
+          "bytes": 244,
+          "replacement": "-=MEDIOEVO=-/-=LIBROS/-=CEREBRO=-/-=PSI=-/archive/templates/NEXT_SESSION_BRIEF.md"
+        }
+      ],
+      "post_validation": {
+        "delete_path_exists": false,
+        "canonical_path_exists": true,
+        "secret_scan_findings": 0,
+        "errors": 0
+      },
+      "decisions": [
+        "Only one exact duplicate PSI vault template was deleted.",
+        "Canonical replacement remains in archive/templates.",
+        "No external action, publication, extraction or source move executed."
       ]
     }
   ]

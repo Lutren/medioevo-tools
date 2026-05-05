@@ -1,0 +1,37 @@
+{
+  "schema": "medioevo.cleanup_result.v1",
+  "generated_at_utc": "2026-05-05T08:51:00Z",
+  "status": "EXECUTED_EXACT_DUPLICATE_DELETE",
+  "action_gate": "APPROVE",
+  "source_ficha": "SETO-DUP-B1-007",
+  "deleted": [
+    {
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\vault_redundante_2026-04-26\\templates\\NEXT_SESSION_BRIEF.md",
+      "sha256": "5c7a951213069cd31f6ecda115fe00789cb380ce63a51c296bbbb765ea928b7b",
+      "bytes": 244,
+      "reason": "Exact duplicate in redundant PSI vault; canonical template copy retained and ficha created."
+    }
+  ],
+  "kept": [
+    {
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\templates\\NEXT_SESSION_BRIEF.md",
+      "sha256": "5c7a951213069cd31f6ecda115fe00789cb380ce63a51c296bbbb765ea928b7b",
+      "bytes": 244,
+      "role": "canonical replacement"
+    }
+  ],
+  "post_validation": {
+    "delete_path_exists": false,
+    "canonical_path_exists": true,
+    "deleted_files": 1,
+    "deleted_bytes": 244,
+    "errors": 0
+  },
+  "logs": [
+    "DELETED_LOG.md",
+    "DELETED_OR_ARCHIVED.md",
+    "MIGRATION_MAP.md",
+    "DELETE_CANDIDATES.md",
+    "qa_artifacts/witness_log/curador_seto_witnesslog.jsonl"
+  ]
+}
