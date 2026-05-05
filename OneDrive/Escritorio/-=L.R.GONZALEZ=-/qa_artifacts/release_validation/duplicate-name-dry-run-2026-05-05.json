@@ -1,0 +1,882 @@
+[
+  {
+    "key": "readme.md",
+    "count": 159,
+    "examples": [
+      "README.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/ads/README.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/agent/README.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/apps/claudio_tui/README.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/apps/hormiguero_hub/README.md"
+    ]
+  },
+  {
+    "key": "__init__.py",
+    "count": 159,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/-=CEREBRO=-/-=PSI=-/archive/__init__.py",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/__init__.py",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/ads/__init__.py",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/agent/__init__.py",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/agent/core/__init__.py"
+    ]
+  },
+  {
+    "key": "skill.md",
+    "count": 44,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/.agents/skills/claudio-argus/SKILL.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/.agents/skills/claudio-editorial/SKILL.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/.agents/skills/claudio-gumroad/SKILL.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/.agents/skills/claudio-hormiguero/SKILL.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/.agents/skills/claudio-model-router/SKILL.md"
+    ]
+  },
+  {
+    "key": ".gitignore",
+    "count": 37,
+    "examples": [
+      ".gitignore",
+      "-=MEDIOEVO=-/-=LIBROS/.gitignore",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/.gitignore",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/apps/argus_desktop/.gitignore",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/apps/editorial_web/.gitignore"
+    ]
+  },
+  {
+    "key": "index.html",
+    "count": 36,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/apps/argus_desktop/index.html",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/apps/claudio_tui/index.html",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/apps/editorial_web/index.html",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/apps/hormiguero_hub/index.html",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/apps/hormiguero_mission_control/index.html"
+    ]
+  },
+  {
+    "key": "license",
+    "count": 35,
+    "examples": [
+      "LICENSE",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/mini_office/LICENSE",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/publish_staging/github/claudio-system-regulator-2026-05-02/LICENSE",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/sdk_install_smoke/observacionismo_gate-1.0.0.dist-info/LICENSE",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/sdk/LICENSE"
+    ]
+  },
+  {
+    "key": "pyproject.toml",
+    "count": 27,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/mini_office/pyproject.toml",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/publish_staging/github/claudio-system-regulator-2026-05-02/pyproject.toml",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/sdk/pyproject.toml",
+      "-=MEDIOEVO=-/CLAUDIO - researchs/GEODIA/claudio_city_repo2/pyproject.toml",
+      "-=MEDIOEVO=-/CLAUDIO - researchs/GEODIA/claudio_complete_stack/pyproject.toml"
+    ]
+  },
+  {
+    "key": "cli.py",
+    "count": 22,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/agent/cli.py",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/claudio_os/models/cli.py",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/codex/lab_offensive/cli.py",
+      "-=MEDIOEVO=-/CLAUDIO - researchs/futuro/claudio_context_engine/cli.py",
+      "-=MEDIOEVO=-/CLAUDIO - researchs/GEODIA/claudio_complete_stack/src/claudio_complete_stack/cli.py"
+    ]
+  },
+  {
+    "key": "security.md",
+    "count": 16,
+    "examples": [
+      "SECURITY.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/mini_office/SECURITY.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/skills/security.md",
+      "apps/commercial/mini-office/SECURITY.md",
+      "packages/open-dev/duat-genesis/SECURITY.md"
+    ]
+  },
+  {
+    "key": "third_party_notices.md",
+    "count": 16,
+    "examples": [
+      "apps/commercial/argus-desktop/THIRD_PARTY_NOTICES.md",
+      "apps/commercial/asistente-negocio/THIRD_PARTY_NOTICES.md",
+      "apps/commercial/flujocrm/THIRD_PARTY_NOTICES.md",
+      "apps/commercial/mini-office/THIRD_PARTY_NOTICES.md",
+      "packages/open-dev/claudio-os-blueprint/THIRD_PARTY_NOTICES.md"
+    ]
+  },
+  {
+    "key": "decision_log.jsonl",
+    "count": 15,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/observacion_action_gate/decision_log.jsonl",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_fc_client_demos/wave_fc_client_demo_2026-04-30/runs/20260430_042318_acme_case_2a9b713e65/decision_log.jsonl",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_fc_client_demos/wave_fc_evidence_pack_2026-05-01/runs/20260501_123821_acme_case_2a9b713e65/decision_log.jsonl",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_fc_client_demos/wave_fc_evidence_pack_2026-05-01/runs/20260501_123821_operations_brief_d5f6877377/decision_log.jsonl",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_function_collapse/docx_qa_smoke/runs/20260429_223453_wave_docx_smoke_source_ff7528fec4/decision_log.jsonl"
+    ]
+  },
+  {
+    "key": "evidence_manifest.json",
+    "count": 14,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_fc_client_demos/wave_fc_client_demo_2026-04-30/runs/20260430_042318_acme_case_2a9b713e65/evidence_manifest.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_fc_client_demos/wave_fc_evidence_pack_2026-05-01/runs/20260501_123821_acme_case_2a9b713e65/evidence_manifest.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_fc_client_demos/wave_fc_evidence_pack_2026-05-01/runs/20260501_123821_operations_brief_d5f6877377/evidence_manifest.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_function_collapse/docx_qa_smoke/runs/20260429_223453_wave_docx_smoke_source_ff7528fec4/evidence_manifest.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_function_collapse/runs/20260429_221036_WAVE_DOCUMENT_COLLAPSE_CLI_2026-04-29_10a3dffc2a/evidence_manifest.json"
+    ]
+  },
+  {
+    "key": "report.md",
+    "count": 14,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_fc_client_demos/wave_fc_client_demo_2026-04-30/runs/20260430_042318_acme_case_2a9b713e65/report.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_fc_client_demos/wave_fc_evidence_pack_2026-05-01/runs/20260501_123821_acme_case_2a9b713e65/report.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_fc_client_demos/wave_fc_evidence_pack_2026-05-01/runs/20260501_123821_operations_brief_d5f6877377/report.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_function_collapse/docx_qa_smoke/runs/20260429_223453_wave_docx_smoke_source_ff7528fec4/report.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_function_collapse/runs/20260429_221036_WAVE_DOCUMENT_COLLAPSE_CLI_2026-04-29_10a3dffc2a/report.md"
+    ]
+  },
+  {
+    "key": "restore.md",
+    "count": 14,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_fc_client_demos/wave_fc_client_demo_2026-04-30/runs/20260430_042318_acme_case_2a9b713e65/rollback_pack/RESTORE.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_fc_client_demos/wave_fc_evidence_pack_2026-05-01/runs/20260501_123821_acme_case_2a9b713e65/rollback_pack/RESTORE.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_fc_client_demos/wave_fc_evidence_pack_2026-05-01/runs/20260501_123821_operations_brief_d5f6877377/rollback_pack/RESTORE.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_function_collapse/docx_qa_smoke/runs/20260429_223453_wave_docx_smoke_source_ff7528fec4/rollback_pack/RESTORE.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_function_collapse/runs/20260429_221036_WAVE_DOCUMENT_COLLAPSE_CLI_2026-04-29_10a3dffc2a/rollback_pack/RESTORE.md"
+    ]
+  },
+  {
+    "key": "rollback_manifest.json",
+    "count": 14,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_fc_client_demos/wave_fc_client_demo_2026-04-30/runs/20260430_042318_acme_case_2a9b713e65/rollback_pack/rollback_manifest.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_fc_client_demos/wave_fc_evidence_pack_2026-05-01/runs/20260501_123821_acme_case_2a9b713e65/rollback_pack/rollback_manifest.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_fc_client_demos/wave_fc_evidence_pack_2026-05-01/runs/20260501_123821_operations_brief_d5f6877377/rollback_pack/rollback_manifest.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_function_collapse/docx_qa_smoke/runs/20260429_223453_wave_docx_smoke_source_ff7528fec4/rollback_pack/rollback_manifest.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_function_collapse/runs/20260429_221036_WAVE_DOCUMENT_COLLAPSE_CLI_2026-04-29_10a3dffc2a/rollback_pack/rollback_manifest.json"
+    ]
+  },
+  {
+    "key": "manifest.json",
+    "count": 13,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/-=CEREBRO=-/-=PSI=-/libro/MANIFEST.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/apps/editorial_web/manifest.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/apps/hormiguero_mission_control/generated/manifest.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/archive/2026-04-25/MANIFEST.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/products/asistente_negocio/manifest.json"
+    ]
+  },
+  {
+    "key": "claims.md",
+    "count": 12,
+    "examples": [
+      "packages/open-dev/duat-genesis/CLAIMS.md",
+      "packages/open-dev/obs-safe-integration-kit/CLAIMS.md",
+      "publish_staging/github-public-sanitized/ai-web-gateway-observacionista/CLAIMS.md",
+      "publish_staging/github-public-sanitized/data-curation-observatory/CLAIMS.md",
+      "publish_staging/github-public-sanitized/duat-lab/CLAIMS.md"
+    ]
+  },
+  {
+    "key": "private_exclusions.md",
+    "count": 12,
+    "examples": [
+      "packages/open-dev/duat-genesis/PRIVATE_EXCLUSIONS.md",
+      "packages/open-dev/obs-safe-integration-kit/PRIVATE_EXCLUSIONS.md",
+      "publish_staging/github-public-sanitized/ai-web-gateway-observacionista/PRIVATE_EXCLUSIONS.md",
+      "publish_staging/github-public-sanitized/data-curation-observatory/PRIVATE_EXCLUSIONS.md",
+      "publish_staging/github-public-sanitized/duat-lab/PRIVATE_EXCLUSIONS.md"
+    ]
+  },
+  {
+    "key": "models.py",
+    "count": 11,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/codex/src/local_ollama_desktop/models.py",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/core/hormiguero_governance/models.py",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/core/observe_kernel/models.py",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/private_labs/duat_living_matrix_v06/duat/models.py",
+      "-=MEDIOEVO=-/CLAUDIO - researchs/GEODIA/claudio_city_repo2/app/core/models.py"
+    ]
+  },
+  {
+    "key": "latest_report.json",
+    "count": 11,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/claudio_os_build/latest_report.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/duat_geodia_iso/latest_report.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/duat_geodia_kernel/latest_report.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/duat_geodia_multistage/latest_report.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/duat_geodia_os/latest_report.json"
+    ]
+  },
+  {
+    "key": "splash.png",
+    "count": 11,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/metaevo-tcg/android/app/src/main/res/drawable/splash.png",
+      "-=MEDIOEVO=-/-=LIBROS/metaevo-tcg/android/app/src/main/res/drawable-land-hdpi/splash.png",
+      "-=MEDIOEVO=-/-=LIBROS/metaevo-tcg/android/app/src/main/res/drawable-land-mdpi/splash.png",
+      "-=MEDIOEVO=-/-=LIBROS/metaevo-tcg/android/app/src/main/res/drawable-land-xhdpi/splash.png",
+      "-=MEDIOEVO=-/-=LIBROS/metaevo-tcg/android/app/src/main/res/drawable-land-xxhdpi/splash.png"
+    ]
+  },
+  {
+    "key": "package.json",
+    "count": 10,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/apps/argus_desktop/package.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/city_overlay/package.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/mini_office/package.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/products/asistente_negocio/package.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/products/crm/package.json"
+    ]
+  },
+  {
+    "key": "metrics.py",
+    "count": 10,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/arte/core/metrics.py",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/core/metrics.py",
+      "-=MEDIOEVO=-/CLAUDIO - researchs/futuro/metrics.py",
+      "apps/residueos/residueos/metrics.py",
+      "packages/obsai-core/obsai_core/metrics.py"
+    ]
+  },
+  {
+    "key": "index.md",
+    "count": 10,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/docs/memoria_viva/INDEX.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/oppo_deploy/INDEX.md",
+      "-=MEDIOEVO=-/-=LIBROS/vault_medioevo/INDEX.md",
+      "E:/MEDIOEVO_ASSETS/Assets/MEDIOEVO_seed_ciudad_ruinas_dual_v1/INDEX.md",
+      "docs/INDEX.md"
+    ]
+  },
+  {
+    "key": "00_source_manifest.json",
+    "count": 10,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_01_despertar_despertar/00_source_manifest.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_02_deriva_deriva/00_source_manifest.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_03_fragmentos_fragmentos/00_source_manifest.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_04_calibracion_calibracion/00_source_manifest.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_05_transicion_transicion/00_source_manifest.json"
+    ]
+  },
+  {
+    "key": "01_master_raw.md",
+    "count": 10,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_01_despertar_despertar/01_master_raw.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_02_deriva_deriva/01_master_raw.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_03_fragmentos_fragmentos/01_master_raw.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_04_calibracion_calibracion/01_master_raw.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_05_transicion_transicion/01_master_raw.md"
+    ]
+  },
+  {
+    "key": "02_synthesis_draft.md",
+    "count": 10,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_01_despertar_despertar/02_synthesis_draft.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_02_deriva_deriva/02_synthesis_draft.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_03_fragmentos_fragmentos/02_synthesis_draft.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_04_calibracion_calibracion/02_synthesis_draft.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_05_transicion_transicion/02_synthesis_draft.md"
+    ]
+  },
+  {
+    "key": "03_master_edited.md",
+    "count": 10,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_01_despertar_despertar/03_master_edited.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_02_deriva_deriva/03_master_edited.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_03_fragmentos_fragmentos/03_master_edited.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_04_calibracion_calibracion/03_master_edited.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_05_transicion_transicion/03_master_edited.md"
+    ]
+  },
+  {
+    "key": "04_editorial_metrics.json",
+    "count": 10,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_01_despertar_despertar/04_editorial_metrics.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_02_deriva_deriva/04_editorial_metrics.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_03_fragmentos_fragmentos/04_editorial_metrics.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_04_calibracion_calibracion/04_editorial_metrics.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_05_transicion_transicion/04_editorial_metrics.json"
+    ]
+  },
+  {
+    "key": "05_editorial_cut_plan.md",
+    "count": 10,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_01_despertar_despertar/05_editorial_cut_plan.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_02_deriva_deriva/05_editorial_cut_plan.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_03_fragmentos_fragmentos/05_editorial_cut_plan.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_04_calibracion_calibracion/05_editorial_cut_plan.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_05_transicion_transicion/05_editorial_cut_plan.md"
+    ]
+  },
+  {
+    "key": "06_layout.html",
+    "count": 10,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_01_despertar_despertar/06_layout.html",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_02_deriva_deriva/06_layout.html",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_03_fragmentos_fragmentos/06_layout.html",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_04_calibracion_calibracion/06_layout.html",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_05_transicion_transicion/06_layout.html"
+    ]
+  },
+  {
+    "key": "07_layout.docx",
+    "count": 10,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_01_despertar_despertar/07_layout.docx",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_02_deriva_deriva/07_layout.docx",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_03_fragmentos_fragmentos/07_layout.docx",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_04_calibracion_calibracion/07_layout.docx",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_05_transicion_transicion/07_layout.docx"
+    ]
+  },
+  {
+    "key": "08_layout.pdf",
+    "count": 10,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_01_despertar_despertar/08_layout.pdf",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_02_deriva_deriva/08_layout.pdf",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_03_fragmentos_fragmentos/08_layout.pdf",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_04_calibracion_calibracion/08_layout.pdf",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_05_transicion_transicion/08_layout.pdf"
+    ]
+  },
+  {
+    "key": "09_sale_metrics.json",
+    "count": 10,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_01_despertar_despertar/09_sale_metrics.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_02_deriva_deriva/09_sale_metrics.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_03_fragmentos_fragmentos/09_sale_metrics.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_04_calibracion_calibracion/09_sale_metrics.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_05_transicion_transicion/09_sale_metrics.json"
+    ]
+  },
+  {
+    "key": "10_sale_cut.md",
+    "count": 10,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_01_despertar_despertar/10_sale_cut.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_02_deriva_deriva/10_sale_cut.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_03_fragmentos_fragmentos/10_sale_cut.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_04_calibracion_calibracion/10_sale_cut.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_05_transicion_transicion/10_sale_cut.md"
+    ]
+  },
+  {
+    "key": "11_sale_layout.html",
+    "count": 10,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_01_despertar_despertar/11_sale_layout.html",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_02_deriva_deriva/11_sale_layout.html",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_03_fragmentos_fragmentos/11_sale_layout.html",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_04_calibracion_calibracion/11_sale_layout.html",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_05_transicion_transicion/11_sale_layout.html"
+    ]
+  },
+  {
+    "key": "12_sale_layout.docx",
+    "count": 10,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_01_despertar_despertar/12_sale_layout.docx",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_02_deriva_deriva/12_sale_layout.docx",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_03_fragmentos_fragmentos/12_sale_layout.docx",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_04_calibracion_calibracion/12_sale_layout.docx",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_05_transicion_transicion/12_sale_layout.docx"
+    ]
+  },
+  {
+    "key": "13_sale_layout.pdf",
+    "count": 10,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_01_despertar_despertar/13_sale_layout.pdf",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_02_deriva_deriva/13_sale_layout.pdf",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_03_fragmentos_fragmentos/13_sale_layout.pdf",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_04_calibracion_calibracion/13_sale_layout.pdf",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/editorial/canon10_pipeline/book_05_transicion_transicion/13_sale_layout.pdf"
+    ]
+  },
+  {
+    "key": "cargo.toml",
+    "count": 10,
+    "examples": [
+      "tools/claw-code/rust/Cargo.toml",
+      "tools/claw-code/rust/crates/api/Cargo.toml",
+      "tools/claw-code/rust/crates/commands/Cargo.toml",
+      "tools/claw-code/rust/crates/compat-harness/Cargo.toml",
+      "tools/claw-code/rust/crates/mock-anthropic-service/Cargo.toml"
+    ]
+  },
+  {
+    "key": "roadmap.md",
+    "count": 9,
+    "examples": [
+      "ROADMAP.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/claudio_os_build/staging/claudio_os_blueprint/docs/ROADMAP.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/_archivo_sesiones/2026-04-16/ROADMAP.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/_workspace/claudio_os_blueprint/docs/ROADMAP.md",
+      "packages/open-dev/claudio-os-blueprint/docs/ROADMAP.md"
+    ]
+  },
+  {
+    "key": "requirements.txt",
+    "count": 9,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/autopilot/requirements.txt",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/claudio_os/requirements.txt",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/mini_office/requirements.txt",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/oppo_robot/requirements.txt",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/private_labs/duat_living_matrix_v06/requirements.txt"
+    ]
+  },
+  {
+    "key": "package-lock.json",
+    "count": 8,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/apps/argus_desktop/package-lock.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/city_overlay/package-lock.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/products/asistente_negocio/package-lock.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/products/crm/package-lock.json",
+      "-=MEDIOEVO=-/-=LIBROS/metaevo-tcg/package-lock.json"
+    ]
+  },
+  {
+    "key": "demo_manifest.json",
+    "count": 8,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_fc_client_demos/wave_fc_client_demo_2026-04-30/demo_manifest.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_fc_client_demos/wave_fc_evidence_pack_2026-05-01/demo_manifest.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/local_stewardship_recheck_2026-05-05/demo_packages/client_demo/demo_manifest.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/smoke_gate_2026-04-30/demo_packages/client_demo/demo_manifest.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/wave_wabi_gate_2026-05-01/demo_packages/client_demo/demo_manifest.json"
+    ]
+  },
+  {
+    "key": "wave_demo.sqlite",
+    "count": 8,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_fc_client_demos/wave_fc_client_demo_2026-04-30/wave_demo.sqlite",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_fc_client_demos/wave_fc_evidence_pack_2026-05-01/wave_demo.sqlite",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/local_stewardship_recheck_2026-05-05/demo_packages/client_demo/wave_demo.sqlite",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/smoke_gate_2026-04-30/demo_packages/client_demo/wave_demo.sqlite",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/wave_wabi_gate_2026-05-01/demo_packages/client_demo/wave_demo.sqlite"
+    ]
+  },
+  {
+    "key": "workspace_map.json",
+    "count": 8,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_fc_client_demos/wave_fc_client_demo_2026-04-30/workspace_map.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_fc_client_demos/wave_fc_evidence_pack_2026-05-01/workspace_map.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/local_stewardship_recheck_2026-05-05/demo_packages/client_demo/workspace_map.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/smoke_gate_2026-04-30/demo_packages/client_demo/workspace_map.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/wave_wabi_gate_2026-05-01/demo_packages/client_demo/workspace_map.json"
+    ]
+  },
+  {
+    "key": "acme_case.md",
+    "count": 8,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_fc_client_demos/wave_fc_client_demo_2026-04-30/inputs/acme_case.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_fc_client_demos/wave_fc_evidence_pack_2026-05-01/inputs/acme_case.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/local_stewardship_recheck_2026-05-05/demo_packages/client_demo/inputs/acme_case.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/smoke_gate_2026-04-30/demo_packages/client_demo/inputs/acme_case.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/wave_wabi_gate_2026-05-01/demo_packages/client_demo/inputs/acme_case.md"
+    ]
+  },
+  {
+    "key": "operations_policy.md",
+    "count": 8,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_fc_client_demos/wave_fc_client_demo_2026-04-30/inputs/operations_policy.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_fc_client_demos/wave_fc_evidence_pack_2026-05-01/inputs/operations_policy.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/local_stewardship_recheck_2026-05-05/demo_packages/client_demo/inputs/operations_policy.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/smoke_gate_2026-04-30/demo_packages/client_demo/inputs/operations_policy.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/wave_wabi_gate_2026-05-01/demo_packages/client_demo/inputs/operations_policy.md"
+    ]
+  },
+  {
+    "key": "sales_summary.csv",
+    "count": 8,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_fc_client_demos/wave_fc_client_demo_2026-04-30/inputs/sales_summary.csv",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_fc_client_demos/wave_fc_evidence_pack_2026-05-01/inputs/sales_summary.csv",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/local_stewardship_recheck_2026-05-05/demo_packages/client_demo/inputs/sales_summary.csv",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/smoke_gate_2026-04-30/demo_packages/client_demo/inputs/sales_summary.csv",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/wave_wabi_gate_2026-05-01/demo_packages/client_demo/inputs/sales_summary.csv"
+    ]
+  },
+  {
+    "key": "case_review_pack.json",
+    "count": 8,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_fc_client_demos/wave_fc_client_demo_2026-04-30/runs/case_review_packs/20260430_042318_ACME-Demo_CASE-001/case_review_pack.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_fc_client_demos/wave_fc_evidence_pack_2026-05-01/runs/case_review_packs/20260501_123821_ACME-Demo_CASE-001/case_review_pack.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/local_stewardship_recheck_2026-05-05/demo_packages/client_demo/runs/case_review_packs/20260505_085116_ACME-Demo_CASE-001/case_review_pack.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/smoke_gate_2026-04-30/demo_packages/client_demo/runs/case_review_packs/20260430_043031_ACME-Demo_CASE-001/case_review_pack.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/wave_wabi_gate_2026-05-01/demo_packages/client_demo/runs/case_review_packs/20260501_124009_ACME-Demo_CASE-001/case_review_pack.json"
+    ]
+  },
+  {
+    "key": "case_review_pack.md",
+    "count": 8,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_fc_client_demos/wave_fc_client_demo_2026-04-30/runs/case_review_packs/20260430_042318_ACME-Demo_CASE-001/case_review_pack.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_fc_client_demos/wave_fc_evidence_pack_2026-05-01/runs/case_review_packs/20260501_123821_ACME-Demo_CASE-001/case_review_pack.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/local_stewardship_recheck_2026-05-05/demo_packages/client_demo/runs/case_review_packs/20260505_085116_ACME-Demo_CASE-001/case_review_pack.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/smoke_gate_2026-04-30/demo_packages/client_demo/runs/case_review_packs/20260430_043031_ACME-Demo_CASE-001/case_review_pack.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/wave_wabi_gate_2026-05-01/demo_packages/client_demo/runs/case_review_packs/20260501_124009_ACME-Demo_CASE-001/case_review_pack.md"
+    ]
+  },
+  {
+    "key": "checkin_review.json",
+    "count": 8,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_fc_client_demos/wave_fc_client_demo_2026-04-30/workforce/checkin_review.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_fc_client_demos/wave_fc_evidence_pack_2026-05-01/workforce/checkin_review.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/local_stewardship_recheck_2026-05-05/demo_packages/client_demo/workforce/checkin_review.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/smoke_gate_2026-04-30/demo_packages/client_demo/workforce/checkin_review.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/wave_wabi_gate_2026-05-01/demo_packages/client_demo/workforce/checkin_review.json"
+    ]
+  },
+  {
+    "key": "schedule_input.json",
+    "count": 8,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_fc_client_demos/wave_fc_client_demo_2026-04-30/workforce/schedule_input.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_fc_client_demos/wave_fc_evidence_pack_2026-05-01/workforce/schedule_input.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/local_stewardship_recheck_2026-05-05/demo_packages/client_demo/workforce/schedule_input.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/smoke_gate_2026-04-30/demo_packages/client_demo/workforce/schedule_input.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/wave_wabi_gate_2026-05-01/demo_packages/client_demo/workforce/schedule_input.json"
+    ]
+  },
+  {
+    "key": "schedule_plan.json",
+    "count": 8,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_fc_client_demos/wave_fc_client_demo_2026-04-30/workforce/schedule_plan.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_fc_client_demos/wave_fc_evidence_pack_2026-05-01/workforce/schedule_plan.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/local_stewardship_recheck_2026-05-05/demo_packages/client_demo/workforce/schedule_plan.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/smoke_gate_2026-04-30/demo_packages/client_demo/workforce/schedule_plan.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/wave_wabi_gate_2026-05-01/demo_packages/client_demo/workforce/schedule_plan.json"
+    ]
+  },
+  {
+    "key": "whitepaper_draft.md",
+    "count": 8,
+    "examples": [
+      "publish_staging/github-public-sanitized/ai-web-gateway-observacionista/docs/WHITEPAPER_DRAFT.md",
+      "publish_staging/github-public-sanitized/data-curation-observatory/docs/WHITEPAPER_DRAFT.md",
+      "publish_staging/github-public-sanitized/duat-lab/docs/WHITEPAPER_DRAFT.md",
+      "publish_staging/github-public-sanitized/la-biblioteca-de-alejandria/docs/WHITEPAPER_DRAFT.md",
+      "publish_staging/github-public-sanitized/neurostate-ui/docs/WHITEPAPER_DRAFT.md"
+    ]
+  },
+  {
+    "key": "lib.rs",
+    "count": 8,
+    "examples": [
+      "tools/claw-code/rust/crates/api/src/lib.rs",
+      "tools/claw-code/rust/crates/commands/src/lib.rs",
+      "tools/claw-code/rust/crates/compat-harness/src/lib.rs",
+      "tools/claw-code/rust/crates/mock-anthropic-service/src/lib.rs",
+      "tools/claw-code/rust/crates/plugins/src/lib.rs"
+    ]
+  },
+  {
+    "key": "cartel.md",
+    "count": 7,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/CARTEL.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/apps/argus_desktop/CARTEL.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/apps/hormiguero_hub/CARTEL.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/brain_os/CARTEL.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/products/gumroad_packages/CARTEL.md"
+    ]
+  },
+  {
+    "key": "responsible.md",
+    "count": 7,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/RESPONSIBLE.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/apps/argus_desktop/RESPONSIBLE.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/apps/hormiguero_hub/RESPONSIBLE.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/brain_os/RESPONSIBLE.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/products/gumroad_packages/RESPONSIBLE.md"
+    ]
+  },
+  {
+    "key": "status.md",
+    "count": 7,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/STATUS.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/apps/argus_desktop/STATUS.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/apps/hormiguero_hub/STATUS.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/brain_os/STATUS.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/products/gumroad_packages/STATUS.md"
+    ]
+  },
+  {
+    "key": "session_fingerprint.json",
+    "count": 7,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/codex/app_data/session_fingerprint.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/codex/app_data/claudio_lab_usb_sync/imported/claudio-lab-e8236594-64e6-4cc0-b593-68013202a7c2/3979fd18-7b02-42db-8aa6-eec41b1a254d/session_fingerprint.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/codex/app_data/claudio_lab_usb_sync/imported/claudio-lab-e8236594-64e6-4cc0-b593-68013202a7c2/4dd0c2e1-f844-4a01-ab7d-465289fabb84/session_fingerprint.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/codex/app_data/claudio_lab_usb_sync/imported/claudio-lab-e8236594-64e6-4cc0-b593-68013202a7c2/96c31f3f-c6ac-4376-9673-c374be3ca4eb/session_fingerprint.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/codex/app_data/claudio_lab_usb_sync/imported/claudio-lab-e8236594-64e6-4cc0-b593-68013202a7c2/ad30dda9-c7d6-43d5-b934-10b35db0af3b/session_fingerprint.json"
+    ]
+  },
+  {
+    "key": "funding.yml",
+    "count": 7,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/mini_office/.github/FUNDING.yml",
+      ".github/FUNDING.yml",
+      "apps/commercial/mini-office/.github/FUNDING.yml",
+      "hackathons/google-rapid-agent-2026/.github/FUNDING.yml",
+      "publish_staging/github-profile-lutren-2026-05-01/.github/FUNDING.yml"
+    ]
+  },
+  {
+    "key": "events.jsonl",
+    "count": 7,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/city_event_ledger/events.jsonl",
+      "PRODUCTOS_MEDIOEVO/content_forge/runtime/content_forge/jobs/20260424_115959_render_medioevo-prueba-observacionista-local_457408/events.jsonl",
+      "PRODUCTOS_MEDIOEVO/content_forge/runtime/content_forge/jobs/20260424_115959_stall-simulation_stall-simulation_902259/events.jsonl",
+      "PRODUCTOS_MEDIOEVO/content_forge/runtime/content_forge/jobs/20260424_120040_carousel_carrusel-medioevo-observacionista_363531/events.jsonl",
+      "PRODUCTOS_MEDIOEVO/content_forge/runtime/content_forge/jobs/20260424_120330_render_api-content-forge-smoke-medioevo_346957/events.jsonl"
+    ]
+  },
+  {
+    "key": "outcomes.jsonl",
+    "count": 7,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/claudio_programmer/outcomes.jsonl",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/observacionismo_learning/outcomes.jsonl",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/observacionismo_learning/observacion_engineering_calibration/outcomes.jsonl",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/observacionismo_learning/sentido_comun/outcomes.jsonl",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/observacionismo_learning/_benchmark/outcomes.jsonl"
+    ]
+  },
+  {
+    "key": "home_full.png",
+    "count": 7,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/tools/reports/page_audit_2026-04-22/home_full.png",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/tools/reports/page_audit_2026-04-22-city-home/home_full.png",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/tools/reports/page_audit_2026-04-22-city-home-bust/home_full.png",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/tools/reports/page_audit_2026-04-22-cityforge/home_full.png",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/tools/reports/page_audit_2026-04-22-preview/home_full.png"
+    ]
+  },
+  {
+    "key": "gate.py",
+    "count": 7,
+    "examples": [
+      "-=MEDIOEVO=-/CLAUDIO - researchs/GEODIA/_github_staging/safe-exec/safe-exec/src/safe_exec/gate.py",
+      "apps/residueos/residueos/gate.py",
+      "packages/obsai-core/obsai_core/gate.py",
+      "packages/open-dev/obsai-core/obsai_core/gate.py",
+      "packages/open-dev/residueos/residueos/gate.py"
+    ]
+  },
+  {
+    "key": "core.py",
+    "count": 7,
+    "examples": [
+      "packages/open-dev/duat-genesis/duat_genesis/core.py",
+      "packages/open-dev/gemma-observacionismo-cleanup/gemma_observacionismo_cleanup/core.py",
+      "packages/open-dev/obs-safe-integration-kit/obs_safe_integration_kit/core.py",
+      "publish_staging/open-dev/duat-genesis/duat_genesis/core.py",
+      "publish_staging/open-dev/gemma-observacionismo-cleanup/gemma_observacionismo_cleanup/core.py"
+    ]
+  },
+  {
+    "key": "claude.md",
+    "count": 6,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/CLAUDE.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/CLAUDE.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/mempalace_seed_convos_20260409/CLAUDE.md",
+      "-=MEDIOEVO=-/CLAUDIO - researchs/CLAUDE.md",
+      "tools/claw-code/CLAUDE.md"
+    ]
+  },
+  {
+    "key": "styles.css",
+    "count": 6,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/apps/argus_desktop/src/styles.css",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/apps/psi_calculator/styles.css",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/city_overlay/styles.css",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/products/asistente_negocio/app/styles.css",
+      "apps/commercial/argus-desktop/src/styles.css"
+    ]
+  },
+  {
+    "key": "public.css",
+    "count": 6,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/apps/editorial_web/public.css",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/apps/editorial_web/website-assets/public.css",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/mini_office/public.css",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/website/public.css",
+      "E:/MEDIOEVO_ASSETS/Assets/some other/public.css"
+    ]
+  },
+  {
+    "key": "latest_report.md",
+    "count": 6,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/claudio_os_build/latest_report.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/duat_geodia_iso/latest_report.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/duat_geodia_kernel/latest_report.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/duat_geodia_multistage/latest_report.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/duat_geodia_os/latest_report.md"
+    ]
+  },
+  {
+    "key": "release_gate_report.json",
+    "count": 6,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/local_stewardship_recheck_2026-05-05/release_gate_report.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/smoke_gate_2026-04-30/release_gate_report.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/wave_wabi_gate_2026-05-01/release_gate_report.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/wave_wabi_gate_2026-05-05/release_gate_report.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/wave_wabi_release_gate_2026-04-30/release_gate_report.json"
+    ]
+  },
+  {
+    "key": "release_gate_report.md",
+    "count": 6,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/local_stewardship_recheck_2026-05-05/release_gate_report.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/smoke_gate_2026-04-30/release_gate_report.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/wave_wabi_gate_2026-05-01/release_gate_report.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/wave_wabi_gate_2026-05-05/release_gate_report.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/wave_wabi_release_gate_2026-04-30/release_gate_report.md"
+    ]
+  },
+  {
+    "key": "scheduler_benchmark.json",
+    "count": 6,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/local_stewardship_recheck_2026-05-05/scheduler_benchmark.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/smoke_gate_2026-04-30/scheduler_benchmark.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/wave_wabi_gate_2026-05-01/scheduler_benchmark.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/wave_wabi_gate_2026-05-05/scheduler_benchmark.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/wave_wabi_release_gate_2026-04-30/scheduler_benchmark.json"
+    ]
+  },
+  {
+    "key": "scheduler_benchmark.md",
+    "count": 6,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/local_stewardship_recheck_2026-05-05/scheduler_benchmark.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/smoke_gate_2026-04-30/scheduler_benchmark.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/wave_wabi_gate_2026-05-01/scheduler_benchmark.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/wave_wabi_gate_2026-05-05/scheduler_benchmark.md",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wave_wabi_release_gates/wave_wabi_release_gate_2026-04-30/scheduler_benchmark.md"
+    ]
+  },
+  {
+    "key": "electron-builder.json",
+    "count": 5,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/apps/argus_desktop/electron-builder.json",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/products/asistente_negocio/electron-builder.json",
+      "-=MEDIOEVO=-/-=LIBROS/metaevo-tcg/electron-builder.json",
+      "apps/commercial/argus-desktop/electron-builder.json",
+      "apps/commercial/asistente-negocio/electron-builder.json"
+    ]
+  },
+  {
+    "key": "main.cjs",
+    "count": 5,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/apps/argus_desktop/electron/main.cjs",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/products/asistente_negocio/electron/main.cjs",
+      "-=MEDIOEVO=-/-=LIBROS/metaevo-tcg/electron/main.cjs",
+      "apps/commercial/argus-desktop/electron/main.cjs",
+      "apps/commercial/asistente-negocio/electron/main.cjs"
+    ]
+  },
+  {
+    "key": "public.js",
+    "count": 5,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/apps/editorial_web/public.js",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/apps/editorial_web/functions/api/ai/context/public.js",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/apps/editorial_web/website-assets/public.js",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/codex/recovery/website_ai_gateway/website/functions/api/ai/context/public.js",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/website/public.js"
+    ]
+  },
+  {
+    "key": "claudio_cobain.webp",
+    "count": 5,
+    "examples": [
+      "E:/MEDIOEVO_ASSETS/editorial_web_img/avatars/claudio_cobain.webp",
+      "E:/MEDIOEVO_ASSETS/editorial_web_img/bands/CLAUDIO_COBAIN.webp",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/website/img/bands/CLAUDIO_COBAIN.webp",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/website/medioevo-assets/img/avatars/claudio_cobain.webp",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/website/medioevo-assets/img/bands/CLAUDIO_COBAIN.webp"
+    ]
+  },
+  {
+    "key": "orchestrator.py",
+    "count": 5,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/core/orchestrator.py",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/core/observe_kernel/orchestrator.py",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/daemon/orchestrator.py",
+      "-=MEDIOEVO=-/CLAUDIO - researchs/GEODIA/_github_staging/medioevo-tools_en/medioevo-tools/orchestrator/orchestrator.py",
+      "research/obs-info-kernel/obs_info_kernel/orchestrator.py"
+    ]
+  },
+  {
+    "key": "store.py",
+    "count": 5,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/core/hormiguero_governance/store.py",
+      "-=MEDIOEVO=-/CLAUDIO - researchs/GEODIA/claudio_complete_stack/src/claudio_complete_stack/store.py",
+      "apps/residueos/residueos/store.py",
+      "packages/open-dev/residueos/residueos/store.py",
+      "publish_staging/open-dev/residueos/residueos/store.py"
+    ]
+  },
+  {
+    "key": "geodia_hub_scenario_v2.png",
+    "count": 5,
+    "examples": [
+      "-=MEDIOEVO=-/-=LIBROS/claudio/products/asistente_negocio/app/assets/geodia_hub_scenario_v2.png",
+      "-=MEDIOEVO=-/-=LIBROS/claudio/website/img/surfaces/geodia_hub_scenario_v2.png",
+      "E:/MEDIOEVO_ASSETS/Assets/MEDIOEVO_batch06/scenarios/geodia_hub_scenario_v2.png",
+      "E:/MEDIOEVO_ASSETS/Assets/MEDIOEVO_batch06/world_atlas_v2/scenarios/geodia_hub_scenario_v2.png",
+      "apps/commercial/asistente-negocio/app/assets/geodia_hub_scenario_v2.png"
+    ]
+  }
+]

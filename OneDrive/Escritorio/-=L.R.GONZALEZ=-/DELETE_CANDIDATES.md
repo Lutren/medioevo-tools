@@ -378,3 +378,19 @@ until a semantic merge, canonical replacement or keep/archive decision exists.
 | `-=MEDIOEVO=-\-=LIBROS\-=CEREBRO=-\-=PSI=-\archive\vault_redundante_2026-04-26\templates\HANDOFF_ANCHOR_GENERATED.txt` | `aebc679f5f6415f46f917b766f6dbef6d4e01b82833a2037d21fc89223b65204` | 895 | `REVIEW` | `REVIEW_UNMATCHED_NO_DELETE` |
 | `-=MEDIOEVO=-\-=LIBROS\-=CEREBRO=-\-=PSI=-\archive\vault_redundante_2026-04-26\templates\NEXT_SESSION_BRIEF.example.md` | `7cf3e5857a038c8508b36b640de8fe24f282d3ee2fd0b0b70bb1ffee54cdda1f` | 457 | `REVIEW` | `REVIEW_UNMATCHED_NO_DELETE` |
 | `-=MEDIOEVO=-\-=LIBROS\-=CEREBRO=-\-=PSI=-\archive\vault_redundante_2026-04-26\templates\SESSION_FINGERPRINT.example.json` | `a9a9047f3b13e65b41b91211038c66afdc019d6a86968a02f15027e7183407ca` | 1263 | `REVIEW` | `REVIEW_UNMATCHED_NO_DELETE` |
+
+## Curador Global Space Dry Run 2026-05-05
+
+No files deleted in this pass. Host gate returned `BLOCK`, so this section is
+candidate tracking only.
+
+| path/pattern | reason | action |
+|---|---|---|
+| `qa_artifacts\release_validation\duplicate-hash-dry-run-2026-05-05.json` | zero-byte residue from timed-out hash scan | candidate delete after next cleanup gate |
+| `qa_artifacts\release_validation\curador-audit-2026-05-05-sponsors-cleanup.json` | zero-byte residue from timed-out broad audit | candidate delete after next cleanup gate |
+| duplicated Asistente Negocio ZIP/EXE bundles across Desktop archive, Claudio release and commercial QA package | large exact-duplicate suspicion; needs SHA256-by-file | hash, choose canonical release/offload path, then delete only exact duplicates |
+| document duplicate-name groups from `duplicate-name-dry-run-2026-05-05.json` | names repeat across monorepo/vendors and are not proof of duplicate content | no deletion by name; require hash + ficha + replacement map |
+| generated/cache dirs from `curador-space-dry-run-2026-05-05.json` | dry-run includes `.git` and vendors, not only disposable caches | classify before action; do not delete `.git`, vendors or private assets |
+
+Canonical ficha:
+`docs\intake\CURADOR_SPACE_CONSOLIDATION_DRY_RUN_2026-05-05.md`.

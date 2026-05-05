@@ -18,6 +18,7 @@ Read:
 - `docs\publishing\PUBLIC_PROFILE_COPY_PACK_2026-05-05.md`
 - `docs\publishing\GUMROAD_CHANNEL_UPDATE_PACKET_2026-05-05.md`
 - `docs\publishing\PUBLICATION_EXECUTION_REPORT_2026-05-05.md`
+- `docs\publishing\SPONSORS_API_SESSION_AUDIT_2026-05-05.md`
 
 Publication evidence exists for the 2026-05-02 limited runs:
 
@@ -37,3 +38,6 @@ as blanket approval for more repos, Gumroad products, deploys or social posts.
 - Local website map `publicacion.html` created and linked locally.
 - Cloudflare/Gumroad/LinkedIn live changes blocked by release/host gates; see
   `docs\publishing\PUBLICATION_EXECUTION_REPORT_2026-05-05.md`.
+- GitHub `.github/FUNDING.yml` and public bio/blog were updated through verified
+  GitHub API access; Sponsors tiers/goals remain dashboard/UI work. See
+  `docs\publishing\SPONSORS_API_SESSION_AUDIT_2026-05-05.md`.

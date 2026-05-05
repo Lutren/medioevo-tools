@@ -4,32 +4,32 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 
 ## Counts
 
-- Active markdown raw open items: `2110`.
-- Active markdown deduplicated open items: `1708`.
-- Claudio `PENDIENTES_MASTER.md` raw open items: `60`.
-- Claudio deduplicated open items: `60`.
+- Active markdown raw open items: `2143`.
+- Active markdown deduplicated open items: `1731`.
+- Claudio `PENDIENTES_MASTER.md` raw open items: `83`.
+- Claudio deduplicated open items: `83`.
 
 ## Active Markdown By Priority
 
 | priority | dedup_count |
 | --- | --- |
-| P1 | 14 |
+| P1 | 23 |
 | P2 | 11 |
 | P3 | 3 |
 | P4 | 4 |
-| UNCLASSIFIED | 1676 |
+| UNCLASSIFIED | 1690 |
 
 ## Active Markdown By Lane
 
 | lane | dedup_count |
 | --- | --- |
 | cleanup_migration | 11 |
-| commercial | 125 |
+| commercial | 127 |
 | general | 200 |
 | open_source | 37 |
 | private_rpg | 9 |
 | research_claims | 1 |
-| runtime_claudio | 1305 |
+| runtime_claudio | 1326 |
 | wave_fc | 3 |
 | website_marketing | 17 |
 
@@ -37,61 +37,61 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 
 | blocker | dedup_count |
 | --- | --- |
-| external_or_gated | 183 |
-| host_or_heavy | 26 |
+| external_or_gated | 188 |
+| host_or_heavy | 29 |
 | legal_or_human | 33 |
-| local_candidate | 1427 |
-| private_boundary | 39 |
+| local_candidate | 1441 |
+| private_boundary | 40 |
 
 ## Claudio Master By Priority
 
 | priority | dedup_count |
 | --- | --- |
-| P1 | 12 |
+| P1 | 21 |
 | P2 | 10 |
 | P3 | 3 |
 | P4 | 4 |
-| UNCLASSIFIED | 31 |
+| UNCLASSIFIED | 45 |
 
 ## Claudio Master By Blocker
 
 | blocker | dedup_count |
 | --- | --- |
-| external_or_gated | 27 |
-| host_or_heavy | 11 |
+| external_or_gated | 32 |
+| host_or_heavy | 14 |
 | legal_or_human | 5 |
-| local_candidate | 15 |
-| private_boundary | 2 |
+| local_candidate | 29 |
+| private_boundary | 3 |
 
 ## Top Items
 
 | priority | lane | blocker | item | first evidence | occurrences |
 | --- | --- | --- | --- | --- | --- |
-| P1 | runtime_claudio | local_candidate | **P1** Seguir registrando outcomes reales de acciones gated antes de permitir relajacion local: minimo 3 exitos limpios o evidencia equivalente. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:32 | 2 |
+| P1 | runtime_claudio | local_candidate | **P1** Teclado IRQ1 real: validar entrada efectiva, no solo marcador instalado. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:129 | 1 |
+| P1 | runtime_claudio | local_candidate | **P1** Memoria fisica/allocator minimo para el kernel DUAT GEODIA. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:131 | 1 |
+| P1 | runtime_claudio | local_candidate | **P1** Syscalls/scheduler/event loop con pruebas de ticks e input. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:132 | 1 |
+| P1 | runtime_claudio | local_candidate | **P1** Calibrar Observacion Engineering con mas outcomes reales antes de relajar autonomia. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:133 | 1 |
+| P1 | runtime_claudio | local_candidate | **P1** Seguir acumulando outcomes reales antes de relajar autonomia: mantener `LOCAL_REVIEW_ONLY` hasta tener mas exitos limpios y benchmarks por agente. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:181 | 2 |
+| P1 | runtime_claudio | local_candidate | **P1** Conectar una sincronizacion Conway real solo cuando se quiera actualizar `runtime\conway_real_state.json`; por ahora el contrato y fuente ya estan listos. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:184 | 2 |
+| P1 | runtime_claudio | local_candidate | **P1** Revisar manualmente las 20 semillas sinteticas y promover solo las que tengan evidencia suficiente a un dataset aceptado. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:236 | 2 |
+| P1 | runtime_claudio | local_candidate | **P1** Registrar outcomes reales de estas decisiones en el ledger de calibracion despues de acciones gated verificadas. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:279 | 2 |
+| P1 | runtime_claudio | local_candidate | **P1** Agregar mas casos de Sentido Comun solo con fuente, hash, falsadores y post-validacion. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:281 | 2 |
+| P1 | runtime_claudio | local_candidate | **P1** Seguir registrando outcomes reales de acciones gated antes de permitir relajacion local: minimo 3 exitos limpios o evidencia equivalente. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:329 | 2 |
 | P1 | runtime_claudio | local_candidate | Prioridad: P1 (research) | -=MEDIOEVO=-/CLAUDIO - researchs/ANALISIS_SUPERPOWERS_2026-04-14.md:101 | 1 |
 | P1 | runtime_claudio | local_candidate | Implementar protocolos P1-P6 | -=MEDIOEVO=-/CLAUDIO - researchs/INSIGHTS_E_TEMPREVIEW_2026-04-14.md:161 | 1 |
-| P1 | commercial | legal_or_human | **P1** No declarar FlujoCRM listo para venta final hasta probar el instalador Windows en maquina limpia, resolver icono final, code signing o aviso unsigned, docs de instalacion y legal/soporte. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:393 | 2 |
-| P1 | commercial | external_or_gated | P1 - Gumroad Claudio software: `pack-empresarial`, `writer-workbench` y `claudio-full` existen como drafts (`published=false`) y sin archivos/covers; no publicarlos hasta adjuntar paquete, portada y prueba de checkout. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:969 | 2 |
-| P1 | runtime_claudio | host_or_heavy | **P1** Ejecutar suite Qwen 3B cuando el host permita ruta pesada: `python tools\qwen_observacion_benchmark_suite.py --execute --write-dataset`. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:81 | 2 |
-| P1 | runtime_claudio | external_or_gated | **P1** Confirmar visualmente cual URL de LinkedIn es la canonica antes de editar el perfil. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:362 | 2 |
-| P1 | runtime_claudio | external_or_gated | **P1** Pegar headline/about/experience/featured links desde `LINKEDIN_PROFILE_PACKET_2026-05-01.md` en LinkedIn autenticado, cuidando no regalar tecnologia privada ni claims fuertes. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:363 | 2 |
-| P1 | runtime_claudio | host_or_heavy | **P1** Resolver QA visual DOCX; `artifact-tool` y `soffice/libreoffice` no estan disponibles en este host. Recheck 2026-05-03: `winget` detecta LibreOffice 26.2.2.2, pero `--scope user` no tiene instalador aplicable y el intento no interactivo estandar hizo timeout; no quedo instalado. Evidencia en `docs\DOCX_VISUAL_QA_RENDERER_ATTEMPT_2026-05-03.md`. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:417 | 2 |
-| P1 | runtime_claudio | legal_or_human | **P1** Revisar jurisdiccion, impuestos, plataforma de pago y politica final con asesor legal. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:436 | 2 |
-| P1 | runtime_claudio | private_boundary | **P1** Usar `release_manifests/` como base de QA, pero no crear paquetes ZIP hasta que secret scan, legal y release checklist pasen. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:469 | 2 |
-| P1 | runtime_claudio | external_or_gated | **P1** Convertir packaging interno en landing/copy publico solo despues de licencia, capturas, instalacion y ActionGate de publicacion. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:539 | 2 |
-| P1 | runtime_claudio | external_or_gated | **P1** Generar capturas/video local de demo y decidir artefactos publicos despues de ActionGate. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:540 | 2 |
-| P1 | wave_fc | external_or_gated | **P1** Cerrar licencia/EULA, instalacion, landing copy y ActionGate antes de vender o publicar Wave FC. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:418 | 2 |
-| P2 | runtime_claudio | local_candidate | **P2** Ejecutar FASE 2A (Escritorio - colapsar a 6 iconos D008) en proxima sesion. Snapshot F0 ya hecho hoy puede reutilizarse si es la siguiente sesion. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:789 | 2 |
-| P2 | runtime_claudio | local_candidate | **P2** Ejecutar FASE 2B (E: drive). Liberar espacio en E:/-=Medioevo=- (98GB usado). Verificar si CONSOLIDADO_6MAS1 y bestseller_output son canonicos antes de tocar. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:790 | 2 |
-| P2 | runtime_claudio | local_candidate | **P2** Ejecutar FASE 2C (raiz proyecto -=LIBROS/) - mover ~60 .py sueltos a `_scripts/<familia>/` por familia. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:791 | 2 |
-| P2 | runtime_claudio | local_candidate | **P2** Ejecutar el `PROMPT_MAESTRO_LIMPIEZA_TOTAL_2026-04-26.md` en proxima sesion para barrer Escritorio, E: y direcciones del proyecto. Este pendiente NO bloquea revenue. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:824 | 2 |
-| P2 | runtime_claudio | local_candidate | Prioridad: P2 (después de revenue) | -=MEDIOEVO=-/CLAUDIO - researchs/ANALISIS_SUPERPOWERS_2026-04-14.md:29 | 1 |
-| P2 | runtime_claudio | legal_or_human | **P2** Conector a checador fisico solo como read-only, con consentimiento, logs, fallback manual y aprobacion legal/laboral. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:543 | 2 |
-| P2 | runtime_claudio | host_or_heavy | **P2** Crear alias Ollama optimizados con `python tools\gemma4_observacion_optimizer.py --create-aliases --execute` solo cuando el host este `APPROVE`; luego correr `python tools\benchmark_gemma4_observador.py --profile lite`. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:646 | 2 |
-| P2 | runtime_claudio | host_or_heavy | **P2** Ejecutar `python tools\gemma4_observacion_benchmark_suite.py --execute --write-dataset` solo cuando el host este `APPROVE`; aceptar candidatos `input -> respuesta observacionista` en `datasets/gemma4_observacion_candidates.jsonl` antes de cualquier LoRA/QLoRA. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:647 | 2 |
-| P2 | runtime_claudio | private_boundary | **P2** Validar sesiones/credenciales sociales reales por plataforma antes de activar publicacion automatica; hoy solo se comprobo dry-run/capacidad tecnica, no post real. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:650 | 2 |
-| P2 | runtime_claudio | host_or_heavy | **P2** Instalar dependencias faltantes en Ubuntu WSL (`live-build/lb`, `qemu-system-x86_64`, `xorriso`) y ejecutar `runtime/claudio_os_build/staging/claudio_os_blueprint/BUILD_IN_WSL.sh` para producir la ISO. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:870 | 2 |
-| P2 | runtime_claudio | host_or_heavy | **P2** Bootear ISO en QEMU antes de cualquier USB/PC2. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:871 | 2 |
+| P1 | commercial | legal_or_human | **P1** No declarar FlujoCRM listo para venta final hasta probar el instalador Windows en maquina limpia, resolver icono final, code signing o aviso unsigned, docs de instalacion y legal/soporte. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:695 | 2 |
+| P1 | commercial | external_or_gated | P1 - Gumroad Claudio software: `pack-empresarial`, `writer-workbench` y `claudio-full` existen como drafts (`published=false`) y sin archivos/covers; no publicarlos hasta adjuntar paquete, portada y prueba de checkout. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1271 | 2 |
+| P1 | runtime_claudio | host_or_heavy | **P1** Ejecutar suite Qwen 3B cuando el host permita ruta pesada: `python tools\qwen_observacion_benchmark_suite.py --execute --write-dataset`. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:383 | 2 |
+| P1 | runtime_claudio | external_or_gated | **P1** Confirmar visualmente cual URL de LinkedIn es la canonica antes de editar el perfil. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:664 | 2 |
+| P1 | runtime_claudio | external_or_gated | **P1** Pegar headline/about/experience/featured links desde `LINKEDIN_PROFILE_PACKET_2026-05-01.md` en LinkedIn autenticado, cuidando no regalar tecnologia privada ni claims fuertes. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:665 | 2 |
+| P1 | runtime_claudio | host_or_heavy | **P1** Resolver QA visual DOCX; `artifact-tool` y `soffice/libreoffice` no estan disponibles en este host. Recheck 2026-05-03: `winget` detecta LibreOffice 26.2.2.2, pero `--scope user` no tiene instalador aplicable y el intento no interactivo estandar hizo timeout; no quedo instalado. Evidencia en `docs\DOCX_VISUAL_QA_RENDERER_ATTEMPT_2026-05-03.md`. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:719 | 2 |
+| P1 | runtime_claudio | legal_or_human | **P1** Revisar jurisdiccion, impuestos, plataforma de pago y politica final con asesor legal. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:738 | 2 |
+| P1 | runtime_claudio | private_boundary | **P1** Usar `release_manifests/` como base de QA, pero no crear paquetes ZIP hasta que secret scan, legal y release checklist pasen. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:771 | 2 |
+| P1 | runtime_claudio | external_or_gated | **P1** Convertir packaging interno en landing/copy publico solo despues de licencia, capturas, instalacion y ActionGate de publicacion. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:841 | 2 |
+| P1 | runtime_claudio | external_or_gated | **P1** Generar capturas/video local de demo y decidir artefactos publicos despues de ActionGate. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:842 | 2 |
+| P1 | wave_fc | external_or_gated | **P1** Cerrar licencia/EULA, instalacion, landing copy y ActionGate antes de vender o publicar Wave FC. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:720 | 2 |
+| P2 | runtime_claudio | local_candidate | **P2** Ejecutar FASE 2A (Escritorio - colapsar a 6 iconos D008) en proxima sesion. Snapshot F0 ya hecho hoy puede reutilizarse si es la siguiente sesion. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1091 | 2 |
+| P2 | runtime_claudio | local_candidate | **P2** Ejecutar FASE 2B (E: drive). Liberar espacio en E:/-=Medioevo=- (98GB usado). Verificar si CONSOLIDADO_6MAS1 y bestseller_output son canonicos antes de tocar. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1092 | 2 |
 
 ## Kairos Fastlane
 
