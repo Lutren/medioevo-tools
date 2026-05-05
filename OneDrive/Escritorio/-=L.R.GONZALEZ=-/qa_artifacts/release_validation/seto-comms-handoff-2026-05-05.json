@@ -1,0 +1,24 @@
+{
+  "schema": "medioevo.seto_comms_handoff.v1",
+  "generated_at_utc": "2026-05-05T10:02:00Z",
+  "status": "REVIEW_HANDOFF_READY",
+  "scope": "Physical COMMS initialization for Claudio local-agent read-only intake",
+  "artifacts": [
+    "COMMS/handoffs/2026-05-05-claudio-local-agent-seto.md",
+    "COMMS/inbox/claudio-local-agent.jsonl",
+    "COMMS/topics/seto-observacionismo-decisions.jsonl",
+    "COMMS/agents_state/curador-seto.json"
+  ],
+  "action_gate": {
+    "decision": "REVIEW",
+    "no_write_to_claudio_implementation": true,
+    "no_external_action": true,
+    "no_delete_or_move": true
+  },
+  "validation_requirements": [
+    "JSON and JSONL parse",
+    "secret scan count_reported 0",
+    "WitnessLog append",
+    "exact-path commit only"
+  ]
+}

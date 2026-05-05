@@ -576,6 +576,41 @@ Result:
 - No external publication, extraction, source move or model training was
   performed.
 
+## SETO COMMS Handoff To Claudio Local Agent 2026-05-05
+
+This pass initialized the physical `COMMS` protocol for a read-only Claudio
+local-agent handoff. It created envelopes only; it did not edit Claudio local
+agent source code.
+
+Artifacts:
+
+- `COMMS\handoffs\2026-05-05-claudio-local-agent-seto.md`
+- `COMMS\inbox\claudio-local-agent.jsonl`
+- `COMMS\topics\seto-observacionismo-decisions.jsonl`
+- `COMMS\agents_state\curador-seto.json`
+- `qa_artifacts\release_validation\seto-comms-handoff-2026-05-05.json`
+- `qa_artifacts\release_validation\seto-comms-handoff-scan-2026-05-05.json`
+
+Artifact hashes:
+
+| artifact | sha256 |
+|---|---|
+| `2026-05-05-claudio-local-agent-seto.md` | `325770239AB6A57601AFE2EDA57CD54D940438B9B96413AF426F83BA058A87B5` |
+| `claudio-local-agent.jsonl` | `FEAD000C4905B10F1BA0981A1A13EB296E7DBC7332F9861361F2A59A263DE087` |
+| `seto-observacionismo-decisions.jsonl` | `C1B28DE940A7BD70440A0C4EA68FC0A4333B692B396F172E2E756577FF079307` |
+| `curador-seto.json` | `73326600E704E5B3E6FB83DBC8AA5A9892D7B9713AD998B873EB13F909963B28` |
+| `seto-comms-handoff-2026-05-05.json` | `021B0F0B133995AC1B6D4D6D99BD376BC83E56D4CEB8BAC84DB26C938D7AECC8` |
+| `seto-comms-handoff-scan-2026-05-05.json` | `9BD5582835BD511ACA0676403E8B471B92F7C6CC3FC470ED1C72909E19121743` |
+
+Result:
+
+- Physical `COMMS` paths initialized: `4`.
+- Handoff recipient: `claudio-local-agent`.
+- ActionGate: `REVIEW`.
+- Secret scan on touched COMMS/docs/registers/evidence: `0` findings.
+- Source moves/deletions: `0`.
+- External actions: `0`.
+
 ## SETO PSI Redundant Vault Batch 3 Cleanup 2026-05-05
 
 This pass removed the final exact duplicates discovered in

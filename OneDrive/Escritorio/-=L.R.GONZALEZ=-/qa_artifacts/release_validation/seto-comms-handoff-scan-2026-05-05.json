@@ -1,0 +1,25 @@
+{
+  "schema": "medioevo.secret_scan_result.v1",
+  "generated_at_utc": "2026-05-05T10:08:00Z",
+  "status": "PASS",
+  "scope": {
+    "paths": [
+      "COMMS/handoffs/2026-05-05-claudio-local-agent-seto.md",
+      "COMMS/inbox/claudio-local-agent.jsonl",
+      "COMMS/topics/seto-observacionismo-decisions.jsonl",
+      "COMMS/agents_state/curador-seto.json",
+      "SOURCE_INTAKE_REGISTER.md",
+      "source_intake_register.json",
+      "MIGRATION_MAP.md",
+      "docs/developer/INDEX.md"
+    ],
+    "artifacts": [
+      "qa_artifacts/release_validation/seto-comms-handoff-2026-05-05.json",
+      "qa_artifacts/release_validation/seto-comms-handoff-scan-2026-05-05.json"
+    ],
+    "default_workspace_scan": false
+  },
+  "findings": [],
+  "count_reported": 0,
+  "truncated_at": 200
+}

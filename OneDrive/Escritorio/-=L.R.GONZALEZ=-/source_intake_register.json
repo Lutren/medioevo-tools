@@ -2981,5 +2981,37 @@
         "Uncertain cases create ficha, hash evidence and handoff without touching files."
       ]
     }
+  ],
+  "seto_comms_handoff_passes": [
+    {
+      "date": "2026-05-05",
+      "status": "REVIEW_HANDOFF_READY",
+      "scope": "Physical COMMS initialization for Claudio local-agent read-only intake",
+      "handoff": "COMMS/handoffs/2026-05-05-claudio-local-agent-seto.md",
+      "inbox": "COMMS/inbox/claudio-local-agent.jsonl",
+      "topic": "COMMS/topics/seto-observacionismo-decisions.jsonl",
+      "agent_state": "COMMS/agents_state/curador-seto.json",
+      "json": "qa_artifacts/release_validation/seto-comms-handoff-2026-05-05.json",
+      "scan_json": "qa_artifacts/release_validation/seto-comms-handoff-scan-2026-05-05.json",
+      "artifact_hashes": {
+        "handoff": "325770239AB6A57601AFE2EDA57CD54D940438B9B96413AF426F83BA058A87B5",
+        "inbox": "FEAD000C4905B10F1BA0981A1A13EB296E7DBC7332F9861361F2A59A263DE087",
+        "topic": "C1B28DE940A7BD70440A0C4EA68FC0A4333B692B396F172E2E756577FF079307",
+        "agent_state": "73326600E704E5B3E6FB83DBC8AA5A9892D7B9713AD998B873EB13F909963B28",
+        "json": "021B0F0B133995AC1B6D4D6D99BD376BC83E56D4CEB8BAC84DB26C938D7AECC8",
+        "scan_json": "9BD5582835BD511ACA0676403E8B471B92F7C6CC3FC470ED1C72909E19121743"
+      },
+      "action_gate": {
+        "decision": "REVIEW",
+        "no_write_to_claudio_implementation": true,
+        "no_external_action": true,
+        "no_delete_or_move": true
+      },
+      "decisions": [
+        "COMMS paths are initialized as local coordination artifacts.",
+        "The Claudio handoff is read-only intake until local-agent tests consume it.",
+        "No Claudio source, language source, raw Downloads source, external publication or private asset was modified."
+      ]
+    }
   ]
 }

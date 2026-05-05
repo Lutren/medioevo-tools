@@ -21,5 +21,6 @@ Read:
 - `docs\intake\SETO_DUPLICATE_GROUP_FICHAS_BATCH1_2026-05-05.md`
 - `docs\intake\SETO_PSI_VAULT_RESIDUAL_REVIEW_2026-05-05.md`
 - `docs\developer\SETO_OBSERVACIONISMO_DECISION_LEARNING_2026-05-05.md`
+- `COMMS\handoffs\2026-05-05-claudio-local-agent-seto.md`
 
 Candidate first package: `observacionismo-gate`.

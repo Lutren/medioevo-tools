@@ -1,0 +1,35 @@
+{
+  "schema": "medioevo.comms.agent_state.v1",
+  "generated_at_utc": "2026-05-05T10:02:00Z",
+  "agent_id": "curador-seto",
+  "status": "ACTIVE_LOCAL_CONTRACT",
+  "owns": [
+    "manifests",
+    "fichas",
+    "duplicate queues",
+    "ActionGate",
+    "WitnessLog",
+    "COMMS envelopes"
+  ],
+  "may_touch": [
+    "docs/developer/CURADOR_SETO_*",
+    "docs/developer/SETO_*",
+    "docs/intake/SETO_*",
+    "COMMS/**",
+    "qa_artifacts/release_validation/seto-*",
+    "qa_artifacts/witness_log/curador_seto_witnesslog.jsonl",
+    "SOURCE_INTAKE_REGISTER.md",
+    "source_intake_register.json",
+    "DELETE_CANDIDATES.md",
+    "MIGRATION_MAP.md"
+  ],
+  "must_not_touch_without_handoff": [
+    "language-agent implementation",
+    "claudio-local-agent implementation",
+    "private RPG/TCG assets",
+    "Downloads raw sources",
+    "publication/deploy/push/browser-auth state"
+  ],
+  "current_handoff": "COMMS/handoffs/2026-05-05-claudio-local-agent-seto.md",
+  "last_witness_event_hash": "141850cac3d72b5d22fc3378e4173bffdf7a38e48eeb5937de89e5b8d1300539"
+}
