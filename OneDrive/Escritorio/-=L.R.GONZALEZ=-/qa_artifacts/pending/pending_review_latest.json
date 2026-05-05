@@ -1,6 +1,6 @@
 {
   "schema": "medioevo.pending_review.v1",
-  "generated_at": "2026-05-05T18:55:53+00:00",
+  "generated_at": "2026-05-05T18:58:33+00:00",
   "date": "2026-05-05",
   "root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
   "policy": {
@@ -10,31 +10,31 @@
     "curador": "unknown sources and residues still require curador_preflight before use or discard."
   },
   "active_markdown": {
-    "raw_open": 840,
-    "dedup_open": 785,
+    "raw_open": 691,
+    "dedup_open": 660,
     "by_priority": {
       "P1": 11,
       "P2": 6,
       "P3": 3,
       "P4": 4,
-      "UNCLASSIFIED": 761
+      "UNCLASSIFIED": 636
     },
     "by_lane": {
       "cleanup_migration": 1,
-      "commercial": 88,
+      "commercial": 85,
       "general": 155,
-      "open_source": 3,
-      "private_rpg": 93,
-      "runtime_claudio": 425,
+      "open_source": 2,
+      "private_rpg": 6,
+      "runtime_claudio": 391,
       "wave_fc": 3,
       "website_marketing": 17
     },
     "by_blocker": {
-      "external_or_gated": 297,
-      "host_or_heavy": 68,
-      "legal_or_human": 135,
-      "local_candidate": 182,
-      "private_boundary": 103
+      "external_or_gated": 289,
+      "host_or_heavy": 67,
+      "legal_or_human": 133,
+      "local_candidate": 155,
+      "private_boundary": 16
     },
     "top_items": [
       {
@@ -233,128 +233,128 @@
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "muyddit r/fmuyelance - EN version",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/products/PROMO_POSTS_SOFTWARE.md:524",
+        "item": "Patrones emergentes (en progreso)",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/teatro/CONWAY_OBSERVER_INTEGRACION.md:377",
         "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "muyddit r/fmuyelance - ES version (r/fmuyelancers_es or similar)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/products/PROMO_POSTS_SOFTWARE.md:525",
+        "item": "Validar que Lenguaje Cognitivo funciona",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/teatro/CONWAY_OBSERVER_INTEGRACION.md:397",
         "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "muyddit r/ADHD - EN version",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/products/PROMO_POSTS_SOFTWARE.md:526",
+        "item": "Ajustar thresholds según evidencia",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/teatro/CONWAY_OBSERVER_INTEGRACION.md:398",
         "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "muyddit r/neurodiversity - EN version",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/products/PROMO_POSTS_SOFTWARE.md:527",
+        "item": "Skills se optimizan entre sí",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/teatro/CONWAY_OBSERVER_INTEGRACION.md:407",
         "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "muyddit r/writing - EN version",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/products/PROMO_POSTS_SOFTWARE.md:529",
+        "item": "Sugerir mejoras basadas en evidencia",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/teatro/CONWAY_OBSERVER_INTEGRACION.md:408",
         "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "muyddit r/selfpublish - EN version",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/products/PROMO_POSTS_SOFTWARE.md:530",
+        "item": "Implementar mejoras automáticamente",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/teatro/CONWAY_OBSERVER_INTEGRACION.md:409",
         "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "Cross-post to r/sideproject, r/indiehackers, r/smallbusiness as appropriate",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/products/PROMO_POSTS_SOFTWARE.md:535",
-        "occurrences": 1
+        "item": "Agregar 5 tests más al Hormiguero",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/teatro/HORMIGUERO_TESTS.md:294",
+        "occurrences": 2
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "Polish mockup.html as interactive demo",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/products/crm/BUSINESS.md:73",
-        "occurrences": 1
+        "item": "Implementar UI básica en Hormiguero Hub",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/teatro/HORMIGUERO_TESTS.md:295",
+        "occurrences": 2
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "Cmuyate landing page with demo video",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/products/crm/BUSINESS.md:74",
-        "occurrences": 1
+        "item": "Agregar sistema de \"turnos\" (día/noche)",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/teatro/HORMIGUERO_TESTS.md:296",
+        "occurrences": 2
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "Collect email waitlist",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/products/crm/BUSINESS.md:77",
-        "occurrences": 1
+        "item": "Colaboración entre agentes (tests en pareja)",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/teatro/HORMIGUERO_TESTS.md:299",
+        "occurrences": 2
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "Build Electron app (.exe + .dmg)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/products/crm/BUSINESS.md:80",
-        "occurrences": 1
+        "item": "Exportar reportes a PDF/Markdown",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/teatro/HORMIGUERO_TESTS.md:300",
+        "occurrences": 2
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "muycord demo video (2-3 min)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/products/crm/BUSINESS.md:81",
-        "occurrences": 1
+        "item": "Integrar con PSI_HANDOFF para continuidad",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/teatro/HORMIGUERO_TESTS.md:301",
+        "occurrences": 2
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "ProductHunt launch (Tuesday morning)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/products/crm/BUSINESS.md:82",
-        "occurrences": 1
+        "item": "Agentes que \"sueñan\" (procesan experiencias en descanso)",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/teatro/HORMIGUERO_TESTS.md:304",
+        "occurrences": 2
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "Post on muylevant submuyddits",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/products/crm/BUSINESS.md:83",
-        "occurrences": 1
+        "item": "Emergencia de patrones colectivos",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/teatro/HORMIGUERO_TESTS.md:305",
+        "occurrences": 2
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "Send to email waitlist",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/products/crm/BUSINESS.md:84",
-        "occurrences": 1
+        "item": "Publicación de paper sobre \"Agentes con Vida Propia\"",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/teatro/HORMIGUERO_TESTS.md:306",
+        "occurrences": 2
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "Facebook ads (LATAM market first, Spanish speakers)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/products/crm/BUSINESS.md:87",
+        "item": "Configurar TV para aceptar stmuyams de audio HTTP",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/tv_audio/TV_AUDIO_ONLY_ARCHITECTURE.md:191",
         "occurrences": 1
       }
     ]

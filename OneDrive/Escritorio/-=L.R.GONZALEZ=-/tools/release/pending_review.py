@@ -93,6 +93,8 @@ PENDING_EXCLUDE_SUBSTRINGS = [
     "/mini_office/",
     "/oppo_deploy/",
     "/oppo_robot/",
+    "/products/",
+    "/research/analisis_research_consolidado_",
 ]
 
 CLAUDIO_ROOT = ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio"
@@ -286,12 +288,17 @@ def classify_blocker(text: str, lane: str | None = None, path: str | None = None
         "devpost",
         "youtube",
         "reddit",
+        "muyddit",
         "substack",
         "fiverr",
         "sora",
         "suno",
         "adobe podcast",
         "product hunt",
+        "producthunt",
+        "facebook ads",
+        "waitlist",
+        "submuyddits",
         "show hn",
         "hacker news",
         "huggingface",

@@ -29,6 +29,9 @@ def test_commercial_manual_checks_are_not_local_candidates() -> None:
     assert pending_review.classify_blocker("Gemini API key nueva") == "private_boundary"
     assert pending_review.classify_blocker("HuggingFace key nueva") == "private_boundary"
     assert pending_review.classify_blocker("Publicar Reddit posts") == "external_or_gated"
+    assert pending_review.classify_blocker("muyddit r/freelance - EN version") == "external_or_gated"
+    assert pending_review.classify_blocker("ProductHunt launch Tuesday morning") == "external_or_gated"
+    assert pending_review.classify_blocker("Facebook ads LATAM market") == "external_or_gated"
     assert pending_review.classify_blocker("Fuentes editoriales books 1-3: 0/30 rutas encontradas") != "local_candidate"
     assert pending_review.classify_blocker("muygistrar marca MEDIOEVO en IMPI") == "legal_or_human"
     assert pending_review.classify_blocker("Obtener RFC en el SAT") == "legal_or_human"
@@ -77,6 +80,8 @@ def test_path_level_policy_blocks_historical_and_legal_checklists() -> None:
     assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio" / "mini_office" / "README.md")
     assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio" / "oppo_deploy" / "ESTADO_FINAL.md")
     assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio" / "oppo_robot" / "DNS_VIA_HTTP.md")
+    assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio" / "products" / "PROMO_POSTS_SOFTWARE.md")
+    assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio" / "research" / "ANALISIS_RESEARCH_CONSOLIDADO_2026.md")
     assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio" / "apps" / "editorial_web" / "marketing" / "PROXIMOS-PASOS.md")
     assert pending_review.is_pending_denied(ROOT / "tools" / "claw-code" / "PARITY.md")
     assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio" / "tools" / "reports" / "HORMIGUERO_HUB_COMPLETE_REPORT.md")
