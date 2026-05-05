@@ -66,6 +66,29 @@ def test_resume_uses_traversal_marker_not_lexicographic_path(tmp_path: Path) -> 
     assert [Path(str(row["path"])).name for row in result["rows"]] == ["n_after.txt"]
 
 
+def test_resume_marker_inside_skipped_agent_session_dir_continues_after_dir(tmp_path: Path) -> None:
+    root = tmp_path / "root"
+    session = root / ".claude" / "checkpoints"
+    session.mkdir(parents=True)
+    marker = session / "checkpoint.json"
+    marker.write_text("{}", encoding="utf-8")
+    (root / "after.md").write_text("after", encoding="utf-8")
+
+    result = audit.scan_roots(
+        hash_max_bytes=1024 * 1024,
+        registry_blob="",
+        root_labels={"fixture"},
+        max_files=10,
+        start_after=str(marker),
+        root_defs=[{"label": "fixture", "path": root, "exclude": []}],
+    )
+
+    assert result["resume"]["start_after_found"] is True
+    assert [Path(str(row["path"])).name for row in result["rows"]] == ["after.md"]
+    assert result["generated_dirs"][0]["classification"] == "AGENT_SESSION_DIR_REVIEW"
+    assert result["generated_dirs"][0]["action_gate"] == "BLOCK"
+
+
 def test_unknown_root_label_fails_closed(tmp_path: Path) -> None:
     root_defs = [{"label": "fixture", "path": tmp_path, "exclude": []}]
 

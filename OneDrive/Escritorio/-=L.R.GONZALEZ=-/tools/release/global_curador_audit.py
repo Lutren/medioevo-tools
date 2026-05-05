@@ -33,6 +33,8 @@ GENERATED_DIR_NAMES = {
     ".mypy_cache",
     ".ruff_cache",
     ".cache",
+    ".claude",
+    ".claw",
     "target",
     "dist",
     "build",
@@ -182,6 +184,10 @@ def generated_dir_record(path: Path, root_label: str) -> dict[str, object]:
     if name == ".git":
         decision = "KEEP_BLOCKED_GIT_HISTORY"
         gate = "BLOCK"
+    elif name in {".claude", ".claw"}:
+        decision = "KEEP_BLOCKED_AGENT_SESSION_HISTORY"
+        gate = "BLOCK"
+        classification = "AGENT_SESSION_DIR_REVIEW"
     elif name in {"env", "venv", ".venv"}:
         decision = "REVIEW_ENV_DIR_SECRET_AND_REGENERABILITY"
         gate = "REVIEW"
@@ -405,6 +411,9 @@ def scan_roots(
                 if should_skip_dir(child):
                     generated_dirs.append(generated_dir_record(child, label))
                     root_stats[label]["generated_dirs_skipped"] = int(root_stats[label]["generated_dirs_skipped"]) + 1
+                    if start_after_abs and is_under_norm(start_after_abs, norm_abs(child)):
+                        resume_found = True
+                        resume["start_after_found"] = True
                     continue
                 kept_dirs.append(dir_name)
             dir_names[:] = kept_dirs
