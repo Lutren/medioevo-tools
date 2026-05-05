@@ -707,6 +707,9 @@ Result:
 - ActionGate: `REVIEW`.
 - Claim state: `INFERENCIA`.
 - Main reason: autonomy and raw-theory risk require handoff before local writes.
+- Tests:
+  `python -m unittest COMMS\tests\test_observacionista_engine.py`.
+- Test result: `PASS`, `4` tests.
 - No Downloads prototype was copied wholesale.
 - No file move, delete, extraction, publication, push or external action was performed.
 

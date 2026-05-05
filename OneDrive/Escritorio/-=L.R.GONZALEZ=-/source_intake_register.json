@@ -3095,10 +3095,13 @@
         "engine_status": "REVIEW",
         "action_gate": "REVIEW",
         "claim_state": "INFERENCIA",
+        "tests": 4,
+        "test_status": "PASS",
         "source_moves": 0,
         "source_deletions": 0,
         "external_actions": 0
       },
+      "test_json": "qa_artifacts/release_validation/seto-observacionista-engine-tests-2026-05-05.json",
       "decisions": [
         "The method is implemented as a local gate and handoff compiler, not as a physics or medical claim.",
         "Claudio/Wabi-Sabi may consume the JSON result before writes, but REVIEW and BLOCK must stop autonomous writes.",

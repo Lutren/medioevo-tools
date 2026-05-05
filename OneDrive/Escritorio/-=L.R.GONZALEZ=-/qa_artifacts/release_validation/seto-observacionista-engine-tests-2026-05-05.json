@@ -1,0 +1,17 @@
+{
+  "schema": "medioevo.observacionista_engine_tests.v1",
+  "generated_at_utc": "2026-05-05T10:45:00Z",
+  "status": "PASS",
+  "command": "python -m unittest COMMS/tests/test_observacionista_engine.py",
+  "tests": {
+    "total": 4,
+    "failures": 0,
+    "errors": 0
+  },
+  "covered_cases": [
+    "default Claudio handoff stays REVIEW/INFERENCIA",
+    "blocked medical/publication/secret-like claim forces BLOCK/BLOQUEADO",
+    "secret scan control text is not treated as a credential",
+    "Phi_eff remains bounded between 0 and 1"
+  ]
+}

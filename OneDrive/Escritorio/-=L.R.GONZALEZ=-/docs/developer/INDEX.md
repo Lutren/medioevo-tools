@@ -31,5 +31,6 @@ Read:
 - `docs\intake\OBSERVACIONISTA_ENGINE_INVERSE_FICHA_2026-05-05.md`
 - `COMMS\schemas\observacionista-engine-result.schema.json`
 - `COMMS\tools\observacionista_engine.py`
+- `COMMS\tests\test_observacionista_engine.py`
 
 Candidate first package: `observacionismo-gate`.

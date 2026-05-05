@@ -1,0 +1,18 @@
+{
+  "scope": {
+    "products": [],
+    "paths": [
+      "COMMS/tests/test_observacionista_engine.py",
+      "SOURCE_INTAKE_REGISTER.md",
+      "source_intake_register.json",
+      "docs/developer/INDEX.md"
+    ],
+    "artifacts": [
+      "qa_artifacts/release_validation/seto-observacionista-engine-tests-2026-05-05.json"
+    ],
+    "default_workspace_scan": false
+  },
+  "findings": [],
+  "count_reported": 0,
+  "truncated_at": 200
+}
