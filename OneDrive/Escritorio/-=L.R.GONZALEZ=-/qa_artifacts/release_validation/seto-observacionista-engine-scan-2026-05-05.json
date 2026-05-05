@@ -1,0 +1,21 @@
+{
+  "scope": {
+    "products": [],
+    "paths": [
+      "COMMS/tools/observacionista_engine.py",
+      "COMMS/schemas/observacionista-engine-result.schema.json",
+      "docs/developer/OBSERVACIONISTA_ENGINE_INVERSE_CONTRACT_2026-05-05.md",
+      "docs/intake/OBSERVACIONISTA_ENGINE_INVERSE_FICHA_2026-05-05.md",
+      "SOURCE_INTAKE_REGISTER.md",
+      "source_intake_register.json",
+      "docs/developer/INDEX.md"
+    ],
+    "artifacts": [
+      "qa_artifacts/release_validation/seto-observacionista-engine-result-2026-05-05.json"
+    ],
+    "default_workspace_scan": false
+  },
+  "findings": [],
+  "count_reported": 0,
+  "truncated_at": 200
+}

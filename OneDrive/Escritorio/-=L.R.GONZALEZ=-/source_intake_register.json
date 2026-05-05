@@ -3073,5 +3073,37 @@
         "The tool lives under COMMS to avoid release-path denylist false positives."
       ]
     }
+  ],
+  "seto_observacionista_engine_passes": [
+    {
+      "date": "2026-05-05",
+      "status": "REVIEW",
+      "scope": "Local observacionista and inverse-observacionista engine contract for Claudio/Wabi-Sabi",
+      "tool": "COMMS/tools/observacionista_engine.py",
+      "schema": "COMMS/schemas/observacionista-engine-result.schema.json",
+      "contract": "docs/developer/OBSERVACIONISTA_ENGINE_INVERSE_CONTRACT_2026-05-05.md",
+      "ficha": "docs/intake/OBSERVACIONISTA_ENGINE_INVERSE_FICHA_2026-05-05.md",
+      "result_json": "qa_artifacts/release_validation/seto-observacionista-engine-result-2026-05-05.json",
+      "scan_json": "qa_artifacts/release_validation/seto-observacionista-engine-scan-2026-05-05.json",
+      "source_hashes": {
+        "Downloads/sensorium_inversion_lab.py": "DF5105E2E46D09C31AA22F6CBB3931EE1C5FF0963A666F247ECADF9FFFA346B2",
+        "Downloads/TUIP_SIGMA_R2_1_PRAGMATIC_CANON.md": "62C6F2E56977F3AC83AF30DA115ACD44338D800599A2BA30F4DAC633E14DA04F",
+        "Downloads/tuip_sigma_core.py": "C5380DE6BF94392D4120653AFF55BC70FB67BEE035065C90BF06AE77B2F974F1",
+        "Downloads/observacionismo_v8_1_addons.txt": "2E9D8A6F6317789AD08D71CC5FF9821275898DE8C1ED90DAD4CB2048AFBD6C45"
+      },
+      "summary": {
+        "engine_status": "REVIEW",
+        "action_gate": "REVIEW",
+        "claim_state": "INFERENCIA",
+        "source_moves": 0,
+        "source_deletions": 0,
+        "external_actions": 0
+      },
+      "decisions": [
+        "The method is implemented as a local gate and handoff compiler, not as a physics or medical claim.",
+        "Claudio/Wabi-Sabi may consume the JSON result before writes, but REVIEW and BLOCK must stop autonomous writes.",
+        "Downloads prototypes remain curated sources and were not copied wholesale."
+      ]
+    }
   ]
 }

@@ -675,6 +675,41 @@ Result:
 - WitnessLog tail hash match: `true`.
 - Secret scan: `0` findings.
 
+## Observacionista Engine + Inverse 2026-05-05
+
+This pass implemented the requested observacionista and inverse-observacionista
+method as a local COMMS engine and contract for Claudio/Wabi-Sabi. It extracts
+only operational patterns from PSI/Downloads and does not copy full prototypes.
+
+Artifacts:
+
+- `COMMS\tools\observacionista_engine.py`
+- `COMMS\schemas\observacionista-engine-result.schema.json`
+- `docs\developer\OBSERVACIONISTA_ENGINE_INVERSE_CONTRACT_2026-05-05.md`
+- `docs\intake\OBSERVACIONISTA_ENGINE_INVERSE_FICHA_2026-05-05.md`
+- `qa_artifacts\release_validation\seto-observacionista-engine-result-2026-05-05.json`
+- `qa_artifacts\release_validation\seto-observacionista-engine-scan-2026-05-05.json`
+
+Source hashes:
+
+| source | sha256 |
+|---|---|
+| `C:\Users\L-Tyr\Downloads\sensorium_inversion_lab.py` | `DF5105E2E46D09C31AA22F6CBB3931EE1C5FF0963A666F247ECADF9FFFA346B2` |
+| `C:\Users\L-Tyr\Downloads\TUIP_SIGMA_R2_1_PRAGMATIC_CANON.md` | `62C6F2E56977F3AC83AF30DA115ACD44338D800599A2BA30F4DAC633E14DA04F` |
+| `C:\Users\L-Tyr\Downloads\tuip_sigma_core.py` | `C5380DE6BF94392D4120653AFF55BC70FB67BEE035065C90BF06AE77B2F974F1` |
+| `C:\Users\L-Tyr\Downloads\observacionismo_v8_1_addons.txt` | `2E9D8A6F6317789AD08D71CC5FF9821275898DE8C1ED90DAD4CB2048AFBD6C45` |
+
+Result:
+
+- Engine command:
+  `python COMMS\tools\observacionista_engine.py --input COMMS\inbox\claudio-local-agent.jsonl --out qa_artifacts\release_validation\seto-observacionista-engine-result-2026-05-05.json --json`.
+- Status: `REVIEW`.
+- ActionGate: `REVIEW`.
+- Claim state: `INFERENCIA`.
+- Main reason: autonomy and raw-theory risk require handoff before local writes.
+- No Downloads prototype was copied wholesale.
+- No file move, delete, extraction, publication, push or external action was performed.
+
 ## SETO PSI Redundant Vault Batch 3 Cleanup 2026-05-05
 
 This pass removed the final exact duplicates discovered in

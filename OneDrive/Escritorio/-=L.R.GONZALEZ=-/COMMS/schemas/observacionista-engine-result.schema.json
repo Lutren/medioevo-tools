@@ -1,0 +1,189 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "medioevo.seto.observacionista-engine-result.v1",
+  "title": "SETO Observacionista Engine Result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "generated_at_utc",
+    "status",
+    "source_hashes",
+    "observationist_engineering",
+    "inverse_observationist_engineering",
+    "action_gate",
+    "claim_state",
+    "falsifiers",
+    "recommendations"
+  ],
+  "properties": {
+    "schema": {
+      "const": "medioevo.observacionista_engine_result.v1"
+    },
+    "generated_at_utc": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "PASS",
+        "REVIEW",
+        "BLOCK"
+      ]
+    },
+    "source_hashes": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^[A-Fa-f0-9]{64}$"
+      }
+    },
+    "observationist_engineering": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "R",
+        "J_c",
+        "Phi_eff",
+        "evidence_score",
+        "risk_score",
+        "gate",
+        "reasons"
+      ],
+      "properties": {
+        "R": {
+          "type": "number",
+          "minimum": 0
+        },
+        "J_c": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "Phi_eff": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "evidence_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "risk_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "gate": {
+          "type": "string",
+          "enum": [
+            "APPROVE",
+            "REVIEW",
+            "BLOCK"
+          ]
+        },
+        "reasons": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "inverse_observationist_engineering": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "profiles",
+        "channels",
+        "signature_distances",
+        "stability_score",
+        "visual_dependency",
+        "invariant_score",
+        "hidden_bias_flags",
+        "conclusion_state"
+      ],
+      "properties": {
+        "profiles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "channels": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "signature_distances": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number",
+            "minimum": 0
+          }
+        },
+        "stability_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "visual_dependency": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "invariant_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "hidden_bias_flags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "conclusion_state": {
+          "type": "string",
+          "enum": [
+            "CERTEZA",
+            "INFERENCIA",
+            "INCOGNITA",
+            "BLOQUEADO"
+          ]
+        }
+      }
+    },
+    "action_gate": {
+      "type": "string",
+      "enum": [
+        "APPROVE",
+        "REVIEW",
+        "BLOCK"
+      ]
+    },
+    "claim_state": {
+      "type": "string",
+      "enum": [
+        "CERTEZA",
+        "INFERENCIA",
+        "INCOGNITA",
+        "BLOQUEADO"
+      ]
+    },
+    "falsifiers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "recommendations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

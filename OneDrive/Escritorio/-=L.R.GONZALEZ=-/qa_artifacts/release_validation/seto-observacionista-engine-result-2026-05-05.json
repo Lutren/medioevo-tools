@@ -1,0 +1,129 @@
+{
+  "schema": "medioevo.observacionista_engine_result.v1",
+  "generated_at_utc": "2026-05-05T10:22:02Z",
+  "status": "REVIEW",
+  "source_hashes": {
+    "Downloads/sensorium_inversion_lab.py": "DF5105E2E46D09C31AA22F6CBB3931EE1C5FF0963A666F247ECADF9FFFA346B2",
+    "Downloads/TUIP_SIGMA_R2_1_PRAGMATIC_CANON.md": "62C6F2E56977F3AC83AF30DA115ACD44338D800599A2BA30F4DAC633E14DA04F",
+    "Downloads/tuip_sigma_core.py": "C5380DE6BF94392D4120653AFF55BC70FB67BEE035065C90BF06AE77B2F974F1",
+    "Downloads/observacionismo_v8_1_addons.txt": "2E9D8A6F6317789AD08D71CC5FF9821275898DE8C1ED90DAD4CB2048AFBD6C45",
+    "COMMS/inbox/claudio-local-agent.jsonl": "fead000c4905b10f1ba0981a1a13eb296e7dbc7332f9861361f2a59a263de087",
+    "qa_artifacts/release_validation/seto-observacionismo-decision-examples-2026-05-05.jsonl": "b00114556582418efd3ae37c453b2b5fc0e2659edb6d57cf4032a0f2dde2e4d3"
+  },
+  "observationist_engineering": {
+    "R": 0.3836,
+    "J_c": 1.0,
+    "Phi_eff": 0.536696,
+    "evidence_score": 0.538667,
+    "risk_score": 0.32,
+    "blocked_flags": [],
+    "risk_flags": [
+      "agent_autonomy",
+      "raw_theory"
+    ],
+    "gate": "REVIEW",
+    "reasons": [
+      "risk flags detected: agent_autonomy, raw_theory",
+      "Phi_eff at or below review threshold"
+    ]
+  },
+  "inverse_observationist_engineering": {
+    "profiles": [
+      "human_visual",
+      "instrument_balanced",
+      "dark_observer",
+      "phase_observer",
+      "low_bandwidth_human"
+    ],
+    "channels": [
+      "photon",
+      "electric",
+      "magnetic",
+      "gravity",
+      "thermal",
+      "acoustic",
+      "chemical",
+      "temporal_phase"
+    ],
+    "channel_signal": {
+      "photon": 0.125,
+      "electric": 0.125,
+      "magnetic": 0.125,
+      "gravity": 0.125,
+      "thermal": 0.125,
+      "acoustic": 0.125,
+      "chemical": 0.125,
+      "temporal_phase": 0.125
+    },
+    "observations": [
+      {
+        "profile": "human_visual",
+        "clarity": 0.33625,
+        "visual_dependency": 0.35316,
+        "channel_coverage": 0.5,
+        "cross_channel_coherence": 0.853138,
+        "signal": 0.33625
+      },
+      {
+        "profile": "instrument_balanced",
+        "clarity": 0.6625,
+        "visual_dependency": 0.132075,
+        "channel_coverage": 1.0,
+        "cross_channel_coherence": 0.972757,
+        "signal": 0.6625
+      },
+      {
+        "profile": "dark_observer",
+        "clarity": 0.5625,
+        "visual_dependency": 0.011111,
+        "channel_coverage": 0.875,
+        "cross_channel_coherence": 0.866683,
+        "signal": 0.5625
+      },
+      {
+        "profile": "phase_observer",
+        "clarity": 0.49375,
+        "visual_dependency": 0.075949,
+        "channel_coverage": 1.0,
+        "cross_channel_coherence": 0.901228,
+        "signal": 0.49375
+      },
+      {
+        "profile": "low_bandwidth_human",
+        "clarity": 0.19375,
+        "visual_dependency": 0.419355,
+        "channel_coverage": 0.25,
+        "cross_channel_coherence": 0.898328,
+        "signal": 0.19375
+      }
+    ],
+    "signature_distances": {
+      "human_visual->instrument_balanced": 0.647786,
+      "human_visual->dark_observer": 0.555873,
+      "human_visual->phase_observer": 0.594949,
+      "human_visual->low_bandwidth_human": 0.298714
+    },
+    "stability_score": 0.475669,
+    "visual_dependency": 0.19833,
+    "invariant_score": 0.664829,
+    "hidden_bias_flags": [
+      "observer_profile_instability"
+    ],
+    "conclusion_state": "INFERENCIA"
+  },
+  "action_gate": "REVIEW",
+  "claim_state": "INFERENCIA",
+  "falsifiers": [
+    "Source hashes do not match the curated intake register.",
+    "Observer-profile perturbation changes conclusion from CERTEZA/INFERENCIA to INCOGNITA.",
+    "ActionGate sees medical, strong physics, social prediction, publication, external action or secret-like flags.",
+    "Phi_eff stays at or below 0.60 after evidence compression and local validation.",
+    "COMMS validator fails or WitnessLog hash-chain verification fails."
+  ],
+  "recommendations": [
+    "Operationally useful but still requires review before autonomous write action.",
+    "Use this engine as a local gate and handoff compiler, not as proof of physics or human diagnosis.",
+    "For Claudio/Wabi-Sabi, consume the JSON result before writes and route REVIEW/BLOCK to human-visible handoff.",
+    "Reduce hidden observer bias before promotion: observer_profile_instability"
+  ]
+}

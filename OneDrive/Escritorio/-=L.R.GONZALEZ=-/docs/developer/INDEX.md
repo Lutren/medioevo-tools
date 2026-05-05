@@ -27,5 +27,9 @@ Read:
 - `COMMS\schemas\action-gate.schema.json`
 - `COMMS\schemas\witness-log-event.schema.json`
 - `COMMS\tools\validate_seto_comms.py`
+- `docs\developer\OBSERVACIONISTA_ENGINE_INVERSE_CONTRACT_2026-05-05.md`
+- `docs\intake\OBSERVACIONISTA_ENGINE_INVERSE_FICHA_2026-05-05.md`
+- `COMMS\schemas\observacionista-engine-result.schema.json`
+- `COMMS\tools\observacionista_engine.py`
 
 Candidate first package: `observacionismo-gate`.
