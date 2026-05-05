@@ -125,3 +125,37 @@ def test_witness_event_matches_seto_validator_hash_contract(tmp_path: Path) -> N
 
     assert event["action_gate"] == "REVIEW"
     assert curador.hashlib.sha256(raw).hexdigest() == expected
+
+
+def test_second_unchanged_run_is_noop_and_does_not_append_witness(tmp_path: Path) -> None:
+    workspace = tmp_path / "workspace"
+    downloads = tmp_path / "Downloads"
+    downloads.mkdir(parents=True)
+    workspace.mkdir()
+    (workspace / "DELETED_OR_ARCHIVED.md").write_text("# DELETED_OR_ARCHIVED\n", encoding="utf-8")
+    (downloads / "unique.txt").write_text("unique", encoding="utf-8")
+
+    first = curador.run_curador(
+        workspace_root=workspace,
+        downloads_dir=downloads,
+        recursive=True,
+        write_index=True,
+        write_fichas_flag=True,
+        apply_exact_download_duplicates=True,
+    )
+    witness = Path(first["witness_log"])
+    first_lines = witness.read_text(encoding="utf-8").splitlines()
+
+    second = curador.run_curador(
+        workspace_root=workspace,
+        downloads_dir=downloads,
+        recursive=True,
+        write_index=True,
+        write_fichas_flag=True,
+        apply_exact_download_duplicates=True,
+    )
+    second_lines = witness.read_text(encoding="utf-8").splitlines()
+
+    assert second["noop"] is True
+    assert second["downloads_files_seen"] == 1
+    assert second_lines == first_lines

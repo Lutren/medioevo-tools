@@ -773,6 +773,68 @@ def write_runtime_export(runtime_dir: Path, records: list[FileRecord], groups: l
     (runtime_dir / "source_intake_export.json").write_text(json.dumps(export, indent=2, ensure_ascii=False), encoding="utf-8")
 
 
+def current_snapshot(records: list[FileRecord]) -> list[tuple[str, str, int]]:
+    return sorted((record.path, record.sha256, record.size_bytes) for record in records)
+
+
+def stored_current_snapshot(db_path: Path) -> list[tuple[str, str, int]] | None:
+    if not db_path.exists():
+        return None
+    try:
+        with sqlite3.connect(db_path) as db:
+            rows = db.execute(
+                "SELECT path, sha256, size_bytes FROM files WHERE deleted = 0 ORDER BY path"
+            ).fetchall()
+    except sqlite3.Error:
+        return None
+    return [(str(path), str(sha256), int(size_bytes)) for path, sha256, size_bytes in rows]
+
+
+def curador_outputs_exist(workspace_root: Path, db_path: Path, write_index: bool, write_fichas_flag: bool) -> bool:
+    required = [
+        db_path,
+        workspace_root / "runtime" / "curador_seto" / "source_intake_export.json",
+        workspace_root / "qa_artifacts" / "witness_log" / "curador_seto_witnesslog.jsonl",
+    ]
+    if write_index:
+        required.append(workspace_root / "docs" / "intake" / "CURADOR_MASTER_INDEX.md")
+    if write_fichas_flag:
+        required.append(workspace_root / "docs" / "intake" / "curador_fichas" / "downloads")
+    return all(path.exists() for path in required)
+
+
+def no_change_result(
+    *,
+    workspace_root: Path,
+    downloads_dir: Path,
+    db_path: Path,
+    witness_path: Path,
+    records: list[FileRecord],
+) -> dict[str, object]:
+    result: dict[str, object] = {
+        "generated_at_utc": utc_now(),
+        "workspace_root": str(workspace_root),
+        "downloads_dir": str(downloads_dir),
+        "db_path": str(db_path),
+        "master_index": str(workspace_root / "docs" / "intake" / "CURADOR_MASTER_INDEX.md"),
+        "witness_log": str(witness_path),
+        "witness_event_hash": previous_witness_hash(witness_path),
+        "downloads_files_seen": len(records),
+        "duplicate_groups_detected": 0,
+        "deleted_exact_duplicates": 0,
+        "deleted_bytes": 0,
+        "new_folder_files_registered": sum(1 for record in records if record.rel_path.lower().startswith("new folder/")),
+        "blocked_records": sum(1 for record in records if record.action_gate == "BLOCK"),
+        "status_counts": {},
+        "duplicate_groups": [],
+        "deleted": [],
+        "noop": True,
+    }
+    for record in records:
+        result["status_counts"][record.status] = result["status_counts"].get(record.status, 0) + 1
+    return result
+
+
 def run_curador(
     *,
     workspace_root: Path,
@@ -791,6 +853,18 @@ def run_curador(
     files = scan_downloads(downloads_dir, recursive=recursive)
     records = make_file_records(downloads_dir, files, workspace_root / "docs" / "intake" / "curador_fichas" / "downloads")
     groups = duplicate_groups(records, downloads_dir)
+    if (
+        not groups
+        and stored_current_snapshot(db_path) == current_snapshot(records)
+        and curador_outputs_exist(workspace_root, db_path, write_index, write_fichas_flag)
+    ):
+        return no_change_result(
+            workspace_root=workspace_root,
+            downloads_dir=downloads_dir,
+            db_path=db_path,
+            witness_path=witness_path,
+            records=records,
+        )
     if write_fichas_flag:
         write_fichas(workspace_root, records)
     deleted = delete_exact_duplicates(downloads_dir, groups, records, apply_delete=apply_exact_download_duplicates)
