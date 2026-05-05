@@ -1,6 +1,6 @@
 # Curador SETO Next Actions
 
-Pending snapshot: `2026-05-05T19:01:54+00:00`
+Pending snapshot: `2026-05-05T19:04:57+00:00`
 
 Estado operativo para decidir el siguiente loop sin reescanear todo el sistema.
 
@@ -35,8 +35,8 @@ Estado operativo para decidir el siguiente loop sin reescanear todo el sistema.
 
 | blocker | dedup_count |
 |---|---:|
-| `external_or_gated` | 261 |
-| `host_or_heavy` | 54 |
+| `external_or_gated` | 262 |
+| `host_or_heavy` | 55 |
 | `legal_or_human` | 126 |
 | `private_boundary` | 9 |
 
@@ -45,7 +45,7 @@ Estado operativo para decidir el siguiente loop sin reescanear todo el sistema.
 | priority | lane | gate | title | next step |
 |---|---|---|---|---|
 | `P0` | `curador_seto` | `APPROVE_LOCAL` | Mantener CuradorSETO-Downloads-Intake activo | Usar el SQLite y CURADOR_MASTER_INDEX como verdad operativa de Downloads. |
-| `P1` | `pending_review` | `APPROVE_LOCAL` | Trabajar candidatos locales primero | Elegir cierres locales con prueba directa y actualizar trackers, sin publicar ni mover fuentes. |
+| `P1` | `pending_review` | `REVIEW` | No forzar pendientes gated como locales | Convertir pendientes gated en subtareas locales solo cuando haya evidencia y frontera clara. |
 | `P1` | `global_curador` | `REVIEW` | Reemplazar escaneo global largo por auditoria incremental por root | Agregar modo por root/resumible antes de repetir E:, Desktop y workspace completo. |
 | `P1` | `cleanup_migration` | `REVIEW` | Consolidar duplicados grandes solo con hash, ficha y canon | Procesar por lote: Asistente/FlujoCRM releases, vendors/cache, luego E: offload; borrar solo si ActionGate aprueba. |
 | `P2` | `claudio_wabisabi` | `REVIEW` | Conectar Curador SETO con Claudio/Wabi-Sabi como memoria operativa | Exponer lectura local del SQLite y del reporte de next-actions sin ejecutar mutaciones externas. |

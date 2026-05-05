@@ -1,8 +1,8 @@
 {
   "schema": "medioevo.curador_seto_next_actions.v1",
-  "generated_at_utc": "2026-05-05T19:02:17.232663+00:00",
+  "generated_at_utc": "2026-05-05T19:05:47.216603+00:00",
   "status": {
-    "generated_at_utc": "2026-05-05T19:02:17.214261+00:00",
+    "generated_at_utc": "2026-05-05T19:05:47.211492+00:00",
     "workspace_root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
     "downloads_dir": "C:\\Users\\L-Tyr\\Downloads",
     "db_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\curador_index.sqlite",
@@ -35,11 +35,11 @@
   "pending": {
     "available": true,
     "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\qa_artifacts\\pending\\pending_review_latest.json",
-    "generated_at": "2026-05-05T19:01:54+00:00",
-    "active_dedup_open": 450,
+    "generated_at": "2026-05-05T19:04:57+00:00",
+    "active_dedup_open": 452,
     "active_by_blocker": {
-      "external_or_gated": 261,
-      "host_or_heavy": 54,
+      "external_or_gated": 262,
+      "host_or_heavy": 55,
       "legal_or_human": 126,
       "private_boundary": 9
     },
@@ -49,14 +49,14 @@
       "general": 155,
       "open_source": 2,
       "private_rpg": 3,
-      "runtime_claudio": 190,
+      "runtime_claudio": 192,
       "wave_fc": 3,
       "website_marketing": 17
     },
-    "claudio_dedup_open": 70,
+    "claudio_dedup_open": 72,
     "claudio_by_blocker": {
-      "external_or_gated": 42,
-      "host_or_heavy": 17,
+      "external_or_gated": 43,
+      "host_or_heavy": 18,
       "legal_or_human": 6,
       "private_boundary": 5
     }
@@ -73,10 +73,10 @@
     {
       "priority": "P1",
       "lane": "pending_review",
-      "action_gate": "APPROVE_LOCAL",
-      "title": "Trabajar candidatos locales primero",
-      "reason": "pending_review reporta unknown candidatos locales; externos, legal, host-heavy y private_boundary siguen separados.",
-      "next_step": "Elegir cierres locales con prueba directa y actualizar trackers, sin publicar ni mover fuentes."
+      "action_gate": "REVIEW",
+      "title": "No forzar pendientes gated como locales",
+      "reason": "pending_review reporta 0 candidatos locales; externos, legal, host-heavy y private_boundary siguen separados.",
+      "next_step": "Convertir pendientes gated en subtareas locales solo cuando haya evidencia y frontera clara."
     },
     {
       "priority": "P1",

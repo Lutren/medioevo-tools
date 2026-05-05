@@ -909,9 +909,9 @@ def load_pending_snapshot(workspace_root: Path) -> dict[str, object]:
 
 def build_next_actions(status: dict[str, object], pending: dict[str, object]) -> list[dict[str, str]]:
     active_by_blocker = pending.get("active_by_blocker", {}) if isinstance(pending, dict) else {}
-    local_candidates = "unknown"
+    local_candidates = 0
     if isinstance(active_by_blocker, dict):
-        local_candidates = str(active_by_blocker.get("local_candidate", "unknown"))
+        local_candidates = int(active_by_blocker.get("local_candidate", 0) or 0)
     current_dupes = int(status.get("current_downloads_duplicate_groups") or 0)
     actions = [
         {
@@ -925,10 +925,12 @@ def build_next_actions(status: dict[str, object], pending: dict[str, object]) ->
         {
             "priority": "P1",
             "lane": "pending_review",
-            "action_gate": "APPROVE_LOCAL",
-            "title": "Trabajar candidatos locales primero",
+            "action_gate": "APPROVE_LOCAL" if local_candidates else "REVIEW",
+            "title": "Trabajar candidatos locales primero" if local_candidates else "No forzar pendientes gated como locales",
             "reason": f"pending_review reporta {local_candidates} candidatos locales; externos, legal, host-heavy y private_boundary siguen separados.",
-            "next_step": "Elegir cierres locales con prueba directa y actualizar trackers, sin publicar ni mover fuentes.",
+            "next_step": "Elegir cierres locales con prueba directa y actualizar trackers, sin publicar ni mover fuentes."
+            if local_candidates
+            else "Convertir pendientes gated en subtareas locales solo cuando haya evidencia y frontera clara.",
         },
         {
             "priority": "P1",
