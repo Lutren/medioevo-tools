@@ -1,0 +1,241 @@
+{
+  "generated_at": "2026-05-02",
+  "strategy": "open_core_paid_ui",
+  "design_direction": "agent_city_medioevo_geodia",
+  "dependency_policy": "technical_card_before_install",
+  "publication_gate": "secret_scan_path_scrub_claim_scan_private_boundary_tests_license_actiongate",
+  "publication_evidence": "qa_artifacts/release_validation/publication-live-verification-2026-05-02.json",
+  "products": [
+    {
+      "id": "flujocrm",
+      "path": "apps/commercial/flujocrm",
+      "lane": "COMMERCIAL_AGENT_UI",
+      "license_posture": "proprietary_commercial",
+      "technical_card": "Electron desktop app with local CRM data, better-sqlite3 and chart.js.",
+      "commercial_card": "Windows-first standalone CRM sold through Gumroad/website after clean-machine QA and legal review.",
+      "agent_card": {
+        "role": "Agente Mercado",
+        "building": "Mercado",
+        "inputs": ["contacts", "pipeline", "activity_notes"],
+        "outputs": ["organized_pipeline", "followup_queue", "evidence_notes"],
+        "blocked_claims": ["guaranteed_sales", "cloud_sync_by_default"]
+      },
+      "status": "REVIEW"
+    },
+    {
+      "id": "asistente-negocio",
+      "path": "apps/commercial/asistente-negocio",
+      "lane": "COMMERCIAL_AGENT_UI",
+      "license_posture": "proprietary_commercial",
+      "technical_card": "Electron app with local business assistant flow, GEODIA assets, Windows NSIS installer, portable ZIP, install notes, support/privacy/refund draft, package-final checksums and installed-app E2E evidence.",
+      "commercial_card": "Paid founder-access Windows app for small business response drafting, with human approval. Clean VM, final legal review and signing/unsigned warning approval remain gated.",
+      "agent_card": {
+        "role": "Agente Mostrador",
+        "building": "Mostrador",
+        "inputs": ["business_profile", "customer_question"],
+        "outputs": ["draft_response", "approval_prompt"],
+        "blocked_claims": ["automatic_whatsapp_send", "no_human_review_required"]
+      },
+      "status": "FOUNDER_ACCESS_WINDOWS_QA"
+    },
+    {
+      "id": "mini-office",
+      "path": "apps/commercial/mini-office",
+      "lane": "COMMERCIAL_AGENT_UI",
+      "license_posture": "proprietary_commercial_for_final_copy",
+      "technical_card": "Local Python/HTML static office app with documented agent modules, fixed HTTP runner, pytest evidence, server smoke evidence and scanned source ZIP.",
+      "commercial_card": "Potential paid office-of-agents package, but not sellable until corrupted copy, autonomy claims, license conflict and install scripts are cleaned.",
+      "agent_card": {
+        "role": "Oficina de agentes",
+        "building": "Oficina",
+        "inputs": ["briefs", "documents", "creative_tasks"],
+        "outputs": ["drafts", "templates", "task_packets"],
+        "blocked_claims": ["fully_autonomous_business_operation"]
+      },
+      "status": "LOCAL_SMOKE_QA_COPY_CLAIMS_BLOCK"
+    },
+    {
+      "id": "argus-desktop",
+      "path": "apps/commercial/argus-desktop",
+      "lane": "COMMERCIAL_AGENT_UI",
+      "license_posture": "proprietary_commercial_or_internal",
+      "technical_card": "React/Vite/Electron console with Claudio runtime surfaces.",
+      "commercial_card": "Premium or internal command console for Claudio/MEDIOEVO users.",
+      "agent_card": {
+        "role": "Agente Consola",
+        "building": "Torre de control",
+        "inputs": ["runtime_state", "tasks", "evidence"],
+        "outputs": ["agent_actions", "observations", "gate_status"],
+        "blocked_claims": ["private_runtime_in_public_release", "ungated_external_actions"]
+      },
+      "status": "REVIEW"
+    },
+    {
+      "id": "wave-fc",
+      "path": "docs/product/wave-collapse.md",
+      "lane": "COMMERCIAL_DRAFT",
+      "license_posture": "proprietary_commercial",
+      "technical_card": "Document-collapse workflow with local evidence pack and rollback framing.",
+      "commercial_card": "Paid document curation setup, templates and guided workflow.",
+      "agent_card": {
+        "role": "Agente Curador Documental",
+        "building": "Archivo",
+        "inputs": ["documents", "hashes", "review_rules"],
+        "outputs": ["ordered_workspace", "audit_trail", "rollback_plan"],
+        "blocked_claims": ["automatic_truth_discovery", "destructive_cleanup_without_review"]
+      },
+      "status": "LOCAL_DEMO_READY_PUBLICATION_BLOCK"
+    },
+    {
+      "id": "obs-safe-integration-kit",
+      "path": "packages/open-dev/obs-safe-integration-kit",
+      "lane": "OPEN_CORE",
+      "license_posture": "MIT_package_level",
+      "technical_card": "Local-first ObservationEnvelope, EstadoPSI, ActionGate, EvidenceStore, CLI and dry-run adapter wrappers.",
+      "commercial_card": "Open technology layer; paid value can come from integration support, audits, hosted gates, dashboards and premium templates.",
+      "agent_card": {
+        "role": "Agente Firewall",
+        "building": "Aduana",
+        "inputs": ["action_proposals", "observations", "claims", "session_state"],
+        "outputs": ["gate_decision", "evidence_ledger", "session_fingerprint", "human_review_queue"],
+        "blocked_claims": ["guaranteed_safety", "autonomous_external_execution", "private_runtime_access"]
+      },
+      "status": "PUBLICADO_GITHUB",
+      "url": "https://github.com/Lutren/obs-safe-integration-kit"
+    },
+    {
+      "id": "obsai-core",
+      "path": "packages/open-dev/obsai-core",
+      "lane": "OPEN_CORE",
+      "license_posture": "MIT_package_level",
+      "technical_card": "Dependency-free Observacionismo operational primitives, CLI, synthetic examples and tests.",
+      "commercial_card": "Open core for credibility; paid value stays in UI, integrations, support and premium workflows.",
+      "agent_card": {
+        "role": "Agente Nucleo",
+        "building": "Centro civico",
+        "inputs": ["claims", "observations", "simulation_state"],
+        "outputs": ["residue_metrics", "gate_inputs", "fingerprints"],
+        "blocked_claims": ["consciousness_proof", "new_physics", "guaranteed_predictions"]
+      },
+      "status": "PUBLICADO_GITHUB",
+      "url": "https://github.com/Lutren/obsai-core"
+    },
+    {
+      "id": "residueos",
+      "path": "packages/open-dev/residueos",
+      "lane": "OPEN_CORE",
+      "license_posture": "MIT_package_level",
+      "technical_card": "Local ActionGate with SQLite audit state, CLI, HTTP API and synthetic fixtures.",
+      "commercial_card": "Open action-gate core; paid value stays in hosted gates, dashboards and implementation support.",
+      "agent_card": {
+        "role": "Agente Aduana",
+        "building": "Puerta",
+        "inputs": ["action_request", "evidence", "uncertainties"],
+        "outputs": ["approve_review_block", "audit_record"],
+        "blocked_claims": ["guaranteed_safety", "fully_autonomous_release"]
+      },
+      "status": "PUBLICADO_GITHUB",
+      "url": "https://github.com/Lutren/residueos"
+    },
+    {
+      "id": "observacionismo-gate",
+      "path": "packages/open-dev/observacionismo-gate",
+      "lane": "OPEN_CORE",
+      "license_posture": "MIT_package_level",
+      "technical_card": "Python SDK for evidence, jamming and cost-policy gates.",
+      "commercial_card": "Open SDK; paid value stays in products and support around the gate.",
+      "agent_card": {
+        "role": "Agente Semaforo",
+        "building": "Cruce",
+        "inputs": ["evidence_refs", "risk", "cost"],
+        "outputs": ["gate_decision", "review_reason"],
+        "blocked_claims": ["ungated_external_actions"]
+      },
+      "status": "PUBLICADO_GITHUB",
+      "url": "https://github.com/Lutren/observacionismo-gate"
+    },
+    {
+      "id": "data-curation-observatory",
+      "path": "publish_staging/github-public-sanitized/data-curation-observatory",
+      "lane": "OPEN_CORE_PLUS_PAID_TEMPLATES",
+      "license_posture": "MIT_public_repo",
+      "technical_card": "Generic curator templates, synthetic demo and manifest schema.",
+      "commercial_card": "Lead repo for paid MEDIOEVO Agent Ops Pack templates and support.",
+      "agent_card": {
+        "role": "Agente Curador Datos",
+        "building": "Archivo",
+        "inputs": ["documents", "folders", "evidence"],
+        "outputs": ["technical_cards", "curation_report", "next_agent_route"],
+        "blocked_claims": ["automatic_perfect_organization"]
+      },
+      "status": "PUBLICADO_GITHUB",
+      "url": "https://github.com/Lutren/data-curation-observatory"
+    },
+    {
+      "id": "observational-calibration-toolkit",
+      "path": "publish_staging/github-public-sanitized/observational-calibration-toolkit",
+      "lane": "OPEN_CORE_PLUS_PAID_TEMPLATES",
+      "license_posture": "MIT_public_repo",
+      "technical_card": "R/Phi/Jc schemas, falsifier templates and synthetic calibration tests.",
+      "commercial_card": "Lead repo for workshops, dashboards and calibration support.",
+      "agent_card": {
+        "role": "Agente Calibrador",
+        "building": "Observatorio",
+        "inputs": ["metrics", "thresholds", "synthetic_cases"],
+        "outputs": ["calibration_report", "falsifier_results"],
+        "blocked_claims": ["validated_physics", "consciousness_proof"]
+      },
+      "status": "PUBLICADO_GITHUB",
+      "url": "https://github.com/Lutren/observational-calibration-toolkit"
+    },
+    {
+      "id": "medioevo-agent-ops-pack",
+      "path": "packages/paid/medioevo-agent-ops-pack",
+      "lane": "COMMERCIAL_TEMPLATES",
+      "license_posture": "commercial_paid_pack",
+      "technical_card": "Premium templates, release checklists, synthetic audit example and support notes.",
+      "commercial_card": "Paid Gumroad pack for shipping public-safe agent products while keeping private IP out.",
+      "agent_card": {
+        "role": "Agente Curador Datos",
+        "building": "Archivo premium",
+        "inputs": ["product_idea", "evidence", "release_target"],
+        "outputs": ["technical_card", "curator_report", "release_checklist"],
+        "blocked_claims": ["guaranteed_sales", "guaranteed_security", "medical_or_legal_advice"]
+      },
+      "status": "PUBLICADO_GUMROAD",
+      "url": "https://lrgonzalez.gumroad.com/l/medioevo-agent-ops-pack"
+    },
+    {
+      "id": "duat-lab",
+      "path": "publish_staging/github-public-sanitized/duat-lab",
+      "lane": "OPEN_CORE_PLUS_PAID_TEMPLATES",
+      "license_posture": "open_license_after_review",
+      "technical_card": "Synthetic event store, artifact graph and calibration simulator.",
+      "commercial_card": "Paid templates, setup and workshops after claims review.",
+      "agent_card": {
+        "role": "Agente Laboratorio",
+        "building": "Laboratorio",
+        "inputs": ["synthetic_events", "artifact_graph", "calibration_rules"],
+        "outputs": ["replay", "calibration_report", "experiment_manifest"],
+        "blocked_claims": ["validated_physics", "validated_cosmology", "rpg_asset_inclusion"]
+      },
+      "status": "REVIEW"
+    },
+    {
+      "id": "neurostate-ui",
+      "path": "publish_staging/github-public-sanitized/neurostate-ui",
+      "lane": "OPEN_CORE_PLUS_PAID_DASHBOARD",
+      "license_posture": "open_license_after_review",
+      "technical_card": "Local observability UI for agent/workflow state experiments.",
+      "commercial_card": "Paid local dashboard setup and privacy-safe integrations.",
+      "agent_card": {
+        "role": "Agente Estado",
+        "building": "Observatorio",
+        "inputs": ["agent_events", "workflow_status", "local_metrics"],
+        "outputs": ["state_view", "alerts", "review_queue"],
+        "blocked_claims": ["medical_diagnosis", "cognitive_diagnosis", "unsafe_model_control"]
+      },
+      "status": "BLOCKED_BY_SPLIT"
+    }
+  ]
+}
