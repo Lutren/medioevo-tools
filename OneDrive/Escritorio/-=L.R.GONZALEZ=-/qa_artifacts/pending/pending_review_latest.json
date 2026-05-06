@@ -1,6 +1,6 @@
 {
   "schema": "medioevo.pending_review.v1",
-  "generated_at": "2026-05-06T10:15:09+00:00",
+  "generated_at": "2026-05-06T10:17:11+00:00",
   "date": "2026-05-06",
   "root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
   "policy": {
@@ -10,17 +10,17 @@
     "curador": "unknown sources and residues still require curador_preflight before use or discard."
   },
   "active_markdown": {
-    "raw_open": 246,
-    "dedup_open": 243,
+    "raw_open": 244,
+    "dedup_open": 241,
     "by_priority": {
-      "P1": 11,
+      "P1": 10,
       "P2": 6,
       "P3": 3,
       "P4": 4,
-      "UNCLASSIFIED": 219
+      "UNCLASSIFIED": 218
     },
     "by_lane": {
-      "commercial": 62,
+      "commercial": 60,
       "general": 20,
       "open_source": 2,
       "private_rpg": 2,
@@ -30,7 +30,7 @@
       "website_marketing": 4
     },
     "by_blocker": {
-      "external_or_gated": 131,
+      "external_or_gated": 129,
       "host_or_heavy": 43,
       "legal_or_human": 61,
       "private_boundary": 8
@@ -42,14 +42,6 @@
         "blocker": "legal_or_human",
         "item": "**P1** No declarar FlujoCRM listo para venta final hasta probar instalador Windows en maquina limpia/VM, cerrar legal/soporte final y verificar rebuild/hash del instalador cliente activo. Aviso unsigned e instrucciones piloto quedaron documentados localmente en `docs\\product\\flujocrm-local-gate-recheck-2026-05-05.md`.",
         "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1454",
-        "occurrences": 1
-      },
-      {
-        "priority": "P1",
-        "lane": "commercial",
-        "blocker": "external_or_gated",
-        "item": "P1 - Gumroad Claudio software: `pack-empresarial`, `writer-workbench` y `claudio-full` existen como drafts (`published=false`) y sin archivos/covers; no publicarlos hasta adjuntar paquete, portada y prueba de checkout.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2036",
         "occurrences": 1
       },
       {
@@ -226,14 +218,6 @@
         "blocker": "external_or_gated",
         "item": "**P4.7** Colaboraciones cross-promo",
         "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2850",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "external_or_gated",
-        "item": "La API de Gumroad sigue devolviendo `published: false` y `shown_on_profile: null` para ese SKU, aunque el link directo existe; esto implica que el cuello de botella restante es escaparate/perfil, no checkout directo.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2455",
         "occurrences": 1
       },
       {
@@ -355,27 +339,43 @@
         "item": "**Benchmark real:** Requiere Ollama corriendo y 100 sesiones",
         "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/docs/root_notes_review/INVENTARIO_MAESTRO_2026-04-20.md:277",
         "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "commercial",
+        "blocker": "external_or_gated",
+        "item": "Argus hardwamuy integration",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/grants/LACMA_APPLICATION_2026.md:95",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "commercial",
+        "blocker": "external_or_gated",
+        "item": "Configurar Gumroad/Patmuyon con tiers",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/marketing/DECISION_MARKETING_SaaS_20260410.md:102",
+        "occurrences": 1
       }
     ]
   },
   "claudio_master": {
     "path": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md",
-    "raw_open": 28,
-    "dedup_open": 28,
+    "raw_open": 26,
+    "dedup_open": 26,
     "by_priority": {
-      "P1": 11,
+      "P1": 10,
       "P2": 6,
       "P3": 3,
       "P4": 4,
-      "UNCLASSIFIED": 4
+      "UNCLASSIFIED": 3
     },
     "by_lane": {
-      "commercial": 4,
+      "commercial": 2,
       "runtime_claudio": 22,
       "wave_fc": 2
     },
     "by_blocker": {
-      "external_or_gated": 16,
+      "external_or_gated": 14,
       "host_or_heavy": 6,
       "legal_or_human": 3,
       "private_boundary": 3
@@ -387,14 +387,6 @@
         "blocker": "legal_or_human",
         "item": "**P1** No declarar FlujoCRM listo para venta final hasta probar instalador Windows en maquina limpia/VM, cerrar legal/soporte final y verificar rebuild/hash del instalador cliente activo. Aviso unsigned e instrucciones piloto quedaron documentados localmente en `docs\\product\\flujocrm-local-gate-recheck-2026-05-05.md`.",
         "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1454",
-        "occurrences": 1
-      },
-      {
-        "priority": "P1",
-        "lane": "commercial",
-        "blocker": "external_or_gated",
-        "item": "P1 - Gumroad Claudio software: `pack-empresarial`, `writer-workbench` y `claudio-full` existen como drafts (`published=false`) y sin archivos/covers; no publicarlos hasta adjuntar paquete, portada y prueba de checkout.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2036",
         "occurrences": 1
       },
       {
@@ -571,14 +563,6 @@
         "blocker": "external_or_gated",
         "item": "**P4.7** Colaboraciones cross-promo",
         "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2850",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "external_or_gated",
-        "item": "La API de Gumroad sigue devolviendo `published: false` y `shown_on_profile: null` para ese SKU, aunque el link directo existe; esto implica que el cuello de botella restante es escaparate/perfil, no checkout directo.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2455",
         "occurrences": 1
       },
       {

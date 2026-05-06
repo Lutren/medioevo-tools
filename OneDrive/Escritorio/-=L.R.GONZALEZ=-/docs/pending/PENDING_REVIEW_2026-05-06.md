@@ -4,26 +4,26 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 
 ## Counts
 
-- Active markdown raw open items: `246`.
-- Active markdown deduplicated open items: `243`.
-- Claudio `PENDIENTES_MASTER.md` raw open items: `28`.
-- Claudio deduplicated open items: `28`.
+- Active markdown raw open items: `244`.
+- Active markdown deduplicated open items: `241`.
+- Claudio `PENDIENTES_MASTER.md` raw open items: `26`.
+- Claudio deduplicated open items: `26`.
 
 ## Active Markdown By Priority
 
 | priority | dedup_count |
 | --- | --- |
-| P1 | 11 |
+| P1 | 10 |
 | P2 | 6 |
 | P3 | 3 |
 | P4 | 4 |
-| UNCLASSIFIED | 219 |
+| UNCLASSIFIED | 218 |
 
 ## Active Markdown By Lane
 
 | lane | dedup_count |
 | --- | --- |
-| commercial | 62 |
+| commercial | 60 |
 | general | 20 |
 | open_source | 2 |
 | private_rpg | 2 |
@@ -36,7 +36,7 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 
 | blocker | dedup_count |
 | --- | --- |
-| external_or_gated | 131 |
+| external_or_gated | 129 |
 | host_or_heavy | 43 |
 | legal_or_human | 61 |
 | private_boundary | 8 |
@@ -45,17 +45,17 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 
 | priority | dedup_count |
 | --- | --- |
-| P1 | 11 |
+| P1 | 10 |
 | P2 | 6 |
 | P3 | 3 |
 | P4 | 4 |
-| UNCLASSIFIED | 4 |
+| UNCLASSIFIED | 3 |
 
 ## Claudio Master By Blocker
 
 | blocker | dedup_count |
 | --- | --- |
-| external_or_gated | 16 |
+| external_or_gated | 14 |
 | host_or_heavy | 6 |
 | legal_or_human | 3 |
 | private_boundary | 3 |
@@ -65,7 +65,6 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 | priority | lane | blocker | item | first evidence | occurrences |
 | --- | --- | --- | --- | --- | --- |
 | P1 | commercial | legal_or_human | **P1** No declarar FlujoCRM listo para venta final hasta probar instalador Windows en maquina limpia/VM, cerrar legal/soporte final y verificar rebuild/hash del instalador cliente activo. Aviso unsigned e instrucciones piloto quedaron documentados localmente en `docs\product\flujocrm-local-gate-recheck-2026-05-05.md`. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1454 | 1 |
-| P1 | commercial | external_or_gated | P1 - Gumroad Claudio software: `pack-empresarial`, `writer-workbench` y `claudio-full` existen como drafts (`published=false`) y sin archivos/covers; no publicarlos hasta adjuntar paquete, portada y prueba de checkout. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2036 | 1 |
 | P1 | runtime_claudio | host_or_heavy | **P1** Ejecutar suite Qwen 3B cuando el host permita ruta pesada: `python tools\qwen_observacion_benchmark_suite.py --execute --write-dataset`. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1142 | 1 |
 | P1 | runtime_claudio | external_or_gated | **P1** Confirmar visualmente cual URL de LinkedIn es la canonica antes de editar el perfil. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1423 | 1 |
 | P1 | runtime_claudio | external_or_gated | **P1** Pegar headline/about/experience/featured links desde `LINKEDIN_PROFILE_PACKET_2026-05-01.md` en LinkedIn autenticado, cuidando no regalar tecnologia privada ni claims fuertes. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1424 | 1 |
@@ -88,7 +87,8 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 | P4 | runtime_claudio | external_or_gated | **P4.5** Guest post en blogs de sci-fi | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2848 | 1 |
 | P4 | runtime_claudio | external_or_gated | **P4.6** Podcasts de literatura | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2849 | 1 |
 | P4 | runtime_claudio | external_or_gated | **P4.7** Colaboraciones cross-promo | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2850 | 1 |
-| UNCLASSIFIED | commercial | external_or_gated | La API de Gumroad sigue devolviendo `published: false` y `shown_on_profile: null` para ese SKU, aunque el link directo existe; esto implica que el cuello de botella restante es escaparate/perfil, no checkout directo. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2455 | 1 |
+| UNCLASSIFIED | commercial | external_or_gated | Sincronizar dashboard de Gumroad con el catalogo local ahora que la autenticacion API ya responde. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2766 | 1 |
+| UNCLASSIFIED | commercial | legal_or_human | Rayuela muyading guide (PDF) - cmuyate from CEmuyBRO docs | -=MEDIOEVO=-/-=LIBROS/claudio/commercial/GUMROAD_PRODUCTS_READY.md:444 | 1 |
 
 ## Kairos Fastlane
 
