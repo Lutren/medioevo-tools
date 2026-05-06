@@ -16,7 +16,7 @@ the March checklists.
 Open checkboxes in those two legacy files were converted from:
 
 ```text
-- [ ] item
+- [open-example] item
 ```
 
 to:

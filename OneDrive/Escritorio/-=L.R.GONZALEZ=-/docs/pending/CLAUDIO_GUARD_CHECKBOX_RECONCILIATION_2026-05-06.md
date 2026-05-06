@@ -6,8 +6,8 @@
 lines written as open task checkboxes:
 
 ```text
-- [ ] **HOLD_...**
-- [ ] **BLOCK_...**
+- [open-example] **HOLD_...**
+- [open-example] **BLOCK_...**
 ```
 
 Those lines are not executable work. They are prohibitions or gate conditions.

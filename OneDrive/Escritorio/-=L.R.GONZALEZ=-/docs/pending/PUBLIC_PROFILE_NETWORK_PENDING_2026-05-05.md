@@ -83,14 +83,14 @@ Evidencia mas reciente:
 
 ## Frontera Publica/Secreta
 
-- [ ] Mantener publicos: metodo, interfaces, schemas, CLIs, checklists,
+- [boundary-rule] Mantener publicos: metodo, interfaces, schemas, CLIs, checklists,
   plantillas, demos sinteticos, articulos low-claim, rutas a GitHub/Gumroad y
   Sponsors.
-- [ ] Mantener privados: formulas exactas, thresholds, prompts, runtime local,
+- [boundary-rule] Mantener privados: formulas exactas, thresholds, prompts, runtime local,
   datasets reales, DUAT/GEODIA privado, GEODIA Social Observatory con datos
   reales, libros completos no aprobados, RPG/TCG, secretos, sesiones,
   credenciales, playbooks premium y soporte privado.
-- [ ] No publicar claims de seguridad garantizada, anti-hallucination total,
+- [boundary-rule] No publicar claims de seguridad garantizada, anti-hallucination total,
   prediccion social, diagnostico medico, nueva fisica validada ni autonomia
   externa sin revision humana.
 
