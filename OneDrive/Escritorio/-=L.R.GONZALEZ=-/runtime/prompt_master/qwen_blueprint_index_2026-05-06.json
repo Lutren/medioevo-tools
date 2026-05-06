@@ -1,0 +1,54 @@
+{
+  "schema": "medioevo.qwen_blueprint.local_index.v1",
+  "created_at_utc": "2026-05-06T07:40:00Z",
+  "gate": "REVIEW",
+  "host_gate": "JAMMING/BLOCK",
+  "external_research_allowed": false,
+  "base_model": "qwen2.5-coder:3b",
+  "triage_model": "qwen2.5:0.5b",
+  "weights_modified": false,
+  "adapter_training_started": false,
+  "ollama_alias_created": false,
+  "blueprints": [
+    {
+      "path": "runtime/model_router/Modelfile.qwen_observador_candidate",
+      "sha256": "FDE8815550F8A60000F7DA5522544963C3EAE9CEF09040870FF6D34C9C47D7FA",
+      "role": "candidate_modelfile"
+    },
+    {
+      "path": "runtime/model_router/qwen_observacion_contract.json",
+      "sha256": "F1FFC023972585C61699D05BCF946195658611D6CFF938228ADFE35A4FD3B4B3",
+      "role": "observacion_contract"
+    },
+    {
+      "path": "runtime/model_router/qwen_observacion_gate_report.json",
+      "sha256": "A72BE78944A4909A906B1DD9B66A50267CF519115FC4D1F35BDB880E9EC8023F",
+      "role": "gate_report"
+    },
+    {
+      "path": "runtime/model_router/qwen_health.json",
+      "sha256": "DE2D10DDCE19EA3C1BF4EA202AD540BBF97AE7C5C4A6D314F37D2B9C9ADE3EB4",
+      "role": "base_health"
+    },
+    {
+      "path": "runtime/model_router/qwen_triage_health.json",
+      "sha256": "2C63C689942C3609585892F007A50EC2FCE0684DF66F552F136B62B322720661",
+      "role": "triage_health"
+    }
+  ],
+  "safe_next_steps": [
+    "build read-only blueprint index",
+    "expand synthetic chosen/rejected seed to 20+ human-reviewed examples",
+    "add format and boundary evals",
+    "keep qwen2.5:0.5b as triage/reset",
+    "wait for host gate before heavy qwen2.5-coder:3b suite"
+  ],
+  "blocked_steps": [
+    "external docs browsing",
+    "cloud model routes",
+    "ollama alias creation",
+    "lora_qlora_dpo_training",
+    "weight mutation",
+    "qwen_3b_suite under host BLOCK"
+  ]
+}
