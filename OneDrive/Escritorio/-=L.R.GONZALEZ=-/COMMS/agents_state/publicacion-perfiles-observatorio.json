@@ -1,15 +1,15 @@
 {
   "schema": "medioevo.comms.agent_state.v1",
-  "generated_at_utc": "2026-05-06T14:00:00Z",
+  "generated_at_utc": "2026-05-06T14:04:00Z",
   "agent_id": "publicacion-perfiles-observatorio",
   "status": "ACTIVE_LOCAL_STRATEGY_AGENT",
   "department_slug": "plaza-mercado",
   "action_gate": "REVIEW",
   "latest_host_gate": {
-    "timestamp_utc": "2026-05-06T09:46:37Z",
+    "timestamp_utc": "2026-05-06T14:03:02Z",
     "status": "MIXTO",
     "gate": "REVIEW",
-    "reason": "residuo_precaucion"
+    "reason": "r_io=0.804 lambda_sat=0.804"
   },
   "owns": [
     "public profile and social-surface strategy",
@@ -40,5 +40,5 @@
   ],
   "current_handoff": "COMMS/handoffs/2026-05-06-public-profile-pending-sweep.md",
   "current_outbox": "COMMS/outbox/publicacion-perfiles-observatorio.jsonl",
-  "last_observation_fingerprint": "PUBLIC_CONTENT_PNG_ASSETS_RENDERED_2026_05_06"
+  "last_observation_fingerprint": "PUBLIC_CONTENT_VALIDATION_HOST_REVIEW_2026_05_06"
 }

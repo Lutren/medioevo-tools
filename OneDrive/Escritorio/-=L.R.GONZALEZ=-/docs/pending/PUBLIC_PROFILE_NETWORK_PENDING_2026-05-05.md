@@ -58,9 +58,9 @@ Evidencia mas reciente:
 
 | check | resultado |
 |---|---|
-| host gate no-write | `LIMPIO / APPROVE` |
-| timestamp | `2026-05-06T13:46:30Z` |
-| razones | none; memory `62.6%`; disk `80.4%`; lambda_sat `0.804` |
+| host gate no-write | `MIXTO / REVIEW` |
+| timestamp | `2026-05-06T14:03:02Z` |
+| razones | presion I/O/disk dominante: `r_io=0.804`, `lambda_sat=0.804`; memory `72.2%` |
 | GitHub profile README | raw README HTTP `200`; contiene `Publication Lanes`, `Three Public Paths`, sponsor link, Gumroad y MEDIOEVO |
 | GitHub funding metadata | `Lutren/Lutren/.github/FUNDING.yml` raw/API HTTP `200`; contiene `Lutren`; sin push |
 | GitHub profile pins | GraphQL devolvio 6 repos publicos/no archivados; sin mutacion de pins |
@@ -68,7 +68,7 @@ Evidencia mas reciente:
 | Website live | HTTP `200`; el parche local de Sponsors fue desplegado y verificado el 2026-05-06 |
 | Gumroad live | Agent Ops y DUAT Templates HTTP `200`; copy de includes/excludes actualizado y verificado el 2026-05-06; media sigue opcional |
 | LinkedIn URL observada desde GitHub | `https://www.linkedin.com/in/luis-ren%C3%A9-gonz%C3%A1lez-l%C3%B3pez-64517b20b/`; HTTP publico devuelve `999`, requiere confirmacion visual autenticada |
-| external actions | website Sponsors route desplegado y verificado; Sponsors high tiers ya cerrado; Gumroad copy-only actualizado; sin LinkedIn, redes, GitHub push, DNS ni subida de artefactos de producto |
+| external actions | website Sponsors route desplegado y verificado; Sponsors high tiers ya cerrado; Gumroad copy-only actualizado; PNGs sociales renderizados localmente; sin LinkedIn, redes, GitHub push, DNS, Gumroad media upload ni subida de artefactos de producto |
 
 ## Pendientes Por Target
 
@@ -81,7 +81,7 @@ Evidencia mas reciente:
 | P0 | LinkedIn | pegar headline/about/featured links solo despues de confirmar URL y gate | `READY_AFTER_URL_CONFIRMATION` | `LINKEDIN_PROFILE_PACKET_2026-05-05.md` |
 | P1 | GitHub profile/funding/pins | no cambiar README, funding ni pins por ahora | `NO_CHANGE_NEEDED_NOW` | README remoto, funding metadata y pins verificados; Sponsors visible |
 | P1 | GitHub Sponsors | no cambiar copy por ahora; verificar dashboard solo si se necesita screenshot/evidencia nueva | `NO_CHANGE_NEEDED_NOW` | Sponsors publico HTTP 200 |
-| P2 | Instagram/TikTok/YouTube | publicar posts del calendario solo con cuenta autenticada, assets public-safe y gate | `DRAFT_READY_AFTER_GATE` | `SOCIAL_CONTENT_CALENDAR_2026-05.md` |
+| P2 | Instagram/TikTok/YouTube | publicar posts del calendario solo con cuenta autenticada, assets public-safe y gate | `DRAFT_READY_AFTER_GATE` | `SOCIAL_CONTENT_CALENDAR_2026-05.md`, `PUBLIC_CONTENT_READY_PACKET_2026-05-06.md` |
 
 ## Frontera Publica/Secreta
 

@@ -38,10 +38,16 @@ Current gate workpack:
 
 ## Operational Boundary
 
-Current host no-write check at `2026-05-06T13:46:30Z` returned
-`LIMPIO / APPROVE`, but host `APPROVE` is only one precondition. It does not
-replace target-specific ActionGate, authenticated target access, legal owner
-approval, secret scan scope or post-action evidence.
+Current host no-write check at `2026-05-06T14:03:02Z` returned
+`MIXTO / REVIEW` because the pressure vector is dominated by I/O/disk
+(`r_io=0.804`, `lambda_sat=0.804`). This is not a local pending blocker, but it
+closes external action windows until a fresh target-specific host check returns
+`APPROVE`.
+
+Earlier host `APPROVE` evidence remains valid only for the single targets that
+were already executed and verified. It does not replace target-specific
+ActionGate, authenticated target access, legal owner approval, secret scan scope
+or post-action evidence for future work.
 
 ## Next Safe Start
 

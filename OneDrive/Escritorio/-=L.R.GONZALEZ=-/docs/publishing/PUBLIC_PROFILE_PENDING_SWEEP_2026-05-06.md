@@ -45,6 +45,11 @@ Latest final sequential host no-write check at `2026-05-06T13:46:30Z` returned
 `JAMMING / BLOCK` because it was run alongside other Python validations; the
 sequential recheck is the durable final host evidence.
 
+Latest continuation host no-write check at `2026-05-06T14:03:02Z` returned
+`MIXTO / REVIEW` with I/O/disk pressure as the dominant axis (`r_io=0.804`,
+`lambda_sat=0.804`). This does not reopen local pending work, but it blocks new
+external targets until a fresh target-specific host check returns `APPROVE`.
+
 ## Current Target Truth
 
 | target | status | evidence | next action |
@@ -57,7 +62,7 @@ sequential recheck is the durable final host evidence.
 | Gumroad Agent Ops Pack | `DONE_UPDATED_VERIFIED` | public page HTTP `200`; now contains `What you get`, `ActionGate checklist`, `What this does not include` and buyer-safe boundary text | none unless copy/media changes |
 | Gumroad DUAT Templates | `DONE_UPDATED_VERIFIED` | public page HTTP `200`; now contains `What you get`, `Synthetic scenario brief`, `What this does not include` and `not a prediction engine` boundary | none unless copy/media changes |
 | LinkedIn | `AUTHENTICATED_CONFIRMATION_REQUIRED` | public HTTP checks returned LinkedIn `999` for both candidate URLs | confirm canonical owner view before edit |
-| Social posts | `DRAFT_READY_AFTER_GATE` | calendar exists; Sponsors post now factually valid | publish only with account auth, asset rights and target gate |
+| Social posts | `DRAFT_READY_AFTER_GATE` | calendar exists; Sponsors post now factually valid; local SVG and `1200x630` PNG assets are ready | publish only with account auth, asset rights and target gate |
 
 Evidence JSON:
 
@@ -154,5 +159,7 @@ Social and optional Gumroad media preparation was completed locally:
 - `qa_artifacts/release_validation/public-content-ready-packet-2026-05-06.json`;
 - SVG assets parse as XML and focused secret scans returned
   `count_reported=0`;
+- four PNG exports were rendered locally at `1200x630` with hashes recorded in
+  the evidence JSON;
 - no social post, scheduling, account edit, Gumroad media upload, listing
   change or delivery file upload was executed.
