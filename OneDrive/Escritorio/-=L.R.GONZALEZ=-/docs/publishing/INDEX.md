@@ -52,3 +52,7 @@ as blanket approval for more repos, Gumroad products, deploys or social posts.
   records browser publication evidence and public HTTP verification.
 - GitHub Sponsors is the only external target executed in this pass; no social,
   Gumroad, LinkedIn or website publication was claimed.
+- `docs\publishing\PUBLIC_PROFILE_PENDING_SWEEP_2026-05-06.md` records the
+  remaining target truth: host `MIXTO / REVIEW`, website deploy pending,
+  Gumroad enhancements pending, LinkedIn auth confirmation pending and social
+  posts gated.

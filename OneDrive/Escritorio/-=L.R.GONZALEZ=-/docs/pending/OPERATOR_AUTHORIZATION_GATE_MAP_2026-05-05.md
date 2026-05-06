@@ -56,8 +56,15 @@ Status: local governance evidence. This is not a publication permit.
   JSON-LD/JSON/JSONL OK; canonical website SEO audit OK; focused secret scan
   over touched docs/COMMS/index returned `count_reported=0`.
 - Current hard stop:
-  host gate no-write returned `BLOCK` at `2026-05-05T20:57:30Z`, so external
-  actions remain pending even with operator authorization.
+  latest host gate no-write returned `MIXTO / REVIEW` at
+  `2026-05-06T09:46:37Z`, so remaining external actions still require an exact
+  target window and post-action verification.
+- Completed external exception:
+  GitHub Sponsors high tiers were published and verified after explicit
+  browser/publication authorization. Evidence:
+  `docs\publishing\GITHUB_SPONSORS_HIGH_TIER_PUBLICATION_REPORT_2026-05-06.md`.
+- Latest remaining-target sweep:
+  `docs\publishing\PUBLIC_PROFILE_PENDING_SWEEP_2026-05-06.md`.
 
 ## Next Executable Order
 

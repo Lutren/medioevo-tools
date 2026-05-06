@@ -9,29 +9,34 @@ target was executed only after explicit owner authorization for browser control
 and publication, then verified publicly. Remaining targets still require their
 own gate and authentication checks.
 
+Latest sweep: `docs/publishing/PUBLIC_PROFILE_PENDING_SWEEP_2026-05-06.md`.
+
 ## Current Gate
 
 | check | result |
 |---|---|
-| host gate | `BLOCK` |
-| reasons | high memory, dominant CPU process, high residue |
+| host gate | `MIXTO / REVIEW` |
+| timestamp | `2026-05-06T09:46:37Z` |
+| reasons | `residuo_precaucion`; memory `76.0%`; disk `80.3%`; lambda_sat `0.803` |
 | global workspace secret scan | not clean for broad publication; historical `reported findings: 200` |
 | focused scan over profile-agent docs | prior `count_reported=0`; rerun required before live edit |
-| GitHub profile README | verified remotely, sha `5e6aa51388978d7c1405333b37451c6f47646abf`, already contains `Publication Lanes`, `Three Public Paths`, Sponsors and private boundary |
+| GitHub profile README | raw README HTTP `200`; contains `Publication Lanes`, `Three Public Paths`, sponsor link, Gumroad and MEDIOEVO |
 | GitHub Sponsors | HTTP 200, public page contains goal and tiers; high tiers verified on 2026-05-06 |
-| LinkedIn URL from GitHub profile | `https://www.linkedin.com/in/luis-ren%C3%A9-gonz%C3%A1lez-l%C3%B3pez-64517b20b/`; still requires authenticated owner-view confirmation before edit |
-| external actions in this pass | GitHub Sponsors high tiers only |
+| Website live home | HTTP `200`; local Sponsors route patch is not deployed yet |
+| Gumroad live products | Agent Ops and DUAT Templates HTTP `200`; safe boundary language present; enhancement copy/media pending |
+| LinkedIn URL from GitHub profile | `https://www.linkedin.com/in/luis-ren%C3%A9-gonz%C3%A1lez-l%C3%B3pez-64517b20b/`; public HTTP returned LinkedIn `999`; still requires authenticated owner-view confirmation before edit |
+| external actions in this sweep | none; GitHub Sponsors high tiers were already completed earlier |
 
 ## Ready Actions By Target
 
 | priority | target | action | status | gate before action | post-action verification |
 |---|---|---|---|---|---|
-| P0 | LinkedIn | visually confirm canonical profile URL and apply profile headline/about only if authenticated owner view is correct | `READY_AFTER_GATE` | host `APPROVE`, authenticated UI, no private data | public profile URL returns expected headline/about |
-| P0 | Gumroad Agent Ops Pack | add clearer "what you get / what you do not get" copy and product media | `COPY_READY_AFTER_GATE` | host `APPROVE`, product artifact hash unchanged, listing review | product URL HTTP 200 and copy visible |
-| P0 | Gumroad DUAT Templates | reinforce `synthetic_only` and no private DUAT/GEODIA access | `COPY_READY_AFTER_GATE` | host `APPROVE`, artifact hash unchanged, listing review | product URL HTTP 200 and copy visible |
+| P0 | LinkedIn | visually confirm canonical profile URL and apply profile headline/about only if authenticated owner view is correct | `AUTHENTICATED_CONFIRMATION_REQUIRED` | host `APPROVE` or exact owner-view target window, authenticated UI, no private data | public profile URL returns expected headline/about |
+| P0 | Gumroad Agent Ops Pack | add clearer "what you get / what you do not get" copy and product media | `LIVE_SAFE_ENHANCEMENT_PENDING` | host `APPROVE` or exact Gumroad target window, product artifact hash unchanged, listing review | product URL HTTP 200 and copy visible |
+| P0 | Gumroad DUAT Templates | reinforce `synthetic_only` and no private DUAT/GEODIA access | `LIVE_SAFE_ENHANCEMENT_PENDING` | host `APPROVE` or exact Gumroad target window, artifact hash unchanged, listing review | product URL HTTP 200 and copy visible |
 | P1 | GitHub profile | no urgent README change; current README already aligns with evidence gates and boundaries | `NO_CHANGE_NEEDED_NOW` | host `APPROVE` only if a patch is chosen | GitHub API / raw README check |
 | P1 | GitHub pinned repos | set tighter pin order if not already aligned | `REVIEW` | host `APPROVE`, manual UI or API-safe path | public profile visually confirms pins |
-| P1 | Website | local home patch added Sponsors route and public `sameAs`; no deploy | `LOCAL_PATCH_DONE_NO_DEPLOY` | host `APPROVE` plus Cloudflare deploy gate | live pages HTTP 200 and sitemap unchanged/valid |
+| P1 | Website | local home patch added Sponsors route and public `sameAs`; live site does not yet show Sponsors route | `LOCAL_PATCH_DONE_DEPLOY_BLOCKED_BY_REVIEW` | host `APPROVE` plus Cloudflare deploy gate | live pages HTTP 200 and sitemap unchanged/valid |
 | P1 | GitHub Sponsors | no urgent copy change; page already live with goal and tiers | `NO_CHANGE_NEEDED_NOW` | host `APPROVE` only if dashboard copy changes | public Sponsors page contains goal and tiers |
 | P1 | GitHub Sponsors high tiers | add `US$1,000`, `US$5,000` and `US$10,000` monthly tiers from `GITHUB_SPONSORS_HIGH_TIER_PACKET_2026-05-06.md` and field sheet | `DONE_PUBLISHED_VERIFIED` | owner browser authorization, focused secret scan, claims check | public Sponsors page shows all three high tiers; custom amount aligned to `US$10,000` |
 | P2 | Instagram/TikTok/YouTube | publish short visual posts from content calendar | `DRAFT_READY_AFTER_GATE` | host `APPROVE`, account auth, asset rights check | live URL/screenshot per post |

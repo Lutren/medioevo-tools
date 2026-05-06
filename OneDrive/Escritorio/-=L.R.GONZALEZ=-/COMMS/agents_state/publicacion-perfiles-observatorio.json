@@ -1,10 +1,16 @@
 {
   "schema": "medioevo.comms.agent_state.v1",
-  "generated_at_utc": "2026-05-05T20:53:00Z",
+  "generated_at_utc": "2026-05-06T09:46:37Z",
   "agent_id": "publicacion-perfiles-observatorio",
   "status": "ACTIVE_LOCAL_STRATEGY_AGENT",
   "department_slug": "plaza-mercado",
   "action_gate": "REVIEW",
+  "latest_host_gate": {
+    "timestamp_utc": "2026-05-06T09:46:37Z",
+    "status": "MIXTO",
+    "gate": "REVIEW",
+    "reason": "residuo_precaucion"
+  },
   "owns": [
     "public profile and social-surface strategy",
     "public/private publication boundary for networks",
@@ -32,7 +38,7 @@
     "unpublished books or canon vaults",
     "commercial app public checkout changes"
   ],
-  "current_handoff": "COMMS/handoffs/2026-05-05-publicacion-perfiles-observatorio.md",
+  "current_handoff": "COMMS/handoffs/2026-05-06-public-profile-pending-sweep.md",
   "current_outbox": "COMMS/outbox/publicacion-perfiles-observatorio.jsonl",
-  "last_observation_fingerprint": "PUBLIC_PROFILE_NETWORK_OBSERVATORY_2026-05-05"
+  "last_observation_fingerprint": "PUBLIC_PROFILE_PENDING_SWEEP_2026-05-06"
 }

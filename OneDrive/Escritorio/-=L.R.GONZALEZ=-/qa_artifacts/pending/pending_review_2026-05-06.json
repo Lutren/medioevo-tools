@@ -1,6 +1,6 @@
 {
   "schema": "medioevo.pending_review.v1",
-  "generated_at": "2026-05-06T03:07:44+00:00",
+  "generated_at": "2026-05-06T09:51:33+00:00",
   "date": "2026-05-06",
   "root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
   "policy": {
@@ -10,10 +10,9 @@
     "curador": "unknown sources and residues still require curador_preflight before use or discard."
   },
   "active_markdown": {
-    "raw_open": 394,
-    "dedup_open": 389,
+    "raw_open": 392,
+    "dedup_open": 387,
     "by_priority": {
-      "P0": 2,
       "P1": 11,
       "P2": 6,
       "P3": 3,
@@ -21,38 +20,22 @@
       "UNCLASSIFIED": 363
     },
     "by_lane": {
-      "commercial": 74,
+      "commercial": 73,
       "general": 100,
       "open_source": 2,
       "private_rpg": 4,
       "research_claims": 1,
-      "runtime_claudio": 188,
+      "runtime_claudio": 187,
       "wave_fc": 3,
       "website_marketing": 17
     },
     "by_blocker": {
-      "external_or_gated": 263,
+      "external_or_gated": 261,
       "host_or_heavy": 52,
       "legal_or_human": 64,
       "private_boundary": 10
     },
     "top_items": [
-      {
-        "priority": "P0",
-        "lane": "commercial",
-        "blocker": "external_or_gated",
-        "item": "P0 - No ejecutar push, deploy, Gumroad, LinkedIn ni redes mientras host gate este `BLOCK` o `REVIEW` sin override target-specific documentado.",
-        "first_evidence": "docs/pending/PUBLIC_PROFILE_NETWORK_PENDING_2026-05-05.md:54",
-        "occurrences": 1
-      },
-      {
-        "priority": "P0",
-        "lane": "runtime_claudio",
-        "blocker": "external_or_gated",
-        "item": "P0 - Repetir host gate antes de cualquier accion externa: `python tools\\host_observacionista.py --no-write` desde Claudio.",
-        "first_evidence": "docs/pending/PUBLIC_PROFILE_NETWORK_PENDING_2026-05-05.md:52",
-        "occurrences": 1
-      },
       {
         "priority": "P1",
         "lane": "commercial",
@@ -355,6 +338,22 @@
         "blocker": "external_or_gated",
         "item": "**HOLD_CLEANUP_GATE** FASE 2B (E: drive): preparar inventario no destructivo; liberar espacio en E:/-=Medioevo=- queda bloqueado hasta ficha canonica de CONSOLIDADO_6MAS1/bestseller_output, cleanup ActionGate y host estable.",
         "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1851",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "commercial",
+        "blocker": "external_or_gated",
+        "item": "**HOLD_CLEANUP_GATE** Ejecutar el `PROMPT_MAESTRO_LIMPIEZA_TOTAL_2026-04-26.md`: solo inventario/workpack no destructivo; modo aplicador bloqueado hasta cleanup ActionGate especifico y host estable. Este pendiente NO bloquea revenue.",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1888",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "commercial",
+        "blocker": "external_or_gated",
+        "item": "La API de Gumroad sigue devolviendo `published: false` y `shown_on_profile: null` para ese SKU, aunque el link directo existe; esto implica que el cuello de botella restante es escaparate/perfil, no checkout directo.",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2455",
         "occurrences": 1
       }
     ]

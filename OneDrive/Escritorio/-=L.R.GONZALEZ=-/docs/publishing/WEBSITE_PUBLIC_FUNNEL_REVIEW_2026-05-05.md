@@ -1,6 +1,6 @@
 # Website Public Funnel Review 2026-05-05
 
-Status: `LOCAL_REVIEW_COMPLETE / NO_DEPLOY`
+Status: `LOCAL_REVIEW_COMPLETE / LIVE_DEPLOY_PENDING`
 
 Skill used: `seo-growth-medioevo`.
 
@@ -87,6 +87,10 @@ Next local website patch, after this one is reviewed, should only:
 - rerun the SEO audit and local smoke before deploy.
 
 ## Deployment Gate
+
+2026-05-06 live read-only check: `https://medioevo.space/` returned HTTP `200`,
+but the live page did not yet expose the local `GitHub Sponsors` route. The
+local patch remains ready but undeployed.
 
 Before Cloudflare or website deploy:
 

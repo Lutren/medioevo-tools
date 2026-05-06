@@ -4,8 +4,8 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 
 ## Counts
 
-- Active markdown raw open items: `394`.
-- Active markdown deduplicated open items: `389`.
+- Active markdown raw open items: `392`.
+- Active markdown deduplicated open items: `387`.
 - Claudio `PENDIENTES_MASTER.md` raw open items: `69`.
 - Claudio deduplicated open items: `69`.
 
@@ -13,7 +13,6 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 
 | priority | dedup_count |
 | --- | --- |
-| P0 | 2 |
 | P1 | 11 |
 | P2 | 6 |
 | P3 | 3 |
@@ -24,12 +23,12 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 
 | lane | dedup_count |
 | --- | --- |
-| commercial | 74 |
+| commercial | 73 |
 | general | 100 |
 | open_source | 2 |
 | private_rpg | 4 |
 | research_claims | 1 |
-| runtime_claudio | 188 |
+| runtime_claudio | 187 |
 | wave_fc | 3 |
 | website_marketing | 17 |
 
@@ -37,7 +36,7 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 
 | blocker | dedup_count |
 | --- | --- |
-| external_or_gated | 263 |
+| external_or_gated | 261 |
 | host_or_heavy | 52 |
 | legal_or_human | 64 |
 | private_boundary | 10 |
@@ -65,8 +64,6 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 
 | priority | lane | blocker | item | first evidence | occurrences |
 | --- | --- | --- | --- | --- | --- |
-| P0 | commercial | external_or_gated | P0 - No ejecutar push, deploy, Gumroad, LinkedIn ni redes mientras host gate este `BLOCK` o `REVIEW` sin override target-specific documentado. | docs/pending/PUBLIC_PROFILE_NETWORK_PENDING_2026-05-05.md:54 | 1 |
-| P0 | runtime_claudio | external_or_gated | P0 - Repetir host gate antes de cualquier accion externa: `python tools\host_observacionista.py --no-write` desde Claudio. | docs/pending/PUBLIC_PROFILE_NETWORK_PENDING_2026-05-05.md:52 | 1 |
 | P1 | commercial | legal_or_human | **P1** No declarar FlujoCRM listo para venta final hasta probar instalador Windows en maquina limpia/VM, cerrar legal/soporte final y verificar rebuild/hash del instalador cliente activo. Aviso unsigned e instrucciones piloto quedaron documentados localmente en `docs\product\flujocrm-local-gate-recheck-2026-05-05.md`. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1454 | 1 |
 | P1 | commercial | external_or_gated | P1 - Gumroad Claudio software: `pack-empresarial`, `writer-workbench` y `claudio-full` existen como drafts (`published=false`) y sin archivos/covers; no publicarlos hasta adjuntar paquete, portada y prueba de checkout. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2036 | 1 |
 | P1 | runtime_claudio | host_or_heavy | **P1** Ejecutar suite Qwen 3B cuando el host permita ruta pesada: `python tools\qwen_observacion_benchmark_suite.py --execute --write-dataset`. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1142 | 1 |
@@ -90,6 +87,8 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 | P4 | runtime_claudio | external_or_gated | **P4.3** Testimonios reales | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2844 | 1 |
 | P4 | runtime_claudio | external_or_gated | **P4.5** Guest post en blogs de sci-fi | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2848 | 1 |
 | P4 | runtime_claudio | external_or_gated | **P4.6** Podcasts de literatura | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2849 | 1 |
+| P4 | runtime_claudio | external_or_gated | **P4.7** Colaboraciones cross-promo | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2850 | 1 |
+| UNCLASSIFIED | commercial | external_or_gated | 4. Gumroad 12-34 audiolibros (35 ZIPs listos) | -=MEDIOEVO=-/-=LIBROS/CHECKLIST_FINAL.md:11 | 1 |
 
 ## Kairos Fastlane
 

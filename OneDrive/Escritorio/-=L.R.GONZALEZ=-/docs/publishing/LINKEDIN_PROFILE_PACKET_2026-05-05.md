@@ -1,9 +1,13 @@
 # LinkedIn Profile Packet 2026-05-05
 
-Status: `PASTE_READY_AFTER_CANONICAL_URL_CONFIRMATION`
+Status: `PASTE_READY_AFTER_CANONICAL_URL_CONFIRMATION / AUTH_UI_REQUIRED`
 
 No LinkedIn edit was executed. LinkedIn requires authenticated visual
 confirmation and host gate approval before any live change.
+
+2026-05-06 read-only check: public HTTP checks returned LinkedIn `999` for both
+candidate URLs. This does not prove either URL is wrong; it means canonical
+confirmation still requires authenticated owner-view in the browser.
 
 ## Canonical URL Review
 

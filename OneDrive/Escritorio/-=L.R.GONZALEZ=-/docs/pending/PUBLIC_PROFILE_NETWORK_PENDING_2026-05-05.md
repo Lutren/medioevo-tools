@@ -49,31 +49,33 @@ permiso de publicacion externa.
 
 ## Estado Actual De Gate
 
-- [ ] P0 - Repetir host gate antes de cualquier accion externa:
+- [x] P0 - Repetir host gate antes de cualquier accion externa:
   `python tools\host_observacionista.py --no-write` desde Claudio.
-- [ ] P0 - No ejecutar push, deploy, Gumroad, LinkedIn ni redes mientras host
+- [x] P0 - No ejecutar push, deploy, Gumroad, LinkedIn ni redes mientras host
   gate este `BLOCK` o `REVIEW` sin override target-specific documentado.
 
 Evidencia mas reciente:
 
 | check | resultado |
 |---|---|
-| host gate no-write | `BLOCK` |
-| timestamp | `2026-05-05T21:31:52Z` |
-| razones | memoria alta, proceso dominante CPU, residuo alto |
-| GitHub profile README | remoto verificado; sha `5e6aa51388978d7c1405333b37451c6f47646abf`; ya contiene `Publication Lanes`, `Three Public Paths`, Sponsors y frontera privada |
-| GitHub Sponsors | HTTP 200; goal y tiers visibles |
-| LinkedIn URL observada desde GitHub | `https://www.linkedin.com/in/luis-ren%C3%A9-gonz%C3%A1lez-l%C3%B3pez-64517b20b/`; requiere confirmacion visual autenticada |
-| external actions | ninguna ejecutada |
+| host gate no-write | `MIXTO / REVIEW` |
+| timestamp | `2026-05-06T09:46:37Z` |
+| razones | `residuo_precaucion`; memory `76.0%`; disk `80.3%`; lambda_sat `0.803` |
+| GitHub profile README | raw README HTTP `200`; contiene `Publication Lanes`, `Three Public Paths`, sponsor link, Gumroad y MEDIOEVO |
+| GitHub Sponsors | HTTP `200`; high tiers `US$1,000`, `US$5,000` y `US$10,000` verificados |
+| Website live | HTTP `200`; el parche local de Sponsors todavia no esta desplegado |
+| Gumroad live | Agent Ops y DUAT Templates HTTP `200`; copy base safe, mejoras de secciones/media pendientes |
+| LinkedIn URL observada desde GitHub | `https://www.linkedin.com/in/luis-ren%C3%A9-gonz%C3%A1lez-l%C3%B3pez-64517b20b/`; HTTP publico devuelve `999`, requiere confirmacion visual autenticada |
+| external actions | ninguna adicional en este sweep; Sponsors high tiers ya cerrado |
 
 ## Pendientes Por Target
 
 | prioridad | target | pendiente | estado | evidencia/base |
 |---|---|---|---|---|
-| P0 | Website | desplegar el parche local de home solo cuando host gate este `APPROVE`; luego verificar HTTP 200 y sitemap | `BLOCKED_BY_HOST_GATE` | `WEBSITE_PUBLIC_FUNNEL_REVIEW_2026-05-05.md`, `website/index.html` |
-| P0 | Gumroad Agent Ops Pack | actualizar copy "what you get / what you do not get" y media, sin cambiar artefacto/precio | `READY_AFTER_GATE` | `GUMROAD_LISTING_OPTIMIZATION_PACKET_2026-05-05.md` |
-| P0 | Gumroad DUAT Templates | reforzar `synthetic_only` y exclusion de DUAT/GEODIA privado | `READY_AFTER_GATE` | `GUMROAD_LISTING_OPTIMIZATION_PACKET_2026-05-05.md` |
-| P0 | LinkedIn | confirmar visualmente URL canonica autenticada antes de editar perfil | `REVIEW` | `LINKEDIN_PROFILE_PACKET_2026-05-05.md` |
+| P0 | Website | desplegar el parche local de home solo cuando host/Cloudflare gate permita; luego verificar HTTP 200 y sitemap | `LOCAL_PATCH_DONE_DEPLOY_BLOCKED_BY_REVIEW` | `WEBSITE_PUBLIC_FUNNEL_REVIEW_2026-05-05.md`, `PUBLIC_PROFILE_PENDING_SWEEP_2026-05-06.md` |
+| P0 | Gumroad Agent Ops Pack | actualizar copy "what you get / what you do not get" y media, sin cambiar artefacto/precio | `LIVE_SAFE_ENHANCEMENT_PENDING` | `GUMROAD_LISTING_OPTIMIZATION_PACKET_2026-05-05.md`, `PUBLIC_PROFILE_PENDING_SWEEP_2026-05-06.md` |
+| P0 | Gumroad DUAT Templates | reforzar `synthetic_only` y exclusion de DUAT/GEODIA privado | `LIVE_SAFE_ENHANCEMENT_PENDING` | `GUMROAD_LISTING_OPTIMIZATION_PACKET_2026-05-05.md`, `PUBLIC_PROFILE_PENDING_SWEEP_2026-05-06.md` |
+| P0 | LinkedIn | confirmar visualmente URL canonica autenticada antes de editar perfil | `AUTHENTICATED_CONFIRMATION_REQUIRED` | `LINKEDIN_PROFILE_PACKET_2026-05-05.md`, `PUBLIC_PROFILE_PENDING_SWEEP_2026-05-06.md` |
 | P0 | LinkedIn | pegar headline/about/featured links solo despues de confirmar URL y gate | `READY_AFTER_URL_CONFIRMATION` | `LINKEDIN_PROFILE_PACKET_2026-05-05.md` |
 | P1 | GitHub profile | no cambiar README por ahora; revisar pins si se confirma que no estan alineados | `NO_CHANGE_NEEDED_NOW` | README remoto ya esta alineado y Sponsors visible |
 | P1 | GitHub Sponsors | no cambiar copy por ahora; verificar dashboard solo si se necesita screenshot/evidencia nueva | `NO_CHANGE_NEEDED_NOW` | Sponsors publico HTTP 200 |
@@ -109,4 +111,5 @@ Evidencia mas reciente:
 - `docs\publishing\SOCIAL_CONTENT_CALENDAR_2026-05.md`
 - `docs\publishing\WEBSITE_PUBLIC_FUNNEL_REVIEW_2026-05-05.md`
 - `qa_artifacts\release_validation\github-linkedin-public-safe-positioning-2026-05-05.json`
+- `qa_artifacts\release_validation\public-profile-pending-sweep-2026-05-06.json`
 - `COMMS\agents_state\publicacion-perfiles-observatorio.json`
