@@ -1,6 +1,6 @@
 # Matrix Mission Control Bridge
 
-Estado: `IMPLEMENTADO_LOCAL / CLAUDIO_WORKTREE_DIRTY / COMMIT_REQUIERE_CONSOLIDACION`.
+Estado: `IMPLEMENTADO_LOCAL / CLAUDIO_COMMIT_PARCIAL / WORKTREE_CONCURRENTE_PRESERVADO`.
 
 ## Objetivo
 
@@ -15,9 +15,12 @@ cargar canon completo y sin publicar material privado.
 | `-=MEDIOEVO=-/-=LIBROS/claudio/apps/hormiguero_mission_control/app.py` | endpoints locales Matrix |
 | `-=MEDIOEVO=-/-=LIBROS/claudio/tests/test_matrix_library_api.py` | tests focalizados |
 
-`app.py` ya estaba modificado por trabajo concurrente antes de esta pasada. Por
-eso la integracion quedo aplicada y validada en working tree, pero no se hizo
-commit en el repo Claudio para no arrastrar cambios ajenos.
+`app.py` ya estaba modificado por trabajo concurrente antes de esta pasada. La
+integracion Matrix se separo con staging sintetico sobre `HEAD + solo Matrix`,
+se valido y se hizo commit en Claudio sin arrastrar COMMS, Telecom, autonomia u
+otros cambios ajenos.
+
+Commit Claudio: `0f0f69f Connect Matrix library to Mission Control`.
 
 ## Endpoints locales
 
@@ -72,7 +75,7 @@ Fingerprint: `MATRIX_MISSION_CONTROL_BRIDGE_2026-05-06_317BE610`
 
 Siguiente paso seguro:
 
-1. Consolidar o separar el working tree Claudio.
-2. Stagear solo el hunk Matrix de `app.py` o aceptar commit de Mission Control completo.
-3. Agregar panel UI si se quiere mostrar Biblioteca en la ciudad.
-4. Registrar evento COMMS/WitnessLog cuando el repo Claudio tenga una cola limpia.
+1. Consolidar el resto del working tree Claudio por modulo.
+2. Agregar panel UI si se quiere mostrar Biblioteca en la ciudad.
+3. Registrar evento COMMS/WitnessLog cuando el repo Claudio tenga una cola limpia.
+4. Conectar retrieval Matrix con paquetes de delegacion Wabi-Sabi.
