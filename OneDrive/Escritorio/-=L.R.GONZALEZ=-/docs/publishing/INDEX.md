@@ -62,3 +62,9 @@ as blanket approval for more repos, Gumroad products, deploys or social posts.
 - `docs\publishing\LEGACY_MARCH_REVENUE_PLAN_RECONCILIATION_2026-05-06.md`
   records that March 2026 Gumroad/KDP/social urgency checklists were converted
   to legacy-gated references, not executed.
+- `docs\product\medioevo-gumroad-artifact-backlog-2026-05-06.md` records the
+  missing editorial/product files required before legacy Gumroad catalog claims
+  can be sold.
+- `docs\publishing\EXTERNAL_RELATIONSHIP_OUTREACH_QUEUE_2026-05-06.md`
+  migrates Discord, review, booktuber, testimonial, guest-post, podcast and
+  cross-promo ideas into a gated outreach queue.
