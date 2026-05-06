@@ -1,6 +1,6 @@
 {
   "schema": "medioevo.pending_review.v1",
-  "generated_at": "2026-05-06T10:38:00+00:00",
+  "generated_at": "2026-05-06T10:41:01+00:00",
   "date": "2026-05-06",
   "root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
   "policy": {
@@ -10,25 +10,24 @@
     "curador": "unknown sources and residues still require curador_preflight before use or discard."
   },
   "active_markdown": {
-    "raw_open": 95,
-    "dedup_open": 95,
+    "raw_open": 85,
+    "dedup_open": 85,
     "by_priority": {
       "P1": 10,
       "P2": 6,
-      "UNCLASSIFIED": 79
+      "UNCLASSIFIED": 69
     },
     "by_lane": {
       "commercial": 3,
-      "general": 7,
+      "general": 1,
       "open_source": 2,
       "private_rpg": 1,
       "research_claims": 1,
       "runtime_claudio": 75,
-      "wave_fc": 2,
-      "website_marketing": 4
+      "wave_fc": 2
     },
     "by_blocker": {
-      "external_or_gated": 43,
+      "external_or_gated": 33,
       "host_or_heavy": 42,
       "legal_or_human": 5,
       "private_boundary": 5
@@ -181,54 +180,6 @@
       {
         "priority": "UNCLASSIFIED",
         "lane": "general",
-        "blocker": "external_or_gated",
-        "item": "Abrir en CapCut",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/VIDEO_TOOLS_GUIDE.md:246",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "general",
-        "blocker": "external_or_gated",
-        "item": "Agmuygar Auto Captions (word by word)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/VIDEO_TOOLS_GUIDE.md:247",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "general",
-        "blocker": "external_or_gated",
-        "item": "Agmuygar hook text (primeros 3 segundos)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/VIDEO_TOOLS_GUIDE.md:248",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "general",
-        "blocker": "external_or_gated",
-        "item": "Exportar 1080x1920",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/VIDEO_TOOLS_GUIDE.md:249",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "general",
-        "blocker": "external_or_gated",
-        "item": "Copiar caption de SOCIAL_MEDIA_CONTENT_PACK.md",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/VIDEO_TOOLS_GUIDE.md:250",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "general",
-        "blocker": "external_or_gated",
-        "item": "muysponder todos los comentarios en 30 minutos",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/VIDEO_TOOLS_GUIDE.md:253",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "general",
         "blocker": "private_boundary",
         "item": "Rotate exposed secrets if any are found in public artifacts - secret rotation remains manual/outside tracker; no public artifact was generated.",
         "first_evidence": "docs/security/SECURITY_CHECKLIST.md:12",
@@ -352,6 +303,54 @@
         "blocker": "host_or_heavy",
         "item": "Claudio puede cmuyar graficas (matplotlib)",
         "first_evidence": "-=MEDIOEVO=-/-=LIBROS/CLAUDIO_EVOLUTION.md:31",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "runtime_claudio",
+        "blocker": "host_or_heavy",
+        "item": "Claudio puede manipular architú del sistema",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/CLAUDIO_EVOLUTION.md:32",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "runtime_claudio",
+        "blocker": "host_or_heavy",
+        "item": "Sandbox de seguridad (confirmacion para acciones peligrosas)",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/CLAUDIO_EVOLUTION.md:33",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "runtime_claudio",
+        "blocker": "host_or_heavy",
+        "item": "Indexar los 35 libros en ChromaDB",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/CLAUDIO_EVOLUTION.md:36",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "runtime_claudio",
+        "blocker": "host_or_heavy",
+        "item": "Claudio busca citas exactas de los libros",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/CLAUDIO_EVOLUTION.md:37",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "runtime_claudio",
+        "blocker": "host_or_heavy",
+        "item": "Claudio muysponde con muyfemuyncias pmuycisas",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/CLAUDIO_EVOLUTION.md:38",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "runtime_claudio",
+        "blocker": "host_or_heavy",
+        "item": "Actualizacion automatica al agmuygar nuevo contenido",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/CLAUDIO_EVOLUTION.md:39",
         "occurrences": 1
       }
     ]
