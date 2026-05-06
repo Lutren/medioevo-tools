@@ -1,0 +1,13 @@
+# claim: Documentar una tarea local con evidencia y sin accion externa.
+# evidence: docs/language/OBS_LANGUAGE_V0_1.md
+# falsifier: El programa no compila o VERIFICAR falla.
+# risk: low_local
+# action: document_only
+# gate: APPROVE
+# handoff: none
+OBSERVAR bit 0
+DOCUMENTAR bit 0
+VERIFICAR output == [0]
+VERIFICAR halted == true
+VERIFICAR residue <= 0
+HANDOFF

@@ -1,0 +1,122 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "medioevo.observacionismo.l1_programmer_workpack.v0_1",
+  "title": "Observacionismo L1 Programmer Workpack",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "schema",
+    "source_packet_fingerprint",
+    "programmer_agent",
+    "status",
+    "intent",
+    "observation_envelope",
+    "action_gate",
+    "proposed_scope",
+    "patch_policy",
+    "evidence_refs",
+    "risk_flags",
+    "validation_required",
+    "forbidden_operations",
+    "handoff",
+    "falsifiers",
+    "workpack_id"
+  ],
+  "properties": {
+    "schema": {
+      "const": "observacionismo.l1_programmer_workpack.v0_1"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "READY_READ_ONLY",
+        "REVIEW_PATCH_PLAN_ONLY",
+        "REVIEW_MISSING_EVIDENCE",
+        "HANDOFF_REVIEW",
+        "BLOCKED_BY_ACTION_GATE",
+        "REVIEW_REQUIRED"
+      ]
+    },
+    "programmer_agent": {
+      "type": "object",
+      "required": ["recommended_agent", "mode", "may_execute"],
+      "properties": {
+        "recommended_agent": {
+          "type": "string"
+        },
+        "mode": {
+          "const": "dry_workpack_only"
+        },
+        "may_execute": {
+          "const": false
+        }
+      }
+    },
+    "patch_policy": {
+      "type": "object",
+      "required": [
+        "may_prepare_patch_plan",
+        "may_apply_patch",
+        "requires_action_gate",
+        "rollback_required_before_apply",
+        "no_auto_write"
+      ],
+      "properties": {
+        "may_prepare_patch_plan": {
+          "type": "boolean"
+        },
+        "may_apply_patch": {
+          "const": false
+        },
+        "requires_action_gate": {
+          "type": "boolean"
+        },
+        "rollback_required_before_apply": {
+          "const": true
+        },
+        "no_auto_write": {
+          "const": true
+        }
+      }
+    },
+    "proposed_scope": {
+      "type": "object",
+      "required": [
+        "action",
+        "target_paths",
+        "private_boundary_touched",
+        "external_boundary_touched"
+      ],
+      "properties": {
+        "action": {
+          "type": "string"
+        },
+        "target_paths": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "private_boundary_touched": {
+          "const": false
+        },
+        "external_boundary_touched": {
+          "type": "boolean"
+        }
+      }
+    },
+    "forbidden_operations": {
+      "type": "array",
+      "contains": {
+        "const": "apply_patch"
+      },
+      "items": {
+        "type": "string"
+      }
+    },
+    "workpack_id": {
+      "type": "string",
+      "pattern": "^OBS_L1_PROGRAMMER_WORKPACK_V01_2026-05-06_[A-Fa-f0-9]{12}$"
+    }
+  }
+}

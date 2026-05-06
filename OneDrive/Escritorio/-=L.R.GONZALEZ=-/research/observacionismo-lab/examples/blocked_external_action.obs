@@ -1,0 +1,12 @@
+# claim: Detectar que una accion externa debe quedar bloqueada.
+# evidence: AGENTS.md
+# falsifier: El adaptador aprueba publicar, subir, enviar o hacer red.
+# risk: external_action
+# action: external:publish:https://example.com
+# gate: BLOCK
+# handoff: none
+OBSERVAR bit 0
+ACTUAR nop
+DOCUMENTAR bit 0
+VERIFICAR output == [0]
+HANDOFF

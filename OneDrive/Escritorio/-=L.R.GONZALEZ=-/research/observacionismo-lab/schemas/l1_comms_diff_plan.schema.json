@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "medioevo.observacionismo.l1_comms_diff_plan.v0_1",
+  "title": "Observacionismo L1 COMMS Diff Plan",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "schema",
+    "source_message_id",
+    "source_workpack_id",
+    "repo_root",
+    "status",
+    "blockers",
+    "target_observations",
+    "proposal_count",
+    "proposals",
+    "application_gate",
+    "dry_run",
+    "applied",
+    "may_apply_patch",
+    "forbidden_operations",
+    "validation_required",
+    "plan_id"
+  ],
+  "properties": {
+    "schema": {
+      "const": "observacionismo.l1_comms_diff_plan.v0_1"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "DIFF_PLAN_READY",
+        "READ_ONLY_NO_DIFF",
+        "REVIEW_NOT_DIFFABLE",
+        "BLOCKED_BY_ACTION_GATE"
+      ]
+    },
+    "application_gate": {
+      "type": "object",
+      "required": ["status", "reasons"],
+      "properties": {
+        "status": {
+          "const": "REVIEW"
+        },
+        "reasons": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "dry_run": {
+      "const": true
+    },
+    "applied": {
+      "const": false
+    },
+    "may_apply_patch": {
+      "const": false
+    },
+    "plan_id": {
+      "type": "string",
+      "pattern": "^OBS_L1_COMMS_DIFF_PLAN_V01_2026-05-06_[A-Fa-f0-9]{12}$"
+    }
+  }
+}

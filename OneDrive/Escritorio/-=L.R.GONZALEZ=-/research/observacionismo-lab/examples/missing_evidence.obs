@@ -1,0 +1,10 @@
+# claim: Esta tarea no declara evidencia de claim y debe quedar en REVIEW.
+# falsifier: El adaptador aprueba un claim sin evidencia.
+# risk: evidence_gap
+# action: document_only
+# gate: APPROVE
+# handoff: none
+OBSERVAR bit 0
+DOCUMENTAR bit 0
+VERIFICAR output == [0]
+HANDOFF

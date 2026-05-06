@@ -1,0 +1,11 @@
+# claim: Preparar handoff local para Wabi-Sabi sin ejecutar accion externa.
+# evidence: COMMS/schemas/observation-envelope.schema.json
+# falsifier: El handoff incluye una accion externa no gateada.
+# risk: handoff_review
+# action: handoff:wabi-sabi-sentido-comun
+# gate: REVIEW
+# handoff: wabi-sabi-sentido-comun
+OBSERVAR bit 0
+DOCUMENTAR bit 0
+VERIFICAR output == [0]
+HANDOFF

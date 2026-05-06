@@ -1,0 +1,13 @@
+# claim: Proponer un patch local reversible sin escribirlo automaticamente.
+# evidence: tests/test_source_snapshot.py
+# falsifier: ActionGate permite escritura sin revision.
+# risk: write_intent
+# action: edit_file:docs/example.md
+# gate: REVIEW
+# handoff: agente-programador
+OBSERVAR bit 0
+ACTUAR nop
+DOCUMENTAR bit 0
+VERIFICAR output == [0]
+VERIFICAR halted == true
+HANDOFF
