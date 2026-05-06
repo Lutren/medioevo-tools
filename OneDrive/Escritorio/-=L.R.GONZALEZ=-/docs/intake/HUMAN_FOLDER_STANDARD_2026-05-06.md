@@ -113,6 +113,49 @@ Regla de seguridad:
 - Ejecutables, secretos, sesiones, claims fuertes y privado/RPG/TCG quedan en `REVIEW` o `BLOQUEADO`.
 - La limpieza visible no significa borrar verdad: significa retirar la fuente del inbox con ficha, hash e indice.
 
+## Claudio Runtime Root
+
+Uso: motor local. No debe funcionar como escritorio, archivo historico o carpeta de descargas.
+
+Estado actual auditado:
+
+- Raiz: `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\-=MEDIOEVO=-\-=LIBROS\claudio`
+- Items visibles en raiz: `621`.
+- Archivos visibles en raiz: `469`.
+- Carpetas visibles en raiz: `152`.
+- Entradas Git pendientes en repo anidado: `1289`.
+
+Diagnostico:
+
+- Hay demasiados scripts, launchers, documentos, configuraciones y bases locales mezclados en raiz.
+- La limpieza fisica requiere lotes reversibles; no se debe hacer un movimiento amplio de una sola vez.
+- El primer paso correcto es usar `CLAUDIO_ROOT_HUMAN_AUDIT_2026-05-06.md` y `CLAUDIO_ROOT_HUMAN_MIGRATION_PLAN_2026-05-06.md`.
+
+Raiz visible deseada:
+
+```text
+00_LEER_PRIMERO.md
+apps/
+core/
+tests/
+tools/
+docs/
+runtime/
+reports/
+website/
+products/
+data/
+datasets/
+```
+
+Primeros lotes seguros:
+
+- Launchers: `*.bat`, `*.ps1`, `*.vbs`, `*.rdp`, `*.lnk`, `*.cmd`, `*.sh` a `tools/launchers`.
+- Docs sueltos: `*.md`, `*.txt` a `docs/root_notes_review`.
+- Scripts Python sueltos: `*.py` a `tools/root_scripts_review` solo despues de detectar imports/usos.
+- Caches: borrar solo si son regenerables y quedan en log.
+- Secretos, tokens, DBs, modelos, PSI, RPG/TCG y vaults: `BLOCK/REVIEW`, nunca borrado automatico.
+
 ## Criterio de calidad
 
 Una carpeta esta limpia cuando:
