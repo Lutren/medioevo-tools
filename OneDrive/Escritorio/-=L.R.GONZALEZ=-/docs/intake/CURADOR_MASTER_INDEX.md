@@ -1,12 +1,12 @@
 # Curador SETO Master Index
 
-Generated UTC: `2026-05-06T05:35:04.578021+00:00`
+Generated UTC: `2026-05-06T07:05:06.072037+00:00`
 
 Fuente canonica operativa para Downloads. SQLite es la base consultable; las fichas Markdown son la capa humana.
 
 | campo | valor |
 |---|---:|
-| archivos registrados | 186 |
+| archivos registrados | 187 |
 | grupos duplicados exactos detectados | 0 |
 | borrados seguros en este pase | 0 |
 | atlas main | `docs/intake/ATLAS_MAIN.md` |
@@ -16,7 +16,7 @@ Fuente canonica operativa para Downloads. SQLite es la base consultable; las fic
 
 | status | count |
 |---|---:|
-| `ARCHIVO_FRIO` | 167 |
+| `ARCHIVO_FRIO` | 168 |
 | `BASURA_REGENERABLE_BORRADA` | 1 |
 | `BORRADO_DUPLICADO` | 18 |
 
@@ -28,7 +28,7 @@ Fuente canonica operativa para Downloads. SQLite es la base consultable; las fic
 | `cleanup` | 52 |
 | `duat-lab` | 8 |
 | `local-agent` | 16 |
-| `research-boundary` | 75 |
+| `research-boundary` | 76 |
 
 ## Duplicados exactos
 
@@ -176,6 +176,7 @@ Fuente canonica operativa para Downloads. SQLite es la base consultable; las fic
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/9CECC245362EF043_observacionismo_v8_integrator.md` | `C:\Users\L-Tyr\Downloads\observacionismo_v8_integrator.py` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/3D2424057A226AD0_osit-teora-completa-de-informacin-con-estado-y-tesis-del-agente-local-si.md` | `C:\Users\L-Tyr\Downloads\OSIT — Teoría Completa de Información con Estado y Tesis del Agente Local sin LLM.docx` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/A59D9A9C40C215E7_osit-teora-completa-de-informacin-con-estado-y-tesis-del-agente-local-si.md` | `C:\Users\L-Tyr\Downloads\OSIT — Teoría Completa de Información con Estado y Tesis del Agente Local sin LLM.pdf` |
+| `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/5253B5F5371FB818_osit-qg-modulos-extendidos---optimizacion-y-nuevas-aplicaciones.md` | `C:\Users\L-Tyr\Downloads\OSIT-QG Modulos Extendidos - Optimizacion y Nuevas Aplicaciones.pdf` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/76F80E0A9A273CBE_osit_resource_optimizer.md` | `C:\Users\L-Tyr\Downloads\osit_resource_optimizer.py` |
 | `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/89E40049D5B2ADCC_pasted-markdown-2.md` | `C:\Users\L-Tyr\Downloads\Pasted markdown (2).md` |
 | `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/FBF88577127CA884_pasted-markdown-3.md` | `C:\Users\L-Tyr\Downloads\Pasted markdown (3).md` |

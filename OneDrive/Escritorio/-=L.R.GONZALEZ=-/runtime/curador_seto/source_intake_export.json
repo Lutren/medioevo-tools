@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-05-06T05:35:04.695978+00:00",
+  "generated_at_utc": "2026-05-06T07:05:06.167542+00:00",
   "downloads_records": [
     {
       "path": "C:\\Users\\L-Tyr\\Downloads\\# CLAUDIO — LOCAL CODE AGENT.txt",
@@ -3017,6 +3017,28 @@
       "risk_flags": [],
       "ficha_path": "docs/intake/curador_fichas/downloads/A59D9A9C40C215E7_osit-teora-completa-de-informacin-con-estado-y-tesis-del-agente-local-si.md",
       "canonical_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\downloads\\2026-05-05\\A59D9A9C40C215E7_osit-teora-completa-de-informacin-con-estado-y-tesis-del.pdf",
+      "deleted": false
+    },
+    {
+      "path": "C:\\Users\\L-Tyr\\Downloads\\OSIT-QG Modulos Extendidos - Optimizacion y Nuevas Aplicaciones.pdf",
+      "rel_path": "OSIT-QG Modulos Extendidos - Optimizacion y Nuevas Aplicaciones.pdf",
+      "sha256": "5253B5F5371FB8185AF5FBEB11B5D4E30B2D7380583D211AC08D617BE2436A80",
+      "size_bytes": 314847,
+      "suffix": ".pdf",
+      "kind": "pdf_page_hint_unknown",
+      "line_count": null,
+      "psi_state": "INFERENCIA",
+      "status": "ARCHIVO_FRIO",
+      "classification": "PACKAGE_OR_DOCUMENT_REVIEW",
+      "lane": "research-boundary",
+      "decision": "ABSORBIDO_CANONIZADO_ARCHIVO_FRIO",
+      "action_gate": "REVIEW",
+      "summary": "Package/document source; lineage and claims must be reviewed before import.",
+      "target": "docs/intake and research/ after claim review",
+      "falsifiers": "secret/private marker, hash mismatch, unique content loss, strong claim without validation",
+      "risk_flags": [],
+      "ficha_path": "docs/intake/curador_fichas/downloads/5253B5F5371FB818_osit-qg-modulos-extendidos---optimizacion-y-nuevas-aplicaciones.md",
+      "canonical_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\downloads\\2026-05-06\\5253B5F5371FB818_osit-qg-modulos-extendidos---optimizacion-y-nuevas-aplic.pdf",
       "deleted": false
     },
     {

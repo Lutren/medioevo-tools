@@ -1,12 +1,12 @@
 # Atlas Main - Curador SETO
 
-Generated UTC: `2026-05-06T05:35:04.597563+00:00`
+Generated UTC: `2026-05-06T07:05:06.104369+00:00`
 
 Mapa operativo para que humanos y agentes naveguen el sistema. `Downloads` es INBOX; el canon vive por continentes, ciudades, fichas y sinapsis.
 
 | campo | valor |
 |---|---:|
-| fuentes procesadas | 186 |
+| fuentes procesadas | 187 |
 | extracciones | 0 |
 | retiros a Archivo Frio | 0 |
 | borrados seguros | 0 |
@@ -15,7 +15,7 @@ Mapa operativo para que humanos y agentes naveguen el sistema. `Downloads` es IN
 
 | status | count |
 |---|---:|
-| `ARCHIVO_FRIO` | 167 |
+| `ARCHIVO_FRIO` | 168 |
 | `BASURA_REGENERABLE_BORRADA` | 1 |
 | `BORRADO_DUPLICADO` | 18 |
 
@@ -49,7 +49,7 @@ Mapa operativo para que humanos y agentes naveguen el sistema. `Downloads` es IN
 
 - Nivel: `continente`.
 - Ruta canon: `docs/canon/atlas/productos.md`.
-- Fuentes conectadas: `25`.
+- Fuentes conectadas: `26`.
 
 ### Assets
 
@@ -199,6 +199,7 @@ Mapa operativo para que humanos y agentes naveguen el sistema. `Downloads` es IN
 | `Productos` | `ARCHIVO_FRIO` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/31AE645EC091A46E_duat_observacionismo_unified.md` | `C:\Users\L-Tyr\Downloads\duat_observacionismo_unified.zip` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\31AE645EC091A46E_duat_observacionismo_unified.zip` |
 | `Productos` | `ARCHIVO_FRIO` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/17E8F7BB7BD3C92C_duat_observacionismo_unified_v2.md` | `C:\Users\L-Tyr\Downloads\duat_observacionismo_unified_v2.zip` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\17E8F7BB7BD3C92C_duat_observacionismo_unified_v2.zip` |
 | `Productos` | `ARCHIVO_FRIO` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/34DC55FAA8686AF0_observacionismo_tui_r3_pack.md` | `C:\Users\L-Tyr\Downloads\OBSERVACIONISMO_TUI_R3_PACK.zip` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\34DC55FAA8686AF0_observacionismo_tui_r3_pack.zip` |
+| `Productos` | `ARCHIVO_FRIO` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/5253B5F5371FB818_osit-qg-modulos-extendidos---optimizacion-y-nuevas-aplicaciones.md` | `C:\Users\L-Tyr\Downloads\OSIT-QG Modulos Extendidos - Optimizacion y Nuevas Aplicaciones.pdf` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-06\5253B5F5371FB818_osit-qg-modulos-extendidos---optimizacion-y-nuevas-aplic.pdf` |
 | `Productos` | `ARCHIVO_FRIO` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/C71A7AA373E460BA_psi_chi_lab_v2_pack.md` | `C:\Users\L-Tyr\Downloads\psi_chi_lab_v2_pack.zip` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\C71A7AA373E460BA_psi_chi_lab_v2_pack.zip` |
 | `Productos` | `ARCHIVO_FRIO` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/E4BB92FE76CC6AFF_psi_chi_lab_v3_pack.md` | `C:\Users\L-Tyr\Downloads\psi_chi_lab_v3_pack.zip` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\E4BB92FE76CC6AFF_psi_chi_lab_v3_pack.zip` |
 | `Productos` | `ARCHIVO_FRIO` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/E945CA5F36869DE4_psi_chi_lab_v4_pack.md` | `C:\Users\L-Tyr\Downloads\psi_chi_lab_v4_pack.zip` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\E945CA5F36869DE4_psi_chi_lab_v4_pack.zip` |

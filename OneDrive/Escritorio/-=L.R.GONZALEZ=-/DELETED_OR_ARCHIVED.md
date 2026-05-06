@@ -411,3 +411,15 @@ Sources were absorbed into the Atlas before retirement. Unique material was move
 | status | original path | sha256 | archive/canonical path | reason |
 |---|---|---|---|---|
 | `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\osit_resource_optimizer.py` | `76F80E0A9A273CBE2EC9CE009FAD39086390E4D942C4955CDE480BDF78FCE9CD` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\76F80E0A9A273CBE_osit_resource_optimizer.py` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-06
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-06 | 1 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-06.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\OSIT-QG Modulos Extendidos - Optimizacion y Nuevas Aplicaciones.pdf` | `5253B5F5371FB8185AF5FBEB11B5D4E30B2D7380583D211AC08D617BE2436A80` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-06\5253B5F5371FB818_osit-qg-modulos-extendidos---optimizacion-y-nuevas-aplic.pdf` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
