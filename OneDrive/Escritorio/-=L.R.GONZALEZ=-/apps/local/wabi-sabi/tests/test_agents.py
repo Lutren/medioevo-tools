@@ -81,3 +81,40 @@ def test_research_agent_searches_local_docs(tmp_path):
     artifact = Path(payload["artifacts"][0])
     assert artifact.exists()
     assert "ARCHITECTURE.md" in artifact.read_text(encoding="utf-8")
+
+
+def test_programmer_agent_applies_scoped_python_patch(tmp_path):
+    target = tmp_path / "helpers.py"
+
+    payload = execute_prompt(
+        "crea una funcion que lea un archivo y resuma sus lineas",
+        workspace=tmp_path,
+        runtime_root=tmp_path / "runtime",
+        json_mode=True,
+        apply=True,
+        target="helpers.py",
+    )
+
+    assert payload["ok"] is True
+    assert payload["action"] == "scoped_code_patch_applied"
+    assert target.exists()
+    assert "summarize_file_lines" in target.read_text(encoding="utf-8")
+    assert any(item.endswith(".diff") for item in payload["artifacts"])
+    assert "py_compile_passed" in payload["evidence"]
+
+
+def test_programmer_agent_rejects_outside_apply_target(tmp_path):
+    outside = tmp_path.parent / "outside.py"
+
+    payload = execute_prompt(
+        "crea una funcion que lea un archivo y resuma sus lineas",
+        workspace=tmp_path,
+        runtime_root=tmp_path / "runtime",
+        json_mode=True,
+        apply=True,
+        target=str(outside),
+    )
+
+    assert payload["ok"] is False
+    assert payload["action"] == "scoped_code_patch_rejected"
+    assert "target_outside_workspace" in payload["error"]

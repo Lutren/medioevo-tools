@@ -24,6 +24,8 @@ def execute_prompt(
     runtime_root: str | Path | None = None,
     agent_name: str | None = None,
     json_mode: bool = False,
+    apply: bool = False,
+    target: str | None = None,
 ) -> dict[str, Any]:
     config = build_config(workspace=workspace, runtime_root=runtime_root)
     registry = AgentRegistry(config.registry_path)
@@ -46,7 +48,7 @@ def execute_prompt(
         )
     else:
         agent = registry.build_agent(selected, config)
-        result = agent.run(AgentInput(prompt=prompt, parsed=parsed))
+        result = agent.run(AgentInput(prompt=prompt, parsed=parsed, options={"apply": apply, "target": target}))
 
     envelope = ObservationEnvelope(
         prompt=prompt,
@@ -135,6 +137,8 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--runtime", default=None, help="Runtime/log directory")
     parser.add_argument("--agent", default=None, help="Force a specific agent")
     parser.add_argument("--json", action="store_true", help="Emit JSON")
+    parser.add_argument("--apply", action="store_true", help="Apply a scoped local code patch")
+    parser.add_argument("--target", default=None, help="Target file for --apply, relative to --workspace")
     return parser
 
 
@@ -157,6 +161,8 @@ def main(argv: list[str] | None = None) -> int:
             runtime_root=args.runtime,
             agent_name=args.agent,
             json_mode=args.json,
+            apply=args.apply,
+            target=args.target,
         )
         if args.json:
             print(json.dumps(payload, indent=2, ensure_ascii=False))
@@ -182,6 +188,8 @@ def main(argv: list[str] | None = None) -> int:
             workspace=args.workspace,
             runtime_root=args.runtime,
             json_mode=args.json,
+            apply=args.apply,
+            target=args.target,
         )
         if args.json:
             print(json.dumps(payload, indent=2, ensure_ascii=False))
@@ -194,6 +202,8 @@ def main(argv: list[str] | None = None) -> int:
         runtime_root=args.runtime,
         agent_name=args.agent,
         json_mode=args.json,
+        apply=args.apply,
+        target=args.target,
     )
     if args.json:
         print(json.dumps(payload, indent=2, ensure_ascii=False))

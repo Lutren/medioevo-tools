@@ -14,6 +14,21 @@ cd C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\apps\local\wabi-sabi
 .\wabi.cmd e2e-smoke
 ```
 
+## Programar con parche acotado
+
+```powershell
+.\wabi.cmd "crea una funcion que lea un archivo y resuma sus lineas" --apply --target helpers.py --json
+```
+
+Reglas del modo `--apply`:
+
+- `--target` debe ser un `.py` dentro de `--workspace`.
+- No escribe en `.git`, `.env`, `runtime`, `node_modules`, builds, releases,
+  TCG, game bridge ni rutas fuera del workspace.
+- Si el archivo existia, deja backup en `runtime/backups`.
+- Siempre escribe un diff en `runtime/outputs`.
+- Verifica sintaxis con `py_compile`.
+
 ## Instalacion editable
 
 ```powershell

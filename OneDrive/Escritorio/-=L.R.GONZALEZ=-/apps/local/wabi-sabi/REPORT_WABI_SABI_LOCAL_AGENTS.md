@@ -2,7 +2,7 @@
 
 Fecha de cierre: 2026-05-05
 
-Estado: FUNCIONAL
+Estado: FUNCIONAL / PROGRAMACION_LOCAL_ACOTADA
 
 Closure fingerprint operativo:
 `cd2307aeed9e4c2463f4247bb292c16c4d1b4dbe2a21efabc434eba9ae39e06d`
@@ -11,12 +11,16 @@ Closure fingerprint operativo:
 
 Wabi Sabi queda como CLI local-first aislado en `apps/local/wabi-sabi`, con
 router de intencion, registro de agentes, ActionGate, memoria JSONL, wrappers
-Windows, entrypoint instalable `wabi`, documentacion y pruebas minimas.
+Windows, entrypoint instalable `wabi`, documentacion y pruebas minimas. La
+actualizacion del 2026-05-06 agrega programacion local acotada con
+`--apply --target <archivo.py>`.
 
 El sistema funciona sin nube y sin claves. No hace push, deploy, publicacion,
 borrado destructivo ni lectura de secretos. Las acciones automaticas escriben
 artefactos en `runtime/outputs` y registran evidencia append-only en
-`runtime/logs/wabi_events.jsonl`.
+`runtime/logs/wabi_events.jsonl`. El modo `--apply` puede escribir un archivo
+Python dentro del workspace con diff, backup, hashes y `py_compile`; no toca
+rutas externas ni sensibles.
 
 ## Mapa del sistema
 
@@ -27,6 +31,7 @@ artefactos en `runtime/outputs` y registran evidencia append-only en
 - Gate: `wabi_sabi/core/gate.py`
 - Memoria/logs: `wabi_sabi/core/memory.py`
 - ObservationEnvelope: `wabi_sabi/core/observation.py`
+- Programacion acotada: `wabi_sabi/core/programming.py`
 - Agentes: `wabi_sabi/agents/`
 - Tests: `tests/`
 - Docs: `docs/`
@@ -38,7 +43,7 @@ artefactos en `runtime/outputs` y registran evidencia append-only en
 
 | agente | funcion | gate |
 |---|---|---|
-| `programmer` | genera codigo local como artefacto seguro | safe_mode true |
+| `programmer` | genera codigo local como artefacto seguro; con `--apply --target` aplica parches Python acotados | safe_mode true |
 | `debugger` | genera diagnosticos, detecta marcadores y comandos de test | safe_mode true |
 | `researcher` | busca evidencia en docs locales | safe_mode true |
 | `file` | resume/registra tareas de archivo y genera README borrador | safe_mode true |
@@ -199,15 +204,26 @@ wabi "ejecuta diagnostico"
 5. Agregar ruta en `intent_routes` si necesita intencion propia.
 6. Crear test focal en `tests/`.
 
-## Siguiente paso recomendado
+## Actualizacion 2026-05-06 - programacion local acotada
 
-Agregar un modo `--apply` con patch local acotado por ruta y diff previo:
+Se agrego `--apply --target <archivo.py>`:
 
 - solo dentro de `--workspace`;
-- backup o patch reversible;
-- secret/path scan antes de escribir;
-- test focal obligatorio despues de escribir;
-- evento JSONL con hash antes/despues.
+- bloquea rutas sensibles, runtime, vendors, builds, releases, TCG/game bridge
+  y paths externos;
+- crea backup cuando el archivo tenia contenido previo;
+- crea diff en `runtime/outputs`;
+- registra hashes `before/after`;
+- verifica con `py_compile`;
+- deja evento JSONL y ObservationEnvelope.
 
-Ese paso convertiria el carril actual de "artefactos seguros" a "reparacion
-local con escrituras controladas" sin saltar ActionGate.
+Comando de verificacion:
+
+```powershell
+python -m pytest -q
+python -m compileall -q wabi_sabi
+.\wabi.cmd "crea una funcion que lea un archivo y resuma sus lineas" --apply --target runtime_test_helpers.py --json
+```
+
+Para no ensuciar el paquete, los targets de prueba deben apuntar a workspaces
+temporales o retirarse despues de registrar evidencia.

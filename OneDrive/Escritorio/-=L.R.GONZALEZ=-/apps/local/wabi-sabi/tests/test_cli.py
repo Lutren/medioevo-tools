@@ -48,3 +48,21 @@ def test_cli_agents_command(tmp_path):
     payload = json.loads(proc.stdout)
     assert "programmer" in payload["agents"]
     assert "debugger" in payload["agents"]
+
+
+def test_cli_apply_programs_python_file(tmp_path):
+    proc = run_cli(
+        "crea una funcion que lea un archivo y resuma sus lineas",
+        "--apply",
+        "--target",
+        "helpers.py",
+        "--json",
+        workspace=tmp_path,
+        runtime=tmp_path / "runtime",
+    )
+
+    assert proc.returncode == 0, proc.stderr
+    payload = json.loads(proc.stdout)
+    assert payload["action"] == "scoped_code_patch_applied"
+    assert (tmp_path / "helpers.py").exists()
+    assert "summarize_file_lines" in (tmp_path / "helpers.py").read_text(encoding="utf-8")

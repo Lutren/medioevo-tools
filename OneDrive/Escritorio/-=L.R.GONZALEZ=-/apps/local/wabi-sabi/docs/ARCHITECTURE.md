@@ -20,6 +20,7 @@ wabi_sabi/
     gate.py
     memory.py
     observation.py
+    programming.py # parche Python acotado: target, backup, diff, py_compile
     tools.py
   config/
     agents.json
@@ -44,6 +45,17 @@ modelos por defecto y no depende de Ollama como arquitectura. El flujo minimo es
 TaskEnvelope -> ResidueMeter -> ActionGate -> ModelRegistry
              -> RuntimeAdapter -> WitnessLog
 ```
+
+Modo programador con escritura:
+
+```text
+prompt -> parser -> ActionGate -> ProgrammerAgent --apply
+       -> ScopedPatch -> backup/diff -> py_compile -> ObservationEnvelope
+```
+
+La escritura esta limitada a archivos `.py` dentro del workspace. Las rutas de
+runtime, secretos, vendors, builds, releases, TCG/game bridge y rutas externas
+se rechazan antes de escribir.
 
 Reglas actuales:
 
