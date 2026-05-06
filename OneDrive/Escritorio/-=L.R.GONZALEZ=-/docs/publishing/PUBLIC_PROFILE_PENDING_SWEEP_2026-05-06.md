@@ -45,10 +45,12 @@ Latest final sequential host no-write check at `2026-05-06T13:46:30Z` returned
 `JAMMING / BLOCK` because it was run alongside other Python validations; the
 sequential recheck is the durable final host evidence.
 
-Latest continuation host no-write check at `2026-05-06T14:03:02Z` returned
-`MIXTO / REVIEW` with I/O/disk pressure as the dominant axis (`r_io=0.804`,
-`lambda_sat=0.804`). This does not reopen local pending work, but it blocks new
-external targets until a fresh target-specific host check returns `APPROVE`.
+Latest continuation persisted host check at `2026-05-06T14:11:43Z` returned
+`LIMPIO / APPROVE`. A prior no-write check at `14:03:02Z` returned
+`MIXTO / REVIEW`; the target window was synchronized by running the persisted
+host check before ActionGate. The pressure vector still shows I/O/disk as the
+dominant axis (`r_io=0.804`, `lambda_sat=0.804`), so new external work remains
+single-target only.
 
 ## Current Target Truth
 
@@ -163,3 +165,14 @@ Social and optional Gumroad media preparation was completed locally:
   the evidence JSON;
 - no social post, scheduling, account edit, Gumroad media upload, listing
   change or delivery file upload was executed.
+
+## Update - LinkedIn Owner-View Dry-Run
+
+After the host report was persisted as `LIMPIO / APPROVE`, ActionGate dry-run
+for `browser_post` target `linkedin:canonical-owner-view-confirmation` passed:
+
+- decision: `4a3ffd58-458f-4bd7-acc1-7e270cfcc3d0`;
+- scope: authenticated owner-view confirmation only;
+- no LinkedIn page was edited, posted to or verified live;
+- the next live step still requires authenticated browser access and evidence
+  capture for the exact owner-view URL.

@@ -1,6 +1,6 @@
 {
   "schema": "medioevo.comms.agent_state.v1",
-  "generated_at_utc": "2026-05-05T12:00:00Z",
+  "generated_at_utc": "2026-05-06T14:16:00Z",
   "agent_id": "wabi-sabi-sentido-comun",
   "status": "POLICY_ONLY_LEARNING_SOURCE",
   "department_slug": "patterns",
@@ -22,5 +22,5 @@
     "external actions"
   ],
   "current_outbox": null,
-  "last_observation_fingerprint": "CLAUDIO_AGENT_COMMS_BRIDGE_2026-05-05"
+  "last_observation_fingerprint": "WABI_SABI_CODEX_BRIDGE_LOCAL_VALIDATION_2026_05_06"
 }

@@ -58,9 +58,9 @@ Evidencia mas reciente:
 
 | check | resultado |
 |---|---|
-| host gate no-write | `MIXTO / REVIEW` |
-| timestamp | `2026-05-06T14:03:02Z` |
-| razones | presion I/O/disk dominante: `r_io=0.804`, `lambda_sat=0.804`; memory `72.2%` |
+| host gate persistido | `LIMPIO / APPROVE` |
+| timestamp | `2026-05-06T14:11:43Z` |
+| razones | none; presion I/O/disk dominante: `r_io=0.804`, `lambda_sat=0.804`; memory `66.3%` |
 | GitHub profile README | raw README HTTP `200`; contiene `Publication Lanes`, `Three Public Paths`, sponsor link, Gumroad y MEDIOEVO |
 | GitHub funding metadata | `Lutren/Lutren/.github/FUNDING.yml` raw/API HTTP `200`; contiene `Lutren`; sin push |
 | GitHub profile pins | GraphQL devolvio 6 repos publicos/no archivados; sin mutacion de pins |
@@ -69,6 +69,7 @@ Evidencia mas reciente:
 | Gumroad live | Agent Ops y DUAT Templates HTTP `200`; copy de includes/excludes actualizado y verificado el 2026-05-06; media sigue opcional |
 | LinkedIn URL observada desde GitHub | `https://www.linkedin.com/in/luis-ren%C3%A9-gonz%C3%A1lez-l%C3%B3pez-64517b20b/`; HTTP publico devuelve `999`, requiere confirmacion visual autenticada |
 | external actions | website Sponsors route desplegado y verificado; Sponsors high tiers ya cerrado; Gumroad copy-only actualizado; PNGs sociales renderizados localmente; sin LinkedIn, redes, GitHub push, DNS, Gumroad media upload ni subida de artefactos de producto |
+| LinkedIn ActionGate | dry-run `browser_post` `4a3ffd58-458f-4bd7-acc1-7e270cfcc3d0`; no edit, no post, no owner-view probado |
 
 ## Pendientes Por Target
 

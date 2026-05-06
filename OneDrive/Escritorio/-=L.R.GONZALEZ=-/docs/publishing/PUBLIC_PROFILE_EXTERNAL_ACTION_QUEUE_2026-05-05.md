@@ -15,9 +15,9 @@ Latest sweep: `docs/publishing/PUBLIC_PROFILE_PENDING_SWEEP_2026-05-06.md`.
 
 | check | result |
 |---|---|
-| host gate | `MIXTO / REVIEW` after latest sequential no-write check |
-| timestamp | `2026-05-06T14:03:02Z` |
-| reasons | no explicit reasons; pressure vector dominated by I/O/disk `r_io=0.804`, `lambda_sat=0.804`; memory `72.2%` |
+| host gate | `LIMPIO / APPROVE` after latest persisted sequential check |
+| timestamp | `2026-05-06T14:11:43Z` |
+| reasons | none; pressure vector still dominated by I/O/disk `r_io=0.804`, `lambda_sat=0.804`; memory `66.3%` |
 | global workspace secret scan | not clean for broad publication; historical `reported findings: 200` |
 | focused scan over profile-agent docs | prior `count_reported=0`; rerun required before live edit |
 | GitHub profile README | raw README HTTP `200`; contains `Publication Lanes`, `Three Public Paths`, sponsor link, Gumroad and MEDIOEVO |
@@ -28,6 +28,14 @@ Latest sweep: `docs/publishing/PUBLIC_PROFILE_PENDING_SWEEP_2026-05-06.md`.
 | Gumroad live products | Agent Ops and DUAT Templates HTTP `200`; copy-only includes/excludes update completed and verified on 2026-05-06 |
 | LinkedIn URL from GitHub profile | `https://www.linkedin.com/in/luis-ren%C3%A9-gonz%C3%A1lez-l%C3%B3pez-64517b20b/`; public HTTP returned LinkedIn `999`; still requires authenticated owner-view confirmation before edit |
 | external actions in this sweep | GitHub Sponsors high tiers completed earlier; website Sponsors route deployed; Gumroad copy-only updates completed; PNG media assets rendered locally; no LinkedIn, social, GitHub push, DNS, Gumroad media upload or product artifact upload |
+
+Latest LinkedIn preflight:
+
+- `browser_post` dry-run with external authorization and persisted host
+  `APPROVE`: `4a3ffd58-458f-4bd7-acc1-7e270cfcc3d0`;
+- scope: confirm authenticated owner view only, no edit;
+- still blocked for live execution until an authenticated browser/session can
+  prove the owner view and capture post-action evidence.
 
 ## Ready Actions By Target
 

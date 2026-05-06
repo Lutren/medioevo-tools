@@ -21,7 +21,11 @@ The first audit is complete. See:
 - `docs/control/CLAIMS_BOUNDARY.md`
 - `docs/control/ROOT_CLEANUP_INDEX_2026-05-06.md`
 
-Release readiness score: `45 / 100` in `docs/release/RELEASE_READINESS_SCORE.md`; public release is still blocked by secrets, legal review and remaining release gates.
+Release readiness score: `78 / 100` for local lane closure in
+`docs/release/RELEASE_READINESS_SCORE.md`; targets already published and
+verified remain limited to their evidence packets. Any new public release,
+push, social post, Gumroad media upload or deploy still requires a fresh
+target-specific ActionGate, focused scans and post-action verification.
 
 ## Layer Map
 

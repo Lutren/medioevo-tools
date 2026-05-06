@@ -85,13 +85,13 @@ At the start of every session:
 1. Inspect this root: `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-`.
 2. Read this file.
 3. Read the current audit docs:
-   - `AUDIT_REPO_TREE.md`
+   - `docs/control/AUDIT_REPO_TREE.md`
    - `PRODUCT_MAP.md`
    - `VISIBILITY_MATRIX.md`
    - `RISK_REGISTER.md`
-   - `SECRET_SCAN_REPORT.md`
+   - `docs/security/SECRET_SCAN_REPORT.md`
    - `DUPLICATES_AND_DEAD_CODE.md`
-   - `RELEASE_READINESS_SCORE.md`
+   - `docs/release/RELEASE_READINESS_SCORE.md`
 4. If working inside `-=MEDIOEVO=-\-=LIBROS\claudio`, also read:
    - `CLAUDE.md`
    - `PENDIENTES_MASTER.md`
