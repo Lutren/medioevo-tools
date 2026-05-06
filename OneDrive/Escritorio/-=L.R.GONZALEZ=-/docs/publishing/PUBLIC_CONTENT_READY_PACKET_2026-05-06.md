@@ -31,6 +31,19 @@ SVG sources.
 | `docs/publishing/assets/social/2026-05-06/evidence-before-action-card.png` | `1200x630` | `46239` | `54a21965e55469652612b6b3558ee0a803350a10c98b87cf52582aa248ad7579` |
 | `docs/publishing/assets/social/2026-05-06/sponsors-high-tier-card.png` | `1200x630` | `51745` | `464fcc8e432921dae7b55c2bc691f75db7a279460c1252366fc978827ff22de0` |
 
+Validation:
+
+- JSON evidence parses with `python -m json.tool`.
+- COMMS validates with `status=PASS errors=0`.
+- SVG XML parse passed and PNG header dimensions verify as `1200x630` for all
+  four exports.
+- Focused secret scans over this packet, the social calendar, the remaining
+  gated workpack, the JSON evidence as artifact and the four PNG artifacts
+  reported `count_reported=0`.
+- Scanning the JSON evidence as a raw `--path` is intentionally blocked by the
+  release scanner denylist for `qa_artifacts`; scanning it as `--artifact`
+  reports `count_reported=0`.
+
 ## Ready Captions
 
 ### Evidence Gate
