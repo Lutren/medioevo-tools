@@ -1,6 +1,6 @@
 {
   "schema": "medioevo.pending_review.v1",
-  "generated_at": "2026-05-06T10:41:01+00:00",
+  "generated_at": "2026-05-06T10:45:46+00:00",
   "date": "2026-05-06",
   "root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
   "policy": {
@@ -10,27 +10,23 @@
     "curador": "unknown sources and residues still require curador_preflight before use or discard."
   },
   "active_markdown": {
-    "raw_open": 85,
-    "dedup_open": 85,
+    "raw_open": 19,
+    "dedup_open": 19,
     "by_priority": {
       "P1": 10,
       "P2": 6,
-      "UNCLASSIFIED": 69
+      "UNCLASSIFIED": 3
     },
     "by_lane": {
-      "commercial": 3,
-      "general": 1,
-      "open_source": 2,
-      "private_rpg": 1,
-      "research_claims": 1,
-      "runtime_claudio": 75,
+      "commercial": 2,
+      "runtime_claudio": 15,
       "wave_fc": 2
     },
     "by_blocker": {
-      "external_or_gated": 33,
-      "host_or_heavy": 42,
-      "legal_or_human": 5,
-      "private_boundary": 5
+      "external_or_gated": 7,
+      "host_or_heavy": 6,
+      "legal_or_human": 3,
+      "private_boundary": 3
     },
     "top_items": [
       {
@@ -171,186 +167,18 @@
       },
       {
         "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "external_or_gated",
-        "item": "Mantener publicos: metodo, interfaces, schemas, CLIs, checklists, plantillas, demos sinteticos, articulos low-claim, rutas a GitHub/Gumroad y Sponsors.",
-        "first_evidence": "docs/pending/PUBLIC_PROFILE_NETWORK_PENDING_2026-05-05.md:86",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "general",
+        "lane": "runtime_claudio",
         "blocker": "private_boundary",
-        "item": "Rotate exposed secrets if any are found in public artifacts - secret rotation remains manual/outside tracker; no public artifact was generated.",
-        "first_evidence": "docs/security/SECURITY_CHECKLIST.md:12",
+        "item": "**REVIEW** Configurar cualquier conector externo real solo con destino allowlisted, credenciales fuera del repo, secret scan focal y ActionGate especifico.",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:672",
         "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
-        "lane": "open_source",
-        "blocker": "legal_or_human",
-        "item": "Destination repo/package name is selected.",
-        "first_evidence": "packages/open-dev/obs-safe-integration-kit/RELEASE_CHECKLIST.md:13",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "open_source",
-        "blocker": "legal_or_human",
-        "item": "ActionGate and host gate approve the exact external action.",
-        "first_evidence": "packages/open-dev/obs-safe-integration-kit/RELEASE_CHECKLIST.md:14",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "private_rpg",
-        "blocker": "private_boundary",
-        "item": "Mantener privados: formulas exactas, thresholds, prompts, runtime local, datasets reales, DUAT/GEODIA privado, GEODIA Social Observatory con datos reales, libros completos no aprobados, RPG/TCG, secretos, sesiones, credenciales, playbooks premium y soporte privado.",
-        "first_evidence": "docs/pending/PUBLIC_PROFILE_NETWORK_PENDING_2026-05-05.md:89",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "research_claims",
+        "lane": "runtime_claudio",
         "blocker": "external_or_gated",
-        "item": "No publicar claims de seguridad garantizada, anti-hallucination total, prediccion social, diagnostico medico, nueva fisica validada ni autonomia externa sin revision humana.",
-        "first_evidence": "docs/pending/PUBLIC_PROFILE_NETWORK_PENDING_2026-05-05.md:93",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
-        "blocker": "host_or_heavy",
-        "item": "Mejor TTS: usar Edge TTS (es-MX-JorgeNeural) en vez de SAPI",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/CLAUDIO_EVOLUTION.md:19",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
-        "blocker": "host_or_heavy",
-        "item": "Selector de voz en la UI (dropdown con voces disponibles)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/CLAUDIO_EVOLUTION.md:20",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
-        "blocker": "host_or_heavy",
-        "item": "Velocidad de voz ajustable (slider)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/CLAUDIO_EVOLUTION.md:21",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
-        "blocker": "host_or_heavy",
-        "item": "Tono ajustable",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/CLAUDIO_EVOLUTION.md:22",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
-        "blocker": "host_or_heavy",
-        "item": "Opcion de voz masculina/femenina",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/CLAUDIO_EVOLUTION.md:23",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
-        "blocker": "host_or_heavy",
-        "item": "Indicador visual cuando habla (icono animado)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/CLAUDIO_EVOLUTION.md:24",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
-        "blocker": "host_or_heavy",
-        "item": "Instalar Open Interpmuyter",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/CLAUDIO_EVOLUTION.md:27",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
-        "blocker": "host_or_heavy",
-        "item": "Claudio puede cmuyar architú Python",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/CLAUDIO_EVOLUTION.md:28",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
-        "blocker": "host_or_heavy",
-        "item": "Claudio puede ejecutar scripts",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/CLAUDIO_EVOLUTION.md:29",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
-        "blocker": "host_or_heavy",
-        "item": "Claudio puede cmuyar documentos (PDF, DOCX)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/CLAUDIO_EVOLUTION.md:30",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
-        "blocker": "host_or_heavy",
-        "item": "Claudio puede cmuyar graficas (matplotlib)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/CLAUDIO_EVOLUTION.md:31",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
-        "blocker": "host_or_heavy",
-        "item": "Claudio puede manipular architú del sistema",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/CLAUDIO_EVOLUTION.md:32",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
-        "blocker": "host_or_heavy",
-        "item": "Sandbox de seguridad (confirmacion para acciones peligrosas)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/CLAUDIO_EVOLUTION.md:33",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
-        "blocker": "host_or_heavy",
-        "item": "Indexar los 35 libros en ChromaDB",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/CLAUDIO_EVOLUTION.md:36",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
-        "blocker": "host_or_heavy",
-        "item": "Claudio busca citas exactas de los libros",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/CLAUDIO_EVOLUTION.md:37",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
-        "blocker": "host_or_heavy",
-        "item": "Claudio muysponde con muyfemuyncias pmuycisas",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/CLAUDIO_EVOLUTION.md:38",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
-        "blocker": "host_or_heavy",
-        "item": "Actualizacion automatica al agmuygar nuevo contenido",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/CLAUDIO_EVOLUTION.md:39",
+        "item": "El push selectivo sigue pendiente porque el repo completo esta extremadamente sucio; el bloqueo ya no es tecnico, es de higiene git.",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2662",
         "occurrences": 1
       }
     ]

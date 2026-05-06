@@ -4,8 +4,8 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 
 ## Counts
 
-- Active markdown raw open items: `85`.
-- Active markdown deduplicated open items: `85`.
+- Active markdown raw open items: `19`.
+- Active markdown deduplicated open items: `19`.
 - Claudio `PENDIENTES_MASTER.md` raw open items: `19`.
 - Claudio deduplicated open items: `19`.
 
@@ -15,28 +15,24 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 | --- | --- |
 | P1 | 10 |
 | P2 | 6 |
-| UNCLASSIFIED | 69 |
+| UNCLASSIFIED | 3 |
 
 ## Active Markdown By Lane
 
 | lane | dedup_count |
 | --- | --- |
-| commercial | 3 |
-| general | 1 |
-| open_source | 2 |
-| private_rpg | 1 |
-| research_claims | 1 |
-| runtime_claudio | 75 |
+| commercial | 2 |
+| runtime_claudio | 15 |
 | wave_fc | 2 |
 
 ## Active Markdown By Blocker
 
 | blocker | dedup_count |
 | --- | --- |
-| external_or_gated | 33 |
-| host_or_heavy | 42 |
-| legal_or_human | 5 |
-| private_boundary | 5 |
+| external_or_gated | 7 |
+| host_or_heavy | 6 |
+| legal_or_human | 3 |
+| private_boundary | 3 |
 
 ## Claudio Master By Priority
 
@@ -76,14 +72,8 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 | P2 | runtime_claudio | host_or_heavy | **P2** Instalar dependencias faltantes en Ubuntu WSL (`live-build/lb`, `qemu-system-x86_64`, `xorriso`) y ejecutar `runtime/claudio_os_build/staging/claudio_os_blueprint/BUILD_IN_WSL.sh` para producir la ISO. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1934 | 1 |
 | P2 | runtime_claudio | host_or_heavy | **P2** Bootear ISO en QEMU antes de cualquier USB/PC2. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1935 | 1 |
 | UNCLASSIFIED | commercial | external_or_gated | Sincronizar dashboard de Gumroad con el catalogo local ahora que la autenticacion API ya responde. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2766 | 1 |
-| UNCLASSIFIED | commercial | external_or_gated | Mantener publicos: metodo, interfaces, schemas, CLIs, checklists, plantillas, demos sinteticos, articulos low-claim, rutas a GitHub/Gumroad y Sponsors. | docs/pending/PUBLIC_PROFILE_NETWORK_PENDING_2026-05-05.md:86 | 1 |
-| UNCLASSIFIED | general | private_boundary | Rotate exposed secrets if any are found in public artifacts - secret rotation remains manual/outside tracker; no public artifact was generated. | docs/security/SECURITY_CHECKLIST.md:12 | 1 |
-| UNCLASSIFIED | open_source | legal_or_human | Destination repo/package name is selected. | packages/open-dev/obs-safe-integration-kit/RELEASE_CHECKLIST.md:13 | 1 |
-| UNCLASSIFIED | open_source | legal_or_human | ActionGate and host gate approve the exact external action. | packages/open-dev/obs-safe-integration-kit/RELEASE_CHECKLIST.md:14 | 1 |
-| UNCLASSIFIED | private_rpg | private_boundary | Mantener privados: formulas exactas, thresholds, prompts, runtime local, datasets reales, DUAT/GEODIA privado, GEODIA Social Observatory con datos reales, libros completos no aprobados, RPG/TCG, secretos, sesiones, credenciales, playbooks premium y soporte privado. | docs/pending/PUBLIC_PROFILE_NETWORK_PENDING_2026-05-05.md:89 | 1 |
-| UNCLASSIFIED | research_claims | external_or_gated | No publicar claims de seguridad garantizada, anti-hallucination total, prediccion social, diagnostico medico, nueva fisica validada ni autonomia externa sin revision humana. | docs/pending/PUBLIC_PROFILE_NETWORK_PENDING_2026-05-05.md:93 | 1 |
-| UNCLASSIFIED | runtime_claudio | host_or_heavy | Mejor TTS: usar Edge TTS (es-MX-JorgeNeural) en vez de SAPI | -=MEDIOEVO=-/-=LIBROS/CLAUDIO_EVOLUTION.md:19 | 1 |
-| UNCLASSIFIED | runtime_claudio | host_or_heavy | Selector de voz en la UI (dropdown con voces disponibles) | -=MEDIOEVO=-/-=LIBROS/CLAUDIO_EVOLUTION.md:20 | 1 |
+| UNCLASSIFIED | runtime_claudio | private_boundary | **REVIEW** Configurar cualquier conector externo real solo con destino allowlisted, credenciales fuera del repo, secret scan focal y ActionGate especifico. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:672 | 1 |
+| UNCLASSIFIED | runtime_claudio | external_or_gated | El push selectivo sigue pendiente porque el repo completo esta extremadamente sucio; el bloqueo ya no es tecnico, es de higiene git. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2662 | 1 |
 
 ## Kairos Fastlane
 
