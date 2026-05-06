@@ -22,6 +22,7 @@ Status: `BASELINE_REQUIREMENTS`
 | SEC-014 | Prompt injection patterns produce `REVIEW`, not execution. |
 | SEC-015 | Private Argus/game/TCG/editorial sources cannot enter public bundles. |
 | SEC-016 | Public/browser code must not include real tokens, cookies, profiles or account data. |
+| SEC-017 | COMMS handoff must cite SourceSnapshot hashes and gates, not raw web-origin instructions. |
 
 ## Domain Permission Model
 
@@ -83,3 +84,15 @@ MVP implementation:
 - each SourceSnapshot includes `ghostgate`;
 - `ghostgate.memory_allowed=false` whenever the snapshot has external URL,
   hidden DOM, prompt-injection, form/login/download/script or secret-like risk.
+
+## COMMS Safety
+
+MVP implementation:
+
+- no COMMS write occurs by default;
+- `--comms-outbox` must be supplied explicitly;
+- emitted message schema is `ai_browser.comms.source_snapshot_handoff.v1`;
+- message contains SourceSnapshot hash/fingerprint, `ObservationEnvelope`,
+  `ActionGate`, `GhostGate` and artifact hashes;
+- message sets `web_content_included=false`;
+- risky snapshots request human review before memory, canon or external action.

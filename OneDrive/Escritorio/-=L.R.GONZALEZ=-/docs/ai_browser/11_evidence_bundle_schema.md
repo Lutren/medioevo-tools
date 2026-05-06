@@ -9,6 +9,7 @@ The prototype emits a bundle with:
 - `ghostgate`;
 - `witness_log_event`;
 - readable text artifact when `--bundle-dir` is used.
+- optional hash-only COMMS message when `--comms-outbox` is used.
 
 ## SourceSnapshot Contract
 
@@ -108,6 +109,36 @@ Required top-level fields:
 ```
 
 The `event_hash` is computed over canonical JSON without the `event_hash` field.
+
+## COMMS Handoff Minimum
+
+The CLI emits this only when `--comms-outbox` is explicitly supplied:
+
+```json
+{
+  "schema": "ai_browser.comms.source_snapshot_handoff.v1",
+  "created_at_utc": "2026-05-06T00:00:00Z",
+  "from": "ai-browser-secure",
+  "to": "wabi-sabi-sentido-comun",
+  "intent": "handoff_source_snapshot",
+  "status": "APPROVE",
+  "source_snapshot": {
+    "hash": "sha256",
+    "fingerprint": "AI_BROWSER_SECURE_OBS_2026-05-06_<12hex>",
+    "path_hint": "source_snapshot.json"
+  },
+  "observation_envelope": {},
+  "action_gate": "APPROVE",
+  "ghostgate": {},
+  "evidence_bundle": {},
+  "web_content_included": false,
+  "requested_next_action": "consume_read_only_evidence_only",
+  "message_hash": "sha256"
+}
+```
+
+The message intentionally cites evidence hashes and gate status instead of
+pasting raw or hidden web-origin text into COMMS.
 
 ## Domain Policy Minimum
 

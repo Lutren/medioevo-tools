@@ -19,7 +19,7 @@ Status: `DONE_IN_THIS_PASS`
 
 ## Phase 1 - Harden Local Extractor
 
-Status: `PARTIAL_DONE_LOCAL`
+Status: `MOSTLY_DONE_LOCAL`
 
 Done:
 
@@ -29,11 +29,11 @@ Done:
 - Enforce domain policy for `http(s)` remote stubs.
 - Block unsafe domain policy permissions in MVP.
 - Write `ghostgate.json` inside exported evidence bundles.
+- Add opt-in COMMS message writer for snapshot handoff.
+- Add fixture corpus with benign, hidden-DOM, phishing and fake-source samples.
 
 Still pending:
 
-- Add COMMS message writer for snapshot handoff.
-- Add fixture corpus with benign, hidden-DOM, phishing and fake-source samples.
 - Add secret-scan integration for evidence bundles.
 
 ## Phase 2 - Controlled Fetch Engine
@@ -62,7 +62,7 @@ Status: `REVIEW`
 
 Status: `REVIEW`
 
-- COMMS packet emission.
+- COMMS packet emission to real agent lanes remains opt-in and gated.
 - Wabi-Sabi control node review.
 - Department handoffs.
 - EvidenceGraph query interface.

@@ -95,3 +95,25 @@ download, browse autonomously or modify external state by default.
 If the result is handed to another agent, the COMMS message must cite the
 SourceSnapshot hash and must not paste web-origin instructions as trusted
 instructions.
+
+## COMMS Handoff Message
+
+Prototype CLI support:
+
+```powershell
+python tools\ai_browser\snapshot_url.py --html-file .\sample.html --comms-outbox .\COMMS\outbox\ai-browser-secure.jsonl --pretty
+```
+
+Rules:
+
+- No COMMS write occurs unless `--comms-outbox` is supplied.
+- Message schema is `ai_browser.comms.source_snapshot_handoff.v1`.
+- Message includes `ObservationEnvelope`, `ActionGate`, `GhostGate`,
+  SourceSnapshot hash, fingerprint and evidence artifact hashes.
+- Message sets `web_content_included=false`.
+- Message allowed operations are read-only evidence operations.
+- Message blocked operations mirror the browser blocked defaults:
+  login, credentials, forms, downloads, JS, persistent cookies, uploads,
+  payments, external navigation, browser profile reuse and mass scraping.
+- If `GhostGate` is `REVIEW` or `BLOCK`, requested next action is human review
+  before memory, canon or external action.

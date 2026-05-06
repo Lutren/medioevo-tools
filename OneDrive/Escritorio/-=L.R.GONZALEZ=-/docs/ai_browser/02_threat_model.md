@@ -37,6 +37,7 @@ Status: `MANDATORY_BASELINE`
 | Automatic actions | Purchases, posts, account changes | ActionGate before every action; no autonomous navigation | No action runtime in MVP |
 | Massive scraping | Legal/ethical/resource risk | Per-domain quota, robots/terms review, gate | Domain policy schema exists; scraping loop not implemented; BLOCK |
 | Memory contamination | Web text becomes durable false canon | GhostGate/memory gate before persistence; source labels and hashes | GhostGate decision implemented in SourceSnapshot |
+| COMMS contamination | Raw web instruction text leaks into agent handoff | Hash-only COMMS handoff; no raw web content; `web_content_included=false` | Implemented behind explicit `--comms-outbox` |
 | Fake sources | Hallucinated or spoofed provenance | SourceSnapshot hash, domain allowlist, evidence graph, external verification | Local hash and domain policy gate implemented; factual verification pending |
 | Hidden DOM attacks | Invisible instructions or poison text | Extract hidden DOM separately; flag hidden instructions | Implemented |
 | Web instructions contradict user/system | Agent follows attacker text | Authority order enforced: user/system > browser data | Policy specified and CLI separates findings |
@@ -72,5 +73,10 @@ licensed, current, non-malicious or safe to interact with.
 - `GhostGate` memory decisions are generated per snapshot and block memory/canon
   persistence when prompt injection, hidden DOM, external URL, forms, downloads
   or secret-like content are present.
+- COMMS handoff emission is opt-in and hash-only; it carries
+  `ObservationEnvelope`, `ActionGate`, `GhostGate` and artifact hashes without
+  copying raw web-origin instructions into agent messages.
+- Regression fixtures now cover benign pages, hidden DOM injection, phishing
+  login fields and fake-source/download/script patterns.
 - The CLI can validate an existing `source_snapshot.json` without adding a
   heavy JSON-schema dependency.

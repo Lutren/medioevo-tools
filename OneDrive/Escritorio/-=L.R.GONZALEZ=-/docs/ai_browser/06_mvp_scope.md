@@ -21,6 +21,9 @@ Status: `MVP_DEFINED_AND_PARTIAL_PROTOTYPE_CREATED`
 - Validate an existing `source_snapshot.json` without new dependencies.
 - Gate remote URL stubs with both ActionGate and domain policy.
 - Emit `GhostGate` memory decision for every snapshot.
+- Optionally emit a hash-only COMMS handoff message when `--comms-outbox` is
+  explicitly supplied.
+- Keep a synthetic risk fixture corpus for regression tests.
 
 ## MVP Must Not Do
 
@@ -43,6 +46,7 @@ Status: `MVP_DEFINED_AND_PARTIAL_PROTOTYPE_CREATED`
 - `tests/test_source_snapshot.py`
 - `schemas/domain_policy.schema.json`
 - `schemas/ghostgate_memory.schema.json`
+- `tests/fixtures/ai_browser/*.html`
 
 ## CLI Examples
 
@@ -68,6 +72,15 @@ Validate snapshot:
 python tools\ai_browser\snapshot_url.py --validate-snapshot .\source_snapshot.json --pretty
 ```
 
+Local COMMS handoff, opt-in only:
+
+```powershell
+python tools\ai_browser\snapshot_url.py --html-file .\sample.html --bundle-dir .\qa_artifacts\ai_browser\sample --comms-outbox .\COMMS\outbox\ai-browser-secure.jsonl --pretty
+```
+
+The COMMS message cites hashes, `ObservationEnvelope`, `ActionGate` and
+`GhostGate`. It does not include raw web-origin text.
+
 ## Closure Criteria For MVP
 
 - Unit tests pass.
@@ -76,3 +89,4 @@ python tools\ai_browser\snapshot_url.py --validate-snapshot .\source_snapshot.js
 - Remote fetch remains stubbed.
 - Docs state blocked actions explicitly.
 - Domain policy and GhostGate tests pass.
+- COMMS handoff writer remains opt-in and hash-only.

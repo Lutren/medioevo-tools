@@ -85,4 +85,7 @@ These components were found in the active workspace.
 - `docs/ai_browser/*.md`
 - `tools/ai_browser/snapshot_url.py`
 - `schemas/source_snapshot.schema.json`
+- `schemas/domain_policy.schema.json`
+- `schemas/ghostgate_memory.schema.json`
 - `tests/test_source_snapshot.py`
+- `tests/fixtures/ai_browser/*.html`

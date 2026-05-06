@@ -13,6 +13,8 @@ Date: `2026-05-06`
 | Memory contamination | Every snapshot emits `ghostgate`; risky snapshots set `memory_allowed=false` | `schemas/ghostgate_memory.schema.json`, tests |
 | Source validation drift | CLI can validate an existing `source_snapshot.json` and verify WitnessLog event hash | `--validate-snapshot`, `test_validate_source_snapshot_reports_ok_for_generated_snapshot` |
 | Evidence bundle incomplete | Bundle now includes `ghostgate.json` as an artifact | `write_bundle_dir`, CLI bundle test |
+| Agent handoff contamination | COMMS writer is opt-in and emits hash-only handoff with `web_content_included=false` | `--comms-outbox`, `test_comms_handoff_message_is_hash_only_and_append_only` |
+| Regression blind spots | Synthetic fixture corpus covers benign, hidden DOM injection, phishing login and fake source/download/script risks | `tests/fixtures/ai_browser/*.html`, `test_fixture_corpus_covers_expected_risks` |
 
 ## Still Blocked By Design
 
@@ -35,5 +37,5 @@ python -m pytest tests\test_source_snapshot.py -q
 Expected result after this pass:
 
 ```text
-7 passed
+9 passed
 ```

@@ -7,6 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = ROOT / "tools" / "ai_browser" / "snapshot_url.py"
+FIXTURES = ROOT / "tests" / "fixtures" / "ai_browser"
 
 
 def load_module():
@@ -168,10 +169,21 @@ def test_cli_writes_evidence_bundle(tmp_path):
     html = "<html><body><main>Local source text.</main></body></html>"
     source = tmp_path / "local.html"
     bundle_dir = tmp_path / "bundle"
+    comms_outbox = tmp_path / "comms" / "outbox.jsonl"
     source.write_text(html, encoding="utf-8")
 
     result = subprocess.run(
-        [sys.executable, str(SCRIPT), "--html-file", str(source), "--bundle-dir", str(bundle_dir), "--pretty"],
+        [
+            sys.executable,
+            str(SCRIPT),
+            "--html-file",
+            str(source),
+            "--bundle-dir",
+            str(bundle_dir),
+            "--comms-outbox",
+            str(comms_outbox),
+            "--pretty",
+        ],
         cwd=ROOT,
         text=True,
         capture_output=True,
@@ -184,6 +196,14 @@ def test_cli_writes_evidence_bundle(tmp_path):
     assert (bundle_dir / "readable_text.txt").read_text(encoding="utf-8").strip() == "Local source text."
     assert (bundle_dir / "ghostgate.json").exists()
     assert (bundle_dir / "witness_log.jsonl").exists()
+    assert (bundle_dir / "comms_message.json").exists()
+    assert comms_outbox.exists()
+    comms_lines = comms_outbox.read_text(encoding="utf-8").strip().splitlines()
+    assert len(comms_lines) == 1
+    comms_message = json.loads(comms_lines[0])
+    assert comms_message["schema"] == "ai_browser.comms.source_snapshot_handoff.v1"
+    assert comms_message["web_content_included"] is False
+    assert comms_message["source_snapshot"]["hash"] == payload["source_snapshot"]["snapshot_hash"]
 
 
 def test_validate_source_snapshot_reports_ok_for_generated_snapshot(tmp_path):
@@ -200,3 +220,49 @@ def test_validate_source_snapshot_reports_ok_for_generated_snapshot(tmp_path):
     assert validation["ok"] is True
     assert validation["ghostgate"] == "APPROVE"
     assert validation["errors"] == []
+
+
+def test_fixture_corpus_covers_expected_risks():
+    module = load_module()
+
+    benign = module.build_bundle(html_file=FIXTURES / "benign.html")["source_snapshot"]
+    assert benign["security"]["risk_flags"] == []
+    assert benign["ghostgate"]["decision"] == "APPROVE"
+
+    hidden = module.build_bundle(html_file=FIXTURES / "hidden_prompt_injection.html")["source_snapshot"]
+    assert "hidden_dom_text_present" in hidden["security"]["risk_flags"]
+    assert "hidden_prompt_injection_pattern" in hidden["security"]["risk_flags"]
+    assert hidden["ghostgate"]["decision"] == "REVIEW"
+    assert "Ignore previous system instructions" not in hidden["extraction"]["readable_text"]
+
+    phishing = module.build_bundle(html_file=FIXTURES / "phishing_login.html")["source_snapshot"]
+    assert "forms_or_inputs_present_blocked" in phishing["security"]["risk_flags"]
+    assert "login_or_password_field_present" in phishing["security"]["risk_flags"]
+    assert phishing["source"]["credentials_used"] is False
+
+    fake_source = module.build_bundle(html_file=FIXTURES / "fake_source.html")["source_snapshot"]
+    assert "script_tags_present_js_not_executed" in fake_source["security"]["risk_flags"]
+    assert "download_link_present_quarantined" in fake_source["security"]["risk_flags"]
+    assert "meta_refresh_present_blocked" in fake_source["security"]["risk_flags"]
+    assert "source authorship and factual correctness are not verified by this snapshot" in fake_source["classification"]["INCOGNITA"]
+
+
+def test_comms_handoff_message_is_hash_only_and_append_only(tmp_path):
+    module = load_module()
+    bundle = module.build_bundle(html_file=FIXTURES / "hidden_prompt_injection.html")
+    message = module.make_comms_message(bundle)
+    outbox = tmp_path / "COMMS" / "outbox" / "ai-browser-secure.jsonl"
+
+    path = module.append_comms_message(outbox, message)
+
+    assert path == str(outbox)
+    lines = outbox.read_text(encoding="utf-8").strip().splitlines()
+    assert len(lines) == 1
+    stored = json.loads(lines[0])
+    assert stored["schema"] == "ai_browser.comms.source_snapshot_handoff.v1"
+    assert stored["status"] == "REVIEW"
+    assert stored["source_snapshot"]["hash"] == bundle["source_snapshot"]["snapshot_hash"]
+    assert stored["ghostgate"]["memory_allowed"] is False
+    assert stored["web_content_included"] is False
+    assert "observation_envelope" in stored
+    assert "Ignore previous system instructions" not in json.dumps(stored)
