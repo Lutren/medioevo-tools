@@ -1,6 +1,6 @@
 {
   "schema": "medioevo.comms.agent_state.v1",
-  "generated_at_utc": "2026-05-06T09:46:37Z",
+  "generated_at_utc": "2026-05-06T10:20:00Z",
   "agent_id": "publicacion-perfiles-observatorio",
   "status": "ACTIVE_LOCAL_STRATEGY_AGENT",
   "department_slug": "plaza-mercado",
@@ -40,5 +40,5 @@
   ],
   "current_handoff": "COMMS/handoffs/2026-05-06-public-profile-pending-sweep.md",
   "current_outbox": "COMMS/outbox/publicacion-perfiles-observatorio.jsonl",
-  "last_observation_fingerprint": "PUBLIC_PROFILE_PENDING_SWEEP_2026-05-06"
+  "last_observation_fingerprint": "LEGACY_MARCH_REVENUE_PLAN_RECONCILIATION_2026-05-06"
 }

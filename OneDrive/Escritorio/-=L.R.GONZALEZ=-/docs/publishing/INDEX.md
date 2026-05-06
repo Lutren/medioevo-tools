@@ -59,3 +59,6 @@ as blanket approval for more repos, Gumroad products, deploys or social posts.
 - `docs\publishing\GUMROAD_CLAUDIO_SOFTWARE_DRAFTS_RECHECK_2026-05-06.md`
   records that Claudio software Gumroad URLs are live by direct link and need
   safe founder-access copy before any broader checkout/promotion.
+- `docs\publishing\LEGACY_MARCH_REVENUE_PLAN_RECONCILIATION_2026-05-06.md`
+  records that March 2026 Gumroad/KDP/social urgency checklists were converted
+  to legacy-gated references, not executed.
