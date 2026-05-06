@@ -1,6 +1,6 @@
 {
   "schema": "medioevo.pending_review.v1",
-  "generated_at": "2026-05-06T10:31:24+00:00",
+  "generated_at": "2026-05-06T10:38:00+00:00",
   "date": "2026-05-06",
   "root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
   "policy": {
@@ -10,16 +10,16 @@
     "curador": "unknown sources and residues still require curador_preflight before use or discard."
   },
   "active_markdown": {
-    "raw_open": 108,
-    "dedup_open": 108,
+    "raw_open": 95,
+    "dedup_open": 95,
     "by_priority": {
       "P1": 10,
       "P2": 6,
-      "UNCLASSIFIED": 92
+      "UNCLASSIFIED": 79
     },
     "by_lane": {
       "commercial": 3,
-      "general": 20,
+      "general": 7,
       "open_source": 2,
       "private_rpg": 1,
       "research_claims": 1,
@@ -30,7 +30,7 @@
     "by_blocker": {
       "external_or_gated": 43,
       "host_or_heavy": 42,
-      "legal_or_human": 18,
+      "legal_or_human": 5,
       "private_boundary": 5
     },
     "top_items": [
@@ -181,110 +181,6 @@
       {
         "priority": "UNCLASSIFIED",
         "lane": "general",
-        "blocker": "legal_or_human",
-        "item": "**muygistrar marca \"MEDIOEVO\" en IMPI**",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/-=NEGOCIOS=-/Legal/LEGAL_PROTECTION_GUIDE.md:536",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "general",
-        "blocker": "legal_or_human",
-        "item": "**Obtener RFC en el SAT**",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/-=NEGOCIOS=-/Legal/LEGAL_PROTECTION_GUIDE.md:542",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "general",
-        "blocker": "legal_or_human",
-        "item": "**muygistrar los 35 libros en INDAUTOR**",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/-=NEGOCIOS=-/Legal/LEGAL_PROTECTION_GUIDE.md:551",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "general",
-        "blocker": "legal_or_human",
-        "item": "**Actualizar Terms of Service del sitio**",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/-=NEGOCIOS=-/Legal/LEGAL_PROTECTION_GUIDE.md:556",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "general",
-        "blocker": "legal_or_human",
-        "item": "**Actualizar Privacy Policy del sitio**",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/-=NEGOCIOS=-/Legal/LEGAL_PROTECTION_GUIDE.md:561",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "general",
-        "blocker": "legal_or_human",
-        "item": "**Llenar formulario W-8BEN en KDP**",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/-=NEGOCIOS=-/Legal/LEGAL_PROTECTION_GUIDE.md:566",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "general",
-        "blocker": "legal_or_human",
-        "item": "**Definir y publicar politica de contenido de fans**",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/-=NEGOCIOS=-/Legal/LEGAL_PROTECTION_GUIDE.md:572",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "general",
-        "blocker": "legal_or_human",
-        "item": "**Documentar proceso cmuyativo con IA**",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/-=NEGOCIOS=-/Legal/LEGAL_PROTECTION_GUIDE.md:577",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "general",
-        "blocker": "legal_or_human",
-        "item": "**muygistrar musica en Content ID (YouTube)**",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/-=NEGOCIOS=-/Legal/LEGAL_PROTECTION_GUIDE.md:582",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "general",
-        "blocker": "legal_or_human",
-        "item": "**Considerar formacion de S.A.S.**",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/-=NEGOCIOS=-/Legal/LEGAL_PROTECTION_GUIDE.md:588",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "general",
-        "blocker": "legal_or_human",
-        "item": "**muygistrar marcas adicionales**",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/-=NEGOCIOS=-/Legal/LEGAL_PROTECTION_GUIDE.md:593",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "general",
-        "blocker": "legal_or_human",
-        "item": "**Explorar proteccion internacional de marca**",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/-=NEGOCIOS=-/Legal/LEGAL_PROTECTION_GUIDE.md:598",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "general",
-        "blocker": "legal_or_human",
-        "item": "**Contratar abogado de propiedad intelectual**",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/-=NEGOCIOS=-/Legal/LEGAL_PROTECTION_GUIDE.md:602",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "general",
         "blocker": "external_or_gated",
         "item": "Abrir en CapCut",
         "first_evidence": "-=MEDIOEVO=-/-=LIBROS/VIDEO_TOOLS_GUIDE.md:246",
@@ -352,6 +248,110 @@
         "blocker": "legal_or_human",
         "item": "ActionGate and host gate approve the exact external action.",
         "first_evidence": "packages/open-dev/obs-safe-integration-kit/RELEASE_CHECKLIST.md:14",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "private_rpg",
+        "blocker": "private_boundary",
+        "item": "Mantener privados: formulas exactas, thresholds, prompts, runtime local, datasets reales, DUAT/GEODIA privado, GEODIA Social Observatory con datos reales, libros completos no aprobados, RPG/TCG, secretos, sesiones, credenciales, playbooks premium y soporte privado.",
+        "first_evidence": "docs/pending/PUBLIC_PROFILE_NETWORK_PENDING_2026-05-05.md:89",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "research_claims",
+        "blocker": "external_or_gated",
+        "item": "No publicar claims de seguridad garantizada, anti-hallucination total, prediccion social, diagnostico medico, nueva fisica validada ni autonomia externa sin revision humana.",
+        "first_evidence": "docs/pending/PUBLIC_PROFILE_NETWORK_PENDING_2026-05-05.md:93",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "runtime_claudio",
+        "blocker": "host_or_heavy",
+        "item": "Mejor TTS: usar Edge TTS (es-MX-JorgeNeural) en vez de SAPI",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/CLAUDIO_EVOLUTION.md:19",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "runtime_claudio",
+        "blocker": "host_or_heavy",
+        "item": "Selector de voz en la UI (dropdown con voces disponibles)",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/CLAUDIO_EVOLUTION.md:20",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "runtime_claudio",
+        "blocker": "host_or_heavy",
+        "item": "Velocidad de voz ajustable (slider)",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/CLAUDIO_EVOLUTION.md:21",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "runtime_claudio",
+        "blocker": "host_or_heavy",
+        "item": "Tono ajustable",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/CLAUDIO_EVOLUTION.md:22",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "runtime_claudio",
+        "blocker": "host_or_heavy",
+        "item": "Opcion de voz masculina/femenina",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/CLAUDIO_EVOLUTION.md:23",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "runtime_claudio",
+        "blocker": "host_or_heavy",
+        "item": "Indicador visual cuando habla (icono animado)",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/CLAUDIO_EVOLUTION.md:24",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "runtime_claudio",
+        "blocker": "host_or_heavy",
+        "item": "Instalar Open Interpmuyter",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/CLAUDIO_EVOLUTION.md:27",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "runtime_claudio",
+        "blocker": "host_or_heavy",
+        "item": "Claudio puede cmuyar architú Python",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/CLAUDIO_EVOLUTION.md:28",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "runtime_claudio",
+        "blocker": "host_or_heavy",
+        "item": "Claudio puede ejecutar scripts",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/CLAUDIO_EVOLUTION.md:29",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "runtime_claudio",
+        "blocker": "host_or_heavy",
+        "item": "Claudio puede cmuyar documentos (PDF, DOCX)",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/CLAUDIO_EVOLUTION.md:30",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "runtime_claudio",
+        "blocker": "host_or_heavy",
+        "item": "Claudio puede cmuyar graficas (matplotlib)",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/CLAUDIO_EVOLUTION.md:31",
         "occurrences": 1
       }
     ]

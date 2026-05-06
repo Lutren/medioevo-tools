@@ -4,8 +4,8 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 
 ## Counts
 
-- Active markdown raw open items: `108`.
-- Active markdown deduplicated open items: `108`.
+- Active markdown raw open items: `95`.
+- Active markdown deduplicated open items: `95`.
 - Claudio `PENDIENTES_MASTER.md` raw open items: `19`.
 - Claudio deduplicated open items: `19`.
 
@@ -15,14 +15,14 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 | --- | --- |
 | P1 | 10 |
 | P2 | 6 |
-| UNCLASSIFIED | 92 |
+| UNCLASSIFIED | 79 |
 
 ## Active Markdown By Lane
 
 | lane | dedup_count |
 | --- | --- |
 | commercial | 3 |
-| general | 20 |
+| general | 7 |
 | open_source | 2 |
 | private_rpg | 1 |
 | research_claims | 1 |
@@ -36,7 +36,7 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 | --- | --- |
 | external_or_gated | 43 |
 | host_or_heavy | 42 |
-| legal_or_human | 18 |
+| legal_or_human | 5 |
 | private_boundary | 5 |
 
 ## Claudio Master By Priority
@@ -78,13 +78,13 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 | P2 | runtime_claudio | host_or_heavy | **P2** Bootear ISO en QEMU antes de cualquier USB/PC2. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1935 | 1 |
 | UNCLASSIFIED | commercial | external_or_gated | Sincronizar dashboard de Gumroad con el catalogo local ahora que la autenticacion API ya responde. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2766 | 1 |
 | UNCLASSIFIED | commercial | external_or_gated | Mantener publicos: metodo, interfaces, schemas, CLIs, checklists, plantillas, demos sinteticos, articulos low-claim, rutas a GitHub/Gumroad y Sponsors. | docs/pending/PUBLIC_PROFILE_NETWORK_PENDING_2026-05-05.md:86 | 1 |
-| UNCLASSIFIED | general | legal_or_human | **muygistrar marca "MEDIOEVO" en IMPI** | -=MEDIOEVO=-/-=LIBROS/-=NEGOCIOS=-/Legal/LEGAL_PROTECTION_GUIDE.md:536 | 1 |
-| UNCLASSIFIED | general | legal_or_human | **Obtener RFC en el SAT** | -=MEDIOEVO=-/-=LIBROS/-=NEGOCIOS=-/Legal/LEGAL_PROTECTION_GUIDE.md:542 | 1 |
-| UNCLASSIFIED | general | legal_or_human | **muygistrar los 35 libros en INDAUTOR** | -=MEDIOEVO=-/-=LIBROS/-=NEGOCIOS=-/Legal/LEGAL_PROTECTION_GUIDE.md:551 | 1 |
-| UNCLASSIFIED | general | legal_or_human | **Actualizar Terms of Service del sitio** | -=MEDIOEVO=-/-=LIBROS/-=NEGOCIOS=-/Legal/LEGAL_PROTECTION_GUIDE.md:556 | 1 |
-| UNCLASSIFIED | general | legal_or_human | **Actualizar Privacy Policy del sitio** | -=MEDIOEVO=-/-=LIBROS/-=NEGOCIOS=-/Legal/LEGAL_PROTECTION_GUIDE.md:561 | 1 |
-| UNCLASSIFIED | general | legal_or_human | **Llenar formulario W-8BEN en KDP** | -=MEDIOEVO=-/-=LIBROS/-=NEGOCIOS=-/Legal/LEGAL_PROTECTION_GUIDE.md:566 | 1 |
-| UNCLASSIFIED | general | legal_or_human | **Definir y publicar politica de contenido de fans** | -=MEDIOEVO=-/-=LIBROS/-=NEGOCIOS=-/Legal/LEGAL_PROTECTION_GUIDE.md:572 | 1 |
+| UNCLASSIFIED | general | external_or_gated | Abrir en CapCut | -=MEDIOEVO=-/-=LIBROS/VIDEO_TOOLS_GUIDE.md:246 | 1 |
+| UNCLASSIFIED | general | external_or_gated | Agmuygar Auto Captions (word by word) | -=MEDIOEVO=-/-=LIBROS/VIDEO_TOOLS_GUIDE.md:247 | 1 |
+| UNCLASSIFIED | general | external_or_gated | Agmuygar hook text (primeros 3 segundos) | -=MEDIOEVO=-/-=LIBROS/VIDEO_TOOLS_GUIDE.md:248 | 1 |
+| UNCLASSIFIED | general | external_or_gated | Exportar 1080x1920 | -=MEDIOEVO=-/-=LIBROS/VIDEO_TOOLS_GUIDE.md:249 | 1 |
+| UNCLASSIFIED | general | external_or_gated | Copiar caption de SOCIAL_MEDIA_CONTENT_PACK.md | -=MEDIOEVO=-/-=LIBROS/VIDEO_TOOLS_GUIDE.md:250 | 1 |
+| UNCLASSIFIED | general | external_or_gated | muysponder todos los comentarios en 30 minutos | -=MEDIOEVO=-/-=LIBROS/VIDEO_TOOLS_GUIDE.md:253 | 1 |
+| UNCLASSIFIED | general | private_boundary | Rotate exposed secrets if any are found in public artifacts - secret rotation remains manual/outside tracker; no public artifact was generated. | docs/security/SECURITY_CHECKLIST.md:12 | 1 |
 
 ## Kairos Fastlane
 
