@@ -4,8 +4,8 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 
 ## Counts
 
-- Active markdown raw open items: `392`.
-- Active markdown deduplicated open items: `387`.
+- Active markdown raw open items: `287`.
+- Active markdown deduplicated open items: `284`.
 - Claudio `PENDIENTES_MASTER.md` raw open items: `69`.
 - Claudio deduplicated open items: `69`.
 
@@ -17,26 +17,26 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 | P2 | 6 |
 | P3 | 3 |
 | P4 | 4 |
-| UNCLASSIFIED | 363 |
+| UNCLASSIFIED | 260 |
 
 ## Active Markdown By Lane
 
 | lane | dedup_count |
 | --- | --- |
-| commercial | 73 |
-| general | 100 |
+| commercial | 66 |
+| general | 20 |
 | open_source | 2 |
-| private_rpg | 4 |
+| private_rpg | 3 |
 | research_claims | 1 |
-| runtime_claudio | 187 |
-| wave_fc | 3 |
-| website_marketing | 17 |
+| runtime_claudio | 184 |
+| wave_fc | 4 |
+| website_marketing | 4 |
 
 ## Active Markdown By Blocker
 
 | blocker | dedup_count |
 | --- | --- |
-| external_or_gated | 261 |
+| external_or_gated | 158 |
 | host_or_heavy | 52 |
 | legal_or_human | 64 |
 | private_boundary | 10 |
@@ -69,11 +69,11 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 | P1 | runtime_claudio | host_or_heavy | **P1** Ejecutar suite Qwen 3B cuando el host permita ruta pesada: `python tools\qwen_observacion_benchmark_suite.py --execute --write-dataset`. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1142 | 1 |
 | P1 | runtime_claudio | external_or_gated | **P1** Confirmar visualmente cual URL de LinkedIn es la canonica antes de editar el perfil. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1423 | 1 |
 | P1 | runtime_claudio | external_or_gated | **P1** Pegar headline/about/experience/featured links desde `LINKEDIN_PROFILE_PACKET_2026-05-01.md` en LinkedIn autenticado, cuidando no regalar tecnologia privada ni claims fuertes. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1424 | 1 |
-| P1 | runtime_claudio | host_or_heavy | **P1** Resolver QA visual DOCX; `artifact-tool` y `soffice/libreoffice` no estan disponibles en este host. Recheck 2026-05-03: `winget` detecta LibreOffice 26.2.2.2, pero `--scope user` no tiene instalador aplicable y el intento no interactivo estandar hizo timeout; no quedo instalado. Evidencia en `docs\DOCX_VISUAL_QA_RENDERER_ATTEMPT_2026-05-03.md`. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1478 | 1 |
 | P1 | runtime_claudio | legal_or_human | **P1** Revisar jurisdiccion, impuestos, plataforma de pago y politica final con asesor legal. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1497 | 1 |
 | P1 | runtime_claudio | private_boundary | **P1** Usar `release_manifests/` como base de QA, pero no crear paquetes ZIP hasta que secret scan, legal y release checklist pasen. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1530 | 1 |
 | P1 | runtime_claudio | external_or_gated | **P1** Convertir packaging interno en landing/copy publico solo despues de licencia, capturas, instalacion y ActionGate de publicacion. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1600 | 1 |
 | P1 | runtime_claudio | external_or_gated | **P1** Generar capturas/video local de demo y decidir artefactos publicos despues de ActionGate. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1601 | 1 |
+| P1 | wave_fc | host_or_heavy | **P1** Resolver QA visual DOCX; `artifact-tool` y `soffice/libreoffice` no estan disponibles en este host. Recheck 2026-05-03: `winget` detecta LibreOffice 26.2.2.2, pero `--scope user` no tiene instalador aplicable y el intento no interactivo estandar hizo timeout; no quedo instalado. Recheck 2026-05-06: `winget list --name LibreOffice` reporta `No installed package found matching input criteria`. Evidencia en `docs\DOCX_VISUAL_QA_RENDERER_ATTEMPT_2026-05-03.md` y `docs\WAVE_WABI_LOCAL_GATE_...` | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1478 | 1 |
 | P1 | wave_fc | external_or_gated | **P1** Cerrar licencia/EULA, instalacion, landing copy y ActionGate antes de vender o publicar Wave FC. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1479 | 1 |
 | P2 | runtime_claudio | legal_or_human | **P2** Conector a checador fisico solo como read-only, con consentimiento, logs, fallback manual y aprobacion legal/laboral. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1604 | 1 |
 | P2 | runtime_claudio | host_or_heavy | **P2** Crear alias Ollama optimizados con `python tools\gemma4_observacion_optimizer.py --create-aliases --execute` solo cuando el host este `APPROVE`; luego correr `python tools\benchmark_gemma4_observador.py --profile lite`. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1707 | 1 |
@@ -88,7 +88,7 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 | P4 | runtime_claudio | external_or_gated | **P4.5** Guest post en blogs de sci-fi | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2848 | 1 |
 | P4 | runtime_claudio | external_or_gated | **P4.6** Podcasts de literatura | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2849 | 1 |
 | P4 | runtime_claudio | external_or_gated | **P4.7** Colaboraciones cross-promo | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2850 | 1 |
-| UNCLASSIFIED | commercial | external_or_gated | 4. Gumroad 12-34 audiolibros (35 ZIPs listos) | -=MEDIOEVO=-/-=LIBROS/CHECKLIST_FINAL.md:11 | 1 |
+| UNCLASSIFIED | commercial | external_or_gated | **HOLD_EXTERNAL** No usar estas rutas para publicacion, push, deploy, Gumroad, redes, borrado o acciones externas sin ActionGate especifico. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1031 | 1 |
 
 ## Kairos Fastlane
 

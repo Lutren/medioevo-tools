@@ -723,10 +723,17 @@ def build_report() -> dict[str, object]:
     }
 
 
+def md_cell(value: object) -> str:
+    text = str(value).replace("|", "\\|")
+    if text.count("`") % 2:
+        text += "`"
+    return text
+
+
 def md_table(headers: list[str], rows: list[list[object]]) -> str:
     output = ["| " + " | ".join(headers) + " |", "| " + " | ".join(["---"] * len(headers)) + " |"]
     for row in rows:
-        output.append("| " + " | ".join(str(value).replace("|", "\\|") for value in row) + " |")
+        output.append("| " + " | ".join(md_cell(value) for value in row) + " |")
     return "\n".join(output)
 
 

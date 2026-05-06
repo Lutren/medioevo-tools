@@ -1,6 +1,6 @@
 {
   "schema": "medioevo.pending_review.v1",
-  "generated_at": "2026-05-06T09:51:33+00:00",
+  "generated_at": "2026-05-06T10:11:49+00:00",
   "date": "2026-05-06",
   "root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
   "policy": {
@@ -10,27 +10,27 @@
     "curador": "unknown sources and residues still require curador_preflight before use or discard."
   },
   "active_markdown": {
-    "raw_open": 392,
-    "dedup_open": 387,
+    "raw_open": 287,
+    "dedup_open": 284,
     "by_priority": {
       "P1": 11,
       "P2": 6,
       "P3": 3,
       "P4": 4,
-      "UNCLASSIFIED": 363
+      "UNCLASSIFIED": 260
     },
     "by_lane": {
-      "commercial": 73,
-      "general": 100,
+      "commercial": 66,
+      "general": 20,
       "open_source": 2,
-      "private_rpg": 4,
+      "private_rpg": 3,
       "research_claims": 1,
-      "runtime_claudio": 187,
-      "wave_fc": 3,
-      "website_marketing": 17
+      "runtime_claudio": 184,
+      "wave_fc": 4,
+      "website_marketing": 4
     },
     "by_blocker": {
-      "external_or_gated": 261,
+      "external_or_gated": 158,
       "host_or_heavy": 52,
       "legal_or_human": 64,
       "private_boundary": 10
@@ -79,14 +79,6 @@
       {
         "priority": "P1",
         "lane": "runtime_claudio",
-        "blocker": "host_or_heavy",
-        "item": "**P1** Resolver QA visual DOCX; `artifact-tool` y `soffice/libreoffice` no estan disponibles en este host. Recheck 2026-05-03: `winget` detecta LibreOffice 26.2.2.2, pero `--scope user` no tiene instalador aplicable y el intento no interactivo estandar hizo timeout; no quedo instalado. Evidencia en `docs\\DOCX_VISUAL_QA_RENDERER_ATTEMPT_2026-05-03.md`.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1478",
-        "occurrences": 1
-      },
-      {
-        "priority": "P1",
-        "lane": "runtime_claudio",
         "blocker": "legal_or_human",
         "item": "**P1** Revisar jurisdiccion, impuestos, plataforma de pago y politica final con asesor legal.",
         "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1497",
@@ -114,6 +106,14 @@
         "blocker": "external_or_gated",
         "item": "**P1** Generar capturas/video local de demo y decidir artefactos publicos despues de ActionGate.",
         "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1601",
+        "occurrences": 1
+      },
+      {
+        "priority": "P1",
+        "lane": "wave_fc",
+        "blocker": "host_or_heavy",
+        "item": "**P1** Resolver QA visual DOCX; `artifact-tool` y `soffice/libreoffice` no estan disponibles en este host. Recheck 2026-05-03: `winget` detecta LibreOffice 26.2.2.2, pero `--scope user` no tiene instalador aplicable y el intento no interactivo estandar hizo timeout; no quedo instalado. Recheck 2026-05-06: `winget list --name LibreOffice` reporta `No installed package found matching input criteria`. Evidencia en `docs\\DOCX_VISUAL_QA_RENDERER_ATTEMPT_2026-05-03.md` y `docs\\WAVE_WABI_LOCAL_GATE_...",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1478",
         "occurrences": 1
       },
       {
@@ -232,94 +232,6 @@
         "priority": "UNCLASSIFIED",
         "lane": "commercial",
         "blocker": "external_or_gated",
-        "item": "4. Gumroad 12-34 audiolibros (35 ZIPs listos)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/CHECKLIST_FINAL.md:11",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "external_or_gated",
-        "item": "**URGENTE**: Subir EPUBs a Gumroad libros 22-29 (ver GUMROAD_EPUB_UPLOAD_GUIDE.md)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/PLAN_ACCION_INMEDIATO.md:20",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "external_or_gated",
-        "item": "**URGENTE**: Cmuyar 6 albums muystantes en Gumroad (ver GUMROAD_ALBUMS_GUIDE.md)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/PLAN_ACCION_INMEDIATO.md:21",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "external_or_gated",
-        "item": "**URGENTE**: Subir MP3s a los 8 albums de Gumroad",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/PLAN_ACCION_INMEDIATO.md:22",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "external_or_gated",
-        "item": "**IMPORTANTE**: Cmuyar bundles en Gumroad (Arco 1, Arco 2, Arco 3, Saga Completa)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/PLAN_ACCION_INMEDIATO.md:25",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "external_or_gated",
-        "item": "Completar uploads en Gumroad (EPUBs + albums + MP3s) - 30 min",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/PLAN_ACCION_INMEDIATO.md:111",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "external_or_gated",
-        "item": "Cmuyar bundles en Gumroad - 15 min",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/PLAN_ACCION_INMEDIATO.md:112",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "private_boundary",
-        "item": "**Twitter Consumer Key/Secret:** Pendiente de Tren",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/INVENTARIO_MAESTRO_2026-04-20.md:273",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "external_or_gated",
-        "item": "**Reddit Password/2FA:** Requiere setup manual oauth",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/INVENTARIO_MAESTRO_2026-04-20.md:274",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "external_or_gated",
-        "item": "**Supabase schema:** Requiere acceso a dashboard",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/INVENTARIO_MAESTRO_2026-04-20.md:276",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "host_or_heavy",
-        "item": "**Benchmark real:** Requiere Ollama corriendo y 100 sesiones",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/INVENTARIO_MAESTRO_2026-04-20.md:277",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "external_or_gated",
         "item": "**HOLD_EXTERNAL** No usar estas rutas para publicacion, push, deploy, Gumroad, redes, borrado o acciones externas sin ActionGate especifico.",
         "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1031",
         "occurrences": 1
@@ -355,6 +267,94 @@
         "item": "La API de Gumroad sigue devolviendo `published: false` y `shown_on_profile: null` para ese SKU, aunque el link directo existe; esto implica que el cuello de botella restante es escaparate/perfil, no checkout directo.",
         "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2455",
         "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "commercial",
+        "blocker": "external_or_gated",
+        "item": "Sincronizar dashboard de Gumroad con el catalogo local ahora que la autenticacion API ya responde.",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2766",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "commercial",
+        "blocker": "legal_or_human",
+        "item": "Rayuela muyading guide (PDF) - cmuyate from CEmuyBRO docs",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/commercial/GUMROAD_PRODUCTS_READY.md:444",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "commercial",
+        "blocker": "legal_or_human",
+        "item": "Master timeline (PDF) - cmuyate from CEmuyBRO timeline data",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/commercial/GUMROAD_PRODUCTS_READY.md:445",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "commercial",
+        "blocker": "private_boundary",
+        "item": "TCG cards compiled into print-muyady PDF (from website assets)",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/commercial/GUMROAD_PRODUCTS_READY.md:446",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "commercial",
+        "blocker": "legal_or_human",
+        "item": "muysonancia rulebook (PDF)",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/commercial/GUMROAD_PRODUCTS_READY.md:447",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "commercial",
+        "blocker": "legal_or_human",
+        "item": "Deck-building guide (PDF)",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/commercial/GUMROAD_PRODUCTS_READY.md:448",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "commercial",
+        "blocker": "legal_or_human",
+        "item": "Lomuy Bible compiled into single PDF (from CEmuyBRO)",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/commercial/GUMROAD_PRODUCTS_READY.md:449",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "commercial",
+        "blocker": "legal_or_human",
+        "item": "Character encyclopedia (PDF)",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/commercial/GUMROAD_PRODUCTS_READY.md:450",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "commercial",
+        "blocker": "legal_or_human",
+        "item": "Blueprint art (cmuyate or compile from existing assets)",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/commercial/GUMROAD_PRODUCTS_READY.md:451",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "commercial",
+        "blocker": "legal_or_human",
+        "item": "Audiobook sample chapter for starter-pack",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/commercial/GUMROAD_PRODUCTS_READY.md:452",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "commercial",
+        "blocker": "legal_or_human",
+        "item": "Liner notes for soundtrack collection",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/commercial/GUMROAD_PRODUCTS_READY.md:453",
+        "occurrences": 1
       }
     ]
   },
@@ -372,8 +372,8 @@
     "by_lane": {
       "commercial": 8,
       "private_rpg": 1,
-      "runtime_claudio": 57,
-      "wave_fc": 3
+      "runtime_claudio": 56,
+      "wave_fc": 4
     },
     "by_blocker": {
       "external_or_gated": 43,
@@ -425,14 +425,6 @@
       {
         "priority": "P1",
         "lane": "runtime_claudio",
-        "blocker": "host_or_heavy",
-        "item": "**P1** Resolver QA visual DOCX; `artifact-tool` y `soffice/libreoffice` no estan disponibles en este host. Recheck 2026-05-03: `winget` detecta LibreOffice 26.2.2.2, pero `--scope user` no tiene instalador aplicable y el intento no interactivo estandar hizo timeout; no quedo instalado. Evidencia en `docs\\DOCX_VISUAL_QA_RENDERER_ATTEMPT_2026-05-03.md`.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1478",
-        "occurrences": 1
-      },
-      {
-        "priority": "P1",
-        "lane": "runtime_claudio",
         "blocker": "legal_or_human",
         "item": "**P1** Revisar jurisdiccion, impuestos, plataforma de pago y politica final con asesor legal.",
         "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1497",
@@ -460,6 +452,14 @@
         "blocker": "external_or_gated",
         "item": "**P1** Generar capturas/video local de demo y decidir artefactos publicos despues de ActionGate.",
         "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1601",
+        "occurrences": 1
+      },
+      {
+        "priority": "P1",
+        "lane": "wave_fc",
+        "blocker": "host_or_heavy",
+        "item": "**P1** Resolver QA visual DOCX; `artifact-tool` y `soffice/libreoffice` no estan disponibles en este host. Recheck 2026-05-03: `winget` detecta LibreOffice 26.2.2.2, pero `--scope user` no tiene instalador aplicable y el intento no interactivo estandar hizo timeout; no quedo instalado. Recheck 2026-05-06: `winget list --name LibreOffice` reporta `No installed package found matching input criteria`. Evidencia en `docs\\DOCX_VISUAL_QA_RENDERER_ATTEMPT_2026-05-03.md` y `docs\\WAVE_WABI_LOCAL_GATE_...",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1478",
         "occurrences": 1
       },
       {

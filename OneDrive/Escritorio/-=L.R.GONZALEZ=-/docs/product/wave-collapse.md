@@ -138,7 +138,38 @@ SIGUIENTE ACCION
 - `-=MEDIOEVO=-\-=LIBROS\claudio\docs\WAVE_NEURODIVERGENT_WORKSPACE_2026-04-29.md`
 - `-=MEDIOEVO=-\-=LIBROS\claudio\docs\WAVE_FC_PRIVATE_SERVER_2026-04-29.md`
 - `-=MEDIOEVO=-\-=LIBROS\claudio\docs\WAVE_COLLAPSE_DEMO_5_MIN_2026-04-29.md`
+- `-=MEDIOEVO=-\-=LIBROS\claudio\docs\WAVE_WABI_LOCAL_GATE_RECHECK_2026-05-06.md`
 - `website\wave-collapse.html`
+
+## Estado 2026-05-06
+
+Wave/Wabi pasa como demo local con datos sinteticos:
+
+```text
+python -m pytest tests\test_wave_collapse_report.py tests\test_wave_fc_client_demo_package.py tests\test_wave_wabi_release_gate.py -q
+-> 23 passed
+```
+
+El gate local nuevo queda en:
+
+```text
+-=MEDIOEVO=-\-=LIBROS\claudio\runtime\wave_wabi_release_gates\wave_wabi_gate_2026-05-06\release_gate_report.md
+```
+
+Resultado:
+
+```text
+local_demo_ready: true
+public_publication_ready: false
+demo checks: 23/23
+benchmark checks: 9/9
+failed checks: 0
+```
+
+El QA visual DOCX sigue abierto: `soffice`, `libreoffice` y `artifact-tool` no
+estan disponibles en PATH, y `winget list --name LibreOffice` no encontro
+LibreOffice instalado. No afirmar tracked replacement ni QA visual hasta tener
+renderer reproducible.
 
 ## Gates
 

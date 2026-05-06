@@ -191,3 +191,14 @@ def test_write_artifacts_ignores_generated_at_only_churn(tmp_path: Path, monkeyp
     pending_review.write_artifacts(report)
 
     assert json_path.read_text(encoding="utf-8") == first
+
+
+def test_md_table_balances_truncated_code_spans() -> None:
+    table = pending_review.md_table(
+        ["item"],
+        [["Evidencia en `docs\\WAVE_WABI_LOCAL_GATE_..."]],
+    )
+
+    row = table.splitlines()[-1]
+    assert row.count("`") % 2 == 0
+    assert row.endswith(" |")
