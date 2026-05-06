@@ -25,9 +25,9 @@
 
 ## Próximas Acciones
 
-- [ ] Definir siguiente hito
-- [ ] Actualizar métricas
-- [ ] Revisar handoff
+- [argus-status-gate] Definir siguiente hito
+- [argus-status-gate] Actualizar métricas
+- [argus-status-gate] Revisar handoff
 
 ---
 

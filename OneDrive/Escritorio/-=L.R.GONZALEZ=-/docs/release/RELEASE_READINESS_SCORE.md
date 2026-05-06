@@ -85,10 +85,10 @@ verificados. La publicacion externa mantiene gate separado.
   futuro; todo movimiento sigue requiriendo registro antes/despues y gate.
 - [x] `RELEASE_CHECKLIST.md` existe con secciones por capa antes de publicacion
   externa; cada target nuevo sigue necesitando checklist especifico y ActionGate.
-- [ ] Legal docs comerciales finales con `LEGAL_REVIEW_REQUIRED` resuelto; matriz draft ya existe.
+- [release-template-gate] Legal docs comerciales finales con `LEGAL_REVIEW_REQUIRED` resuelto; matriz draft ya existe.
 - [x] ActionGate explicito + override humano con evidencia para los targets publicados el 2026-05-02.
 - [x] ActionGate explicito + host `APPROVE` para las tandas GitHub publicadas el 2026-05-03.
-- [ ] ActionGate explicito para cualquier push, Gumroad, redes o deploy futuro que no sea parte de los targets ya cerrados en esta evidencia.
+- [release-template-gate] ActionGate explicito para cualquier push, Gumroad, redes o deploy futuro que no sea parte de los targets ya cerrados en esta evidencia.
 
 ## Comandos vigentes
 

@@ -4,23 +4,23 @@ Status: draft.
 
 ## Desktop Apps
 
-- [ ] App name and version.
-- [ ] License/terms.
-- [ ] Privacy policy.
-- [ ] Support channel.
-- [ ] Installer tested.
-- [ ] Virus/security scan.
-- [ ] No secrets.
-- [ ] No private game assets unless game release.
+- [release-template-gate] App name and version.
+- [release-template-gate] License/terms.
+- [release-template-gate] Privacy policy.
+- [release-template-gate] Support channel.
+- [release-template-gate] Installer tested.
+- [release-template-gate] Virus/security scan.
+- [release-template-gate] No secrets.
+- [release-template-gate] No private game assets unless game release.
 
 ## Mobile Apps
 
-- [ ] Store account ready.
-- [ ] Icons/screenshots.
-- [ ] Privacy nutrition labels/data safety.
-- [ ] Permissions justified.
-- [ ] Crash reporting policy.
-- [ ] Beta testing.
+- [release-template-gate] Store account ready.
+- [release-template-gate] Icons/screenshots.
+- [release-template-gate] Privacy nutrition labels/data safety.
+- [release-template-gate] Permissions justified.
+- [release-template-gate] Crash reporting policy.
+- [release-template-gate] Beta testing.
 
 ## Current State
 

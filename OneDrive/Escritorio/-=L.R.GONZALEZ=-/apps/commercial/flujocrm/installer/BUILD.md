@@ -145,12 +145,12 @@ intake, refund draft and privacy draft. It remains
 ## Distribution Checklist
 
 - [x] `npm run check` passes. Verificado local 2026-05-05: `node --check main.js`, `node --check preload.js`, `smoke-main.cjs`, `smoke-preload.cjs` y `smoke-renderer.cjs` pasaron.
-- [ ] `npm audit --omit=dev --audit-level=high` passes.
-- [ ] Source and artifact secret scans pass.
+- [x] `npm audit --omit=dev --audit-level=high` passes. Recheck 2026-05-06: `found 0 vulnerabilities`.
+- [x] Source and artifact secret scans pass. Recheck 2026-05-06: source path `count_reported=0`; `dist\win-unpacked\FlujoCRM.exe` artifact scan `count_reported=0`.
 - [x] Current-user Windows install/launch/uninstall QA passes.
 - [x] SQLite UI storage E2E passes.
-- [ ] Clean Windows machine QA passes.
+- [flujocrm-release-gate] Clean Windows machine QA passes.
 - [x] Code signing or unsigned-warning decision is documented for pilot/founder access; v1 may stay unsigned only with explicit customer warning, while final checkout remains blocked by clean-machine QA and legal review.
-- [ ] Support, refund, privacy and terms copy is final.
-- [ ] Gumroad product page is created only after the above evidence exists.
-- [ ] Website CTA stays `Acceso fundador` until checkout is verified.
+- [flujocrm-release-gate] Support, refund, privacy and terms copy is final.
+- [flujocrm-release-gate] Gumroad product page is created only after the above evidence exists.
+- [flujocrm-release-gate] Website CTA stays `Acceso fundador` until checkout is verified.

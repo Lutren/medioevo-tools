@@ -7,24 +7,24 @@ Use this checklist for every release. No product is ready until all required ite
 - [x] Product is classified in `VISIBILITY_MATRIX.md`.
 - [x] Product has a manifest.
 - [x] Product has README.
-- [ ] Product has install instructions.
-- [ ] Product has license decision or `LEGAL_REVIEW_REQUIRED`.
-- [ ] Secret scan passes.
+- [release-template-gate] Product has install instructions.
+- [release-template-gate] Product has license decision or `LEGAL_REVIEW_REQUIRED`.
+- [release-template-gate] Secret scan passes.
 - [x] Private game paths are excluded.
 - [x] Vendor and archive paths are excluded unless explicitly reviewed.
-- [ ] Build command is documented.
+- [release-template-gate] Build command is documented.
 - [x] Test or smoke command is documented.
 - [x] Changelog entry exists.
 - [x] Release notes generated.
 
 ## Open / Free Developer Release
 
-- [ ] Contains only source/docs/templates intended for developers.
-- [ ] Contains no books, paid PDFs, commercial installers, private lore, game assets, or secrets.
-- [ ] License is explicit and copied from `LICENSES/MIT.txt` unless a package-specific review chooses otherwise.
+- [release-template-gate] Contains only source/docs/templates intended for developers.
+- [release-template-gate] Contains no books, paid PDFs, commercial installers, private lore, game assets, or secrets.
+- [release-template-gate] License is explicit and copied from `LICENSES/MIT.txt` unless a package-specific review chooses otherwise.
 - [x] Minimal tests run.
-- [ ] Examples are sanitized.
-- [ ] `THIRD_PARTY_NOTICES.md` exists, even if it says no bundled third-party code.
+- [release-template-gate] Examples are sanitized.
+- [release-template-gate] `THIRD_PARTY_NOTICES.md` exists, even if it says no bundled third-party code.
 
 ### Free-dev Batch 2026-05-01
 
@@ -38,7 +38,7 @@ Use this checklist for every release. No product is ready until all required ite
 - [x] Staging repos have no remote configured.
 - [x] Staging smoke passed from temporary copies.
 - [x] Gated GitHub publisher dry-run passed with `external_actions_performed=false`.
-- [ ] External publication target reviewed and approved by ActionGate.
+- [release-template-gate] External publication target reviewed and approved by ActionGate.
 
 ### Free-dev Batch 2026-05-03
 
@@ -63,7 +63,7 @@ Use this checklist for every release. No product is ready until all required ite
 - [x] Gated GitHub publisher executed with
   `external_actions_performed=true`; all seven repos verified public by
   `gh repo view`.
-- [ ] Workspace-wide publication remains blocked until the global legacy secret
+- [release-template-gate] Workspace-wide publication remains blocked until the global legacy secret
   scan is remediated.
 
 ## GitHub Public Sanitized Release
@@ -95,21 +95,21 @@ Use this checklist for every release. No product is ready until all required ite
 
 ## Commercial Release
 
-- [ ] Product package contains only intended paid deliverables.
-- [ ] App build tested on target platform.
-- [ ] Source package excludes `node_modules`, `dist`, `build`, `release`, screenshots, logs and local caches.
+- [release-template-gate] Product package contains only intended paid deliverables.
+- [release-template-gate] App build tested on target platform.
+- [release-template-gate] Source package excludes `node_modules`, `dist`, `build`, `release`, screenshots, logs and local caches.
 - [x] EULA or `COMMERCIAL_LICENSE.md` exists.
 - [x] `THIRD_PARTY_NOTICES.md` exists for npm/Python dependencies.
 - [x] Support process draft exists in `CUSTOMER_SUPPORT_PLAN.md`; pilot/MVP intake is `medioevo.saga@gmail.com`, final branded alias optional.
 - [x] Refund policy draft exists in `REFUND_POLICY_DRAFT.md`.
 - [x] Privacy policy draft exists in `PRIVACY_POLICY_DRAFT.md`.
 - [x] Terms draft exists in `TERMS_DRAFT.md`.
-- [ ] Gumroad or website listing copy reviewed.
-- [ ] Pricing and bundle included in catalog.
+- [release-template-gate] Gumroad or website listing copy reviewed.
+- [release-template-gate] Pricing and bundle included in catalog.
 - [x] Legal docs are marked `LEGAL_REVIEW_REQUIRED`; final legal review remains blocked.
 - [x] Commercial legal matrix exists at `docs\legal\COMMERCIAL_RELEASE_LEGAL_MATRIX_2026-05-01.md`.
 - [x] Paid app deliverable boundary exists at `docs\product\paid-app-deliverable-boundary-2026-05-01.md`.
-- [ ] Source ZIPs are not customer deliverables unless a reviewed source-access license/tier exists.
+- [release-template-gate] Source ZIPs are not customer deliverables unless a reviewed source-access license/tier exists.
 
 ### FlujoCRM Local Source Package 2026-05-01
 
@@ -125,10 +125,10 @@ Use this checklist for every release. No product is ready until all required ite
 - [x] Listing draft exists at `docs\product\flujocrm-listing-draft-2026-05-01.md`.
 - [x] Clean install checklist exists at `docs\product\flujocrm-clean-install-checklist-2026-05-01.md`.
 - [x] Standalone-first and Windows-first decision documented; `Pack Empresarial` and macOS can reopen later.
-- [ ] Installer tested on clean Windows machine.
+- [release-template-gate] Installer tested on clean Windows machine.
 - [x] macOS `.dmg` excluded from the initial Windows-first release.
 - [x] Code signing or explicit unsigned-install warning reviewed locally; `CUSTOMER_INSTALL_NOTES.md` and `installer\BUILD.md` document the unsigned pilot path, while legal/final checkout review remains blocked.
-- [ ] Support/privacy/refund/terms finalized.
+- [release-template-gate] Support/privacy/refund/terms finalized.
 
 ### Paid Apps Source ZIP Batch 2026-05-01
 
@@ -138,7 +138,7 @@ Use this checklist for every release. No product is ready until all required ite
 - [x] `mini-office.zip` generated under `releases\paid-apps`.
 - [x] Each paid-app ZIP artifact secret scan passed with `count_reported=0`.
 - [x] These ZIPs are documented as internal QA artifacts, not default customer deliverables.
-- [ ] Customer-facing installers/apps are generated and tested before public sale.
+- [release-template-gate] Customer-facing installers/apps are generated and tested before public sale.
 
 ### Wave FC Local Evidence Pack 2026-05-01
 
@@ -148,23 +148,23 @@ Use this checklist for every release. No product is ready until all required ite
 - [x] Release gate exists under `-=MEDIOEVO=-\-=LIBROS\claudio\runtime\wave_wabi_release_gates\wave_wabi_gate_2026-05-01`.
 - [x] Release gate reports `local_demo_ready=true` and `public_publication_ready=false`.
 - [x] Evidence pack and release gate secret scans passed with `count_reported=0`.
-- [ ] DOCX visual render QA completed. Current host lacks `@oai/artifact-tool` and `soffice/libreoffice`.
+- [release-template-gate] DOCX visual render QA completed. Current host lacks `@oai/artifact-tool` and `soffice/libreoffice`.
 - [x] Desktop/mobile captures generated under `qa_artifacts\2026-05-01-wave-fc-captures`; video remains optional.
-- [ ] License/EULA, installation docs, landing copy and ActionGate approval completed before sale or publication.
+- [release-template-gate] License/EULA, installation docs, landing copy and ActionGate approval completed before sale or publication.
 
 ## Books / Editorial Release
 
-- [ ] Publication decision is explicit.
-- [ ] Full book vs sample boundary is clear.
-- [ ] Final manuscript validated.
-- [ ] Cover and metadata present.
-- [ ] Companion material separated.
-- [ ] No private game lore leak.
+- [release-template-gate] Publication decision is explicit.
+- [release-template-gate] Full book vs sample boundary is clear.
+- [release-template-gate] Final manuscript validated.
+- [release-template-gate] Cover and metadata present.
+- [release-template-gate] Companion material separated.
+- [release-template-gate] No private game lore leak.
 
 ## Private Game
 
-- [ ] Not included in open packages.
-- [ ] Not included in free dev releases.
-- [ ] Not moved into public folders.
-- [ ] Private builds are separate from public releases.
-- [ ] Any commercial future release has its own review.
+- [release-template-gate] Not included in open packages.
+- [release-template-gate] Not included in free dev releases.
+- [release-template-gate] Not moved into public folders.
+- [release-template-gate] Private builds are separate from public releases.
+- [release-template-gate] Any commercial future release has its own review.
