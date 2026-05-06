@@ -1,18 +1,17 @@
 {
   "schema": "medioevo.claudio_root_human_audit.v1",
-  "generated_at_utc": "2026-05-06T10:06:23.004593+00:00",
+  "generated_at_utc": "2026-05-06T10:17:25.780148+00:00",
   "target_root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio",
   "summary": {
-    "root_items": 554,
-    "root_files": 402,
+    "root_items": 453,
+    "root_files": 301,
     "root_directories": 152,
-    "git_pending_lines": 1223,
+    "git_pending_lines": 1124,
     "categories": {
       "archive_existing": 6,
       "cache_regenerable": 11,
       "domain_module_or_legacy_dir": 109,
       "git_control": 1,
-      "launcher_script": 101,
       "local_config_tooling": 7,
       "local_state_db": 10,
       "misc_root_item": 8,
@@ -32,7 +31,7 @@
       "KEEP_REVIEW": 7,
       "KEEP_REVIEW_CONSOLIDATE": 6,
       "KEEP_REVIEW_RETENTION": 10,
-      "MOVE_CANDIDATE": 322,
+      "MOVE_CANDIDATE": 221,
       "MOVE_CANDIDATE_REVIEW": 48,
       "REVIEW": 8,
       "REVIEW_DESTINATION": 109
@@ -40,20 +39,10 @@
     "risks": {
       "HIGH": 32,
       "LOW": 27,
-      "MEDIUM": 495
+      "MEDIUM": 394
     }
   },
   "records": [
-    {
-      "name": " Claudio_Startup.bat",
-      "kind": "file",
-      "size_bytes": 81,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
     {
       "name": "-=PSI=-",
       "kind": "directory",
@@ -315,16 +304,6 @@
       "reason": "existing_archive"
     },
     {
-      "name": "_temp_oppo_persistent_setup.sh",
-      "kind": "file",
-      "size_bytes": 3986,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
       "name": "_ui_uploads",
       "kind": "directory",
       "size_bytes": 0,
@@ -363,16 +342,6 @@
       "destination_hint": "tools/root_scripts_review",
       "risk": "MEDIUM",
       "reason": "root_python_noise"
-    },
-    {
-      "name": "adb_wrapper.bat",
-      "kind": "file",
-      "size_bytes": 428,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
     },
     {
       "name": "add_cloudflare_dns.py",
@@ -645,26 +614,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "AUTOMATE_SESSION.bat",
-      "kind": "file",
-      "size_bytes": 1809,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "AUTOMATED_SESSION.bat",
-      "kind": "file",
-      "size_bytes": 2017,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
       "name": "autopilot",
       "kind": "directory",
       "size_bytes": 0,
@@ -683,16 +632,6 @@
       "destination_hint": "docs/intake/claudio_root_review",
       "risk": "MEDIUM",
       "reason": "noncanonical_root_dir"
-    },
-    {
-      "name": "autorun_oppo.ps1",
-      "kind": "file",
-      "size_bytes": 2130,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
     },
     {
       "name": "backup.py",
@@ -885,16 +824,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "ceo_exec.bat",
-      "kind": "file",
-      "size_bytes": 982,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
       "name": "chat_endpoint.py",
       "kind": "file",
       "size_bytes": 10367,
@@ -955,16 +884,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "claudio.bat",
-      "kind": "file",
-      "size_bytes": 388,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
       "name": "Claudio_Accesos_Directos",
       "kind": "directory",
       "size_bytes": 0,
@@ -1013,16 +932,6 @@
       "destination_hint": "tools/root_scripts_review",
       "risk": "MEDIUM",
       "reason": "root_python_noise"
-    },
-    {
-      "name": "CLAUDIO_CHAT.bat",
-      "kind": "file",
-      "size_bytes": 265,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
     },
     {
       "name": "claudio_cli.py",
@@ -1125,16 +1034,6 @@
       "reason": "local_state_database"
     },
     {
-      "name": "Claudio_MODO_RAPIDO.bat",
-      "kind": "file",
-      "size_bytes": 173,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
       "name": "claudio_os",
       "kind": "directory",
       "size_bytes": 0,
@@ -1213,16 +1112,6 @@
       "destination_hint": "tools/root_scripts_review",
       "risk": "MEDIUM",
       "reason": "root_python_noise"
-    },
-    {
-      "name": "cleanup_phase1.ps1",
-      "kind": "file",
-      "size_bytes": 1471,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
     },
     {
       "name": "codex",
@@ -1353,26 +1242,6 @@
       "destination_hint": "tools/root_scripts_review",
       "risk": "MEDIUM",
       "reason": "root_python_noise"
-    },
-    {
-      "name": "CONFIGURAR_RED_POD.bat",
-      "kind": "file",
-      "size_bytes": 1416,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "configurar_scheduler.bat",
-      "kind": "file",
-      "size_bytes": 1836,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
     },
     {
       "name": "consejo_cli.py",
@@ -1615,26 +1484,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "crear_accesos.ps1",
-      "kind": "file",
-      "size_bytes": 2452,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "crear_accesos_directos.bat",
-      "kind": "file",
-      "size_bytes": 3297,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
       "name": "crear_productos_shopify.py",
       "kind": "file",
       "size_bytes": 3940,
@@ -1855,26 +1704,6 @@
       "reason": "root_python_noise"
     },
     {
-      "name": "deploy_sensor_oppo.bat",
-      "kind": "file",
-      "size_bytes": 3317,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "descargar_chimera_fijo.ps1",
-      "kind": "file",
-      "size_bytes": 1244,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
       "name": "device_protection_state.json",
       "kind": "file",
       "size_bytes": 2564,
@@ -1893,16 +1722,6 @@
       "destination_hint": "docs/intake/claudio_root_review",
       "risk": "MEDIUM",
       "reason": "noncanonical_root_dir"
-    },
-    {
-      "name": "DIAGNOSTICO_COMPLETO.bat",
-      "kind": "file",
-      "size_bytes": 1782,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
     },
     {
       "name": "diana_profile_builder.py",
@@ -2035,66 +1854,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "EJECUTAR_ALCATEL_AUTO.bat",
-      "kind": "file",
-      "size_bytes": 925,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "EJECUTAR_COMO_ADMIN.bat",
-      "kind": "file",
-      "size_bytes": 890,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "EJECUTAR_IPHONE_AUTO.bat",
-      "kind": "file",
-      "size_bytes": 860,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "EJECUTAR_MASTER_SETUP.bat",
-      "kind": "file",
-      "size_bytes": 824,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "EJECUTAR_OPPO_AUTO.bat",
-      "kind": "file",
-      "size_bytes": 872,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "EJECUTAR_TODO_P0.bat",
-      "kind": "file",
-      "size_bytes": 2768,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
       "name": "ejemplo_tools.py",
       "kind": "file",
       "size_bytes": 5002,
@@ -2133,16 +1892,6 @@
       "destination_hint": "tools/root_scripts_review",
       "risk": "MEDIUM",
       "reason": "root_python_noise"
-    },
-    {
-      "name": "enable_adb_wifi.sh",
-      "kind": "file",
-      "size_bytes": 1461,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
     },
     {
       "name": "entities.json",
@@ -2265,16 +2014,6 @@
       "reason": "root_python_noise"
     },
     {
-      "name": "fix_adb.ps1",
-      "kind": "file",
-      "size_bytes": 1932,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
       "name": "fix_all_corruption.py",
       "kind": "file",
       "size_bytes": 2304,
@@ -2293,46 +2032,6 @@
       "destination_hint": "tools/root_scripts_review",
       "risk": "MEDIUM",
       "reason": "root_python_noise"
-    },
-    {
-      "name": "fix_ecosystem.bat",
-      "kind": "file",
-      "size_bytes": 1920,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "fix_oppo_sensors.sh",
-      "kind": "file",
-      "size_bytes": 3440,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "FIX_OPPO_TERMINAL.sh",
-      "kind": "file",
-      "size_bytes": 2374,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "fix_screen_hub.bat",
-      "kind": "file",
-      "size_bytes": 1476,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
     },
     {
       "name": "fix_writer_module.py",
@@ -2525,16 +2224,6 @@
       "reason": "secret_marker"
     },
     {
-      "name": "HABILITAR_POD_REMOTO.bat",
-      "kind": "file",
-      "size_bytes": 2107,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
       "name": "handoffs",
       "kind": "directory",
       "size_bytes": 0,
@@ -2595,46 +2284,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "INICIAR_API_SERVER.bat",
-      "kind": "file",
-      "size_bytes": 609,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "INICIAR_CLAUDIO.bat",
-      "kind": "file",
-      "size_bytes": 3618,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "INICIAR_CON_WINDOWS.bat",
-      "kind": "file",
-      "size_bytes": 661,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "INICIAR_CON_WINDOWS_HIDDEN.vbs",
-      "kind": "file",
-      "size_bytes": 284,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
       "name": "iniciar_conway_economico.py",
       "kind": "file",
       "size_bytes": 6182,
@@ -2643,16 +2292,6 @@
       "destination_hint": "tools/root_scripts_review",
       "risk": "MEDIUM",
       "reason": "root_python_noise"
-    },
-    {
-      "name": "INICIAR_PUBLICACION_AUTOMATICA.bat",
-      "kind": "file",
-      "size_bytes": 1346,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
     },
     {
       "name": "INICIAR_SESION.py",
@@ -2665,16 +2304,6 @@
       "reason": "root_python_noise"
     },
     {
-      "name": "INICIAR_SISTEMA_247.bat",
-      "kind": "file",
-      "size_bytes": 2174,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
       "name": "instagram_uploader.py",
       "kind": "file",
       "size_bytes": 21933,
@@ -2685,16 +2314,6 @@
       "reason": "root_python_noise"
     },
     {
-      "name": "INSTALAR_APPLE_DRIVERS.bat",
-      "kind": "file",
-      "size_bytes": 1720,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
       "name": "instalar_sadtalker.py",
       "kind": "file",
       "size_bytes": 3003,
@@ -2703,46 +2322,6 @@
       "destination_hint": "tools/root_scripts_review",
       "risk": "MEDIUM",
       "reason": "root_python_noise"
-    },
-    {
-      "name": "INSTALAR_TODO.ps1",
-      "kind": "file",
-      "size_bytes": 5491,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "install_all_security_tools.bat",
-      "kind": "file",
-      "size_bytes": 2164,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "install_n8n.bat",
-      "kind": "file",
-      "size_bytes": 1505,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "install_research_pc2.ps1",
-      "kind": "file",
-      "size_bytes": 2358,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
     },
     {
       "name": "installer",
@@ -2803,46 +2382,6 @@
       "destination_hint": "tools/root_scripts_review",
       "risk": "MEDIUM",
       "reason": "root_python_noise"
-    },
-    {
-      "name": "IPHONE_CONNECT_192.168.1.96.bat",
-      "kind": "file",
-      "size_bytes": 3127,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "IPHONE_DIAGNOSTICO.bat",
-      "kind": "file",
-      "size_bytes": 3136,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "iphone_post_jb_setup.sh",
-      "kind": "file",
-      "size_bytes": 3378,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "IPHONE_VERIFICAR.bat",
-      "kind": "file",
-      "size_bytes": 501,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
     },
     {
       "name": "jellyfin_auth.json",
@@ -2955,136 +2494,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "launch_argus.bat",
-      "kind": "file",
-      "size_bytes": 3038,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "launch_argus_web.bat",
-      "kind": "file",
-      "size_bytes": 186,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "launch_claudio_auto.bat",
-      "kind": "file",
-      "size_bytes": 4044,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "launch_coach.bat",
-      "kind": "file",
-      "size_bytes": 169,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "launch_crm.bat",
-      "kind": "file",
-      "size_bytes": 174,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "launch_hormiguero_hub.bat",
-      "kind": "file",
-      "size_bytes": 195,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "launch_hub_7474.bat",
-      "kind": "file",
-      "size_bytes": 818,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "launch_medioevo_console.bat",
-      "kind": "file",
-      "size_bytes": 355,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "launch_radiocinema.bat",
-      "kind": "file",
-      "size_bytes": 1191,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "launch_startup_sequence.bat",
-      "kind": "file",
-      "size_bytes": 128,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "LAUNCH_THESIS.bat",
-      "kind": "file",
-      "size_bytes": 3954,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "launch_voice_direct.bat",
-      "kind": "file",
-      "size_bytes": 197,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "launch_writer.bat",
-      "kind": "file",
-      "size_bytes": 177,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
       "name": "legal",
       "kind": "directory",
       "size_bytes": 0,
@@ -3113,16 +2522,6 @@
       "destination_hint": "data/root_config_review",
       "risk": "MEDIUM",
       "reason": "root_data_noise"
-    },
-    {
-      "name": "limpiar_espacio.ps1",
-      "kind": "file",
-      "size_bytes": 2684,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
     },
     {
       "name": "limpieza",
@@ -3193,16 +2592,6 @@
       "destination_hint": "data/root_config_review",
       "risk": "MEDIUM",
       "reason": "root_data_noise"
-    },
-    {
-      "name": "magisk_opo_patch.sh",
-      "kind": "file",
-      "size_bytes": 3073,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
     },
     {
       "name": "marble_connector.py",
@@ -3415,16 +2804,6 @@
       "reason": "root_python_noise"
     },
     {
-      "name": "MONITOR_OPPO.bat",
-      "kind": "file",
-      "size_bytes": 1565,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
       "name": "MOTOR_GATE_FINAL.md",
       "kind": "file",
       "size_bytes": 8704,
@@ -3433,16 +2812,6 @@
       "destination_hint": "docs/root_notes_review",
       "risk": "LOW",
       "reason": "root_doc_noise"
-    },
-    {
-      "name": "mover_a_E.ps1",
-      "kind": "file",
-      "size_bytes": 3064,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
     },
     {
       "name": "mover_modelos_e.py",
@@ -3525,16 +2894,6 @@
       "reason": "root_python_noise"
     },
     {
-      "name": "ollama_optimized_config.bat",
-      "kind": "file",
-      "size_bytes": 937,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
       "name": "onion",
       "kind": "directory",
       "size_bytes": 0,
@@ -3543,16 +2902,6 @@
       "destination_hint": "docs/intake/claudio_root_review",
       "risk": "MEDIUM",
       "reason": "noncanonical_root_dir"
-    },
-    {
-      "name": "oppo_clean.sh",
-      "kind": "file",
-      "size_bytes": 1334,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
     },
     {
       "name": "oppo_deploy",
@@ -3565,56 +2914,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "OPPO_DEPLOY_FIX.bat",
-      "kind": "file",
-      "size_bytes": 3859,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "oppo_fix_permissions.sh",
-      "kind": "file",
-      "size_bytes": 1490,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "oppo_install_python.sh",
-      "kind": "file",
-      "size_bytes": 1020,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "oppo_new_env.sh",
-      "kind": "file",
-      "size_bytes": 4732,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "oppo_one_tap.sh",
-      "kind": "file",
-      "size_bytes": 1838,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
       "name": "oppo_robot",
       "kind": "directory",
       "size_bytes": 0,
@@ -3623,16 +2922,6 @@
       "destination_hint": "docs/intake/claudio_root_review",
       "risk": "MEDIUM",
       "reason": "noncanonical_root_dir"
-    },
-    {
-      "name": "oppo_root_check.sh",
-      "kind": "file",
-      "size_bytes": 2462,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
     },
     {
       "name": "oppo_root_mtk.py",
@@ -3663,26 +2952,6 @@
       "destination_hint": "tools/root_scripts_review",
       "risk": "MEDIUM",
       "reason": "root_python_noise"
-    },
-    {
-      "name": "oppo_setup.sh",
-      "kind": "file",
-      "size_bytes": 4651,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "oppo_setup_termux.sh",
-      "kind": "file",
-      "size_bytes": 2307,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
     },
     {
       "name": "oppo_tv_cast.html",
@@ -3797,7 +3066,7 @@
     {
       "name": "PENDIENTES_MASTER.md",
       "kind": "file",
-      "size_bytes": 236856,
+      "size_bytes": 237443,
       "category": "root_document",
       "decision": "MOVE_CANDIDATE",
       "destination_hint": "docs/root_notes_review",
@@ -3925,26 +3194,6 @@
       "reason": "root_python_noise"
     },
     {
-      "name": "Pod_RDP.rdp",
-      "kind": "file",
-      "size_bytes": 1075,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "pod_server_setup.ps1",
-      "kind": "file",
-      "size_bytes": 5465,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
       "name": "post_next.py",
       "kind": "file",
       "size_bytes": 4144,
@@ -3983,26 +3232,6 @@
       "destination_hint": "tools/root_scripts_review",
       "risk": "MEDIUM",
       "reason": "root_python_noise"
-    },
-    {
-      "name": "POWERFUL_START.bat",
-      "kind": "file",
-      "size_bytes": 2875,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "prepare_voice.bat",
-      "kind": "file",
-      "size_bytes": 3433,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
     },
     {
       "name": "producto_final_codex",
@@ -4255,16 +3484,6 @@
       "reason": "root_data_noise"
     },
     {
-      "name": "remote_oppo_deploy.sh",
-      "kind": "file",
-      "size_bytes": 1048,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
       "name": "repair_corruption.py",
       "kind": "file",
       "size_bytes": 806,
@@ -4273,16 +3492,6 @@
       "destination_hint": "tools/root_scripts_review",
       "risk": "MEDIUM",
       "reason": "root_python_noise"
-    },
-    {
-      "name": "REPARAR_ECOSISTEMA.bat",
-      "kind": "file",
-      "size_bytes": 2589,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
     },
     {
       "name": "reports",
@@ -4435,46 +3644,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "RUFUS_DOWNLOAD_ALT.bat",
-      "kind": "file",
-      "size_bytes": 1535,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "RUN_ALL_AUTOMATIONS.bat",
-      "kind": "file",
-      "size_bytes": 1067,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "RUN_CANON10_EDITORIAL_PIPELINE.bat",
-      "kind": "file",
-      "size_bytes": 336,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "run_claudio_research_watch.cmd",
-      "kind": "file",
-      "size_bytes": 180,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
       "name": "run_conway.py",
       "kind": "file",
       "size_bytes": 1427,
@@ -4625,26 +3794,6 @@
       "reason": "root_python_noise"
     },
     {
-      "name": "setup_adguardhome_pc2.ps1",
-      "kind": "file",
-      "size_bytes": 4414,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "setup_auto_publish.ps1",
-      "kind": "file",
-      "size_bytes": 3750,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
       "name": "setup_cloudflare_dns.py",
       "kind": "file",
       "size_bytes": 4291,
@@ -4665,26 +3814,6 @@
       "reason": "secret_marker"
     },
     {
-      "name": "setup_jellyfin.ps1",
-      "kind": "file",
-      "size_bytes": 6108,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "setup_jellyfin_libraries.ps1",
-      "kind": "file",
-      "size_bytes": 4943,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
       "name": "setup_payments.py",
       "kind": "file",
       "size_bytes": 31297,
@@ -4703,26 +3832,6 @@
       "destination_hint": "tools/root_scripts_review",
       "risk": "MEDIUM",
       "reason": "root_python_noise"
-    },
-    {
-      "name": "setup_scheduler_simple.bat",
-      "kind": "file",
-      "size_bytes": 2841,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "setup_termux.sh",
-      "kind": "file",
-      "size_bytes": 1384,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
     },
     {
       "name": "shopify",
@@ -4875,16 +3984,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "start_all_agents.bat",
-      "kind": "file",
-      "size_bytes": 2716,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
       "name": "start_api_clean.py",
       "kind": "file",
       "size_bytes": 2173,
@@ -4893,106 +3992,6 @@
       "destination_hint": "tools/root_scripts_review",
       "risk": "MEDIUM",
       "reason": "root_python_noise"
-    },
-    {
-      "name": "start_avatar.bat",
-      "kind": "file",
-      "size_bytes": 111,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "start_chrome_debug.bat",
-      "kind": "file",
-      "size_bytes": 775,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "start_claudio.bat - Shortcut.lnk",
-      "kind": "file",
-      "size_bytes": 1780,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "start_claudio_boot.bat",
-      "kind": "file",
-      "size_bytes": 143,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "start_daemon_247.bat",
-      "kind": "file",
-      "size_bytes": 671,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "start_daemon_psi.bat",
-      "kind": "file",
-      "size_bytes": 1128,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "start_n8n.bat",
-      "kind": "file",
-      "size_bytes": 967,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "start_openmythos_adapter.bat",
-      "kind": "file",
-      "size_bytes": 75,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "start_social_agent.bat",
-      "kind": "file",
-      "size_bytes": 555,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
-      "name": "start_whatsapp.bat",
-      "kind": "file",
-      "size_bytes": 618,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
     },
     {
       "name": "store_profiles.json",
@@ -5335,16 +4334,6 @@
       "reason": "root_python_noise"
     },
     {
-      "name": "verify_ecosystem.bat",
-      "kind": "file",
-      "size_bytes": 2769,
-      "category": "launcher_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/launchers",
-      "risk": "MEDIUM",
-      "reason": "root_launcher_noise"
-    },
-    {
       "name": "verify_memory.py",
       "kind": "file",
       "size_bytes": 3420,
@@ -5614,54 +4603,19 @@
     " M website/catalogo-completo.html",
     " M website/duat.html",
     " M website/index.html",
-    "?? \" Claudio_Startup.bat\"",
     "?? .env.example",
     "?? .env.mova.example",
     "?? ALCATEL_AUTO_SETUP.py",
-    "?? AUTOMATED_SESSION.bat",
-    "?? AUTOMATE_SESSION.bat",
-    "?? CLAUDIO_CHAT.bat",
-    "?? CONFIGURAR_RED_POD.bat",
     "?? Claudio_Accesos_Directos/",
     "?? Claudio_Cobain.ico",
-    "?? Claudio_MODO_RAPIDO.bat",
     "?? \"C\\357\\200\\272tempsensor_server.py\"",
     "?? DASHBOARD_ARGUS_UNIFIED.html",
-    "?? DIAGNOSTICO_COMPLETO.bat",
     "?? ECOSISTEMA_MASTER_DEPLOY.py",
     "?? ECOSISTEMA_MASTER_SETUP.py",
-    "?? EJECUTAR_ALCATEL_AUTO.bat",
-    "?? EJECUTAR_COMO_ADMIN.bat",
-    "?? EJECUTAR_IPHONE_AUTO.bat",
-    "?? EJECUTAR_MASTER_SETUP.bat",
-    "?? EJECUTAR_OPPO_AUTO.bat",
-    "?? EJECUTAR_TODO_P0.bat",
-    "?? FIX_OPPO_TERMINAL.sh",
-    "?? HABILITAR_POD_REMOTO.bat",
-    "?? INICIAR_API_SERVER.bat",
-    "?? INICIAR_CLAUDIO.bat",
-    "?? INICIAR_CON_WINDOWS.bat",
-    "?? INICIAR_CON_WINDOWS_HIDDEN.vbs",
-    "?? INICIAR_PUBLICACION_AUTOMATICA.bat",
     "?? INICIAR_SESION.py",
-    "?? INICIAR_SISTEMA_247.bat",
-    "?? INSTALAR_APPLE_DRIVERS.bat",
-    "?? INSTALAR_TODO.ps1",
     "?? IPHONE_AUTO_SETUP.py",
-    "?? IPHONE_CONNECT_192.168.1.96.bat",
-    "?? IPHONE_DIAGNOSTICO.bat",
-    "?? IPHONE_VERIFICAR.bat",
-    "?? LAUNCH_THESIS.bat",
-    "?? MONITOR_OPPO.bat",
     "?? Modelfile.claudio",
-    "?? OPPO_DEPLOY_FIX.bat",
-    "?? POWERFUL_START.bat",
     "?? PROYECTO_REAL_35_A_6_MAS_1_MANIFEST.json",
-    "?? Pod_RDP.rdp",
-    "?? REPARAR_ECOSISTEMA.bat",
-    "?? RUFUS_DOWNLOAD_ALT.bat",
-    "?? RUN_ALL_AUTOMATIONS.bat",
-    "?? RUN_CANON10_EDITORIAL_PIPELINE.bat",
     "?? SAMPLE_DIALOGUES.json",
     "?? TERMUX_AUTO_BRIDGE.py",
     "?? _ARCHIVAR/",
@@ -5669,12 +4623,10 @@
     "?? _archivo_sesiones/",
     "?? _legacy/",
     "?? _local_quarantine/",
-    "?? _temp_oppo_persistent_setup.sh",
     "?? _ui_uploads/",
     "?? _workspace/",
     "?? activar_autopilot.py",
     "?? activar_tienda.py",
-    "?? adb_wrapper.bat",
     "?? add_cloudflare_dns.py",
     "?? ads/",
     "?? agent/",
@@ -5708,7 +4660,6 @@
     "?? auto_fix_claudio.py",
     "?? autopilot/",
     "?? autorepair/",
-    "?? autorun_oppo.ps1",
     "?? backup.py",
     "?? bardo/",
     "?? beneficiarios_config.json",
@@ -5727,11 +4678,9 @@
     "?? build_lore_db.py",
     "?? cache/",
     "?? catalog/",
-    "?? ceo_exec.bat",
     "?? chat_endpoint.py",
     "?? check_sendgrid_dns.py",
     "?? city_overlay/",
-    "?? claudio.bat",
     "?? claudio/",
     "?? claudio_api_server.py",
     "?? claudio_audio.py",
@@ -5752,7 +4701,6 @@
     "?? claudio_tui_legacy.py",
     "?? claudio_tv_token.json",
     "?? claudio_voice.py",
-    "?? cleanup_phase1.ps1",
     "?? codex/",
     "?? comfyui_config.json",
     "?? comfyui_setup.py",
@@ -5765,7 +4713,6 @@
     "?? config_autopilot.py",
     "?? configs/",
     "?? configurar_autostart.py",
-    "?? configurar_scheduler.bat",
     "?? consejo_cli.py",
     "?? consejo_elrond.py",
     "?? consejo_elrond_session.json",
@@ -5835,6 +4782,48 @@
     "?? core/module_containment.py",
     "?? core/module_manager.py",
     "?? core/multiquery.py",
-    "?? core/nexus_modular.py"
+    "?? core/nexus_modular.py",
+    "?? core/nollm_programmer/",
+    "?? core/observabit.py",
+    "?? core/observacion_engineering.py",
+    "?? core/observacion_runtime.py",
+    "?? core/observacionismo_runtime.py",
+    "?? core/observacionismo_skeleton_key.py",
+    "?? core/observastack.py",
+    "?? core/observastack_presets.py",
+    "?? core/observation_pipeline.py",
+    "?? core/observe_kernel/",
+    "?? core/observe_kernel_bridge.py",
+    "?? core/ocr_readiness.py",
+    "?? core/ollama_psi_runtime.py",
+    "?? core/optional_module_gate.py",
+    "?? core/performance_tracker.py",
+    "?? core/prompt_cache.py",
+    "?? core/prompt_contracts.py",
+    "?? core/provider_hub.py",
+    "?? core/psi_agency.py",
+    "?? core/psi_anti_drift.py",
+    "?? core/psi_auditor.py",
+    "?? core/psi_context_budget.py",
+    "?? core/psi_engine.py",
+    "?? core/psi_engine_routes.py",
+    "?? core/psi_ethical_core.py",
+    "?? core/psi_governor.py",
+    "?? core/psi_handoff.py",
+    "?? core/psi_progress_meter.py",
+    "?? core/psi_sequential.py",
+    "?? core/psi_session_fingerprint.py",
+    "?? core/psi_simplifier.py",
+    "?? core/psi_triage.py",
+    "?? core/psi_wabi_absorption.py",
+    "?? core/qwen_client.py",
+    "?? core/qwen_observacion_engine.py",
+    "?? core/report_naming_policy.py",
+    "?? core/research_daemon.py",
+    "?? core/research_extensions_bridge.py",
+    "?? core/rpg_city_bridge.py",
+    "?? core/sadtalker/",
+    "?? core/search.py",
+    "?? core/sensory_feed.py"
   ]
 }

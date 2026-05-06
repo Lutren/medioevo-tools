@@ -1,14 +1,14 @@
 # Claudio Root Human Audit - 2026-05-06
 
-Generated UTC: `2026-05-06T10:06:23.004593+00:00`
+Generated UTC: `2026-05-06T10:17:25.780148+00:00`
 Target: `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\-=MEDIOEVO=-\-=LIBROS\claudio`
 
 ## Summary
 
-- Root items: `554`
-- Root files: `402`
+- Root items: `453`
+- Root files: `301`
 - Root directories: `152`
-- Git pending lines: `1223`
+- Git pending lines: `1124`
 
 ## Category Counts
 
@@ -18,7 +18,6 @@ Target: `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\-=MEDIOEVO=-\-=LIBR
 | `cache_regenerable` | 11 |
 | `domain_module_or_legacy_dir` | 109 |
 | `git_control` | 1 |
-| `launcher_script` | 101 |
 | `local_config_tooling` | 7 |
 | `local_state_db` | 10 |
 | `misc_root_item` | 8 |
@@ -78,7 +77,6 @@ Target: `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\-=MEDIOEVO=-\-=LIBR
 
 | name | kind | category | decision | destination hint | reason |
 |---|---|---|---|---|---|
-| ` Claudio_Startup.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `-=PSI=-` | `directory` | `private_blocked` | `KEEP_PRIVATE_REVIEW` | `private/-=PSI=-` | `private_runtime_or_models` |
 | `.agents` | `directory` | `local_config_tooling` | `KEEP_REVIEW` | `.agents` | `local_tool_config` |
 | `.aider.chat.history.md` | `file` | `root_document` | `MOVE_CANDIDATE` | `docs/root_notes_review` | `root_doc_noise` |
@@ -105,12 +103,10 @@ Target: `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\-=MEDIOEVO=-\-=LIBR
 | `_archivo_sesiones` | `directory` | `archive_existing` | `KEEP_REVIEW_CONSOLIDATE` | `runtime/archivo_frio` | `existing_archive` |
 | `_legacy` | `directory` | `archive_existing` | `KEEP_REVIEW_CONSOLIDATE` | `runtime/archivo_frio` | `existing_archive` |
 | `_local_quarantine` | `directory` | `archive_existing` | `KEEP_REVIEW_CONSOLIDATE` | `runtime/archivo_frio` | `existing_archive` |
-| `_temp_oppo_persistent_setup.sh` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `_ui_uploads` | `directory` | `cache_regenerable` | `CANDIDATE_DELETE_AFTER_GATE` | `runtime/cache_or_artifacts` | `cache_or_generated_runtime` |
 | `_workspace` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `activar_autopilot.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `activar_tienda.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
-| `adb_wrapper.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `add_cloudflare_dns.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `ads` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `agent` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
@@ -138,11 +134,8 @@ Target: `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\-=MEDIOEVO=-\-=LIBR
 | `auditor` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `auto_fix_claudio.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `auto_generated` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
-| `AUTOMATE_SESSION.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `AUTOMATED_SESSION.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `autopilot` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `autorepair` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
-| `autorun_oppo.ps1` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `backup.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `bardo` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `beneficiarios_config.json` | `file` | `root_data_config` | `MOVE_CANDIDATE_REVIEW` | `data/root_config_review` | `root_data_noise` |
@@ -162,20 +155,17 @@ Target: `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\-=MEDIOEVO=-\-=LIBR
 | `cache` | `directory` | `cache_regenerable` | `CANDIDATE_DELETE_AFTER_GATE` | `runtime/cache_or_artifacts` | `cache_or_generated_runtime` |
 | `camera_frames` | `directory` | `cache_regenerable` | `CANDIDATE_DELETE_AFTER_GATE` | `runtime/cache_or_artifacts` | `cache_or_generated_runtime` |
 | `catalog` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
-| `ceo_exec.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `chat_endpoint.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `check_sendgrid_dns.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `checklists` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `city_overlay` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `CLAUDE.md.backup` | `file` | `misc_root_item` | `REVIEW` | `docs/intake/claudio_root_review` | `fallback` |
 | `claudio` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
-| `claudio.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `Claudio_Accesos_Directos` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `claudio_api_server.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `claudio_audio.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `claudio_avatar_web.html` | `file` | `root_media_or_ui` | `MOVE_CANDIDATE` | `assets/root_media_review` | `root_asset_noise` |
 | `claudio_camera_vision.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
-| `CLAUDIO_CHAT.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `claudio_cli.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `Claudio_Cobain.ico` | `file` | `root_media_or_ui` | `MOVE_CANDIDATE` | `assets/root_media_review` | `root_asset_noise` |
 | `claudio_daemon.db` | `file` | `local_state_db` | `KEEP_REVIEW_RETENTION` | `runtime/state` | `local_state_database` |
@@ -186,7 +176,6 @@ Target: `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\-=MEDIOEVO=-\-=LIBR
 | `claudio_harness.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `claudio_llm.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `claudio_memory.db` | `file` | `local_state_db` | `KEEP_REVIEW_RETENTION` | `runtime/state` | `local_state_database` |
-| `Claudio_MODO_RAPIDO.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `claudio_os` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `claudio_pipeline.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `claudio_secrets.json` | `file` | `secret_or_sensitive` | `BLOCK_MOVE_TO_PRIVATE_CONFIG` | `runtime/private_config` | `secret_marker` |
@@ -195,7 +184,6 @@ Target: `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\-=MEDIOEVO=-\-=LIBR
 | `claudio_tui_legacy.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `claudio_tv_token.json` | `file` | `secret_or_sensitive` | `BLOCK_MOVE_TO_PRIVATE_CONFIG` | `runtime/private_config` | `secret_marker` |
 | `claudio_voice.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
-| `cleanup_phase1.ps1` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `codex` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `comfyui_config.json` | `file` | `root_data_config` | `MOVE_CANDIDATE_REVIEW` | `data/root_config_review` | `root_data_noise` |
 | `comfyui_setup.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
@@ -209,8 +197,6 @@ Target: `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\-=MEDIOEVO=-\-=LIBR
 | `config_autopilot.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `configs` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `configurar_autostart.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
-| `CONFIGURAR_RED_POD.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `configurar_scheduler.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `consejo_cli.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `consejo_elrond.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `consejo_elrond_session.json` | `file` | `root_data_config` | `MOVE_CANDIDATE_REVIEW` | `data/root_config_review` | `root_data_noise` |
@@ -235,8 +221,6 @@ Target: `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\-=MEDIOEVO=-\-=LIBR
 | `coremetrics.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `coreollama_psi_runtime.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `cost` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
-| `crear_accesos.ps1` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `crear_accesos_directos.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `crear_productos_shopify.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `create_demo_clip.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `create_kocca_deck.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
@@ -259,11 +243,8 @@ Target: `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\-=MEDIOEVO=-\-=LIBR
 | `datasets` | `directory` | `runtime_core_root` | `KEEP` | `datasets` | `strong_runtime_route` |
 | `deepseek_chat.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `deploy_oppo_new_env.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
-| `deploy_sensor_oppo.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `descargar_chimera_fijo.ps1` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `device_protection_state.json` | `file` | `root_data_config` | `MOVE_CANDIDATE_REVIEW` | `data/root_config_review` | `root_data_noise` |
 | `devices` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
-| `DIAGNOSTICO_COMPLETO.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `diana_profile_builder.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `diana_voice_patch.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `docs` | `directory` | `runtime_core_root` | `KEEP` | `docs` | `strong_runtime_route` |
@@ -277,17 +258,10 @@ Target: `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\-=MEDIOEVO=-\-=LIBR
 | `ecosystem_launcher.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `ecosystem_orchestrator.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `editorial` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
-| `EJECUTAR_ALCATEL_AUTO.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `EJECUTAR_COMO_ADMIN.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `EJECUTAR_IPHONE_AUTO.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `EJECUTAR_MASTER_SETUP.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `EJECUTAR_OPPO_AUTO.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `EJECUTAR_TODO_P0.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `ejemplo_tools.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `elevenreader_prep.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `email_signature.html` | `file` | `root_media_or_ui` | `MOVE_CANDIDATE` | `assets/root_media_review` | `root_asset_noise` |
 | `emotional_arc.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
-| `enable_adb_wifi.sh` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `entities.json` | `file` | `root_data_config` | `MOVE_CANDIDATE_REVIEW` | `data/root_config_review` | `root_data_noise` |
 | `error_priority.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `etno` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
@@ -300,13 +274,8 @@ Target: `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\-=MEDIOEVO=-\-=LIBR
 | `finanzas` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `fine_tuned_models` | `directory` | `private_blocked` | `KEEP_PRIVATE_REVIEW` | `private/fine_tuned_models` | `private_runtime_or_models` |
 | `fingerprint_matcher.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
-| `fix_adb.ps1` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `fix_all_corruption.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `fix_como_si.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
-| `fix_ecosystem.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `fix_oppo_sensors.sh` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `FIX_OPPO_TERMINAL.sh` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `fix_screen_hub.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `fix_writer_module.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `gateway` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `generate_6plus1_volume_landings.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
@@ -326,38 +295,22 @@ Target: `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\-=MEDIOEVO=-\-=LIBR
 | `gumroad_api.json` | `file` | `secret_or_sensitive` | `BLOCK_MOVE_TO_PRIVATE_CONFIG` | `runtime/private_config` | `secret_marker` |
 | `gumroad_products.json` | `file` | `secret_or_sensitive` | `BLOCK_MOVE_TO_PRIVATE_CONFIG` | `runtime/private_config` | `secret_marker` |
 | `gumroad_verificar.py` | `file` | `secret_or_sensitive` | `BLOCK_MOVE_TO_PRIVATE_CONFIG` | `runtime/private_config` | `secret_marker` |
-| `HABILITAR_POD_REMOTO.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `handoffs` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `history` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `hook_gateway.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `hooks` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `humor_engine.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `i18n` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
-| `INICIAR_API_SERVER.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `INICIAR_CLAUDIO.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `INICIAR_CON_WINDOWS.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `INICIAR_CON_WINDOWS_HIDDEN.vbs` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `iniciar_conway_economico.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
-| `INICIAR_PUBLICACION_AUTOMATICA.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `INICIAR_SESION.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
-| `INICIAR_SISTEMA_247.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `instagram_uploader.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
-| `INSTALAR_APPLE_DRIVERS.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `instalar_sadtalker.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
-| `INSTALAR_TODO.ps1` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `install_all_security_tools.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `install_n8n.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `install_research_pc2.ps1` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `installer` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `INTEGRATION_LOCKFILE_2026-04-29.md` | `file` | `root_document` | `MOVE_CANDIDATE` | `docs/root_notes_review` | `root_doc_noise` |
 | `integrations` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `ios_companion` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `iphone_auto_post_jb.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `IPHONE_AUTO_SETUP.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
-| `IPHONE_CONNECT_192.168.1.96.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `IPHONE_DIAGNOSTICO.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `iphone_post_jb_setup.sh` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `IPHONE_VERIFICAR.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `jellyfin_auth.json` | `file` | `secret_or_sensitive` | `BLOCK_MOVE_TO_PRIVATE_CONFIG` | `runtime/private_config` | `secret_marker` |
 | `kairos_buddy_daemon.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `kairos_buddy_historial.json` | `file` | `root_data_config` | `MOVE_CANDIDATE_REVIEW` | `data/root_config_review` | `root_data_noise` |
@@ -369,23 +322,9 @@ Target: `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\-=MEDIOEVO=-\-=LIBR
 | `lago.db` | `file` | `local_state_db` | `KEEP_REVIEW_RETENTION` | `runtime/state` | `local_state_database` |
 | `lago.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `lang` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
-| `launch_argus.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `launch_argus_web.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `launch_claudio_auto.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `launch_coach.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `launch_crm.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `launch_hormiguero_hub.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `launch_hub_7474.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `launch_medioevo_console.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `launch_radiocinema.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `launch_startup_sequence.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `LAUNCH_THESIS.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `launch_voice_direct.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `launch_writer.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `legal` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `legal_boundaries.sqlite` | `file` | `local_state_db` | `KEEP_REVIEW_RETENTION` | `runtime/state` | `local_state_database` |
 | `libros.json` | `file` | `root_data_config` | `MOVE_CANDIDATE_REVIEW` | `data/root_config_review` | `root_data_noise` |
-| `limpiar_espacio.ps1` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `limpieza` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `llm` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `logi` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
@@ -393,7 +332,6 @@ Target: `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\-=MEDIOEVO=-\-=LIBR
 | `lore_db.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `lore_drops` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `lore_knowledge_base.json` | `file` | `root_data_config` | `MOVE_CANDIDATE_REVIEW` | `data/root_config_review` | `root_data_noise` |
-| `magisk_opo_patch.sh` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `marble_connector.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `marketing` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `matriz_feedback_lectores.csv` | `file` | `root_data_config` | `MOVE_CANDIDATE_REVIEW` | `data/root_config_review` | `root_data_noise` |
@@ -415,9 +353,7 @@ Target: `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\-=MEDIOEVO=-\-=LIBR
 | `Modelfile.gemma4_observador_lite` | `file` | `misc_root_item` | `REVIEW` | `docs/intake/claudio_root_review` | `fallback` |
 | `modes` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `molbook_connector.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
-| `MONITOR_OPPO.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `MOTOR_GATE_FINAL.md` | `file` | `root_document` | `MOVE_CANDIDATE` | `docs/root_notes_review` | `root_doc_noise` |
-| `mover_a_E.ps1` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `mover_modelos_e.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `narrative_engine.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `nemo_literary_analysis.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
@@ -426,22 +362,12 @@ Target: `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\-=MEDIOEVO=-\-=LIBR
 | `NEXT_SESSION_BRIEF.md` | `file` | `root_document` | `MOVE_CANDIDATE` | `docs/root_notes_review` | `root_doc_noise` |
 | `observacionismo` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `obsidian_integration.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
-| `ollama_optimized_config.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `onion` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
-| `oppo_clean.sh` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `oppo_deploy` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
-| `OPPO_DEPLOY_FIX.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `oppo_fix_permissions.sh` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `oppo_install_python.sh` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `oppo_new_env.sh` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `oppo_one_tap.sh` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `oppo_robot` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
-| `oppo_root_check.sh` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `oppo_root_mtk.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `oppo_sensor_patch.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `oppo_sensor_server.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
-| `oppo_setup.sh` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `oppo_setup_termux.sh` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `oppo_tv_cast.html` | `file` | `root_media_or_ui` | `MOVE_CANDIDATE` | `assets/root_media_review` | `root_asset_noise` |
 | `optimize_profiles.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `oraculo` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
@@ -466,14 +392,10 @@ Target: `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\-=MEDIOEVO=-\-=LIBR
 | `pod_catalog.json` | `file` | `root_data_config` | `MOVE_CANDIDATE_REVIEW` | `data/root_config_review` | `root_data_noise` |
 | `pod_config.json` | `file` | `root_data_config` | `MOVE_CANDIDATE_REVIEW` | `data/root_config_review` | `root_data_noise` |
 | `pod_designs.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
-| `Pod_RDP.rdp` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `pod_server_setup.ps1` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `post_next.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `post_to_reddit.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `postas` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `postmortem_protocol.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
-| `POWERFUL_START.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `prepare_voice.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `producto_final_codex` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `products` | `directory` | `runtime_core_root` | `KEEP` | `products` | `strong_runtime_route` |
 | `promo_build` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
@@ -499,9 +421,7 @@ Target: `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\-=MEDIOEVO=-\-=LIBR
 | `rate_limits.sqlite` | `file` | `local_state_db` | `KEEP_REVIEW_RETENTION` | `runtime/state` | `local_state_database` |
 | `redbubble_batch_1.json` | `file` | `root_data_config` | `MOVE_CANDIDATE_REVIEW` | `data/root_config_review` | `root_data_noise` |
 | `reddit_posts.json` | `file` | `root_data_config` | `MOVE_CANDIDATE_REVIEW` | `data/root_config_review` | `root_data_noise` |
-| `remote_oppo_deploy.sh` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `repair_corruption.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
-| `REPARAR_ECOSISTEMA.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `reports` | `directory` | `runtime_core_root` | `KEEP` | `reports` | `strong_runtime_route` |
 | `research` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `research_alerts.json` | `file` | `root_data_config` | `MOVE_CANDIDATE_REVIEW` | `data/root_config_review` | `root_data_noise` |
@@ -517,10 +437,6 @@ Target: `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\-=MEDIOEVO=-\-=LIBR
 | `ritual` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `rnd` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `routing` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
-| `RUFUS_DOWNLOAD_ALT.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `RUN_ALL_AUTOMATIONS.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `RUN_CANON10_EDITORIAL_PIPELINE.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `run_claudio_research_watch.cmd` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `run_conway.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `runtime` | `directory` | `runtime_core_root` | `KEEP` | `runtime` | `strong_runtime_route` |
 | `SAMPLE_DIALOGUES.json` | `file` | `root_data_config` | `MOVE_CANDIDATE_REVIEW` | `data/root_config_review` | `root_data_noise` |
@@ -536,16 +452,10 @@ Target: `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\-=MEDIOEVO=-\-=LIBR
 | `self_eval.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `self_heal` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `sensor_server.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
-| `setup_adguardhome_pc2.ps1` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `setup_auto_publish.ps1` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `setup_cloudflare_dns.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `setup_gumroad.py` | `file` | `secret_or_sensitive` | `BLOCK_MOVE_TO_PRIVATE_CONFIG` | `runtime/private_config` | `secret_marker` |
-| `setup_jellyfin.ps1` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `setup_jellyfin_libraries.ps1` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `setup_payments.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `setup_pc2_env.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
-| `setup_scheduler_simple.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `setup_termux.sh` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `shopify` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `shopify_buy_button.html` | `file` | `root_media_or_ui` | `MOVE_CANDIDATE` | `assets/root_media_review` | `root_asset_noise` |
 | `shopify_cdp_auto.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
@@ -561,18 +471,7 @@ Target: `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\-=MEDIOEVO=-\-=LIBR
 | `social_posts_ready.json` | `file` | `root_data_config` | `MOVE_CANDIDATE_REVIEW` | `data/root_config_review` | `root_data_noise` |
 | `soporte` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `sql` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
-| `start_all_agents.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `start_api_clean.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
-| `start_avatar.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `start_chrome_debug.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `start_claudio.bat - Shortcut.lnk` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `start_claudio_boot.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `start_daemon_247.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `start_daemon_psi.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `start_n8n.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `start_openmythos_adapter.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `start_social_agent.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
-| `start_whatsapp.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `store_profiles.json` | `file` | `root_data_config` | `MOVE_CANDIDATE_REVIEW` | `data/root_config_review` | `root_data_noise` |
 | `stripe_hsbc_bridge.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `sunday_featured_artist.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
@@ -607,7 +506,6 @@ Target: `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\-=MEDIOEVO=-\-=LIBR
 | `vault_medioevo` | `directory` | `private_blocked` | `KEEP_PRIVATE_REVIEW` | `private/vault_medioevo` | `private_runtime_or_models` |
 | `verificar_stripe.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `verify_autopilot.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
-| `verify_ecosystem.bat` | `file` | `launcher_script` | `MOVE_CANDIDATE` | `tools/launchers` | `root_launcher_noise` |
 | `verify_memory.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
 | `video` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `video_pipeline.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
