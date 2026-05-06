@@ -10,6 +10,7 @@ fallback determinista basado en reglas, artefactos y logs.
 cd C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\apps\local\wabi-sabi
 .\wabi.cmd "crea una funcion que lea un archivo y resuma sus lineas"
 .\wabi.cmd "ejecuta diagnostico"
+.\wabi.cmd bridge-plan "clasifica pendientes y genera resumen"
 .\wabi.cmd agents
 .\wabi.cmd e2e-smoke
 ```
@@ -29,6 +30,8 @@ wabi "crea un README para este modulo"
 - Las escrituras automaticas van a `runtime/outputs` y los logs a
   `runtime/logs`.
 - Las acciones riesgosas quedan en `BLOCK` o `REVIEW` con explicacion.
+- El puente OSIT registra decisiones en SQLite con hash-chain y no llama modelos
+  para tareas deterministicas.
 
 Ver tambien:
 

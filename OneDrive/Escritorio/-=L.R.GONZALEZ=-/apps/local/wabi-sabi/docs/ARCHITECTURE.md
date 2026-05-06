@@ -15,6 +15,7 @@ wabi_sabi/
     research_agent.py
     file_agent.py
   core/
+    bridge.py   # puente OSIT: envelope, R, routing, ActionGate, WitnessLog
     config.py
     gate.py
     memory.py
@@ -33,6 +34,25 @@ wabi_sabi/
 5. El agente ejecuta una accion segura.
 6. `memory.py` registra JSONL append-only.
 7. La respuesta sale con CERTEZA / INFERENCIA / INCOGNITA.
+
+## Puente OSIT
+
+`core/bridge.py` es la capa bridge-first absorbida desde `ESTADO.txt`. No llama
+modelos por defecto y no depende de Ollama como arquitectura. El flujo minimo es:
+
+```text
+TaskEnvelope -> ResidueMeter -> ActionGate -> ModelRegistry
+             -> RuntimeAdapter -> WitnessLog
+```
+
+Reglas actuales:
+
+- tareas deterministicas usan `deterministic_no_llm`;
+- triage bajo riesgo puede rutearse a `qwen2.5:0.5b`;
+- tareas tecnicas/codigo pueden rutearse a `qwen2.5-coder:3b`;
+- publicacion, secretos, acciones externas, borrado destructivo, aliases,
+  descargas, LoRA o fine-tuning quedan en `BLOCK`;
+- `WitnessLog` usa SQLite con hash-chain y `verify_chain()`.
 
 ## Contrato de agente
 

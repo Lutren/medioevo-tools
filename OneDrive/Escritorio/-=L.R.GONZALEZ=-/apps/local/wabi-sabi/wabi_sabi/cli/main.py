@@ -11,6 +11,7 @@ from wabi_sabi.agents.base_agent import AgentInput, AgentResult
 from wabi_sabi.cli.parser import parse_command
 from wabi_sabi.cli.router import AgentRegistry
 from wabi_sabi.core.config import RuntimeConfig, build_config
+from wabi_sabi.core.bridge import BridgeExecutor
 from wabi_sabi.core.gate import ActionGate
 from wabi_sabi.core.memory import LocalMemory
 from wabi_sabi.core.observation import ObservationEnvelope
@@ -164,6 +165,17 @@ def main(argv: list[str] | None = None) -> int:
         memory = LocalMemory(config.runtime_root)
         print(json.dumps(memory.tail_events(), indent=2, ensure_ascii=False))
         return 0
+    if command in {"bridge", "bridge-plan", "osit"}:
+        bridge_prompt = " ".join(items[1:]).strip() or "estado local"
+        executor = BridgeExecutor(config.runtime_root / "wabi_osit_bridge.sqlite")
+        payload = executor.execute(
+            bridge_prompt,
+            intent=parse_command(bridge_prompt).intent,
+            evidence_refs=["wabi_cli_bridge"],
+            source="wabi_cli",
+        ).to_dict()
+        print(json.dumps(payload, indent=2, ensure_ascii=False) if args.json else _format_bridge_payload(payload))
+        return 0 if payload["decision"]["gate"] != "BLOCK" else 2
     if command == "e2e-smoke":
         payload = execute_prompt(
             "crea una funcion que lea un archivo y resuma sus lineas",
@@ -186,6 +198,33 @@ def main(argv: list[str] | None = None) -> int:
     if args.json:
         print(json.dumps(payload, indent=2, ensure_ascii=False))
     return 0 if payload["ok"] else 2
+
+
+def _format_bridge_payload(payload: dict[str, Any]) -> str:
+    decision = payload["decision"]
+    envelope = payload["envelope"]
+    lines = [
+        "WABI SABI OSIT BRIDGE",
+        f"Gate: {decision['gate']}  Ruta: {decision['route']}  Runtime: {decision['runtime']}",
+        f"Modelo: {decision['model_id'] or 'none'}",
+        f"R: {decision['r_estimate']}  Phi_eff: {decision['phi_eff']}",
+        "",
+        "RAZONES:",
+    ]
+    lines.extend(f"- {reason}" for reason in decision["reasons"])
+    lines.append("")
+    lines.append("EVIDENCIA:")
+    if envelope["evidence_refs"]:
+        lines.extend(f"- {item}" for item in envelope["evidence_refs"])
+    else:
+        lines.append("- Falta evidencia; queda en REVIEW/BLOCK segun riesgo.")
+    lines.append("")
+    lines.append("ACCION:")
+    lines.append(f"- witness_event_id: {payload['witness_event_id']}")
+    lines.append(f"- fingerprint: {envelope['fingerprint']}")
+    if decision["blocked_actions"]:
+        lines.append(f"- blocked_actions: {', '.join(decision['blocked_actions'])}")
+    return "\n".join(lines)
 
 
 def _interactive(config: RuntimeConfig) -> int:

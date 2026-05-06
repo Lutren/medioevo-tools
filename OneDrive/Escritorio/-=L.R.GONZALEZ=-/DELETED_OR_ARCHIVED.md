@@ -423,3 +423,15 @@ Sources were absorbed into the Atlas before retirement. Unique material was move
 | status | original path | sha256 | archive/canonical path | reason |
 |---|---|---|---|---|
 | `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\OSIT-QG Modulos Extendidos - Optimizacion y Nuevas Aplicaciones.pdf` | `5253B5F5371FB8185AF5FBEB11B5D4E30B2D7380583D211AC08D617BE2436A80` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-06\5253B5F5371FB818_osit-qg-modulos-extendidos---optimizacion-y-nuevas-aplic.pdf` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Lobby de Alejandria Absorption 2026-05-06
+
+Sources were absorbed into fichas and local implementation before retirement. Unique material was moved to local Archivo Frio; no deletion was performed.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-06 | 1 | 0 | `docs\intake\lobby_alejandria_estado_2026-05-06_MANIFEST.json`; `docs\ops\WABI_OSIT_BRIDGE_FROM_ESTADO_2026-05-06.md` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\OneDrive\Escritorio\Lobby de Alejandria\ESTADO.txt` | `369DCD91A9BB70DC6D5509F02C2FD9D481CA2893C504435C5ADBAB17BB0882DE` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\lobby_alejandria\2026-05-06\369DCD91A9BB70DC_estado.txt` | `ABSORBIDO_IMPLEMENTADO_ARCHIVO_FRIO` |
