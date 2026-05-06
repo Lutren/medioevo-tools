@@ -3,92 +3,8 @@
   "generated_at_utc": "2026-05-06T08:16:07.737383+00:00",
   "records": [
     {
-      "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\Lobby de Alejandria\\## ESTADO.txt",
-      "archived_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\lobby_alejandria\\2026-05-06\\83A765A63CC41336_estado.txt",
-      "filename": "## ESTADO.txt",
-      "sha256": "83A765A63CC41336A09B3B85B6472F36A98AA68A023954522B98B74382E52ACE",
-      "size_bytes": 27347,
-      "line_count": 1532,
-      "character_count": 25506,
-      "lane": "OSIT-QG research boundary",
-      "psi_state": "BLOQUEADO",
-      "action_gate": "BLOCK",
-      "status": "BLOQUEADO_ARCHIVO_FRIO",
-      "decision": "ABSORB_METADATA_AND_ARCHIVE_BLOCKED_SOURCE",
-      "target_artifacts": [
-        "docs/canon/atlas/psi-observacionismo.md",
-        "docs/ops/OSIT_RESOURCE_OPTIMIZER_RUNTIME_SPEC_2026-05-06.md"
-      ],
-      "evidence_markers": [
-        "osit",
-        "falsadores"
-      ],
-      "extracted_patterns": [
-        "## ESTADO",
-        "El kernel base ya tenía las piezas mínimas: residuo (\\rho_R), capacidad (J_c), eficiencia (\\Phi_{geo}), límite GR, límite QFT y falsadores. La extensión final debe respetar ese esqueleto, no reemplazarlo.",
-        "## CERTEZA",
-        "El acoplo escalar–Gauss–Bonnet no puede dejarse libre. En modelos Einstein–Gauss–Bonnet, la compatibilidad con GW170817 exige que la velocidad tensorial sea (c_T^2\\simeq1); en formulaciones cosmológicas esto impone restricciones sobre la evolución temporal ...",
-        "El problema de energía de vacío no se resuelve automáticamente. Un mecanismo tipo sequestering puede cancelar contribuciones de vacío mediante campos auxiliares o restricciones globales/locales, pero eso es un módulo adicional, no una consecuencia gratuita ...",
-        "## INFERENCIA",
-        "## INCÓGNITA",
-        "## ACCIÓN",
-        "# OSIT-AG-K1.0",
-        "## Kernel de antigravedad residual no fantasma"
-      ],
-      "falsifiers": [
-        "sha256_mismatch",
-        "target_artifact_missing",
-        "private_boundary_leaks_to_public",
-        "source_left_in_lobby_after_archive"
-      ],
-      "risk_flags": [
-        "strong_physics_claim_boundary"
-      ]
-    },
-    {
-      "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\Lobby de Alejandria\\## ESTADO2.txt",
-      "archived_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\lobby_alejandria\\2026-05-06\\9E1999E40A6B5BC6_estado2.txt",
-      "filename": "## ESTADO2.txt",
-      "sha256": "9E1999E40A6B5BC675E787FC585028E06D6BFF994C123919A76A3FD91ACC5E11",
-      "size_bytes": 11751,
-      "line_count": 552,
-      "character_count": 11056,
-      "lane": "Wabi-Sabi/OSIT",
-      "psi_state": "INFERENCIA",
-      "action_gate": "REVIEW",
-      "status": "ABSORBIDO_ARCHIVO_FRIO",
-      "decision": "ABSORB_TO_ATLAS_AND_ARCHIVE_SOURCE",
-      "target_artifacts": [
-        "docs/ops/WABI_OSIT_BRIDGE_FROM_ESTADO_2026-05-06.md",
-        "apps/local/wabi-sabi"
-      ],
-      "evidence_markers": [
-        "osit",
-        "falsadores"
-      ],
-      "extracted_patterns": [
-        "## ESTADO",
-        "El núcleo original ya tenía las piezas: residuo (\\rho_R), capacidad (Jc_{geo}), eficiencia (\\Phi_{geo}), recuperación de límites y falsadores. En IA, eso se traduce directamente a control de incertidumbre, contexto, coste y riesgo.",
-        "## CERTEZA",
-        "## INFERENCIA",
-        "## INCÓGNITA",
-        "## ACCIÓN",
-        "## ARTEFACTO",
-        "### 1. Kernel operativo de optimización",
-        "### 2. Parámetros iniciales recomendados",
-        "### 3. Políticas de ahorro inmediato"
-      ],
-      "falsifiers": [
-        "sha256_mismatch",
-        "target_artifact_missing",
-        "private_boundary_leaks_to_public",
-        "source_left_in_lobby_after_archive"
-      ],
-      "risk_flags": []
-    },
-    {
       "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\Lobby de Alejandria\\0. Prompt maestro de continuidad ME.txt",
-      "archived_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\lobby_alejandria\\2026-05-06\\DB8791BE402BE2F7_0.-prompt-maestro-de-continuidad-me.txt",
+      "archived_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\lobby_alejandria\\2026-05-06\\01_prompt_master_orquestador\\DB8791BE402BE2F7_0.-prompt-maestro-de-continuidad-me.txt",
       "filename": "0. Prompt maestro de continuidad ME.txt",
       "sha256": "DB8791BE402BE2F7C41ACD19359AF406776E18BFE16BF4C5D83FE5DBDE500DB7",
       "size_bytes": 26792,
@@ -144,43 +60,44 @@
       ]
     },
     {
-      "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\Lobby de Alejandria\\Actúa como AGENTE AI BROWSER SEGURO.txt",
-      "archived_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\lobby_alejandria\\2026-05-06\\7BB6E729CB345BC5_acta-como-agente-ai-browser-seguro.txt",
-      "filename": "Actúa como AGENTE AI BROWSER SEGURO.txt",
-      "sha256": "7BB6E729CB345BC5D180B0CC2268D9A03B899E5D863E316920F6C78B10F23A07",
-      "size_bytes": 7007,
-      "line_count": 257,
-      "character_count": 6662,
-      "lane": "AI Browser Security",
+      "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\Lobby de Alejandria\\Actúa como AGENTE ORQUESTADOR DE CI.txt",
+      "archived_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\lobby_alejandria\\2026-05-06\\01_prompt_master_orquestador\\F3EB20ACC2C6663D_acta-como-agente-orquestador-de-ci.txt",
+      "filename": "Actúa como AGENTE ORQUESTADOR DE CI.txt",
+      "sha256": "F3EB20ACC2C6663D8E970E5D65C8A16432517D2A300694DAB4D463D5F1343F79",
+      "size_bytes": 6581,
+      "line_count": 218,
+      "character_count": 6266,
+      "lane": "Prompt Master/Orquestador",
       "psi_state": "INFERENCIA",
       "action_gate": "REVIEW",
       "status": "ABSORBIDO_ARCHIVO_FRIO",
       "decision": "ABSORB_TO_ATLAS_AND_ARCHIVE_SOURCE",
       "target_artifacts": [
-        "docs/ai_browser",
-        "tools/ai_browser"
+        "docs/ops/PROMPT_MASTER_EXECUTION_CONTROLLER_2026-05-06.md",
+        "runtime/prompt_master"
       ],
       "evidence_markers": [
         "actiongate",
         "witnesslog",
-        "observationenvelope",
         "wabi-sabi",
+        "duat",
+        "geodia",
         "matrix",
         "biblioteca",
-        "ai browser",
+        "rpg",
         "osit"
       ],
       "extracted_patterns": [
         "MISIÓN:",
-        "Diseñar un browser propio especializado para IA, orientado a evidencia, seguridad, navegación controlada, WitnessLog, GhostGate y ActionGate. No construyas el browser completo todavía. Primero crea especificación, amenaza, arquitectura, MVP y prototipo míni...",
-        "- ActionGate.",
-        "- WitnessLog.",
-        "- ObservationEnvelope.",
-        "- WitnessLog.",
-        "- ActionGate antes de acciones.",
+        "- ActionGate como sistema de permisos.",
+        "- WitnessLog como evidencia.",
         "REGLA CENTRAL:",
         "TAREAS:",
-        "- ActionGate"
+        "ARCHIVOS A CREAR:",
+        "RESTRICCIONES:",
+        "Wabi-Sabi no es el cerebro del sistema ni la AGI completa.",
+        "Wabi-Sabi es el nodo sensorial-cognitivo de control que:",
+        "Wabi-Sabi no debe contener todo el conocimiento especializado."
       ],
       "falsifiers": [
         "sha256_mismatch",
@@ -194,21 +111,248 @@
       ]
     },
     {
-      "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\Lobby de Alejandria\\Actúa como AGENTE CANON OBSERVACION.txt",
-      "archived_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\lobby_alejandria\\2026-05-06\\4247032BBBB96664_acta-como-agente-canon-observacion.txt",
-      "filename": "Actúa como AGENTE CANON OBSERVACION.txt",
-      "sha256": "4247032BBBB96664D90DBF58B4C015A2BFD2113C07EC20EEB39DFF5F5EEFE5EB",
-      "size_bytes": 7011,
-      "line_count": 285,
-      "character_count": 6623,
-      "lane": "PSI/Observacionismo",
+      "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\Lobby de Alejandria\\## ESTADO2.txt",
+      "archived_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\lobby_alejandria\\2026-05-06\\02_wabi_sabi_osit\\9E1999E40A6B5BC6_estado2.txt",
+      "filename": "## ESTADO2.txt",
+      "sha256": "9E1999E40A6B5BC675E787FC585028E06D6BFF994C123919A76A3FD91ACC5E11",
+      "size_bytes": 11751,
+      "line_count": 552,
+      "character_count": 11056,
+      "lane": "Wabi-Sabi/OSIT",
       "psi_state": "INFERENCIA",
       "action_gate": "REVIEW",
       "status": "ABSORBIDO_ARCHIVO_FRIO",
       "decision": "ABSORB_TO_ATLAS_AND_ARCHIVE_SOURCE",
       "target_artifacts": [
+        "docs/ops/WABI_OSIT_BRIDGE_FROM_ESTADO_2026-05-06.md",
+        "apps/local/wabi-sabi"
+      ],
+      "evidence_markers": [
+        "osit",
+        "falsadores"
+      ],
+      "extracted_patterns": [
+        "## ESTADO",
+        "El núcleo original ya tenía las piezas: residuo (\\rho_R), capacidad (Jc_{geo}), eficiencia (\\Phi_{geo}), recuperación de límites y falsadores. En IA, eso se traduce directamente a control de incertidumbre, contexto, coste y riesgo.",
+        "## CERTEZA",
+        "## INFERENCIA",
+        "## INCÓGNITA",
+        "## ACCIÓN",
+        "## ARTEFACTO",
+        "### 1. Kernel operativo de optimización",
+        "### 2. Parámetros iniciales recomendados",
+        "### 3. Políticas de ahorro inmediato"
+      ],
+      "falsifiers": [
+        "sha256_mismatch",
+        "target_artifact_missing",
+        "private_boundary_leaks_to_public",
+        "source_left_in_lobby_after_archive"
+      ],
+      "risk_flags": []
+    },
+    {
+      "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\Lobby de Alejandria\\Bloque para agregar a tu prompt act.txt",
+      "archived_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\lobby_alejandria\\2026-05-06\\02_wabi_sabi_osit\\1CD663AEED468CAA_bloque-para-agregar-a-tu-prompt-act.txt",
+      "filename": "Bloque para agregar a tu prompt act.txt",
+      "sha256": "1CD663AEED468CAAD4B5E690130A68E6614BC8CA9A25552314089C1C4CA02DAF",
+      "size_bytes": 11422,
+      "line_count": 366,
+      "character_count": 10841,
+      "lane": "Wabi-Sabi/OSIT",
+      "psi_state": "INFERENCIA",
+      "action_gate": "REVIEW",
+      "status": "ABSORBIDO_ARCHIVO_FRIO",
+      "decision": "ABSORB_TO_ATLAS_AND_ARCHIVE_SOURCE",
+      "target_artifacts": [
+        "docs/ops/WABI_OSIT_BRIDGE_FROM_ESTADO_2026-05-06.md",
+        "apps/local/wabi-sabi"
+      ],
+      "evidence_markers": [
+        "actiongate",
+        "witnesslog",
+        "wabi-sabi",
+        "duat",
+        "geodia",
+        "osit",
+        "qwen"
+      ],
+      "extracted_patterns": [
+        "## MÓDULO NUEVO — BRIDGE PROPIO, LIMPIEZA DE MODELO Y EXTRACCIÓN DE INSIGHT ENTRE LLMs",
+        "### 0. Contexto operativo",
+        "Estoy construyendo un sistema local-first llamado Wabi-Sabi / DUAT-GEODIA / OSIT, orientado a agentes locales, memoria persistente, control de recursos y arquitectura modular.",
+        "### 1. Pregunta central",
+        "¿Es obligatorio usar Ollama para ejecutar este sistema, o puedo construir un bridge propio que conecte modelos locales, modelos externos, agentes sin LLM, memoria, herramientas, ActionGate, WitnessLog y optimización de recursos?",
+        "### 2. Limpieza del modelo: observacionismo directo",
+        "- ActionGate;",
+        "- WitnessLog.",
+        "### 3. Observacionismo inverso aplicado al modelo",
+        "Asume que ya existe un modelo “limpio” para Wabi-Sabi."
+      ],
+      "falsifiers": [
+        "sha256_mismatch",
+        "target_artifact_missing",
+        "private_boundary_leaks_to_public",
+        "source_left_in_lobby_after_archive"
+      ],
+      "risk_flags": [
+        "model_mutation_boundary"
+      ]
+    },
+    {
+      "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\Lobby de Alejandria\\Kernel inicial del reto 1 OSIT-QG v.txt",
+      "archived_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\lobby_alejandria\\2026-05-06\\02_wabi_sabi_osit\\0CD17F706C3E4040_kernel-inicial-del-reto-1-osit-qg-v.txt",
+      "filename": "Kernel inicial del reto 1 OSIT-QG v.txt",
+      "sha256": "0CD17F706C3E40400F404AE5449A513155C9B25C2060BD78A2FFED30E2848B92",
+      "size_bytes": 39504,
+      "line_count": 733,
+      "character_count": 37851,
+      "lane": "Wabi-Sabi/OSIT",
+      "psi_state": "INFERENCIA",
+      "action_gate": "REVIEW",
+      "status": "ABSORBIDO_ARCHIVO_FRIO",
+      "decision": "ABSORB_TO_ATLAS_AND_ARCHIVE_SOURCE",
+      "target_artifacts": [
+        "docs/ops/WABI_OSIT_BRIDGE_FROM_ESTADO_2026-05-06.md",
+        "apps/local/wabi-sabi"
+      ],
+      "evidence_markers": [
+        "duat",
+        "osit",
+        "falsadores"
+      ],
+      "extracted_patterns": [
+        "La gravedad es la geometría macroscópica emergente de restricciones",
+        "Falsadores inmediatos:",
+        "## Certeza",
+        "## Inferencia",
+        "## Incógnita",
+        "## Acción",
+        "Verificar límites: ρ_R→0 → Φ_geo→1, G_{μν} std [analógico ]; η_{μν} → QFT ok; Planck: Jc finito evita UV catastrophe. Falsadores pasados (conservación, Newton) viables si L_R diffeom-invariant.",
+        "## Artefacto",
+        "- Predicciones, límites, falsadores y observables",
+        "# 🚀 **OSIT‑QG v1.0 — Teoría Completa de Gravedad Emergente Informacional**"
+      ],
+      "falsifiers": [
+        "sha256_mismatch",
+        "target_artifact_missing",
+        "private_boundary_leaks_to_public",
+        "source_left_in_lobby_after_archive"
+      ],
+      "risk_flags": [
+        "model_mutation_boundary"
+      ]
+    },
+    {
+      "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\Lobby de Alejandria\\## ESTADO.txt",
+      "archived_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\lobby_alejandria\\2026-05-06\\03_osit_qg_research_boundary\\83A765A63CC41336_estado.txt",
+      "filename": "## ESTADO.txt",
+      "sha256": "83A765A63CC41336A09B3B85B6472F36A98AA68A023954522B98B74382E52ACE",
+      "size_bytes": 27347,
+      "line_count": 1532,
+      "character_count": 25506,
+      "lane": "OSIT-QG research boundary",
+      "psi_state": "BLOQUEADO",
+      "action_gate": "BLOCK",
+      "status": "BLOQUEADO_ARCHIVO_FRIO",
+      "decision": "ABSORB_METADATA_AND_ARCHIVE_BLOCKED_SOURCE",
+      "target_artifacts": [
         "docs/canon/atlas/psi-observacionismo.md",
-        "schemas/observacionismo_concepts.schema.json"
+        "docs/ops/OSIT_RESOURCE_OPTIMIZER_RUNTIME_SPEC_2026-05-06.md"
+      ],
+      "evidence_markers": [
+        "osit",
+        "falsadores"
+      ],
+      "extracted_patterns": [
+        "## ESTADO",
+        "El kernel base ya tenía las piezas mínimas: residuo (\\rho_R), capacidad (J_c), eficiencia (\\Phi_{geo}), límite GR, límite QFT y falsadores. La extensión final debe respetar ese esqueleto, no reemplazarlo.",
+        "## CERTEZA",
+        "El acoplo escalar–Gauss–Bonnet no puede dejarse libre. En modelos Einstein–Gauss–Bonnet, la compatibilidad con GW170817 exige que la velocidad tensorial sea (c_T^2\\simeq1); en formulaciones cosmológicas esto impone restricciones sobre la evolución temporal ...",
+        "El problema de energía de vacío no se resuelve automáticamente. Un mecanismo tipo sequestering puede cancelar contribuciones de vacío mediante campos auxiliares o restricciones globales/locales, pero eso es un módulo adicional, no una consecuencia gratuita ...",
+        "## INFERENCIA",
+        "## INCÓGNITA",
+        "## ACCIÓN",
+        "# OSIT-AG-K1.0",
+        "## Kernel de antigravedad residual no fantasma"
+      ],
+      "falsifiers": [
+        "sha256_mismatch",
+        "target_artifact_missing",
+        "private_boundary_leaks_to_public",
+        "source_left_in_lobby_after_archive"
+      ],
+      "risk_flags": [
+        "strong_physics_claim_boundary"
+      ]
+    },
+    {
+      "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\Lobby de Alejandria\\ESTADO.txt",
+      "archived_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\lobby_alejandria\\2026-05-06\\03_osit_qg_research_boundary\\369DCD91A9BB70DC_estado.txt",
+      "filename": "ESTADO.txt",
+      "sha256": "369DCD91A9BB70DC6D5509F02C2FD9D481CA2893C504435C5ADBAB17BB0882DE",
+      "size_bytes": 253472,
+      "line_count": 5623,
+      "character_count": 240770,
+      "lane": "OSIT-QG research boundary",
+      "psi_state": "BLOQUEADO",
+      "action_gate": "BLOCK",
+      "status": "BLOQUEADO_ARCHIVO_FRIO",
+      "decision": "ABSORB_METADATA_AND_ARCHIVE_BLOCKED_SOURCE",
+      "target_artifacts": [
+        "docs/ops/WABI_OSIT_BRIDGE_FROM_ESTADO_2026-05-06.md",
+        "apps/local/wabi-sabi"
+      ],
+      "evidence_markers": [
+        "actiongate",
+        "witnesslog",
+        "observationenvelope",
+        "wabi-sabi",
+        "duat",
+        "geodia",
+        "osit",
+        "qwen"
+      ],
+      "extracted_patterns": [
+        "La “limpieza” más rentable es externa: filtros, validadores, structured output, memoria local, RAG local, ActionGate y WitnessLog antes que tocar pesos.",
+        "Arquitectura mínima: `RuntimeAdapter -> ModelRegistry -> TaskRouter -> ActionGate -> ToolBroker/MemoryBroker -> WitnessLog -> Evaluator -> HandoffManager`.",
+        "Añade `ResidueMeter` para decidir si usar 3B, 0.5B o ningún LLM, y `ContextCompressor` para recortar contexto antes de invocar modelos.",
+        "Limpieza externa: prompts, filtros de entrada/salida, validadores, rechazo/reparación, structured output, memoria externa, RAG local, ActionGate y WitnessLog.",
+        "No uses ningún LLM cuando la tarea sea determinista, cuando la memoria/índices ya respondan, o cuando ActionGate bloquee por riesgo.",
+        "Escala a externa solo si falta capacidad, cobertura o calidad demostrada, y siempre con WitnessLog.",
+        "Primitiva central: `route(task) -> decision`; si `risk>threshold` o `evidence` insuficiente, pasa por ActionGate o se rechaza.",
+        "El cuarto es perder trazabilidad si el WitnessLog no es obligatorio.",
+        "Mide cuántas acciones bloquea ActionGate por falta de evidencia y cuántas eran correctas.",
+        "2. Componente faltante inevitable: ResidueMeter + WitnessLog + ActionGate."
+      ],
+      "falsifiers": [
+        "sha256_mismatch",
+        "target_artifact_missing",
+        "private_boundary_leaks_to_public",
+        "source_left_in_lobby_after_archive"
+      ],
+      "risk_flags": [
+        "model_mutation_boundary",
+        "strong_physics_claim_boundary"
+      ]
+    },
+    {
+      "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\Lobby de Alejandria\\Actúa como AGENTE MATRIX  BIBLIOTEC.txt",
+      "archived_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\lobby_alejandria\\2026-05-06\\04_matrix_biblioteca\\46401C252D8B2CAE_acta-como-agente-matrix-bibliotec.txt",
+      "filename": "Actúa como AGENTE MATRIX  BIBLIOTEC.txt",
+      "sha256": "46401C252D8B2CAE2A8580B71BA8A4B46216F02C91652CB23560A868E875709F",
+      "size_bytes": 7711,
+      "line_count": 305,
+      "character_count": 7302,
+      "lane": "Matrix/Biblioteca",
+      "psi_state": "INFERENCIA",
+      "action_gate": "REVIEW",
+      "status": "ABSORBIDO_ARCHIVO_FRIO",
+      "decision": "ABSORB_TO_ATLAS_AND_ARCHIVE_SOURCE",
+      "target_artifacts": [
+        "docs/matrix",
+        "library/index.json",
+        "library/modules"
       ],
       "evidence_markers": [
         "actiongate",
@@ -218,21 +362,58 @@
         "duat",
         "matrix",
         "biblioteca",
-        "osit",
-        "qwen",
-        "falsadores"
+        "mission control"
       ],
       "extracted_patterns": [
         "MISIÓN:",
-        "Convertir Observacionismo de teoría/documentos a canon operativo verificable mediante schema, dataset semilla, validador y conexión conceptual con COMMS, lenguaje L1 y ActionGate.",
-        "- dataset semilla de claims/evidencias/falsadores/gates.",
-        "- conectar schema a COMMS, lenguaje L1 y ActionGate.",
+        "- Wabi-Sabi / Sentido Común.",
         "REGLA CENTRAL:",
+        "TAREAS:",
+        "- Wabi-Sabi",
+        "- ObservationEnvelope",
         "- ActionGate",
         "- WitnessLog",
-        "- ObservationEnvelope",
-        "- ObservationEnvelope",
-        "- ActionGate"
+        "ARCHIVOS A CREAR:",
+        "18. `library/modules/security_actiongate.json`"
+      ],
+      "falsifiers": [
+        "sha256_mismatch",
+        "target_artifact_missing",
+        "private_boundary_leaks_to_public",
+        "source_left_in_lobby_after_archive"
+      ],
+      "risk_flags": [
+        "private_boundary",
+        "publication_boundary"
+      ]
+    },
+    {
+      "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\Lobby de Alejandria\\README_LOBBY_DE_ALEJANDRIA.md",
+      "archived_path": null,
+      "filename": "README_LOBBY_DE_ALEJANDRIA.md",
+      "sha256": "9E18FC3530731CF0AF711986A05C37BEF986CAE77E3289D872D13EDEBB5FDEFE",
+      "size_bytes": 1113,
+      "line_count": 29,
+      "character_count": 1112,
+      "lane": "Matrix/Biblioteca",
+      "psi_state": "INFERENCIA",
+      "action_gate": "REVIEW",
+      "status": "CANONICO_EN_LOBBY",
+      "decision": "KEEP_LOBBY_OPERATING_README",
+      "target_artifacts": [
+        "docs/matrix",
+        "library/index.json",
+        "library/modules"
+      ],
+      "evidence_markers": [
+        "actiongate"
+      ],
+      "extracted_patterns": [
+        "# Lobby de Alejandria",
+        "## Regla",
+        "## Prohibido",
+        "- Publicar contenido sin ActionGate.",
+        "## Ritmo"
       ],
       "falsifiers": [
         "sha256_mismatch",
@@ -247,7 +428,7 @@
     },
     {
       "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\Lobby de Alejandria\\Actúa como AGENTE DUAT GEODIA OS P3.txt",
-      "archived_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\lobby_alejandria\\2026-05-06\\0F7F189B362903EC_acta-como-agente-duat-geodia-os-p3.txt",
+      "archived_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\lobby_alejandria\\2026-05-06\\05_duat_geodia_private_research\\0F7F189B362903EC_acta-como-agente-duat-geodia-os-p3.txt",
       "filename": "Actúa como AGENTE DUAT GEODIA OS P3.txt",
       "sha256": "0F7F189B362903ECA89282964251C8CB40E1FCFCD13886CDE3461AC88B6FF065",
       "size_bytes": 5394,
@@ -298,7 +479,7 @@
     },
     {
       "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\Lobby de Alejandria\\Actúa como AGENTE DUAT READ-ONLY AD.txt",
-      "archived_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\lobby_alejandria\\2026-05-06\\906B90285824B1DF_acta-como-agente-duat-read-only-ad.txt",
+      "archived_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\lobby_alejandria\\2026-05-06\\06_duat_readonly_adapter\\906B90285824B1DF_acta-como-agente-duat-read-only-ad.txt",
       "filename": "Actúa como AGENTE DUAT READ-ONLY AD.txt",
       "sha256": "906B90285824B1DF25CCE0357BE0FAFD84FFE4DD58F477133B3406E896705CAB",
       "size_bytes": 6352,
@@ -350,8 +531,60 @@
       ]
     },
     {
+      "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\Lobby de Alejandria\\Actúa como AGENTE CANON OBSERVACION.txt",
+      "archived_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\lobby_alejandria\\2026-05-06\\07_psi_observacionismo\\4247032BBBB96664_acta-como-agente-canon-observacion.txt",
+      "filename": "Actúa como AGENTE CANON OBSERVACION.txt",
+      "sha256": "4247032BBBB96664D90DBF58B4C015A2BFD2113C07EC20EEB39DFF5F5EEFE5EB",
+      "size_bytes": 7011,
+      "line_count": 285,
+      "character_count": 6623,
+      "lane": "PSI/Observacionismo",
+      "psi_state": "INFERENCIA",
+      "action_gate": "REVIEW",
+      "status": "ABSORBIDO_ARCHIVO_FRIO",
+      "decision": "ABSORB_TO_ATLAS_AND_ARCHIVE_SOURCE",
+      "target_artifacts": [
+        "docs/canon/atlas/psi-observacionismo.md",
+        "schemas/observacionismo_concepts.schema.json"
+      ],
+      "evidence_markers": [
+        "actiongate",
+        "witnesslog",
+        "observationenvelope",
+        "wabi-sabi",
+        "duat",
+        "matrix",
+        "biblioteca",
+        "osit",
+        "qwen",
+        "falsadores"
+      ],
+      "extracted_patterns": [
+        "MISIÓN:",
+        "Convertir Observacionismo de teoría/documentos a canon operativo verificable mediante schema, dataset semilla, validador y conexión conceptual con COMMS, lenguaje L1 y ActionGate.",
+        "- dataset semilla de claims/evidencias/falsadores/gates.",
+        "- conectar schema a COMMS, lenguaje L1 y ActionGate.",
+        "REGLA CENTRAL:",
+        "- ActionGate",
+        "- WitnessLog",
+        "- ObservationEnvelope",
+        "- ObservationEnvelope",
+        "- ActionGate"
+      ],
+      "falsifiers": [
+        "sha256_mismatch",
+        "target_artifact_missing",
+        "private_boundary_leaks_to_public",
+        "source_left_in_lobby_after_archive"
+      ],
+      "risk_flags": [
+        "private_boundary",
+        "publication_boundary"
+      ]
+    },
+    {
       "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\Lobby de Alejandria\\Actúa como AGENTE LENGUAJE OBSERVAC.txt",
-      "archived_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\lobby_alejandria\\2026-05-06\\1E51145CE73413FD_acta-como-agente-lenguaje-observac.txt",
+      "archived_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\lobby_alejandria\\2026-05-06\\08_lenguaje_observacionista\\1E51145CE73413FD_acta-como-agente-lenguaje-observac.txt",
       "filename": "Actúa como AGENTE LENGUAJE OBSERVAC.txt",
       "sha256": "1E51145CE73413FDECF2B5C7581D981A87C43AD2C9758723C61C75143290451A",
       "size_bytes": 7174,
@@ -402,93 +635,43 @@
       ]
     },
     {
-      "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\Lobby de Alejandria\\Actúa como AGENTE MATRIX  BIBLIOTEC.txt",
-      "archived_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\lobby_alejandria\\2026-05-06\\46401C252D8B2CAE_acta-como-agente-matrix-bibliotec.txt",
-      "filename": "Actúa como AGENTE MATRIX  BIBLIOTEC.txt",
-      "sha256": "46401C252D8B2CAE2A8580B71BA8A4B46216F02C91652CB23560A868E875709F",
-      "size_bytes": 7711,
-      "line_count": 305,
-      "character_count": 7302,
-      "lane": "Matrix/Biblioteca",
+      "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\Lobby de Alejandria\\Actúa como AGENTE AI BROWSER SEGURO.txt",
+      "archived_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\lobby_alejandria\\2026-05-06\\09_ai_browser_security\\7BB6E729CB345BC5_acta-como-agente-ai-browser-seguro.txt",
+      "filename": "Actúa como AGENTE AI BROWSER SEGURO.txt",
+      "sha256": "7BB6E729CB345BC5D180B0CC2268D9A03B899E5D863E316920F6C78B10F23A07",
+      "size_bytes": 7007,
+      "line_count": 257,
+      "character_count": 6662,
+      "lane": "AI Browser Security",
       "psi_state": "INFERENCIA",
       "action_gate": "REVIEW",
       "status": "ABSORBIDO_ARCHIVO_FRIO",
       "decision": "ABSORB_TO_ATLAS_AND_ARCHIVE_SOURCE",
       "target_artifacts": [
-        "docs/matrix",
-        "library/index.json",
-        "library/modules"
+        "docs/ai_browser",
+        "tools/ai_browser"
       ],
       "evidence_markers": [
         "actiongate",
         "witnesslog",
         "observationenvelope",
         "wabi-sabi",
-        "duat",
         "matrix",
         "biblioteca",
-        "mission control"
+        "ai browser",
+        "osit"
       ],
       "extracted_patterns": [
         "MISIÓN:",
-        "- Wabi-Sabi / Sentido Común.",
+        "Diseñar un browser propio especializado para IA, orientado a evidencia, seguridad, navegación controlada, WitnessLog, GhostGate y ActionGate. No construyas el browser completo todavía. Primero crea especificación, amenaza, arquitectura, MVP y prototipo míni...",
+        "- ActionGate.",
+        "- WitnessLog.",
+        "- ObservationEnvelope.",
+        "- WitnessLog.",
+        "- ActionGate antes de acciones.",
         "REGLA CENTRAL:",
         "TAREAS:",
-        "- Wabi-Sabi",
-        "- ObservationEnvelope",
-        "- ActionGate",
-        "- WitnessLog",
-        "ARCHIVOS A CREAR:",
-        "18. `library/modules/security_actiongate.json`"
-      ],
-      "falsifiers": [
-        "sha256_mismatch",
-        "target_artifact_missing",
-        "private_boundary_leaks_to_public",
-        "source_left_in_lobby_after_archive"
-      ],
-      "risk_flags": [
-        "private_boundary",
-        "publication_boundary"
-      ]
-    },
-    {
-      "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\Lobby de Alejandria\\Actúa como AGENTE MEDIOEVO RPG TOOL.txt",
-      "archived_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\lobby_alejandria\\2026-05-06\\9627A14F8A7BAF75_acta-como-agente-medioevo-rpg-tool.txt",
-      "filename": "Actúa como AGENTE MEDIOEVO RPG TOOL.txt",
-      "sha256": "9627A14F8A7BAF7520C60861238BFD73D48A32219ADE846F40E99CC5A398F662",
-      "size_bytes": 7597,
-      "line_count": 264,
-      "character_count": 7242,
-      "lane": "Privado RPG/TCG",
-      "psi_state": "INFERENCIA",
-      "action_gate": "REVIEW",
-      "status": "ABSORBIDO_ARCHIVO_FRIO",
-      "decision": "ABSORB_TO_ATLAS_AND_ARCHIVE_SOURCE",
-      "target_artifacts": [
-        "docs/canon/atlas/privado-bloqueado.md",
-        "game-private"
-      ],
-      "evidence_markers": [
-        "actiongate",
-        "witnesslog",
-        "wabi-sabi",
-        "duat",
-        "matrix",
-        "biblioteca",
-        "rpg"
-      ],
-      "extracted_patterns": [
-        "MISIÓN:",
-        "REGLA CENTRAL:",
-        "TAREAS INTERNAS:",
-        "ARCHIVOS A CREAR:",
-        "RESTRICCIONES:",
-        "Wabi-Sabi no es el cerebro del sistema ni la AGI completa.",
-        "Wabi-Sabi es el nodo sensorial-cognitivo de control que:",
-        "Wabi-Sabi no debe contener todo el conocimiento especializado.",
-        "Wabi-Sabi debe cargar módulos desde Matrix/Biblioteca solo cuando sean necesarios.",
-        "Wabi-Sabi no reemplaza al usuario."
+        "- ActionGate"
       ],
       "falsifiers": [
         "sha256_mismatch",
@@ -503,7 +686,7 @@
     },
     {
       "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\Lobby de Alejandria\\Actúa como AGENTE MISSION CONTROL.txt",
-      "archived_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\lobby_alejandria\\2026-05-06\\D692921B5742E035_acta-como-agente-mission-control.txt",
+      "archived_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\lobby_alejandria\\2026-05-06\\10_mission_control_comms\\D692921B5742E035_acta-como-agente-mission-control.txt",
       "filename": "Actúa como AGENTE MISSION CONTROL.txt",
       "sha256": "D692921B5742E035591477FE8CD2274E447EA2A2DA98B1C50F0B9115E4AB0EA7",
       "size_bytes": 6045,
@@ -550,59 +733,8 @@
       ]
     },
     {
-      "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\Lobby de Alejandria\\Actúa como AGENTE ORQUESTADOR DE CI.txt",
-      "archived_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\lobby_alejandria\\2026-05-06\\F3EB20ACC2C6663D_acta-como-agente-orquestador-de-ci.txt",
-      "filename": "Actúa como AGENTE ORQUESTADOR DE CI.txt",
-      "sha256": "F3EB20ACC2C6663D8E970E5D65C8A16432517D2A300694DAB4D463D5F1343F79",
-      "size_bytes": 6581,
-      "line_count": 218,
-      "character_count": 6266,
-      "lane": "Prompt Master/Orquestador",
-      "psi_state": "INFERENCIA",
-      "action_gate": "REVIEW",
-      "status": "ABSORBIDO_ARCHIVO_FRIO",
-      "decision": "ABSORB_TO_ATLAS_AND_ARCHIVE_SOURCE",
-      "target_artifacts": [
-        "docs/ops/PROMPT_MASTER_EXECUTION_CONTROLLER_2026-05-06.md",
-        "runtime/prompt_master"
-      ],
-      "evidence_markers": [
-        "actiongate",
-        "witnesslog",
-        "wabi-sabi",
-        "duat",
-        "geodia",
-        "matrix",
-        "biblioteca",
-        "rpg",
-        "osit"
-      ],
-      "extracted_patterns": [
-        "MISIÓN:",
-        "- ActionGate como sistema de permisos.",
-        "- WitnessLog como evidencia.",
-        "REGLA CENTRAL:",
-        "TAREAS:",
-        "ARCHIVOS A CREAR:",
-        "RESTRICCIONES:",
-        "Wabi-Sabi no es el cerebro del sistema ni la AGI completa.",
-        "Wabi-Sabi es el nodo sensorial-cognitivo de control que:",
-        "Wabi-Sabi no debe contener todo el conocimiento especializado."
-      ],
-      "falsifiers": [
-        "sha256_mismatch",
-        "target_artifact_missing",
-        "private_boundary_leaks_to_public",
-        "source_left_in_lobby_after_archive"
-      ],
-      "risk_flags": [
-        "private_boundary",
-        "publication_boundary"
-      ]
-    },
-    {
       "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\Lobby de Alejandria\\Actúa como AGENTE PROGRAMADOR SEGUR.txt",
-      "archived_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\lobby_alejandria\\2026-05-06\\7F3E194C2E542FBC_acta-como-agente-programador-segur.txt",
+      "archived_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\lobby_alejandria\\2026-05-06\\11_seguridad_programador_local\\7F3E194C2E542FBC_acta-como-agente-programador-segur.txt",
       "filename": "Actúa como AGENTE PROGRAMADOR SEGUR.txt",
       "sha256": "7F3E194C2E542FBCCE5EE928D2AAC1DCFF552E3242D7F2B945D0A038083589DA",
       "size_bytes": 6638,
@@ -655,7 +787,7 @@
     },
     {
       "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\Lobby de Alejandria\\Actúa como AGENTE RELEASE  PUBLIC-S.txt",
-      "archived_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\lobby_alejandria\\2026-05-06\\B62C6E001205B32C_acta-como-agente-release-public-s.txt",
+      "archived_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\lobby_alejandria\\2026-05-06\\12_publicacion_release\\B62C6E001205B32C_acta-como-agente-release-public-s.txt",
       "filename": "Actúa como AGENTE RELEASE  PUBLIC-S.txt",
       "sha256": "B62C6E001205B32CEBC252C2FDFED48DAF737411155CBE4E8EE72305CAC650E2",
       "size_bytes": 5964,
@@ -706,124 +838,42 @@
       ]
     },
     {
-      "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\Lobby de Alejandria\\Bloque para agregar a tu prompt act.txt",
-      "archived_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\lobby_alejandria\\2026-05-06\\1CD663AEED468CAA_bloque-para-agregar-a-tu-prompt-act.txt",
-      "filename": "Bloque para agregar a tu prompt act.txt",
-      "sha256": "1CD663AEED468CAAD4B5E690130A68E6614BC8CA9A25552314089C1C4CA02DAF",
-      "size_bytes": 11422,
-      "line_count": 366,
-      "character_count": 10841,
-      "lane": "Wabi-Sabi/OSIT",
+      "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\Lobby de Alejandria\\Actúa como AGENTE MEDIOEVO RPG TOOL.txt",
+      "archived_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\lobby_alejandria\\2026-05-06\\13_privado_rpg_tcg\\9627A14F8A7BAF75_acta-como-agente-medioevo-rpg-tool.txt",
+      "filename": "Actúa como AGENTE MEDIOEVO RPG TOOL.txt",
+      "sha256": "9627A14F8A7BAF7520C60861238BFD73D48A32219ADE846F40E99CC5A398F662",
+      "size_bytes": 7597,
+      "line_count": 264,
+      "character_count": 7242,
+      "lane": "Privado RPG/TCG",
       "psi_state": "INFERENCIA",
       "action_gate": "REVIEW",
       "status": "ABSORBIDO_ARCHIVO_FRIO",
       "decision": "ABSORB_TO_ATLAS_AND_ARCHIVE_SOURCE",
       "target_artifacts": [
-        "docs/ops/WABI_OSIT_BRIDGE_FROM_ESTADO_2026-05-06.md",
-        "apps/local/wabi-sabi"
+        "docs/canon/atlas/privado-bloqueado.md",
+        "game-private"
       ],
       "evidence_markers": [
         "actiongate",
         "witnesslog",
         "wabi-sabi",
         "duat",
-        "geodia",
-        "osit",
-        "qwen"
+        "matrix",
+        "biblioteca",
+        "rpg"
       ],
       "extracted_patterns": [
-        "## MÓDULO NUEVO — BRIDGE PROPIO, LIMPIEZA DE MODELO Y EXTRACCIÓN DE INSIGHT ENTRE LLMs",
-        "### 0. Contexto operativo",
-        "Estoy construyendo un sistema local-first llamado Wabi-Sabi / DUAT-GEODIA / OSIT, orientado a agentes locales, memoria persistente, control de recursos y arquitectura modular.",
-        "### 1. Pregunta central",
-        "¿Es obligatorio usar Ollama para ejecutar este sistema, o puedo construir un bridge propio que conecte modelos locales, modelos externos, agentes sin LLM, memoria, herramientas, ActionGate, WitnessLog y optimización de recursos?",
-        "### 2. Limpieza del modelo: observacionismo directo",
-        "- ActionGate;",
-        "- WitnessLog.",
-        "### 3. Observacionismo inverso aplicado al modelo",
-        "Asume que ya existe un modelo “limpio” para Wabi-Sabi."
-      ],
-      "falsifiers": [
-        "sha256_mismatch",
-        "target_artifact_missing",
-        "private_boundary_leaks_to_public",
-        "source_left_in_lobby_after_archive"
-      ],
-      "risk_flags": [
-        "model_mutation_boundary"
-      ]
-    },
-    {
-      "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\Lobby de Alejandria\\Kernel inicial del reto 1 OSIT-QG v.txt",
-      "archived_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\lobby_alejandria\\2026-05-06\\0CD17F706C3E4040_kernel-inicial-del-reto-1-osit-qg-v.txt",
-      "filename": "Kernel inicial del reto 1 OSIT-QG v.txt",
-      "sha256": "0CD17F706C3E40400F404AE5449A513155C9B25C2060BD78A2FFED30E2848B92",
-      "size_bytes": 39504,
-      "line_count": 733,
-      "character_count": 37851,
-      "lane": "Wabi-Sabi/OSIT",
-      "psi_state": "INFERENCIA",
-      "action_gate": "REVIEW",
-      "status": "ABSORBIDO_ARCHIVO_FRIO",
-      "decision": "ABSORB_TO_ATLAS_AND_ARCHIVE_SOURCE",
-      "target_artifacts": [
-        "docs/ops/WABI_OSIT_BRIDGE_FROM_ESTADO_2026-05-06.md",
-        "apps/local/wabi-sabi"
-      ],
-      "evidence_markers": [
-        "duat",
-        "osit",
-        "falsadores"
-      ],
-      "extracted_patterns": [
-        "La gravedad es la geometría macroscópica emergente de restricciones",
-        "Falsadores inmediatos:",
-        "## Certeza",
-        "## Inferencia",
-        "## Incógnita",
-        "## Acción",
-        "Verificar límites: ρ_R→0 → Φ_geo→1, G_{μν} std [analógico ]; η_{μν} → QFT ok; Planck: Jc finito evita UV catastrophe. Falsadores pasados (conservación, Newton) viables si L_R diffeom-invariant.",
-        "## Artefacto",
-        "- Predicciones, límites, falsadores y observables",
-        "# 🚀 **OSIT‑QG v1.0 — Teoría Completa de Gravedad Emergente Informacional**"
-      ],
-      "falsifiers": [
-        "sha256_mismatch",
-        "target_artifact_missing",
-        "private_boundary_leaks_to_public",
-        "source_left_in_lobby_after_archive"
-      ],
-      "risk_flags": [
-        "model_mutation_boundary"
-      ]
-    },
-    {
-      "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\Lobby de Alejandria\\README_LOBBY_DE_ALEJANDRIA.md",
-      "archived_path": null,
-      "filename": "README_LOBBY_DE_ALEJANDRIA.md",
-      "sha256": "9E18FC3530731CF0AF711986A05C37BEF986CAE77E3289D872D13EDEBB5FDEFE",
-      "size_bytes": 1113,
-      "line_count": 29,
-      "character_count": 1112,
-      "lane": "Matrix/Biblioteca",
-      "psi_state": "INFERENCIA",
-      "action_gate": "REVIEW",
-      "status": "CANONICO_EN_LOBBY",
-      "decision": "KEEP_LOBBY_OPERATING_README",
-      "target_artifacts": [
-        "docs/matrix",
-        "library/index.json",
-        "library/modules"
-      ],
-      "evidence_markers": [
-        "actiongate"
-      ],
-      "extracted_patterns": [
-        "# Lobby de Alejandria",
-        "## Regla",
-        "## Prohibido",
-        "- Publicar contenido sin ActionGate.",
-        "## Ritmo"
+        "MISIÓN:",
+        "REGLA CENTRAL:",
+        "TAREAS INTERNAS:",
+        "ARCHIVOS A CREAR:",
+        "RESTRICCIONES:",
+        "Wabi-Sabi no es el cerebro del sistema ni la AGI completa.",
+        "Wabi-Sabi es el nodo sensorial-cognitivo de control que:",
+        "Wabi-Sabi no debe contener todo el conocimiento especializado.",
+        "Wabi-Sabi debe cargar módulos desde Matrix/Biblioteca solo cuando sean necesarios.",
+        "Wabi-Sabi no reemplaza al usuario."
       ],
       "falsifiers": [
         "sha256_mismatch",
@@ -838,28 +888,28 @@
     }
   ],
   "summary": {
-    "files": 17,
-    "archived": 16,
+    "files": 18,
+    "archived": 17,
     "kept_in_lobby": 1,
-    "total_lines_read": 6827,
+    "total_lines_read": 12450,
     "lanes": {
-      "OSIT-QG research boundary": 1,
-      "Wabi-Sabi/OSIT": 3,
       "Prompt Master/Orquestador": 2,
-      "AI Browser Security": 1,
-      "PSI/Observacionismo": 1,
+      "Wabi-Sabi/OSIT": 3,
+      "OSIT-QG research boundary": 2,
+      "Matrix/Biblioteca": 2,
       "DUAT/GEODIA private research": 1,
       "DUAT read-only adapter": 1,
+      "PSI/Observacionismo": 1,
       "Lenguaje Observacionista": 1,
-      "Matrix/Biblioteca": 2,
-      "Privado RPG/TCG": 1,
+      "AI Browser Security": 1,
       "Mission Control/COMMS": 1,
       "Seguridad/Programador Local": 1,
-      "Publicacion/Release": 1
+      "Publicacion/Release": 1,
+      "Privado RPG/TCG": 1
     },
     "gates": {
-      "BLOCK": 1,
-      "REVIEW": 16
+      "REVIEW": 16,
+      "BLOCK": 2
     }
   }
 }

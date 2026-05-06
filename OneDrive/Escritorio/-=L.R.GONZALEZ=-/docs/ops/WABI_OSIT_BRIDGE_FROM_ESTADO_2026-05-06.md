@@ -3,7 +3,7 @@
 ## Fuente
 
 - Ruta: `C:\Users\L-Tyr\OneDrive\Escritorio\Lobby de Alejandria\ESTADO.txt`
-- Archivo Frio: `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\lobby_alejandria\2026-05-06\369DCD91A9BB70DC_estado.txt`
+- Archivo Frio: `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\lobby_alejandria\2026-05-06\03_osit_qg_research_boundary\369DCD91A9BB70DC_estado.txt`
 - SHA256: `369DCD91A9BB70DC6D5509F02C2FD9D481CA2893C504435C5ADBAB17BB0882DE`
 - Tamano: `253472` bytes
 - Intake: `docs/intake/lobby_alejandria_estado_2026-05-06_FICHAS.md`

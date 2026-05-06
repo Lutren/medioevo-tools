@@ -50,6 +50,10 @@ def test_lobby_absorption_archives_sources_and_keeps_readme(tmp_path, monkeypatc
     lanes = {record["filename"]: record["lane"] for record in payload["records"]}
     assert lanes["Actua como AGENTE MATRIX BIBLIOTECA.txt"] == "Matrix/Biblioteca"
     assert lanes["Actua como AGENTE MEDIOEVO RPG TOOL.txt"] == "Privado RPG/TCG"
+    archive_root = fake_root / "runtime" / "curador_seto" / "source_archive" / "lobby_alejandria"
+    assert next(archive_root.rglob("04_matrix_biblioteca/*matrix-biblioteca.txt")).exists()
+    assert next(archive_root.rglob("13_privado_rpg_tcg/*medioevo-rpg-tool.txt")).exists()
+    assert next(archive_root.rglob("00_LEER_PRIMERO.md")).exists()
 
 
 def test_lobby_absorption_reads_all_lines(tmp_path, monkeypatch):

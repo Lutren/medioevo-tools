@@ -18,6 +18,22 @@ TODAY = datetime.now().date().isoformat()
 
 TEXT_SUFFIXES = {".txt", ".md", ".json", ".csv", ".py", ".js", ".ts", ".html", ".css", ".yml", ".yaml"}
 README_NAMES = {"readme_lobby_de_alejandria.md"}
+LANE_FOLDER_NAMES = {
+    "Prompt Master/Orquestador": "01_prompt_master_orquestador",
+    "Wabi-Sabi/OSIT": "02_wabi_sabi_osit",
+    "OSIT-QG research boundary": "03_osit_qg_research_boundary",
+    "Matrix/Biblioteca": "04_matrix_biblioteca",
+    "DUAT/GEODIA private research": "05_duat_geodia_private_research",
+    "DUAT read-only adapter": "06_duat_readonly_adapter",
+    "PSI/Observacionismo": "07_psi_observacionismo",
+    "Lenguaje Observacionista": "08_lenguaje_observacionista",
+    "AI Browser Security": "09_ai_browser_security",
+    "Mission Control/COMMS": "10_mission_control_comms",
+    "Seguridad/Programador Local": "11_seguridad_programador_local",
+    "Publicacion/Release": "12_publicacion_release",
+    "Privado RPG/TCG": "13_privado_rpg_tcg",
+    "Curaduria SETO": "20_curaduria_seto",
+}
 
 
 @dataclass
@@ -57,6 +73,10 @@ def slugify(value: str, limit: int = 96) -> str:
     text = value.encode("ascii", "ignore").decode("ascii").lower()
     text = re.sub(r"[^a-z0-9._-]+", "-", text).strip("-._")
     return (text or "source")[:limit]
+
+
+def lane_folder_name(lane: str) -> str:
+    return LANE_FOLDER_NAMES.get(lane, f"99_review_{slugify(lane, 48)}")
 
 
 def iter_lobby_files(root: Path) -> Iterable[Path]:
@@ -259,14 +279,61 @@ def archive_records(records: list[LobbyRecord], archive_root: Path) -> None:
         if record.decision == "KEEP_LOBBY_OPERATING_README":
             continue
         safe_name = f"{record.sha256[:16]}_{slugify(source.name)}"
-        while safe_name in used_names or (archive_root / safe_name).exists():
+        lane_root = archive_root / lane_folder_name(record.lane)
+        lane_root.mkdir(parents=True, exist_ok=True)
+        while safe_name in used_names or (lane_root / safe_name).exists():
             safe_name = f"{record.sha256[:16]}_{len(used_names):02d}_{slugify(source.name)}"
         used_names.add(safe_name)
-        destination = archive_root / safe_name
+        destination = lane_root / safe_name
         shutil.move(str(source), str(destination))
         if sha256_file(destination) != record.sha256:
             raise RuntimeError(f"archive_hash_mismatch: {source} -> {destination}")
         record.archived_path = str(destination)
+    write_human_archive_index(records, archive_root)
+
+
+def write_human_archive_index(records: list[LobbyRecord], archive_root: Path) -> None:
+    archived_records = [record for record in records if record.archived_path]
+    if not archived_records:
+        return
+    lane_counts: dict[str, int] = {}
+    for record in archived_records:
+        lane_counts[record.lane] = lane_counts.get(record.lane, 0) + 1
+
+    lines = [
+        "# Leer Primero - Archivo Frio Lobby de Alejandria",
+        "",
+        "Este directorio contiene fuentes ya absorbidas. No es un inbox activo.",
+        "",
+        "Regla humana:",
+        "- Abrir primero este archivo.",
+        "- Buscar por carril funcional, no por hash.",
+        "- Usar los hashes para auditoria y reversibilidad.",
+        "- No editar las fuentes archivadas; editar los artefactos canonicos indicados en el manifiesto.",
+        "",
+        "## Carriles",
+        "",
+        "| carpeta | carril | fuentes |",
+        "|---|---|---:|",
+    ]
+    for lane, count in sorted(lane_counts.items(), key=lambda item: lane_folder_name(item[0])):
+        lines.append(f"| `{lane_folder_name(lane)}` | `{lane}` | {count} |")
+    lines.extend(
+        [
+            "",
+            "## Fuentes",
+            "",
+            "| fuente | carril | gate | estado | sha256 |",
+            "|---|---|---|---|---|",
+        ]
+    )
+    for record in sorted(archived_records, key=lambda item: (lane_folder_name(item.lane), item.filename.lower())):
+        archive_name = Path(record.archived_path or record.filename).name
+        lines.append(
+            f"| `{archive_name}` | `{record.lane}` | `{record.action_gate}` | "
+            f"`{record.status}` | `{record.sha256[:16]}` |"
+        )
+    (archive_root / "00_LEER_PRIMERO.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
 def write_outputs(records: list[LobbyRecord], output_prefix: Path) -> dict[str, str]:

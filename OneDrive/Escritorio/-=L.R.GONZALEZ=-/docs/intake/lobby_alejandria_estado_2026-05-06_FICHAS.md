@@ -10,14 +10,14 @@ Cada bloque es una ficha tecnica minima por archivo: hash, estado, decision, des
 - SHA256: `83A765A63CC41336A09B3B85B6472F36A98AA68A023954522B98B74382E52ACE`
 - Tamaño: `27347` bytes
 - Tipo: `text_document`
-- Estado PSI: `INFERENCIA`
-- Estado archivo: `FICHADO`
+- Estado PSI: `BLOQUEADO`
+- Estado archivo: `BLOQUEADO_ARCHIVO_FRIO`
 - Clasificacion: `UNIQUE_SOURCE`
-- Decision: `ABSORB_TO_ATLAS`
-- ActionGate: `APPROVE`
-- Carril/Destino: `curaduria` -> Atlas/Curaduria: revisar, absorber y retirar si procede
-- Copia canonica: `n/a`
-- Riesgos: `none`
+- Decision: `ABSORB_METADATA_AND_ARCHIVE_BLOCKED_SOURCE`
+- ActionGate: `BLOCK`
+- Carril/Destino: `psi-observacionismo` -> Atlas/PSI-Observacionismo: canon, claims, falsadores y contratos operativos
+- Copia canonica: `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\lobby_alejandria\2026-05-06\03_osit_qg_research_boundary\83A765A63CC41336_estado.txt`
+- Riesgos: `STRONG_CLAIM_REVIEW`
 - Resumen: ESTADO; CERTEZA; INFERENCIA
 - Falsadores: `hash_mismatch; missing_canonical_copy; unverified_claim; secret_or_private_marker`
 
@@ -265,14 +265,14 @@ Cada bloque es una ficha tecnica minima por archivo: hash, estado, decision, des
 - SHA256: `369DCD91A9BB70DC6D5509F02C2FD9D481CA2893C504435C5ADBAB17BB0882DE`
 - Tamaño: `253472` bytes
 - Tipo: `text_document`
-- Estado PSI: `INFERENCIA`
-- Estado archivo: `FICHADO`
+- Estado PSI: `BLOQUEADO`
+- Estado archivo: `BLOQUEADO_ARCHIVO_FRIO`
 - Clasificacion: `UNIQUE_SOURCE`
-- Decision: `ABSORB_TO_ATLAS`
-- ActionGate: `APPROVE`
-- Carril/Destino: `curaduria` -> Atlas/Curaduria: revisar, absorber y retirar si procede
-- Copia canonica: `n/a`
-- Riesgos: `none`
+- Decision: `ABSORB_METADATA_AND_ARCHIVE_BLOCKED_SOURCE`
+- ActionGate: `BLOCK`
+- Carril/Destino: `psi-observacionismo` -> Atlas/PSI-Observacionismo: research boundary; patrones operativos aplicados a Wabi en doc separado
+- Copia canonica: `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\lobby_alejandria\2026-05-06\03_osit_qg_research_boundary\369DCD91A9BB70DC_estado.txt`
+- Riesgos: `STRONG_CLAIM_REVIEW`
 - Resumen: text_document; ESTADO.txt; 253472 bytes
 - Falsadores: `hash_mismatch; missing_canonical_copy; unverified_claim; secret_or_private_marker`
 

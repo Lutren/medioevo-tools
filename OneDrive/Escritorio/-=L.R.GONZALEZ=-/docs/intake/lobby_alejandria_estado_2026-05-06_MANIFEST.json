@@ -66,19 +66,21 @@
     "files": 18,
     "deleted_or_quarantined": 0,
     "by_status": {
-      "FICHADO": 16,
+      "FICHADO": 14,
+      "BLOQUEADO_ARCHIVO_FRIO": 2,
       "BLOQUEADO": 1,
       "BLOQUEADO_PUBLICACION": 1
     },
     "by_lane": {
-      "curaduria": 6,
+      "curaduria": 4,
       "claudio-wabisabi": 7,
-      "psi-observacionismo": 2,
+      "psi-observacionismo": 4,
       "duat-geodia": 2,
       "privado-bloqueado": 1
     },
     "by_decision": {
-      "ABSORB_TO_ATLAS": 16,
+      "ABSORB_TO_ATLAS": 14,
+      "ABSORB_METADATA_AND_ARCHIVE_BLOCKED_SOURCE": 2,
       "BLOCK_KEEP_PRIVATE": 1,
       "ABSORB_AS_RESEARCH_BOUNDARY": 1
     }
@@ -92,17 +94,19 @@
       "size_bytes": 27347,
       "suffix": ".txt",
       "kind": "text_document",
-      "psi_state": "INFERENCIA",
-      "status": "FICHADO",
+      "psi_state": "BLOQUEADO",
+      "status": "BLOQUEADO_ARCHIVO_FRIO",
       "classification": "UNIQUE_SOURCE",
-      "lane": "curaduria",
-      "decision": "ABSORB_TO_ATLAS",
-      "action_gate": "APPROVE",
-      "risk_flags": [],
-      "target": "Atlas/Curaduria: revisar, absorber y retirar si procede",
+      "lane": "psi-observacionismo",
+      "decision": "ABSORB_METADATA_AND_ARCHIVE_BLOCKED_SOURCE",
+      "action_gate": "BLOCK",
+      "risk_flags": [
+        "STRONG_CLAIM_REVIEW"
+      ],
+      "target": "Atlas/PSI-Observacionismo: canon, claims, falsadores y contratos operativos",
       "summary": "ESTADO; CERTEZA; INFERENCIA",
       "falsifiers": "hash_mismatch; missing_canonical_copy; unverified_claim; secret_or_private_marker",
-      "canonical_path": null,
+      "canonical_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\lobby_alejandria\\2026-05-06\\03_osit_qg_research_boundary\\83A765A63CC41336_estado.txt",
       "duplicate_count": 1,
       "safe_delete_candidate": false,
       "deleted": false
@@ -439,17 +443,19 @@
       "size_bytes": 253472,
       "suffix": ".txt",
       "kind": "text_document",
-      "psi_state": "INFERENCIA",
-      "status": "FICHADO",
+      "psi_state": "BLOQUEADO",
+      "status": "BLOQUEADO_ARCHIVO_FRIO",
       "classification": "UNIQUE_SOURCE",
-      "lane": "curaduria",
-      "decision": "ABSORB_TO_ATLAS",
-      "action_gate": "APPROVE",
-      "risk_flags": [],
-      "target": "Atlas/Curaduria: revisar, absorber y retirar si procede",
+      "lane": "psi-observacionismo",
+      "decision": "ABSORB_METADATA_AND_ARCHIVE_BLOCKED_SOURCE",
+      "action_gate": "BLOCK",
+      "risk_flags": [
+        "STRONG_CLAIM_REVIEW"
+      ],
+      "target": "Atlas/PSI-Observacionismo: research boundary; patrones operativos aplicados a Wabi en doc separado",
       "summary": "text_document; ESTADO.txt; 253472 bytes",
       "falsifiers": "hash_mismatch; missing_canonical_copy; unverified_claim; secret_or_private_marker",
-      "canonical_path": null,
+      "canonical_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\lobby_alejandria\\2026-05-06\\03_osit_qg_research_boundary\\369DCD91A9BB70DC_estado.txt",
       "duplicate_count": 1,
       "safe_delete_candidate": false,
       "deleted": false
