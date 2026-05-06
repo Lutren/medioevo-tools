@@ -1,0 +1,107 @@
+{
+  "generated_at_utc": "2026-05-06T09:32:46.418645+00:00",
+  "roots": [
+    {
+      "label": "downloads",
+      "path": "C:\\Users\\L-Tyr\\Downloads"
+    },
+    {
+      "label": "lobby_alejandria",
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\Lobby de Alejandria"
+    }
+  ],
+  "apply_safe_deletes": false,
+  "hash_limit_mb": 250,
+  "excluded_dirs": [
+    ".agents",
+    ".aider",
+    ".android",
+    ".android-sdk",
+    ".aws",
+    ".azure",
+    ".cache",
+    ".cargo",
+    ".claude",
+    ".claw",
+    ".codex",
+    ".config",
+    ".copilot",
+    ".credentials_local",
+    ".cursor",
+    ".docker",
+    ".gemini",
+    ".git",
+    ".gradle",
+    ".jdk",
+    ".medioevo_gumroad_chrome_check",
+    ".medioevo_gumroad_session_check",
+    ".medioevo_gumroad_session_probe",
+    ".medioevo_gumroad_session_probe_fix",
+    ".mempalace",
+    ".nodejs",
+    ".ollama",
+    ".openclaw",
+    ".openclaw-claudio-safe",
+    ".playwright_outlook_profile",
+    ".pytest_cache",
+    ".qwen",
+    ".rustup",
+    ".sbx-denybin",
+    ".sentinel",
+    ".ssh",
+    ".venv",
+    ".venv_api",
+    ".wrangler",
+    "__pycache__",
+    "appdata",
+    "application data",
+    "cookies",
+    "local settings",
+    "nethood",
+    "node_modules",
+    "printhood",
+    "recent",
+    "sendto",
+    "start menu",
+    "templates"
+  ],
+  "quarantine": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\tree_quarantine\\inbox_downloads_lobby_alejandria_post_2026-05-06",
+  "counts": {
+    "files": 1,
+    "deleted_or_quarantined": 0,
+    "by_status": {
+      "FICHADO": 1
+    },
+    "by_lane": {
+      "curaduria": 1
+    },
+    "by_decision": {
+      "ABSORB_TO_ATLAS": 1
+    }
+  },
+  "records": [
+    {
+      "source_label": "lobby_alejandria",
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\Lobby de Alejandria\\README_LOBBY_DE_ALEJANDRIA.md",
+      "rel_path": "README_LOBBY_DE_ALEJANDRIA.md",
+      "sha256": "2AB156B19066769B7112EA336B00BBAFE114DE18090CA9E940EDC06A89A0158E",
+      "size_bytes": 1481,
+      "suffix": ".md",
+      "kind": "text_document",
+      "psi_state": "CERTEZA",
+      "status": "FICHADO",
+      "classification": "UNIQUE_SOURCE",
+      "lane": "curaduria",
+      "decision": "ABSORB_TO_ATLAS",
+      "action_gate": "APPROVE",
+      "risk_flags": [],
+      "target": "Atlas/Curaduria: revisar, absorber y retirar si procede",
+      "summary": "Lobby de Alejandria; Regla; Prohibido",
+      "falsifiers": "hash_mismatch; missing_canonical_copy; unverified_claim; secret_or_private_marker",
+      "canonical_path": null,
+      "duplicate_count": 1,
+      "safe_delete_candidate": false,
+      "deleted": false
+    }
+  ]
+}
