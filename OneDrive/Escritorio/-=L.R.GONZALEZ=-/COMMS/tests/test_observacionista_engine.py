@@ -32,8 +32,12 @@ class ObservacionistaEngineTests(unittest.TestCase):
         self.assertEqual(result["status"], "REVIEW")
         self.assertEqual(result["action_gate"], "REVIEW")
         self.assertEqual(result["claim_state"], "INFERENCIA")
-        self.assertEqual(result["observationist_engineering"]["gate"], "REVIEW")
+        self.assertEqual(result["observationist_engineering"]["gate"], "APPROVE")
         self.assertIn("agent_autonomy", result["observationist_engineering"]["risk_flags"])
+        self.assertIn(
+            "observer_profile_instability",
+            result["inverse_observationist_engineering"]["hidden_bias_flags"],
+        )
         self.assertIn("Downloads/sensorium_inversion_lab.py", result["source_hashes"])
         self.assertEqual(len(result["inverse_observationist_engineering"]["profiles"]), 5)
 
