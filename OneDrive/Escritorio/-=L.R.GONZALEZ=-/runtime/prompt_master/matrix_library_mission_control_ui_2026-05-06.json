@@ -1,0 +1,93 @@
+{
+  "schema": "claudio.prompt_master.matrix_library_mission_control_ui.v1",
+  "timestamp_utc": "2026-05-06T08:26:37Z",
+  "status": "VALIDATED_LOCAL",
+  "lane": "prompt_15_matrix_library_mission_control_ui",
+  "action_gate": "REVIEW",
+  "host": {
+    "status": "CONTAMINADO",
+    "action": "recalibrate",
+    "gate": "REVIEW",
+    "evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/host_observacionista/latest_report.json",
+    "timestamp_utc": "2026-05-06T08:18:32Z"
+  },
+  "pending_review": {
+    "active_dedup": 389,
+    "claudio_open": 69,
+    "json": "qa_artifacts/pending/pending_review_2026-05-06.json",
+    "latest": "qa_artifacts/pending/pending_review_latest.json"
+  },
+  "changed_files": [
+    {
+      "path": "-=MEDIOEVO=-/-=LIBROS/claudio/apps/hormiguero_mission_control/index.html",
+      "sha256": "B93B9F62D7CC10996533606BF2509008DE005BAC6F6434886C5B453BE0DECBE8",
+      "changes": [
+        "Added Matrix Library panel",
+        "Added local status/modules UI rendering",
+        "Added public_safe local-hide fallback",
+        "Separated Matrix city and Matrix Library error handling"
+      ]
+    },
+    {
+      "path": "-=MEDIOEVO=-/-=LIBROS/claudio/tests/test_hormiguero_mission_control_api.py",
+      "sha256": "39D4C9A3606223572C219472BE7A032C2183BEBFB130ACDC8F40686222EBA964",
+      "changes": [
+        "Added static UI assertions for Matrix Library panel",
+        "Added static UI assertions for Matrix Library local routes"
+      ]
+    }
+  ],
+  "routes": {
+    "status": "/api/local/matrix/status",
+    "modules": "/api/local/matrix/modules",
+    "public_safe_behavior": "local_matrix_library_hidden"
+  },
+  "validations": [
+    {
+      "command": "python -m pytest tests\\test_hormiguero_mission_control_api.py -q",
+      "result": "27 passed in 1.19s"
+    },
+    {
+      "command": "python -m pytest tests\\test_hormiguero_mission_control_api.py::test_hormiguero_index_serves_restored_ui tests\\test_matrix_library_api.py -q",
+      "result": "7 passed in 1.60s"
+    },
+    {
+      "command": "python -m py_compile apps\\hormiguero_mission_control\\app.py core\\matrix_library.py",
+      "result": "OK"
+    },
+    {
+      "command": "static HTML check",
+      "result": "missing=[]; matrix_status_refs=2; matrix_modules_refs=2"
+    },
+    {
+      "command": "python COMMS\\tools\\validate_seto_comms.py --json",
+      "result": "PASS before topic event publication"
+    },
+    {
+      "command": "JSONL parse COMMS\\topics\\agent-city-coordination.jsonl",
+      "result": "lines=7; last_event=matrix-library-mission-control-ui-2026-05-06-007"
+    },
+    {
+      "command": "python COMMS\\tools\\validate_seto_comms.py --json",
+      "result": "PASS after topic event publication"
+    }
+  ],
+  "boundaries": {
+    "daemon_started": false,
+    "browser_opened": false,
+    "external_action": false,
+    "publication": false,
+    "push": false,
+    "model_weights_modified": false,
+    "ollama_alias_created": false,
+    "private_rpg_touched": false,
+    "destructive_cleanup": false
+  },
+  "falsifiers": [
+    "matrix-library-panel is removed from Mission Control",
+    "local matrix status or modules routes disappear from the UI",
+    "public_safe profile can read local Matrix Library routes",
+    "Matrix city rendering fails because Matrix Library fetch failed",
+    "focused Mission Control or Matrix Library tests fail"
+  ]
+}
