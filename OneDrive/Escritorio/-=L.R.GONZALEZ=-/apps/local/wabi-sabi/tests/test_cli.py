@@ -66,3 +66,26 @@ def test_cli_apply_programs_python_file(tmp_path):
     assert payload["action"] == "scoped_code_patch_applied"
     assert (tmp_path / "helpers.py").exists()
     assert "summarize_file_lines" in (tmp_path / "helpers.py").read_text(encoding="utf-8")
+
+
+def test_cli_codex_status_and_dry_run(tmp_path):
+    status_proc = run_cli("codex-status", "--json", workspace=tmp_path, runtime=tmp_path / "runtime")
+
+    assert status_proc.returncode == 0, status_proc.stderr
+    status = json.loads(status_proc.stdout)
+    assert "auto_provider" in status
+    assert "safe_default" in status
+
+    dry_proc = run_cli(
+        "codex",
+        "responde una prueba corta",
+        "--dry-run",
+        "--json",
+        workspace=tmp_path,
+        runtime=tmp_path / "runtime",
+    )
+
+    assert dry_proc.returncode == 0, dry_proc.stderr
+    payload = json.loads(dry_proc.stdout)
+    assert payload["action"] == "codex_bridge_dry_run"
+    assert payload["artifacts"]

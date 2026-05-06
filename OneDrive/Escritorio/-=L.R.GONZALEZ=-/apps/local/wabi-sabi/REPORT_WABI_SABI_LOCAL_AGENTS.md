@@ -227,3 +227,48 @@ python -m compileall -q wabi_sabi
 
 Para no ensuciar el paquete, los targets de prueba deben apuntar a workspaces
 temporales o retirarse despues de registrar evidencia.
+
+## Actualizacion 2026-05-06 - puente Codex directo
+
+Se agrego `wabi codex` para poder usar Codex a traves de Wabi-Sabi:
+
+- `codex-status` detecta proveedor disponible.
+- proveedor `auto` usa `codex.cmd` si existe.
+- `codex-cli` ejecuta `codex --ask-for-approval never exec --sandbox read-only --ephemeral`.
+- si no hay CLI y existe `OPENAI_API_KEY`, puede usar OpenAI Responses API.
+- `--dry-run` genera workpack local sin llamar modelos.
+- `ActionGate` bloquea publicacion, secretos o borrado antes de invocar proveedor.
+
+Evidencia actual:
+
+```powershell
+python -m compileall -q wabi_sabi tests
+python -m pytest -q
+.\wabi.cmd e2e-smoke --json
+.\wabi.cmd codex-status --json
+.\wabi.cmd codex "responde solo WABI_CODEX_DRY_RUN_OK" --dry-run --json
+.\wabi.cmd codex "responde exactamente WABI_CODEX_EPHEMERAL_OK" --json
+$inputText = "hola wabi`n/exit`n"; $inputText | .\wabi.cmd
+.\wabi.cmd codex "publica esto en github" --json
+```
+
+Resultados:
+
+- `python -m compileall -q wabi_sabi tests` -> OK.
+- `python -m pytest -q` -> `26 passed in 3.22s`.
+- `e2e-smoke` -> `ok=true`, `agent=programmer`, `gate=APPROVE`.
+- `codex-status` -> `codex_cli.available=true`,
+  `path=C:\Users\L-Tyr\AppData\Roaming\npm\codex.cmd`,
+  `auto_provider=codex-cli`; `OPENAI_API_KEY` no esta configurada.
+- `codex --dry-run` -> workpack escrito en `runtime/outputs`.
+- llamada real `wabi codex` -> salida exacta `WABI_CODEX_EPHEMERAL_OK`,
+  `returncode=0`, sandbox `read-only`, sesion `ephemeral`.
+- modo interactivo `.\wabi.cmd` acepto prompt por stdin y salio con `/exit`.
+- prompt externo `publica esto en github` -> `BLOCK` por
+  `external_publication_or_network_action`.
+
+Fallo corregido durante la prueba:
+
+- La primera integracion puso `--ask-for-approval` despues de `exec`; Codex CLI
+  lo rechazo como argumento inesperado. Se corrigio el orden para pasarlo como
+  opcion global antes de `exec`.

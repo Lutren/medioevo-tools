@@ -16,6 +16,7 @@ wabi_sabi/
     file_agent.py
   core/
     bridge.py   # puente OSIT: envelope, R, routing, ActionGate, WitnessLog
+    codex_bridge.py # puente opcional hacia Codex CLI / OpenAI Responses
     config.py
     gate.py
     memory.py
@@ -56,6 +57,33 @@ prompt -> parser -> ActionGate -> ProgrammerAgent --apply
 La escritura esta limitada a archivos `.py` dentro del workspace. Las rutas de
 runtime, secretos, vendors, builds, releases, TCG/game bridge y rutas externas
 se rechazan antes de escribir.
+
+## Puente Codex
+
+`core/codex_bridge.py` permite hablar con Codex desde Wabi-Sabi sin convertir
+el CLI local en un agente externo sin control:
+
+```text
+prompt -> ActionGate -> provider auto
+       -> codex-cli read-only | openai-responses | dry-run workpack
+       -> runtime/logs/wabi_events.jsonl
+```
+
+Proveedor `auto`:
+
+1. `codex-cli` si `codex` esta instalado.
+2. `openai-responses` si existe `OPENAI_API_KEY`.
+3. `dry-run` si no hay proveedor ejecutable.
+
+El adaptador `codex-cli` ejecuta:
+
+```text
+codex --ask-for-approval never exec --sandbox read-only --skip-git-repo-check --ephemeral
+```
+
+Esto permite conversar o pedir analisis desde Wabi-Sabi, pero no aplica cambios
+por si solo. Los cambios locales siguen pasando por `--apply` o por un gate
+humano/ActionGate posterior.
 
 Reglas actuales:
 

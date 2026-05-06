@@ -11,6 +11,11 @@ cd C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\apps\local\wabi-sabi
 .\wabi.cmd "crea una funcion que lea un archivo y resuma sus lineas"
 .\wabi.cmd "ejecuta diagnostico"
 .\wabi.cmd "crea una funcion que lea un archivo y resuma sus lineas" --apply --target helpers.py
+.\wabi.cmd
+.\wabi.cmd chat "hola wabi, resume el estado local"
+.\wabi.cmd codex-status
+.\wabi.cmd codex "responde como Codex desde Wabi-Sabi: que pruebas debo correr?"
+.\wabi.cmd codex "genera workpack sin llamar modelo" --dry-run
 .\wabi.cmd bridge-plan "clasifica pendientes y genera resumen"
 .\wabi.cmd agents
 .\wabi.cmd e2e-smoke
@@ -30,6 +35,9 @@ wabi "crea un README para este modulo"
   secretos.
 - Las escrituras automaticas van a `runtime/outputs` y los logs a
   `runtime/logs`.
+- `wabi codex` ejecuta Codex CLI en modo `read-only` cuando esta instalado. Si
+  no existe CLI, puede usar OpenAI Responses API con `OPENAI_API_KEY`; sin
+  proveedor disponible genera un workpack local con `--dry-run`.
 - El modo `--apply --target <archivo.py>` puede escribir codigo Python dentro
   del workspace con diff, backup si habia contenido previo y `py_compile`.
 - Las acciones riesgosas quedan en `BLOCK` o `REVIEW` con explicacion.

@@ -12,6 +12,7 @@ from wabi_sabi.cli.parser import parse_command
 from wabi_sabi.cli.router import AgentRegistry
 from wabi_sabi.core.config import RuntimeConfig, build_config
 from wabi_sabi.core.bridge import BridgeExecutor
+from wabi_sabi.core.codex_bridge import WabiCodexBridge
 from wabi_sabi.core.gate import ActionGate
 from wabi_sabi.core.memory import LocalMemory
 from wabi_sabi.core.observation import ObservationEnvelope
@@ -139,6 +140,14 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--json", action="store_true", help="Emit JSON")
     parser.add_argument("--apply", action="store_true", help="Apply a scoped local code patch")
     parser.add_argument("--target", default=None, help="Target file for --apply, relative to --workspace")
+    parser.add_argument("--dry-run", action="store_true", help="Build a workpack without model/subprocess calls")
+    parser.add_argument(
+        "--codex-provider",
+        default="auto",
+        choices=["auto", "codex-cli", "openai-responses", "dry-run"],
+        help="Provider for the codex bridge",
+    )
+    parser.add_argument("--codex-timeout", type=int, default=180, help="Codex bridge timeout in seconds")
     return parser
 
 
@@ -150,10 +159,48 @@ def main(argv: list[str] | None = None) -> int:
     if not items:
         return _interactive(config)
     command = items[0].lower()
+    if command in {"chat", "talk", "hablar"}:
+        if len(items) == 1:
+            return _interactive(config)
+        prompt = " ".join(items[1:])
+        payload = execute_prompt(
+            prompt,
+            workspace=args.workspace,
+            runtime_root=args.runtime,
+            agent_name=args.agent,
+            json_mode=args.json,
+            apply=args.apply,
+            target=args.target,
+        )
+        if args.json:
+            print(json.dumps(payload, indent=2, ensure_ascii=False))
+        return 0 if payload["ok"] else 2
     if command == "agents":
         payload = registry.as_dict()
         print(json.dumps(payload, indent=2, ensure_ascii=False) if args.json else _format_agents(payload))
         return 0
+    if command in {"codex-status", "status-codex"}:
+        bridge = WabiCodexBridge(workspace=config.workspace, runtime_root=config.runtime_root)
+        payload = bridge.status()
+        print(json.dumps(payload, indent=2, ensure_ascii=False) if args.json else _format_codex_status(payload))
+        return 0
+    if command in {"codex", "ask-codex", "consulta-codex"}:
+        prompt = " ".join(items[1:]).strip()
+        if not prompt and not sys.stdin.isatty():
+            prompt = sys.stdin.read().strip()
+        if not prompt:
+            print("Falta prompt para el puente Codex. Ejemplo: wabi codex \"resume este repo\"")
+            return 2
+        bridge = WabiCodexBridge(workspace=config.workspace, runtime_root=config.runtime_root)
+        result = bridge.ask(
+            prompt,
+            provider=args.codex_provider,
+            dry_run=args.dry_run,
+            timeout=args.codex_timeout,
+        )
+        payload = result.to_dict()
+        print(json.dumps(payload, indent=2, ensure_ascii=False) if args.json else _format_codex_payload(payload))
+        return 0 if payload["ok"] else 2
     if command in {"diagnose", "diagnostico", "diagnóstico"}:
         payload = execute_prompt(
             "ejecuta diagnostico",
@@ -234,6 +281,45 @@ def _format_bridge_payload(payload: dict[str, Any]) -> str:
     lines.append(f"- fingerprint: {envelope['fingerprint']}")
     if decision["blocked_actions"]:
         lines.append(f"- blocked_actions: {', '.join(decision['blocked_actions'])}")
+    return "\n".join(lines)
+
+
+def _format_codex_status(payload: dict[str, Any]) -> str:
+    lines = [
+        "WABI SABI CODEX STATUS",
+        f"Auto provider: {payload['auto_provider']}",
+        f"Codex CLI: {'OK' if payload['codex_cli']['available'] else 'NO'}",
+        f"OpenAI Responses: {'OK' if payload['openai_responses']['available'] else 'NO'}",
+        f"Safe default: {payload['safe_default']}",
+    ]
+    if payload["codex_cli"].get("path"):
+        lines.append(f"Codex path: {payload['codex_cli']['path']}")
+    lines.append(f"OpenAI model: {payload['openai_responses']['model']}")
+    return "\n".join(lines)
+
+
+def _format_codex_payload(payload: dict[str, Any]) -> str:
+    lines = [
+        "WABI SABI CODEX BRIDGE",
+        f"Proveedor: {payload['provider']}  Gate: {payload['gate']}  Resultado: {'OK' if payload['ok'] else 'BLOCK'}",
+        f"Accion: {payload['action']}",
+        "",
+        "RESPUESTA:",
+        payload["output"] or "- Sin salida.",
+        "",
+        "EVIDENCIA:",
+    ]
+    if payload["evidence"]:
+        lines.extend(f"- {item}" for item in payload["evidence"])
+    else:
+        lines.append("- Sin evidencia adicional.")
+    if payload["artifacts"]:
+        lines.append("")
+        lines.append("ARTEFACTOS:")
+        lines.extend(f"- {artifact}" for artifact in payload["artifacts"])
+    if payload["error"]:
+        lines.append("")
+        lines.append(f"ERROR: {payload['error']}")
     return "\n".join(lines)
 
 
