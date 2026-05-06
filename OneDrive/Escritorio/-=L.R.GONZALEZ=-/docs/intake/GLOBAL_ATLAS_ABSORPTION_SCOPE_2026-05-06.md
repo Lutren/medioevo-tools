@@ -13,9 +13,10 @@ La estructura queda dividida en entradas operativas:
 1. `Downloads`: zona de amenaza. Primero riesgo, despues ficha, despues absorcion.
 2. `Lobby de Alejandria`: zona documental. Entran prompts/documentos para ser absorbidos y retirados diariamente.
 3. `Desktop`: superficie humana de trabajo. Se ficha y se separa de `-=L.R.GONZALEZ=-`.
-4. `-=L.R.GONZALEZ=-`: raiz de control, productos, docs, paquetes y runtime de curaduria.
-5. `-=MEDIOEVO=-`: universo principal; canon, Claudio, libros, research, privado y productos.
-6. `C:\Users\L-Tyr` sin OneDrive/Downloads: perfil local restante; herramientas, docs, codigo, runtime y residuos.
+4. `Documentos`: proyectos sueltos, PowerShell/VS/Zoom/Outlook y workdirs no integrados al Atlas.
+5. `-=L.R.GONZALEZ=-`: raiz de control, productos, docs, paquetes y runtime de curaduria.
+6. `-=MEDIOEVO=-`: universo principal; canon, Claudio, libros, research, privado y productos.
+7. `C:\Users\L-Tyr` sin OneDrive/Downloads: perfil local restante; herramientas, docs, codigo, runtime y residuos.
 
 No se aplico borrado global en estos dry-runs. La unica limpieza fisica previa del dia fue la retirada reversible de 13 duplicados exactos en `PSI + CLAUDIO - researchs` y el rename explicito de `promts` a `Lobby de Alejandria`.
 
@@ -25,6 +26,8 @@ No se aplico borrado global en estos dry-runs. La unica limpieza fisica previa d
 |---|---|---:|---:|---|
 | Inbox actual `Downloads + Lobby` | `docs/intake/inbox_downloads_lobby_alejandria_current_2026-05-06_MANIFEST.json` | 16 | 0 | `Downloads` esta vacio; el Lobby tiene 16 archivos fichados/estado |
 | Desktop sin `-=L.R.GONZALEZ=-` | `docs/intake/desktop_lobby_atlas_dryrun_2026-05-06_MANIFEST.json` | 1,753 | 0 | superficie con documentos, accesos, prompts y material pendiente |
+| `Documentos` dry-run | `docs/intake/documentos_onedrive_atlas_dryrun_2026-05-06_MANIFEST.json` | 56 | 3 | 3 residuos regenerables retirados a cuarentena reversible |
+| `Documentos` postclean | `docs/intake/documentos_onedrive_atlas_postclean_2026-05-06_MANIFEST.json` | 53 | 0 | quedan 49 fichados, 2 canonicos duplicados y 2 review |
 | `-=L.R.GONZALEZ=-` sin `-=MEDIOEVO=-` | `docs/intake/lrgonzalez_root_atlas_dryrun_2026-05-06_MANIFEST.json` | 6,472 | 0 | raiz de control con duplicados/review y archivo de Downloads ya aislado |
 | `-=MEDIOEVO=-` | `docs/intake/medioevo_atlas_dryrun_2026-05-06_MANIFEST.json` | 14,806 | 0 | universo grande con 42 candidatos de delete, 1,559 review y 1,486 bloqueados |
 | `C:\Users\L-Tyr` sin OneDrive/Downloads | `docs/intake/user_home_non_onedrive_atlas_dryrun_2026-05-06_MANIFEST.json` | 1,367 | 0 | perfil local restante; 24 candidatos regenerables, 197 review, 52 bloqueados |
@@ -35,6 +38,7 @@ No se aplico borrado global en estos dry-runs. La unica limpieza fisica previa d
 |---|---:|---:|---:|---:|---:|---:|
 | Inbox actual | 14 | 0 | 1 | 1 | 0 | 0 |
 | Desktop | 1,507 | 95 | 74 | 4 | 1 | 72 |
+| `Documentos` postclean | 49 | 2 | 0 | 0 | 0 | 2 |
 | `-=L.R.GONZALEZ=-` | 3,942 | 1,336 | 70 | 2 | 2 | 1,099 |
 | `-=MEDIOEVO=-` | 10,952 | 1,559 | 1,486 | 18 | 42 | 749 |
 | Home sin OneDrive/Downloads | 1,048 | 197 | 52 | 0 | 24 | 46 |
@@ -67,6 +71,25 @@ Movimiento ejecutado:
 - Conteo actual en el run de inbox: `16` archivos.
 
 El Lobby se limpia solo cuando las fuentes ya tienen ficha, sinapsis y destino. Una fuente unica se mueve a archivo frio; un duplicado exacto seguro puede retirarse; una fuente incierta queda en `REVIEW`.
+
+## Documentos
+
+Pase ejecutado sobre `C:\Users\L-Tyr\OneDrive\Documentos`.
+
+Resultado inicial:
+
+- Archivos registrados: `56`.
+- Retirados a cuarentena reversible: `3`.
+- Motivo de retiro: residuos regenerables (`desktop.ini` y dos `.tmp` de Zoom).
+- Duplicados exactos DUAT en `New project 3`: `2` quedan `REVIEW_DUPLICATE`, no se retiraron.
+
+Estado postclean:
+
+- Archivos actuales registrados: `53`.
+- `FICHADO`: `49`.
+- `CANONICAL_DUPLICATE_KEEP`: `2`.
+- `REVIEW`: `2`.
+- Cuarentena: `runtime/curador_seto/tree_quarantine/documentos_onedrive_atlas_dryrun_2026-05-06`.
 
 ## Exclusiones conscientes
 
