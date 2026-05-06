@@ -298,3 +298,71 @@ Sources were absorbed into the Atlas before retirement. Unique material was move
 | `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\v8_leaderboard_psichi_strong.csv` | `C22685D937E0AD39A3F3E8ADA81B3EE5498FCFEAE83095D93DC39152A8AA0BC0` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\C22685D937E0AD39_v8_leaderboard_psichi_strong.csv` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
 | `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\v8_leaderboard_psichi_weak.csv` | `430E08C921CAD360C8069F6AB823C265D41DE04992D3F846D12C964F4E695AF0` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\430E08C921CAD360_v8_leaderboard_psichi_weak.csv` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
 | `BORRADO` | `C:\Users\L-Tyr\Downloads\desktop.ini` | `B029393EA7B7CF644FB1C9F984F57C1980077562EE2E15D0FFD049C4C48098D3` | `regenerable_os_cache` | `regenerable local trash with ficha and hash` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-05
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-05 | 2 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-05.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\ESTADO (R≈0.18, régimen observacion.txt` | `21E68B2B0B670E602407A175A63AE4425C0F6640DF600F43C6A84A070A506737` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\21E68B2B0B670E60_estado-r0.18-rgimen-observacion.txt` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\Untitled.txt` | `6D616A194E2A2DF65C5037164F9C086A864E9B98F3FEAD4B40746B8E5E40240B` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\6D616A194E2A2DF6_untitled.txt` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-05
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-05 | 1 | 1 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-05.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\ESTADO (R≈0.18, régimen observacion.txt` | `21E68B2B0B670E602407A175A63AE4425C0F6640DF600F43C6A84A070A506737` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\21E68B2B0B670E60_estado-r0.18-rgimen-observacion.txt` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `BORRADO` | `C:\Users\L-Tyr\Downloads\ESTADO (R≈0.18, régimen observacion (1).txt` | `21E68B2B0B670E602407A175A63AE4425C0F6640DF600F43C6A84A070A506737` | `C:\Users\L-Tyr\Downloads\ESTADO (R≈0.18, régimen observacion.txt` | `exact duplicate in Downloads with generated ficha and canonical copy` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-05
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-05 | 1 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-05.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\ESTADO.txt` | `BE32A02C13C572D313D0A09FEFBB3AA1339FC4A2A94E860192636EF808F69875` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\BE32A02C13C572D3_estado.txt` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-05
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-05 | 2 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-05.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v2.pdf` | `6E5CD951DFB11C65B3879D208B2BD1AF3962B1A6CE943C025F21AF71A8470C0C` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\6E5CD951DFB11C65_auditoria_observacionista_inversa_medioevo_v2.pdf` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v2_PACK.zip` | `EF1F567506C2B22F63837CA00AD524934A057E13A0A02E161728795923E29F07` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\EF1F567506C2B22F_auditoria_observacionista_inversa_medioevo_v2_pack.zip` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## One Universe Regenerable Cache Cleanup 2026-05-06
+
+Executed only on approved regenerable cache directories after dry-run. No
+source, private material, vendor tree, release package, git history, archive,
+env, node_modules, TCG/game boundary or unique document was deleted.
+
+| date | deleted dirs | deleted files | deleted bytes | evidence |
+|---|---:|---:|---:|---|
+| 2026-05-06 | 83 | 729 | 11849259 | `qa_artifacts\release_validation\one-universe-cache-cleanup-result-2026-05-06.json` |
+
+Rules used:
+
+- Allowed names only: `__pycache__`, `.pytest_cache`, `.ruff_cache`, `.mypy_cache`.
+- Excluded boundaries: `.git`, `.skills`, `.venv`, `node_modules`, `tools/vendor`,
+  `releases`, `_archive`, `_ARCHIVAR`, private game/TCG and `runtime/game_bridge`.
+- Path containment verified inside workspace root by `tools\release\cleanup_regenerable_cache.py`.
