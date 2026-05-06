@@ -1,6 +1,6 @@
 {
   "schema": "medioevo.pending_review.v1",
-  "generated_at": "2026-05-06T10:28:32+00:00",
+  "generated_at": "2026-05-06T10:31:24+00:00",
   "date": "2026-05-06",
   "root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
   "policy": {
@@ -10,25 +10,25 @@
     "curador": "unknown sources and residues still require curador_preflight before use or discard."
   },
   "active_markdown": {
-    "raw_open": 186,
-    "dedup_open": 183,
+    "raw_open": 108,
+    "dedup_open": 108,
     "by_priority": {
       "P1": 10,
       "P2": 6,
-      "UNCLASSIFIED": 167
+      "UNCLASSIFIED": 92
     },
     "by_lane": {
-      "commercial": 18,
+      "commercial": 3,
       "general": 20,
       "open_source": 2,
       "private_rpg": 1,
       "research_claims": 1,
-      "runtime_claudio": 135,
+      "runtime_claudio": 75,
       "wave_fc": 2,
       "website_marketing": 4
     },
     "by_blocker": {
-      "external_or_gated": 118,
+      "external_or_gated": 43,
       "host_or_heavy": 42,
       "legal_or_human": 18,
       "private_boundary": 5
@@ -174,126 +174,6 @@
         "priority": "UNCLASSIFIED",
         "lane": "commercial",
         "blocker": "external_or_gated",
-        "item": "Argus hardwamuy integration",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/grants/LACMA_APPLICATION_2026.md:95",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "external_or_gated",
-        "item": "Configurar Gumroad/Patmuyon con tiers",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/marketing/DECISION_MARKETING_SaaS_20260410.md:102",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "external_or_gated",
-        "item": "Hook en primeros 3 segundos: ruido digital + pantalla oscura (cumplido en escena 1)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/marketing/TRAILER_ARGUS_20260417.md:166",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "external_or_gated",
-        "item": "Problema muyconocible en 0-6s (abrumamiento)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/marketing/TRAILER_ARGUS_20260417.md:167",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "external_or_gated",
-        "item": "Solucion clara en 6-24s (ciudad que cmuyce)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/marketing/TRAILER_ARGUS_20260417.md:168",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "external_or_gated",
-        "item": "Identificacion emocional en 24-36s (personas muyales)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/marketing/TRAILER_ARGUS_20260417.md:169",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "external_or_gated",
-        "item": "Climax + CTA en 48-60s (runa + url)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/marketing/TRAILER_ARGUS_20260417.md:170",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "external_or_gated",
-        "item": "Audio contrastante con silencio inicial",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/marketing/TRAILER_ARGUS_20260417.md:171",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "external_or_gated",
-        "item": "Texto legible en mobile (vertical)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/marketing/TRAILER_ARGUS_20260417.md:172",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "external_or_gated",
-        "item": "Sin em-dashes en overlays",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/marketing/TRAILER_ARGUS_20260417.md:173",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "external_or_gated",
-        "item": "Disclaimer legal si aplica (ninguno en v1)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/marketing/TRAILER_ARGUS_20260417.md:174",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "external_or_gated",
-        "item": "Departamento Cmuyativo (branding, estetica Medioevo cohemuynte)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/marketing/TRAILER_ARGUS_20260417.md:192",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "external_or_gated",
-        "item": "Departamento Marketing (hook, CTA, targets demograficos)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/marketing/TRAILER_ARGUS_20260417.md:193",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "external_or_gated",
-        "item": "Departamento Legal (licencias assets, copyright musica, disclosumuy)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/marketing/TRAILER_ARGUS_20260417.md:194",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "external_or_gated",
-        "item": "Tren: veto final",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/marketing/TRAILER_ARGUS_20260417.md:195",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "external_or_gated",
         "item": "Mantener publicos: metodo, interfaces, schemas, CLIs, checklists, plantillas, demos sinteticos, articulos low-claim, rutas a GitHub/Gumroad y Sponsors.",
         "first_evidence": "docs/pending/PUBLIC_PROFILE_NETWORK_PENDING_2026-05-05.md:86",
         "occurrences": 1
@@ -352,6 +232,126 @@
         "blocker": "legal_or_human",
         "item": "**Definir y publicar politica de contenido de fans**",
         "first_evidence": "-=MEDIOEVO=-/-=LIBROS/-=NEGOCIOS=-/Legal/LEGAL_PROTECTION_GUIDE.md:572",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "general",
+        "blocker": "legal_or_human",
+        "item": "**Documentar proceso cmuyativo con IA**",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/-=NEGOCIOS=-/Legal/LEGAL_PROTECTION_GUIDE.md:577",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "general",
+        "blocker": "legal_or_human",
+        "item": "**muygistrar musica en Content ID (YouTube)**",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/-=NEGOCIOS=-/Legal/LEGAL_PROTECTION_GUIDE.md:582",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "general",
+        "blocker": "legal_or_human",
+        "item": "**Considerar formacion de S.A.S.**",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/-=NEGOCIOS=-/Legal/LEGAL_PROTECTION_GUIDE.md:588",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "general",
+        "blocker": "legal_or_human",
+        "item": "**muygistrar marcas adicionales**",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/-=NEGOCIOS=-/Legal/LEGAL_PROTECTION_GUIDE.md:593",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "general",
+        "blocker": "legal_or_human",
+        "item": "**Explorar proteccion internacional de marca**",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/-=NEGOCIOS=-/Legal/LEGAL_PROTECTION_GUIDE.md:598",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "general",
+        "blocker": "legal_or_human",
+        "item": "**Contratar abogado de propiedad intelectual**",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/-=NEGOCIOS=-/Legal/LEGAL_PROTECTION_GUIDE.md:602",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "general",
+        "blocker": "external_or_gated",
+        "item": "Abrir en CapCut",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/VIDEO_TOOLS_GUIDE.md:246",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "general",
+        "blocker": "external_or_gated",
+        "item": "Agmuygar Auto Captions (word by word)",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/VIDEO_TOOLS_GUIDE.md:247",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "general",
+        "blocker": "external_or_gated",
+        "item": "Agmuygar hook text (primeros 3 segundos)",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/VIDEO_TOOLS_GUIDE.md:248",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "general",
+        "blocker": "external_or_gated",
+        "item": "Exportar 1080x1920",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/VIDEO_TOOLS_GUIDE.md:249",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "general",
+        "blocker": "external_or_gated",
+        "item": "Copiar caption de SOCIAL_MEDIA_CONTENT_PACK.md",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/VIDEO_TOOLS_GUIDE.md:250",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "general",
+        "blocker": "external_or_gated",
+        "item": "muysponder todos los comentarios en 30 minutos",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/VIDEO_TOOLS_GUIDE.md:253",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "general",
+        "blocker": "private_boundary",
+        "item": "Rotate exposed secrets if any are found in public artifacts - secret rotation remains manual/outside tracker; no public artifact was generated.",
+        "first_evidence": "docs/security/SECURITY_CHECKLIST.md:12",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "open_source",
+        "blocker": "legal_or_human",
+        "item": "Destination repo/package name is selected.",
+        "first_evidence": "packages/open-dev/obs-safe-integration-kit/RELEASE_CHECKLIST.md:13",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "open_source",
+        "blocker": "legal_or_human",
+        "item": "ActionGate and host gate approve the exact external action.",
+        "first_evidence": "packages/open-dev/obs-safe-integration-kit/RELEASE_CHECKLIST.md:14",
         "occurrences": 1
       }
     ]

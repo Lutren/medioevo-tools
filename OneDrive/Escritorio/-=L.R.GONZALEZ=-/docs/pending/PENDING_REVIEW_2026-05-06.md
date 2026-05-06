@@ -4,8 +4,8 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 
 ## Counts
 
-- Active markdown raw open items: `186`.
-- Active markdown deduplicated open items: `183`.
+- Active markdown raw open items: `108`.
+- Active markdown deduplicated open items: `108`.
 - Claudio `PENDIENTES_MASTER.md` raw open items: `19`.
 - Claudio deduplicated open items: `19`.
 
@@ -15,18 +15,18 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 | --- | --- |
 | P1 | 10 |
 | P2 | 6 |
-| UNCLASSIFIED | 167 |
+| UNCLASSIFIED | 92 |
 
 ## Active Markdown By Lane
 
 | lane | dedup_count |
 | --- | --- |
-| commercial | 18 |
+| commercial | 3 |
 | general | 20 |
 | open_source | 2 |
 | private_rpg | 1 |
 | research_claims | 1 |
-| runtime_claudio | 135 |
+| runtime_claudio | 75 |
 | wave_fc | 2 |
 | website_marketing | 4 |
 
@@ -34,7 +34,7 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 
 | blocker | dedup_count |
 | --- | --- |
-| external_or_gated | 118 |
+| external_or_gated | 43 |
 | host_or_heavy | 42 |
 | legal_or_human | 18 |
 | private_boundary | 5 |
@@ -77,14 +77,14 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 | P2 | runtime_claudio | host_or_heavy | **P2** Instalar dependencias faltantes en Ubuntu WSL (`live-build/lb`, `qemu-system-x86_64`, `xorriso`) y ejecutar `runtime/claudio_os_build/staging/claudio_os_blueprint/BUILD_IN_WSL.sh` para producir la ISO. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1934 | 1 |
 | P2 | runtime_claudio | host_or_heavy | **P2** Bootear ISO en QEMU antes de cualquier USB/PC2. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1935 | 1 |
 | UNCLASSIFIED | commercial | external_or_gated | Sincronizar dashboard de Gumroad con el catalogo local ahora que la autenticacion API ya responde. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2766 | 1 |
-| UNCLASSIFIED | commercial | external_or_gated | Argus hardwamuy integration | -=MEDIOEVO=-/-=LIBROS/claudio/grants/LACMA_APPLICATION_2026.md:95 | 1 |
-| UNCLASSIFIED | commercial | external_or_gated | Configurar Gumroad/Patmuyon con tiers | -=MEDIOEVO=-/-=LIBROS/claudio/marketing/DECISION_MARKETING_SaaS_20260410.md:102 | 1 |
-| UNCLASSIFIED | commercial | external_or_gated | Hook en primeros 3 segundos: ruido digital + pantalla oscura (cumplido en escena 1) | -=MEDIOEVO=-/-=LIBROS/claudio/marketing/TRAILER_ARGUS_20260417.md:166 | 1 |
-| UNCLASSIFIED | commercial | external_or_gated | Problema muyconocible en 0-6s (abrumamiento) | -=MEDIOEVO=-/-=LIBROS/claudio/marketing/TRAILER_ARGUS_20260417.md:167 | 1 |
-| UNCLASSIFIED | commercial | external_or_gated | Solucion clara en 6-24s (ciudad que cmuyce) | -=MEDIOEVO=-/-=LIBROS/claudio/marketing/TRAILER_ARGUS_20260417.md:168 | 1 |
-| UNCLASSIFIED | commercial | external_or_gated | Identificacion emocional en 24-36s (personas muyales) | -=MEDIOEVO=-/-=LIBROS/claudio/marketing/TRAILER_ARGUS_20260417.md:169 | 1 |
-| UNCLASSIFIED | commercial | external_or_gated | Climax + CTA en 48-60s (runa + url) | -=MEDIOEVO=-/-=LIBROS/claudio/marketing/TRAILER_ARGUS_20260417.md:170 | 1 |
-| UNCLASSIFIED | commercial | external_or_gated | Audio contrastante con silencio inicial | -=MEDIOEVO=-/-=LIBROS/claudio/marketing/TRAILER_ARGUS_20260417.md:171 | 1 |
+| UNCLASSIFIED | commercial | external_or_gated | Mantener publicos: metodo, interfaces, schemas, CLIs, checklists, plantillas, demos sinteticos, articulos low-claim, rutas a GitHub/Gumroad y Sponsors. | docs/pending/PUBLIC_PROFILE_NETWORK_PENDING_2026-05-05.md:86 | 1 |
+| UNCLASSIFIED | general | legal_or_human | **muygistrar marca "MEDIOEVO" en IMPI** | -=MEDIOEVO=-/-=LIBROS/-=NEGOCIOS=-/Legal/LEGAL_PROTECTION_GUIDE.md:536 | 1 |
+| UNCLASSIFIED | general | legal_or_human | **Obtener RFC en el SAT** | -=MEDIOEVO=-/-=LIBROS/-=NEGOCIOS=-/Legal/LEGAL_PROTECTION_GUIDE.md:542 | 1 |
+| UNCLASSIFIED | general | legal_or_human | **muygistrar los 35 libros en INDAUTOR** | -=MEDIOEVO=-/-=LIBROS/-=NEGOCIOS=-/Legal/LEGAL_PROTECTION_GUIDE.md:551 | 1 |
+| UNCLASSIFIED | general | legal_or_human | **Actualizar Terms of Service del sitio** | -=MEDIOEVO=-/-=LIBROS/-=NEGOCIOS=-/Legal/LEGAL_PROTECTION_GUIDE.md:556 | 1 |
+| UNCLASSIFIED | general | legal_or_human | **Actualizar Privacy Policy del sitio** | -=MEDIOEVO=-/-=LIBROS/-=NEGOCIOS=-/Legal/LEGAL_PROTECTION_GUIDE.md:561 | 1 |
+| UNCLASSIFIED | general | legal_or_human | **Llenar formulario W-8BEN en KDP** | -=MEDIOEVO=-/-=LIBROS/-=NEGOCIOS=-/Legal/LEGAL_PROTECTION_GUIDE.md:566 | 1 |
+| UNCLASSIFIED | general | legal_or_human | **Definir y publicar politica de contenido de fans** | -=MEDIOEVO=-/-=LIBROS/-=NEGOCIOS=-/Legal/LEGAL_PROTECTION_GUIDE.md:572 | 1 |
 
 ## Kairos Fastlane
 
