@@ -23,6 +23,12 @@ release gate explicitly approve source delivery.
 
 ## Current Alignment
 
+2026-05-06 update: direct Gumroad URLs for `pack-empresarial`,
+`writer-workbench` and `claudio-full` return HTTP `200`. They are still not
+approved for broad checkout because deliverables, package hashes, covers and
+post-purchase delivery were not verified. Correction packet:
+`docs\publishing\GUMROAD_CLAUDIO_SOFTWARE_DRAFTS_RECHECK_2026-05-06.md`.
+
 | Listing | Current buyer-facing lane | Real deliverable now | Evidence | Decision |
 |---|---|---|---|---|
 | MEDIOEVO Agent Ops Pack | Gumroad published | `published_artifact`: `releases\paid\medioevo-agent-ops-pack.zip` | SHA256 `7cf8fdf5c8da49d691947becebdd3feae5f93b7e062212af38e3063404fab948`; live evidence `qa_artifacts\release_validation\publication-live-verification-2026-05-02.json`; manifest `release_manifests\medioevo-agent-ops-pack.json` has `file_count=10`, `blocked_count=0` | keep published; monitor support and keep hash synchronized |

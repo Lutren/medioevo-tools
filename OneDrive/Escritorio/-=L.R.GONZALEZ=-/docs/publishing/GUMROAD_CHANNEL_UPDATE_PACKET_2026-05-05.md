@@ -66,6 +66,12 @@ Next listing update:
 
 ## Draft / founder access products
 
+2026-05-06 direct URL recheck: `pack-empresarial`, `writer-workbench` and
+`claudio-full` return HTTP `200` by direct URL. Treat them as public by link,
+even if profile/API state calls them drafts. Use
+`docs\publishing\GUMROAD_CLAUDIO_SOFTWARE_DRAFTS_RECHECK_2026-05-06.md` before
+any Gumroad edit.
+
 | product | Gumroad state | allowed Gumroad action |
 |---|---|---|
 | FlujoCRM | founder access only | no public checkout until clean-machine QA, legal/support, installer/signing decision |

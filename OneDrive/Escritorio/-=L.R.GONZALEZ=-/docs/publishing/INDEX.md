@@ -56,3 +56,6 @@ as blanket approval for more repos, Gumroad products, deploys or social posts.
   remaining target truth: host `MIXTO / REVIEW`, website deploy pending,
   Gumroad enhancements pending, LinkedIn auth confirmation pending and social
   posts gated.
+- `docs\publishing\GUMROAD_CLAUDIO_SOFTWARE_DRAFTS_RECHECK_2026-05-06.md`
+  records that Claudio software Gumroad URLs are live by direct link and need
+  safe founder-access copy before any broader checkout/promotion.
