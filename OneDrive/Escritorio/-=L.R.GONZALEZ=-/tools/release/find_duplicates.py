@@ -2,8 +2,27 @@ from __future__ import annotations
 
 import argparse
 from collections import defaultdict
+from pathlib import Path
 
 from _common import add_common_args, iter_files, print_json, rel, sha256_file, validate_root_arg
+
+
+def candidate_hash_files() -> list[Path]:
+    by_size: dict[int, list[Path]] = defaultdict(list)
+    for path in iter_files():
+        try:
+            size = path.stat().st_size
+        except OSError:
+            continue
+        if size == 0 or size > 25 * 1024 * 1024:
+            continue
+        by_size[size].append(path)
+
+    candidates: list[Path] = []
+    for paths in by_size.values():
+        if len(paths) > 1:
+            candidates.extend(paths)
+    return candidates
 
 
 def main() -> int:
@@ -16,12 +35,11 @@ def main() -> int:
     validate_root_arg(args)
 
     groups = defaultdict(list)
-    for path in iter_files():
+    paths = iter_files() if args.mode == "name" else candidate_hash_files()
+    for path in paths:
         if args.mode == "name":
             key = path.name.lower()
         else:
-            if path.stat().st_size == 0 or path.stat().st_size > 25 * 1024 * 1024:
-                continue
             try:
                 key = f"{path.stat().st_size}:{sha256_file(path)}"
             except OSError:

@@ -25,6 +25,12 @@ COMMANDS = [
         "private": False,
     },
     {
+        "name": "geodia-social-observatory-pytest",
+        "cwd": "research/geodia-social-observatory",
+        "command": ["python", "-m", "pytest", "tests", "-q"],
+        "private": False,
+    },
+    {
         "name": "observacionismo-gate-import",
         "cwd": "packages/open-dev/observacionismo-gate",
         "command": ["python", "-c", "import observacionismo_gate; print(observacionismo_gate.__name__)"],

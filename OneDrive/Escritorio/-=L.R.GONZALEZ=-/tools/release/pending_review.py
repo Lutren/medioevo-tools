@@ -246,6 +246,16 @@ def classify_blocker(text: str, lane: str | None = None, path: str | None = None
         return "external_or_gated"
     if lane == "private_rpg":
         return "private_boundary"
+    procedural_markers = (
+        "si aparece un `local_candidate`",
+        "si aparece un local_candidate",
+        "si aparece un nuevo `local_candidate`",
+        "si aparece un nuevo local_candidate",
+        "esperar nuevos `local_candidate`",
+        "esperar nuevos local_candidate",
+        "si aparece trabajo local nuevo",
+        "primer item local_candidate verificable",
+    )
     local_verification_markers = (
         "pytest",
         "npm run check",
@@ -546,6 +556,8 @@ def classify_blocker(text: str, lane: str | None = None, path: str | None = None
         "block_host_gate",
         "block_qwen_gate",
     )
+    if any(marker in value for marker in procedural_markers):
+        return "external_or_gated"
     if any(marker in value for marker in private_markers):
         return "private_boundary"
     if any(marker in value for marker in external_markers):

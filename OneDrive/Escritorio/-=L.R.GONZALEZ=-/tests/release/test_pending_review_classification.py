@@ -21,6 +21,23 @@ def test_regular_local_evidence_task_remains_local_candidate() -> None:
     assert pending_review.classify_blocker("Actualizar reporte local con evidencia de pytest") == "local_candidate"
 
 
+def test_procedural_local_candidate_guard_is_not_selected_as_work() -> None:
+    assert (
+        pending_review.classify_blocker(
+            "**REVIEW** Si aparece un nuevo `local_candidate`, resolverlo con el mismo ciclo: diff, prueba, outcome, COMMS y mirror.",
+            lane="runtime_claudio",
+        )
+        == "external_or_gated"
+    )
+    assert (
+        pending_review.classify_blocker(
+            "**REVIEW** Si aparece un `local_candidate` real, resolverlo con diff, prueba, outcome, COMMS y mirror.",
+            lane="runtime_claudio",
+        )
+        == "external_or_gated"
+    )
+
+
 def test_commercial_manual_checks_are_not_local_candidates() -> None:
     assert pending_review.classify_blocker("Dashboard de métricas de ventas") == "external_or_gated"
     assert pending_review.classify_blocker("Supabase schema: Requiere acceso a dashboard") == "external_or_gated"

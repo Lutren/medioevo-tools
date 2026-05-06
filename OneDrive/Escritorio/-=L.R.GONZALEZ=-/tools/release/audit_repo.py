@@ -6,6 +6,7 @@ from collections import Counter
 from pathlib import Path
 
 from _common import ROOT, add_common_args, is_denied, print_json, rel, validate_root_arg
+from curador_preflight import evaluate as curador_evaluate
 
 
 def main() -> int:
@@ -13,6 +14,12 @@ def main() -> int:
     add_common_args(parser)
     parser.add_argument("--json", action="store_true", help="print JSON instead of text")
     parser.add_argument("--include-denied", action="store_true", help="include archives, caches, builds, and vendor trees")
+    parser.add_argument(
+        "--curador-preflight-git-roots",
+        action="store_true",
+        help="run read-only curador preflight on discovered git roots",
+    )
+    parser.add_argument("--curador-limit", type=int, default=20, help="max git roots to preflight")
     args = parser.parse_args()
     validate_root_arg(args)
 
@@ -61,6 +68,22 @@ def main() -> int:
         "git_roots": sorted(git_roots),
         "top_extensions": suffixes.most_common(25),
     }
+    if args.curador_preflight_git_roots:
+        data["curador_git_roots"] = []
+        for item in sorted(git_roots)[: max(0, args.curador_limit)]:
+            preflight = curador_evaluate(item)
+            classification = preflight["classification"]
+            tech = preflight["tech"]
+            data["curador_git_roots"].append(
+                {
+                    "path": item,
+                    "decision": classification["decision"],
+                    "registered": classification["registered"],
+                    "partial_match_only": classification["partial_match_only"],
+                    "tech_signals": tech.get("signals", []),
+                    "match_count": preflight["match_count"],
+                }
+            )
     if args.json:
         print_json(data)
     else:
@@ -73,6 +96,13 @@ def main() -> int:
         print("git roots:")
         for item in data["git_roots"][:80]:
             print(f"  {item}")
+        if args.curador_preflight_git_roots:
+            print("curador git roots:")
+            for item in data["curador_git_roots"]:
+                print(
+                    f"  {item['path']}: {item['decision']} "
+                    f"(registered={item['registered']}, matches={item['match_count']})"
+                )
     return 0
 
 
