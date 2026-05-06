@@ -388,3 +388,14 @@ Second pass after package tests and root-register cleanup. Only cache directorie
 | date | deleted_dirs | deleted_files | bytes | evidence |
 |---|---:|---:|---:|---|
 | 2026-05-06 | 18 | 84 | 926735 | `qa_artifacts\release_validation\one-universe-cache-cleanup-result-2-2026-05-06.json` |
+
+## One Universe Zero-Byte QA Residue Cleanup 2026-05-06
+
+Two zero-byte release-validation files were removed because they cannot carry
+evidence. SHA256 for both was the empty-file hash
+`e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`.
+
+| status | path | reason |
+|---|---|---|
+| `BASURA_REGENERABLE_BORRADA` | `qa_artifacts\release_validation\curador-audit-2026-05-05-sponsors-cleanup.json` | zero-byte failed/empty QA residue |
+| `BASURA_REGENERABLE_BORRADA` | `qa_artifacts\release_validation\duplicate-hash-dry-run-2026-05-05.json` | zero-byte failed/empty QA residue |
