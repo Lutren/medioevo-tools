@@ -13,6 +13,10 @@ dependencies = []
 [project.scripts]
 obsai-core = "obsai_core.cli:main"
 
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["obsai_core*"]
+
 [tool.obsai-core]
 status = "mvp"
 calibration = "DEMO_ONLY"
