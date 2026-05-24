@@ -1,0 +1,12 @@
+{
+  "records": [
+    {
+      "schema_version": "claudio.memory_lite.v0.1",
+      "type": "episode",
+      "summary": "Synthetic rollback was restored successfully.",
+      "source": "runtime/rollback/rollback-success-001/manifest.json",
+      "confidence": 0.95,
+      "durability": "active"
+    }
+  ]
+}

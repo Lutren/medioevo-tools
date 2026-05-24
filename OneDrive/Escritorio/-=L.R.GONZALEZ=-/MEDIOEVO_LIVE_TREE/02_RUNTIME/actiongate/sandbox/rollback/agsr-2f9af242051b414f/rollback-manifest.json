@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "actiongate.sandbox.rollback.v1",
+  "rollbackId": "agrb-dabb678297067712",
+  "runId": "agsr-2f9af242051b414f",
+  "proposalId": "agp-4ca98f6bb0c6d47d",
+  "createdAt": "2026-05-13T08:08:13.884Z",
+  "sandboxOnly": true,
+  "messagebusBackupPath": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\MEDIOEVO_LIVE_TREE\\02_RUNTIME\\actiongate\\sandbox\\rollback\\agsr-2f9af242051b414f\\messagebus-before.jsonl",
+  "trackedFiles": [],
+  "rollbackStatus": "prepared"
+}

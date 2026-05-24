@@ -1,0 +1,12 @@
+{
+  "records": [
+    {
+      "schema_version": "claudio.memory_lite.v0.1",
+      "type": "constraint",
+      "summary": "Synthetic review and block events are bounded local examples.",
+      "source": "docs/example-review.md",
+      "confidence": 0.8,
+      "durability": "active"
+    }
+  ]
+}

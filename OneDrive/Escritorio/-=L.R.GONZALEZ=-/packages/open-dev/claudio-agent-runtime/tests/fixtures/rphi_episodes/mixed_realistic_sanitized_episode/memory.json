@@ -1,0 +1,8 @@
+{
+  "records": [
+    {"schema_version":"claudio.memory_lite.v0.1","type":"claim","summary":"Synthetic report has one verified section.","source":"qa/mixed-report.md","confidence":0.9,"durability":"active"},
+    {"schema_version":"claudio.memory_lite.v0.1","type":"claim","summary":"Synthetic item missing evidence.","evidence_status":"missing_evidence","confidence":0.3,"durability":"active"},
+    {"schema_version":"claudio.memory_lite.v0.1","type":"claim","summary":"Synthetic stale input needs refresh.","source":"memory/mixed-stale.md","confidence":0.6,"durability":"stale","status":"stale"},
+    {"schema_version":"claudio.memory_lite.v0.1","type":"constraint","summary":"Unknown review outcome remains unresolved.","confidence":0.5,"durability":"active","status":"unknown"}
+  ]
+}

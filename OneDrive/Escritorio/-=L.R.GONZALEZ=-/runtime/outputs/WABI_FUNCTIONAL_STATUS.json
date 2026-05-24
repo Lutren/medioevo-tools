@@ -1,0 +1,188 @@
+{
+  "agents_can_program": {
+    "exists": {
+      "browser_gate": true,
+      "cerebro_archive_intake": true,
+      "cerebro_canon_merge_review": true,
+      "cerebro_duplicate_migration_plan": true,
+      "cerebro_line_audit": true,
+      "cerebro_variant_compare": true,
+      "geodia_math_core": true,
+      "geodia_synthetic_falsifier": true,
+      "geodia_synthetic_surface": true,
+      "patch_planner": true,
+      "provider_orchestrator": true,
+      "safe_executor": true,
+      "tool_registry": true
+    },
+    "gate": "APPROVE_WITH_PATCH_PLAN_ROLLBACK_TESTS_WITNESS",
+    "modules": {
+      "browser_gate": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\apps\\local\\wabi-sabi\\wabi_sabi\\core\\browser_gate.py",
+      "cerebro_archive_intake": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\apps\\local\\wabi-sabi\\wabi_sabi\\core\\cerebro_archive_intake.py",
+      "cerebro_canon_merge_review": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\apps\\local\\wabi-sabi\\wabi_sabi\\core\\cerebro_canon_merge_review.py",
+      "cerebro_duplicate_migration_plan": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\apps\\local\\wabi-sabi\\wabi_sabi\\core\\cerebro_duplicate_migration_plan.py",
+      "cerebro_line_audit": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\apps\\local\\wabi-sabi\\wabi_sabi\\core\\cerebro_line_audit.py",
+      "cerebro_variant_compare": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\apps\\local\\wabi-sabi\\wabi_sabi\\core\\cerebro_variant_compare.py",
+      "geodia_math_core": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\apps\\local\\wabi-sabi\\wabi_sabi\\core\\geodia_math_core.py",
+      "geodia_synthetic_falsifier": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\apps\\local\\wabi-sabi\\wabi_sabi\\core\\geodia_synthetic_falsifier.py",
+      "geodia_synthetic_surface": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\apps\\local\\wabi-sabi\\wabi_sabi\\core\\geodia_synthetic_surface.py",
+      "patch_planner": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\apps\\local\\wabi-sabi\\wabi_sabi\\core\\patch_planner.py",
+      "provider_orchestrator": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\apps\\local\\wabi-sabi\\wabi_sabi\\core\\provider_orchestrator.py",
+      "safe_executor": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\apps\\local\\wabi-sabi\\wabi_sabi\\core\\safe_executor.py",
+      "tool_registry": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\apps\\local\\wabi-sabi\\wabi_sabi\\core\\tool_registry.py"
+    },
+    "status": "READY_LOCAL_SAFE_EXECUTOR"
+  },
+  "archive_intake": {
+    "exists": {
+      "archive_manifest": true,
+      "archive_report": true,
+      "archive_text_index": true
+    },
+    "gate": "REVIEW_BEFORE_IMPORT",
+    "outputs": {
+      "archive_manifest": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\ARCHIVE_MEMBER_MANIFEST.jsonl",
+      "archive_report": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\ARCHIVE_INTAKE_REPORT.md",
+      "archive_text_index": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\ARCHIVE_TEXT_INDEX.jsonl"
+    },
+    "status": "READY_REVIEW_QUARANTINE"
+  },
+  "blockers": [],
+  "browser": {
+    "policy": {
+      "allow": [
+        {
+          "gate": "APPROVE_LOGGED",
+          "reason": "local static artifact inspection",
+          "scope": "file://"
+        },
+        {
+          "gate": "APPROVE_LOGGED",
+          "reason": "local app smoke testing",
+          "scope": "localhost / 127.0.0.1 / ::1"
+        },
+        {
+          "gate": "APPROVE_LOGGED_READ_ONLY",
+          "reason": "documentation or public page inspection without login or form submit",
+          "scope": "http/https read-only public pages"
+        }
+      ],
+      "block": [
+        "secret extraction or printing",
+        "credential entry by the agent without explicit credential handoff",
+        "public deploy, release, push, or publication without a dedicated gate",
+        "destructive account, billing, or data operations"
+      ],
+      "decision_context": {
+        "mode": "COMPLETO_GATEADO",
+        "no_operational_assumptions": true,
+        "rule": "Browser access is allowed for local and read-only inspection; state-changing, authenticated, paid, publishing, or secret-bearing actions are REVIEW/BLOCK."
+      },
+      "evidence_required": [
+        "target URL",
+        "intended browser action",
+        "whether authentication or persistence is involved",
+        "screenshot/log/result artifact for completed local checks"
+      ],
+      "generated_at_utc": "2026-05-07T18:41:16+00:00",
+      "review": [
+        "authenticated sessions",
+        "forms that submit data",
+        "uploads",
+        "posting to social/media/store surfaces",
+        "checkout, billing, payment, subscription, or purchase flows",
+        "settings that persist account or host state"
+      ],
+      "schema": "wabi.browser_gate.v1",
+      "workspace": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-"
+    },
+    "status": "COMPLETO_GATEADO"
+  },
+  "cerebro_line_audit": {
+    "exists": {
+      "canon_merge_review_pack": true,
+      "document_register": true,
+      "exact_duplicate_migration_plan": true,
+      "human_navigation": true,
+      "line_manifest": true,
+      "line_signal_index": true,
+      "project_graph": true,
+      "read_report": true,
+      "technology_atoms": true,
+      "variant_semantic_comparison": true
+    },
+    "outputs": {
+      "canon_merge_review_pack": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_master_index\\VARIANT_CANON_MERGE_REVIEW_PACK.json",
+      "document_register": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_master_index\\DOCUMENT_EXTRACTION_REGISTER.md",
+      "exact_duplicate_migration_plan": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_master_index\\VARIANT_EXACT_DUPLICATE_MIGRATION_PLAN.json",
+      "human_navigation": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_master_index\\HUMAN_NAVIGATION_INDEX.md",
+      "line_manifest": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_master_index\\LINE_AUDIT_MANIFEST.jsonl",
+      "line_signal_index": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_master_index\\LINE_SIGNAL_INDEX.jsonl",
+      "project_graph": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_master_index\\MASTER_PROJECT_GRAPH.json",
+      "read_report": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_master_index\\CEREBRO_READ_COMPLETE_REPORT.md",
+      "technology_atoms": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_master_index\\TECHNOLOGY_ATOMS.json",
+      "variant_semantic_comparison": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_master_index\\VARIANT_SEMANTIC_COMPARISON.json"
+    },
+    "status": "READY"
+  },
+  "decision_context": {
+    "no_operational_assumptions": true,
+    "required_truth": "claim only what has current evidence"
+  },
+  "duat_geodia_os": {
+    "claudio_root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio",
+    "current_verification": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wabi_sabi\\DUAT_GEODIA_CURRENT_VERIFICATION.json",
+    "current_verification_exists": true,
+    "gate": "REVERIFY_WITH_LOCAL_COMMANDS",
+    "kernel_exists": true,
+    "kernel_root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\os\\duat_geodia_kernel",
+    "qa_reports": [
+      "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\qa_artifacts\\os\\duat_geodia_os_p22_keyboard_queue_2026-05-06.json",
+      "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\qa_artifacts\\os\\duat_geodia_os_p21_vga_abc_cells_2026-05-06.json",
+      "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\qa_artifacts\\os\\duat_geodia_os_p20_third_scancode_2026-05-06.json",
+      "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\qa_artifacts\\os\\duat_geodia_os_p19_second_scancode_2026-05-06.json",
+      "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\qa_artifacts\\os\\duat_geodia_os_p18_scancode_witness_2026-05-06.json",
+      "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\qa_artifacts\\os\\duat_geodia_os_p17_input_map_2026-05-06.json",
+      "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\qa_artifacts\\os\\duat_geodia_os_p16_input_buffer_2026-05-06.json",
+      "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\qa_artifacts\\os\\duat_geodia_os_p15_input_text_echo_2026-05-06.json"
+    ],
+    "runtime_reports": [
+      "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wabi_sabi\\DUAT_GEODIA_CURRENT_VERIFICATION.json"
+    ],
+    "status": "BOOT_VERIFIED_CURRENT_SESSION",
+    "test_exists": {
+      "test_brain_os_kernel.py": true,
+      "test_duat_geodia_iso_builder.py": true,
+      "test_duat_geodia_multistage_benchmark.py": true,
+      "test_duat_geodia_os_orchestrator.py": true
+    },
+    "tests": {
+      "test_brain_os_kernel.py": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\tests\\test_brain_os_kernel.py",
+      "test_duat_geodia_iso_builder.py": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\tests\\test_duat_geodia_iso_builder.py",
+      "test_duat_geodia_multistage_benchmark.py": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\tests\\test_duat_geodia_multistage_benchmark.py",
+      "test_duat_geodia_os_orchestrator.py": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\tests\\test_duat_geodia_os_orchestrator.py"
+    },
+    "tool_exists": {
+      "brain_os_cli.py": true,
+      "duat_geodia_iso_builder.py": true,
+      "duat_geodia_multistage_benchmark.py": true,
+      "duat_geodia_os_orchestrator.py": true
+    },
+    "tools": {
+      "brain_os_cli.py": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\tools\\brain_os_cli.py",
+      "duat_geodia_iso_builder.py": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\tools\\duat_geodia_iso_builder.py",
+      "duat_geodia_multistage_benchmark.py": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\tools\\duat_geodia_multistage_benchmark.py",
+      "duat_geodia_os_orchestrator.py": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\tools\\duat_geodia_os_orchestrator.py"
+    }
+  },
+  "generated_at_utc": "2026-05-07T18:41:16+00:00",
+  "not_claimed": [
+    "No deploy, push, public publication, billing action, or account action is claimed.",
+    "No full CEREBRO absorption is claimed for binary/DOCX/PDF/archive files without dedicated extraction.",
+    "No DUAT/GEODIA boot success is claimed unless a current command report proves it."
+  ],
+  "runtime_root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime",
+  "schema": "wabi.functional_status.v1",
+  "status": "LOCAL_FUNCTIONAL_VERIFIED",
+  "workspace": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-"
+}

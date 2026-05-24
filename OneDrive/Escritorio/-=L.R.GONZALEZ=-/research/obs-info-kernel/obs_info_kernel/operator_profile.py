@@ -7,8 +7,8 @@ from typing import Any, Dict, Iterable, List, Mapping
 
 from .calibration import DEFAULT_EQUIVALENCES, CalibrationGapDetector
 from .core import Source
-from .eor import EORCalculator
 from .epistemic_guard import EpistemicGuard
+from .math_canon import MATH_CANON_VERSION, R_noisy_or, phi_moi
 from .text import sentences, tokens, top_terms
 
 
@@ -72,7 +72,7 @@ class OperatorProfiler:
         k_vector = self._k_vector(source)
         omissions = [op for op in self.expected_operators if k_vector.get(op, 0.0) <= 0.0]
         r_source = self._r_source(k_vector, omissions, evidence_type)
-        phi_source = EORCalculator.phi_eff(r_source, j_c=1.0)
+        phi_source = self._phi_source(source, claims, equations, evidence_type, k_vector, omissions, r_source)
         claim_basis = claims[0] if claims else f"{source.title}: {source.domain}"
         status = self.guard.classify(claim_basis, source.domain).status.value
         return OperatorProfile(
@@ -90,7 +90,16 @@ class OperatorProfiler:
             r_source=r_source,
             phi_source=phi_source,
             epistemic_status=status,
-            metadata={"char_count": source.char_count, **(source.metadata or {})},
+            metadata={
+                "char_count": source.char_count,
+                "math_canon": {
+                    "version": MATH_CANON_VERSION,
+                    "r_source_formula": "R_or = 1 - prod_i(1 - r_i)",
+                    "phi_source_formula": "Phi_moi = (T*S*C*K*(1-R))^(1/5)",
+                    "claim_boundary": "operational_proxy_not_science_claim",
+                },
+                **(source.metadata or {}),
+            },
         )
 
     def build_many(self, sources: List[Source]) -> List[OperatorProfile]:
@@ -108,13 +117,14 @@ class OperatorProfiler:
         shared = [op for op, count in operator_hits.items() if count >= 2]
         orphan = [op for op, count in operator_hits.items() if count == 1]
         mean_r = sum(profile.r_source for profile in profiles) / len(profiles)
+        mean_phi = sum(profile.phi_source for profile in profiles) / len(profiles)
         return {
             "profiles": len(profiles),
             "domains": domains,
             "shared_operators": sorted(shared),
             "orphan_operators": sorted(orphan),
             "mean_r_source": round(mean_r, 4),
-            "mean_phi_source": round(1.0 - mean_r, 4),
+            "mean_phi_source": round(mean_phi, 4),
         }
 
     def _k_vector(self, source: Source) -> Dict[str, float]:
@@ -127,7 +137,24 @@ class OperatorProfiler:
         omission_pressure = len(omissions) / max(1, len(self.expected_operators))
         evidence_penalty = 0.0 if evidence_type in {"experiment", "code", "equation"} else 0.10
         weak_vector_penalty = 0.10 if sum(k_vector.values()) <= 0 else 0.0
-        return max(0.0, min(1.0, omission_pressure + evidence_penalty + weak_vector_penalty))
+        return R_noisy_or([omission_pressure, evidence_penalty, weak_vector_penalty])
+
+    def _phi_source(
+        self,
+        source: Source,
+        claims: List[str],
+        equations: List[str],
+        evidence_type: str,
+        k_vector: Mapping[str, float],
+        omissions: List[str],
+        r_source: float,
+    ) -> float:
+        traceability = 1.0 if source.id and source.title else 0.5
+        testability = {"experiment": 1.0, "code": 0.95, "equation": 0.85}.get(evidence_type, 0.55)
+        clarity = 1.0 if claims or equations else 0.65
+        operator_coverage = 1.0 - (len(omissions) / max(1, len(self.expected_operators)))
+        k_strength = max(operator_coverage, min(1.0, sum(k_vector.values())))
+        return phi_moi(traceability, testability, clarity, k_strength, r_source)
 
     def _extract_claims(self, text: str, limit: int = 8) -> List[str]:
         out = []

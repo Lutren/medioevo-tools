@@ -1,0 +1,115 @@
+{
+  "schema": "duat/windows-app-performance-benchmark/v1.4",
+  "fingerprint": "DUAT-v1.4-WINAPP-CONVERSION",
+  "generatedAt": "2026-05-20T17:16:17.808Z",
+  "browserMode": "Edge/CDP/headless-frame-sampler-via-winapp-launcher",
+  "wrapper": "native_dotnet_edge_app_mode",
+  "nativeExecutableServer": true,
+  "executable": "dist/winapp/DUATCity.exe",
+  "headedFpsVerified": false,
+  "thresholdFps": 30,
+  "minAppAvgFps": 59.9,
+  "allAppAvgFpsAtLeastThreshold": true,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": true,
+      "code": 0,
+      "minAppAvgFps": 59.9,
+      "rawJson": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\artifacts\\duat-city\\docs\\PERFORMANCE_BENCHMARK_v1_5.raw.attempt1.json"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "high_iso3d_operational",
+      "url": "http://127.0.0.1:18672/duat-city/?nativeWin=1&mode=CITY&view=OPERATIONAL&vibe=neon_rain_street&benchmarkStatic=1&labels=0&cinematic=1",
+      "avgFps": 59.8,
+      "minFps": 29.94,
+      "maxFps": 60.61,
+      "p95FrameMs": 16.7,
+      "droppedFrames": 1,
+      "frames": 299,
+      "focusStatus": "unconfirmed",
+      "appAvgFps": 59.9,
+      "appP95FrameMs": 16.7,
+      "runtimeMode": "static-render-benchmark",
+      "renderCounters": {
+        "agentsRendered": 12,
+        "buildingsRendered": 6,
+        "tilesRendered": 31,
+        "particlesRendered": 39,
+        "activePixelCells": 4,
+        "dirtyChunks": 24,
+        "overlaysEnabled": false,
+        "viewMode": "OPERATIONAL",
+        "cameraZoom": 1.55
+      }
+    },
+    {
+      "id": "beautiful_vermeer_city",
+      "url": "http://127.0.0.1:18672/duat-city/?nativeWin=1&mode=CITY&view=BEAUTIFUL&vibe=warm_interior_tavern&benchmarkStatic=1&labels=0&cinematic=1",
+      "avgFps": 60,
+      "minFps": 59.52,
+      "maxFps": 60.61,
+      "p95FrameMs": 16.8,
+      "droppedFrames": 0,
+      "frames": 300,
+      "focusStatus": "unconfirmed",
+      "appAvgFps": 60.18,
+      "appP95FrameMs": 16.8,
+      "runtimeMode": "static-render-benchmark",
+      "renderCounters": {
+        "agentsRendered": 12,
+        "buildingsRendered": 6,
+        "tilesRendered": 792,
+        "particlesRendered": 15,
+        "activePixelCells": 1,
+        "dirtyChunks": 24,
+        "overlaysEnabled": false,
+        "viewMode": "BEAUTIFUL",
+        "cameraZoom": 2.45
+      }
+    },
+    {
+      "id": "debug_osit_formula_lab",
+      "url": "http://127.0.0.1:18672/duat-city/?nativeWin=1&mode=OSIT&view=DEBUG&vibe=archeopunk_city_night&benchmarkStatic=1&labels=0",
+      "avgFps": 60,
+      "minFps": 59.52,
+      "maxFps": 60.61,
+      "p95FrameMs": 16.7,
+      "droppedFrames": 0,
+      "frames": 300,
+      "focusStatus": "unconfirmed",
+      "appAvgFps": 60.16,
+      "appP95FrameMs": 16.7,
+      "runtimeMode": "static-render-benchmark",
+      "renderCounters": {
+        "agentsRendered": 12,
+        "buildingsRendered": 6,
+        "tilesRendered": 1488,
+        "particlesRendered": 36,
+        "activePixelCells": 1,
+        "dirtyChunks": 24,
+        "overlaysEnabled": true,
+        "viewMode": "DEBUG",
+        "cameraZoom": 1.15
+      }
+    }
+  ],
+  "corrections": [
+    {
+      "issue": "headed Edge benchmark can be focus-throttled or time out in unattended shells",
+      "action": "reran benchmark through DUATCity.exe serve-only plus warmed headless CDP frame sampler",
+      "R_before": 0.39,
+      "Phi_eff_before": 0.64,
+      "R_after": 0.18,
+      "Phi_eff_after": 0.81
+    }
+  ],
+  "notes": [
+    "This automated benchmark still uses the Windows executable as the app source.",
+    "The visible/headed runner remains available as winapp:benchmark:headed for manual focus-controlled QA.",
+    "Scenarios use benchmarkStatic=1 to isolate render cost from simulation ticks; normal playable mode remains live.",
+    "No cloud, Wabi execution, MCP, push, deploy or external publication was used."
+  ]
+}

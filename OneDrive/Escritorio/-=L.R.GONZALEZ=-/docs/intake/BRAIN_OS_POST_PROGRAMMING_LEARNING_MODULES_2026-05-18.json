@@ -1,0 +1,1240 @@
+{
+  "schema_version": "brain_os.post_programming_learning_modules.v1",
+  "created_date": "2026-05-18",
+  "source_matrix": "docs\\intake\\BRAIN_OS_POST_BATCH_INSIGHTS_MATRIX_2026-05-18.json",
+  "status": "LOCAL_PROGRAMMING_LEARNING_WORKPACK",
+  "learning_boundary": {
+    "ai_learning_mode": "symbolic_curriculum_and_test_first_programming",
+    "model_training": "BLOCK",
+    "cloud_training": "BLOCK",
+    "raw_source_import": "BLOCK",
+    "zip_extraction": "BLOCK"
+  },
+  "gate_summary": {
+    "RuntimeImport": "BLOCK",
+    "PublicationGate": "BLOCK",
+    "RawAdoption": "BLOCK",
+    "ModelTraining": "BLOCK"
+  },
+  "coverage": {
+    "all_delta_ids": [
+      "boundary.alias_normalization_and_no_register",
+      "boundary.cloud_plan_requires_local_gate",
+      "boundary.publication_runtime_raw_adoption_block",
+      "continuity.formal_framework_handoff_fingerprint_contract",
+      "continuity.meta_review_prioritizes_direct_cleanup_dangerous",
+      "continuity.ra_horus_prerequisite_knowledge_graph",
+      "falsifiers.benchmark_pass_terms_require_current_evidence",
+      "falsifiers.formal_framework_preprint_benchmark_claims_require_current_evidence",
+      "falsifiers.noumeno_consciousness_physics_claims_blocked",
+      "falsifiers.ra_horus_dream_science_and_raw_code_claims_blocked",
+      "falsifiers.security_offensive_execution_blocked",
+      "gate.formal_framework_ghostgate_classical_simulation",
+      "gate.ghostgate_actiongate_scienceclaimgate_split",
+      "gate.ra_horus_agency_state_machine_requires_runtime_tests",
+      "gate.ra_horus_pre_action_generation_gate",
+      "math_state.formal_framework_shannon_bridge_requires_calibration",
+      "math_state.formal_lab_demotes_physics_claims",
+      "math_state.phi_eff_as_method_not_proof",
+      "math_state.ra_horus_dynamic_temperature_and_r_velocity",
+      "security.action_gate_dual_use_tools",
+      "security.dry_run_adapter_contract",
+      "security.output_sanitizer_redaction",
+      "security.risk_mapper_business_remediation",
+      "security.scope_registry_authorization_required",
+      "security.tool_catalog_default_gates",
+      "security.witnesslog_handoff_security",
+      "zip.formalizados_engine_runtime_import_block",
+      "zip.teorias_consciencia_claims_blocked",
+      "zip.trabajo_mejorado_public_safe_qa_handoff",
+      "zip.truthgate_eic_member_anchors"
+    ],
+    "covered_delta_ids": [
+      "boundary.alias_normalization_and_no_register",
+      "boundary.cloud_plan_requires_local_gate",
+      "boundary.publication_runtime_raw_adoption_block",
+      "continuity.formal_framework_handoff_fingerprint_contract",
+      "continuity.meta_review_prioritizes_direct_cleanup_dangerous",
+      "continuity.ra_horus_prerequisite_knowledge_graph",
+      "falsifiers.benchmark_pass_terms_require_current_evidence",
+      "falsifiers.formal_framework_preprint_benchmark_claims_require_current_evidence",
+      "falsifiers.noumeno_consciousness_physics_claims_blocked",
+      "falsifiers.ra_horus_dream_science_and_raw_code_claims_blocked",
+      "falsifiers.security_offensive_execution_blocked",
+      "gate.formal_framework_ghostgate_classical_simulation",
+      "gate.ghostgate_actiongate_scienceclaimgate_split",
+      "gate.ra_horus_agency_state_machine_requires_runtime_tests",
+      "gate.ra_horus_pre_action_generation_gate",
+      "math_state.formal_framework_shannon_bridge_requires_calibration",
+      "math_state.formal_lab_demotes_physics_claims",
+      "math_state.phi_eff_as_method_not_proof",
+      "math_state.ra_horus_dynamic_temperature_and_r_velocity",
+      "security.action_gate_dual_use_tools",
+      "security.dry_run_adapter_contract",
+      "security.output_sanitizer_redaction",
+      "security.risk_mapper_business_remediation",
+      "security.scope_registry_authorization_required",
+      "security.tool_catalog_default_gates",
+      "security.witnesslog_handoff_security",
+      "zip.formalizados_engine_runtime_import_block",
+      "zip.teorias_consciencia_claims_blocked",
+      "zip.trabajo_mejorado_public_safe_qa_handoff",
+      "zip.truthgate_eic_member_anchors"
+    ],
+    "uncovered_delta_ids": []
+  },
+  "module_cards": [
+    {
+      "module_id": "post_boundary_guardrail_compiler",
+      "family": "Boundary",
+      "status": "PROGRAMMING_LEARNING_SPEC",
+      "module_gate": "BLOCK",
+      "evidence_state": "REQUIRES_EVIDENCE",
+      "training_data_status": "CURATED_METADATA_AND_REQUIREMENTS_ONLY",
+      "model_training": "BLOCK",
+      "runtime_import": "BLOCK",
+      "publication_gate": "BLOCK",
+      "raw_adoption": "BLOCK",
+      "source_delta_ids": [
+        "boundary.alias_normalization_and_no_register",
+        "boundary.publication_runtime_raw_adoption_block",
+        "boundary.cloud_plan_requires_local_gate",
+        "zip.teorias_consciencia_claims_blocked",
+        "falsifiers.formal_framework_preprint_benchmark_claims_require_current_evidence",
+        "falsifiers.ra_horus_dream_science_and_raw_code_claims_blocked"
+      ],
+      "source_refs": [
+        {
+          "delta_id": "boundary.alias_normalization_and_no_register",
+          "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\# 00 — LEER PRIMERO Portafolio MEDI.txt",
+          "source_sha256": "C1169FF35BC0ED886992C330121B3EAC744A5B051136A15C6FF256C085B6DDAD",
+          "evidence": [
+            "alias:C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\# 00  LEER PRIMERO Portafolio MEDI.txt=NOT_FOUND_ALIAS_DO_NOT_REGISTER",
+            "canonical:line 1",
+            "canonical:sha256 C1169FF35BC0ED886992C330121B3EAC744A5B051136A15C6FF256C085B6DDAD"
+          ],
+          "claim_boundary": "CANONICAL_PATH_ONLY"
+        },
+        {
+          "delta_id": "boundary.publication_runtime_raw_adoption_block",
+          "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\deep-research-report.md",
+          "source_sha256": "26B51C23C6B2CA503CFE62B947835D0AFA88A05E0F059F6817E7A7B76FD44A18",
+          "evidence": [
+            "line 219",
+            "line 326",
+            "line 435"
+          ],
+          "claim_boundary": "PUBLICATION_RUNTIME_AND_RAW_ADOPTION_BLOCKED"
+        },
+        {
+          "delta_id": "boundary.cloud_plan_requires_local_gate",
+          "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\Del Cálculo al Gate_ Cómo OSIT Transforma la Planificación en la Nube en Acciones Locales Seguras y Auditables.pdf",
+          "source_sha256": "F294EF4A73202F8BE5B2C58FBD38053F299423DFDE03654F8FBAEAF2F2143578",
+          "evidence": [
+            "pdf_text_line 62",
+            "pdf_text_line 131",
+            "pdf_text_line 162",
+            "pdf_text_line 256"
+          ],
+          "claim_boundary": "CLOUD_OR_SECRET_ACTIONS_BLOCKED_WITHOUT_EXPLICIT_GATE"
+        },
+        {
+          "delta_id": "zip.teorias_consciencia_claims_blocked",
+          "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\MEDIOEVO_OSIT_TEORIAS_COMUNICACION_CONSCIENCIA_v0_1_2026-05-17.zip",
+          "source_sha256": "6D1A0E1A686A44599BDB61C66DDC4E8B5212D56FE71ECBD79F8B514CAAFA438C",
+          "evidence": [
+            "zip::01_TEORIAS_ACTUALIZADAS/05_BIOLOGIA_IA_CONSCIENCIA_MTS.md",
+            "zip::02_SOURCE_CARDS_Y_CLAIMS/CLAIMS_REGISTER.md",
+            "zip::02_SOURCE_CARDS_Y_CLAIMS/SOURCE_CARDS.md"
+          ],
+          "claim_boundary": "BLOCK_CONSCIOUSNESS_OR_PHYSICS_AS_FACT"
+        },
+        {
+          "delta_id": "falsifiers.formal_framework_preprint_benchmark_claims_require_current_evidence",
+          "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\# OSIT Epistemic Engine A Formal Fr.txt",
+          "source_sha256": "94BE9A64DF6AD002F0F6B7DB4B2C2FA052314C31AABE2FE5E55ADFCFD40348D2",
+          "evidence": [
+            "line 6",
+            "line 12",
+            "line 192",
+            "line 205",
+            "line 247",
+            "line 257",
+            "line 1214"
+          ],
+          "claim_boundary": "PREPRINT_AND_100_PERCENT_BENCHMARK_CLAIMS_NOT_APPROVED"
+        },
+        {
+          "delta_id": "falsifiers.ra_horus_dream_science_and_raw_code_claims_blocked",
+          "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\El Ojo de Ra y el Ojo de Horus (a m.txt",
+          "source_sha256": "F397D144BEA1471761838E7B9D7F209ED31CEC1F3D805B30548D6E0AF0BA6C30",
+          "evidence": [
+            "line 83",
+            "line 125",
+            "line 182",
+            "line 186",
+            "line 214",
+            "line 338",
+            "line 366",
+            "line 591"
+          ],
+          "claim_boundary": "DREAM_JUNG_MEDICINE_PHYSICS_AND_RAW_CODE_CLAIMS_NOT_APPROVED"
+        }
+      ],
+      "target_lane": "tools/release validators, docs/intake, future ActionGate tests",
+      "programming_objective": "Build validators that normalize source aliases, block raw adoption, and force explicit gates before publication, runtime or cloud actions.",
+      "learning_objective": "Teach local agents to classify source material before using it, and to demote strong claims to REVIEW or BLOCK.",
+      "input_contract": [
+        "curated matrix JSON",
+        "exact source path and SHA256",
+        "line_or_member_evidence anchors",
+        "claim_boundary",
+        "ActionGate decision"
+      ],
+      "output_contract": [
+        "test-first implementation plan",
+        "negative fixtures where needed",
+        "local docs or validators",
+        "updated handoff with evidence"
+      ],
+      "required_tests": [
+        "source provenance and hash retained",
+        "RuntimeImport remains BLOCK",
+        "PublicationGate remains BLOCK",
+        "RawAdoption remains BLOCK",
+        "strong claims require REQUIRES_EVIDENCE or BLOCK"
+      ],
+      "allowed_actions": [
+        "generate validation tests",
+        "write local-only docs",
+        "create structured workpacks",
+        "reference exact source paths and hashes"
+      ],
+      "blocked_actions": [
+        "RuntimeImport",
+        "PublicationGate approval",
+        "RawAdoption",
+        "external posting",
+        "secret or token handling"
+      ]
+    },
+    {
+      "module_id": "post_gate_simulation_contract",
+      "family": "Gate",
+      "status": "PROGRAMMING_LEARNING_SPEC",
+      "module_gate": "BLOCK",
+      "evidence_state": "REQUIRES_EVIDENCE",
+      "training_data_status": "CURATED_METADATA_AND_REQUIREMENTS_ONLY",
+      "model_training": "BLOCK",
+      "runtime_import": "BLOCK",
+      "publication_gate": "BLOCK",
+      "raw_adoption": "BLOCK",
+      "source_delta_ids": [
+        "gate.ghostgate_actiongate_scienceclaimgate_split",
+        "gate.formal_framework_ghostgate_classical_simulation",
+        "gate.ra_horus_agency_state_machine_requires_runtime_tests",
+        "gate.ra_horus_pre_action_generation_gate",
+        "zip.truthgate_eic_member_anchors",
+        "boundary.cloud_plan_requires_local_gate"
+      ],
+      "source_refs": [
+        {
+          "delta_id": "gate.ghostgate_actiongate_scienceclaimgate_split",
+          "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\ESTADO ANÁLISIS_ARQUITECTÓNICO  REV.txt",
+          "source_sha256": "F3805545DB1163971149DC25892467D5F958955A2494740ECCA6D2A70B35180D",
+          "evidence": [
+            "line 6",
+            "line 24",
+            "line 49",
+            "line 58"
+          ],
+          "claim_boundary": "GATE_VOCABULARY_ONLY_UNTIL_RUNTIME_TESTS"
+        },
+        {
+          "delta_id": "gate.formal_framework_ghostgate_classical_simulation",
+          "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\# OSIT Epistemic Engine A Formal Fr.txt",
+          "source_sha256": "94BE9A64DF6AD002F0F6B7DB4B2C2FA052314C31AABE2FE5E55ADFCFD40348D2",
+          "evidence": [
+            "line 130",
+            "line 132",
+            "line 139",
+            "line 141",
+            "line 143",
+            "line 769"
+          ],
+          "claim_boundary": "CLASSICAL_SIMULATION_CONTRACT_NOT_QUANTUM_PHYSICS_CLAIM"
+        },
+        {
+          "delta_id": "gate.ra_horus_agency_state_machine_requires_runtime_tests",
+          "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\El Ojo de Ra y el Ojo de Horus (a m.txt",
+          "source_sha256": "F397D144BEA1471761838E7B9D7F209ED31CEC1F3D805B30548D6E0AF0BA6C30",
+          "evidence": [
+            "line 447",
+            "line 452",
+            "line 453",
+            "line 454",
+            "line 455",
+            "line 615",
+            "line 625"
+          ],
+          "claim_boundary": "DREAM_CONTROL_STATES_ARE_ARCHITECTURE_ANALOGY_NOT_NEUROSCIENCE_PROOF"
+        },
+        {
+          "delta_id": "gate.ra_horus_pre_action_generation_gate",
+          "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\El Ojo de Ra y el Ojo de Horus (a m.txt",
+          "source_sha256": "F397D144BEA1471761838E7B9D7F209ED31CEC1F3D805B30548D6E0AF0BA6C30",
+          "evidence": [
+            "line 472",
+            "line 474",
+            "line 478",
+            "line 480",
+            "line 723",
+            "line 747",
+            "line 756"
+          ],
+          "claim_boundary": "PREFRONTAL_GATE_IS_LOCAL_ANALOGY_REQUIRES_EVIDENCE"
+        },
+        {
+          "delta_id": "zip.truthgate_eic_member_anchors",
+          "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\MEDIOEVO_OSIT_DOCUMENTOS_ACTUALIZADOS_TRUTHGATE_EIC_v0_3_2026-05-17.zip",
+          "source_sha256": "1FFC289E526E2BA81987B074DF1BDE6805C3E4A3C551E9BB7816BF29699FBE0C",
+          "evidence": [
+            "zip::04_CLAIMS_Y_SOURCE_CARDS/CLAIMS_REGISTER_v0_3.md",
+            "zip::04_CLAIMS_Y_SOURCE_CARDS/SOURCE_CARDS_v0_3.md",
+            "zip::05_TESTS_Y_ROADMAP/TESTS_FALSIFICADORES_v0_3.md"
+          ],
+          "claim_boundary": "ZIP_MEMBER_REFERENCE_ONLY"
+        },
+        {
+          "delta_id": "boundary.cloud_plan_requires_local_gate",
+          "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\Del Cálculo al Gate_ Cómo OSIT Transforma la Planificación en la Nube en Acciones Locales Seguras y Auditables.pdf",
+          "source_sha256": "F294EF4A73202F8BE5B2C58FBD38053F299423DFDE03654F8FBAEAF2F2143578",
+          "evidence": [
+            "pdf_text_line 62",
+            "pdf_text_line 131",
+            "pdf_text_line 162",
+            "pdf_text_line 256"
+          ],
+          "claim_boundary": "CLOUD_OR_SECRET_ACTIONS_BLOCKED_WITHOUT_EXPLICIT_GATE"
+        }
+      ],
+      "target_lane": "ActionGate contracts, Wabi/Claudio gate fixtures",
+      "programming_objective": "Convert GhostGate/ActionGate/ScienceClaimGate insights into a testable pre-action contract and fixture set.",
+      "learning_objective": "Teach the agent to simulate before executing and to separate planning evidence from execution permission.",
+      "input_contract": [
+        "curated matrix JSON",
+        "exact source path and SHA256",
+        "line_or_member_evidence anchors",
+        "claim_boundary",
+        "ActionGate decision"
+      ],
+      "output_contract": [
+        "test-first implementation plan",
+        "negative fixtures where needed",
+        "local docs or validators",
+        "updated handoff with evidence"
+      ],
+      "required_tests": [
+        "source provenance and hash retained",
+        "RuntimeImport remains BLOCK",
+        "PublicationGate remains BLOCK",
+        "RawAdoption remains BLOCK",
+        "strong claims require REQUIRES_EVIDENCE or BLOCK"
+      ],
+      "allowed_actions": [
+        "add negative fixtures",
+        "generate gate decision examples",
+        "write REVIEW/BLOCK test cases"
+      ],
+      "blocked_actions": [
+        "cloud execution",
+        "provider changes",
+        "credential reads",
+        "unbounded process execution"
+      ]
+    },
+    {
+      "module_id": "post_security_workbench_contract",
+      "family": "Security",
+      "status": "PROGRAMMING_LEARNING_SPEC",
+      "module_gate": "BLOCK",
+      "evidence_state": "FALSIFIER_OR_DEFECT",
+      "training_data_status": "CURATED_METADATA_AND_REQUIREMENTS_ONLY",
+      "model_training": "BLOCK",
+      "runtime_import": "BLOCK",
+      "publication_gate": "BLOCK",
+      "raw_adoption": "BLOCK",
+      "source_delta_ids": [
+        "security.scope_registry_authorization_required",
+        "security.action_gate_dual_use_tools",
+        "security.tool_catalog_default_gates",
+        "security.dry_run_adapter_contract",
+        "security.output_sanitizer_redaction",
+        "security.risk_mapper_business_remediation",
+        "security.witnesslog_handoff_security",
+        "falsifiers.security_offensive_execution_blocked"
+      ],
+      "source_refs": [
+        {
+          "delta_id": "security.scope_registry_authorization_required",
+          "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\ESTADO222222222.txt",
+          "source_sha256": "2E118556099DEAE74E07A8CCDC2B6F7D97C9BBBF5828EB2C41BDF244EC1137FE",
+          "evidence": [
+            "line 304",
+            "line 311",
+            "line 320",
+            "line 321",
+            "line 322",
+            "line 323",
+            "line 324",
+            "line 325"
+          ],
+          "claim_boundary": "TARGET_AUTHORIZATION_REQUIRED_BEFORE_SECURITY_TOOL_USE"
+        },
+        {
+          "delta_id": "security.action_gate_dual_use_tools",
+          "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\ESTADO222222222.txt",
+          "source_sha256": "2E118556099DEAE74E07A8CCDC2B6F7D97C9BBBF5828EB2C41BDF244EC1137FE",
+          "evidence": [
+            "line 216",
+            "line 328",
+            "line 331",
+            "line 334",
+            "line 335",
+            "line 336",
+            "line 337",
+            "line 338",
+            "line 339"
+          ],
+          "claim_boundary": "DUAL_USE_TOOLS_REQUIRE_SECURITY_ACTION_GATE"
+        },
+        {
+          "delta_id": "security.tool_catalog_default_gates",
+          "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\ESTADO222222222.txt",
+          "source_sha256": "2E118556099DEAE74E07A8CCDC2B6F7D97C9BBBF5828EB2C41BDF244EC1137FE",
+          "evidence": [
+            "line 245",
+            "line 247",
+            "line 254",
+            "line 261",
+            "line 262",
+            "line 263",
+            "line 264",
+            "line 265",
+            "line 276"
+          ],
+          "claim_boundary": "TOOL_DEFAULT_GATES_MUST_NOT_ELEVATE_DUAL_USE_ACTIONS"
+        },
+        {
+          "delta_id": "security.dry_run_adapter_contract",
+          "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\ESTADO222222222.txt",
+          "source_sha256": "2E118556099DEAE74E07A8CCDC2B6F7D97C9BBBF5828EB2C41BDF244EC1137FE",
+          "evidence": [
+            "line 278",
+            "line 281",
+            "line 285",
+            "line 287",
+            "line 289",
+            "line 290",
+            "line 295",
+            "line 296",
+            "line 300"
+          ],
+          "claim_boundary": "ADAPTERS_RETURN_DRY_RUN_PLAN_AND_PARSE_FIXTURES_ONLY"
+        },
+        {
+          "delta_id": "security.output_sanitizer_redaction",
+          "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\ESTADO222222222.txt",
+          "source_sha256": "2E118556099DEAE74E07A8CCDC2B6F7D97C9BBBF5828EB2C41BDF244EC1137FE",
+          "evidence": [
+            "line 341",
+            "line 343",
+            "line 344",
+            "line 346",
+            "line 347",
+            "line 348",
+            "line 350",
+            "line 356",
+            "line 358",
+            "line 367"
+          ],
+          "claim_boundary": "SECURITY_OUTPUT_MUST_REDACT_SECRETS_HASHES_COOKIES_DUMPS_AND_PAYLOADS"
+        },
+        {
+          "delta_id": "security.risk_mapper_business_remediation",
+          "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\ESTADO222222222.txt",
+          "source_sha256": "2E118556099DEAE74E07A8CCDC2B6F7D97C9BBBF5828EB2C41BDF244EC1137FE",
+          "evidence": [
+            "line 369",
+            "line 371",
+            "line 375",
+            "line 377",
+            "line 378",
+            "line 379",
+            "line 380",
+            "line 381",
+            "line 383",
+            "line 391"
+          ],
+          "claim_boundary": "SECURITY_FINDINGS_REQUIRE_BUSINESS_REMEDIATION_CONTEXT"
+        },
+        {
+          "delta_id": "security.witnesslog_handoff_security",
+          "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\ESTADO222222222.txt",
+          "source_sha256": "2E118556099DEAE74E07A8CCDC2B6F7D97C9BBBF5828EB2C41BDF244EC1137FE",
+          "evidence": [
+            "line 150",
+            "line 151",
+            "line 152",
+            "line 393",
+            "line 394",
+            "line 396",
+            "line 401",
+            "line 405",
+            "line 408",
+            "line 409"
+          ],
+          "claim_boundary": "SECURITY_DECISIONS_REQUIRE_APPEND_ONLY_WITNESS_AND_RECONSTRUCTABLE_HANDOFF"
+        },
+        {
+          "delta_id": "falsifiers.security_offensive_execution_blocked",
+          "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\ESTADO222222222.txt",
+          "source_sha256": "2E118556099DEAE74E07A8CCDC2B6F7D97C9BBBF5828EB2C41BDF244EC1137FE",
+          "evidence": [
+            "line 182",
+            "line 498",
+            "line 499",
+            "line 500",
+            "line 501",
+            "line 502",
+            "line 503",
+            "line 504",
+            "line 505"
+          ],
+          "claim_boundary": "OFFENSIVE_SECURITY_EXECUTION_AND_SECRET_OUTPUT_BLOCKED"
+        }
+      ],
+      "target_lane": "packages/open-dev/obs-safe-integration-kit; tests; docs/developer Wabi integration packet",
+      "programming_objective": "Rebuild the Ethical Security Workbench as a defensive dry-run and fixture-only contract in obs-safe before any Wabi wrapper exists.",
+      "learning_objective": "Teach local agents to separate authorized defensive observation from raw dual-use tool execution, exploitation, cracking, dumps and secret handling.",
+      "input_contract": [
+        "curated matrix JSON",
+        "exact source path and SHA256",
+        "line_or_member_evidence anchors",
+        "claim_boundary",
+        "ActionGate decision"
+      ],
+      "output_contract": [
+        "test-first implementation plan",
+        "negative fixtures where needed",
+        "local docs or validators",
+        "updated handoff with evidence"
+      ],
+      "required_tests": [
+        "source provenance and hash retained",
+        "RuntimeImport remains BLOCK",
+        "PublicationGate remains BLOCK",
+        "RawAdoption remains BLOCK",
+        "strong claims require REQUIRES_EVIDENCE or BLOCK"
+      ],
+      "allowed_actions": [
+        "define security scope records",
+        "list default-gated security tools",
+        "build dry-run plans without execution",
+        "parse synthetic fixtures",
+        "redact sensitive output",
+        "generate remediation reports and witness handoff"
+      ],
+      "blocked_actions": [
+        "executing nmap nikto sqlmap metasploit john hashcat maltego or recon-ng",
+        "external target scanning",
+        "exploitation",
+        "payloads",
+        "shells",
+        "database dumps",
+        "password cracking",
+        "bypass or exfiltration",
+        "secret or credential output",
+        "Wabi CLI integration before obs-safe contract stability"
+      ]
+    },
+    {
+      "module_id": "post_math_state_learning_lab",
+      "family": "Math-State",
+      "status": "PROGRAMMING_LEARNING_SPEC",
+      "module_gate": "REVIEW",
+      "evidence_state": "REQUIRES_EVIDENCE",
+      "training_data_status": "CURATED_METADATA_AND_REQUIREMENTS_ONLY",
+      "model_training": "BLOCK",
+      "runtime_import": "BLOCK",
+      "publication_gate": "BLOCK",
+      "raw_adoption": "BLOCK",
+      "source_delta_ids": [
+        "math_state.phi_eff_as_method_not_proof",
+        "math_state.formal_lab_demotes_physics_claims",
+        "math_state.formal_framework_shannon_bridge_requires_calibration",
+        "math_state.ra_horus_dynamic_temperature_and_r_velocity",
+        "zip.formalizados_engine_runtime_import_block"
+      ],
+      "source_refs": [
+        {
+          "delta_id": "math_state.phi_eff_as_method_not_proof",
+          "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\Ingeniería Observacionista Inversa_ Un Modelo Operativo para Elevar la Eficiencia de la Investigación desde un Estado Óptimo.md",
+          "source_sha256": "5BE0BF57AB98AE8AC8F21C53DCDB0864DA943BFDF703B928B337008319BEE5BB",
+          "evidence": [
+            "line 7",
+            "line 9",
+            "line 11",
+            "line 16",
+            "line 100"
+          ],
+          "claim_boundary": "METHOD_REQUIRES_TARGET_LANE_TESTS"
+        },
+        {
+          "delta_id": "math_state.formal_lab_demotes_physics_claims",
+          "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\ESTADO.txt",
+          "source_sha256": "9B9EC7C6723FB037CA0370B40E31EBD5FD4A79D830DE80B947CA576268AD2D60",
+          "evidence": [
+            "line 85",
+            "line 110",
+            "line 112",
+            "line 236",
+            "line 264"
+          ],
+          "claim_boundary": "FORMAL_LAB_NOT_PRIMARY_SCIENCE"
+        },
+        {
+          "delta_id": "math_state.formal_framework_shannon_bridge_requires_calibration",
+          "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\# OSIT Epistemic Engine A Formal Fr.txt",
+          "source_sha256": "94BE9A64DF6AD002F0F6B7DB4B2C2FA052314C31AABE2FE5E55ADFCFD40348D2",
+          "evidence": [
+            "line 55",
+            "line 60",
+            "line 67",
+            "line 76",
+            "line 227",
+            "line 233"
+          ],
+          "claim_boundary": "SHANNON_BRIDGE_IS_HYPOTHESIS_UNTIL_LOCAL_CALIBRATION"
+        },
+        {
+          "delta_id": "math_state.ra_horus_dynamic_temperature_and_r_velocity",
+          "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\El Ojo de Ra y el Ojo de Horus (a m.txt",
+          "source_sha256": "F397D144BEA1471761838E7B9D7F209ED31CEC1F3D805B30548D6E0AF0BA6C30",
+          "evidence": [
+            "line 514",
+            "line 520",
+            "line 523",
+            "line 524",
+            "line 1038",
+            "line 1069",
+            "line 1218",
+            "line 1286"
+          ],
+          "claim_boundary": "TEMPERATURE_AND_R_VELOCITY_REQUIRE_SYNTHETIC_RUNTIME_TESTS"
+        },
+        {
+          "delta_id": "zip.formalizados_engine_runtime_import_block",
+          "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\MEDIOEVO_OSIT_DOCUMENTOS_FORMALIZADOS_v2_1_2026-05-17.zip",
+          "source_sha256": "44190A3DE0CC6EEB6E3DC7BA37D361DE50653965BCBDFD9B82BD050C9F698937",
+          "evidence": [
+            "zip::04_MATEMATICAS_Y_TESTS/osit_epistemic_engine_v2_1.py",
+            "zip::01_CANON_Y_METODO/MOI_v0_4_TRUTHGATE.md",
+            "zip::09_HANDOFF/HANDOFF_v2_1.md"
+          ],
+          "claim_boundary": "RUNTIME_CODE_IN_ZIP_NOT_IMPORTED"
+        }
+      ],
+      "target_lane": "Wabi geodia math tests, Claudio R/Phi backlog, docs/intake",
+      "programming_objective": "Translate R/Phi_eff and formal-lab ideas into bounded tests and comparison helpers without copying prototype code.",
+      "learning_objective": "Teach the system to treat math-state claims as hypotheses requiring fixtures, tolerances and measured evidence.",
+      "input_contract": [
+        "curated matrix JSON",
+        "exact source path and SHA256",
+        "line_or_member_evidence anchors",
+        "claim_boundary",
+        "ActionGate decision"
+      ],
+      "output_contract": [
+        "test-first implementation plan",
+        "negative fixtures where needed",
+        "local docs or validators",
+        "updated handoff with evidence"
+      ],
+      "required_tests": [
+        "source provenance and hash retained",
+        "RuntimeImport remains BLOCK",
+        "PublicationGate remains BLOCK",
+        "RawAdoption remains BLOCK",
+        "strong claims require REQUIRES_EVIDENCE or BLOCK"
+      ],
+      "allowed_actions": [
+        "write synthetic fixtures",
+        "define tolerance tests",
+        "create comparison adapters from requirements"
+      ],
+      "blocked_actions": [
+        "copying osit_epistemic_engine code",
+        "claiming scientific proof",
+        "model training",
+        "runtime replacement"
+      ]
+    },
+    {
+      "module_id": "post_continuity_handoff_validator",
+      "family": "Continuity",
+      "status": "PROGRAMMING_LEARNING_SPEC",
+      "module_gate": "REVIEW",
+      "evidence_state": "REQUIRES_EVIDENCE",
+      "training_data_status": "CURATED_METADATA_AND_REQUIREMENTS_ONLY",
+      "model_training": "BLOCK",
+      "runtime_import": "BLOCK",
+      "publication_gate": "BLOCK",
+      "raw_adoption": "BLOCK",
+      "source_delta_ids": [
+        "continuity.meta_review_prioritizes_direct_cleanup_dangerous",
+        "continuity.formal_framework_handoff_fingerprint_contract",
+        "continuity.ra_horus_prerequisite_knowledge_graph",
+        "zip.trabajo_mejorado_public_safe_qa_handoff"
+      ],
+      "source_refs": [
+        {
+          "delta_id": "continuity.meta_review_prioritizes_direct_cleanup_dangerous",
+          "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\ESTADOqqqqq.txt",
+          "source_sha256": "4744D5E3947591D8B5D7D53A9B284D4B0EFC13ECE0B3239C07F40FE53982E473",
+          "evidence": [
+            "line 37",
+            "line 64",
+            "line 77",
+            "line 80",
+            "line 92",
+            "line 144"
+          ],
+          "claim_boundary": "META_REVIEW_NOT_A_FICHA"
+        },
+        {
+          "delta_id": "continuity.formal_framework_handoff_fingerprint_contract",
+          "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\# OSIT Epistemic Engine A Formal Fr.txt",
+          "source_sha256": "94BE9A64DF6AD002F0F6B7DB4B2C2FA052314C31AABE2FE5E55ADFCFD40348D2",
+          "evidence": [
+            "line 173",
+            "line 175",
+            "line 182",
+            "line 188",
+            "line 699",
+            "line 705",
+            "line 731"
+          ],
+          "claim_boundary": "HANDOFF_FINGERPRINT_REQUIRES_VALIDATOR_TESTS"
+        },
+        {
+          "delta_id": "continuity.ra_horus_prerequisite_knowledge_graph",
+          "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\El Ojo de Ra y el Ojo de Horus (a m.txt",
+          "source_sha256": "F397D144BEA1471761838E7B9D7F209ED31CEC1F3D805B30548D6E0AF0BA6C30",
+          "evidence": [
+            "line 491",
+            "line 499",
+            "line 502",
+            "line 503",
+            "line 504",
+            "line 844",
+            "line 909"
+          ],
+          "claim_boundary": "KNOWLEDGE_UNLOCK_REQUIRES_PREREQUISITES_AND_PHI_TESTS"
+        },
+        {
+          "delta_id": "zip.trabajo_mejorado_public_safe_qa_handoff",
+          "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\MEDIOEVO_OSIT_TRABAJO_MEJORADO_v0_2_2026-05-17.zip",
+          "source_sha256": "9871A6010E6E5BEF410C78314D6F60C790DC9E1BE591D6A86F93C7351EFA3523",
+          "evidence": [
+            "zip::05_PRODUCTO_PUBLIC_SAFE/02_PUBLIC_SAFE_LANGUAGE.md",
+            "zip::09_QA_RECONSTRUCTION/QA_REPORT.md",
+            "zip::10_HANDOFF/HANDOFF.md"
+          ],
+          "claim_boundary": "PUBLIC_SAFE_COPY_REQUIRES_ALLOWLIST_AND_TESTS"
+        }
+      ],
+      "target_lane": "NEXT_SESSION_BRIEF, SESSION_FINGERPRINT, QA reports, bulletin board",
+      "programming_objective": "Convert Handoff/QA/public-safe insights into validators for session fingerprints, next-session briefs and evidence closure.",
+      "learning_objective": "Teach agents that closure text must be derived from actual test evidence, not self-reported completion.",
+      "input_contract": [
+        "curated matrix JSON",
+        "exact source path and SHA256",
+        "line_or_member_evidence anchors",
+        "claim_boundary",
+        "ActionGate decision"
+      ],
+      "output_contract": [
+        "test-first implementation plan",
+        "negative fixtures where needed",
+        "local docs or validators",
+        "updated handoff with evidence"
+      ],
+      "required_tests": [
+        "source provenance and hash retained",
+        "RuntimeImport remains BLOCK",
+        "PublicationGate remains BLOCK",
+        "RawAdoption remains BLOCK",
+        "strong claims require REQUIRES_EVIDENCE or BLOCK"
+      ],
+      "allowed_actions": [
+        "validate closure JSON",
+        "write handoff consistency checks",
+        "generate next-action workpacks"
+      ],
+      "blocked_actions": [
+        "marking unverified tasks done",
+        "publication claims",
+        "broad cleanup",
+        "moving raw sources"
+      ]
+    },
+    {
+      "module_id": "post_falsifier_fixture_suite",
+      "family": "Falsifiers",
+      "status": "PROGRAMMING_LEARNING_SPEC",
+      "module_gate": "BLOCK",
+      "evidence_state": "REQUIRES_EVIDENCE",
+      "training_data_status": "CURATED_METADATA_AND_REQUIREMENTS_ONLY",
+      "model_training": "BLOCK",
+      "runtime_import": "BLOCK",
+      "publication_gate": "BLOCK",
+      "raw_adoption": "BLOCK",
+      "source_delta_ids": [
+        "falsifiers.benchmark_pass_terms_require_current_evidence",
+        "falsifiers.formal_framework_preprint_benchmark_claims_require_current_evidence",
+        "falsifiers.ra_horus_dream_science_and_raw_code_claims_blocked",
+        "falsifiers.noumeno_consciousness_physics_claims_blocked",
+        "zip.formalizados_engine_runtime_import_block"
+      ],
+      "source_refs": [
+        {
+          "delta_id": "falsifiers.benchmark_pass_terms_require_current_evidence",
+          "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\deep-research-report.md",
+          "source_sha256": "26B51C23C6B2CA503CFE62B947835D0AFA88A05E0F059F6817E7A7B76FD44A18",
+          "evidence": [
+            "line 52",
+            "line 194",
+            "line 234",
+            "line 422",
+            "line 424",
+            "line 436",
+            "line 557",
+            "line 564"
+          ],
+          "claim_boundary": "SELF_REPORTED_BENCHMARK_NOT_A_PASS"
+        },
+        {
+          "delta_id": "falsifiers.formal_framework_preprint_benchmark_claims_require_current_evidence",
+          "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\# OSIT Epistemic Engine A Formal Fr.txt",
+          "source_sha256": "94BE9A64DF6AD002F0F6B7DB4B2C2FA052314C31AABE2FE5E55ADFCFD40348D2",
+          "evidence": [
+            "line 6",
+            "line 12",
+            "line 192",
+            "line 205",
+            "line 247",
+            "line 257",
+            "line 1214"
+          ],
+          "claim_boundary": "PREPRINT_AND_100_PERCENT_BENCHMARK_CLAIMS_NOT_APPROVED"
+        },
+        {
+          "delta_id": "falsifiers.ra_horus_dream_science_and_raw_code_claims_blocked",
+          "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\El Ojo de Ra y el Ojo de Horus (a m.txt",
+          "source_sha256": "F397D144BEA1471761838E7B9D7F209ED31CEC1F3D805B30548D6E0AF0BA6C30",
+          "evidence": [
+            "line 83",
+            "line 125",
+            "line 182",
+            "line 186",
+            "line 214",
+            "line 338",
+            "line 366",
+            "line 591"
+          ],
+          "claim_boundary": "DREAM_JUNG_MEDICINE_PHYSICS_AND_RAW_CODE_CLAIMS_NOT_APPROVED"
+        },
+        {
+          "delta_id": "falsifiers.noumeno_consciousness_physics_claims_blocked",
+          "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\El Noúmeno Informacional Unificació.txt",
+          "source_sha256": "F9D5B122A9B82C568C9CAEBBBFC0869DD5165CF7B4D2684C6C222FF030AEFCAD",
+          "evidence": [
+            "line 1",
+            "line 2",
+            "line 4",
+            "line 7",
+            "line 156",
+            "line 589",
+            "line 616"
+          ],
+          "claim_boundary": "BLOCK_CONSCIOUSNESS_OR_PHYSICS_AS_FACT"
+        },
+        {
+          "delta_id": "zip.formalizados_engine_runtime_import_block",
+          "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\MEDIOEVO_OSIT_DOCUMENTOS_FORMALIZADOS_v2_1_2026-05-17.zip",
+          "source_sha256": "44190A3DE0CC6EEB6E3DC7BA37D361DE50653965BCBDFD9B82BD050C9F698937",
+          "evidence": [
+            "zip::04_MATEMATICAS_Y_TESTS/osit_epistemic_engine_v2_1.py",
+            "zip::01_CANON_Y_METODO/MOI_v0_4_TRUTHGATE.md",
+            "zip::09_HANDOFF/HANDOFF_v2_1.md"
+          ],
+          "claim_boundary": "RUNTIME_CODE_IN_ZIP_NOT_IMPORTED"
+        }
+      ],
+      "target_lane": "tests/release, Wabi formal contract intake, Claudio R/Phi tests",
+      "programming_objective": "Convert PASS/PROBADO/Benchmark and strong-claim language into negative fixtures and regression tests.",
+      "learning_objective": "Teach the agent to prefer falsifiers and current evidence over confident source wording.",
+      "input_contract": [
+        "curated matrix JSON",
+        "exact source path and SHA256",
+        "line_or_member_evidence anchors",
+        "claim_boundary",
+        "ActionGate decision"
+      ],
+      "output_contract": [
+        "test-first implementation plan",
+        "negative fixtures where needed",
+        "local docs or validators",
+        "updated handoff with evidence"
+      ],
+      "required_tests": [
+        "source provenance and hash retained",
+        "RuntimeImport remains BLOCK",
+        "PublicationGate remains BLOCK",
+        "RawAdoption remains BLOCK",
+        "strong claims require REQUIRES_EVIDENCE or BLOCK"
+      ],
+      "allowed_actions": [
+        "write failing tests first",
+        "record negative fixtures",
+        "gate self-reported success terms"
+      ],
+      "blocked_actions": [
+        "approving benchmark terms without test output",
+        "publishing consciousness or AGI claims",
+        "medical claims",
+        "secret or token exposure"
+      ]
+    },
+    {
+      "module_id": "post_zip_evidence_adapter",
+      "family": "Boundary",
+      "status": "PROGRAMMING_LEARNING_SPEC",
+      "module_gate": "BLOCK",
+      "evidence_state": "REQUIRES_EVIDENCE",
+      "training_data_status": "CURATED_METADATA_AND_REQUIREMENTS_ONLY",
+      "model_training": "BLOCK",
+      "runtime_import": "BLOCK",
+      "publication_gate": "BLOCK",
+      "raw_adoption": "BLOCK",
+      "source_delta_ids": [
+        "zip.truthgate_eic_member_anchors",
+        "zip.formalizados_engine_runtime_import_block",
+        "zip.teorias_consciencia_claims_blocked",
+        "zip.trabajo_mejorado_public_safe_qa_handoff"
+      ],
+      "source_refs": [
+        {
+          "delta_id": "zip.truthgate_eic_member_anchors",
+          "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\MEDIOEVO_OSIT_DOCUMENTOS_ACTUALIZADOS_TRUTHGATE_EIC_v0_3_2026-05-17.zip",
+          "source_sha256": "1FFC289E526E2BA81987B074DF1BDE6805C3E4A3C551E9BB7816BF29699FBE0C",
+          "evidence": [
+            "zip::04_CLAIMS_Y_SOURCE_CARDS/CLAIMS_REGISTER_v0_3.md",
+            "zip::04_CLAIMS_Y_SOURCE_CARDS/SOURCE_CARDS_v0_3.md",
+            "zip::05_TESTS_Y_ROADMAP/TESTS_FALSIFICADORES_v0_3.md"
+          ],
+          "claim_boundary": "ZIP_MEMBER_REFERENCE_ONLY"
+        },
+        {
+          "delta_id": "zip.formalizados_engine_runtime_import_block",
+          "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\MEDIOEVO_OSIT_DOCUMENTOS_FORMALIZADOS_v2_1_2026-05-17.zip",
+          "source_sha256": "44190A3DE0CC6EEB6E3DC7BA37D361DE50653965BCBDFD9B82BD050C9F698937",
+          "evidence": [
+            "zip::04_MATEMATICAS_Y_TESTS/osit_epistemic_engine_v2_1.py",
+            "zip::01_CANON_Y_METODO/MOI_v0_4_TRUTHGATE.md",
+            "zip::09_HANDOFF/HANDOFF_v2_1.md"
+          ],
+          "claim_boundary": "RUNTIME_CODE_IN_ZIP_NOT_IMPORTED"
+        },
+        {
+          "delta_id": "zip.teorias_consciencia_claims_blocked",
+          "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\MEDIOEVO_OSIT_TEORIAS_COMUNICACION_CONSCIENCIA_v0_1_2026-05-17.zip",
+          "source_sha256": "6D1A0E1A686A44599BDB61C66DDC4E8B5212D56FE71ECBD79F8B514CAAFA438C",
+          "evidence": [
+            "zip::01_TEORIAS_ACTUALIZADAS/05_BIOLOGIA_IA_CONSCIENCIA_MTS.md",
+            "zip::02_SOURCE_CARDS_Y_CLAIMS/CLAIMS_REGISTER.md",
+            "zip::02_SOURCE_CARDS_Y_CLAIMS/SOURCE_CARDS.md"
+          ],
+          "claim_boundary": "BLOCK_CONSCIOUSNESS_OR_PHYSICS_AS_FACT"
+        },
+        {
+          "delta_id": "zip.trabajo_mejorado_public_safe_qa_handoff",
+          "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\MEDIOEVO_OSIT_TRABAJO_MEJORADO_v0_2_2026-05-17.zip",
+          "source_sha256": "9871A6010E6E5BEF410C78314D6F60C790DC9E1BE591D6A86F93C7351EFA3523",
+          "evidence": [
+            "zip::05_PRODUCTO_PUBLIC_SAFE/02_PUBLIC_SAFE_LANGUAGE.md",
+            "zip::09_QA_RECONSTRUCTION/QA_REPORT.md",
+            "zip::10_HANDOFF/HANDOFF.md"
+          ],
+          "claim_boundary": "PUBLIC_SAFE_COPY_REQUIRES_ALLOWLIST_AND_TESTS"
+        }
+      ],
+      "target_lane": "tools/release, docs/intake, future source-card compiler",
+      "programming_objective": "Create a safe ZIP evidence adapter contract that reads metadata and member anchors without extraction to runtime.",
+      "learning_objective": "Teach agents to use ZIPs as evidence containers, not source trees to adopt wholesale.",
+      "input_contract": [
+        "curated matrix JSON",
+        "exact source path and SHA256",
+        "line_or_member_evidence anchors",
+        "claim_boundary",
+        "ActionGate decision"
+      ],
+      "output_contract": [
+        "test-first implementation plan",
+        "negative fixtures where needed",
+        "local docs or validators",
+        "updated handoff with evidence"
+      ],
+      "required_tests": [
+        "source provenance and hash retained",
+        "RuntimeImport remains BLOCK",
+        "PublicationGate remains BLOCK",
+        "RawAdoption remains BLOCK",
+        "strong claims require REQUIRES_EVIDENCE or BLOCK"
+      ],
+      "allowed_actions": [
+        "read ZIP metadata",
+        "reference zip_path::member anchors",
+        "hash containers",
+        "test for suspicious member names"
+      ],
+      "blocked_actions": [
+        "extracting ZIP members into workspace",
+        "runtime import from ZIP",
+        "public packaging",
+        "copying internal prompts"
+      ]
+    }
+  ],
+  "learning_path": [
+    {
+      "phase": 1,
+      "name": "boundary_before_runtime",
+      "module_ids": [
+        "post_boundary_guardrail_compiler",
+        "post_zip_evidence_adapter"
+      ],
+      "exit_criteria": [
+        "aliases normalized",
+        "ZIPs referenced without extraction",
+        "publication/runtime/raw adoption gates blocked"
+      ]
+    },
+    {
+      "phase": 2,
+      "name": "gates_and_falsifiers",
+      "module_ids": [
+        "post_gate_simulation_contract",
+        "post_security_workbench_contract",
+        "post_falsifier_fixture_suite"
+      ],
+      "exit_criteria": [
+        "negative fixtures exist",
+        "strong terms are not approved",
+        "simulation is separate from execution permission",
+        "security tools remain dry-run/fixture-only with no external target touched"
+      ]
+    },
+    {
+      "phase": 3,
+      "name": "bounded_programming",
+      "module_ids": [
+        "post_math_state_learning_lab",
+        "post_continuity_handoff_validator"
+      ],
+      "exit_criteria": [
+        "target-lane failing test exists before implementation",
+        "closure derives from real test output"
+      ]
+    }
+  ],
+  "codex_task_packets": [
+    {
+      "packet_id": "codex_post_boundary_guardrail_compiler",
+      "mode": "test_first_local_programming",
+      "application_gate": "REVIEW",
+      "module_id": "post_boundary_guardrail_compiler",
+      "prompt": "Implement only the next safe test-first step for post_boundary_guardrail_compiler from curated requirements. Do not import raw POST source or extract ZIP members.",
+      "write_scope": [
+        "tests/release or target-lane tests",
+        "docs/intake or local validator modules"
+      ],
+      "blocked_now": [
+        "RuntimeImport",
+        "PublicationGate approval",
+        "RawAdoption",
+        "cloud/model training",
+        "secret/token exposure"
+      ],
+      "evidence_required": [
+        "source provenance and hash retained",
+        "RuntimeImport remains BLOCK",
+        "PublicationGate remains BLOCK",
+        "RawAdoption remains BLOCK",
+        "strong claims require REQUIRES_EVIDENCE or BLOCK"
+      ]
+    },
+    {
+      "packet_id": "codex_post_gate_simulation_contract",
+      "mode": "test_first_local_programming",
+      "application_gate": "REVIEW",
+      "module_id": "post_gate_simulation_contract",
+      "prompt": "Implement only the next safe test-first step for post_gate_simulation_contract from curated requirements. Do not import raw POST source or extract ZIP members.",
+      "write_scope": [
+        "tests/release or target-lane tests",
+        "docs/intake or local validator modules"
+      ],
+      "blocked_now": [
+        "RuntimeImport",
+        "PublicationGate approval",
+        "RawAdoption",
+        "cloud/model training",
+        "secret/token exposure"
+      ],
+      "evidence_required": [
+        "source provenance and hash retained",
+        "RuntimeImport remains BLOCK",
+        "PublicationGate remains BLOCK",
+        "RawAdoption remains BLOCK",
+        "strong claims require REQUIRES_EVIDENCE or BLOCK"
+      ]
+    },
+    {
+      "packet_id": "codex_post_security_workbench_contract",
+      "mode": "test_first_local_programming",
+      "application_gate": "REVIEW",
+      "module_id": "post_security_workbench_contract",
+      "prompt": "Implement only the next safe test-first step for post_security_workbench_contract from curated requirements. Do not import raw POST source or extract ZIP members.",
+      "write_scope": [
+        "tests/release or target-lane tests",
+        "docs/intake or local validator modules"
+      ],
+      "blocked_now": [
+        "RuntimeImport",
+        "PublicationGate approval",
+        "RawAdoption",
+        "cloud/model training",
+        "secret/token exposure"
+      ],
+      "evidence_required": [
+        "source provenance and hash retained",
+        "RuntimeImport remains BLOCK",
+        "PublicationGate remains BLOCK",
+        "RawAdoption remains BLOCK",
+        "strong claims require REQUIRES_EVIDENCE or BLOCK"
+      ]
+    },
+    {
+      "packet_id": "codex_post_math_state_learning_lab",
+      "mode": "test_first_local_programming",
+      "application_gate": "REVIEW",
+      "module_id": "post_math_state_learning_lab",
+      "prompt": "Implement only the next safe test-first step for post_math_state_learning_lab from curated requirements. Do not import raw POST source or extract ZIP members.",
+      "write_scope": [
+        "tests/release or target-lane tests",
+        "docs/intake or local validator modules"
+      ],
+      "blocked_now": [
+        "RuntimeImport",
+        "PublicationGate approval",
+        "RawAdoption",
+        "cloud/model training",
+        "secret/token exposure"
+      ],
+      "evidence_required": [
+        "source provenance and hash retained",
+        "RuntimeImport remains BLOCK",
+        "PublicationGate remains BLOCK",
+        "RawAdoption remains BLOCK",
+        "strong claims require REQUIRES_EVIDENCE or BLOCK"
+      ]
+    },
+    {
+      "packet_id": "codex_post_continuity_handoff_validator",
+      "mode": "test_first_local_programming",
+      "application_gate": "REVIEW",
+      "module_id": "post_continuity_handoff_validator",
+      "prompt": "Implement only the next safe test-first step for post_continuity_handoff_validator from curated requirements. Do not import raw POST source or extract ZIP members.",
+      "write_scope": [
+        "tests/release or target-lane tests",
+        "docs/intake or local validator modules"
+      ],
+      "blocked_now": [
+        "RuntimeImport",
+        "PublicationGate approval",
+        "RawAdoption",
+        "cloud/model training",
+        "secret/token exposure"
+      ],
+      "evidence_required": [
+        "source provenance and hash retained",
+        "RuntimeImport remains BLOCK",
+        "PublicationGate remains BLOCK",
+        "RawAdoption remains BLOCK",
+        "strong claims require REQUIRES_EVIDENCE or BLOCK"
+      ]
+    },
+    {
+      "packet_id": "codex_post_falsifier_fixture_suite",
+      "mode": "test_first_local_programming",
+      "application_gate": "REVIEW",
+      "module_id": "post_falsifier_fixture_suite",
+      "prompt": "Implement only the next safe test-first step for post_falsifier_fixture_suite from curated requirements. Do not import raw POST source or extract ZIP members.",
+      "write_scope": [
+        "tests/release or target-lane tests",
+        "docs/intake or local validator modules"
+      ],
+      "blocked_now": [
+        "RuntimeImport",
+        "PublicationGate approval",
+        "RawAdoption",
+        "cloud/model training",
+        "secret/token exposure"
+      ],
+      "evidence_required": [
+        "source provenance and hash retained",
+        "RuntimeImport remains BLOCK",
+        "PublicationGate remains BLOCK",
+        "RawAdoption remains BLOCK",
+        "strong claims require REQUIRES_EVIDENCE or BLOCK"
+      ]
+    },
+    {
+      "packet_id": "codex_post_zip_evidence_adapter",
+      "mode": "test_first_local_programming",
+      "application_gate": "REVIEW",
+      "module_id": "post_zip_evidence_adapter",
+      "prompt": "Implement only the next safe test-first step for post_zip_evidence_adapter from curated requirements. Do not import raw POST source or extract ZIP members.",
+      "write_scope": [
+        "tests/release or target-lane tests",
+        "docs/intake or local validator modules"
+      ],
+      "blocked_now": [
+        "RuntimeImport",
+        "PublicationGate approval",
+        "RawAdoption",
+        "cloud/model training",
+        "secret/token exposure"
+      ],
+      "evidence_required": [
+        "source provenance and hash retained",
+        "RuntimeImport remains BLOCK",
+        "PublicationGate remains BLOCK",
+        "RawAdoption remains BLOCK",
+        "strong claims require REQUIRES_EVIDENCE or BLOCK"
+      ]
+    }
+  ],
+  "next_action": "Implement multiple runtime modules only as isolated gated slices: one module, one test file, one rollback-safe change set at a time."
+}

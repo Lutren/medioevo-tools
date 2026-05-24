@@ -1,0 +1,12 @@
+{
+  "schema_version": "medioevo.event_injection.v0.1",
+  "event_id": "event-light-source-001",
+  "source_system": "WABI_SABI_CONTROL_PLANE",
+  "target_world_id": "duat-world-synthetic-001",
+  "tick": 1,
+  "event_type": "light_source_added",
+  "payload": { "x": 1, "y": 1, "intensity": 0.7, "radius": 4 },
+  "action_gate": { "decision": "APPROVE", "reason": "local_synthetic_event" },
+  "boundary": { "publication_gate": "BLOCK", "contains_private_data": false, "public_safe": true }
+}
+

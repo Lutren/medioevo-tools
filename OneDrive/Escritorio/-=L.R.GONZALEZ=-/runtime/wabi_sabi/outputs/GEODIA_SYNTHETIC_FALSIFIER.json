@@ -1,0 +1,109 @@
+{
+  "action_gate": "APPROVE_LOCAL_SYNTHETIC",
+  "artifacts": [
+    "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\wabi_sabi\\outputs\\GEODIA_SYNTHETIC_SURFACE_CLAIM_CONTRACT.json",
+    "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\wabi_sabi\\outputs\\GEODIA_SYNTHETIC_FALSIFIER.json"
+  ],
+  "certainty": [
+    "The falsifier only tests the local synthetic contract.",
+    "Passing this falsifier does not validate real physics, economics, or city behavior."
+  ],
+  "claim_contract": {
+    "claim": "geodia_synthetic_surface is a deterministic local smoke surface with bounded synthetic metrics only.",
+    "claim_level": "operational",
+    "evidence": [
+      "python -m wabi_sabi.cli.main geodia-synthetic --json",
+      "python -m pytest tests\\test_geodia_synthetic_surface.py -q"
+    ],
+    "falsifiers": [
+      "Fails if any output leaves the declared numeric domain.",
+      "Fails if repeated local runs diverge without input change.",
+      "Fails if the surface claims scientific, production, or public validation.",
+      "Fails if network, browser, archive import, publication, or source writes are introduced."
+    ],
+    "risk_flags": [],
+    "schema": "wabi.claim_contract.v1"
+  },
+  "claim_evaluation": {
+    "action": "claim_contract_evaluation",
+    "claim": "geodia_synthetic_surface is a deterministic local smoke surface with bounded synthetic metrics only.",
+    "claim_level": "operational",
+    "contract_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\wabi_sabi\\outputs\\GEODIA_SYNTHETIC_SURFACE_CLAIM_CONTRACT.json",
+    "evidence_count": 2,
+    "falsifier_count": 4,
+    "fingerprint": "e35a861ca370f00925f09b39bc7d03acfbda4f21518952a4a5102003ebbdac45",
+    "gate": "APPROVE",
+    "ok": true,
+    "reasons": [
+      "evidence_and_falsifiers_present"
+    ],
+    "required_actions": [],
+    "risk_flags": [],
+    "schema": "wabi.claim_contract_evaluation.v1",
+    "status": "ready"
+  },
+  "claim_gate": "OPERATIONAL_ONLY_NO_PUBLIC_STRONG_CLAIM",
+  "falsifiers": [
+    {
+      "evidence": "All PSI values stay in [0, 1] and EML stays in [0, 10].",
+      "falsifier": "Fails if any output leaves the declared numeric domain.",
+      "id": "BOUNDED_DOMAIN",
+      "passed": true,
+      "status": "pass"
+    },
+    {
+      "evidence": "Two consecutive deterministic fixture runs return identical metrics and updated cells.",
+      "falsifier": "Fails if repeated local runs diverge without input change.",
+      "id": "DETERMINISTIC_FIXTURE",
+      "passed": true,
+      "status": "pass"
+    },
+    {
+      "evidence": "The surface marks itself synthetic-only and low-claim.",
+      "falsifier": "Fails if the surface claims scientific, production, or public validation.",
+      "id": "LOW_CLAIM_GATE",
+      "passed": true,
+      "status": "pass"
+    },
+    {
+      "evidence": "The surface performs no external I/O and no runtime writes.",
+      "falsifier": "Fails if network, browser, archive import, publication, or source writes are introduced.",
+      "id": "NO_EXTERNAL_IO",
+      "passed": true,
+      "status": "pass"
+    }
+  ],
+  "generated_at_utc": "2026-05-07T18:02:38+00:00",
+  "inference": [
+    "The module is safe as a pre-dashboard gate for RESEARCH_ONLY visualizations."
+  ],
+  "ok": true,
+  "result": "PASS",
+  "schema": "wabi.geodia_synthetic_falsifier.v1",
+  "status": "RESEARCH_ONLY_SYNTHETIC_FALSIFIER",
+  "surface": {
+    "after_metrics": {
+      "I_obs": 0.2854310602232654,
+      "R": 0.2502679235607098,
+      "epsilon": 0.04952396538039452,
+      "fatigue": 0.025879935074181046,
+      "j_c": 0.7497320764392902,
+      "phi_eff": 0.43408082467651177,
+      "regime": "OPTIMO",
+      "sigma": [
+        0.9741200649258189,
+        0.32544431802720064,
+        0.04952396538039452,
+        0.0772514612112024
+      ]
+    },
+    "bounded": true,
+    "claim_gate": "NO_PUBLIC_STRONG_CLAIM_UNTIL_NUMERIC_VALIDATION",
+    "schema": "wabi.geodia_synthetic_surface.v1",
+    "status": "SYNTHETIC_ONLY"
+  },
+  "unknown": [
+    "Real dataset calibration is still absent.",
+    "Scientific/public claims still require independent numeric validation and review."
+  ]
+}

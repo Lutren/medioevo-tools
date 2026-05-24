@@ -1,0 +1,18 @@
+{
+  "commands": [
+    {
+      "event_id": "evt-review-command-001",
+      "command": "python tools/local_review.py",
+      "status": "ok",
+      "actiongate": "REVIEW",
+      "decision": "REVIEW"
+    },
+    {
+      "event_id": "evt-block-command-001",
+      "command": "python tools/local_gate.py",
+      "status": "ok",
+      "actiongate": "BLOCK",
+      "decision": "BLOCK"
+    }
+  ]
+}

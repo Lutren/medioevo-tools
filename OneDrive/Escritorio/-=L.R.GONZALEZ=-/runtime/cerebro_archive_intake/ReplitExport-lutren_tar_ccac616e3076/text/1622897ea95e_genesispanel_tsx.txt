@@ -1,0 +1,106 @@
+import { useGeodiaSimulation } from "@/contexts/SimulationContext";
+import { useSaveGenesisConfig, useGetGenesisConfig } from "@workspace/api-client-react";
+import { PixelBorder, PixelButton } from "./custom/PixelComponents";
+import { useToast } from "@/hooks/use-toast";
+import { useState, useEffect } from "react";
+
+export default function GenesisPanel() {
+  const { state } = useGeodiaSimulation();
+  const saveGenesis = useSaveGenesisConfig();
+  const { data: latest, refetch } = useGetGenesisConfig();
+  const { toast } = useToast();
+
+  const [notes, setNotes] = useState("");
+
+  useEffect(() => {
+    if (latest && !notes) setNotes(latest.notes || "");
+  }, [latest]);
+
+  const handleSave = () => {
+    saveGenesis.mutate({
+      data: {
+        schema_version: "v8.1",
+        seed: state.seed,
+        grid_size: state.gridSize,
+        truth_model: state.truthModel,
+        observer_profile: state.observerProfile,
+        eml_load: 0.5,
+        eml_saturation: 0.2,
+        eml_noise: 0.1,
+        eml_intrinsic_clarity: 0.8,
+        notes: notes,
+        synthetic_only_claim: true,
+        reproducible_fingerprint: `${state.seed}-${state.truthModel}`
+      }
+    }, {
+      onSuccess: () => {
+        toast({ title: "[GENESIS GUARDADO]", description: "Configuración base preservada." });
+        refetch();
+      }
+    });
+  };
+
+  return (
+    <div className="space-y-4 h-full overflow-y-auto pb-4 pr-2">
+      <div className="font-display text-xs border-b border-border pb-1 font-bold">
+        DUAT GENESIS // CONFIGURACIÓN
+      </div>
+
+      <div className="space-y-2 font-mono text-[10px]">
+        <div className="flex justify-between border-b border-border/30 pb-1">
+          <span className="text-foreground/70">schema_version</span>
+          <span className="text-primary">v8.1</span>
+        </div>
+        <div className="flex justify-between border-b border-border/30 pb-1">
+          <span className="text-foreground/70">seed</span>
+          <span className="text-primary">{state.seed}</span>
+        </div>
+        <div className="flex justify-between border-b border-border/30 pb-1">
+          <span className="text-foreground/70">truth_model</span>
+          <span className="text-primary">{state.truthModel}</span>
+        </div>
+        <div className="flex justify-between border-b border-border/30 pb-1">
+          <span className="text-foreground/70">observer_profile</span>
+          <span className="text-primary">{state.observerProfile}</span>
+        </div>
+        <div className="flex justify-between border-b border-border/30 pb-1">
+          <span className="text-foreground/70">synthetic_only</span>
+          <span className="text-accent">TRUE (locked)</span>
+        </div>
+        <div className="flex justify-between border-b border-border/30 pb-1">
+          <span className="text-foreground/70">repr_fingerprint</span>
+          <span className="text-primary">{state.seed}-{state.truthModel}</span>
+        </div>
+        
+        <div className="pt-2">
+          <label className="text-foreground/70 mb-1 block">notes</label>
+          <textarea 
+            value={notes}
+            onChange={e => setNotes(e.target.value)}
+            className="w-full h-16 bg-input border border-border text-primary p-1 focus:outline-none resize-none" 
+          />
+        </div>
+
+        <PixelButton className="w-full text-[10px] py-1 mt-2" onClick={handleSave} disabled={saveGenesis.isPending}>
+          [GUARDAR GENESIS]
+        </PixelButton>
+      </div>
+
+      <PixelBorder className="mt-4 space-y-2">
+        <div className="text-[10px] font-display font-bold text-accent">FALSIFIERS (CONCEPTUAL)</div>
+        <div className="flex flex-col gap-1 font-mono text-[9px] text-foreground/80">
+          <label className="flex items-center gap-2"><input type="checkbox" className="accent-primary" /> shuffle_velocity</label>
+          <label className="flex items-center gap-2"><input type="checkbox" className="accent-primary" /> permute_radius</label>
+          <label className="flex items-center gap-2"><input type="checkbox" className="accent-primary" /> flat_noise</label>
+          <label className="flex items-center gap-2"><input type="checkbox" className="accent-primary" /> mirror_curve</label>
+        </div>
+      </PixelBorder>
+      
+      {latest && (
+        <div className="text-[9px] font-mono text-success text-center mt-2 border border-success/30 p-1">
+          Último guardado: {new Date(latest.created_at).toLocaleTimeString()}
+        </div>
+      )}
+    </div>
+  );
+}

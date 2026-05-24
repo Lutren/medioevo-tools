@@ -1,0 +1,176 @@
+{
+  "schema": "claudio.geodia_indicator_crosswalk.v0_1",
+  "harmonization_schema": "claudio.geodia_indicator_harmonization.v0_1",
+  "generated_at_utc": "2026-05-14T21:55:00Z",
+  "publication_gate": "BLOCK",
+  "claim_boundary": "technical harmonization only; no ranking, causal claim, forecast, policy claim, electoral inference or personal inference",
+  "entries": [
+    {
+      "canonical_indicator_id": "labor_market.unemployment_rate.total",
+      "source_indicator_id": "SL.UEM.TOTL.ZS",
+      "source_id": "world_bank_indicators",
+      "country_or_region": "MEX",
+      "year_range": "2018-2023",
+      "unit_original": "percent",
+      "unit_canonical": "percent_of_labor_force",
+      "polarity_original": "negative",
+      "polarity_canonical": "negative",
+      "frequency": "annual",
+      "transformation_applied": "unit_alias_only; raw values preserved; negative polarity can be sign-inverted only for technical scoring",
+      "comparability_class": "STRONG_PROXY",
+      "evidence": [
+        "World Bank indicator SL.UEM.TOTL.ZS in fixture world_bank_mexico_2018_2023_fixture.json",
+        "Annual 2018-2023 observations present",
+        "Same broad unemployment-rate domain as Eurostat une_rt_a"
+      ],
+      "caveats": [
+        "Provider definition and population scope may differ from Eurostat.",
+        "This class does not permit ranking Mexico against Germany."
+      ],
+      "publication_gate": "BLOCK"
+    },
+    {
+      "canonical_indicator_id": "labor_market.unemployment_rate.total",
+      "source_indicator_id": "une_rt_a",
+      "source_id": "eurostat_sdmx",
+      "country_or_region": "DE",
+      "year_range": "2018-2023",
+      "unit_original": "PC_ACT",
+      "unit_canonical": "percent_of_labor_force",
+      "polarity_original": "negative",
+      "polarity_canonical": "negative",
+      "frequency": "annual",
+      "transformation_applied": "unit_alias_only; raw values preserved; negative polarity can be sign-inverted only for technical scoring",
+      "comparability_class": "STRONG_PROXY",
+      "evidence": [
+        "Eurostat dataset une_rt_a in fixture eurostat_social_epoch_2018_2023_fixture.json",
+        "Annual 2018-2023 observations present",
+        "Same broad unemployment-rate domain as World Bank SL.UEM.TOTL.ZS"
+      ],
+      "caveats": [
+        "Eurostat age code is Y15-74 and 2020 has break-in-series status.",
+        "This class does not permit ranking Germany against Mexico."
+      ],
+      "publication_gate": "BLOCK"
+    },
+    {
+      "canonical_indicator_id": "labor_market.unemployment_rate.total",
+      "source_indicator_id": "INEGI_ENOE_TASA_DESOCUPACION_ANNUAL_MEAN",
+      "source_id": "INEGI",
+      "country_or_region": "MEX",
+      "year_range": "2018-2023",
+      "unit_original": "percent_of_economically_active_population",
+      "unit_canonical": "percent_of_labor_force",
+      "polarity_original": "negative",
+      "polarity_canonical": "negative",
+      "frequency": "annual_mean_from_monthly",
+      "transformation_applied": "annual arithmetic mean from 12 official monthly ENOE percentage observations per year; raw monthly workbook preserved by SHA256",
+      "comparability_class": "STRONG_PROXY",
+      "evidence": [
+        "INEGI ENOE workbook enoe_indicadores_estrategicos_2005_2026_mensual.xlsx in source intake raw folder",
+        "Fixture inegi_mexico_social_2018_2023_fixture.json includes annual means from sheet 1.2 row 289",
+        "Same broad unemployment-rate domain as World Bank SL.UEM.TOTL.ZS and Eurostat une_rt_a"
+      ],
+      "caveats": [
+        "INEGI ENOE is survey-derived and is not an EXACT semantic match to provider-modelled or Eurostat unemployment definitions.",
+        "2020-2022 carry ENOE/ETOE/ENOE_N continuity caveats from the source workbook.",
+        "This class does not permit ranking Mexico, Germany, providers or sources."
+      ],
+      "publication_gate": "BLOCK"
+    },
+    {
+      "canonical_indicator_id": "economy.real_growth_rate",
+      "source_indicator_id": "NY.GDP.PCAP.KD.ZG",
+      "source_id": "world_bank_indicators",
+      "country_or_region": "MEX",
+      "year_range": "2018-2023",
+      "unit_original": "annual_percent",
+      "unit_canonical": "annual_percent_growth",
+      "polarity_original": "positive",
+      "polarity_canonical": "positive",
+      "frequency": "annual",
+      "transformation_applied": "raw percent growth preserved; semantic equivalence held for review",
+      "comparability_class": "REVIEW",
+      "evidence": [
+        "World Bank indicator NY.GDP.PCAP.KD.ZG in fixture world_bank_mexico_2018_2023_fixture.json",
+        "Annual 2018-2023 observations present"
+      ],
+      "caveats": [
+        "GDP per capita growth is not the same semantic unit as aggregate real GDP volume growth.",
+        "Use only as economic-growth REVIEW until a stricter harmonization rule exists."
+      ],
+      "publication_gate": "BLOCK"
+    },
+    {
+      "canonical_indicator_id": "economy.real_growth_rate",
+      "source_indicator_id": "tec00115",
+      "source_id": "eurostat_sdmx",
+      "country_or_region": "DE",
+      "year_range": "2018-2023",
+      "unit_original": "CLV_PCH_PRE",
+      "unit_canonical": "annual_percent_growth",
+      "polarity_original": "positive",
+      "polarity_canonical": "positive",
+      "frequency": "annual",
+      "transformation_applied": "raw percent growth preserved; semantic equivalence held for review",
+      "comparability_class": "REVIEW",
+      "evidence": [
+        "Eurostat dataset tec00115 in fixture eurostat_social_epoch_2018_2023_fixture.json",
+        "Annual 2018-2023 observations present"
+      ],
+      "caveats": [
+        "Eurostat value is real GDP volume growth, not per-capita growth.",
+        "2022 and 2023 are provisional in the Eurostat fixture."
+      ],
+      "publication_gate": "BLOCK"
+    },
+    {
+      "canonical_indicator_id": "demography.life_expectancy_at_birth.total",
+      "source_indicator_id": "SP.DYN.LE00.IN",
+      "source_id": "world_bank_indicators",
+      "country_or_region": "MEX",
+      "year_range": "2018-2023",
+      "unit_original": "years",
+      "unit_canonical": "years",
+      "polarity_original": "positive",
+      "polarity_canonical": "positive",
+      "frequency": "annual",
+      "transformation_applied": "unit_alias_only; raw years preserved",
+      "comparability_class": "STRONG_PROXY",
+      "evidence": [
+        "World Bank indicator SP.DYN.LE00.IN in fixture world_bank_mexico_2018_2023_fixture.json",
+        "Annual 2018-2023 observations present",
+        "Same broad life-expectancy-at-birth domain as Eurostat demo_mlexpec"
+      ],
+      "caveats": [
+        "Provider method may differ from Eurostat.",
+        "No causal interpretation is allowed."
+      ],
+      "publication_gate": "BLOCK"
+    },
+    {
+      "canonical_indicator_id": "demography.life_expectancy_at_birth.total",
+      "source_indicator_id": "demo_mlexpec",
+      "source_id": "eurostat_sdmx",
+      "country_or_region": "DE",
+      "year_range": "2018-2023",
+      "unit_original": "YR",
+      "unit_canonical": "years",
+      "polarity_original": "positive",
+      "polarity_canonical": "positive",
+      "frequency": "annual",
+      "transformation_applied": "unit_alias_only; raw years preserved",
+      "comparability_class": "STRONG_PROXY",
+      "evidence": [
+        "Eurostat dataset demo_mlexpec in fixture eurostat_social_epoch_2018_2023_fixture.json",
+        "Annual 2018-2023 observations present",
+        "Same broad life-expectancy-at-birth domain as World Bank SP.DYN.LE00.IN"
+      ],
+      "caveats": [
+        "2023 has break-in-series status in the Eurostat fixture.",
+        "No causal interpretation is allowed."
+      ],
+      "publication_gate": "BLOCK"
+    }
+  ]
+}

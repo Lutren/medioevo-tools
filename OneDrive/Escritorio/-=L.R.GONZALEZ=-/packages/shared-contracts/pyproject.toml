@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "medioevo-shared-contracts"
+version = "0.1.0"
+description = "Local P0 contracts for Wabi-Sabi, DUAT, Forge and public-safe portal boundaries."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "LEGAL_REVIEW_REQUIRED" }
+authors = [
+  { name = "L.R. Gonzalez" }
+]
+dependencies = []
+
+[tool.medioevo-shared-contracts]
+status = "local_p0_not_public_release"
+publication_gate = "BLOCK"
+private_boundary = "no_rpg_no_tcg_no_private_canon_no_secrets"
+

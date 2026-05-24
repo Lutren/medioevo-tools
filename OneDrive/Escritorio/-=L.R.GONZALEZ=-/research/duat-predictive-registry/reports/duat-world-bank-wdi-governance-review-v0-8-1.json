@@ -1,0 +1,136 @@
+{
+  "schema": "duat.world_bank_wdi_governance_decision.v0_8_1",
+  "run_id": "DUAT_WDI_LICENSE_COMPARABILITY_REVIEW_v0_8_1",
+  "source_pack_run": "DUAT_WDI_OFFICIAL_SOURCE_PACK_v0_8",
+  "generated_at_utc": "2026-05-15T08:27:59Z",
+  "country_scope": "MEX",
+  "source": {
+    "name": "World Bank World Development Indicators",
+    "api_base": "https://api.worldbank.org/v2",
+    "license_review_status": "REVIEW",
+    "terms_url": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets",
+    "accessed_at": "2026-05-15T07:47:49Z"
+  },
+  "external_terms_verification": "VERIFIED_OFFICIAL_URL",
+  "license_terms_scan": "REVIEW",
+  "license_evidence": {
+    "external_terms_verification": "VERIFIED_OFFICIAL_URL",
+    "terms_url": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets",
+    "license_label_detected": "CC BY 4.0 default unless specifically labeled otherwise",
+    "attribution_requirement": "World Bank attribution required",
+    "modification_change_notice_requirement": "CC BY 4.0 obligations apply; keep change notices in derived materials.",
+    "third_party_caveat": "Present",
+    "commercial_internal_use_status": "REVIEW",
+    "redistribution_status": "REVIEW",
+    "required_citation_text": "The World Bank: World Development Indicators: data source if known; include dataset terms URL.",
+    "human_legal_review_needed": true,
+    "evidence_anchors": [
+      "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+    ]
+  },
+  "comparability_review": "REVIEW",
+  "leakage_preflight": "PASS",
+  "data_gate": "REVIEW",
+  "backtest_open_gate": "REVIEW_ONLY_DRY_RUN",
+  "action_gate_local": "REVIEW",
+  "series_reviews": [
+    {
+      "duat_indicator_id": "economy.real_growth_rate",
+      "wdi_indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "title": "GDP growth (annual %)",
+      "unit": "annual_percent_growth",
+      "frequency": "annual",
+      "start_year": 1961,
+      "end_year": 2024,
+      "n_observations": 64,
+      "missing_years": [],
+      "duplicate_years": [],
+      "source_organization": "Country official statistics, National Statistical Organizations and/or Central Banks;\nNational Accounts data files, Organisation for Economic Co-operation and Development (OECD);\nStaff estimates, World Bank (WB)",
+      "long_definition": "Gross domestic product is the total income earned through the production of goods and services in an economic territory during an accounting period. It can be measured in three different ways: using either the expenditure approach, the income approach, or the production approach. This indicator denotes the percentage change over each previous year of the constant price (base year 2015) series in United States dollars.",
+      "aggregation_estimation_note": "National accounts revision/base-year risk; review before cross-domain comparison.",
+      "modeled_or_estimate_flags": [
+        "external_or_multiple_source_organization",
+        "national_accounts_revision_risk"
+      ],
+      "comparability_risk": "MED",
+      "required_transform_before_backtest": "None in v0.8.1; review notes before any internal backtest.",
+      "comparability_review": "REVIEW",
+      "leakage_preflight": "PASS",
+      "metadata_url": "https://api.worldbank.org/v2/indicator/NY.GDP.MKTP.KD.ZG?format=json",
+      "external_metadata_verification": "VERIFIED_OFFICIAL_API"
+    },
+    {
+      "duat_indicator_id": "labor_market.unemployment_rate.total",
+      "wdi_indicator_code": "SL.UEM.TOTL.ZS",
+      "title": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+      "unit": "percent_of_total_labor_force",
+      "frequency": "annual",
+      "start_year": 1991,
+      "end_year": 2025,
+      "n_observations": 35,
+      "missing_years": [],
+      "duplicate_years": [],
+      "source_organization": "ILO Modelled Estimates database (ILOEST), International Labour Organization (ILO), uri: https://ilostat.ilo.org/data/bulk/, publisher: ILOSTAT, type: external database, date accessed: January 17, 2026",
+      "long_definition": "Unemployment refers to the share of the labor force that is without work but available for and seeking employment.",
+      "aggregation_estimation_note": "Modeled estimate detected; keep review before backtest claims.",
+      "modeled_or_estimate_flags": [
+        "modeled_estimate",
+        "external_or_multiple_source_organization"
+      ],
+      "comparability_risk": "HIGH",
+      "required_transform_before_backtest": "None in v0.8.1; review notes before any internal backtest.",
+      "comparability_review": "REVIEW",
+      "leakage_preflight": "PASS",
+      "metadata_url": "https://api.worldbank.org/v2/indicator/SL.UEM.TOTL.ZS?format=json",
+      "external_metadata_verification": "VERIFIED_OFFICIAL_API"
+    },
+    {
+      "duat_indicator_id": "demography.life_expectancy_at_birth.total",
+      "wdi_indicator_code": "SP.DYN.LE00.IN",
+      "title": "Life expectancy at birth, total (years)",
+      "unit": "years",
+      "frequency": "annual",
+      "start_year": 1960,
+      "end_year": 2024,
+      "n_observations": 65,
+      "missing_years": [],
+      "duplicate_years": [],
+      "source_organization": "World Population Prospects, United Nations (UN), uri: UN Population Division;\nStatistical databases and publications from national statistical offices, National statistical offices, note: Derived from male and female life expectancy at birth from sources such as statistical databases and publications from national statistical offices.;\nDemographic Statistics, Eurostat (ESTAT), note: Derived from male and female life expectancy at birth from sources such as Eurostat: Demographic Statistics.",
+      "long_definition": "Life expectancy at birth indicates the number of years a newborn infant would live if prevailing patterns of mortality at the time of its birth were to stay the same throughout its life.",
+      "aggregation_estimation_note": "No transform applied; metadata still requires review before benchmark interpretation.",
+      "modeled_or_estimate_flags": [
+        "external_or_multiple_source_organization"
+      ],
+      "comparability_risk": "MED",
+      "required_transform_before_backtest": "None in v0.8.1; review notes before any internal backtest.",
+      "comparability_review": "REVIEW",
+      "leakage_preflight": "PASS",
+      "metadata_url": "https://api.worldbank.org/v2/indicator/SP.DYN.LE00.IN?format=json",
+      "external_metadata_verification": "VERIFIED_OFFICIAL_API"
+    }
+  ],
+  "required_attribution": "Source: World Bank World Development Indicators. Processing: DUAT local source pack. Include source URL and dataset terms URL.",
+  "human_legal_review_required": true,
+  "publication_gate": "BLOCK",
+  "forecast_gate": "REVIEW",
+  "benchmark_executed": false,
+  "external_publication": false,
+  "recommendation": "open_v0_9_dry_run_only",
+  "claims_scan": "PASS",
+  "reconstruction_test": {
+    "status": "PASS",
+    "score": 5,
+    "max_score": 5,
+    "answers": {
+      "pending_after_v0_8": "LicenseTermsScan and ComparabilityReview were REVIEW.",
+      "resolved_by_v0_8_1": "v0.8.1 documents license terms, attribution, third-party caveat, per-series comparability and BacktestOpenGate.",
+      "data_gate": "REVIEW",
+      "backtest_open_gate": "REVIEW_ONLY_DRY_RUN",
+      "v0_9_limits": "v0.9 may only be internal/dry-run if gates remain REVIEW; no public prediction, model claims, ranking, causality or electoral prediction."
+    },
+    "critical_omissions": []
+  },
+  "schema_validation": "PASS",
+  "payload_sha256": "5361e11a1aef89684e8f9e949c76531aefa515252f98b205d31b56cbfeec4859",
+  "sha256_scope": "canonical_json_without_sha256_fields"
+}

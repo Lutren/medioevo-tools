@@ -1,0 +1,34 @@
+{
+  "schema": "medioevo.comms.agent_state.v1",
+  "generated_at_utc": "2026-05-06T14:46:23Z",
+  "agent_id": "claims-falsifier-observatorio",
+  "status": "ACTIVE_LOCAL_AGENT_SPEC_EXTERNAL_BLOCKED",
+  "department_slug": "curaduria-claims",
+  "action_gate": "REVIEW",
+  "reports_to": "curador-seto",
+  "owns": [
+    "claim boundary review",
+    "falsifier extraction",
+    "Observacionismo inverso risk review",
+    "public copy downgrade recommendations"
+  ],
+  "may_touch": [
+    "docs/control/CLAIMS_BOUNDARY.md",
+    "docs/publishing/*CLAIM*.md",
+    "docs/publishing/*COPY*.md",
+    "COMMS/agents_state/claims-falsifier-observatorio.json",
+    "COMMS/handoffs/*claims-falsifier-observatorio*.md",
+    "qa_artifacts/release_validation/claims-falsifier-observatorio-*.json"
+  ],
+  "must_not_touch_without_handoff": [
+    "publication",
+    "legal policy finalization",
+    "medical, financial, security or scientific guarantee claims",
+    "private research raw dumps",
+    "account/session/login material",
+    "RPG/TCG or unpublished books"
+  ],
+  "current_handoff": "COMMS/handoffs/2026-05-06-observacionista-public-launch-team.md",
+  "current_outbox": null,
+  "last_observation_fingerprint": "OBSERVACIONISTA_PUBLIC_LAUNCH_TEAM_REGISTERED_2026_05_06"
+}

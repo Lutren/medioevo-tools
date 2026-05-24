@@ -1,0 +1,98 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "20260522-012430",
+  "state_fingerprint": "SMALLVILLE-DUAT-LOCAL-EVIDENCE-20260522",
+  "project": "MEDIOEVO/CLAUDIO DUAT Smallville Simulation Lab",
+  "R_close": 0.1,
+  "Phi_eff": 0.86,
+  "regime_close": "FUNCIONAL_LOCAL_SYNTHETIC_EVIDENCE",
+  "autonomy_level_used": 4,
+  "actiongate_summary": {
+    "approved": 11,
+    "review_required": 3,
+    "blocked": 0
+  },
+  "files_created": [
+    "geodia_social_observatory/signal_source_pack.py",
+    "geodia_social_observatory/synthetic_environment_channels.py",
+    "geodia_social_observatory/intervention_engine.py",
+    "geodia_social_observatory/replay_verifier.py",
+    "geodia_social_observatory/metrics_v0_2.py",
+    "geodia_social_observatory/smallville_v02_release.py",
+    "tests/test_smallville_duat_v02.py",
+    "../duat-predictive-registry/schemas/signal_source_pack.schema.json",
+    "../duat-predictive-registry/schemas/intervention_run.schema.json",
+    "../duat-predictive-registry/schemas/replay_verification.schema.json",
+    "../duat-predictive-registry/schemas/smallville_metrics_v0_2.schema.json",
+    "../../qa_artifacts/release_validation/duat-smallville-signal-pack-v0-2.json",
+    "../../qa_artifacts/release_validation/duat-smallville-baseline-run-v0-2-ledger.json",
+    "../../qa_artifacts/release_validation/duat-smallville-intervention-run-v0-2-ledger.json",
+    "../../qa_artifacts/release_validation/duat-smallville-intervention-delta-v0-2.json",
+    "../../qa_artifacts/release_validation/duat-smallville-replay-verification-v0-2.json",
+    "../../qa_artifacts/release_validation/duat-smallville-metrics-v0-2.json",
+    "../../qa_artifacts/release_validation/duat-smallville-sim-lab-v0-2-falsifier.json",
+    "../../qa_artifacts/release_validation/DUAT_SMALLVILLE_SIM_LAB_v0_2_REPORT.md",
+    "../../qa_artifacts/smallville_duat/SMALLVILLE_DUAT_20260522/manifest.json",
+    "../../qa_artifacts/smallville_duat/SMALLVILLE_DUAT_20260522/duat-smallville-metrics-v0-2.json",
+    "../../qa_artifacts/smallville_duat/SMALLVILLE_DUAT_20260522/smallville_v01_ledger.json",
+    "../../qa_artifacts/smallville_duat/SMALLVILLE_DUAT_20260522/smallville_v01_falsifier.json"
+  ],
+  "files_modified": [
+    "geodia_social_observatory/__init__.py",
+    "geodia_social_observatory/cli.py",
+    "geodia_social_observatory/contracts.py",
+    "SESSION_FINGERPRINT.json",
+    "NEXT_SESSION_BRIEF.md",
+    "TEST_REPORT.md",
+    "TASKS.md",
+    "RISKS.md",
+    "ASSUMPTIONS.md",
+    "DECISIONS.md"
+  ],
+  "commands_run": [
+    "python -m pytest tests\\test_smallville_duat_v02.py -q",
+    "python -m geodia_social_observatory.cli smallville-v02-report --seed 20260517 --ticks 1440 --intervention weather_shock --pretty --out ..\\..\\qa_artifacts\\release_validation\\duat-smallville-v0-2-manifest.json",
+    "python -m pytest -q",
+    "python -m pytest -q (research/duat-predictive-registry)",
+    "python -m compileall geodia_social_observatory",
+    "schema validation inline check",
+    "secret scan focal presence-only",
+    "python -m geodia_social_observatory.cli smallville-replay-verify ...",
+    "python -m geodia_social_observatory.cli smallville-metrics ...",
+    "python -B -m pytest tests/test_smallville_duat_lab.py tests/test_smallville_duat_v02.py -q -p no:cacheprovider",
+    "python -B -m geodia_social_observatory.cli smallville-v02-report --seed 20260522 --ticks 12 --out-dir ../../qa_artifacts/smallville_duat/SMALLVILLE_DUAT_20260522 --out ../../qa_artifacts/smallville_duat/SMALLVILLE_DUAT_20260522/manifest.json --pretty",
+    "python -B -m geodia_social_observatory.cli smallville-duat --seed cierre-20260522 --days 1 --ticks-per-day 2 --pretty --out ../../qa_artifacts/smallville_duat/SMALLVILLE_DUAT_20260522/smallville_v01_ledger.json",
+    "python -B -m geodia_social_observatory.cli smallville-falsify --ledger ../../qa_artifacts/smallville_duat/SMALLVILLE_DUAT_20260522/smallville_v01_ledger.json --pretty --out ../../qa_artifacts/smallville_duat/SMALLVILLE_DUAT_20260522/smallville_v01_falsifier.json",
+    "python -B -m pytest tests -q -p no:cacheprovider"
+  ],
+  "tests": {
+    "status": "passed",
+    "evidence": [
+      "GEODIA Smallville v0.2 focused: 14 passed",
+      "GEODIA full suite: 74 passed",
+      "DUAT predictive registry full suite: 117 passed",
+      "compileall geodia_social_observatory: PASS",
+      "schema validation: PASS",
+      "secret scan focal presence-only: PASS",
+      "Smallville focal refresh: 21 passed in 3.02s",
+      "GEODIA full refresh: 74 passed in 51.53s",
+      "Smallville v0.2 metrics refresh: agents=25 hash_chain_valid=True falsifiers_passed=True publication_gate=BLOCK",
+      "Smallville v0.1 falsifier refresh: passed=True checks=7"
+    ]
+  },
+  "decisions": [
+    "Mantener 25 agentes; no ampliar escala en v0.2.",
+    "Usar SignalSourcePack sintetico local con weather, geophysics, social_pressure, infrastructure y resource_availability.",
+    "Contradicciones fuertes fuerzan REVIEW y no se promedian hasta desaparecer.",
+    "Sesgo queda como AUDITABLE_NOT_ABSENT; no declarar ausencia de sesgos.",
+    "Colab, Kaggle y SimScale permanecen REVIEW; no se ejecuto compute remoto.",
+    "El carril Smallville-DUAT local reproducible queda cerrado por revalidacion local y artefactos frescos, sin duplicar runtime."
+  ],
+  "pending": [
+    "Revisar reporte v0.2.",
+    "Si PASS humano, preparar v0.3 UI panel Simulation Evidence / Active Contracts.",
+    "No abrir datos reales, SimScale, Colab o Kaggle sin gate separado.",
+    "DS-013 panel UI Simulation Evidence / Active Contracts sigue NEXT_LOCAL solo despues de revision humana."
+  ],
+  "next_action": "Si se reabre este modulo, preparar v0.3 UI panel Simulation Evidence / Active Contracts sin compute remoto."
+}

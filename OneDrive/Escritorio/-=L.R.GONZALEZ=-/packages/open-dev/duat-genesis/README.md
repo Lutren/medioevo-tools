@@ -14,7 +14,10 @@ experiments.
 - applies generic observation and rule pressure to bounded numeric state;
 - emits reproducible `SimulationRun` reports;
 - runs basic falsifiers for determinism, bounded values and claim safety;
-- provides a small CLI for `run`, `report` and `falsify`.
+- provides a small CLI for `run`, `report` and `falsify`;
+- exposes public-safe Run 8 helpers: DUAT Module Registry, ActionGate v2,
+  WitnessLog v2, source cards, public prompts, handoff validation and legacy
+  transfer checklists.
 
 ## What It Does Not Do
 
@@ -29,6 +32,27 @@ experiments.
 python -m duat_genesis.cli run --seed demo --size 8 --ticks 5
 python -m duat_genesis.cli report --seed demo --ticks 5
 python -m duat_genesis.cli falsify --seed demo --ticks 5
+```
+
+## Public Run 8 Helpers
+
+```python
+from duat_genesis import ActionGateInput, action_gate_v2, get_public_modules
+
+modules = get_public_modules()
+result = action_gate_v2(
+    ActionGateInput(
+        evidence=0.9,
+        risk=0.1,
+        reversibility=0.9,
+        authorization=0.9,
+        phi_eff=0.8,
+        r_delta_expected=-0.2,
+        touches_secrets=False,
+        external_publish=False,
+        destructive=False,
+    )
+)
 ```
 
 ## Public Claim

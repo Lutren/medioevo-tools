@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "duat_data_readiness_report_v0_7.schema.json",
+  "title": "DUAT Official Long-History Data Readiness Report v0.7",
+  "type": "object",
+  "required": [
+    "schema",
+    "run_id",
+    "publication_gate",
+    "data_gate",
+    "series_results",
+    "license_terms_scan",
+    "comparability_review",
+    "leakage_preflight",
+    "minimum_observation_review",
+    "recommendation",
+    "reconstruction_test"
+  ],
+  "properties": {
+    "schema": {
+      "const": "duat.data_readiness_report.v0_7"
+    },
+    "run_id": {
+      "const": "DUAT_OFFICIAL_LONG_HISTORY_DATA_READINESS_v0_7"
+    },
+    "publication_gate": {
+      "const": "BLOCK"
+    },
+    "forecast_gate": {
+      "const": "REVIEW"
+    },
+    "action_gate_local": {
+      "const": "REVIEW"
+    },
+    "data_gate": {
+      "enum": ["APPROVE", "REVIEW", "BLOCK"]
+    },
+    "series_results": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "indicator_id",
+          "license_terms_scan",
+          "comparability_review",
+          "leakage_preflight",
+          "minimum_observation_review",
+          "readiness_gate",
+          "publication_gate"
+        ],
+        "properties": {
+          "indicator_id": {"type": ["string", "null"]},
+          "source_id": {"type": ["string", "null"]},
+          "n_observations": {"type": ["integer", "null"]},
+          "license_terms_scan": {"enum": ["PASS", "REVIEW", "BLOCK"]},
+          "comparability_review": {"enum": ["PASS", "REVIEW", "BLOCK"]},
+          "leakage_preflight": {"enum": ["PASS", "REVIEW", "BLOCK"]},
+          "minimum_observation_review": {"enum": ["PASS", "REVIEW", "BLOCK"]},
+          "source_card_gate": {"enum": ["PASS", "REVIEW", "BLOCK"]},
+          "readiness_gate": {"enum": ["APPROVE_FOR_BACKTEST", "REVIEW", "BLOCK"]},
+          "publication_gate": {"const": "BLOCK"}
+        }
+      }
+    },
+    "license_terms_scan": {"enum": ["PASS", "REVIEW", "BLOCK"]},
+    "comparability_review": {"enum": ["PASS", "REVIEW", "BLOCK"]},
+    "leakage_preflight": {"enum": ["PASS", "REVIEW", "BLOCK"]},
+    "minimum_observation_review": {"enum": ["PASS", "REVIEW", "BLOCK"]},
+    "source_card_gate": {"enum": ["PASS", "REVIEW", "BLOCK"]},
+    "recommendation": {
+      "enum": ["freeze", "collect_data", "approve_for_backtest"]
+    },
+    "reconstruction_test": {
+      "type": "object",
+      "required": ["status", "score", "max_score"],
+      "properties": {
+        "status": {"enum": ["PASS", "REVIEW", "BLOCK"]},
+        "score": {"type": "integer"},
+        "max_score": {"type": "integer"}
+      }
+    }
+  }
+}

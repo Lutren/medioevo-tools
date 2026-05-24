@@ -1,0 +1,237 @@
+{
+  "schema": "duat/winapp-asset-integrity/v1.4",
+  "fingerprint": "DUAT-v1.4-WINAPP-FULL-AUTO",
+  "generatedAt": "2026-05-20T12:28:11.3310528Z",
+  "manifestJsonCount": 21,
+  "manifestJsonAllParse": true,
+  "reviewedAssetCount": 8,
+  "reviewedAssetHashesOk": true,
+  "activeZipCount": 0,
+  "activeZipPolicy": "no active zip files found outside node_modules/dist/_external_review; zip inventory manifests parsed only, no unknown zip executed",
+  "publicationAllowed": false,
+  "assetsCopiedOutsideAllowlist": false,
+  "manifests": [
+    {
+      "file": "agents_gamefeel_manifest_v1_3_1.json",
+      "ok": true,
+      "bytes": 929,
+      "schema": "duat/agents-gamefeel-manifest/v1.3.1",
+      "fingerprint": "DUAT-v1.3.1-AUDIO-GAMEFEEL-CONTINUITY"
+    },
+    {
+      "file": "asset_allowlist_v0_7.json",
+      "ok": true,
+      "bytes": 7780,
+      "schema": "duat.asset-allowlist.v0.7",
+      "fingerprint": null
+    },
+    {
+      "file": "asset_allowlist_v1_2.json",
+      "ok": true,
+      "bytes": 14955,
+      "schema": "duat.asset_allowlist.v1_2",
+      "fingerprint": null
+    },
+    {
+      "file": "assets_du_wabi_manifest_v1_2.json",
+      "ok": true,
+      "bytes": 56132,
+      "schema": "duat.asset_manifest.v1_2",
+      "fingerprint": null
+    },
+    {
+      "file": "assets_du_wabi_manifest_v1_3.json",
+      "ok": true,
+      "bytes": 157004,
+      "schema": "duat/forensics/local-assets/v1.3",
+      "fingerprint": "DUAT-v1.3-GAME-OS-DISK-FORENSICS-LANGUAGE-CORTEX"
+    },
+    {
+      "file": "assets_gamefeel_manifest_v1_3_1.json",
+      "ok": true,
+      "bytes": 881,
+      "schema": "duat/assets-gamefeel-manifest/v1.3.1",
+      "fingerprint": "DUAT-v1.3.1-AUDIO-GAMEFEEL-CONTINUITY"
+    },
+    {
+      "file": "audio_gamefeel_manifest_v1_3_1.json",
+      "ok": true,
+      "bytes": 1376,
+      "schema": "duat/audio-gamefeel-manifest/v1.3.1",
+      "fingerprint": "DUAT-v1.3.1-AUDIO-GAMEFEEL-CONTINUITY"
+    },
+    {
+      "file": "audio_zip_manifest_v1_3.json",
+      "ok": true,
+      "bytes": 80980,
+      "schema": "duat/forensics/zip-inventory/v1.3",
+      "fingerprint": "DUAT-v1.3-GAME-OS-DISK-FORENSICS-LANGUAGE-CORTEX"
+    },
+    {
+      "file": "brain_os_zip_manifest_v1_3.json",
+      "ok": true,
+      "bytes": 18638,
+      "schema": "duat/forensics/zip-inventory/v1.3",
+      "fingerprint": "DUAT-v1.3-GAME-OS-DISK-FORENSICS-LANGUAGE-CORTEX"
+    },
+    {
+      "file": "code_candidates_manifest_v0_6.json",
+      "ok": true,
+      "bytes": 868923,
+      "schema": "duat.code_candidates.v0.6",
+      "fingerprint": null
+    },
+    {
+      "file": "code_candidates_v1_3.json",
+      "ok": true,
+      "bytes": 142434,
+      "schema": "duat/forensics/code-candidates/v1.3",
+      "fingerprint": "DUAT-v1.3-GAME-OS-DISK-FORENSICS-LANGUAGE-CORTEX"
+    },
+    {
+      "file": "duat_osit_full_sources_manifest_v1_4.json",
+      "ok": true,
+      "bytes": 927597,
+      "schema": "duat/osit-full-source-inventory/v1.4",
+      "fingerprint": "DUAT-v1.4-OSIT-OBSERVACIONISMO-FULL"
+    },
+    {
+      "file": "duat_variants_manifest_v0_6.json",
+      "ok": true,
+      "bytes": 205684,
+      "schema": "duat.variants.v0.6",
+      "fingerprint": null
+    },
+    {
+      "file": "isometric_renderer_inventory_v1_3_2.json",
+      "ok": true,
+      "bytes": 90806,
+      "schema": "duat/forensics/isometric-renderer-inventory/v1.3.2",
+      "fingerprint": "DUAT-v1.3.2-LOVABLE-ISO-EXTRACTION-VERMEER-LIGHT"
+    },
+    {
+      "file": "lovable_renderer_candidates_v1_3_2.json",
+      "ok": true,
+      "bytes": 170394,
+      "schema": "duat/forensics/lovable-renderer-candidates/v1.3.2",
+      "fingerprint": "DUAT-v1.3.2-LOVABLE-ISO-EXTRACTION-VERMEER-LIGHT"
+    },
+    {
+      "file": "physics_light_zip_manifest_v1_3.json",
+      "ok": true,
+      "bytes": 22390,
+      "schema": "duat/forensics/zip-inventory/v1.3",
+      "fingerprint": "DUAT-v1.3-GAME-OS-DISK-FORENSICS-LANGUAGE-CORTEX"
+    },
+    {
+      "file": "style_tokens_v1_2.json",
+      "ok": true,
+      "bytes": 1325,
+      "schema": "duat.style_tokens.v1_2",
+      "fingerprint": null
+    },
+    {
+      "file": "ui_i18n_assets_inventory_v1_3_2.json",
+      "ok": true,
+      "bytes": 352497,
+      "schema": "duat/forensics/ui-i18n-assets-inventory/v1.3.2",
+      "fingerprint": "DUAT-v1.3.2-LOVABLE-ISO-EXTRACTION-VERMEER-LIGHT"
+    },
+    {
+      "file": "visual_assets_manifest_v0_6.json",
+      "ok": true,
+      "bytes": 765716,
+      "schema": "duat.asset_manifest.v0.6",
+      "fingerprint": null
+    },
+    {
+      "file": "visual_bible_inventory_v1_3_2.json",
+      "ok": true,
+      "bytes": 28984,
+      "schema": "duat/forensics/visual-bible-inventory/v1.3.2",
+      "fingerprint": "DUAT-v1.3.2-LOVABLE-ISO-EXTRACTION-VERMEER-LIGHT"
+    },
+    {
+      "file": "windows_app_manifest_v1_4.json",
+      "ok": true,
+      "bytes": 1813,
+      "schema": "duat/windows-app-manifest/v1.4",
+      "fingerprint": "DUAT-v1.4-WINAPP-CONVERSION"
+    }
+  ],
+  "reviewedAssets": [
+    {
+      "id": "duat-icon-gate",
+      "file": "duat-icon-gate.svg",
+      "exists": true,
+      "sha256Matches": true,
+      "boundary": "INTERNAL_REVIEWED_ASSET",
+      "publication_allowed": false,
+      "sha256": "DE35C04A3EE2616C444E7EFA1ADCA19FFBFF69978C6473073D7EFBDD50C1CA19"
+    },
+    {
+      "id": "duat-icon-geo",
+      "file": "duat-icon-geo.svg",
+      "exists": true,
+      "sha256Matches": true,
+      "boundary": "INTERNAL_REVIEWED_ASSET",
+      "publication_allowed": false,
+      "sha256": "C2DA4BD06A225BD85A9722A4F2C1359D6CDA9001CB9123FD87A0DFB8F48F58F3"
+    },
+    {
+      "id": "duat-icon-memory",
+      "file": "duat-icon-memory.svg",
+      "exists": true,
+      "sha256Matches": true,
+      "boundary": "INTERNAL_REVIEWED_ASSET",
+      "publication_allowed": false,
+      "sha256": "42547798891F19B14AE03CF93359524E51C008A127BE9C468BC12A3FBEFC4203"
+    },
+    {
+      "id": "duat-icon-multi-agent",
+      "file": "duat-icon-multi-agent.svg",
+      "exists": true,
+      "sha256Matches": true,
+      "boundary": "INTERNAL_REVIEWED_ASSET",
+      "publication_allowed": false,
+      "sha256": "CA5231252B8752DA7B14F885AB1FCF4D08A5C2F1913A34116F5BE25CB29314D7"
+    },
+    {
+      "id": "duat-icon-witness",
+      "file": "duat-icon-witness.svg",
+      "exists": true,
+      "sha256Matches": true,
+      "boundary": "INTERNAL_REVIEWED_ASSET",
+      "publication_allowed": false,
+      "sha256": "A6E80B90F5254498732337EF8FC48F704201821EA3D2EB692B42CEB1D8294D09"
+    },
+    {
+      "id": "duat-icon-handoff",
+      "file": "duat-icon-handoff.svg",
+      "exists": true,
+      "sha256Matches": true,
+      "boundary": "INTERNAL_REVIEWED_ASSET",
+      "publication_allowed": false,
+      "sha256": "D1C703EF2E7F971BE9E6EC9190387A390F62F64849523D6CD1622E1E77A53A2E"
+    },
+    {
+      "id": "duat-icon-simulate",
+      "file": "duat-icon-simulate.svg",
+      "exists": true,
+      "sha256Matches": true,
+      "boundary": "INTERNAL_REVIEWED_ASSET",
+      "publication_allowed": false,
+      "sha256": "72B38D0A24309D3C7BE1ED1A832EC36C92D6C618A88ABC5691A605966A009E48"
+    },
+    {
+      "id": "duat-icon-repair",
+      "file": "duat-icon-repair.svg",
+      "exists": true,
+      "sha256Matches": true,
+      "boundary": "INTERNAL_REVIEWED_ASSET",
+      "publication_allowed": false,
+      "sha256": "93F410D77AE5DEEE8CE5FFB0594CCBEA27B58E3F2992FE2A3BA15233CC3BC046"
+    }
+  ],
+  "activeZips": null
+}

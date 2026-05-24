@@ -8,6 +8,8 @@ Actualizacion Run 4: existe ledger durable JSONL en disco y scripts Node-only pa
 
 Actualizacion Run 5: existe servidor MCP read-only local por stdio sobre el ledger durable JSONL. Las resources y tools MCP viven fuera de React y quedan bloqueadas para escritura por `mcpReadOnlyGuards`.
 
+Actualizacion formato humano: los handoffs y bulletins pueden incluir `summary`, `prompt_started_at` y `work_delivered_at`. Los exportadores Markdown abren con `BRIEF INTELIGENTE`, muestran escala R `0 verde -> 1 rojo/jamming` y despues conservan `DETALLE COMPLETO`.
+
 Implementacion UI: `C:\Users\L-Tyr\OneDrive\Documentos\New project 3\src\messagebus`
 
 ## Flujo
@@ -19,7 +21,7 @@ Implementacion UI: `C:\Users\L-Tyr\OneDrive\Documentos\New project 3\src\message
 5. Si cierra la accion, `resolveMessage(messageId, agentId)`.
 6. Si hay riesgo, `blockMessage(messageId, reason)`.
 7. Cada cierre relevante puede llamar `appendWitnessEvent(event)`.
-8. Exports locales: `exportBulletinMarkdown()` y `exportMessageBusJson()`.
+8. Exports locales: `exportBulletinMarkdown()`, `exportLatestHandoffMarkdown()` y `exportMessageBusJson()`.
 
 ## Funciones implementadas
 
@@ -36,6 +38,7 @@ Implementacion UI: `C:\Users\L-Tyr\OneDrive\Documentos\New project 3\src\message
 | `getChannel(channelId)` | Implementada | Devuelve canal por id. |
 | `getOpenP0()` | Implementada | Devuelve P0 no resueltos ni archivados. |
 | `exportBulletinMarkdown()` | Implementada | Export local Markdown. |
+| `exportLatestHandoffMarkdown()` | Implementada | Export local Markdown con brief inteligente, timestamps y detalle completo. |
 | `exportMessageBusJson()` | Implementada | Export local JSON. |
 
 ## Persistencia
@@ -71,6 +74,9 @@ Resources:
 - `messagebus://tasks`
 - `messagebus://handoffs`
 - `messagebus://witnesslog`
+- `messagebus://artifacts`
+- `messagebus://bulletin/latest`
+- `messagebus://security/p0`
 - `messagebus://health`
 
 Tools read-only:
@@ -105,3 +111,14 @@ La migracion recomendada es:
    - `MessageKind` permitido por canal;
    - evidencia existente;
    - rutas secret-like bloqueadas.
+
+## Formato de handoff
+
+Un handoff legible para humanos debe separar:
+
+- `prompt_started_at`: fecha/hora de inicio o envio del prompt.
+- `work_delivered_at`: fecha/hora de entrega real del trabajo.
+- `summary`: lectura corta para el operador.
+- `body`, `certeza`, `inferencia`, `incognita`, `bloqueo`, `evidence_refs` y `artifact_refs`: detalle completo para agentes y auditoria.
+
+La UI `/telecom` debe mostrar primero el brief humano y luego el tablero completo de mensajes, canales, handoffs, WitnessLog, tareas, seguridad y artefactos.

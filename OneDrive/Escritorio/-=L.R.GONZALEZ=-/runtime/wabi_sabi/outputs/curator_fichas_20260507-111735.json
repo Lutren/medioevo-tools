@@ -1,0 +1,862 @@
+{
+  "schema": "wabi.curator_fichas.v1",
+  "ok": true,
+  "action": "curator_fichas",
+  "gate": "APPROVE",
+  "generated_at_utc": "2026-05-07T17:17:35Z",
+  "workspace": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
+  "source_report": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\wabi_sabi\\outputs\\curator_assistant_report_20260507-111246.json",
+  "source_report_schema": "wabi.curator_assistant_report.v1",
+  "mode": "ficha_generation_only",
+  "policy": {
+    "source_writes": false,
+    "delete_files": false,
+    "move_files": false,
+    "git_stage": false,
+    "git_commit": false,
+    "read_file_contents": false,
+    "print_file_contents": false,
+    "hash_existing_files": true,
+    "max_hash_bytes": 5000000,
+    "metadata_only": true,
+    "candidate_limit": 12
+  },
+  "summary": {
+    "ficha_count": 12,
+    "source_candidate_count": 120,
+    "delete_approved_count": 0,
+    "cleanup_performed": false,
+    "review_required_count": 12,
+    "blocked_count": 0,
+    "agent_processed_count": 12,
+    "needs_agent_processing_count": 0,
+    "owner_assigned_count": 12,
+    "unassigned_count": 0
+  },
+  "fichas": [
+    {
+      "ficha_id": "CURADOR-ORDEN-001",
+      "fingerprint": "011b5d029bca49b02b94343d2b1c35b51fe13a854778a3669dfab2284bab39a3",
+      "source_path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/docs/CONVERSATIONAL_BLUEPRINTS_2026-05-06.md",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "owner": "agent:wabi_sabi_maintenance_curator",
+      "owner_assignment": {
+        "owner": "agent:wabi_sabi_maintenance_curator",
+        "assigned_by_actor_type": "agent",
+        "assigned_by": "curador_orden_assistant",
+        "assignment_event": "curator_owner_assignment",
+        "status": "AGENT_ASSIGNED",
+        "reason": "wabi_sabi_local_lane",
+        "rule": "owner_assignment_must_be_agent_recorded_before_cleanup"
+      },
+      "curation": {
+        "required_last_actor_type": "agent",
+        "status": "AGENT_PROCESSED",
+        "last_record": {
+          "actor_type": "agent",
+          "actor": "curador_orden_assistant",
+          "event": "curator_fichas_generated",
+          "source": "wabi_sabi.core.curator_fichas"
+        },
+        "rule": "data_curation_is_processed_only_when_the_last_record_actor_type_is_agent",
+        "human_last_record_means": "NEEDS_AGENT_PROCESSING"
+      },
+      "evidence": [
+        "source=curator_assistant_report",
+        "content_read=false",
+        "content_printed=false",
+        "source_status=??",
+        "category=UNTRACKED_REVIEW",
+        "file_exists=True",
+        "owner_assignment_status=AGENT_ASSIGNED",
+        "owner_assigned_by_actor_type=agent",
+        "curation_status=AGENT_PROCESSED",
+        "last_record_actor_type=agent"
+      ],
+      "file_evidence": {
+        "exists": true,
+        "sha256": "32790e22de205e22cd50261bbfdccd7d48155e85fcf9a37ac0ee6a1d5b4cef3a",
+        "size_bytes": 3470,
+        "reason": "hash_recorded_content_not_printed"
+      },
+      "next_action": "Owner is assigned; add provenance/hash before moving, staging or archiving.",
+      "blocked_actions": [
+        "delete",
+        "move",
+        "git_add_dot",
+        "commit",
+        "publish",
+        "overwrite_without_owner"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "ficha_id": "CURADOR-ORDEN-002",
+      "fingerprint": "dec906174a621ee8bb86fe7b36dea1f99ff1132f6d8c0e265bf312bdb8d42c39",
+      "source_path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/docs/WABI_SABI_BASE_MODEL_RUNTIME_2026-05-07.md",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "owner": "agent:wabi_sabi_maintenance_curator",
+      "owner_assignment": {
+        "owner": "agent:wabi_sabi_maintenance_curator",
+        "assigned_by_actor_type": "agent",
+        "assigned_by": "curador_orden_assistant",
+        "assignment_event": "curator_owner_assignment",
+        "status": "AGENT_ASSIGNED",
+        "reason": "wabi_sabi_local_lane",
+        "rule": "owner_assignment_must_be_agent_recorded_before_cleanup"
+      },
+      "curation": {
+        "required_last_actor_type": "agent",
+        "status": "AGENT_PROCESSED",
+        "last_record": {
+          "actor_type": "agent",
+          "actor": "curador_orden_assistant",
+          "event": "curator_fichas_generated",
+          "source": "wabi_sabi.core.curator_fichas"
+        },
+        "rule": "data_curation_is_processed_only_when_the_last_record_actor_type_is_agent",
+        "human_last_record_means": "NEEDS_AGENT_PROCESSING"
+      },
+      "evidence": [
+        "source=curator_assistant_report",
+        "content_read=false",
+        "content_printed=false",
+        "source_status=??",
+        "category=UNTRACKED_REVIEW",
+        "file_exists=True",
+        "owner_assignment_status=AGENT_ASSIGNED",
+        "owner_assigned_by_actor_type=agent",
+        "curation_status=AGENT_PROCESSED",
+        "last_record_actor_type=agent"
+      ],
+      "file_evidence": {
+        "exists": true,
+        "sha256": "3052ce6fa13db559b8d6588f3196454104f717008aa3a7c9e112d1deb1dfefc7",
+        "size_bytes": 2201,
+        "reason": "hash_recorded_content_not_printed"
+      },
+      "next_action": "Owner is assigned; add provenance/hash before moving, staging or archiving.",
+      "blocked_actions": [
+        "delete",
+        "move",
+        "git_add_dot",
+        "commit",
+        "publish",
+        "overwrite_without_owner"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "ficha_id": "CURADOR-ORDEN-003",
+      "fingerprint": "e90c416b56ef1857171100cec7a1daac4414c4e3db04f1a646cda4a7e562a76f",
+      "source_path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/docs/wabi_claim_contract.example.json",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "owner": "agent:wabi_sabi_maintenance_curator",
+      "owner_assignment": {
+        "owner": "agent:wabi_sabi_maintenance_curator",
+        "assigned_by_actor_type": "agent",
+        "assigned_by": "curador_orden_assistant",
+        "assignment_event": "curator_owner_assignment",
+        "status": "AGENT_ASSIGNED",
+        "reason": "wabi_sabi_local_lane",
+        "rule": "owner_assignment_must_be_agent_recorded_before_cleanup"
+      },
+      "curation": {
+        "required_last_actor_type": "agent",
+        "status": "AGENT_PROCESSED",
+        "last_record": {
+          "actor_type": "agent",
+          "actor": "curador_orden_assistant",
+          "event": "curator_fichas_generated",
+          "source": "wabi_sabi.core.curator_fichas"
+        },
+        "rule": "data_curation_is_processed_only_when_the_last_record_actor_type_is_agent",
+        "human_last_record_means": "NEEDS_AGENT_PROCESSING"
+      },
+      "evidence": [
+        "source=curator_assistant_report",
+        "content_read=false",
+        "content_printed=false",
+        "source_status=??",
+        "category=UNTRACKED_REVIEW",
+        "file_exists=True",
+        "owner_assignment_status=AGENT_ASSIGNED",
+        "owner_assigned_by_actor_type=agent",
+        "curation_status=AGENT_PROCESSED",
+        "last_record_actor_type=agent"
+      ],
+      "file_evidence": {
+        "exists": true,
+        "sha256": "f5e04651db74678c957c2f5013c1cc5aec5ef64deb4586f1b10590485a348ac3",
+        "size_bytes": 606,
+        "reason": "hash_recorded_content_not_printed"
+      },
+      "next_action": "Owner is assigned; add provenance/hash before moving, staging or archiving.",
+      "blocked_actions": [
+        "delete",
+        "move",
+        "git_add_dot",
+        "commit",
+        "publish",
+        "overwrite_without_owner"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "ficha_id": "CURADOR-ORDEN-004",
+      "fingerprint": "88a2f0395d80dba8652f9e17e506c8e2255dd6b503ee7cf4cc51d30e08cd6b3c",
+      "source_path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/docs/wabi_task_spec.example.json",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "owner": "agent:wabi_sabi_maintenance_curator",
+      "owner_assignment": {
+        "owner": "agent:wabi_sabi_maintenance_curator",
+        "assigned_by_actor_type": "agent",
+        "assigned_by": "curador_orden_assistant",
+        "assignment_event": "curator_owner_assignment",
+        "status": "AGENT_ASSIGNED",
+        "reason": "wabi_sabi_local_lane",
+        "rule": "owner_assignment_must_be_agent_recorded_before_cleanup"
+      },
+      "curation": {
+        "required_last_actor_type": "agent",
+        "status": "AGENT_PROCESSED",
+        "last_record": {
+          "actor_type": "agent",
+          "actor": "curador_orden_assistant",
+          "event": "curator_fichas_generated",
+          "source": "wabi_sabi.core.curator_fichas"
+        },
+        "rule": "data_curation_is_processed_only_when_the_last_record_actor_type_is_agent",
+        "human_last_record_means": "NEEDS_AGENT_PROCESSING"
+      },
+      "evidence": [
+        "source=curator_assistant_report",
+        "content_read=false",
+        "content_printed=false",
+        "source_status=??",
+        "category=UNTRACKED_REVIEW",
+        "file_exists=True",
+        "owner_assignment_status=AGENT_ASSIGNED",
+        "owner_assigned_by_actor_type=agent",
+        "curation_status=AGENT_PROCESSED",
+        "last_record_actor_type=agent"
+      ],
+      "file_evidence": {
+        "exists": true,
+        "sha256": "3b720d0228294d0e929214e277f5ccf7998ae40a4c7632cc20da7d83fef79896",
+        "size_bytes": 619,
+        "reason": "hash_recorded_content_not_printed"
+      },
+      "next_action": "Owner is assigned; add provenance/hash before moving, staging or archiving.",
+      "blocked_actions": [
+        "delete",
+        "move",
+        "git_add_dot",
+        "commit",
+        "publish",
+        "overwrite_without_owner"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "ficha_id": "CURADOR-ORDEN-005",
+      "fingerprint": "c67bd740c9ebd6beaa37e6af037c0d1d0e6bb5a36d2d0a040345eaf2d15f1e4c",
+      "source_path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/ASSUMPTIONS.md",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "owner": "agent:workspace_governance_curator",
+      "owner_assignment": {
+        "owner": "agent:workspace_governance_curator",
+        "assigned_by_actor_type": "agent",
+        "assigned_by": "curador_orden_assistant",
+        "assignment_event": "curator_owner_assignment",
+        "status": "AGENT_ASSIGNED",
+        "reason": "workspace_governance_lane",
+        "rule": "owner_assignment_must_be_agent_recorded_before_cleanup"
+      },
+      "curation": {
+        "required_last_actor_type": "agent",
+        "status": "AGENT_PROCESSED",
+        "last_record": {
+          "actor_type": "agent",
+          "actor": "curador_orden_assistant",
+          "event": "curator_fichas_generated",
+          "source": "wabi_sabi.core.curator_fichas"
+        },
+        "rule": "data_curation_is_processed_only_when_the_last_record_actor_type_is_agent",
+        "human_last_record_means": "NEEDS_AGENT_PROCESSING"
+      },
+      "evidence": [
+        "source=curator_assistant_report",
+        "content_read=false",
+        "content_printed=false",
+        "source_status=??",
+        "category=UNTRACKED_REVIEW",
+        "file_exists=True",
+        "owner_assignment_status=AGENT_ASSIGNED",
+        "owner_assigned_by_actor_type=agent",
+        "curation_status=AGENT_PROCESSED",
+        "last_record_actor_type=agent"
+      ],
+      "file_evidence": {
+        "exists": true,
+        "sha256": "df76dc8c6feaf94e56c1409f5ada97ca809c109a94f05e2dd9ad1600e0e74b60",
+        "size_bytes": 5724,
+        "reason": "hash_recorded_content_not_printed"
+      },
+      "next_action": "Owner is assigned; add provenance/hash before moving, staging or archiving.",
+      "blocked_actions": [
+        "delete",
+        "move",
+        "git_add_dot",
+        "commit",
+        "publish",
+        "overwrite_without_owner"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "ficha_id": "CURADOR-ORDEN-006",
+      "fingerprint": "b5b23f56cc9cf3d1e4298c6c85b7b5d69635e42aee3af38b1cf35e1ec30dc6ec",
+      "source_path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/AUDIT_CLAUDIO.md",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "owner": "agent:workspace_governance_curator",
+      "owner_assignment": {
+        "owner": "agent:workspace_governance_curator",
+        "assigned_by_actor_type": "agent",
+        "assigned_by": "curador_orden_assistant",
+        "assignment_event": "curator_owner_assignment",
+        "status": "AGENT_ASSIGNED",
+        "reason": "workspace_governance_lane",
+        "rule": "owner_assignment_must_be_agent_recorded_before_cleanup"
+      },
+      "curation": {
+        "required_last_actor_type": "agent",
+        "status": "AGENT_PROCESSED",
+        "last_record": {
+          "actor_type": "agent",
+          "actor": "curador_orden_assistant",
+          "event": "curator_fichas_generated",
+          "source": "wabi_sabi.core.curator_fichas"
+        },
+        "rule": "data_curation_is_processed_only_when_the_last_record_actor_type_is_agent",
+        "human_last_record_means": "NEEDS_AGENT_PROCESSING"
+      },
+      "evidence": [
+        "source=curator_assistant_report",
+        "content_read=false",
+        "content_printed=false",
+        "source_status=??",
+        "category=UNTRACKED_REVIEW",
+        "file_exists=True",
+        "owner_assignment_status=AGENT_ASSIGNED",
+        "owner_assigned_by_actor_type=agent",
+        "curation_status=AGENT_PROCESSED",
+        "last_record_actor_type=agent"
+      ],
+      "file_evidence": {
+        "exists": true,
+        "sha256": "1395b44724128ec47704a0225f203e2c2d8d3a57a0ef9c516e2a0debcbf6638f",
+        "size_bytes": 4034,
+        "reason": "hash_recorded_content_not_printed"
+      },
+      "next_action": "Owner is assigned; add provenance/hash before moving, staging or archiving.",
+      "blocked_actions": [
+        "delete",
+        "move",
+        "git_add_dot",
+        "commit",
+        "publish",
+        "overwrite_without_owner"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "ficha_id": "CURADOR-ORDEN-007",
+      "fingerprint": "395ae510d705cbd861dca43a3a1caed7b9c496b55953d96a4539174da0020176",
+      "source_path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/BLOCKED_ACTIONS.md",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "owner": "agent:workspace_governance_curator",
+      "owner_assignment": {
+        "owner": "agent:workspace_governance_curator",
+        "assigned_by_actor_type": "agent",
+        "assigned_by": "curador_orden_assistant",
+        "assignment_event": "curator_owner_assignment",
+        "status": "AGENT_ASSIGNED",
+        "reason": "workspace_governance_lane",
+        "rule": "owner_assignment_must_be_agent_recorded_before_cleanup"
+      },
+      "curation": {
+        "required_last_actor_type": "agent",
+        "status": "AGENT_PROCESSED",
+        "last_record": {
+          "actor_type": "agent",
+          "actor": "curador_orden_assistant",
+          "event": "curator_fichas_generated",
+          "source": "wabi_sabi.core.curator_fichas"
+        },
+        "rule": "data_curation_is_processed_only_when_the_last_record_actor_type_is_agent",
+        "human_last_record_means": "NEEDS_AGENT_PROCESSING"
+      },
+      "evidence": [
+        "source=curator_assistant_report",
+        "content_read=false",
+        "content_printed=false",
+        "source_status=??",
+        "category=UNTRACKED_REVIEW",
+        "file_exists=True",
+        "owner_assignment_status=AGENT_ASSIGNED",
+        "owner_assigned_by_actor_type=agent",
+        "curation_status=AGENT_PROCESSED",
+        "last_record_actor_type=agent"
+      ],
+      "file_evidence": {
+        "exists": true,
+        "sha256": "70ac1012f3ed96832b42a9fdc21fb3c4e7a7a8a7222b44e86e1d24c702ac33c0",
+        "size_bytes": 3460,
+        "reason": "hash_recorded_content_not_printed"
+      },
+      "next_action": "Owner is assigned; add provenance/hash before moving, staging or archiving.",
+      "blocked_actions": [
+        "delete",
+        "move",
+        "git_add_dot",
+        "commit",
+        "publish",
+        "overwrite_without_owner"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "ficha_id": "CURADOR-ORDEN-008",
+      "fingerprint": "377b9781ca7c3dd86f7e693b84a32ce117dfb012af469760c400d2b62fe09906",
+      "source_path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/CHANGELOG.md",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "owner": "agent:curador_orden_assistant",
+      "owner_assignment": {
+        "owner": "agent:curador_orden_assistant",
+        "assigned_by_actor_type": "agent",
+        "assigned_by": "curador_orden_assistant",
+        "assignment_event": "curator_owner_assignment",
+        "status": "AGENT_ASSIGNED",
+        "reason": "default_curador_lane",
+        "rule": "owner_assignment_must_be_agent_recorded_before_cleanup"
+      },
+      "curation": {
+        "required_last_actor_type": "agent",
+        "status": "AGENT_PROCESSED",
+        "last_record": {
+          "actor_type": "agent",
+          "actor": "curador_orden_assistant",
+          "event": "curator_fichas_generated",
+          "source": "wabi_sabi.core.curator_fichas"
+        },
+        "rule": "data_curation_is_processed_only_when_the_last_record_actor_type_is_agent",
+        "human_last_record_means": "NEEDS_AGENT_PROCESSING"
+      },
+      "evidence": [
+        "source=curator_assistant_report",
+        "content_read=false",
+        "content_printed=false",
+        "source_status=??",
+        "category=UNTRACKED_REVIEW",
+        "file_exists=True",
+        "owner_assignment_status=AGENT_ASSIGNED",
+        "owner_assigned_by_actor_type=agent",
+        "curation_status=AGENT_PROCESSED",
+        "last_record_actor_type=agent"
+      ],
+      "file_evidence": {
+        "exists": true,
+        "sha256": "9440d98a99c7fdf6c98d969ede59c60157641f0e241ca78e3b347f788353f29d",
+        "size_bytes": 786,
+        "reason": "hash_recorded_content_not_printed"
+      },
+      "next_action": "Owner is assigned; add provenance/hash before moving, staging or archiving.",
+      "blocked_actions": [
+        "delete",
+        "move",
+        "git_add_dot",
+        "commit",
+        "publish",
+        "overwrite_without_owner"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "ficha_id": "CURADOR-ORDEN-009",
+      "fingerprint": "ad60ca00b2fdafb7cf729b69316913dbf10cc5b514f4da589fd7fcfc12eb2833",
+      "source_path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/COMMS/agents_state/claims-falsifier-observatorio.json",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "owner": "agent:curador_orden_assistant",
+      "owner_assignment": {
+        "owner": "agent:curador_orden_assistant",
+        "assigned_by_actor_type": "agent",
+        "assigned_by": "curador_orden_assistant",
+        "assignment_event": "curator_owner_assignment",
+        "status": "AGENT_ASSIGNED",
+        "reason": "default_curador_lane",
+        "rule": "owner_assignment_must_be_agent_recorded_before_cleanup"
+      },
+      "curation": {
+        "required_last_actor_type": "agent",
+        "status": "AGENT_PROCESSED",
+        "last_record": {
+          "actor_type": "agent",
+          "actor": "curador_orden_assistant",
+          "event": "curator_fichas_generated",
+          "source": "wabi_sabi.core.curator_fichas"
+        },
+        "rule": "data_curation_is_processed_only_when_the_last_record_actor_type_is_agent",
+        "human_last_record_means": "NEEDS_AGENT_PROCESSING"
+      },
+      "evidence": [
+        "source=curator_assistant_report",
+        "content_read=false",
+        "content_printed=false",
+        "source_status=??",
+        "category=UNTRACKED_REVIEW",
+        "file_exists=True",
+        "owner_assignment_status=AGENT_ASSIGNED",
+        "owner_assigned_by_actor_type=agent",
+        "curation_status=AGENT_PROCESSED",
+        "last_record_actor_type=agent"
+      ],
+      "file_evidence": {
+        "exists": true,
+        "sha256": "7d40d912a0eb4b246ea624a98da728ff8fc209be7b3a1c41e9062ac64a74b511",
+        "size_bytes": 1256,
+        "reason": "hash_recorded_content_not_printed"
+      },
+      "next_action": "Owner is assigned; add provenance/hash before moving, staging or archiving.",
+      "blocked_actions": [
+        "delete",
+        "move",
+        "git_add_dot",
+        "commit",
+        "publish",
+        "overwrite_without_owner"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "ficha_id": "CURADOR-ORDEN-010",
+      "fingerprint": "8f7383d852163c52059be353b5ab971fe4be2519f5369d3d64f529241e373f58",
+      "source_path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/COMMS/agents_state/community-sponsors-observatorio.json",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "owner": "agent:curador_orden_assistant",
+      "owner_assignment": {
+        "owner": "agent:curador_orden_assistant",
+        "assigned_by_actor_type": "agent",
+        "assigned_by": "curador_orden_assistant",
+        "assignment_event": "curator_owner_assignment",
+        "status": "AGENT_ASSIGNED",
+        "reason": "default_curador_lane",
+        "rule": "owner_assignment_must_be_agent_recorded_before_cleanup"
+      },
+      "curation": {
+        "required_last_actor_type": "agent",
+        "status": "AGENT_PROCESSED",
+        "last_record": {
+          "actor_type": "agent",
+          "actor": "curador_orden_assistant",
+          "event": "curator_fichas_generated",
+          "source": "wabi_sabi.core.curator_fichas"
+        },
+        "rule": "data_curation_is_processed_only_when_the_last_record_actor_type_is_agent",
+        "human_last_record_means": "NEEDS_AGENT_PROCESSING"
+      },
+      "evidence": [
+        "source=curator_assistant_report",
+        "content_read=false",
+        "content_printed=false",
+        "source_status=??",
+        "category=UNTRACKED_REVIEW",
+        "file_exists=True",
+        "owner_assignment_status=AGENT_ASSIGNED",
+        "owner_assigned_by_actor_type=agent",
+        "curation_status=AGENT_PROCESSED",
+        "last_record_actor_type=agent"
+      ],
+      "file_evidence": {
+        "exists": true,
+        "sha256": "8e4bf506af3d11e74c2bc8c394d68793fc5e29feb7660f680b433b8eafd13ce3",
+        "size_bytes": 1272,
+        "reason": "hash_recorded_content_not_printed"
+      },
+      "next_action": "Owner is assigned; add provenance/hash before moving, staging or archiving.",
+      "blocked_actions": [
+        "delete",
+        "move",
+        "git_add_dot",
+        "commit",
+        "publish",
+        "overwrite_without_owner"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "ficha_id": "CURADOR-ORDEN-011",
+      "fingerprint": "fee9010c2dc3bd94bec6f0bea3a9e592a4abab23b8fe41699594db7503781cb4",
+      "source_path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/COMMS/agents_state/editorial-research-release.json",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "owner": "agent:curador_orden_assistant",
+      "owner_assignment": {
+        "owner": "agent:curador_orden_assistant",
+        "assigned_by_actor_type": "agent",
+        "assigned_by": "curador_orden_assistant",
+        "assignment_event": "curator_owner_assignment",
+        "status": "AGENT_ASSIGNED",
+        "reason": "default_curador_lane",
+        "rule": "owner_assignment_must_be_agent_recorded_before_cleanup"
+      },
+      "curation": {
+        "required_last_actor_type": "agent",
+        "status": "AGENT_PROCESSED",
+        "last_record": {
+          "actor_type": "agent",
+          "actor": "curador_orden_assistant",
+          "event": "curator_fichas_generated",
+          "source": "wabi_sabi.core.curator_fichas"
+        },
+        "rule": "data_curation_is_processed_only_when_the_last_record_actor_type_is_agent",
+        "human_last_record_means": "NEEDS_AGENT_PROCESSING"
+      },
+      "evidence": [
+        "source=curator_assistant_report",
+        "content_read=false",
+        "content_printed=false",
+        "source_status=??",
+        "category=UNTRACKED_REVIEW",
+        "file_exists=True",
+        "owner_assignment_status=AGENT_ASSIGNED",
+        "owner_assigned_by_actor_type=agent",
+        "curation_status=AGENT_PROCESSED",
+        "last_record_actor_type=agent"
+      ],
+      "file_evidence": {
+        "exists": true,
+        "sha256": "3dafa0f602c0a09ad678ffe7d1a88613870f222527789d43e0ad57d2790841f3",
+        "size_bytes": 1315,
+        "reason": "hash_recorded_content_not_printed"
+      },
+      "next_action": "Owner is assigned; add provenance/hash before moving, staging or archiving.",
+      "blocked_actions": [
+        "delete",
+        "move",
+        "git_add_dot",
+        "commit",
+        "publish",
+        "overwrite_without_owner"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "ficha_id": "CURADOR-ORDEN-012",
+      "fingerprint": "245f983922027c33332d610238a34807394c40f88c64d9c3508bc1520711c934",
+      "source_path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/COMMS/agents_state/prensa-observatorio.json",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "owner": "agent:curador_orden_assistant",
+      "owner_assignment": {
+        "owner": "agent:curador_orden_assistant",
+        "assigned_by_actor_type": "agent",
+        "assigned_by": "curador_orden_assistant",
+        "assignment_event": "curator_owner_assignment",
+        "status": "AGENT_ASSIGNED",
+        "reason": "default_curador_lane",
+        "rule": "owner_assignment_must_be_agent_recorded_before_cleanup"
+      },
+      "curation": {
+        "required_last_actor_type": "agent",
+        "status": "AGENT_PROCESSED",
+        "last_record": {
+          "actor_type": "agent",
+          "actor": "curador_orden_assistant",
+          "event": "curator_fichas_generated",
+          "source": "wabi_sabi.core.curator_fichas"
+        },
+        "rule": "data_curation_is_processed_only_when_the_last_record_actor_type_is_agent",
+        "human_last_record_means": "NEEDS_AGENT_PROCESSING"
+      },
+      "evidence": [
+        "source=curator_assistant_report",
+        "content_read=false",
+        "content_printed=false",
+        "source_status=??",
+        "category=UNTRACKED_REVIEW",
+        "file_exists=True",
+        "owner_assignment_status=AGENT_ASSIGNED",
+        "owner_assigned_by_actor_type=agent",
+        "curation_status=AGENT_PROCESSED",
+        "last_record_actor_type=agent"
+      ],
+      "file_evidence": {
+        "exists": true,
+        "sha256": "a35155e2be3f474fdcbae3bde74e16a704ce4d1944a9174196ec80a8272c226e",
+        "size_bytes": 1218,
+        "reason": "hash_recorded_content_not_printed"
+      },
+      "next_action": "Owner is assigned; add provenance/hash before moving, staging or archiving.",
+      "blocked_actions": [
+        "delete",
+        "move",
+        "git_add_dot",
+        "commit",
+        "publish",
+        "overwrite_without_owner"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    }
+  ],
+  "next_safe_actions": [
+    "Route each ficha through its assigned agent owner before touching the path.",
+    "If a human edits or reassigns a ficha, run an agent pass afterwards so owner assignment and curation last record are agent-owned.",
+    "Add hash/provenance evidence for any path that may become archive or delete candidate.",
+    "Keep physical cleanup blocked until the owning agent handoff and ActionGate evidence exist."
+  ],
+  "artifact": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\wabi_sabi\\outputs\\curator_fichas_20260507-111735.json",
+  "markdown_artifact": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\wabi_sabi\\outputs\\curator_fichas_20260507-111735.md",
+  "workspace_doc": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\docs\\intake\\CURADOR_ORDEN_FICHAS_2026-05-07.md",
+  "witness_event_id": 2,
+  "witness_verified": true,
+  "witness_verify_reason": "ok",
+  "witness_db": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\wabi_sabi\\witness\\wabi_patch_witness.sqlite",
+  "observation": {
+    "envelope_version": "wabi-observation-v1",
+    "observed_at_utc": "2026-05-07T17:17:35.133090+00:00",
+    "prompt": "curator-fichas",
+    "intent": "workspace_order_fichas",
+    "agent": "curador_orden_assistant",
+    "action_gate": "APPROVE",
+    "certainty": [
+      "Generated fichas from the latest curator assistant metadata report.",
+      "Assigned an agent owner to each ficha without touching source paths.",
+      "No files were deleted, moved, staged, committed or reverted."
+    ],
+    "inference": [
+      "Fichas prioritize REVIEW/UNKNOWN items so later cleanup has an owner and evidence path."
+    ],
+    "unknown": [
+      "Fichas do not prove duplicate status or safe deletion; they only route review work."
+    ],
+    "artifacts": [
+      "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\wabi_sabi\\outputs\\curator_fichas_20260507-111735.json",
+      "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\wabi_sabi\\outputs\\curator_fichas_20260507-111735.md",
+      "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\docs\\intake\\CURADOR_ORDEN_FICHAS_2026-05-07.md"
+    ],
+    "evidence": [
+      "ficha_count=12",
+      "owner_assigned_count=12",
+      "delete_approved_count=0",
+      "mode=ficha_generation_only"
+    ],
+    "fingerprint": "dad55d13e16225da882cce5d974e5aa6e6e5d64f28561d08a357e239d5c78c5d"
+  }
+}

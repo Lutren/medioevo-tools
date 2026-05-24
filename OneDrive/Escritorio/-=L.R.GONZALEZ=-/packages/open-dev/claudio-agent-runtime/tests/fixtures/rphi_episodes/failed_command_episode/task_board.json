@@ -1,0 +1,15 @@
+{
+  "schema_version": "claudio.task_board.v0.1",
+  "tasks": [
+    {
+      "id": "ep_failed_001",
+      "title": "Synthetic local command fails",
+      "status": "failed",
+      "priority": "P1",
+      "owner": "rphi-calibration",
+      "evidence": [
+        "qa/example-failure.log"
+      ]
+    }
+  ]
+}

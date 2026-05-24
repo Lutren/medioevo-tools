@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "medioevo.event_injection.v0.1",
+  "title": "EventInjection",
+  "type": "object",
+  "required": ["schema_version", "event_id", "source_system", "target_world_id", "tick", "event_type", "payload", "action_gate", "boundary"],
+  "properties": {
+    "schema_version": { "const": "medioevo.event_injection.v0.1" },
+    "event_id": { "type": "string" },
+    "source_system": { "enum": ["WABI_SABI_CONTROL_PLANE", "DUAT_SIMULATOR_WORLD", "MEDIOEVO_FORGE_APP_GAME_CREATOR", "MEDIOEVO_SPACE_PUBLIC_PORTAL", "SHARED_CONTRACTS"] },
+    "target_world_id": { "type": "string" },
+    "tick": { "type": "integer" },
+    "event_type": { "type": "string" },
+    "payload": { "type": "object" },
+    "action_gate": { "type": "object" },
+    "boundary": { "type": "object" }
+  },
+  "additionalProperties": false
+}
+

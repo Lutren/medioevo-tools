@@ -1,0 +1,15 @@
+{
+  "schema_version": "claudio.task_board.v0.1",
+  "tasks": [
+    {
+      "id": "ep_rollback_failure_001",
+      "title": "Synthetic rollback restore fails",
+      "status": "failed",
+      "priority": "P0",
+      "owner": "rphi-calibration",
+      "evidence": [
+        "qa/rollback-failure.log"
+      ]
+    }
+  ]
+}

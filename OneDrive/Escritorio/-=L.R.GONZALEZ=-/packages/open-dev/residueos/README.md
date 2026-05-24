@@ -36,9 +36,14 @@ are missing.
 ```powershell
 cd residueos
 python -m residueos.cli evaluate examples\sample_action.json --db runtime\residueos.sqlite
+python -m residueos.cli evaluate examples\public_claim_review_action.json --no-store
 python -m residueos.cli actions --db runtime\residueos.sqlite
 python -m residueos.cli serve --db runtime\residueos.sqlite --port 8787
 ```
+
+The `public_claim_review_action.json` example is intentionally routed to
+`REVIEW`: public copy can have verified sources and still require human account
+confirmation before GitHub, Sponsors, Gumroad or social publication.
 
 Then open:
 

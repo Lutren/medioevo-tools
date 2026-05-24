@@ -1,0 +1,37 @@
+{
+  "schema": "duat.screenshot_capture.v1_3_1",
+  "generatedAt": "2026-05-20T06:09:29.192Z",
+  "browserMode": "Edge/CDP/headless",
+  "shots": [
+    {
+      "name": "audio_gamefeel_panel_off.png",
+      "url": "http://127.0.0.1:18519/duat-city/?mode=CITY&view=OPERATIONAL&sceneDemo=fire_smoke&vibe=neon_rain_street",
+      "bytes": 275448
+    },
+    {
+      "name": "audio_gamefeel_neon_rain_cues.png",
+      "url": "http://127.0.0.1:18519/duat-city/?mode=CITY&view=OPERATIONAL&sceneDemo=material_placement&vibe=neon_rain_street",
+      "bytes": 280276
+    },
+    {
+      "name": "agent_life_relationship_graph.png",
+      "url": "http://127.0.0.1:18519/duat-city/?mode=AGENT&view=OPERATIONAL&vibe=neon_rain_street",
+      "bytes": 291881
+    },
+    {
+      "name": "fire_smoke_gamefeel.png",
+      "url": "http://127.0.0.1:18519/duat-city/?mode=CITY&view=OPERATIONAL&sceneDemo=fire_smoke&vibe=warm_interior_tavern",
+      "bytes": 264737
+    },
+    {
+      "name": "brain_runtime_audio_system.png",
+      "url": "http://127.0.0.1:18519/duat-city/?mode=CITY&view=OPERATIONAL&vibe=archeopunk_city_night",
+      "bytes": 250598
+    },
+    {
+      "name": "rpg_mode_audio_export_ready.png",
+      "url": "http://127.0.0.1:18519/duat-city/?mode=RPG&view=OPERATIONAL&sceneDemo=material_placement&vibe=neon_rain_street",
+      "bytes": 161217
+    }
+  ]
+}

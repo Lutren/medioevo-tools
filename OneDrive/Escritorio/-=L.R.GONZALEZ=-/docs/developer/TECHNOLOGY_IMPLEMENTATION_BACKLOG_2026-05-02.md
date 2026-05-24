@@ -16,6 +16,8 @@ Status: actionable backlog derived from curador review.
 | Open core + UI paga | Lock product split and agent-wrapper model | product fichas, UI system, dependency gate, claim register and publishing runbook exist |
 | OBS Safe Integration Kit | Promote curated kernel into `packages\open-dev` with release boundary docs | package contains source, tests, examples, `LICENSE`, `CLAIMS.md`, `PRIVATE_EXCLUSIONS.md`, `SECURITY.md`; pytest/compile/CLI smoke/secret scan/path scrub pass |
 | Curador Always-On | Make curator preflight mandatory for dirty repos, unknown sources and residue | `AGENTS.md`, Claudio `CLAUDE.md`, `docs/developer/CURADOR_ALWAYS_ON_PROTOCOL_2026-05-03.md`, `claudio/docs/CURADOR_ALWAYS_ON_CLAUDIO_2026-05-03.md` and `tools/release/curador_preflight.py` exist |
+| Claudio Public Agent Runtime P0 | Convert Mercury-like patterns into a public-safe Claudio CLI surface without copying Mercury | `docs/developer/CLAUDIO_PUBLIC_AGENT_RUNTIME_BLUEPRINT_2026-05-15.md` and workpack exist; first implementation is stdlib-only, dry-run/read-only, no external channels, no secrets printed |
+| DUAT Operator Shell v0.1 | Wrap the Claudio P0 kernel as a human/product operator shell with OSIT gates | `docs/developer/DUAT_OPERATOR_SHELL_V0_1_SPEC_2026-05-15.md` exists; P0 maps to `packages/open-dev/claudio-agent-runtime`; P1 waits for WitnessLog/GhostGate/ActionGate execute |
 
 ## P1
 

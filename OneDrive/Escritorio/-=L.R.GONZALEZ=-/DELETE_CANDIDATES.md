@@ -79,6 +79,30 @@ canonical copy.
 
 Removed:
 
+## BRAIN_OS exact duplicate deletion candidates 2026-05-13
+
+No ZIP package was deleted in this pass. These rows are deletion candidates only after the cleanup gate opens and the canonical copy is accepted.
+
+| candidate class | evidence | reclaim estimate | action |
+|---|---|---:|---|
+| exact duplicate files >= 1 MB across BRAIN_OS/L.R.GONZALEZ/launchpad | 219 hash groups; keep one copy per SHA256 | 8265.64 MB | pending cleanup gate |
+| BRAIN_OS exact duplicates | 642 duplicate candidate files | 7088.42 MB | pending cleanup gate |
+| L.R.GONZALEZ exact duplicates | 237 duplicate candidate files | 1177.05 MB | pending cleanup gate |
+| BRAIN_OS root/versioned ZIP copies moved to archive review | 9 files moved to `-= BRAIN_OS =-\09_ARCHIVE_REVIEW\ZIP_BACKUPS_EXPIRING` | 2995.57 MB moved, not freed | delete only after gate |
+| BRAIN_OS extracted patch-work source-vault ZIP repeats | repeated `MEDIOEVO_OSIT_v12_2_5_MASTER_NO_OMITIR` zips/chunks in `09_ARCHIVE_REVIEW\ZIP_PATCH_WORK` | high | exact-hash cleanup after gate |
+
+Active root versions retained:
+
+- `-= BRAIN_OS =-\MEDIOEVO_OSIT_v12_2_6_ACTIVE_SAFEBOUNDARY_SCIENCE_PATCHED.zip`
+- `-= BRAIN_OS =-\MEDIOEVO_OSIT_v12_2_6_PUBLIC_SAFE_SCIENCE_CLAIM_GATE_PATCH.zip`
+- `-= BRAIN_OS =-\SAFEBOUNDARY_SCIENCE_2026_PATCH_ONLY_BUNDLE.zip`
+- `-= BRAIN_OS =-\medioevo_visibility_publication_kit_v2.zip`
+
+Deletion gate status:
+
+- `REVIEW_REQUIRED`: exact duplicate set is measured but not deleted.
+- Required before delete: canonical SHA256 copy, path list, rollback position, and explicit cleanup gate phrase.
+
 - `apps\commercial\asistente-negocio\release\Asistente-Negocio-MEDIOEVO-1.0.0-win-x64.zip`
   after verifying SHA256 `8E5B04DFFCF4DF97402DA0542D8BCF2B207CF23816ED9D50A2139755F4C3BF48`.
 - `apps\commercial\asistente-negocio\release\Asistente-Negocio-MEDIOEVO-1.0.0-win-x64.exe`

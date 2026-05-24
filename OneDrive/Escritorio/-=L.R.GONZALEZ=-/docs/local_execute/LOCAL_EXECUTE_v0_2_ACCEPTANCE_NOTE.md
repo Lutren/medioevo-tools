@@ -1,0 +1,9 @@
+# Local Execute v0.2 Acceptance Note
+
+status: PASS
+mode: LOCAL_ONLY
+publication_gate: BLOCK
+cloud_live_gate: BLOCK_THIS_RUN
+nvidia_smoke_gate: DO_NOT_CALL
+
+This local note verifies docs allowlist execution with TaskSpec, GhostGate, rollback and WitnessLog.

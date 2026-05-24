@@ -1,0 +1,179 @@
+import { useGeodiaSimulation } from "@/contexts/SimulationContext";
+import { PixelBorder, PixelButton, ModeBadge } from "./custom/PixelComponents";
+import { useState } from "react";
+
+const REGIME_COLOR: Record<string, string> = {
+  "ÓPTIMO":           "text-success",
+  "FUNCIONAL":        "text-primary",
+  "PRE_JAMMING":      "text-yellow-400",
+  "JAMMING_TEMPRANO": "text-orange-400",
+  "JAMMING":          "text-destructive",
+  "FRAGMENTADO":      "text-accent",
+};
+
+const SIGMA_LABELS = [
+  { key: "σ₀", label: "res_temporal",     hint: "1 − fatiga" },
+  { key: "σ₁", label: "ancho_de_banda",   hint: "Φeff · j_c"   },
+  { key: "σ₂", label: "sesgo_atencional", hint: "ε distorsión" },
+  { key: "σ₃", label: "rigidez_categ",    hint: "conflicto·(1−R)" },
+];
+
+const profiles = [
+  "instrument_balanced",
+  "human_visual_log",
+  "phase_observer",
+  "dark_gravity_observer",
+  "linguistic_human_mdl",
+  "adversarial_systematics",
+];
+
+export default function OperatorInventory() {
+  const { state, reset, setObserverProfile } = useGeodiaSimulation();
+  const [seedInput, setSeedInput] = useState(state.seed.toString());
+
+  const { psi } = state;
+  const regimeColor = REGIME_COLOR[psi.regime] ?? "text-primary";
+
+  return (
+    <div className="flex flex-col gap-4 h-full overflow-y-auto pr-2 pb-4">
+      <div className="bg-primary text-primary-foreground font-display font-bold px-2 py-1">
+        [OPERADOR]
+      </div>
+
+      {/* ── PSI METRICS ── */}
+      <PixelBorder className="space-y-2">
+        <div className="text-xs font-display font-bold border-b border-border pb-1">PSI — MÉTRICAS OSIT</div>
+        <div className="font-mono text-[9px] text-foreground/50 mb-1">
+          Φeff = exp(−ν·R/(Jc−R))  ·  ε = ε₀·(R/Jc)^μ
+        </div>
+        <div className="font-mono text-xs space-y-1">
+          <div className="flex justify-between">
+            <span>R <span className="text-foreground/40 text-[9px]">[residuo]</span></span>
+            <span className={psi.R > 0.7 ? "text-destructive" : psi.R > 0.5 ? "text-yellow-400" : "text-primary"}>
+              {psi.R.toFixed(4)}
+            </span>
+          </div>
+          <div className="flex justify-between">
+            <span>Φeff <span className="text-foreground/40 text-[9px]">[eficiencia]</span></span>
+            <span className={psi.phi_eff > 0.7 ? "text-success" : psi.phi_eff > 0.4 ? "text-primary" : "text-accent"}>
+              {psi.phi_eff.toFixed(4)}
+            </span>
+          </div>
+          <div className="flex justify-between">
+            <span>j_c <span className="text-foreground/40 text-[9px]">[cap. restante]</span></span>
+            <span className="text-primary">{psi.j_c.toFixed(4)}</span>
+          </div>
+          <div className="flex justify-between">
+            <span>ε <span className="text-foreground/40 text-[9px]">[distorsión]</span></span>
+            <span className={psi.epsilon > 0.3 ? "text-accent" : "text-primary"}>{psi.epsilon.toFixed(4)}</span>
+          </div>
+          <div className="flex justify-between">
+            <span>fatiga <span className="text-foreground/40 text-[9px]">[∫R dt]</span></span>
+            <span className="text-primary">{psi.fatigue.toFixed(4)}</span>
+          </div>
+          <div className="flex justify-between">
+            <span>I_obs <span className="text-foreground/40 text-[9px]">[intel. obs.]</span></span>
+            <span className={psi.I_obs > 0.6 ? "text-success" : "text-primary"}>{psi.I_obs.toFixed(4)}</span>
+          </div>
+          <div className="flex justify-between mt-2 pt-1 border-t border-border border-dashed">
+            <span>régimen:</span>
+            <span className={regimeColor}>{psi.regime}</span>
+          </div>
+        </div>
+      </PixelBorder>
+
+      {/* ── Σ VECTOR ── */}
+      <PixelBorder className="space-y-2">
+        <div className="text-xs font-display font-bold border-b border-border pb-1">Σ — FIRMA EPISTÉMICA</div>
+        <div className="font-mono text-[9px] text-foreground/50 mb-1">
+          Σ ∈ [0,1]⁴ — vector de estado observacional
+        </div>
+        <div className="font-mono text-xs space-y-1">
+          {SIGMA_LABELS.map((s, i) => (
+            <div key={s.key} className="flex justify-between items-center">
+              <span>
+                {s.key} <span className="text-foreground/40 text-[9px]">[{s.label}]</span>
+              </span>
+              <span className="text-primary">{(psi.sigma[i] ?? 0).toFixed(4)}</span>
+            </div>
+          ))}
+        </div>
+        {/* Mini bar chart for Σ */}
+        <div className="flex gap-1 mt-2 h-4 items-end">
+          {psi.sigma.map((v, i) => (
+            <div key={i} className="flex-1 bg-primary/20 relative overflow-hidden" style={{ height: "16px" }}>
+              <div
+                className={i === 2 ? "bg-accent absolute bottom-0 w-full" : "bg-primary absolute bottom-0 w-full"}
+                style={{ height: `${Math.round(v * 100)}%` }}
+              />
+            </div>
+          ))}
+        </div>
+        <div className="flex text-[8px] font-mono text-foreground/40 justify-between">
+          {SIGMA_LABELS.map(s => <span key={s.key}>{s.key}</span>)}
+        </div>
+      </PixelBorder>
+
+      {/* ── SIM STATUS ── */}
+      <PixelBorder className="space-y-2">
+        <div className="text-xs font-display font-bold border-b border-border pb-1">SIM STATUS</div>
+        <div className="font-mono text-[10px] space-y-1 break-all">
+          <div><span className="text-foreground/70">backend mode:</span> <br /><ModeBadge mode={state.mode} className="mt-1" /></div>
+          <div className="mt-2"><span className="text-foreground/70">fingerprint:</span> <br /><span className="text-primary">{state.fingerprint}</span></div>
+          <div className="mt-2"><span className="text-foreground/70">seed:</span> <span className="text-primary">{state.seed}</span></div>
+          <div><span className="text-foreground/70">tick actual:</span> <span className="text-primary">{state.tick}</span></div>
+        </div>
+      </PixelBorder>
+
+      {/* ── OBSERVER PROFILE ── */}
+      <PixelBorder className="space-y-2">
+        <div className="text-xs font-display font-bold border-b border-border pb-1">OBSERVER PROFILE</div>
+        <select
+          className="w-full bg-input border border-border text-primary font-mono text-xs p-1 focus:outline-none"
+          value={state.observerProfile}
+          onChange={e => setObserverProfile(e.target.value)}
+        >
+          {profiles.map(p => <option key={p} value={p}>{p}</option>)}
+        </select>
+      </PixelBorder>
+
+      {/* ── PERMISOS ── */}
+      <PixelBorder className="space-y-2">
+        <div className="text-xs font-display font-bold border-b border-border pb-1">PERMISOS</div>
+        <div className="font-mono text-[10px] space-y-2">
+          <label className="flex items-center gap-2 cursor-pointer">
+            <input type="checkbox" className="accent-primary w-3 h-3" defaultChecked />
+            permitir escritura
+          </label>
+          <label className="flex items-center gap-2 cursor-pointer">
+            <input type="checkbox" className="accent-primary w-3 h-3" defaultChecked />
+            permitir claim PHYSICS
+          </label>
+          <label className="flex items-center gap-2 cursor-pointer">
+            <input type="checkbox" className="accent-primary w-3 h-3" />
+            modo operador denso
+          </label>
+        </div>
+      </PixelBorder>
+
+      {/* ── SEED CONTROL ── */}
+      <PixelBorder className="space-y-2">
+        <div className="text-[10px] font-display font-bold">SEED CONTROL</div>
+        <div className="flex gap-2">
+          <input
+            type="number"
+            value={seedInput}
+            onChange={e => setSeedInput(e.target.value)}
+            className="w-full bg-input border border-border text-primary font-mono text-xs px-1"
+          />
+        </div>
+        <PixelButton
+          className="w-full text-[10px] py-1"
+          onClick={() => reset(parseInt(seedInput) || undefined)}
+        >
+          [REINICIAR CON SEMILLA]
+        </PixelButton>
+      </PixelBorder>
+    </div>
+  );
+}

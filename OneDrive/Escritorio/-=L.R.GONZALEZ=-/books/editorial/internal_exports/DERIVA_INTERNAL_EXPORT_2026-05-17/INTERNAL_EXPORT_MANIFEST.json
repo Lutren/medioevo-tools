@@ -1,0 +1,79 @@
+{
+  "schema_version": "medioevo.editorial.internal_export.v1",
+  "package_id": "DERIVA_INTERNAL_EXPORT_2026-05-17",
+  "generated_at": "2026-05-16T23:06:59.2543823-06:00",
+  "project": "MEDIOEVO / canon10 / book_02_deriva",
+  "title": "MEDIOEVO II - Deriva",
+  "author": "Luis Rene Gonzalez",
+  "classification": "BOOKS_EDITORIAL_INTERNAL_FULL_TEXT",
+  "license": "all_rights_reserved",
+  "source_root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\editorial\\canon10_pipeline\\book_02_deriva_deriva",
+  "target_root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\books\\editorial\\internal_exports\\DERIVA_INTERNAL_EXPORT_2026-05-17",
+  "publication_gate": "BLOCK",
+  "external_actions_performed": false,
+  "originals_modified": false,
+  "ebook_conversion": {
+    "tool": "Calibre ebook-convert",
+    "input": "16_deriva_integrado_0713.html",
+    "output": "MEDIOEVO_II_DERIVA_INTERNAL_2026-05-17.epub",
+    "toc_note": "Calibre reported no existing TOC and generated a default TOC."
+  },
+  "files": [
+    {
+      "file": "00_source_manifest.json",
+      "bytes": 1179,
+      "sha256": "ffbed612e4ded833a50169c5fd524af981bfefbf723f319174844399f9fe0800",
+      "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\editorial\\canon10_pipeline\\book_02_deriva_deriva\\00_source_manifest.json",
+      "source_sha256": "ffbed612e4ded833a50169c5fd524af981bfefbf723f319174844399f9fe0800",
+      "copied_from_source_verified": true
+    },
+    {
+      "file": "14_deriva_integrado_0713.md",
+      "bytes": 629836,
+      "sha256": "865cfd648ceb7bf61e05bb0683f8fc5a5c21cf1b5c5eb49f2c776a6c5055b771",
+      "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\editorial\\canon10_pipeline\\book_02_deriva_deriva\\14_deriva_integrado_0713.md",
+      "source_sha256": "865cfd648ceb7bf61e05bb0683f8fc5a5c21cf1b5c5eb49f2c776a6c5055b771",
+      "copied_from_source_verified": true
+    },
+    {
+      "file": "15_deriva_integrado_0713_metrics.json",
+      "bytes": 939,
+      "sha256": "6a32120ee40647473759c4a9173bb1559ec381e3756eb61ccfebf8680da5289e",
+      "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\editorial\\canon10_pipeline\\book_02_deriva_deriva\\15_deriva_integrado_0713_metrics.json",
+      "source_sha256": "6a32120ee40647473759c4a9173bb1559ec381e3756eb61ccfebf8680da5289e",
+      "copied_from_source_verified": true
+    },
+    {
+      "file": "16_deriva_integrado_0713.html",
+      "bytes": 678605,
+      "sha256": "038ea09a1c533e41cd4ae112cb8a8d03ac7645e174a689f273e4f3aba3ae3b43",
+      "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\editorial\\canon10_pipeline\\book_02_deriva_deriva\\16_deriva_integrado_0713.html",
+      "source_sha256": "038ea09a1c533e41cd4ae112cb8a8d03ac7645e174a689f273e4f3aba3ae3b43",
+      "copied_from_source_verified": true
+    },
+    {
+      "file": "17_deriva_integrado_0713.docx",
+      "bytes": 275704,
+      "sha256": "22b0d620aea82186730189c46edba45ee77afeb0fccdde3d9194d4c87bd730d8",
+      "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\editorial\\canon10_pipeline\\book_02_deriva_deriva\\17_deriva_integrado_0713.docx",
+      "source_sha256": "22b0d620aea82186730189c46edba45ee77afeb0fccdde3d9194d4c87bd730d8",
+      "copied_from_source_verified": true
+    },
+    {
+      "file": "18_deriva_integrado_0713.pdf",
+      "bytes": 830632,
+      "sha256": "7b266a87567577382a79e46da5c2bd7c7cab841fd4cd6f122641a442e158acdd",
+      "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\editorial\\canon10_pipeline\\book_02_deriva_deriva\\18_deriva_integrado_0713.pdf",
+      "source_sha256": "7b266a87567577382a79e46da5c2bd7c7cab841fd4cd6f122641a442e158acdd",
+      "copied_from_source_verified": true
+    },
+    {
+      "file": "MEDIOEVO_II_DERIVA_INTERNAL_2026-05-17.epub",
+      "bytes": 341499,
+      "sha256": "ce41cb0f79aa327007076eec52a22a301b08258f3478f49713bdfb509dd72a8f",
+      "source_path": null,
+      "source_sha256": null,
+      "copied_from_source_verified": false
+    }
+  ]
+}

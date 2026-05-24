@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "duat_signal_source_pack_v0_1.schema.json",
+  "title": "DUAT Signal Source Pack v0.1",
+  "type": "object",
+  "required": [
+    "schema",
+    "source_id",
+    "domain",
+    "access_type",
+    "license_status",
+    "comparability_status",
+    "payload_sha256",
+    "publication_gate"
+  ],
+  "properties": {
+    "schema": {
+      "const": "duat.signal_source_pack.v0_1"
+    },
+    "source_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "domain": {
+      "type": "string",
+      "enum": [
+        "climate",
+        "social",
+        "geological",
+        "atmospheric",
+        "orbital",
+        "macroeconomic",
+        "media_events",
+        "geography",
+        "other"
+      ]
+    },
+    "access_type": {
+      "type": "string"
+    },
+    "license_status": {
+      "type": "string",
+      "enum": [
+        "APPROVE",
+        "REVIEW",
+        "REVIEW_LICENSE",
+        "REVIEW_KEY_REQUIRED",
+        "BLOCK"
+      ]
+    },
+    "comparability_status": {
+      "type": "string",
+      "enum": [
+        "APPROVE",
+        "STRONG_PROXY",
+        "REVIEW",
+        "NOT_COMPARABLE",
+        "BLOCK"
+      ]
+    },
+    "payload_sha256": {
+      "type": "string",
+      "pattern": "^[A-Fa-f0-9]{64}$"
+    },
+    "capture_utc": {
+      "type": "string"
+    },
+    "frequency": {
+      "type": "string"
+    },
+    "coverage_geo": {
+      "type": "string"
+    },
+    "publication_gate": {
+      "const": "BLOCK"
+    }
+  },
+  "additionalProperties": true
+}

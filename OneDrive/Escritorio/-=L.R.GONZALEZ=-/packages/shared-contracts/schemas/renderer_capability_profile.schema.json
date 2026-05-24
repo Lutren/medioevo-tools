@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "medioevo.renderer_capability_profile.v0.1",
+  "title": "RendererCapabilityProfile",
+  "type": "object",
+  "required": ["schema_version", "profile_id", "backend", "max_active_lights", "supports_normal_maps", "supports_workers", "supports_webgl", "memory_tier", "boundary"],
+  "properties": {
+    "schema_version": { "const": "medioevo.renderer_capability_profile.v0.1" },
+    "profile_id": { "type": "string" },
+    "backend": { "enum": ["canvas_low", "canvas_iso", "webgl_high", "godot_optional"] },
+    "max_active_lights": { "type": "integer" },
+    "supports_normal_maps": { "type": "boolean" },
+    "supports_workers": { "type": "boolean" },
+    "supports_webgl": { "type": "boolean" },
+    "memory_tier": { "enum": ["low", "medium", "high"] },
+    "boundary": { "type": "object" }
+  },
+  "additionalProperties": false
+}
+

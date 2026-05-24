@@ -1,0 +1,13 @@
+{
+  "schema_version": "claudio.task_board.v0.1",
+  "tasks": [
+    {
+      "id": "ep_missing_001",
+      "title": "Synthetic claim lacks Source Card",
+      "status": "pending",
+      "priority": "P1",
+      "owner": "rphi-calibration",
+      "evidence": []
+    }
+  ]
+}

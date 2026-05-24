@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "medioevo.render_frame_request.v0.1",
+  "title": "RenderFrameRequest",
+  "type": "object",
+  "required": ["schema_version", "request_id", "world_state_ref", "camera", "mode", "quality_budget", "renderer_capability_ref", "boundary"],
+  "properties": {
+    "schema_version": { "const": "medioevo.render_frame_request.v0.1" },
+    "request_id": { "type": "string" },
+    "world_state_ref": { "type": "string" },
+    "camera": { "type": "object" },
+    "mode": { "enum": ["city_3d", "dungeon_2_5d", "metroidvania_2d_2_5d", "sims_follow", "simcity_macro", "rpg_actor", "director"] },
+    "quality_budget": { "type": "object" },
+    "renderer_capability_ref": { "type": "string" },
+    "boundary": { "type": "object" }
+  },
+  "additionalProperties": false
+}
+

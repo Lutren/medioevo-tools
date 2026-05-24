@@ -8,6 +8,41 @@ Purpose: convert broad cleanup, duplicate removal and agent handoff work into a
 repeatable local protocol. This contract does not authorize direct deletion,
 publication, external actions or wholesale source import.
 
+## Selective Extraction Protocol
+
+Raw or unregistered sources are never adopted wholesale. The only allowed path
+is:
+
+`RAW_SOURCE -> FICHA -> USEFUL_DELTA -> TARGET_LANE -> TEST/EVIDENCE -> INTEGRATED_OR_REVIEW`
+
+Required fields for every ficha or intake delta:
+
+- `useful_deltas`: specific ideas, code patterns or claims worth preserving.
+- `rejected_material`: raw text/code, private context, overclaims or unsafe
+  actions that must not be imported.
+- `target_lane`: the exact lane that may receive the delta, such as
+  `docs/intake`, `packages/open-dev/claudio-agent-runtime`, Wabi-Sabi docs or
+  `research`.
+- `claim_boundary`: `operational`, `research_only`, `demo_only`,
+  `requires_evidence` or `blocked_claim`.
+- `evidence`: exact path, hash, line reference, command output, test, scan or
+  manifest.
+- `tests`: focused checks that prove the delta was integrated without raw
+  adoption or public-claim upgrade.
+- `action_gate`: `APPROVE`, `REVIEW` or `BLOCK` for the concrete integration
+  action.
+
+Default decision for unregistered material:
+`UNKNOWN_REVIEW_REQUIRED / SELECTIVE_ABSORPTION_ONLY`.
+
+Decision law:
+
+- `Adopcion cruda` / raw wholesale import: `BLOCK`.
+- Selective extraction without ficha, provenance, target lane, claim boundary
+  and test/evidence: `REVIEW`.
+- Selective extraction with complete local evidence and no external/private
+  side effect: `APPROVE`.
+
 ## SETO Folder Protocol
 
 SETO is the local operating layer for dirty or mixed material. The target

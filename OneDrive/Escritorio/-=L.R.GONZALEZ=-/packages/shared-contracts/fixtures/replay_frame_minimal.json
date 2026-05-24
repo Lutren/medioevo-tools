@@ -1,0 +1,12 @@
+{
+  "schema_version": "medioevo.replay_frame.v0.1",
+  "frame_id": "replay-frame-0001",
+  "tick": 1,
+  "seed": "duat-seed-001",
+  "prev_hash": "GENESIS",
+  "state_delta": { "events_added": ["event-light-source-001"] },
+  "event_refs": ["event_injection_minimal.json"],
+  "replay_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+  "boundary": { "publication_gate": "BLOCK", "contains_private_data": false, "public_safe": true }
+}
+

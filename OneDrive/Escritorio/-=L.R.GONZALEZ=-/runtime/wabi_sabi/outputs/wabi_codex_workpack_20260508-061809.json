@@ -1,0 +1,22 @@
+{
+  "schema": "wabi_codex_workpack.v1",
+  "provider": "dry-run",
+  "gate": "APPROVE",
+  "workspace": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
+  "prompt": "Responde exactamente OK_WABI_NVIDIA y nada mas.",
+  "codex_prompt": "Origen: Wabi-Sabi local.\nModo: solo lectura por defecto.\nReglas:\n- Responde en espanol claro y operativo.\n- No hagas push, deploy, publicaciones, compras, borrados ni cambios destructivos.\n- No pidas ni expongas secretos, tokens o .env.\n- Si el usuario pide escribir archivos, entrega plan o parche sugerido y marca que aplicar requiere ActionGate.\n\nPedido del operador:\nResponde exactamente OK_WABI_NVIDIA y nada mas.\n",
+  "status": {
+    "codex_cli": {
+      "available": true,
+      "path": "C:\\Users\\L-Tyr\\AppData\\Roaming\\npm\\codex.cmd",
+      "mode": "read_only_codex_exec"
+    },
+    "openai_responses": {
+      "available": false,
+      "env_key": "OPENAI_API_KEY",
+      "model": "gpt-5.5"
+    },
+    "auto_provider": "codex-cli",
+    "safe_default": "read_only_or_dry_run"
+  }
+}

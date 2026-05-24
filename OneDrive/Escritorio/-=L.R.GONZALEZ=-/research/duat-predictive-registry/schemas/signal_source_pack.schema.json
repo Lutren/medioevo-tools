@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "duat.smallville.signal_source_pack.v0_2",
+  "title": "DUAT Smallville SignalSourcePack v0.2",
+  "type": "object",
+  "required": ["schema", "pack_id", "seed", "time_model", "channels", "boundary", "fingerprint"],
+  "properties": {
+    "schema": { "const": "duat.smallville.signal_source_pack.v0_2" },
+    "pack_id": { "const": "duat_signal_source_pack_v0_2" },
+    "seed": { "type": "integer" },
+    "time_model": {
+      "type": "object",
+      "required": ["tick_seconds", "ticks"],
+      "properties": {
+        "tick_seconds": { "type": "integer", "minimum": 1 },
+        "ticks": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "channels": {
+      "type": "object",
+      "required": ["weather", "geophysics", "social_pressure", "infrastructure", "resource_availability"]
+    },
+    "boundary": {
+      "type": "object",
+      "required": ["uses_real_data", "uses_credentials", "uses_network", "publication_gate"],
+      "properties": {
+        "uses_real_data": { "const": false },
+        "uses_credentials": { "const": false },
+        "uses_network": { "const": false },
+        "publication_gate": { "const": "BLOCK" }
+      }
+    },
+    "fingerprint": { "type": "string" }
+  }
+}

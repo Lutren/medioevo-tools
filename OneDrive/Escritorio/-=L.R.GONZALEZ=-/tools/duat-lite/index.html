@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DUAT Lite</title>
+    <style>
+      :root {
+        --bg: #f6f7f8;
+        --ink: #171a1f;
+        --muted: #5e6673;
+        --line: #d8dde3;
+        --panel: #ffffff;
+        --accent: #0b6b57;
+        --review: #915f00;
+        --block: #a33232;
+        --ok: #0b6b57;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: Inter, "Segoe UI", Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.45;
+      }
+
+      main {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 24px;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 18px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 24px;
+        font-weight: 650;
+      }
+
+      h2 {
+        margin: 0 0 10px;
+        font-size: 15px;
+        font-weight: 650;
+      }
+
+      .status {
+        display: inline-flex;
+        gap: 8px;
+        align-items: center;
+        color: var(--muted);
+        white-space: nowrap;
+      }
+
+      .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--review);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: minmax(320px, 0.85fr) minmax(420px, 1.15fr);
+        gap: 16px;
+      }
+
+      section {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 16px;
+      }
+
+      textarea {
+        width: 100%;
+        min-height: 180px;
+        resize: vertical;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        padding: 12px;
+        font: inherit;
+        color: var(--ink);
+        background: #fbfcfd;
+      }
+
+      .actions {
+        display: flex;
+        gap: 10px;
+        margin-top: 12px;
+        flex-wrap: wrap;
+      }
+
+      button {
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        padding: 9px 12px;
+        background: #fff;
+        color: var(--ink);
+        font: inherit;
+        cursor: pointer;
+      }
+
+      button.primary {
+        background: var(--accent);
+        border-color: var(--accent);
+        color: #fff;
+      }
+
+      button:disabled {
+        cursor: not-allowed;
+        opacity: 0.65;
+      }
+
+      .metrics {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(90px, 1fr));
+        gap: 10px;
+        margin-bottom: 14px;
+      }
+
+      .metric {
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        padding: 10px;
+        min-height: 70px;
+      }
+
+      .metric span {
+        display: block;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .metric strong {
+        display: block;
+        margin-top: 5px;
+        font-size: 19px;
+        font-weight: 700;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+      }
+
+      th,
+      td {
+        border-bottom: 1px solid var(--line);
+        padding: 9px 8px;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      th {
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 650;
+      }
+
+      td:first-child {
+        width: 46%;
+        word-wrap: break-word;
+      }
+
+      .pill {
+        display: inline-block;
+        min-width: 72px;
+        border-radius: 999px;
+        padding: 3px 8px;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 700;
+        color: #fff;
+        background: var(--review);
+      }
+
+      .pill.APPROVE {
+        background: var(--ok);
+      }
+
+      .pill.BLOCK,
+      .pill.BLOQUEO {
+        background: var(--block);
+      }
+
+      .next-action {
+        margin-top: 14px;
+        padding: 12px;
+        border-left: 4px solid var(--accent);
+        background: #f5faf8;
+        color: var(--ink);
+      }
+
+      pre {
+        max-height: 260px;
+        overflow: auto;
+        background: #101418;
+        color: #e9eef2;
+        border-radius: 6px;
+        padding: 12px;
+        font-size: 12px;
+      }
+
+      @media (max-width: 860px) {
+        main {
+          padding: 16px;
+        }
+
+        header,
+        .grid {
+          display: block;
+        }
+
+        .status {
+          margin-top: 8px;
+        }
+
+        section {
+          margin-bottom: 14px;
+        }
+
+        .metrics {
+          grid-template-columns: repeat(2, minmax(120px, 1fr));
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>DUAT Lite</h1>
+        <div class="status"><span class="dot" id="statusDot"></span><span id="statusText">checking</span></div>
+      </header>
+
+      <div class="grid">
+        <section>
+          <h2>Claim Intake</h2>
+          <textarea id="claimInput">El observador no observa desde cero; observa desde estado.</textarea>
+          <div class="actions">
+            <button class="primary" id="classifyButton">Classify</button>
+            <button id="sampleApprove">Safe sample</button>
+            <button id="sampleBlock">Blocked sample</button>
+          </div>
+        </section>
+
+        <section>
+          <h2>Operational State</h2>
+          <div class="metrics">
+            <div class="metric"><span>Gate</span><strong id="gateValue">-</strong></div>
+            <div class="metric"><span>R</span><strong id="rValue">-</strong></div>
+            <div class="metric"><span>Phi_eff</span><strong id="phiValue">-</strong></div>
+            <div class="metric"><span>Claims</span><strong id="claimCount">-</strong></div>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Claim</th>
+                <th>Label</th>
+                <th>Gate</th>
+                <th>R</th>
+                <th>Phi</th>
+              </tr>
+            </thead>
+            <tbody id="claimsBody"></tbody>
+          </table>
+          <div class="next-action" id="nextAction">No classification yet.</div>
+        </section>
+      </div>
+
+      <section style="margin-top: 16px">
+        <h2>Envelope</h2>
+        <pre id="rawJson">{}</pre>
+      </section>
+    </main>
+
+    <script>
+      const input = document.getElementById("claimInput");
+      const button = document.getElementById("classifyButton");
+      const statusDot = document.getElementById("statusDot");
+      const statusText = document.getElementById("statusText");
+      const claimsBody = document.getElementById("claimsBody");
+
+      async function health() {
+        try {
+          const response = await fetch("/api/health");
+          const payload = await response.json();
+          statusText.textContent = payload.status === "ok" ? "local api ready" : "review";
+          statusDot.style.background = payload.status === "ok" ? "var(--ok)" : "var(--review)";
+        } catch (error) {
+          statusText.textContent = "api offline";
+          statusDot.style.background = "var(--block)";
+        }
+      }
+
+      async function classify() {
+        button.disabled = true;
+        try {
+          const response = await fetch("/api/classify", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ text: input.value, task: "duat_lite_review" })
+          });
+          const payload = await response.json();
+          render(payload.result || payload);
+        } finally {
+          button.disabled = false;
+        }
+      }
+
+      function render(payload) {
+        const envelope = payload.observation_envelope || {};
+        const claims = Array.isArray(envelope.claims) ? envelope.claims : [];
+        document.getElementById("gateValue").textContent = payload.gate || "-";
+        document.getElementById("rValue").textContent = value(payload.R_or);
+        document.getElementById("phiValue").textContent = value(payload.phi_moi);
+        document.getElementById("claimCount").textContent = String(claims.length);
+        document.getElementById("nextAction").textContent = payload.next_action || "-";
+        document.getElementById("rawJson").textContent = JSON.stringify(payload, null, 2);
+        claimsBody.innerHTML = "";
+        for (const claim of claims) {
+          const row = document.createElement("tr");
+          row.innerHTML = `
+            <td>${escapeHtml(claim.text || "")}</td>
+            <td><span class="pill ${claim.label || ""}">${claim.label || "-"}</span></td>
+            <td><span class="pill ${claim.gate || ""}">${claim.gate || "-"}</span></td>
+            <td>${value(claim.R_or)}</td>
+            <td>${value(claim.phi_moi)}</td>
+          `;
+          claimsBody.appendChild(row);
+        }
+      }
+
+      function value(number) {
+        return typeof number === "number" ? number.toFixed(2) : "-";
+      }
+
+      function escapeHtml(text) {
+        return text.replace(/[&<>"']/g, (char) => ({
+          "&": "&amp;",
+          "<": "&lt;",
+          ">": "&gt;",
+          '"': "&quot;",
+          "'": "&#039;"
+        }[char]));
+      }
+
+      document.getElementById("sampleApprove").addEventListener("click", () => {
+        input.value = "El observador no observa desde cero; observa desde estado.";
+      });
+      document.getElementById("sampleBlock").addEventListener("click", () => {
+        input.value = "Causal Rendering prueba una nueva fisica.";
+      });
+      button.addEventListener("click", classify);
+      health().then(classify);
+    </script>
+  </body>
+</html>

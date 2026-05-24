@@ -1,0 +1,7 @@
+{
+  "records": [
+    {"schema_version":"claudio.memory_lite.v0.1","type":"claim","summary":"Synthetic claim A conflicts with claim B.","source":"docs/example-a.md","confidence":0.6,"durability":"active","evidence_status":"contradiction"},
+    {"schema_version":"claudio.memory_lite.v0.1","type":"claim","summary":"Synthetic claim B is contradicted by claim A.","source":"docs/example-b.md","confidence":0.6,"durability":"active","evidence_status":"contradicted"},
+    {"schema_version":"claudio.memory_lite.v0.1","type":"constraint","summary":"Conflict unresolved until evidence is reconciled.","confidence":0.5,"durability":"active","status":"unresolved"}
+  ]
+}

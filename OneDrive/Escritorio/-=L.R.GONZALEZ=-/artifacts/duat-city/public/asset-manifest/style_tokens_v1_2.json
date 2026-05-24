@@ -1,0 +1,57 @@
+{
+  "schema": "duat.style_tokens.v1_2",
+  "generatedAt": "2026-05-19T18:48:23.7670078-06:00",
+  "paletteTokens": [
+    "obsidian",
+    "aged_brass",
+    "burnished_copper",
+    "operational_cyan",
+    "ritual_amber",
+    "wet_stone"
+  ],
+  "contrastProfile": "high",
+  "edgeDetailDensity": 1.0,
+  "metalCopperObsidianCyanAmberRatios": {
+    "metal": 0.28,
+    "copper": 0.18,
+    "obsidian": 0.2,
+    "cyan": 0.18,
+    "amber": 0.16
+  },
+  "glowColorTendencies": [
+    "cyan",
+    "amber",
+    "pink",
+    "algae_green"
+  ],
+  "uiFrameStyle": "procedural diegetic brass/obsidian terminal frame until reviewed assets are approved",
+  "materialCategories": [
+    "wet_stone",
+    "rain_wet_metal",
+    "aged_brass",
+    "obsidian_glass",
+    "old_paper_archive_tablet"
+  ],
+  "sceneMoodTags": [
+    "asset-board-reference",
+    "archeopunk",
+    "steampunk",
+    "cyberpunk",
+    "biopunk",
+    "cinematic-light",
+    "material-rich"
+  ],
+  "lightDirectionTags": [
+    "side_light",
+    "window_soft",
+    "neon_reflection",
+    "fire_core"
+  ],
+  "proportions": {
+    "tile": "2.5d isometric 2:1 footprint",
+    "building": "compact vertical city module",
+    "prop": "readable 8-24px symbolic silhouette"
+  },
+  "sourceAssetCount": 76,
+  "publicationAllowed": false
+}

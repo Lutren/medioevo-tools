@@ -1,0 +1,821 @@
+{
+  "schema": "duat.free_signal_sources_catalog.v0_1",
+  "generated_at_utc": "2026-05-15T02:59:10Z",
+  "publication_gate": "BLOCK",
+  "external_publication": false,
+  "sources": [
+    {
+      "source_id": "open_meteo",
+      "name": "Open-Meteo Weather API",
+      "domain": "geophysical_weather",
+      "official_url": "https://open-meteo.com/",
+      "api_docs_url": "https://open-meteo.com/en/docs",
+      "access_type": "NO_KEY",
+      "license_status": "CC-BY-4.0/free non-commercial terms documented; commercial review required",
+      "rate_limit": "<10000 calls/day for free non-commercial tier",
+      "format": [
+        "json",
+        "csv",
+        "xlsx"
+      ],
+      "frequency": "hourly/daily",
+      "coverage_geo": "global",
+      "coverage_time": "forecast and historical windows",
+      "predictive_value": 0.86,
+      "source_quality": 0.78,
+      "expected_r_reduction": 0.65,
+      "risks": [
+        "free tier is non-commercial",
+        "model mix can hide correlated errors"
+      ],
+      "required_attribution": "Open-Meteo attribution per terms",
+      "osit_class": "CERTEZA",
+      "integration_gate": "APPROVE",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "source_id": "ecmwf_open_data",
+      "name": "ECMWF Open Data",
+      "domain": "geophysical_weather",
+      "official_url": "https://www.ecmwf.int/en/forecasts/datasets/open-data",
+      "api_docs_url": "https://www.ecmwf.int/en/forecasts/datasets/open-data",
+      "access_type": "BULK_DOWNLOAD",
+      "license_status": "CC-BY-4.0 with ECMWF terms; volume/access review required",
+      "rate_limit": "open-data portal limits and rolling archive",
+      "format": [
+        "grib2"
+      ],
+      "frequency": "forecast cycles",
+      "coverage_geo": "global",
+      "coverage_time": "rolling real-time forecast archive",
+      "predictive_value": 0.9,
+      "source_quality": 0.82,
+      "expected_r_reduction": 0.7,
+      "risks": [
+        "large files",
+        "rolling archive",
+        "delivery costs for some access modes"
+      ],
+      "required_attribution": "ECMWF attribution required",
+      "osit_class": "CERTEZA",
+      "integration_gate": "REVIEW_LICENSE",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "source_id": "world_bank_indicators",
+      "name": "World Bank Indicators API",
+      "domain": "macroeconomic",
+      "official_url": "https://api.worldbank.org/v2/",
+      "api_docs_url": "https://datahelpdesk.worldbank.org/knowledgebase/articles/889392",
+      "access_type": "NO_KEY",
+      "license_status": "World Bank terms review required before redistribution",
+      "rate_limit": "not explicit for small queries",
+      "format": [
+        "json",
+        "xml"
+      ],
+      "frequency": "annual/monthly varies",
+      "coverage_geo": "global",
+      "coverage_time": "provider specific",
+      "predictive_value": 0.82,
+      "source_quality": 0.84,
+      "expected_r_reduction": 0.6,
+      "risks": [
+        "data revisions",
+        "license attribution review"
+      ],
+      "required_attribution": "World Bank attribution required",
+      "osit_class": "CERTEZA",
+      "integration_gate": "APPROVE",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "source_id": "eurostat_api",
+      "name": "Eurostat Statistics API",
+      "domain": "macroeconomic",
+      "official_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/",
+      "api_docs_url": "https://ec.europa.eu/eurostat/web/user-guides/data-browser/api-data-access/api-introduction",
+      "access_type": "NO_KEY",
+      "license_status": "Eurostat reuse and dataset terms review required",
+      "rate_limit": "public REST service",
+      "format": [
+        "json-stat"
+      ],
+      "frequency": "annual/quarterly/monthly varies",
+      "coverage_geo": "EU and partner geographies",
+      "coverage_time": "latest database no historical versioning",
+      "predictive_value": 0.8,
+      "source_quality": 0.8,
+      "expected_r_reduction": 0.58,
+      "risks": [
+        "no versioned database snapshots",
+        "dataset-specific terms"
+      ],
+      "required_attribution": "Eurostat attribution required",
+      "osit_class": "CERTEZA",
+      "integration_gate": "APPROVE",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "source_id": "oecd_api",
+      "name": "OECD Data Explorer API",
+      "domain": "macroeconomic",
+      "official_url": "https://www.oecd.org/en/data/",
+      "api_docs_url": "https://www.oecd.org/en/data/insights/data-explainers/2024/09/api.html",
+      "access_type": "NO_KEY",
+      "license_status": "OECD terms review required",
+      "rate_limit": "not specified in catalog",
+      "format": [
+        "json",
+        "csv",
+        "sdmx"
+      ],
+      "frequency": "varies",
+      "coverage_geo": "OECD/global depending dataset",
+      "coverage_time": "varies",
+      "predictive_value": 0.78,
+      "source_quality": 0.76,
+      "expected_r_reduction": 0.55,
+      "risks": [
+        "dataset discovery needed",
+        "schema varies"
+      ],
+      "required_attribution": "OECD attribution required",
+      "osit_class": "CERTEZA",
+      "integration_gate": "APPROVE",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "source_id": "imf_api",
+      "name": "IMF Data API/DataMapper",
+      "domain": "macroeconomic",
+      "official_url": "https://data.imf.org/",
+      "api_docs_url": "https://data.imf.org/en/Resource-Pages/IMF-API",
+      "access_type": "NO_KEY",
+      "license_status": "IMF terms review required",
+      "rate_limit": "not specified for basic usage",
+      "format": [
+        "json",
+        "sdmx"
+      ],
+      "frequency": "varies",
+      "coverage_geo": "global",
+      "coverage_time": "varies",
+      "predictive_value": 0.78,
+      "source_quality": 0.75,
+      "expected_r_reduction": 0.55,
+      "risks": [
+        "dataset transition changes",
+        "terms review"
+      ],
+      "required_attribution": "IMF attribution required",
+      "osit_class": "CERTEZA",
+      "integration_gate": "APPROVE",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "source_id": "owid_grapher",
+      "name": "Our World in Data Grapher",
+      "domain": "health_public",
+      "official_url": "https://ourworldindata.org/grapher",
+      "api_docs_url": "https://docs.owid.io/projects/etl/api/",
+      "access_type": "NO_KEY",
+      "license_status": "Review original provider license per dataset",
+      "rate_limit": "not specified",
+      "format": [
+        "csv",
+        "json"
+      ],
+      "frequency": "varies",
+      "coverage_geo": "global",
+      "coverage_time": "varies",
+      "predictive_value": 0.74,
+      "source_quality": 0.68,
+      "expected_r_reduction": 0.5,
+      "risks": [
+        "aggregates third-party datasets",
+        "provider license required"
+      ],
+      "required_attribution": "OWID and original provider attribution required",
+      "osit_class": "INFERENCIA",
+      "integration_gate": "REVIEW_LICENSE",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "source_id": "nasa_power",
+      "name": "NASA POWER API",
+      "domain": "geophysical_weather",
+      "official_url": "https://power.larc.nasa.gov/",
+      "api_docs_url": "https://power.larc.nasa.gov/docs/services/api/",
+      "access_type": "NO_KEY",
+      "license_status": "NASA data policy/attribution review required",
+      "rate_limit": "service limits apply",
+      "format": [
+        "json",
+        "csv"
+      ],
+      "frequency": "hourly/daily/monthly",
+      "coverage_geo": "global",
+      "coverage_time": "historical and near-real-time",
+      "predictive_value": 0.84,
+      "source_quality": 0.8,
+      "expected_r_reduction": 0.62,
+      "risks": [
+        "spatial resolution limitations",
+        "terms review"
+      ],
+      "required_attribution": "NASA POWER attribution required",
+      "osit_class": "CERTEZA",
+      "integration_gate": "APPROVE",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "source_id": "usgs_earthquake",
+      "name": "USGS Earthquake API",
+      "domain": "geophysical_seismic",
+      "official_url": "https://earthquake.usgs.gov/",
+      "api_docs_url": "https://earthquake.usgs.gov/fdsnws/event/1/",
+      "access_type": "NO_KEY",
+      "license_status": "USGS public domain/terms review required",
+      "rate_limit": "service limits apply",
+      "format": [
+        "geojson",
+        "csv",
+        "xml"
+      ],
+      "frequency": "near-real-time",
+      "coverage_geo": "global",
+      "coverage_time": "historical catalog",
+      "predictive_value": 0.7,
+      "source_quality": 0.78,
+      "expected_r_reduction": 0.42,
+      "risks": [
+        "domain-specific signal only",
+        "event completeness varies"
+      ],
+      "required_attribution": "USGS attribution recommended",
+      "osit_class": "CERTEZA",
+      "integration_gate": "APPROVE",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "source_id": "noaa_swpc",
+      "name": "NOAA SWPC Data Services",
+      "domain": "geophysical_space_weather",
+      "official_url": "https://www.swpc.noaa.gov/",
+      "api_docs_url": "https://www.swpc.noaa.gov/products-and-data",
+      "access_type": "NO_KEY",
+      "license_status": "NOAA public data terms review required",
+      "rate_limit": "service limits apply",
+      "format": [
+        "json",
+        "text",
+        "csv"
+      ],
+      "frequency": "near-real-time",
+      "coverage_geo": "global space weather",
+      "coverage_time": "current and archives vary",
+      "predictive_value": 0.72,
+      "source_quality": 0.76,
+      "expected_r_reduction": 0.45,
+      "risks": [
+        "space weather only",
+        "format varies"
+      ],
+      "required_attribution": "NOAA SWPC attribution recommended",
+      "osit_class": "CERTEZA",
+      "integration_gate": "APPROVE",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "source_id": "who_gho",
+      "name": "WHO Global Health Observatory",
+      "domain": "health_public",
+      "official_url": "https://www.who.int/data/gho",
+      "api_docs_url": "https://www.who.int/data/gho/info/gho-odata-api",
+      "access_type": "NO_KEY",
+      "license_status": "WHO terms review required",
+      "rate_limit": "not specified",
+      "format": [
+        "json",
+        "odata"
+      ],
+      "frequency": "annual/varies",
+      "coverage_geo": "global",
+      "coverage_time": "varies",
+      "predictive_value": 0.78,
+      "source_quality": 0.76,
+      "expected_r_reduction": 0.52,
+      "risks": [
+        "health definitions vary",
+        "license review"
+      ],
+      "required_attribution": "WHO attribution required",
+      "osit_class": "CERTEZA",
+      "integration_gate": "APPROVE",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "source_id": "faostat",
+      "name": "FAOSTAT API",
+      "domain": "agriculture",
+      "official_url": "https://www.fao.org/faostat/",
+      "api_docs_url": "https://fenixservices.fao.org/faostat/api/v1/",
+      "access_type": "NO_KEY",
+      "license_status": "FAO terms review required",
+      "rate_limit": "not specified",
+      "format": [
+        "json",
+        "csv"
+      ],
+      "frequency": "annual/varies",
+      "coverage_geo": "global",
+      "coverage_time": "varies",
+      "predictive_value": 0.72,
+      "source_quality": 0.73,
+      "expected_r_reduction": 0.46,
+      "risks": [
+        "domain-specific",
+        "dataset codes required"
+      ],
+      "required_attribution": "FAO attribution required",
+      "osit_class": "CERTEZA",
+      "integration_gate": "APPROVE",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "source_id": "wikidata_sparql",
+      "name": "Wikidata Query Service",
+      "domain": "semantic_graph",
+      "official_url": "https://www.wikidata.org/",
+      "api_docs_url": "https://query.wikidata.org/",
+      "access_type": "NO_KEY",
+      "license_status": "CC0 for Wikidata, service etiquette applies",
+      "rate_limit": "rate limits/service etiquette",
+      "format": [
+        "sparql",
+        "json"
+      ],
+      "frequency": "current graph",
+      "coverage_geo": "global",
+      "coverage_time": "current graph with history elsewhere",
+      "predictive_value": 0.66,
+      "source_quality": 0.72,
+      "expected_r_reduction": 0.4,
+      "risks": [
+        "community-edited data",
+        "truth not guaranteed"
+      ],
+      "required_attribution": "Wikidata/Wikimedia attribution where required",
+      "osit_class": "INFERENCIA",
+      "integration_gate": "APPROVE",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "source_id": "wikimedia_pageviews",
+      "name": "Wikimedia Pageviews API",
+      "domain": "media_events",
+      "official_url": "https://wikimedia.org/api/rest_v1/",
+      "api_docs_url": "https://wikitech.wikimedia.org/wiki/Analytics/AQS/Pageviews",
+      "access_type": "NO_KEY",
+      "license_status": "Wikimedia terms review required",
+      "rate_limit": "service etiquette applies",
+      "format": [
+        "json"
+      ],
+      "frequency": "daily/hourly",
+      "coverage_geo": "global",
+      "coverage_time": "historical pageviews",
+      "predictive_value": 0.64,
+      "source_quality": 0.7,
+      "expected_r_reduction": 0.38,
+      "risks": [
+        "attention signal only",
+        "not social fact"
+      ],
+      "required_attribution": "Wikimedia attribution where required",
+      "osit_class": "INFERENCIA",
+      "integration_gate": "APPROVE",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "source_id": "gdelt_doc",
+      "name": "GDELT DOC 2.0",
+      "domain": "media_events",
+      "official_url": "https://www.gdeltproject.org/",
+      "api_docs_url": "https://blog.gdeltproject.org/gdelt-2-0-our-global-world-in-realtime/",
+      "access_type": "NO_KEY",
+      "license_status": "GDELT terms review required",
+      "rate_limit": "public service limits apply",
+      "format": [
+        "json",
+        "csv"
+      ],
+      "frequency": "15 minutes/daily",
+      "coverage_geo": "global",
+      "coverage_time": "historical and live",
+      "predictive_value": 0.76,
+      "source_quality": 0.7,
+      "expected_r_reduction": 0.5,
+      "risks": [
+        "media signal only",
+        "coverage bias",
+        "tone is not fact"
+      ],
+      "required_attribution": "GDELT attribution recommended",
+      "osit_class": "INFERENCIA",
+      "integration_gate": "APPROVE",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "source_id": "openalex",
+      "name": "OpenAlex API",
+      "domain": "science_open",
+      "official_url": "https://openalex.org/",
+      "api_docs_url": "https://docs.openalex.org/",
+      "access_type": "NO_KEY",
+      "license_status": "OpenAlex license/terms review required",
+      "rate_limit": "polite pool recommended",
+      "format": [
+        "json"
+      ],
+      "frequency": "live index",
+      "coverage_geo": "global research graph",
+      "coverage_time": "current and indexed history",
+      "predictive_value": 0.66,
+      "source_quality": 0.72,
+      "expected_r_reduction": 0.4,
+      "risks": [
+        "bibliographic bias",
+        "not predictive alone"
+      ],
+      "required_attribution": "OpenAlex attribution recommended",
+      "osit_class": "INFERENCIA",
+      "integration_gate": "APPROVE",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "source_id": "natural_earth",
+      "name": "Natural Earth",
+      "domain": "geography",
+      "official_url": "https://www.naturalearthdata.com/",
+      "api_docs_url": "https://www.naturalearthdata.com/downloads/",
+      "access_type": "BULK_DOWNLOAD",
+      "license_status": "Public domain-like terms; review before redistribution",
+      "rate_limit": "download only",
+      "format": [
+        "shapefile",
+        "geojson"
+      ],
+      "frequency": "static releases",
+      "coverage_geo": "global",
+      "coverage_time": "static releases",
+      "predictive_value": 0.5,
+      "source_quality": 0.8,
+      "expected_r_reduction": 0.25,
+      "risks": [
+        "base geography not forecast signal"
+      ],
+      "required_attribution": "Natural Earth attribution recommended",
+      "osit_class": "CERTEZA",
+      "integration_gate": "APPROVE",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "source_id": "osm_overpass",
+      "name": "OpenStreetMap Overpass",
+      "domain": "geography",
+      "official_url": "https://www.openstreetmap.org/",
+      "api_docs_url": "https://wiki.openstreetmap.org/wiki/Overpass_API",
+      "access_type": "NO_KEY",
+      "license_status": "ODbL attribution/share-alike review required",
+      "rate_limit": "public instance limits",
+      "format": [
+        "json",
+        "xml"
+      ],
+      "frequency": "live map",
+      "coverage_geo": "global",
+      "coverage_time": "current map plus diffs",
+      "predictive_value": 0.6,
+      "source_quality": 0.68,
+      "expected_r_reduction": 0.35,
+      "risks": [
+        "community-edited",
+        "rate limits",
+        "ODbL obligations"
+      ],
+      "required_attribution": "OpenStreetMap contributors attribution required",
+      "osit_class": "INFERENCIA",
+      "integration_gate": "REVIEW_LICENSE",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "source_id": "gbif",
+      "name": "GBIF API",
+      "domain": "biodiversity",
+      "official_url": "https://www.gbif.org/",
+      "api_docs_url": "https://techdocs.gbif.org/en/openapi/",
+      "access_type": "NO_KEY",
+      "license_status": "Dataset-specific licenses required",
+      "rate_limit": "service limits apply",
+      "format": [
+        "json"
+      ],
+      "frequency": "varies",
+      "coverage_geo": "global",
+      "coverage_time": "occurrence records",
+      "predictive_value": 0.58,
+      "source_quality": 0.7,
+      "expected_r_reduction": 0.32,
+      "risks": [
+        "dataset-specific licenses",
+        "sampling bias"
+      ],
+      "required_attribution": "GBIF and dataset attribution required",
+      "osit_class": "INFERENCIA",
+      "integration_gate": "REVIEW_LICENSE",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "source_id": "nvd",
+      "name": "NIST NVD API",
+      "domain": "cybersecurity_risk",
+      "official_url": "https://nvd.nist.gov/",
+      "api_docs_url": "https://nvd.nist.gov/developers/vulnerabilities",
+      "access_type": "NO_KEY",
+      "license_status": "NIST NVD terms review; API key improves rate limits",
+      "rate_limit": "lower rate without key",
+      "format": [
+        "json"
+      ],
+      "frequency": "near-real-time",
+      "coverage_geo": "global software vulns",
+      "coverage_time": "historical CVE catalog",
+      "predictive_value": 0.72,
+      "source_quality": 0.74,
+      "expected_r_reduction": 0.45,
+      "risks": [
+        "rate limits",
+        "cyber risk not general social fact"
+      ],
+      "required_attribution": "NVD/NIST attribution recommended",
+      "osit_class": "CERTEZA",
+      "integration_gate": "REVIEW",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "source_id": "cisa_kev",
+      "name": "CISA KEV Catalog",
+      "domain": "cybersecurity_risk",
+      "official_url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+      "api_docs_url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+      "access_type": "BULK_DOWNLOAD",
+      "license_status": "US government public catalog terms review",
+      "rate_limit": "download",
+      "format": [
+        "json",
+        "csv"
+      ],
+      "frequency": "updated as needed",
+      "coverage_geo": "global cyber risk",
+      "coverage_time": "current catalog",
+      "predictive_value": 0.7,
+      "source_quality": 0.78,
+      "expected_r_reduction": 0.44,
+      "risks": [
+        "cyber-specific",
+        "catalog lag"
+      ],
+      "required_attribution": "CISA attribution recommended",
+      "osit_class": "CERTEZA",
+      "integration_gate": "APPROVE",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "source_id": "hdx_hapi",
+      "name": "HDX HAPI",
+      "domain": "humanitarian",
+      "official_url": "https://data.humdata.org/",
+      "api_docs_url": "https://hapi-docs.data-humdata.org/",
+      "access_type": "NO_KEY",
+      "license_status": "Dataset-specific HDX licenses required",
+      "rate_limit": "service limits apply",
+      "format": [
+        "json"
+      ],
+      "frequency": "varies",
+      "coverage_geo": "global humanitarian",
+      "coverage_time": "varies",
+      "predictive_value": 0.68,
+      "source_quality": 0.66,
+      "expected_r_reduction": 0.38,
+      "risks": [
+        "humanitarian sensitivity",
+        "dataset licenses vary"
+      ],
+      "required_attribution": "HDX and provider attribution required",
+      "osit_class": "INFERENCIA",
+      "integration_gate": "REVIEW_LICENSE",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "source_id": "fred_api",
+      "name": "FRED API",
+      "domain": "macroeconomic",
+      "official_url": "https://fred.stlouisfed.org/",
+      "api_docs_url": "https://fred.stlouisfed.org/docs/api/api_key.html",
+      "access_type": "REVIEW_KEY_REQUIRED",
+      "license_status": "API key required; terms prohibit implying endorsement",
+      "rate_limit": "key required",
+      "format": [
+        "json",
+        "xml"
+      ],
+      "frequency": "daily/monthly/quarterly/annual",
+      "coverage_geo": "mostly US plus global series",
+      "coverage_time": "historical economic series",
+      "predictive_value": 0.8,
+      "source_quality": 0.7,
+      "expected_r_reduction": 0.5,
+      "risks": [
+        "requires key",
+        "no token printing",
+        "endorsement restrictions"
+      ],
+      "required_attribution": "FRED/St. Louis Fed attribution and terms required",
+      "osit_class": "INCOGNITA",
+      "integration_gate": "REVIEW_KEY_REQUIRED",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "source_id": "noaa_cdo",
+      "name": "NOAA Climate Data Online",
+      "domain": "geophysical_weather",
+      "official_url": "https://www.ncei.noaa.gov/cdo-web/",
+      "api_docs_url": "https://www.ncei.noaa.gov/cdo-web/webservices/v2",
+      "access_type": "REVIEW_KEY_REQUIRED",
+      "license_status": "Token required; NOAA terms review",
+      "rate_limit": "token required",
+      "format": [
+        "json"
+      ],
+      "frequency": "varies",
+      "coverage_geo": "US/global station datasets",
+      "coverage_time": "historical climate",
+      "predictive_value": 0.78,
+      "source_quality": 0.72,
+      "expected_r_reduction": 0.48,
+      "risks": [
+        "requires token",
+        "station gaps"
+      ],
+      "required_attribution": "NOAA attribution required",
+      "osit_class": "INCOGNITA",
+      "integration_gate": "REVIEW_KEY_REQUIRED",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "source_id": "eia_api",
+      "name": "EIA API",
+      "domain": "energy",
+      "official_url": "https://www.eia.gov/opendata/",
+      "api_docs_url": "https://www.eia.gov/opendata/documentation.php",
+      "access_type": "REVIEW_KEY_REQUIRED",
+      "license_status": "API key/terms review required",
+      "rate_limit": "key required or tier dependent",
+      "format": [
+        "json"
+      ],
+      "frequency": "hourly/daily/monthly",
+      "coverage_geo": "US energy plus some global",
+      "coverage_time": "historical energy",
+      "predictive_value": 0.76,
+      "source_quality": 0.7,
+      "expected_r_reduction": 0.46,
+      "risks": [
+        "requires key",
+        "energy-specific"
+      ],
+      "required_attribution": "EIA attribution required",
+      "osit_class": "INCOGNITA",
+      "integration_gate": "REVIEW_KEY_REQUIRED",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "source_id": "census_api",
+      "name": "US Census API",
+      "domain": "demographic",
+      "official_url": "https://www.census.gov/data/developers.html",
+      "api_docs_url": "https://www.census.gov/data/developers/guidance/api-user-guide.html",
+      "access_type": "REVIEW_KEY_REQUIRED",
+      "license_status": "Key required per current policy; terms review",
+      "rate_limit": "key required",
+      "format": [
+        "json"
+      ],
+      "frequency": "varies",
+      "coverage_geo": "US",
+      "coverage_time": "historical/current surveys",
+      "predictive_value": 0.74,
+      "source_quality": 0.7,
+      "expected_r_reduction": 0.42,
+      "risks": [
+        "requires key",
+        "PII boundary even for aggregate data"
+      ],
+      "required_attribution": "US Census attribution required",
+      "osit_class": "INCOGNITA",
+      "integration_gate": "REVIEW_KEY_REQUIRED",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "source_id": "metaculus_api",
+      "name": "Metaculus API",
+      "domain": "prediction_markets",
+      "official_url": "https://www.metaculus.com/",
+      "api_docs_url": "https://www.metaculus.com/questions/15141/officially-launching-the-metaculus-api/",
+      "access_type": "REVIEW",
+      "license_status": "Forecast platform terms review required",
+      "rate_limit": "platform limits/terms apply",
+      "format": [
+        "json"
+      ],
+      "frequency": "live questions",
+      "coverage_geo": "global topics",
+      "coverage_time": "question-specific",
+      "predictive_value": 0.72,
+      "source_quality": 0.62,
+      "expected_r_reduction": 0.38,
+      "risks": [
+        "epistemic signal only",
+        "not reality",
+        "legal/terms review"
+      ],
+      "required_attribution": "Metaculus attribution required",
+      "osit_class": "INFERENCIA",
+      "integration_gate": "REVIEW_FORECAST_MARKET_SIGNAL",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "source_id": "polymarket_public",
+      "name": "Polymarket public endpoints",
+      "domain": "prediction_markets",
+      "official_url": "https://polymarket.com/",
+      "api_docs_url": "https://docs.polymarket.com/",
+      "access_type": "REVIEW",
+      "license_status": "Legal/regulatory and terms review required",
+      "rate_limit": "platform limits apply",
+      "format": [
+        "json"
+      ],
+      "frequency": "live markets",
+      "coverage_geo": "market-specific",
+      "coverage_time": "market history varies",
+      "predictive_value": 0.7,
+      "source_quality": 0.55,
+      "expected_r_reduction": 0.32,
+      "risks": [
+        "market/legal risk",
+        "not reality",
+        "avoid trading automation"
+      ],
+      "required_attribution": "Polymarket attribution/terms required",
+      "osit_class": "INFERENCIA",
+      "integration_gate": "REVIEW_FORECAST_MARKET_SIGNAL",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "source_id": "manifold_api",
+      "name": "Manifold Markets API",
+      "domain": "prediction_markets",
+      "official_url": "https://manifold.markets/",
+      "api_docs_url": "https://docs.manifold.markets/api",
+      "access_type": "REVIEW",
+      "license_status": "Terms review required",
+      "rate_limit": "platform limits apply",
+      "format": [
+        "json"
+      ],
+      "frequency": "live markets",
+      "coverage_geo": "market-specific",
+      "coverage_time": "market history varies",
+      "predictive_value": 0.64,
+      "source_quality": 0.58,
+      "expected_r_reduction": 0.3,
+      "risks": [
+        "social market bias",
+        "not reality"
+      ],
+      "required_attribution": "Manifold attribution/terms required",
+      "osit_class": "INFERENCIA",
+      "integration_gate": "REVIEW_FORECAST_MARKET_SIGNAL",
+      "publication_gate": "BLOCK"
+    }
+  ],
+  "notes": [
+    "Catalog entries are not permission to publish.",
+    "Key-based sources remain REVIEW_KEY_REQUIRED.",
+    "Prediction-market sources are epistemic signals only."
+  ]
+}

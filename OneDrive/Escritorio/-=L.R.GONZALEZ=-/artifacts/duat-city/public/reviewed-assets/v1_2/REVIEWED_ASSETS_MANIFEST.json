@@ -1,0 +1,9 @@
+{
+  "schema": "duat.reviewed_assets_manifest.v1_2",
+  "generated_at": "2026-05-19T18:39:37.7018416-06:00",
+  "copied_count": 0,
+  "publication_allowed": false,
+  "boundary": "INTERNAL_REVIEW_ONLY",
+  "assets": [],
+  "notes": "No files copied in v1.2 because license_status remains unknown/review."
+}

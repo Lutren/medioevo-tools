@@ -1,0 +1,11 @@
+{
+  "schema_version": "medioevo.bias_profile.v0.1",
+  "profile_id": "bias-agent-001",
+  "cultural_bias": { "local_first": 0.8 },
+  "lineage_bias": { "cautious_family": 0.4 },
+  "trauma_history": [],
+  "role_bias": { "archive": 0.4 },
+  "perceptual_weighting": { "visual": 0.6, "audio": 0.2, "text": 0.2 },
+  "boundary": { "publication_gate": "BLOCK", "contains_private_data": false, "public_safe": true }
+}
+

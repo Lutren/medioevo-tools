@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "duat_remote_run_spec_v0_1.schema.json",
+  "title": "DUAT Remote Run Spec v0.1",
+  "type": "object",
+  "required": [
+    "schema",
+    "provider",
+    "execution_mode",
+    "action_gate",
+    "command",
+    "network_required",
+    "credentials_required",
+    "accelerator",
+    "status",
+    "publication_gate",
+    "external_publication"
+  ],
+  "properties": {
+    "schema": {
+      "const": "duat.remote_run_spec.v0_1"
+    },
+    "provider": {
+      "type": "string",
+      "enum": [
+        "local_cpu",
+        "colab_notebook",
+        "kaggle_kernel",
+        "simscale"
+      ]
+    },
+    "execution_mode": {
+      "type": "string"
+    },
+    "action_gate": {
+      "type": "string",
+      "enum": [
+        "APPROVE_LOCAL",
+        "REVIEW",
+        "BLOCK"
+      ]
+    },
+    "command": {
+      "type": "string"
+    },
+    "network_required": {
+      "type": "boolean"
+    },
+    "credentials_required": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "accelerator": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "reason": {
+      "type": "string"
+    },
+    "outputs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "spec_sha256": {
+      "type": "string",
+      "pattern": "^[A-Fa-f0-9]{64}$"
+    },
+    "publication_gate": {
+      "const": "BLOCK"
+    },
+    "external_publication": {
+      "const": false
+    }
+  },
+  "additionalProperties": false
+}

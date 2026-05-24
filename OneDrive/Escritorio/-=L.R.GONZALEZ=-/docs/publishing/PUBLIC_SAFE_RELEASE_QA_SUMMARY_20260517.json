@@ -1,0 +1,19 @@
+{
+  "schema": "medioevo.public_safe_release_qa_summary.v1",
+  "run_id": "RUN_PUBLIC_SAFE_MEDIOEVO_UPDATE_20260517",
+  "state_fingerprint": "PUBLIC-SAFE-MEDIOEVO-UPDATE-20260517",
+  "packet_created": true,
+  "secret_scan": {
+    "status": "PASS",
+    "findings_count": 0,
+    "values_printed": false
+  },
+  "boundary_scan": {
+    "status": "PASS_PUBLIC_SAFE",
+    "private_path_findings_count": 0,
+    "science_claim_findings_count": 0
+  },
+  "science_claim_gate": "PASS_PUBLIC_SAFE",
+  "pre_publication_status": "READY_FOR_TARGET_REPO_SITE_LINKEDIN_GATES",
+  "publication_gate": "APPROVE_PUBLIC_SAFE_AFTER_QA"
+}

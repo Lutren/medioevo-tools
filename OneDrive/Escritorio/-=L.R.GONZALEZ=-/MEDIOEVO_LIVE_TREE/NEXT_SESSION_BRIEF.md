@@ -1,76 +1,49 @@
-# NEXT_SESSION_BRIEF MEDIOEVO/OSIT LIVE TREE
+# NEXT_SESSION_BRIEF MEDIOEVO/CLAUDIO
 
 ## Estado
-
-R_close: 0.18
-Phi_eff: 0.87
-Regimen: FUNCIONAL
-Autonomy level: 3
+R_close: 0.04
+Phi_eff: 0.95
+Regimen: OPTIMO_CLAUDIO_MISSION_CONTROL_DASHBOARD_v0_1
+Autonomy level: OWNER_ADMIN_DEVELOPER_PUBLIC_SAFE_NO_PAUSE
 
 ## Decisiones tomadas
-
-- Run 6 creo Agent Bridge / A2A local adapter sobre MCP read-only.
-- El bridge vive solo en scripts Node-only bajo `scripts/agents`.
-- A2A es `medioevo-a2a-local`; no hay red publica ni servidor nuevo.
-- MCP se consume por handlers read-only de Run 5.
-- Router bloquea acciones peligrosas y prioriza seguridad sobre publicacion.
-- `/telecom` muestra estado del Agent Bridge sin importar Node-only ni MCP SDK.
+- Mission Control v0.1 queda LOCAL_ONLY_READONLY.
+- `/api/mission-control` agrega estado operativo sin ejecutar ni mutar chat/workpacks/scheduler/runtime.
+- PublicationGate sigue BLOCK; Kimi/Cloud/NVIDIA/DeepSeek no se ejecutaron.
 
 ## Cambios realizados
-
-- Se crearon Agent Cards locales para Codex, Publisher, Canon Auditor, Security Gate, UI y MessageBus Reader.
-- Se crearon schema, registry, envelope local, router, simulator, decision trace, bridge health y MCP adapter.
-- Se agrego `agents:bridge:smoke`.
-- Se agrego `src/messagebus/agentBridge.test.mjs`.
-- Se agrego panel minimo `Agent Bridge / Local A2A Layer`.
-- Se crearon reportes Run 6 y tareas Run 7.
+- Endpoint local `/api/mission-control` agregado en `02_CLAUDIO/server/wabi_local_server.py`.
+- Wabi UI agrega panel `Claudio Mission Control` sin botones de ejecucion en esa seccion.
+- Contrato, schema, estado, snapshot interno, QA summary, hashes y handoff creados en `qa_artifacts/release_validation/RUN_CLAUDIO_MISSION_CONTROL_v0_1_20260518/`.
 
 ## Evidencia
-
-- `npm test -- src/messagebus`: PASSED, 8 test files, 51 tests.
-- `npm test`: PASSED, 9 test files, 62 tests.
-- `npx tsc -b --pretty false`: PASSED.
-- `npm run build`: PASSED.
-- `npm run messagebus:mcp:smoke`: PASSED, `ok=true`.
-- `npm run agents:bridge:smoke`: PASSED, `ok=true`.
-- `python -m compileall -q .`: PASSED en `MEDIOEVO_LIVE_TREE`.
-- `pytest -q`: NOT_APPLICABLE; no hay suite Python en `MEDIOEVO_LIVE_TREE`.
-- `http://127.0.0.1:5174/telecom`: PASSED_LOCAL.
-- `src/ui/TelecomCore.tsx`: contiene `Agent Bridge / Local A2A Layer` y no contiene `scripts/agents`, `scripts/messagebus`, SDK MCP ni Node-only imports.
-- `npm audit --omit=dev --json`: PASSED, 0 prod vulnerabilities.
-- `npm audit --json`: REVIEW, 5 moderate dev vulnerabilities in Vite/Vitest/esbuild chain.
+- Focal server/UI: 223 passed.
+- 02_CLAUDIO full: 733 passed.
+- Wabi full: 309 passed.
+- run-safe-tests: ok=true, witness_event_id=41, witness_verified=true.
+- GEODIA 74 passed; DUAT 117 passed; compileall PASS; HTTP smoke PASS.
+- SecretScan/BoundaryScan/ScienceClaimGate mission surfaces PASS.
 
 ## Pendientes reales
-
-- Crear ActionGate write proposal layer.
-- Crear proposals firmadas para `append_message`, `create_task`, `update_handoff`, `publish_release`.
-- Simular aprobacion/rechazo del operador.
-- Mantener ejecucion automatica bloqueada hasta aprobacion explicita.
-- Consolidar `localStorage` browser hacia JSONL durable si se decide migrar historial.
+- Public-safe docs update sobre Mission Control, si se abre PublicationGate con QA.
+- POST delta falsifier/test.
+- Mission Control v0.2 con alertas/filtros read-only.
+- BrowserBridge read-only visual QA solo si DevTools MCP queda disponible.
 
 ## Riesgos
-
-- Secret scan global mantiene bloqueados push/deploy/publicacion por rutas fuera del carril.
-- ZIP reconstructivo sigue sin validacion profunda.
-- El log JSONL principal contiene solo muestra Run 4 inicial.
-- Agent Bridge no impide manipulacion fisica del archivo; verifica no mutacion durante sus operaciones.
-- `npm audit --json` reporta 5 moderadas dev; aplicar upgrade mayor queda para revision separada.
+- No convertir Mission Control en ejecutor.
+- No exportar chat interno a public-safe.
+- No declarar provider PASS sin evidencia real.
 
 ## Bloqueos
-
-- No delete.
-- No move.
-- No rename.
-- No deploy.
-- No publication.
-- No push.
-- No secret printing.
-- No Supabase ni backend externo.
+- CloudLiveGate BLOCK_THIS_RUN.
+- KimiSendGate BLOCK_THIS_RUN.
+- NvidiaSmokeGate DO_NOT_CALL.
+- DeepSeekGate REVIEW_QUOTA_OR_BILLING.
+- PublicationGate BLOCK.
 
 ## Proxima accion verificable
-
-Crear Run 7 ActionGate write proposal layer con propuestas firmadas en memoria y tests de aprobacion/rechazo, sin ejecutar escrituras reales.
+Crear public-safe docs update sobre la arquitectura Mission Control, o ejecutar POST delta falsifier/test si publicacion sigue bloqueada.
 
 ## Segunda perdida
-
 Los datos persisten. El operador no. Recalibrar desde este brief, no desde memoria implicita.

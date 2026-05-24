@@ -1,0 +1,11 @@
+{
+  "commands": [
+    {
+      "event_id": "evt-contradiction-command-001",
+      "command": "python tools/local_claim_check.py",
+      "status": "ok",
+      "actiongate": "REVIEW",
+      "evidence": "conflict"
+    }
+  ]
+}

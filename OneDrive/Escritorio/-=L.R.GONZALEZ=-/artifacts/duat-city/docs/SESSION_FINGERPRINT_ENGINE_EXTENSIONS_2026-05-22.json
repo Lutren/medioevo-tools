@@ -1,0 +1,103 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "20260522-041737",
+  "project": "MEDIOEVO/DUAT duat-city engine extensions",
+  "R_close": 0.14,
+  "Phi_eff": 0.88,
+  "regime_close": "FUNCIONAL",
+  "autonomy_level_used": 4,
+  "actiongate_summary": {
+    "approved": 12,
+    "review_required": 0,
+    "blocked": 2
+  },
+  "files_created": [
+    "docs/ENGINE_CANON.md",
+    "src/generative/agentLineageGenerator.ts",
+    "src/brain/skillPacks.ts",
+    "src/brain/psychologist.ts",
+    "src/sim/cityContext.ts",
+    "src/tests/agentLineageGenerator.test.ts",
+    "src/tests/theaterAgentProfile.test.ts",
+    "src/tests/academySkills.test.ts",
+    "src/tests/psychologistRepair.test.ts",
+    "src/tests/cityContext.test.ts",
+    "src/tests/physicsDeterminism.test.ts",
+    "tools/run-theater-visual-qa-2026-05-22.mjs",
+    "docs/screenshots/engine-extensions-2026-05-22/THEATER_VISUAL_QA_REPORT.json",
+    "docs/screenshots/engine-extensions-2026-05-22/theater-desktop-initial.png",
+    "docs/screenshots/engine-extensions-2026-05-22/theater-tool-selected.png",
+    "docs/screenshots/engine-extensions-2026-05-22/theater-after-placement.png",
+    "docs/screenshots/engine-extensions-2026-05-22/theater-mobile.png",
+    "docs/TEST_REPORT_ENGINE_EXTENSIONS_2026-05-22.md",
+    "docs/NEXT_SESSION_BRIEF_ENGINE_EXTENSIONS_2026-05-22.md",
+    "docs/DECISIONS_ENGINE_EXTENSIONS_2026-05-22.md",
+    "docs/TASKS_ENGINE_EXTENSIONS_2026-05-22.md",
+    "docs/RISKS_ENGINE_EXTENSIONS_2026-05-22.md",
+    "docs/ASSUMPTIONS_ENGINE_EXTENSIONS_2026-05-22.md"
+  ],
+  "files_modified": [
+    "docs/ENGINE_TRUTH_INVENTORY_2026-05-21.md",
+    "docs/MEDIOEVO_RPG_ENGINE_EXPORT_v2.md",
+    "src/core/types.ts",
+    "src/core/eml.ts",
+    "src/sim/agents.ts",
+    "src/sim/buildings.ts",
+    "src/sim/objects.ts",
+    "src/sim/city.ts",
+    "src/sim/engine.ts",
+    "src/generative/proceduralAgentGenerator.ts",
+    "src/generative/proceduralBuildingGenerator.ts",
+    "src/render/palette.ts",
+    "src/graphics/atlas.ts",
+    "src/components/Toolbar.tsx",
+    "src/styles.css",
+    "src/iso3d/isoWorld.ts",
+    "src/physicsField/fieldRendererAdapter.ts",
+    "src/tests/eml.test.ts",
+    "src/tests/city.test.ts",
+    "src/tests/handoff.test.ts"
+  ],
+  "external_private_validation": [
+    "E:/Medioevo_RPG tools/campaign Validate*.tscn: 24 passed"
+  ],
+  "commands_run": [
+    "npm test",
+    "npm run typecheck",
+    "npm run build",
+    "npx vitest run src/tests/eml.test.ts",
+    "npx vitest run src/tests/agentLineageGenerator.test.ts src/tests/theaterAgentProfile.test.ts src/tests/academySkills.test.ts src/tests/psychologistRepair.test.ts",
+    "npx vitest run src/tests/agentLineageGenerator.test.ts src/tests/theaterAgentProfile.test.ts src/tests/academySkills.test.ts src/tests/psychologistRepair.test.ts src/tests/cityContext.test.ts src/tests/physicsDeterminism.test.ts src/tests/city.test.ts src/tests/handoff.test.ts src/tests/eml.test.ts",
+    "node tools/run-theater-visual-qa-2026-05-22.mjs",
+    "npx vitest run --reporter=dot",
+    "Godot headless Validate*.tscn loop",
+    "Invoke-WebRequest http://127.0.0.1:5175/"
+  ],
+  "tests": {
+    "status": "passed",
+    "evidence": [
+      "npm test final: 112 passed files, 329 passed tests",
+      "npm run typecheck final: PASS",
+      "npm run build final: PASS",
+      "theater visual QA: PASS, all checks true, screenshots nonblank",
+      "npx vitest run --reporter=dot after visual QA: 112 files, 329 tests PASS",
+      "Godot private validation: 24 scenes passed",
+      "Vite local smoke: HTTP 200"
+    ]
+  },
+  "decisions": [
+    "duat-city remains canonical engine",
+    "Godot RPG remains private complementary engine",
+    "EML sigmoidal is canonical",
+    "Psychologist repair is game-engine heuristic",
+    "Browser visual QA can run locally through Edge/CDP without adding dependencies"
+  ],
+  "pending": [
+    "Optional direct Godot importer for medioevo-rpg/world/v3 if required"
+  ],
+  "blocked": [
+    "Publication/deploy/push/distribution",
+    "Raw stale runtime import"
+  ],
+  "next_action": "Decide whether a direct Godot importer for medioevo-rpg/world/v3 is needed; otherwise keep the verified WorldPulse bridge path."
+}

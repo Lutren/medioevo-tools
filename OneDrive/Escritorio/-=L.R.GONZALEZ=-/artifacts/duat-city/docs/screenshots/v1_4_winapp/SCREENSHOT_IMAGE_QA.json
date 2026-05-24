@@ -1,0 +1,80 @@
+{
+  "schema": "duat/screenshot-image-qa/v1.4",
+  "fingerprint": "DUAT-v1.4-WINAPP-FULL-AUTO",
+  "generatedAt": "2026-05-20T12:26:52.1770570Z",
+  "allNonblank": true,
+  "screenshots": [
+    {
+      "file": "agent_life_panel.png",
+      "bytes": 189415,
+      "width": 1366,
+      "height": 900,
+      "sampledDistinctColors": 17,
+      "nonblank": true,
+      "sha256": "C6CFBDD99ED22D28650DF2CE133F4E95BB92DF018CAC13B4CEDBEFB895ED8490"
+    },
+    {
+      "file": "audio_gamefeel_panel.png",
+      "bytes": 140930,
+      "width": 1366,
+      "height": 900,
+      "sampledDistinctColors": 20,
+      "nonblank": true,
+      "sha256": "C672D8B137B2EB34EBDE70E08DB1507CB46FD34126B6231D1ECADE8EBEEA686C"
+    },
+    {
+      "file": "canvas_fallback_operational.png",
+      "bytes": 139419,
+      "width": 1366,
+      "height": 900,
+      "sampledDistinctColors": 18,
+      "nonblank": true,
+      "sha256": "52B0B81862C00C8C2B3F4351522DB5A7313A1A2917C206EAEBDEA8AFE5CDB1B4"
+    },
+    {
+      "file": "iso3d_billboards_preview.png",
+      "bytes": 143766,
+      "width": 1366,
+      "height": 900,
+      "sampledDistinctColors": 16,
+      "nonblank": true,
+      "sha256": "5BFFC4603561B17A9E5E2E07DB3632DF1CC04131FB048BB96A55E6598F279968"
+    },
+    {
+      "file": "iso3d_renderer_panel.png",
+      "bytes": 143822,
+      "width": 1366,
+      "height": 900,
+      "sampledDistinctColors": 18,
+      "nonblank": true,
+      "sha256": "7386BB1264F8894B12070886D41516C2225D1AAFAB0ADE5BC06E61D1098C26B2"
+    },
+    {
+      "file": "osit_formula_lab_panel.png",
+      "bytes": 376730,
+      "width": 1366,
+      "height": 900,
+      "sampledDistinctColors": 23,
+      "nonblank": true,
+      "sha256": "C1A1066BF99CD4D728E1A53CF4DFAB0765AB392C6AE6137B9680EC931CE2808D"
+    },
+    {
+      "file": "q_overlay_debug.png",
+      "bytes": 368412,
+      "width": 1366,
+      "height": 900,
+      "sampledDistinctColors": 23,
+      "nonblank": true,
+      "sha256": "CA9747248B5B2382DBF4A072A959AA83F1BABD4839C521DE0EA6F339A3CD5AE7"
+    },
+    {
+      "file": "vermeer_light_panel.png",
+      "bytes": 307727,
+      "width": 1366,
+      "height": 900,
+      "sampledDistinctColors": 32,
+      "nonblank": true,
+      "sha256": "F16E2190EBF665E4C1210CD20ED5742490F3D70954EEEC87C5FBE6F9662DF17C"
+    }
+  ]
+}

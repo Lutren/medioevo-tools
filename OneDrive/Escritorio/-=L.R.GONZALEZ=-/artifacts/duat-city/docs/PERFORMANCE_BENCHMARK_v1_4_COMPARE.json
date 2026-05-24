@@ -1,0 +1,91 @@
+{
+  "schema": "duat/performance-benchmark/v1.4",
+  "fingerprint": "DUAT-v1.4-OSIT-OBSERVACIONISMO-FULL",
+  "generatedAt": "2026-05-20T11:25:18.177Z",
+  "browserMode": "Edge/CDP/headless-frame-sampler",
+  "focusStatus": "unconfirmed",
+  "headedFpsVerified": false,
+  "scenarios": [
+    {
+      "id": "high_iso3d_operational",
+      "url": "http://127.0.0.1:18519/duat-city/?mode=CITY&view=OPERATIONAL&vibe=neon_rain_street&benchmarkStatic=1&labels=0&cinematic=1",
+      "avgFps": 30.3,
+      "minFps": 4.61,
+      "maxFps": 60.61,
+      "p95FrameMs": 133.4,
+      "droppedFrames": 20,
+      "frames": 152,
+      "focusStatus": "unconfirmed",
+      "appAvgFps": 28.24,
+      "appP95FrameMs": 149.9,
+      "runtimeMode": "static-render-benchmark",
+      "renderCounters": {
+        "agentsRendered": 12,
+        "buildingsRendered": 6,
+        "tilesRendered": 31,
+        "particlesRendered": 39,
+        "activePixelCells": 4,
+        "dirtyChunks": 24,
+        "overlaysEnabled": false,
+        "viewMode": "OPERATIONAL",
+        "cameraZoom": 1.55
+      }
+    },
+    {
+      "id": "beautiful_vermeer_city",
+      "url": "http://127.0.0.1:18519/duat-city/?mode=CITY&view=BEAUTIFUL&vibe=warm_interior_tavern&benchmarkStatic=1&labels=0&cinematic=1",
+      "avgFps": 54.82,
+      "minFps": 19.96,
+      "maxFps": 60.24,
+      "p95FrameMs": 33.3,
+      "droppedFrames": 9,
+      "frames": 275,
+      "focusStatus": "unconfirmed",
+      "appAvgFps": 54.95,
+      "appP95FrameMs": 33.3,
+      "runtimeMode": "static-render-benchmark",
+      "renderCounters": {
+        "agentsRendered": 12,
+        "buildingsRendered": 6,
+        "tilesRendered": 792,
+        "particlesRendered": 15,
+        "activePixelCells": 1,
+        "dirtyChunks": 24,
+        "overlaysEnabled": false,
+        "viewMode": "BEAUTIFUL",
+        "cameraZoom": 2.45
+      }
+    },
+    {
+      "id": "debug_osit_formula_lab",
+      "url": "http://127.0.0.1:18519/duat-city/?mode=OSIT&view=DEBUG&vibe=archeopunk_city_night&benchmarkStatic=1&labels=0",
+      "avgFps": 51.71,
+      "minFps": 14.99,
+      "maxFps": 60.61,
+      "p95FrameMs": 50,
+      "droppedFrames": 20,
+      "frames": 262,
+      "focusStatus": "unconfirmed",
+      "appAvgFps": 50.82,
+      "appP95FrameMs": 50,
+      "runtimeMode": "static-render-benchmark",
+      "renderCounters": {
+        "agentsRendered": 12,
+        "buildingsRendered": 6,
+        "tilesRendered": 1488,
+        "particlesRendered": 36,
+        "activePixelCells": 1,
+        "dirtyChunks": 24,
+        "overlaysEnabled": true,
+        "viewMode": "DEBUG",
+        "cameraZoom": 1.15
+      }
+    }
+  ],
+  "notes": [
+    "Focused/headed benchmark runner timed out earlier in this environment.",
+    "This fallback uses requestAnimationFrame sampling in Edge/CDP headless plus the app internal FPS snapshot.",
+    "Scenarios use benchmarkStatic=1 to isolate render cost from simulation ticks; normal playable mode remains live.",
+    "Manual headed FPS remains the next verification step."
+  ]
+}

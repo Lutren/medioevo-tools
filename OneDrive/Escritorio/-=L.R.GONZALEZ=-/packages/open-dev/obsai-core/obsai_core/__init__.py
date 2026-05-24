@@ -1,5 +1,7 @@
 """Dependency-free Observacionismo/PSI-IA operational core."""
 
+from .claim_gate_contract import CANONICAL_CLAIM_GATES, build_claim_gate_contract
+from .epistemic_engine import OSITEpistemicEngine, classify_text
 from .fingerprint import SessionFingerprint, stable_fingerprint
 from .gate import DEFAULT_GATE_CONFIG, evaluate_action
 from .metrics import Regime, estimate_regime, estimate_residue_from_signals, phi_eff_power
@@ -13,6 +15,7 @@ from .ontology import (
     validate_observation_envelope,
 )
 from .residue import ResidueItem, ResidueTracker
+from .tasks import TaskEvidence, TaskManager, TaskRecord
 from .transduction import (
     CapabilityReceptor,
     RAGCalibrationRouter,
@@ -26,10 +29,15 @@ from .world import simulate_world
 
 __all__ = [
     "DEFAULT_GATE_CONFIG",
+    "CANONICAL_CLAIM_GATES",
+    "OSITEpistemicEngine",
     "Regime",
     "ResidueItem",
     "ResidueTracker",
     "SessionFingerprint",
+    "TaskEvidence",
+    "TaskManager",
+    "TaskRecord",
     "ObservationEnvelope",
     "ObservationEnvelopeStore",
     "OntologyGraph",
@@ -42,6 +50,8 @@ __all__ = [
     "estimate_regime",
     "estimate_residue_from_signals",
     "evaluate_action",
+    "build_claim_gate_contract",
+    "classify_text",
     "classify_dolce_kind",
     "page_rank",
     "phi_eff_power",

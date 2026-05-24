@@ -1,0 +1,228 @@
+{
+  "schema": "duat.domain_calibration_gate.v0_4",
+  "run_id": "DUAT_DOMAIN_CALIBRATION_GATE_v0_4",
+  "generated_at_utc": "2026-05-15T04:46:56Z",
+  "publication_gate": "BLOCK",
+  "action_gate_local": "REVIEW",
+  "source_matrix_run_id": "DUAT_BENCHMARK_MATRIX_v0_4",
+  "source_matrix_report": "research/duat-predictive-registry/reports/duat-benchmark-matrix-v0-4.json",
+  "summary": {
+    "r_reduction_replicated_count": 3,
+    "metrics_improved_count": 0,
+    "metrics_mixed_count": 1,
+    "metrics_worse_count": 2,
+    "blocked_no_data_count": 0
+  },
+  "objectives": [
+    {
+      "objective_id": "DUAT_GEODIA_HARMONIZED_INDICATOR_ONE_STEP_FORECAST_v0_1",
+      "indicator": "economy.real_growth_rate",
+      "domain": "economy",
+      "domain_profile": {
+        "minimum_observations": 5,
+        "preferred_metrics": [
+          "MAE",
+          "RMSE"
+        ],
+        "mape_allowed": "if_positive_nonzero",
+        "claim_threshold": "internal_only"
+      },
+      "data_mode": "real_fixture",
+      "r_before": 0.22888520901307724,
+      "r_after": 0.16431596112341315,
+      "r_delta": -0.06456924788966409,
+      "baseline_metrics": {
+        "MAE": 3.8967183222746695,
+        "RMSE": 4.585415858753202,
+        "MAPE_if_safe": {
+          "value": null,
+          "reason": "actual_contains_negative_values"
+        }
+      },
+      "enhanced_metrics": {
+        "MAE": 3.878444278018328,
+        "RMSE": 5.610771537413714,
+        "MAPE_if_safe": {
+          "value": null,
+          "reason": "actual_contains_negative_values"
+        }
+      },
+      "metric_diagnostics": {
+        "metric_deltas": {
+          "MAE": -0.018274044256341604,
+          "RMSE": 1.025355678660512,
+          "MAPE_if_safe": null
+        },
+        "metric_status": {
+          "MAE": "IMPROVED",
+          "RMSE": "WORSE",
+          "MAPE_if_safe": "SKIPPED"
+        },
+        "metrics_improved": false,
+        "metrics_mixed": true,
+        "metrics_worse": false,
+        "mape_status": "SKIPPED",
+        "epsilon": 1e-09
+      },
+      "metric_diagnostics_summary": "MAE=IMPROVED, RMSE=WORSE, MAPE_if_safe=SKIPPED",
+      "domain_calibration_gate": "REVIEW",
+      "classification": "OPERATIONAL_R_IMPROVED_METRICS_MIXED",
+      "r_improved": true,
+      "metrics_improved": false,
+      "metrics_mixed": true,
+      "metrics_worse": false,
+      "comparability_status": "REVIEW",
+      "license_terms_scan": "REVIEW",
+      "leakage_check": "PASS",
+      "public_claim_allowed": false,
+      "publication_gate": "BLOCK",
+      "reason": "LicenseTermsScan remains REVIEW pending human/legal review. ComparabilityReview is REVIEW. Direct error metrics are mixed.",
+      "recommended_next_action": "Inspect economy metric disagreement and test an alternate baseline or window."
+    },
+    {
+      "objective_id": "DUAT_GEODIA_LABOR_MARKET_UNEMPLOYMENT_ONE_STEP_FORECAST_v0_1",
+      "indicator": "labor_market.unemployment_rate.total",
+      "domain": "labor_market",
+      "domain_profile": {
+        "minimum_observations": 5,
+        "preferred_metrics": [
+          "MAE",
+          "RMSE"
+        ],
+        "mape_allowed": "if_positive_nonzero",
+        "claim_threshold": "internal_only",
+        "caveat": "labor indicators can improve R while worsening direct forecast metrics due to smoothing/lag/proxy mismatch"
+      },
+      "data_mode": "real_fixture",
+      "r_before": 0.22124626865671643,
+      "r_after": 0.1734437934736715,
+      "r_delta": -0.047802475183044923,
+      "baseline_metrics": {
+        "MAE": 0.423388888888889,
+        "RMSE": 0.5068877072663904,
+        "MAPE_if_safe": {
+          "value": 0.13152845158975401,
+          "reason": "PASS"
+        }
+      },
+      "enhanced_metrics": {
+        "MAE": 0.45390189792977714,
+        "RMSE": 0.5559875713415802,
+        "MAPE_if_safe": {
+          "value": 0.14824925009444975,
+          "reason": "PASS"
+        }
+      },
+      "metric_diagnostics": {
+        "metric_deltas": {
+          "MAE": 0.03051300904088816,
+          "RMSE": 0.049099864075189736,
+          "MAPE_if_safe": 0.01672079850469574
+        },
+        "metric_status": {
+          "MAE": "WORSE",
+          "RMSE": "WORSE",
+          "MAPE_if_safe": "WORSE"
+        },
+        "metrics_improved": false,
+        "metrics_mixed": false,
+        "metrics_worse": true,
+        "mape_status": "WORSE",
+        "epsilon": 1e-09
+      },
+      "metric_diagnostics_summary": "MAE=WORSE, RMSE=WORSE, MAPE_if_safe=WORSE",
+      "domain_calibration_gate": "REVIEW",
+      "classification": "OPERATIONAL_R_IMPROVED_METRICS_WORSE",
+      "r_improved": true,
+      "metrics_improved": false,
+      "metrics_mixed": false,
+      "metrics_worse": true,
+      "comparability_status": "REVIEW",
+      "license_terms_scan": "REVIEW",
+      "leakage_check": "PASS",
+      "public_claim_allowed": false,
+      "publication_gate": "BLOCK",
+      "reason": "LicenseTermsScan remains REVIEW pending human/legal review. ComparabilityReview is REVIEW. Operational R improved but direct error metrics worsened.",
+      "recommended_next_action": "Calibrate labor_market model weights; do not treat R_delta as direct accuracy gain."
+    },
+    {
+      "objective_id": "DUAT_GEODIA_DEMOGRAPHY_LIFE_EXPECTANCY_ONE_STEP_FORECAST_v0_1",
+      "indicator": "demography.life_expectancy_at_birth.total",
+      "domain": "demography",
+      "domain_profile": {
+        "minimum_observations": 5,
+        "preferred_metrics": [
+          "MAE",
+          "RMSE"
+        ],
+        "mape_allowed": "if_positive_nonzero",
+        "claim_threshold": "internal_only"
+      },
+      "data_mode": "real_fixture",
+      "r_before": 0.15177272727272717,
+      "r_after": 0.10090843688613735,
+      "r_delta": -0.05086429038658982,
+      "baseline_metrics": {
+        "MAE": 1.1363333333333305,
+        "RMSE": 1.8158352531732236,
+        "MAPE_if_safe": {
+          "value": 0.015265669178183615,
+          "reason": "PASS"
+        }
+      },
+      "enhanced_metrics": {
+        "MAE": 1.4734832134108586,
+        "RMSE": 1.9447531449224402,
+        "MAPE_if_safe": {
+          "value": 0.019954627868863848,
+          "reason": "PASS"
+        }
+      },
+      "metric_diagnostics": {
+        "metric_deltas": {
+          "MAE": 0.3371498800775281,
+          "RMSE": 0.12891789174921664,
+          "MAPE_if_safe": 0.0046889586906802335
+        },
+        "metric_status": {
+          "MAE": "WORSE",
+          "RMSE": "WORSE",
+          "MAPE_if_safe": "WORSE"
+        },
+        "metrics_improved": false,
+        "metrics_mixed": false,
+        "metrics_worse": true,
+        "mape_status": "WORSE",
+        "epsilon": 1e-09
+      },
+      "metric_diagnostics_summary": "MAE=WORSE, RMSE=WORSE, MAPE_if_safe=WORSE",
+      "domain_calibration_gate": "REVIEW",
+      "classification": "OPERATIONAL_R_IMPROVED_METRICS_WORSE",
+      "r_improved": true,
+      "metrics_improved": false,
+      "metrics_mixed": false,
+      "metrics_worse": true,
+      "comparability_status": "REVIEW",
+      "license_terms_scan": "REVIEW",
+      "leakage_check": "PASS",
+      "public_claim_allowed": false,
+      "publication_gate": "BLOCK",
+      "reason": "LicenseTermsScan remains REVIEW pending human/legal review. ComparabilityReview is REVIEW. Operational R improved but direct error metrics worsened.",
+      "recommended_next_action": "Calibrate demography model weights; do not treat R_delta as direct accuracy gain."
+    }
+  ],
+  "interpretation": {
+    "r_delta_status": "replicated_locally_but_domain_limited",
+    "metric_status": "mixed_or_worse_until_calibrated",
+    "claim_level": "internal_technical_evidence_only",
+    "public_claim_allowed": false,
+    "note": "R reduction does not equal predictive validation. Domain calibration separates operational residue from direct forecast error metrics."
+  },
+  "scans": {
+    "LicenseTermsScan": "REVIEW",
+    "LeakageCheck": "PASS",
+    "PublicationGateScan": "PASS",
+    "ComparabilityReview": "REVIEW"
+  },
+  "sha256": "8c9c72155bd10eb1ae417bf91b2c94558973c5f296405d1d16b61a5071586bdf"
+}

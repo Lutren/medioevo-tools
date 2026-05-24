@@ -1,0 +1,41 @@
+import { useGetRecentWitnessEvents, getGetRecentWitnessEventsQueryKey } from "@workspace/api-client-react";
+import { PixelBorder, ModeBadge } from "./custom/PixelComponents";
+
+export default function WitnessPanel() {
+  const { data: events = [] } = useGetRecentWitnessEvents({ n: 20 }, { query: { refetchInterval: 5000, queryKey: getGetRecentWitnessEventsQueryKey({ n: 20 }) } });
+
+  return (
+    <div className="flex flex-col h-full overflow-hidden">
+      <div className="font-display text-xs border-b border-border pb-1 font-bold mb-4 flex justify-between">
+        <span>WITNESSLOG // CADENA DE HASH</span>
+        <span className="text-success animate-pulse">● LIVE</span>
+      </div>
+
+      <div className="text-center font-mono text-[10px] text-success border border-success bg-success/10 p-1 mb-4 shrink-0">
+        CADENA ÍNTEGRA
+      </div>
+
+      <div className="flex-1 overflow-y-auto space-y-2 pr-2">
+        {events.length === 0 ? (
+          <div className="font-mono text-[10px] text-foreground/50 text-center py-4">Esperando eventos...</div>
+        ) : (
+          events.map(ev => (
+            <PixelBorder key={ev.id} className="p-2 space-y-1">
+              <div className="flex justify-between items-center text-[9px] font-mono border-b border-border border-dashed pb-1">
+                <span className="text-primary/70">{new Date(ev.timestamp).toLocaleTimeString()}</span>
+                <span className="text-accent">#{ev.hash.substring(0,8)}...</span>
+              </div>
+              <div className="font-mono text-[10px] text-foreground break-words mt-1">
+                {ev.payload_summary}
+              </div>
+              <div className="flex justify-between items-center pt-1 mt-1">
+                <span className="text-[8px] font-mono text-primary bg-primary/10 px-1 border border-primary/30 uppercase">{ev.event_type}</span>
+                <ModeBadge mode={ev.mode} className="text-[8px] py-0 px-1" />
+              </div>
+            </PixelBorder>
+          ))
+        )}
+      </div>
+    </div>
+  );
+}

@@ -1,0 +1,79 @@
+{
+  "schema_version": "medioevo.editorial.internal_export.v1",
+  "package_id": "FRAGMENTOS_INTERNAL_EXPORT_2026-05-22",
+  "generated_at": "2026-05-21T23:00:04.7191986-06:00",
+  "project": "MEDIOEVO / canon10 / book_03_fragmentos",
+  "title": "MEDIOEVO III - Fragmentos",
+  "author": "Luis Rene Gonzalez",
+  "classification": "BOOKS_EDITORIAL_INTERNAL_FULL_TEXT",
+  "license": "all_rights_reserved",
+  "source_root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\editorial\\canon10_pipeline\\book_03_fragmentos_fragmentos",
+  "target_root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\books\\editorial\\internal_exports\\FRAGMENTOS_INTERNAL_EXPORT_2026-05-22",
+  "publication_gate": "BLOCK",
+  "external_actions_performed": false,
+  "originals_modified": false,
+  "ebook_conversion": {
+    "tool": "Calibre ebook-convert",
+    "input": "16_fragmentos_integrado_0713.html",
+    "output": "MEDIOEVO_III_FRAGMENTOS_INTERNAL_2026-05-22.epub",
+    "toc_note": "Generated locally for internal review only."
+  },
+  "files": [
+    {
+      "file": "00_source_manifest.json",
+      "bytes": 785,
+      "sha256": "3be2e584f3523fb4c3484b31b239105e7ebdc198256c79bd59ce319ff887226c",
+      "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\editorial\\canon10_pipeline\\book_03_fragmentos_fragmentos\\00_source_manifest.json",
+      "source_sha256": "3be2e584f3523fb4c3484b31b239105e7ebdc198256c79bd59ce319ff887226c",
+      "copied_from_source_verified": true
+    },
+    {
+      "file": "14_fragmentos_integrado_0713.md",
+      "bytes": 665086,
+      "sha256": "56d81a80dae5b7c5bf706c4801f1417244fa58e41cf24b238f8630371d7c2b95",
+      "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\editorial\\canon10_pipeline\\book_03_fragmentos_fragmentos\\14_fragmentos_integrado_0713.md",
+      "source_sha256": "56d81a80dae5b7c5bf706c4801f1417244fa58e41cf24b238f8630371d7c2b95",
+      "copied_from_source_verified": true
+    },
+    {
+      "file": "15_fragmentos_integrado_0713_metrics.json",
+      "bytes": 963,
+      "sha256": "fcbb7c1dcd2981963e6d2dd364682451d844e67d0d11790e420ad9773dce33b1",
+      "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\editorial\\canon10_pipeline\\book_03_fragmentos_fragmentos\\15_fragmentos_integrado_0713_metrics.json",
+      "source_sha256": "fcbb7c1dcd2981963e6d2dd364682451d844e67d0d11790e420ad9773dce33b1",
+      "copied_from_source_verified": true
+    },
+    {
+      "file": "16_fragmentos_integrado_0713.html",
+      "bytes": 722670,
+      "sha256": "0e69ffa40874eefb2f05efab4a43230e7930e128f5bd8186dfeed3ff70175893",
+      "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\editorial\\canon10_pipeline\\book_03_fragmentos_fragmentos\\16_fragmentos_integrado_0713.html",
+      "source_sha256": "0e69ffa40874eefb2f05efab4a43230e7930e128f5bd8186dfeed3ff70175893",
+      "copied_from_source_verified": true
+    },
+    {
+      "file": "17_fragmentos_integrado_0713.docx",
+      "bytes": 286584,
+      "sha256": "1e6c86cd4ac2c000294effa0ccfc167f0fad435ee73bb8b20ace49021965df08",
+      "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\editorial\\canon10_pipeline\\book_03_fragmentos_fragmentos\\17_fragmentos_integrado_0713.docx",
+      "source_sha256": "1e6c86cd4ac2c000294effa0ccfc167f0fad435ee73bb8b20ace49021965df08",
+      "copied_from_source_verified": true
+    },
+    {
+      "file": "18_fragmentos_integrado_0713.pdf",
+      "bytes": 965400,
+      "sha256": "c9ae6e2ea5fafdc881d983a9415735546021a59d3d7c5a328fb0a217ef0b5012",
+      "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\editorial\\canon10_pipeline\\book_03_fragmentos_fragmentos\\18_fragmentos_integrado_0713.pdf",
+      "source_sha256": "c9ae6e2ea5fafdc881d983a9415735546021a59d3d7c5a328fb0a217ef0b5012",
+      "copied_from_source_verified": true
+    },
+    {
+      "file": "MEDIOEVO_III_FRAGMENTOS_INTERNAL_2026-05-22.epub",
+      "bytes": 465835,
+      "sha256": "cf4af46ff430d67713c17f2729313368921f96aab4ec458abf0f604f42d5e4e2",
+      "source_path": null,
+      "source_sha256": null,
+      "copied_from_source_verified": false
+    }
+  ]
+}

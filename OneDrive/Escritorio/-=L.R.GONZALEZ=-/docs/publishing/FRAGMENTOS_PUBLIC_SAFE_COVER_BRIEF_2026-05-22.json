@@ -1,0 +1,39 @@
+{
+  "schema_version": "medioevo.cover_brief.v1",
+  "generated_at": "2026-05-22",
+  "publication_gate": "BLOCK",
+  "action_gate": "REVIEW_ASSET_PRODUCTION",
+  "book_id": "03_FRAGMENTOS",
+  "title": "MEDIOEVO: Fragmentos",
+  "cover_text": {
+    "title": "FRAGMENTOS",
+    "series": "MEDIOEVO III",
+    "author": "Luis Rene Gonzalez"
+  },
+  "visual_direction": [
+    "archivo reconstruido",
+    "piezas abstractas sin texto legible",
+    "mapa incompleto",
+    "memoria parcial",
+    "biblioteca silenciosa"
+  ],
+  "allowed": [
+    "fragmentos abstractos de papel",
+    "mapa incompleto",
+    "marcas de archivo",
+    "formas modulares",
+    "paleta negro marfil azul profundo oro viejo"
+  ],
+  "blocked": [
+    "texto real del manuscrito",
+    "diagramas privados",
+    "runtime interno",
+    "assets RPG/TCG",
+    "logos internos",
+    "rutas locales",
+    "claims cientificos o AGI"
+  ],
+  "external_actions_performed": false,
+  "asset_created": false,
+  "next_safe_action": "human_review_or_generate_asset_only_after_asset_gate"
+}

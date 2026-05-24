@@ -1,0 +1,206 @@
+"use strict";
+export function createWorkpackDraftFromCity(state) {
+  const blocked = state.tasks.filter((t) => t.status === "blocked" || t.status === "failed").length;
+  const highR = state.R > 0.45;
+  return {
+    schema: "wabi/duat-city/workpack-draft/v0.5-design",
+    workpack_type: "city",
+    suggested_files: [
+      "artifacts/duat-city/src/sim/engine.ts",
+      "artifacts/duat-city/src/physics/agentPhysicsAdapter.ts",
+      "artifacts/duat-city/src/core/handoff.ts"
+    ],
+    tasks: [
+      highR ? "Review DUAT city R drivers before feature expansion" : "Prepare local deterministic simulation test pass",
+      blocked > 0 ? "Inspect blocked or failed tasks and produce handoff" : "Keep task closure loop active"
+    ],
+    risks: [
+      "DESIGN ONLY: no execution allowed",
+      "No real MCP apply path is enabled",
+      state.gate === "BLOCK" ? "City gate BLOCK: no new features" : "City gate allows prepare-only planning"
+    ],
+    tests_to_run: [
+      "pnpm --filter @workspace/duat-city run test",
+      "pnpm --filter @workspace/duat-city run typecheck",
+      "pnpm --filter @workspace/duat-city run build"
+    ],
+    rollback_plan: [
+      "Do not execute this draft automatically",
+      "Use git diff on artifacts/duat-city before any future apply",
+      "Revert only path-scoped changes owned by the workpack"
+    ],
+    execution_allowed: false,
+    sandbox_execution_allowed: false,
+    real_apply_allowed: false
+  };
+}
+function createTypedDraft(type, state, targetFiles, plannedChanges, review) {
+  return {
+    schema: "wabi/duat-city/workpack-draft/v0.6-design",
+    workpack_type: type,
+    suggested_files: targetFiles,
+    target_files: targetFiles,
+    tasks: plannedChanges,
+    planned_changes: plannedChanges,
+    risks: [
+      "DESIGN ONLY: no execution allowed",
+      "No MCP call, real apply, push, deploy or external API is enabled",
+      state.gate === "BLOCK" ? "City gate BLOCK: reduce scope before implementation" : "Local draft only; owner review still required for copied assets"
+    ],
+    tests_to_run: [
+      "corepack pnpm --filter @workspace/duat-city run test",
+      "corepack pnpm --filter @workspace/duat-city run typecheck",
+      "corepack pnpm --filter @workspace/duat-city run build"
+    ],
+    rollback_plan: [
+      "Keep original source folders untouched",
+      "Remove only path-scoped files listed in target_files if owner rejects the draft",
+      "Regenerate manifests from qa_artifacts run evidence before any future asset copy"
+    ],
+    required_owner_review: review,
+    owner_review_required: review.length > 0,
+    execution_allowed: false,
+    sandbox_execution_allowed: false,
+    real_apply_allowed: false
+  };
+}
+function createTypedDraftV07(type, state, targetFiles, plannedChanges, review) {
+  return {
+    ...createTypedDraft(type, state, targetFiles, plannedChanges, review),
+    schema: "wabi/duat-city/workpack-draft/v0.7-design"
+  };
+}
+export function createAssetWorkpackDraft(state) {
+  return createTypedDraft("asset-forensics", state, [
+    "artifacts/duat-city/public/asset-manifest/visual_assets_manifest_v0_6.json",
+    "artifacts/duat-city/docs/ASSET_BOUNDARY_REPORT_v0_6.md"
+  ], [
+    "Review candidate DUAT ASSETS and medioevo-site isometric/building images",
+    "Approve or reject individual assets by provenance before any copy",
+    "Keep public export sanitized with root tokens instead of absolute private paths"
+  ], [
+    "Unknown asset licenses and private/commercial boundary",
+    "Any move from review to copied asset status"
+  ]);
+}
+export function createGraphicsUpgradeWorkpackDraft(state) {
+  return createTypedDraft("graphics-upgrade", state, [
+    "artifacts/duat-city/src/graphics/isoMath.ts",
+    "artifacts/duat-city/src/graphics/lightEngine.ts",
+    "artifacts/duat-city/src/render/canvasRenderer.ts"
+  ], [
+    "Extend 2.5D tile/building/agent renderers without WebGL",
+    "Tune day/night and local point lights",
+    "Benchmark 100 agents with debug overlays disabled"
+  ], [
+    "Visual acceptance by owner",
+    "Browser screenshot/performance review on target machine"
+  ]);
+}
+export function createPhysicsFieldWorkpackDraft(state) {
+  return createTypedDraft("physics-field", state, [
+    "artifacts/duat-city/src/physicsField/*",
+    "artifacts/duat-city/src/physics/agentPhysicsAdapter.ts"
+  ], [
+    "Tune water/smoke/fire/dust cellular rules",
+    "Feed field hazards into agent movement pressure and events",
+    "Keep field resolution low and active-cell based"
+  ], [
+    "No claims of real physics",
+    "Performance benchmark at larger city sizes"
+  ]);
+}
+export function createRPGExportWorkpackDraft(state) {
+  return createTypedDraft("rpg-export", state, [
+    "artifacts/duat-city/src/rpg/worldExport.ts",
+    "artifacts/duat-city/src/rpg/rpgTypes.ts",
+    "artifacts/duat-city/public/asset-manifest/*.json"
+  ], [
+    "Validate medioevo-rpg/world/v2 schema consumers",
+    "Review faction/NPC schedule output for private lore leakage",
+    "Keep asset refs as manifest references, not copied private files"
+  ], [
+    "Consumer compatibility with v1 exports",
+    "Owner review for lore and asset refs"
+  ]);
+}
+export function createAssetAllowlistWorkpackDraft(state) {
+  return createTypedDraftV07("asset-allowlist", state, [
+    "artifacts/duat-city/docs/ASSET_ALLOWLIST_v0_7.md",
+    "artifacts/duat-city/public/asset-manifest/asset_allowlist_v0_7.json",
+    "artifacts/duat-city/public/reviewed-assets/v0_7/REVIEWED_ASSETS_MANIFEST.json"
+  ], [
+    "Review allowlisted internal DUAT assets and keep copy count under 510",
+    "Verify copied assets have SHA256, provenance, boundary and publication_allowed=false",
+    "Reject REVIEW_REQUIRED or DENY assets from any runtime copy path"
+  ], [
+    "Owner review remains required before public release use",
+    "License/provenance status is internal-review only"
+  ]);
+}
+export function createVisualAtlasIntegrationWorkpackDraft(state) {
+  return createTypedDraftV07("visual-atlas-integration", state, [
+    "artifacts/duat-city/src/graphics/assetManifestLoader.ts",
+    "artifacts/duat-city/src/graphics/spriteResolver.ts",
+    "artifacts/duat-city/src/graphics/atlas.ts",
+    "artifacts/duat-city/src/render/canvasRenderer.ts"
+  ], [
+    "Load reviewed asset manifest when present",
+    "Resolve TileType, BuildingType, AgentRole and UI sprite ids with procedural fallback",
+    "Keep renderer non-crashing when images or manifest are absent"
+  ], [
+    "Visual owner review for final sprite mapping"
+  ]);
+}
+export function createPixelFieldBenchmarkWorkpackDraft(state) {
+  return createTypedDraftV07("pixel-field-benchmark", state, [
+    "artifacts/duat-city/src/bench/visualBenchmark.ts",
+    "artifacts/duat-city/docs/VISUAL_BENCHMARK_v0_7.json",
+    "artifacts/duat-city/docs/PIXEL_FIELD_QA_v0_7.md"
+  ], [
+    "Run local visual benchmark scenarios with pixel field on/off",
+    "Record active cells, skipped cells, R_field intent and graphics/physics metrics",
+    "Keep benchmark as local estimate, not cloud profiling"
+  ], [
+    "Manual browser profiling is still recommended for exact FPS/CPU"
+  ]);
+}
+export function createRPGVisualExportWorkpackDraft(state) {
+  return createTypedDraftV07("rpg-visual-export", state, [
+    "artifacts/duat-city/src/rpg/worldExport.ts",
+    "artifacts/duat-city/src/rpg/rpgTypes.ts",
+    "artifacts/duat-city/public/asset-manifest/asset_allowlist_v0_7.json"
+  ], [
+    "Add visual profile, reviewed asset refs, tile atlas refs and screenshot refs to RPG v2 export",
+    "Keep private source paths out of public manifests",
+    "Validate schema with rpgVisualExport tests"
+  ], [
+    "Consumer compatibility review for MEDIOEVO RPG imports"
+  ]);
+}
+export function createQuaternaryTimingDiagnosticsWorkpackDraft(state) {
+  return {
+    ...createTypedDraft("quaternary-timing-diagnostics", state, [
+      "artifacts/duat-city/src/quaternary/*",
+      "artifacts/duat-city/src/sim/quaternaryAdapter.ts",
+      "artifacts/duat-city/src/components/QuaternaryPanel.tsx",
+      "artifacts/duat-city/docs/QUATERNARY_TIMING_CORE_v0_9.md"
+    ], [
+      "Review quaternary timing metrics and top unstable sources",
+      "Prepare local diagnostics only; no MCP execution or real apply path",
+      "Keep public claims limited to operational formal-lab software"
+    ], [
+      "Owner review required for public claims, assets or external publication"
+    ]),
+    schema: "wabi/duat-city/workpack-draft/v0.9-design",
+    owner_review_required: false,
+    required_owner_review: [
+      "Public claims/assets still require owner review before release"
+    ],
+    execution_allowed: false,
+    sandbox_execution_allowed: false,
+    real_apply_allowed: false
+  };
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndvcmtwYWNrRHJhZnQudHMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHR5cGUgeyBDaXR5U3RhdGUgfSBmcm9tIFwiLi4vY29yZS90eXBlc1wiO1xuaW1wb3J0IHR5cGUgeyBXb3JrcGFja0RyYWZ0IH0gZnJvbSBcIi4vdHlwZXNcIjtcblxuZXhwb3J0IGZ1bmN0aW9uIGNyZWF0ZVdvcmtwYWNrRHJhZnRGcm9tQ2l0eShzdGF0ZTogQ2l0eVN0YXRlKTogV29ya3BhY2tEcmFmdCB7XG4gIGNvbnN0IGJsb2NrZWQgPSBzdGF0ZS50YXNrcy5maWx0ZXIodCA9PiB0LnN0YXR1cyA9PT0gXCJibG9ja2VkXCIgfHwgdC5zdGF0dXMgPT09IFwiZmFpbGVkXCIpLmxlbmd0aDtcbiAgY29uc3QgaGlnaFIgPSBzdGF0ZS5SID4gMC40NTtcbiAgcmV0dXJuIHtcbiAgICBzY2hlbWE6IFwid2FiaS9kdWF0LWNpdHkvd29ya3BhY2stZHJhZnQvdjAuNS1kZXNpZ25cIixcbiAgICB3b3JrcGFja190eXBlOiBcImNpdHlcIixcbiAgICBzdWdnZXN0ZWRfZmlsZXM6IFtcbiAgICAgIFwiYXJ0aWZhY3RzL2R1YXQtY2l0eS9zcmMvc2ltL2VuZ2luZS50c1wiLFxuICAgICAgXCJhcnRpZmFjdHMvZHVhdC1jaXR5L3NyYy9waHlzaWNzL2FnZW50UGh5c2ljc0FkYXB0ZXIudHNcIixcbiAgICAgIFwiYXJ0aWZhY3RzL2R1YXQtY2l0eS9zcmMvY29yZS9oYW5kb2ZmLnRzXCIsXG4gICAgXSxcbiAgICB0YXNrczogW1xuICAgICAgaGlnaFIgPyBcIlJldmlldyBEVUFUIGNpdHkgUiBkcml2ZXJzIGJlZm9yZSBmZWF0dXJlIGV4cGFuc2lvblwiIDogXCJQcmVwYXJlIGxvY2FsIGRldGVybWluaXN0aWMgc2ltdWxhdGlvbiB0ZXN0IHBhc3NcIixcbiAgICAgIGJsb2NrZWQgPiAwID8gXCJJbnNwZWN0IGJsb2NrZWQgb3IgZmFpbGVkIHRhc2tzIGFuZCBwcm9kdWNlIGhhbmRvZmZcIiA6IFwiS2VlcCB0YXNrIGNsb3N1cmUgbG9vcCBhY3RpdmVcIixcbiAgICBdLFxuICAgIHJpc2tzOiBbXG4gICAgICBcIkRFU0lHTiBPTkxZOiBubyBleGVjdXRpb24gYWxsb3dlZFwiLFxuICAgICAgXCJObyByZWFsIE1DUCBhcHBseSBwYXRoIGlzIGVuYWJsZWRcIixcbiAgICAgIHN0YXRlLmdhdGUgPT09IFwiQkxPQ0tcIiA/IFwiQ2l0eSBnYXRlIEJMT0NLOiBubyBuZXcgZmVhdHVyZXNcIiA6IFwiQ2l0eSBnYXRlIGFsbG93cyBwcmVwYXJlLW9ubHkgcGxhbm5pbmdcIixcbiAgICBdLFxuICAgIHRlc3RzX3RvX3J1bjogW1xuICAgICAgXCJwbnBtIC0tZmlsdGVyIEB3b3Jrc3BhY2UvZHVhdC1jaXR5IHJ1biB0ZXN0XCIsXG4gICAgICBcInBucG0gLS1maWx0ZXIgQHdvcmtzcGFjZS9kdWF0LWNpdHkgcnVuIHR5cGVjaGVja1wiLFxuICAgICAgXCJwbnBtIC0tZmlsdGVyIEB3b3Jrc3BhY2UvZHVhdC1jaXR5IHJ1biBidWlsZFwiLFxuICAgIF0sXG4gICAgcm9sbGJhY2tfcGxhbjogW1xuICAgICAgXCJEbyBub3QgZXhlY3V0ZSB0aGlzIGRyYWZ0IGF1dG9tYXRpY2FsbHlcIixcbiAgICAgIFwiVXNlIGdpdCBkaWZmIG9uIGFydGlmYWN0cy9kdWF0LWNpdHkgYmVmb3JlIGFueSBmdXR1cmUgYXBwbHlcIixcbiAgICAgIFwiUmV2ZXJ0IG9ubHkgcGF0aC1zY29wZWQgY2hhbmdlcyBvd25lZCBieSB0aGUgd29ya3BhY2tcIixcbiAgICBdLFxuICAgIGV4ZWN1dGlvbl9hbGxvd2VkOiBmYWxzZSxcbiAgICBzYW5kYm94X2V4ZWN1dGlvbl9hbGxvd2VkOiBmYWxzZSxcbiAgICByZWFsX2FwcGx5X2FsbG93ZWQ6IGZhbHNlLFxuICB9O1xufVxuXG5mdW5jdGlvbiBjcmVhdGVUeXBlZERyYWZ0KHR5cGU6IE5vbk51bGxhYmxlPFdvcmtwYWNrRHJhZnRbXCJ3b3JrcGFja190eXBlXCJdPiwgc3RhdGU6IENpdHlTdGF0ZSwgdGFyZ2V0RmlsZXM6IHN0cmluZ1tdLCBwbGFubmVkQ2hhbmdlczogc3RyaW5nW10sIHJldmlldzogc3RyaW5nW10pOiBXb3JrcGFja0RyYWZ0IHtcbiAgcmV0dXJuIHtcbiAgICBzY2hlbWE6IFwid2FiaS9kdWF0LWNpdHkvd29ya3BhY2stZHJhZnQvdjAuNi1kZXNpZ25cIixcbiAgICB3b3JrcGFja190eXBlOiB0eXBlLFxuICAgIHN1Z2dlc3RlZF9maWxlczogdGFyZ2V0RmlsZXMsXG4gICAgdGFyZ2V0X2ZpbGVzOiB0YXJnZXRGaWxlcyxcbiAgICB0YXNrczogcGxhbm5lZENoYW5nZXMsXG4gICAgcGxhbm5lZF9jaGFuZ2VzOiBwbGFubmVkQ2hhbmdlcyxcbiAgICByaXNrczogW1xuICAgICAgXCJERVNJR04gT05MWTogbm8gZXhlY3V0aW9uIGFsbG93ZWRcIixcbiAgICAgIFwiTm8gTUNQIGNhbGwsIHJlYWwgYXBwbHksIHB1c2gsIGRlcGxveSBvciBleHRlcm5hbCBBUEkgaXMgZW5hYmxlZFwiLFxuICAgICAgc3RhdGUuZ2F0ZSA9PT0gXCJCTE9DS1wiID8gXCJDaXR5IGdhdGUgQkxPQ0s6IHJlZHVjZSBzY29wZSBiZWZvcmUgaW1wbGVtZW50YXRpb25cIiA6IFwiTG9jYWwgZHJhZnQgb25seTsgb3duZXIgcmV2aWV3IHN0aWxsIHJlcXVpcmVkIGZvciBjb3BpZWQgYXNzZXRzXCIsXG4gICAgXSxcbiAgICB0ZXN0c190b19ydW46IFtcbiAgICAgIFwiY29yZXBhY2sgcG5wbSAtLWZpbHRlciBAd29ya3NwYWNlL2R1YXQtY2l0eSBydW4gdGVzdFwiLFxuICAgICAgXCJjb3JlcGFjayBwbnBtIC0tZmlsdGVyIEB3b3Jrc3BhY2UvZHVhdC1jaXR5IHJ1biB0eXBlY2hlY2tcIixcbiAgICAgIFwiY29yZXBhY2sgcG5wbSAtLWZpbHRlciBAd29ya3NwYWNlL2R1YXQtY2l0eSBydW4gYnVpbGRcIixcbiAgICBdLFxuICAgIHJvbGxiYWNrX3BsYW46IFtcbiAgICAgIFwiS2VlcCBvcmlnaW5hbCBzb3VyY2UgZm9sZGVycyB1bnRvdWNoZWRcIixcbiAgICAgIFwiUmVtb3ZlIG9ubHkgcGF0aC1zY29wZWQgZmlsZXMgbGlzdGVkIGluIHRhcmdldF9maWxlcyBpZiBvd25lciByZWplY3RzIHRoZSBkcmFmdFwiLFxuICAgICAgXCJSZWdlbmVyYXRlIG1hbmlmZXN0cyBmcm9tIHFhX2FydGlmYWN0cyBydW4gZXZpZGVuY2UgYmVmb3JlIGFueSBmdXR1cmUgYXNzZXQgY29weVwiLFxuICAgIF0sXG4gICAgcmVxdWlyZWRfb3duZXJfcmV2aWV3OiByZXZpZXcsXG4gICAgb3duZXJfcmV2aWV3X3JlcXVpcmVkOiByZXZpZXcubGVuZ3RoID4gMCxcbiAgICBleGVjdXRpb25fYWxsb3dlZDogZmFsc2UsXG4gICAgc2FuZGJveF9leGVjdXRpb25fYWxsb3dlZDogZmFsc2UsXG4gICAgcmVhbF9hcHBseV9hbGxvd2VkOiBmYWxzZSxcbiAgfTtcbn1cblxuZnVuY3Rpb24gY3JlYXRlVHlwZWREcmFmdFYwNyh0eXBlOiBOb25OdWxsYWJsZTxXb3JrcGFja0RyYWZ0W1wid29ya3BhY2tfdHlwZVwiXT4sIHN0YXRlOiBDaXR5U3RhdGUsIHRhcmdldEZpbGVzOiBzdHJpbmdbXSwgcGxhbm5lZENoYW5nZXM6IHN0cmluZ1tdLCByZXZpZXc6IHN0cmluZ1tdKTogV29ya3BhY2tEcmFmdCB7XG4gIHJldHVybiB7XG4gICAgLi4uY3JlYXRlVHlwZWREcmFmdCh0eXBlLCBzdGF0ZSwgdGFyZ2V0RmlsZXMsIHBsYW5uZWRDaGFuZ2VzLCByZXZpZXcpLFxuICAgIHNjaGVtYTogXCJ3YWJpL2R1YXQtY2l0eS93b3JrcGFjay1kcmFmdC92MC43LWRlc2lnblwiLFxuICB9O1xufVxuXG5leHBvcnQgZnVuY3Rpb24gY3JlYXRlQXNzZXRXb3JrcGFja0RyYWZ0KHN0YXRlOiBDaXR5U3RhdGUpOiBXb3JrcGFja0RyYWZ0IHtcbiAgcmV0dXJuIGNyZWF0ZVR5cGVkRHJhZnQoXCJhc3NldC1mb3JlbnNpY3NcIiwgc3RhdGUsIFtcbiAgICBcImFydGlmYWN0cy9kdWF0LWNpdHkvcHVibGljL2Fzc2V0LW1hbmlmZXN0L3Zpc3VhbF9hc3NldHNfbWFuaWZlc3RfdjBfNi5qc29uXCIsXG4gICAgXCJhcnRpZmFjdHMvZHVhdC1jaXR5L2RvY3MvQVNTRVRfQk9VTkRBUllfUkVQT1JUX3YwXzYubWRcIixcbiAgXSwgW1xuICAgIFwiUmV2aWV3IGNhbmRpZGF0ZSBEVUFUIEFTU0VUUyBhbmQgbWVkaW9ldm8tc2l0ZSBpc29tZXRyaWMvYnVpbGRpbmcgaW1hZ2VzXCIsXG4gICAgXCJBcHByb3ZlIG9yIHJlamVjdCBpbmRpdmlkdWFsIGFzc2V0cyBieSBwcm92ZW5hbmNlIGJlZm9yZSBhbnkgY29weVwiLFxuICAgIFwiS2VlcCBwdWJsaWMgZXhwb3J0IHNhbml0aXplZCB3aXRoIHJvb3QgdG9rZW5zIGluc3RlYWQgb2YgYWJzb2x1dGUgcHJpdmF0ZSBwYXRoc1wiLFxuICBdLCBbXG4gICAgXCJVbmtub3duIGFzc2V0IGxpY2Vuc2VzIGFuZCBwcml2YXRlL2NvbW1lcmNpYWwgYm91bmRhcnlcIixcbiAgICBcIkFueSBtb3ZlIGZyb20gcmV2aWV3IHRvIGNvcGllZCBhc3NldCBzdGF0dXNcIixcbiAgXSk7XG59XG5cbmV4cG9ydCBmdW5jdGlvbiBjcmVhdGVHcmFwaGljc1VwZ3JhZGVXb3JrcGFja0RyYWZ0KHN0YXRlOiBDaXR5U3RhdGUpOiBXb3JrcGFja0RyYWZ0IHtcbiAgcmV0dXJuIGNyZWF0ZVR5cGVkRHJhZnQoXCJncmFwaGljcy11cGdyYWRlXCIsIHN0YXRlLCBbXG4gICAgXCJhcnRpZmFjdHMvZHVhdC1jaXR5L3NyYy9ncmFwaGljcy9pc29NYXRoLnRzXCIsXG4gICAgXCJhcnRpZmFjdHMvZHVhdC1jaXR5L3NyYy9ncmFwaGljcy9saWdodEVuZ2luZS50c1wiLFxuICAgIFwiYXJ0aWZhY3RzL2R1YXQtY2l0eS9zcmMvcmVuZGVyL2NhbnZhc1JlbmRlcmVyLnRzXCIsXG4gIF0sIFtcbiAgICBcIkV4dGVuZCAyLjVEIHRpbGUvYnVpbGRpbmcvYWdlbnQgcmVuZGVyZXJzIHdpdGhvdXQgV2ViR0xcIixcbiAgICBcIlR1bmUgZGF5L25pZ2h0IGFuZCBsb2NhbCBwb2ludCBsaWdodHNcIixcbiAgICBcIkJlbmNobWFyayAxMDAgYWdlbnRzIHdpdGggZGVidWcgb3ZlcmxheXMgZGlzYWJsZWRcIixcbiAgXSwgW1xuICAgIFwiVmlzdWFsIGFjY2VwdGFuY2UgYnkgb3duZXJcIixcbiAgICBcIkJyb3dzZXIgc2NyZWVuc2hvdC9wZXJmb3JtYW5jZSByZXZpZXcgb24gdGFyZ2V0IG1hY2hpbmVcIixcbiAgXSk7XG59XG5cbmV4cG9ydCBmdW5jdGlvbiBjcmVhdGVQaHlzaWNzRmllbGRXb3JrcGFja0RyYWZ0KHN0YXRlOiBDaXR5U3RhdGUpOiBXb3JrcGFja0RyYWZ0IHtcbiAgcmV0dXJuIGNyZWF0ZVR5cGVkRHJhZnQoXCJwaHlzaWNzLWZpZWxkXCIsIHN0YXRlLCBbXG4gICAgXCJhcnRpZmFjdHMvZHVhdC1jaXR5L3NyYy9waHlzaWNzRmllbGQvKlwiLFxuICAgIFwiYXJ0aWZhY3RzL2R1YXQtY2l0eS9zcmMvcGh5c2ljcy9hZ2VudFBoeXNpY3NBZGFwdGVyLnRzXCIsXG4gIF0sIFtcbiAgICBcIlR1bmUgd2F0ZXIvc21va2UvZmlyZS9kdXN0IGNlbGx1bGFyIHJ1bGVzXCIsXG4gICAgXCJGZWVkIGZpZWxkIGhhemFyZHMgaW50byBhZ2VudCBtb3ZlbWVudCBwcmVzc3VyZSBhbmQgZXZlbnRzXCIsXG4gICAgXCJLZWVwIGZpZWxkIHJlc29sdXRpb24gbG93IGFuZCBhY3RpdmUtY2VsbCBiYXNlZFwiLFxuICBdLCBbXG4gICAgXCJObyBjbGFpbXMgb2YgcmVhbCBwaHlzaWNzXCIsXG4gICAgXCJQZXJmb3JtYW5jZSBiZW5jaG1hcmsgYXQgbGFyZ2VyIGNpdHkgc2l6ZXNcIixcbiAgXSk7XG59XG5cbmV4cG9ydCBmdW5jdGlvbiBjcmVhdGVSUEdFeHBvcnRXb3JrcGFja0RyYWZ0KHN0YXRlOiBDaXR5U3RhdGUpOiBXb3JrcGFja0RyYWZ0IHtcbiAgcmV0dXJuIGNyZWF0ZVR5cGVkRHJhZnQoXCJycGctZXhwb3J0XCIsIHN0YXRlLCBbXG4gICAgXCJhcnRpZmFjdHMvZHVhdC1jaXR5L3NyYy9ycGcvd29ybGRFeHBvcnQudHNcIixcbiAgICBcImFydGlmYWN0cy9kdWF0LWNpdHkvc3JjL3JwZy9ycGdUeXBlcy50c1wiLFxuICAgIFwiYXJ0aWZhY3RzL2R1YXQtY2l0eS9wdWJsaWMvYXNzZXQtbWFuaWZlc3QvKi5qc29uXCIsXG4gIF0sIFtcbiAgICBcIlZhbGlkYXRlIG1lZGlvZXZvLXJwZy93b3JsZC92MiBzY2hlbWEgY29uc3VtZXJzXCIsXG4gICAgXCJSZXZpZXcgZmFjdGlvbi9OUEMgc2NoZWR1bGUgb3V0cHV0IGZvciBwcml2YXRlIGxvcmUgbGVha2FnZVwiLFxuICAgIFwiS2VlcCBhc3NldCByZWZzIGFzIG1hbmlmZXN0IHJlZmVyZW5jZXMsIG5vdCBjb3BpZWQgcHJpdmF0ZSBmaWxlc1wiLFxuICBdLCBbXG4gICAgXCJDb25zdW1lciBjb21wYXRpYmlsaXR5IHdpdGggdjEgZXhwb3J0c1wiLFxuICAgIFwiT3duZXIgcmV2aWV3IGZvciBsb3JlIGFuZCBhc3NldCByZWZzXCIsXG4gIF0pO1xufVxuXG5leHBvcnQgZnVuY3Rpb24gY3JlYXRlQXNzZXRBbGxvd2xpc3RXb3JrcGFja0RyYWZ0KHN0YXRlOiBDaXR5U3RhdGUpOiBXb3JrcGFja0RyYWZ0IHtcbiAgcmV0dXJuIGNyZWF0ZVR5cGVkRHJhZnRWMDcoXCJhc3NldC1hbGxvd2xpc3RcIiwgc3RhdGUsIFtcbiAgICBcImFydGlmYWN0cy9kdWF0LWNpdHkvZG9jcy9BU1NFVF9BTExPV0xJU1RfdjBfNy5tZFwiLFxuICAgIFwiYXJ0aWZhY3RzL2R1YXQtY2l0eS9wdWJsaWMvYXNzZXQtbWFuaWZlc3QvYXNzZXRfYWxsb3dsaXN0X3YwXzcuanNvblwiLFxuICAgIFwiYXJ0aWZhY3RzL2R1YXQtY2l0eS9wdWJsaWMvcmV2aWV3ZWQtYXNzZXRzL3YwXzcvUkVWSUVXRURfQVNTRVRTX01BTklGRVNULmpzb25cIixcbiAgXSwgW1xuICAgIFwiUmV2aWV3IGFsbG93bGlzdGVkIGludGVybmFsIERVQVQgYXNzZXRzIGFuZCBrZWVwIGNvcHkgY291bnQgdW5kZXIgNTEwXCIsXG4gICAgXCJWZXJpZnkgY29waWVkIGFzc2V0cyBoYXZlIFNIQTI1NiwgcHJvdmVuYW5jZSwgYm91bmRhcnkgYW5kIHB1YmxpY2F0aW9uX2FsbG93ZWQ9ZmFsc2VcIixcbiAgICBcIlJlamVjdCBSRVZJRVdfUkVRVUlSRUQgb3IgREVOWSBhc3NldHMgZnJvbSBhbnkgcnVudGltZSBjb3B5IHBhdGhcIixcbiAgXSwgW1xuICAgIFwiT3duZXIgcmV2aWV3IHJlbWFpbnMgcmVxdWlyZWQgYmVmb3JlIHB1YmxpYyByZWxlYXNlIHVzZVwiLFxuICAgIFwiTGljZW5zZS9wcm92ZW5hbmNlIHN0YXR1cyBpcyBpbnRlcm5hbC1yZXZpZXcgb25seVwiLFxuICBdKTtcbn1cblxuZXhwb3J0IGZ1bmN0aW9uIGNyZWF0ZVZpc3VhbEF0bGFzSW50ZWdyYXRpb25Xb3JrcGFja0RyYWZ0KHN0YXRlOiBDaXR5U3RhdGUpOiBXb3JrcGFja0RyYWZ0IHtcbiAgcmV0dXJuIGNyZWF0ZVR5cGVkRHJhZnRWMDcoXCJ2aXN1YWwtYXRsYXMtaW50ZWdyYXRpb25cIiwgc3RhdGUsIFtcbiAgICBcImFydGlmYWN0cy9kdWF0LWNpdHkvc3JjL2dyYXBoaWNzL2Fzc2V0TWFuaWZlc3RMb2FkZXIudHNcIixcbiAgICBcImFydGlmYWN0cy9kdWF0LWNpdHkvc3JjL2dyYXBoaWNzL3Nwcml0ZVJlc29sdmVyLnRzXCIsXG4gICAgXCJhcnRpZmFjdHMvZHVhdC1jaXR5L3NyYy9ncmFwaGljcy9hdGxhcy50c1wiLFxuICAgIFwiYXJ0aWZhY3RzL2R1YXQtY2l0eS9zcmMvcmVuZGVyL2NhbnZhc1JlbmRlcmVyLnRzXCIsXG4gIF0sIFtcbiAgICBcIkxvYWQgcmV2aWV3ZWQgYXNzZXQgbWFuaWZlc3Qgd2hlbiBwcmVzZW50XCIsXG4gICAgXCJSZXNvbHZlIFRpbGVUeXBlLCBCdWlsZGluZ1R5cGUsIEFnZW50Um9sZSBhbmQgVUkgc3ByaXRlIGlkcyB3aXRoIHByb2NlZHVyYWwgZmFsbGJhY2tcIixcbiAgICBcIktlZXAgcmVuZGVyZXIgbm9uLWNyYXNoaW5nIHdoZW4gaW1hZ2VzIG9yIG1hbmlmZXN0IGFyZSBhYnNlbnRcIixcbiAgXSwgW1xuICAgIFwiVmlzdWFsIG93bmVyIHJldmlldyBmb3IgZmluYWwgc3ByaXRlIG1hcHBpbmdcIixcbiAgXSk7XG59XG5cbmV4cG9ydCBmdW5jdGlvbiBjcmVhdGVQaXhlbEZpZWxkQmVuY2htYXJrV29ya3BhY2tEcmFmdChzdGF0ZTogQ2l0eVN0YXRlKTogV29ya3BhY2tEcmFmdCB7XG4gIHJldHVybiBjcmVhdGVUeXBlZERyYWZ0VjA3KFwicGl4ZWwtZmllbGQtYmVuY2htYXJrXCIsIHN0YXRlLCBbXG4gICAgXCJhcnRpZmFjdHMvZHVhdC1jaXR5L3NyYy9iZW5jaC92aXN1YWxCZW5jaG1hcmsudHNcIixcbiAgICBcImFydGlmYWN0cy9kdWF0LWNpdHkvZG9jcy9WSVNVQUxfQkVOQ0hNQVJLX3YwXzcuanNvblwiLFxuICAgIFwiYXJ0aWZhY3RzL2R1YXQtY2l0eS9kb2NzL1BJWEVMX0ZJRUxEX1FBX3YwXzcubWRcIixcbiAgXSwgW1xuICAgIFwiUnVuIGxvY2FsIHZpc3VhbCBiZW5jaG1hcmsgc2NlbmFyaW9zIHdpdGggcGl4ZWwgZmllbGQgb24vb2ZmXCIsXG4gICAgXCJSZWNvcmQgYWN0aXZlIGNlbGxzLCBza2lwcGVkIGNlbGxzLCBSX2ZpZWxkIGludGVudCBhbmQgZ3JhcGhpY3MvcGh5c2ljcyBtZXRyaWNzXCIsXG4gICAgXCJLZWVwIGJlbmNobWFyayBhcyBsb2NhbCBlc3RpbWF0ZSwgbm90IGNsb3VkIHByb2ZpbGluZ1wiLFxuICBdLCBbXG4gICAgXCJNYW51YWwgYnJvd3NlciBwcm9maWxpbmcgaXMgc3RpbGwgcmVjb21tZW5kZWQgZm9yIGV4YWN0IEZQUy9DUFVcIixcbiAgXSk7XG59XG5cbmV4cG9ydCBmdW5jdGlvbiBjcmVhdGVSUEdWaXN1YWxFeHBvcnRXb3JrcGFja0RyYWZ0KHN0YXRlOiBDaXR5U3RhdGUpOiBXb3JrcGFja0RyYWZ0IHtcbiAgcmV0dXJuIGNyZWF0ZVR5cGVkRHJhZnRWMDcoXCJycGctdmlzdWFsLWV4cG9ydFwiLCBzdGF0ZSwgW1xuICAgIFwiYXJ0aWZhY3RzL2R1YXQtY2l0eS9zcmMvcnBnL3dvcmxkRXhwb3J0LnRzXCIsXG4gICAgXCJhcnRpZmFjdHMvZHVhdC1jaXR5L3NyYy9ycGcvcnBnVHlwZXMudHNcIixcbiAgICBcImFydGlmYWN0cy9kdWF0LWNpdHkvcHVibGljL2Fzc2V0LW1hbmlmZXN0L2Fzc2V0X2FsbG93bGlzdF92MF83Lmpzb25cIixcbiAgXSwgW1xuICAgIFwiQWRkIHZpc3VhbCBwcm9maWxlLCByZXZpZXdlZCBhc3NldCByZWZzLCB0aWxlIGF0bGFzIHJlZnMgYW5kIHNjcmVlbnNob3QgcmVmcyB0byBSUEcgdjIgZXhwb3J0XCIsXG4gICAgXCJLZWVwIHByaXZhdGUgc291cmNlIHBhdGhzIG91dCBvZiBwdWJsaWMgbWFuaWZlc3RzXCIsXG4gICAgXCJWYWxpZGF0ZSBzY2hlbWEgd2l0aCBycGdWaXN1YWxFeHBvcnQgdGVzdHNcIixcbiAgXSwgW1xuICAgIFwiQ29uc3VtZXIgY29tcGF0aWJpbGl0eSByZXZpZXcgZm9yIE1FRElPRVZPIFJQRyBpbXBvcnRzXCIsXG4gIF0pO1xufVxuXG5leHBvcnQgZnVuY3Rpb24gY3JlYXRlUXVhdGVybmFyeVRpbWluZ0RpYWdub3N0aWNzV29ya3BhY2tEcmFmdChzdGF0ZTogQ2l0eVN0YXRlKTogV29ya3BhY2tEcmFmdCB7XG4gIHJldHVybiB7XG4gICAgLi4uY3JlYXRlVHlwZWREcmFmdChcInF1YXRlcm5hcnktdGltaW5nLWRpYWdub3N0aWNzXCIsIHN0YXRlLCBbXG4gICAgICBcImFydGlmYWN0cy9kdWF0LWNpdHkvc3JjL3F1YXRlcm5hcnkvKlwiLFxuICAgICAgXCJhcnRpZmFjdHMvZHVhdC1jaXR5L3NyYy9zaW0vcXVhdGVybmFyeUFkYXB0ZXIudHNcIixcbiAgICAgIFwiYXJ0aWZhY3RzL2R1YXQtY2l0eS9zcmMvY29tcG9uZW50cy9RdWF0ZXJuYXJ5UGFuZWwudHN4XCIsXG4gICAgICBcImFydGlmYWN0cy9kdWF0LWNpdHkvZG9jcy9RVUFURVJOQVJZX1RJTUlOR19DT1JFX3YwXzkubWRcIixcbiAgICBdLCBbXG4gICAgICBcIlJldmlldyBxdWF0ZXJuYXJ5IHRpbWluZyBtZXRyaWNzIGFuZCB0b3AgdW5zdGFibGUgc291cmNlc1wiLFxuICAgICAgXCJQcmVwYXJlIGxvY2FsIGRpYWdub3N0aWNzIG9ubHk7IG5vIE1DUCBleGVjdXRpb24gb3IgcmVhbCBhcHBseSBwYXRoXCIsXG4gICAgICBcIktlZXAgcHVibGljIGNsYWltcyBsaW1pdGVkIHRvIG9wZXJhdGlvbmFsIGZvcm1hbC1sYWIgc29mdHdhcmVcIixcbiAgICBdLCBbXG4gICAgICBcIk93bmVyIHJldmlldyByZXF1aXJlZCBmb3IgcHVibGljIGNsYWltcywgYXNzZXRzIG9yIGV4dGVybmFsIHB1YmxpY2F0aW9uXCIsXG4gICAgXSksXG4gICAgc2NoZW1hOiBcIndhYmkvZHVhdC1jaXR5L3dvcmtwYWNrLWRyYWZ0L3YwLjktZGVzaWduXCIsXG4gICAgb3duZXJfcmV2aWV3X3JlcXVpcmVkOiBmYWxzZSxcbiAgICByZXF1aXJlZF9vd25lcl9yZXZpZXc6IFtcbiAgICAgIFwiUHVibGljIGNsYWltcy9hc3NldHMgc3RpbGwgcmVxdWlyZSBvd25lciByZXZpZXcgYmVmb3JlIHJlbGVhc2VcIixcbiAgICBdLFxuICAgIGV4ZWN1dGlvbl9hbGxvd2VkOiBmYWxzZSxcbiAgICBzYW5kYm94X2V4ZWN1dGlvbl9hbGxvd2VkOiBmYWxzZSxcbiAgICByZWFsX2FwcGx5X2FsbG93ZWQ6IGZhbHNlLFxuICB9O1xufVxuIl0sIm1hcHBpbmdzIjoiO0FBR08sZ0JBQVMsNEJBQTRCLE9BQWlDO0FBQzNFLFFBQU0sVUFBVSxNQUFNLE1BQU0sT0FBTyxPQUFLLEVBQUUsV0FBVyxhQUFhLEVBQUUs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

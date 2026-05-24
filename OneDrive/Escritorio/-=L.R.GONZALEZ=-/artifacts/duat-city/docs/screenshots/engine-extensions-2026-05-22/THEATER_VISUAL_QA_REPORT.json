@@ -1,0 +1,1302 @@
+{
+  "schema": "duat.theater-visual-qa.v1",
+  "generatedAt": "2026-05-22T15:19:06.246Z",
+  "browserMode": "Edge/CDP/headless",
+  "baseUrl": "http://127.0.0.1:5175/",
+  "desktopUrl": "http://127.0.0.1:5175/?mode=CITY&view=OPERATIONAL&labels=1",
+  "checks": {
+    "theaterButtonVisible": true,
+    "theaterButtonNoTextOverflow": true,
+    "desktopCanvasVisible": true,
+    "theaterToolSelected": true,
+    "placementIncreasedBuildingCount": true,
+    "rightPanelMentionsTheater": true,
+    "mobileTheaterButtonPresent": true,
+    "mobileCanvasVisible": true,
+    "mobileToolGridNoTextOverflow": true,
+    "noConsoleErrors": true,
+    "screenshotsNonblank": true,
+    "ok": true
+  },
+  "states": {
+    "initial": {
+      "href": "http://127.0.0.1:5175/?mode=CITY&view=OPERATIONAL&labels=1",
+      "title": "DUAT Agent City",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "rootVisible": true,
+      "canvas": {
+        "x": 180,
+        "y": 36,
+        "width": 926,
+        "height": 744,
+        "visible": true
+      },
+      "theaterButton": {
+        "text": "THR Theater",
+        "active": false,
+        "overflow": false,
+        "scrollWidth": 70,
+        "clientWidth": 70,
+        "scrollHeight": 21,
+        "clientHeight": 21,
+        "rect": {
+          "x": 89,
+          "y": 303,
+          "width": 72,
+          "height": 23,
+          "visible": true
+        }
+      },
+      "toolButtons": [
+        {
+          "text": "✦ Select",
+          "active": true,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 14,
+            "y": 199,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "Road",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 89,
+            "y": 199,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "🏠 Res",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 14,
+            "y": 225,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "⚙️ Work",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 89,
+            "y": 225,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "📚 Archive",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 14,
+            "y": 251,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "🔭 Obs",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 89,
+            "y": 251,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "🏪 Market",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 14,
+            "y": 277,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "⚕️ Clinic",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 89,
+            "y": 277,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "🎓 Acad",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 14,
+            "y": 303,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "THR Theater",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 89,
+            "y": 303,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "🌿 Garden",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 14,
+            "y": 329,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "⬜ Plaza",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 89,
+            "y": 329,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "🏚️ Ruin",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 14,
+            "y": 355,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "~ Water",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 89,
+            "y": 355,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "^ Forest",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 14,
+            "y": 381,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "[] Wall",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 89,
+            "y": 381,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "✕ Erase",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 14,
+            "y": 407,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        }
+      ],
+      "buildingCount": 9,
+      "rightPanelMentionsTheater": true,
+      "bodyOverflowX": false,
+      "bodyTextSample": "◈ DUAT Agent City\n|\nTICK\n2\n|\nR\n0.014\nΦ_EFF\n1.000\n|\nREGIME\nOPTIMO\nGATE\nAPPROVE\n|\nAGENTS\n13\nBLDGS\n9\n🏙️ City Builder\n🤖 Agent Life\n⚔️ RPG Builder\n📊 OSIT / DUAT\nBUILD TOOL\n✦ Select\nRoad\n🏠 Res\n⚙️ Work\n📚 Archive\n🔭 Obs\n🏪 Market\n⚕️ Clinic\n🎓 Acad\nTHR Theater\n🌿 Garden\n⬜ Plaza\n🏚️ Ruin\n~ Water\n^ Forest\n[] Wall\n✕ Erase\nGAME OS DIRECTOR\nDUAT Interface\nHormiguero\nAgent Sims\nCity President\nEra Progression\nVS Arena\nRPG\nMetroidvania\nZoom\n1.00\nObserver\nfalse\nLANGUAGE CORTEX\nR_lang\n0.000\nPhi_lang\n1.000\n\nCERTEZA: Observer-0vuz reports from Observer: Idle research (Observer-0vuz). Memory is locally empty.\n\nOSIT FORMULA LAB\nGate\nREVIEW\nR_formula\n0.189\nPhi_formula\n0.842\nOperators\n10\nShannon\nNUMERIC APPROXIMATION\nBoltzmann\nOPERATIONAL METAPHOR\nMaxwell\nFORMAL LAB ONLY\nNavier-Stokes\nNUMERIC APPROXIMATION\nFormal-lab mappings only. ScienceClaimGate blocks exact/public physics claims.\nBRAIN RUNTIME\nExec\nfals"
+    },
+    "selected": {
+      "href": "http://127.0.0.1:5175/?mode=CITY&view=OPERATIONAL&labels=1",
+      "title": "DUAT Agent City",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "rootVisible": true,
+      "canvas": {
+        "x": 180,
+        "y": 36,
+        "width": 926,
+        "height": 744,
+        "visible": true
+      },
+      "theaterButton": {
+        "text": "THR Theater",
+        "active": true,
+        "overflow": false,
+        "scrollWidth": 70,
+        "clientWidth": 70,
+        "scrollHeight": 21,
+        "clientHeight": 21,
+        "rect": {
+          "x": 89,
+          "y": 303,
+          "width": 72,
+          "height": 23,
+          "visible": true
+        }
+      },
+      "toolButtons": [
+        {
+          "text": "✦ Select",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 14,
+            "y": 199,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "Road",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 89,
+            "y": 199,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "🏠 Res",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 14,
+            "y": 225,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "⚙️ Work",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 89,
+            "y": 225,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "📚 Archive",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 14,
+            "y": 251,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "🔭 Obs",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 89,
+            "y": 251,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "🏪 Market",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 14,
+            "y": 277,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "⚕️ Clinic",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 89,
+            "y": 277,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "🎓 Acad",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 14,
+            "y": 303,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "THR Theater",
+          "active": true,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 89,
+            "y": 303,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "🌿 Garden",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 14,
+            "y": 329,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "⬜ Plaza",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 89,
+            "y": 329,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "🏚️ Ruin",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 14,
+            "y": 355,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "~ Water",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 89,
+            "y": 355,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "^ Forest",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 14,
+            "y": 381,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "[] Wall",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 89,
+            "y": 381,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "✕ Erase",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 14,
+            "y": 407,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        }
+      ],
+      "buildingCount": 9,
+      "rightPanelMentionsTheater": true,
+      "bodyOverflowX": false,
+      "bodyTextSample": "◈ DUAT Agent City\n|\nTICK\n12\n|\nR\n0.009\nΦ_EFF\n1.000\n|\nREGIME\nOPTIMO\nGATE\nAPPROVE\n|\nAGENTS\n13\nBLDGS\n9\n🏙️ City Builder\n🤖 Agent Life\n⚔️ RPG Builder\n📊 OSIT / DUAT\nBUILD TOOL\n✦ Select\nRoad\n🏠 Res\n⚙️ Work\n📚 Archive\n🔭 Obs\n🏪 Market\n⚕️ Clinic\n🎓 Acad\nTHR Theater\n🌿 Garden\n⬜ Plaza\n🏚️ Ruin\n~ Water\n^ Forest\n[] Wall\n✕ Erase\nGAME OS DIRECTOR\nDUAT Interface\nHormiguero\nAgent Sims\nCity President\nEra Progression\nVS Arena\nRPG\nMetroidvania\nZoom\n1.00\nObserver\nfalse\nLANGUAGE CORTEX\nR_lang\n0.000\nPhi_lang\n1.000\n\nCERTEZA: Observer-0vuz reports from Observer: Idle research (Observer-0vuz). Memory is locally empty.\n\nOSIT FORMULA LAB\nGate\nREVIEW\nR_formula\n0.188\nPhi_formula\n0.842\nOperators\n10\nShannon\nNUMERIC APPROXIMATION\nBoltzmann\nOPERATIONAL METAPHOR\nMaxwell\nFORMAL LAB ONLY\nNavier-Stokes\nNUMERIC APPROXIMATION\nFormal-lab mappings only. ScienceClaimGate blocks exact/public physics claims.\nBRAIN RUNTIME\nExec\nfal"
+    },
+    "placed": {
+      "href": "http://127.0.0.1:5175/?mode=CITY&view=OPERATIONAL&labels=1",
+      "title": "DUAT Agent City",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "rootVisible": true,
+      "canvas": {
+        "x": 180,
+        "y": 36,
+        "width": 926,
+        "height": 744,
+        "visible": true
+      },
+      "theaterButton": {
+        "text": "THR Theater",
+        "active": true,
+        "overflow": false,
+        "scrollWidth": 70,
+        "clientWidth": 70,
+        "scrollHeight": 21,
+        "clientHeight": 21,
+        "rect": {
+          "x": 89,
+          "y": 303,
+          "width": 72,
+          "height": 23,
+          "visible": true
+        }
+      },
+      "toolButtons": [
+        {
+          "text": "✦ Select",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 14,
+            "y": 199,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "Road",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 89,
+            "y": 199,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "🏠 Res",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 14,
+            "y": 225,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "⚙️ Work",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 89,
+            "y": 225,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "📚 Archive",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 14,
+            "y": 251,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "🔭 Obs",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 89,
+            "y": 251,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "🏪 Market",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 14,
+            "y": 277,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "⚕️ Clinic",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 89,
+            "y": 277,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "🎓 Acad",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 14,
+            "y": 303,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "THR Theater",
+          "active": true,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 89,
+            "y": 303,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "🌿 Garden",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 14,
+            "y": 329,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "⬜ Plaza",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 89,
+            "y": 329,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "🏚️ Ruin",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 14,
+            "y": 355,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "~ Water",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 89,
+            "y": 355,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "^ Forest",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 14,
+            "y": 381,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "[] Wall",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 89,
+            "y": 381,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        },
+        {
+          "text": "✕ Erase",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 70,
+          "clientWidth": 70,
+          "scrollHeight": 21,
+          "clientHeight": 21,
+          "rect": {
+            "x": 14,
+            "y": 407,
+            "width": 72,
+            "height": 23,
+            "visible": true
+          }
+        }
+      ],
+      "buildingCount": 10,
+      "rightPanelMentionsTheater": true,
+      "bodyOverflowX": false,
+      "bodyTextSample": "◈ DUAT Agent City\n|\nTICK\n17\n|\nR\n0.009\nΦ_EFF\n1.000\n|\nREGIME\nOPTIMO\nGATE\nAPPROVE\n|\nAGENTS\n13\nBLDGS\n10\n🏙️ City Builder\n🤖 Agent Life\n⚔️ RPG Builder\n📊 OSIT / DUAT\nBUILD TOOL\n✦ Select\nRoad\n🏠 Res\n⚙️ Work\n📚 Archive\n🔭 Obs\n🏪 Market\n⚕️ Clinic\n🎓 Acad\nTHR Theater\n🌿 Garden\n⬜ Plaza\n🏚️ Ruin\n~ Water\n^ Forest\n[] Wall\n✕ Erase\nGAME OS DIRECTOR\nDUAT Interface\nHormiguero\nAgent Sims\nCity President\nEra Progression\nVS Arena\nRPG\nMetroidvania\nZoom\n1.00\nObserver\nfalse\nLANGUAGE CORTEX\nR_lang\n0.000\nPhi_lang\n1.000\n\nCERTEZA: Observer-0vuz reports from Observer: Idle research (Observer-0vuz). Memory is locally empty.\n\nOSIT FORMULA LAB\nGate\nREVIEW\nR_formula\n0.188\nPhi_formula\n0.842\nOperators\n10\nShannon\nNUMERIC APPROXIMATION\nBoltzmann\nOPERATIONAL METAPHOR\nMaxwell\nFORMAL LAB ONLY\nNavier-Stokes\nNUMERIC APPROXIMATION\nFormal-lab mappings only. ScienceClaimGate blocks exact/public physics claims.\nBRAIN RUNTIME\nExec\nfa"
+    },
+    "mobile": {
+      "href": "http://127.0.0.1:5175/?mode=CITY&view=OPERATIONAL&labels=1",
+      "title": "DUAT Agent City",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "rootVisible": true,
+      "canvas": {
+        "x": 0,
+        "y": 390.46875,
+        "width": 386,
+        "height": 405.109375,
+        "visible": true
+      },
+      "theaterButton": {
+        "text": "THR Theater",
+        "active": false,
+        "overflow": false,
+        "scrollWidth": 114,
+        "clientWidth": 114,
+        "scrollHeight": 24,
+        "clientHeight": 24,
+        "rect": {
+          "x": 14,
+          "y": 286,
+          "width": 116,
+          "height": 26,
+          "visible": true
+        }
+      },
+      "toolButtons": [
+        {
+          "text": "✦ Select",
+          "active": true,
+          "overflow": false,
+          "scrollWidth": 114,
+          "clientWidth": 114,
+          "scrollHeight": 24,
+          "clientHeight": 24,
+          "rect": {
+            "x": 14,
+            "y": 199,
+            "width": 116,
+            "height": 26,
+            "visible": true
+          }
+        },
+        {
+          "text": "Road",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 114,
+          "clientWidth": 114,
+          "scrollHeight": 24,
+          "clientHeight": 24,
+          "rect": {
+            "x": 133,
+            "y": 199,
+            "width": 116,
+            "height": 26,
+            "visible": true
+          }
+        },
+        {
+          "text": "🏠 Res",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 114,
+          "clientWidth": 114,
+          "scrollHeight": 24,
+          "clientHeight": 24,
+          "rect": {
+            "x": 252,
+            "y": 199,
+            "width": 116,
+            "height": 26,
+            "visible": true
+          }
+        },
+        {
+          "text": "⚙️ Work",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 114,
+          "clientWidth": 114,
+          "scrollHeight": 24,
+          "clientHeight": 24,
+          "rect": {
+            "x": 14,
+            "y": 228,
+            "width": 116,
+            "height": 26,
+            "visible": true
+          }
+        },
+        {
+          "text": "📚 Archive",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 114,
+          "clientWidth": 114,
+          "scrollHeight": 24,
+          "clientHeight": 24,
+          "rect": {
+            "x": 133,
+            "y": 228,
+            "width": 116,
+            "height": 26,
+            "visible": true
+          }
+        },
+        {
+          "text": "🔭 Obs",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 114,
+          "clientWidth": 114,
+          "scrollHeight": 24,
+          "clientHeight": 24,
+          "rect": {
+            "x": 252,
+            "y": 228,
+            "width": 116,
+            "height": 26,
+            "visible": true
+          }
+        },
+        {
+          "text": "🏪 Market",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 114,
+          "clientWidth": 114,
+          "scrollHeight": 24,
+          "clientHeight": 24,
+          "rect": {
+            "x": 14,
+            "y": 257,
+            "width": 116,
+            "height": 26,
+            "visible": true
+          }
+        },
+        {
+          "text": "⚕️ Clinic",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 114,
+          "clientWidth": 114,
+          "scrollHeight": 24,
+          "clientHeight": 24,
+          "rect": {
+            "x": 133,
+            "y": 257,
+            "width": 116,
+            "height": 26,
+            "visible": true
+          }
+        },
+        {
+          "text": "🎓 Acad",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 114,
+          "clientWidth": 114,
+          "scrollHeight": 24,
+          "clientHeight": 24,
+          "rect": {
+            "x": 252,
+            "y": 257,
+            "width": 116,
+            "height": 26,
+            "visible": true
+          }
+        },
+        {
+          "text": "THR Theater",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 114,
+          "clientWidth": 114,
+          "scrollHeight": 24,
+          "clientHeight": 24,
+          "rect": {
+            "x": 14,
+            "y": 286,
+            "width": 116,
+            "height": 26,
+            "visible": true
+          }
+        },
+        {
+          "text": "🌿 Garden",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 114,
+          "clientWidth": 114,
+          "scrollHeight": 24,
+          "clientHeight": 24,
+          "rect": {
+            "x": 133,
+            "y": 286,
+            "width": 116,
+            "height": 26,
+            "visible": true
+          }
+        },
+        {
+          "text": "⬜ Plaza",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 114,
+          "clientWidth": 114,
+          "scrollHeight": 24,
+          "clientHeight": 24,
+          "rect": {
+            "x": 252,
+            "y": 286,
+            "width": 116,
+            "height": 26,
+            "visible": true
+          }
+        },
+        {
+          "text": "🏚️ Ruin",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 114,
+          "clientWidth": 114,
+          "scrollHeight": 24,
+          "clientHeight": 24,
+          "rect": {
+            "x": 14,
+            "y": 315,
+            "width": 116,
+            "height": 26,
+            "visible": true
+          }
+        },
+        {
+          "text": "~ Water",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 114,
+          "clientWidth": 114,
+          "scrollHeight": 24,
+          "clientHeight": 24,
+          "rect": {
+            "x": 133,
+            "y": 315,
+            "width": 116,
+            "height": 26,
+            "visible": true
+          }
+        },
+        {
+          "text": "^ Forest",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 114,
+          "clientWidth": 114,
+          "scrollHeight": 24,
+          "clientHeight": 24,
+          "rect": {
+            "x": 252,
+            "y": 315,
+            "width": 116,
+            "height": 26,
+            "visible": true
+          }
+        },
+        {
+          "text": "[] Wall",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 114,
+          "clientWidth": 114,
+          "scrollHeight": 24,
+          "clientHeight": 24,
+          "rect": {
+            "x": 14,
+            "y": 344,
+            "width": 116,
+            "height": 26,
+            "visible": true
+          }
+        },
+        {
+          "text": "✕ Erase",
+          "active": false,
+          "overflow": false,
+          "scrollWidth": 114,
+          "clientWidth": 114,
+          "scrollHeight": 24,
+          "clientHeight": 24,
+          "rect": {
+            "x": 133,
+            "y": 344,
+            "width": 116,
+            "height": 26,
+            "visible": true
+          }
+        }
+      ],
+      "buildingCount": 9,
+      "rightPanelMentionsTheater": true,
+      "bodyOverflowX": false,
+      "bodyTextSample": "◈ DUAT Agent City\n|\nTICK\n2\n|\nR\n0.014\nΦ_EFF\n1.000\n|\nREGIME\nOPTIMO\nGATE\nAPPROVE\n|\nAGENTS\n13\nBLDGS\n9\n🏙️ City Builder\n🤖 Agent Life\n⚔️ RPG Builder\n📊 OSIT / DUAT\nBUILD TOOL\n✦ Select\nRoad\n🏠 Res\n⚙️ Work\n📚 Archive\n🔭 Obs\n🏪 Market\n⚕️ Clinic\n🎓 Acad\nTHR Theater\n🌿 Garden\n⬜ Plaza\n🏚️ Ruin\n~ Water\n^ Forest\n[] Wall\n✕ Erase\nGAME OS DIRECTOR\nDUAT Interface\nHormiguero\nAgent Sims\nCity President\nEra Progression\nVS Arena\nRPG\nMetroidvania\nZoom\n1.00\nObserver\nfalse\nLANGUAGE CORTEX\nR_lang\n0.000\nPhi_lang\n1.000\n\nCERTEZA: Observer-0vuz reports from Observer: Idle research (Observer-0vuz). Memory is locally empty.\n\nOSIT FORMULA LAB\nGate\nREVIEW\nR_formula\n0.189\nPhi_formula\n0.842\nOperators\n10\nShannon\nNUMERIC APPROXIMATION\nBoltzmann\nOPERATIONAL METAPHOR\nMaxwell\nFORMAL LAB ONLY\nNavier-Stokes\nNUMERIC APPROXIMATION\nFormal-lab mappings only. ScienceClaimGate blocks exact/public physics claims.\nBRAIN RUNTIME\nExec\nfals"
+    }
+  },
+  "placementAttempts": [
+    {
+      "fx": 0.72,
+      "fy": 0.72,
+      "x": 847,
+      "y": 572,
+      "buildingCount": 10
+    }
+  ],
+  "screenshots": [
+    {
+      "name": "theater-desktop-initial.png",
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\artifacts\\duat-city\\docs\\screenshots\\engine-extensions-2026-05-22\\theater-desktop-initial.png",
+      "bytes": 119622,
+      "sha256": "D15C5166CD0AAB5D36D12BD29D2105C50F538BA31E5B2ABC5FC5F03F9AF0D834",
+      "nonblank": true
+    },
+    {
+      "name": "theater-tool-selected.png",
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\artifacts\\duat-city\\docs\\screenshots\\engine-extensions-2026-05-22\\theater-tool-selected.png",
+      "bytes": 121725,
+      "sha256": "910779F0605A0368A70988E01F271D989A4E2EAFC5F8730180FD0430BA1ECDF4",
+      "nonblank": true
+    },
+    {
+      "name": "theater-after-placement.png",
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\artifacts\\duat-city\\docs\\screenshots\\engine-extensions-2026-05-22\\theater-after-placement.png",
+      "bytes": 122455,
+      "sha256": "AF238BBFFD6A62F501752A05E3F2DB97B419041DC1EE081D6918ACB55465A55B",
+      "nonblank": true
+    },
+    {
+      "name": "theater-mobile.png",
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\artifacts\\duat-city\\docs\\screenshots\\engine-extensions-2026-05-22\\theater-mobile.png",
+      "bytes": 103323,
+      "sha256": "A91FD9553EFCD4CB7D80BA285DBF7793E8C43C13C1AC644679D0BF67438CE9A6",
+      "nonblank": true
+    }
+  ]
+}

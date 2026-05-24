@@ -1,0 +1,20 @@
+{
+  "records": [
+    {
+      "schema_version": "claudio.memory_lite.v0.1",
+      "type": "claim",
+      "summary": "Synthetic local task closed with evidence.",
+      "source": "qa/example-test-pass.txt",
+      "confidence": 0.95,
+      "durability": "active"
+    },
+    {
+      "schema_version": "claudio.memory_lite.v0.1",
+      "type": "decision",
+      "summary": "Synthetic handoff is available for continuation.",
+      "source": "docs/example-handoff.md",
+      "confidence": 0.92,
+      "durability": "active"
+    }
+  ]
+}

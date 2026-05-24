@@ -1,0 +1,1 @@
+{"schema_version":"claudio.witness_log.v0.1","event_id":"evt-real-pub-matrix-001","created_at":"2026-05-15T08:20:00Z","command":"book release matrix inventory","status":"ok","actiongate":"APPROVE","result_summary":{"kind":"dict","redacted":true,"evidence":"35 metadata rows, scan summary and reconstruction verified","external_release_gate":"BLOCK"}}

@@ -1,0 +1,35 @@
+{
+  "access_date": "2026-05-14",
+  "captured_at_utc": "2026-05-14T21:56:44Z",
+  "credential_required": false,
+  "datos_abiertos_url": "https://www.inegi.org.mx/datosabiertos/",
+  "download_format": "xlsx",
+  "downloaded_file": "fixtures/source_intake/inegi/raw/enoe_indicadores_estrategicos_2005_2026_mensual.xlsx",
+  "http_head": {
+    "content_length": 3746724,
+    "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    "etag_observed": "\"7db0edede1d3dc1:0\"",
+    "last_modified_observed": "Fri, 24 Apr 2026 12:00:22 GMT"
+  },
+  "inegi_api_token_present": false,
+  "landing_url": "https://www.inegi.org.mx/app/descarga/default.html",
+  "license_review_required": true,
+  "license_status": "REVIEW_TERMS_DOCUMENTED",
+  "network_scope": "official_inegi_only",
+  "publication_gate": "BLOCK",
+  "schema": "claudio.geodia_source_manifest.v0_1",
+  "sha256": "0add6e88da29b8f5eddcafe889f94c353edaab8a9d5ec272565a55c84cae8bd5",
+  "size_bytes": 3746724,
+  "source_id": "INEGI",
+  "source_intake_network_used": true,
+  "source_listing_evidence": {
+    "descarga_masiva_endpoint": "/app/api/descarga/descarga/descargamasiva/lista/obtenerarchivos",
+    "listed_path_logico": "/programas/enoe/15ymas/tabulados/enoe_indicadores_estrategicos_2005_2026_mensual",
+    "listed_period": "2005 Ene|2026 Mar",
+    "listed_size": "3.56 MB",
+    "listed_title": "Programas|Encuesta Nacional de Ocupación y Empleo (ENOE), población de 15 años y más de edad|Mensuales|Serie histórica 2005-2026 (ENOE)|Indicadores estratégicos"
+  },
+  "source_name": "INEGI Encuesta Nacional de Ocupación y Empleo (ENOE) - Indicadores estratégicos mensuales",
+  "source_url": "https://www.inegi.org.mx/contenidos/programas/enoe/15ymas/tabulados/enoe_indicadores_estrategicos_2005_2026_mensual.xlsx",
+  "terms_url": "https://www.inegi.org.mx/inegi/terminos.html"
+}

@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "duat_simulation_run_ledger_v0_1.schema.json",
+  "title": "DUAT Simulation Run Ledger v0.1",
+  "type": "object",
+  "required": [
+    "schema",
+    "run_id",
+    "config",
+    "scenario",
+    "events",
+    "final_state",
+    "gates",
+    "claims",
+    "external_publication",
+    "fingerprints"
+  ],
+  "properties": {
+    "schema": {
+      "const": "duat.smallville.simulation_run_ledger.v0_1"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "config": {
+      "type": "object"
+    },
+    "scenario": {
+      "type": "object"
+    },
+    "events": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "tick",
+          "previous_hash",
+          "environment",
+          "pressure_vector",
+          "summary",
+          "agent_states",
+          "event_hash"
+        ]
+      }
+    },
+    "final_state": {
+      "type": "object",
+      "required": [
+        "agent_count",
+        "avg_residue",
+        "avg_trust",
+        "avg_phi_eff"
+      ]
+    },
+    "gates": {
+      "type": "object",
+      "required": [
+        "ActionGate",
+        "ForecastGate",
+        "RemoteComputeGate",
+        "publication_gate"
+      ],
+      "properties": {
+        "ActionGate": {
+          "const": "APPROVE_LOCAL_ONLY"
+        },
+        "ForecastGate": {
+          "const": "REVIEW_INTERNAL_ONLY"
+        },
+        "RemoteComputeGate": {
+          "const": "REVIEW_FOR_EXTERNAL_RUNTIME"
+        },
+        "publication_gate": {
+          "const": "BLOCK"
+        }
+      }
+    },
+    "claims": {
+      "type": "object",
+      "required": [
+        "data",
+        "public_prediction",
+        "ranking",
+        "causality",
+        "bias",
+        "private_engineering"
+      ],
+      "properties": {
+        "data": {
+          "const": "SYNTHETIC_ONLY"
+        },
+        "public_prediction": {
+          "const": "NOT_ALLOWED"
+        },
+        "ranking": {
+          "const": "NOT_ALLOWED"
+        },
+        "causality": {
+          "const": "NOT_CLAIMED"
+        },
+        "bias": {
+          "const": "AUDITABLE_NOT_ABSENT"
+        },
+        "private_engineering": {
+          "const": "EXCLUDED"
+        }
+      }
+    },
+    "external_publication": {
+      "const": false
+    },
+    "fingerprints": {
+      "type": "object",
+      "required": [
+        "ledger_sha256",
+        "scenario_sha256",
+        "last_event_hash"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

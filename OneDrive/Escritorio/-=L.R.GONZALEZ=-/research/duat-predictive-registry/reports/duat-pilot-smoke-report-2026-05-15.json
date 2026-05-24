@@ -1,0 +1,54 @@
+{
+  "schema": "duat.pilot_smoke_report.v0_1",
+  "generated_at_utc": "2026-05-15T03:10:52Z",
+  "publication_gate": "BLOCK",
+  "external_publication": false,
+  "network_used": false,
+  "sources": [
+    {
+      "source_id": "open_meteo",
+      "domain": "geophysical_weather",
+      "synthetic_smoke_test": true,
+      "source_quality": 0.8,
+      "R_source": 0.2,
+      "R_pred": 0.134,
+      "H_eff_pred_demo": 0.2765,
+      "forecast_gate": {
+        "gate": "REVIEW",
+        "reason": "missing_backtest"
+      }
+    },
+    {
+      "source_id": "world_bank",
+      "domain": "macroeconomic",
+      "synthetic_smoke_test": true,
+      "source_quality": 0.832,
+      "R_source": 0.168,
+      "R_pred": 0.126,
+      "H_eff_pred_demo": 0.2875,
+      "forecast_gate": {
+        "gate": "REVIEW",
+        "reason": "missing_backtest"
+      }
+    },
+    {
+      "source_id": "gdelt",
+      "domain": "media_events",
+      "synthetic_smoke_test": true,
+      "source_quality": 0.7278,
+      "R_source": 0.2722,
+      "R_pred": 0.1521,
+      "H_eff_pred_demo": 0.2515,
+      "forecast_gate": {
+        "gate": "REVIEW",
+        "reason": "missing_backtest"
+      }
+    }
+  ],
+  "claims": [
+    {
+      "classification": "INFERENCIA",
+      "text": "Pilot smoke verifies formula plumbing, not real forecast validity."
+    }
+  ]
+}

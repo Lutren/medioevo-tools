@@ -1,0 +1,24 @@
+import { pgTable, serial, text, timestamp, integer, boolean, real } from "drizzle-orm/pg-core";
+import { createInsertSchema } from "drizzle-zod";
+import { z } from "zod/v4";
+
+export const genesisConfigsTable = pgTable("genesis_configs", {
+  id: serial("id").primaryKey(),
+  created_at: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  schema_version: text("schema_version").notNull().default("v1"),
+  seed: integer("seed").notNull(),
+  grid_size: integer("grid_size").notNull().default(16),
+  truth_model: text("truth_model").notNull().default("psichi"),
+  observer_profile: text("observer_profile").notNull().default("instrument_balanced"),
+  eml_load: real("eml_load").notNull().default(0.5),
+  eml_saturation: real("eml_saturation").notNull().default(0.8),
+  eml_noise: real("eml_noise").notNull().default(0.1),
+  eml_intrinsic_clarity: real("eml_intrinsic_clarity").notNull().default(0.7),
+  notes: text("notes"),
+  synthetic_only_claim: boolean("synthetic_only_claim").notNull().default(true),
+  reproducible_fingerprint: text("reproducible_fingerprint").notNull(),
+});
+
+export const insertGenesisConfigSchema = createInsertSchema(genesisConfigsTable).omit({ id: true, created_at: true });
+export type InsertGenesisConfig = z.infer<typeof insertGenesisConfigSchema>;
+export type GenesisConfigRow = typeof genesisConfigsTable.$inferSelect;

@@ -1,0 +1,9 @@
+{
+  "schema_version": "claudio.execute_request.v0.1",
+  "action": "public_publish",
+  "target": "github:Lutren/example",
+  "scope": "external",
+  "risk_tags": ["external", "publication"],
+  "content": "should not execute\n"
+}
+

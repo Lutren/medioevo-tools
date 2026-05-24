@@ -1,0 +1,537 @@
+{
+  "run_id": "DUAT_WDI_OFFICIAL_SOURCE_PACK_v0_8",
+  "duat_indicator_id": "economy.real_growth_rate",
+  "wdi_indicator_code": "NY.GDP.MKTP.KD.ZG",
+  "indicator_name": "GDP growth (annual %)",
+  "country_code": "MEX",
+  "country_name": "Mexico",
+  "frequency": "annual",
+  "unit": "annual_percent_growth",
+  "accessed_at": "2026-05-15T07:47:49Z",
+  "source_url": "https://api.worldbank.org/v2/country/MEX/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=20000",
+  "terms_url": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets",
+  "records": [
+    {
+      "year": 1961,
+      "value": 5.00000000072309,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1962,
+      "value": 4.66441467253127,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1963,
+      "value": 8.10688692761114,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1964,
+      "value": 11.9054807657866,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1965,
+      "value": 7.09999999747173,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1966,
+      "value": 6.09613930256681,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1967,
+      "value": 5.85492487897324,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1968,
+      "value": 9.42327881831926,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1969,
+      "value": 3.41862002349839,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1970,
+      "value": 6.50248403469675,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1971,
+      "value": 3.76246768495716,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1972,
+      "value": 8.22880731245257,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1973,
+      "value": 7.86111986063614,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1974,
+      "value": 5.77682723020618,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1975,
+      "value": 5.74448504862428,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1976,
+      "value": 4.41744413626853,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1977,
+      "value": 3.39063970656844,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1978,
+      "value": 8.95694232786306,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1979,
+      "value": 9.69817013704461,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1980,
+      "value": 8.75662242586424,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1981,
+      "value": 9.58584115454994,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1982,
+      "value": -0.0495863656386035,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1983,
+      "value": -4.62412795987231,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1984,
+      "value": 3.51341334932273,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1985,
+      "value": 1.91921578613494,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1986,
+      "value": -3.92995990782299,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1987,
+      "value": 2.06336322631584,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1988,
+      "value": 1.21826122938586,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1989,
+      "value": 3.62544873456009,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1990,
+      "value": 5.25004329944582,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1991,
+      "value": 3.97590497138043,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1992,
+      "value": 3.56861354412243,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1993,
+      "value": 2.86699945461075,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1994,
+      "value": 4.39412788764169,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1995,
+      "value": -5.91029962358286,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1996,
+      "value": 6.21829715869302,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1997,
+      "value": 7.19887615284711,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1998,
+      "value": 6.18507893082885,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1999,
+      "value": 2.75503039300564,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2000,
+      "value": 5.02928399378261,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2001,
+      "value": -0.450845253215945,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2002,
+      "value": -0.236588001922641,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2003,
+      "value": 1.18554486709559,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2004,
+      "value": 3.56544100946846,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2005,
+      "value": 2.11324712586392,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2006,
+      "value": 4.80501352746852,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2007,
+      "value": 2.07786393438754,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2008,
+      "value": 0.943331863036903,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2009,
+      "value": -6.29525055780502,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2010,
+      "value": 4.9713345832195,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2011,
+      "value": 3.44404505794418,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2012,
+      "value": 3.55321075993527,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2013,
+      "value": 0.852101559410627,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2014,
+      "value": 2.50376350288664,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2015,
+      "value": 2.70232342550646,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2016,
+      "value": 1.77249323845399,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2017,
+      "value": 1.87172853327193,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2018,
+      "value": 1.97208209405635,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2019,
+      "value": -0.392690505066824,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2020,
+      "value": -8.35403458167995,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2021,
+      "value": 6.0484834621255,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2022,
+      "value": 3.70975709163623,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2023,
+      "value": 3.35354140652768,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2024,
+      "value": 1.42742769080466,
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    }
+  ],
+  "missing_years": [],
+  "duplicate_years": [],
+  "future_years": [],
+  "raw_file": "data_sources/world_bank_wdi/raw/MEX_NY.GDP.MKTP.KD.ZG_raw.json",
+  "raw_sha256": "0277d9db0a5954e5a922c0249ee80e09d88863e44f7d8aa413a504f05703efd5",
+  "transformation_notes": [
+    "Excluded observations with null values.",
+    "Sorted observations ascending by year.",
+    "No interpolation or imputation applied."
+  ]
+}

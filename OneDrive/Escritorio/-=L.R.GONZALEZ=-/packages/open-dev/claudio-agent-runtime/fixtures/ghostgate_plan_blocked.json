@@ -1,0 +1,5 @@
+{
+  "schema_version": "claudio.ghostgate.plan_request.v0.1",
+  "requested_tools": ["read_file", "write_file", "run_command", "git_push"]
+}
+

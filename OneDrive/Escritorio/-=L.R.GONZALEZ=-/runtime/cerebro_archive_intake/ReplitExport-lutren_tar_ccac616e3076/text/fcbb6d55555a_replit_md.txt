@@ -1,0 +1,104 @@
+# Duat Geodia
+
+## Overview
+
+pnpm workspace monorepo. Duat Geodia is a dark archeopunk, local-first observational simulation and agent-lab. Visuals evoke handmade 1980s/90s computing: pixel borders, amber/green phosphor CRT, dither textures, BBS/Amiga/DOS aesthetics.
+
+## Stack
+
+- **Monorepo tool**: pnpm workspaces
+- **Node.js version**: 24
+- **Package manager**: pnpm
+- **TypeScript version**: 5.9
+- **Frontend**: React + Vite (artifacts/duat-geodia) — wouter routing, framer-motion, shadcn/ui, Tailwind v4
+- **API framework**: Express 5 (artifacts/api-server)
+- **Database**: PostgreSQL + Drizzle ORM
+- **Validation**: Zod (`zod/v4`), `drizzle-zod`
+- **API codegen**: Orval (from OpenAPI spec)
+- **Build**: esbuild (CJS bundle)
+
+## Key Commands
+
+- `pnpm run typecheck` — full typecheck across all packages
+- `pnpm run build` — typecheck + build all packages
+- `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from OpenAPI spec (note: re-fix lib/api-zod/src/index.ts after running — orval generates a stale barrel)
+- `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
+- `pnpm --filter @workspace/api-server run dev` — run API server locally
+
+## Artifacts
+
+### duat-geodia (React + Vite — previewPath: /)
+
+Main simulation lab. Two routes:
+- `/` — BootScreen: pixel-font DUAT GEODIA title, typewriter boot log, 4 entry buttons
+- `/lab` — MainLab: three-panel layout (Operator Inventory, Geodia Grid, 9-tab Inspector)
+
+Key source files:
+- `src/contexts/SimulationContext.tsx` — simulation engine state and hooks
+- `src/lib/geodia.ts` — cell update logic, PSI computation, Sensorium mapping, EML
+- `src/lib/prng.ts` — seeded deterministic PRNG (mulberry32)
+- `src/lib/physics.ts` — synthetic physics model scoring
+- `src/lib/fingerprint.ts` — run fingerprint generator
+- `src/pages/BootScreen.tsx` — boot screen with typewriter animation
+- `src/pages/MainLab.tsx` — three-panel lab layout
+- `src/components/GeodiaGrid.tsx` — interactive 16x16 simulation grid
+- `src/components/custom/PixelComponents.tsx` — bespoke archeopunk UI primitives
+- `src/components/SensoriumPanel.tsx` — 8-channel Sensorium console
+- `src/components/EMLPanel.tsx` — EML Bridge with symbolic formulas
+- `src/components/PhysicsPanel.tsx` — Physics/Uncertainty Lab with leaderboard
+- `src/components/ClaimsPanel.tsx` — ClaimGate/RapidGuardian epistemic gate
+- `src/components/WitnessPanel.tsx` — WitnessLog hash-chained event timeline
+- `src/components/HandoffPanel.tsx` — Handoff export brief builder
+- `src/components/CodingAgentPanel.tsx` — DUAT Coding Agent harness
+- `src/components/GenesisPanel.tsx` — Duat Genesis configuration
+- `src/components/DuatMapPanel.tsx` — DUAT Map system node diagram
+- `src/components/ReplayPanel.tsx` — Snapshot replay scrubber with historical physics race
+- `src/components/FalsifierPanel.tsx` — Falsifier Run: 10 models × 4 negative controls, pass/fail matrix
+- `src/components/OperatorInventory.tsx` — left panel PSI metrics + controls
+
+### api-server (Express 5 — previewPath: /api)
+
+Backend routes:
+- `GET/POST /api/witness` — WitnessLog hash-chained events
+- `GET /api/witness/recent` — last N events for live ticker
+- `GET/POST /api/handoff` — handoff artifact CRUD
+- `GET /api/handoff/:id` — specific handoff
+- `GET/POST /api/genesis` — Duat Genesis configuration snapshots
+- `GET/POST /api/simulation/snapshots` — simulation state snapshots
+- `GET /api/simulation/snapshots/latest` — most recent snapshot
+
+## DB Schema (PostgreSQL via Drizzle)
+
+- `witness_events` — hash-chained WitnessLog entries
+- `handoff_artifacts` — exported handoff briefs (estado, certeza, inferencia, incógnita, acción siguiente, blockers, fingerprint)
+- `genesis_configs` — Duat Genesis configuration snapshots
+- `simulation_snapshots` — synthetic simulation state snapshots (PSI metrics, EML weight, leading model)
+
+## Visual Themes (data-theme on root)
+
+- `amber-crt` (default) — near-black bg, amber phosphor accents
+- `green-phosphor` — dark green bg, bright green accents
+- `dusty-manual` — aged paper look, copper borders
+- `obsidian-archeopunk` — deep black/violet, angular
+
+## Falsifier Controls
+
+Four negative controls applied to each model vs current PSI to compute differential verdicts:
+- `shuffle_velocity` — PSI forced to extreme low-signal (R≈0.05, ε≈0.93)
+- `permute_radius` — R and ε inverted (1−R, 1−ε)
+- `flat_noise` — all PSI fields → 0.5 (flat prior)
+- `mirror_curve` — all fields reflected (x → 1−x)
+
+PASS = model score drops >0.12 on perturbed data. WARN = drop ≤0.12. FAIL = model scores same/higher. Results logged to WitnessLog as `physics_compare` event.
+
+## Epistemic Labels Used
+
+All synthetic outputs are labeled: `SYNTHETIC_ONLY`, `DEMO_ONLY`, `PROTOTIPO`, `SIMULACIÓN`, `REVIEW_REQUIRED`, `BLOCK`. Physics claims are blocked by RapidGuardian unless independently validated.
+
+## API Client Note
+
+After running codegen, manually fix `lib/api-zod/src/index.ts` to only contain:
+```ts
+export * from "./generated/api";
+```
+Orval regenerates a stale barrel with references to non-existent files.

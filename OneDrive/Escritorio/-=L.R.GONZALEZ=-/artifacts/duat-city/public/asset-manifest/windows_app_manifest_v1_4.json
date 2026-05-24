@@ -1,0 +1,41 @@
+{
+    "schema":  "duat/windows-app-manifest/v1.4",
+    "fingerprint":  "DUAT-v1.4-WINAPP-CONVERSION",
+    "generatedAt":  "2026-05-20T17:14:54.5945946Z",
+    "wrapper":  "native_dotnet_edge_app_mode",
+    "preferredWrappers":  [
+                              "electron",
+                              "tauri"
+                          ],
+    "dependencyGate":  "REVIEW_FOR_ELECTRON_TAURI_NO_LOCAL_DEPENDENCY",
+    "executable":  {
+                       "path":  "dist/winapp/DUATCity.exe",
+                       "sha256":  "12731EC7C6CF0E1D662C3DB87C17D717DFFD89BD9DE0F03C31821D0A11E0969E",
+                       "size_bytes":  11264
+                   },
+    "app":  {
+                "copied_from":  "dist/public",
+                "copied_to":  "dist/winapp/app",
+                "file_count":  37,
+                "size_bytes":  4501412,
+                "provenance":  "DUAT v1.4 local Vite build; no new public assets copied"
+            },
+    "runtime":  {
+                    "url_path":  "/duat-city/",
+                    "loopback_only":  true,
+                    "edge_app_mode":  true,
+                    "audio_requires_user_gesture":  true,
+                    "canvas_fallback_preserved":  true,
+                    "iso3d_toggle_preserved":  true
+                },
+    "boundaries":  {
+                       "publication_allowed":  false,
+                       "wabi_execution_allowed":  false,
+                       "sandbox_execution_allowed":  false,
+                       "real_apply_allowed":  false,
+                       "cloud_used":  false,
+                       "mcp_execution":  false,
+                       "unknown_zip_code_executed":  false,
+                       "assets_copied_without_provenance":  false
+                   }
+}

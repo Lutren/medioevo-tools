@@ -1,0 +1,28 @@
+import { pgTable, serial, text, timestamp, integer, real } from "drizzle-orm/pg-core";
+import { createInsertSchema } from "drizzle-zod";
+import { z } from "zod/v4";
+
+export const simulationSnapshotsTable = pgTable("simulation_snapshots", {
+  id: serial("id").primaryKey(),
+  created_at: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  tick: integer("tick").notNull(),
+  seed: integer("seed").notNull(),
+  run_fingerprint: text("run_fingerprint").notNull(),
+  observer_profile: text("observer_profile").notNull(),
+  truth_model: text("truth_model").notNull(),
+  mode: text("mode").notNull(),
+  psi_r: real("psi_r").notNull(),
+  psi_phi_eff: real("psi_phi_eff").notNull(),
+  psi_j_c: real("psi_j_c").notNull(),
+  psi_epsilon: real("psi_epsilon").notNull(),
+  psi_fatigue: real("psi_fatigue").notNull(),
+  psi_regime: text("psi_regime").notNull(),
+  eml_weight: real("eml_weight").notNull(),
+  grid_summary: text("grid_summary").notNull(),
+  leading_model: text("leading_model").notNull(),
+  leading_model_score: real("leading_model_score").notNull(),
+});
+
+export const insertSimulationSnapshotSchema = createInsertSchema(simulationSnapshotsTable).omit({ id: true, created_at: true });
+export type InsertSimulationSnapshot = z.infer<typeof insertSimulationSnapshotSchema>;
+export type SimulationSnapshotRow = typeof simulationSnapshotsTable.$inferSelect;

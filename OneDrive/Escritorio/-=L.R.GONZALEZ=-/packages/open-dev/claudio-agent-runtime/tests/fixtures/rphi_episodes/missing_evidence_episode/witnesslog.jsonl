@@ -1,0 +1,1 @@
+{"schema_version":"claudio.witness_log.v0.1","event_id":"evt-missing-001","created_at":"2026-05-15T00:00:00Z","command":"memory status","status":"ok","actiongate":"REVIEW","result_summary":{"kind":"dict","redacted":true,"claim":"synthetic claim","evidence":"missing"}}

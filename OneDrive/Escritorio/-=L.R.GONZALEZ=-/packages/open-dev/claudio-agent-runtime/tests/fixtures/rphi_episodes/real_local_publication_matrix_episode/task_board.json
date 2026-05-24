@@ -1,0 +1,38 @@
+{
+  "schema_version": "claudio.task_board.v0.1",
+  "tasks": [
+    {
+      "id": "real_pub_matrix_001",
+      "title": "Build local book release control matrix from metadata only",
+      "status": "completed",
+      "priority": "P1",
+      "owner": "rphi-calibration",
+      "evidence": [
+        "docs/book-control/BOOK_RELEASE_CONTROL_BOARD_2026-05-15.json"
+      ],
+      "handoff_created": true
+    },
+    {
+      "id": "real_pub_matrix_002",
+      "title": "Run local scans over generated book-control docs",
+      "status": "completed",
+      "priority": "P1",
+      "owner": "rphi-calibration",
+      "evidence": [
+        "qa_artifacts/book-control/local_scan_summary_2026-05-15.json"
+      ],
+      "handoff_created": true
+    },
+    {
+      "id": "real_pub_matrix_003",
+      "title": "Keep external release actions blocked",
+      "status": "completed",
+      "priority": "P0",
+      "owner": "rphi-calibration",
+      "evidence": [
+        "docs/book-control/BOOK_RELEASE_NEXT_ACTIONS_2026-05-15.md"
+      ],
+      "handoff_created": true
+    }
+  ]
+}

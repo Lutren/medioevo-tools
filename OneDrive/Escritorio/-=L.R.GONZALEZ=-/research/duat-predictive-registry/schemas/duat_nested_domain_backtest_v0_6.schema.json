@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "duat.nested_domain_backtest.v0_6",
+  "title": "DUAT Nested Domain Backtest v0.6",
+  "type": "object",
+  "required": ["schema", "run_id", "publication_gate", "action_gate_local", "objectives", "summary", "interpretation"],
+  "additionalProperties": true,
+  "properties": {
+    "schema": { "const": "duat.nested_domain_backtest.v0_6" },
+    "run_id": { "const": "DUAT_NESTED_DOMAIN_BACKTEST_v0_6" },
+    "publication_gate": { "const": "BLOCK" },
+    "action_gate_local": { "enum": ["APPROVE_LOCAL", "REVIEW", "BLOCK"] },
+    "objectives": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "indicator",
+          "domain",
+          "data_mode",
+          "n_observations",
+          "n_outer_folds",
+          "selected_configs_by_fold",
+          "baseline_outer_metrics",
+          "calibrated_outer_metrics",
+          "metric_delta_outer",
+          "oos_classification",
+          "out_of_sample_gate",
+          "claim_allowed_public",
+          "publication_gate",
+          "backtest_leakage_guard"
+        ],
+        "properties": {
+          "oos_classification": {
+            "enum": [
+              "OOS_METRICS_IMPROVED",
+              "OOS_METRICS_MIXED",
+              "OOS_METRICS_WORSE",
+              "OOS_R_ONLY_IMPROVED",
+              "OOS_BLOCKED_INSUFFICIENT_DATA",
+              "OOS_BLOCKED_LEAKAGE",
+              "OOS_REVIEW_COMPARABILITY"
+            ]
+          },
+          "out_of_sample_gate": { "enum": ["APPROVE_LOCAL", "REVIEW", "BLOCK"] },
+          "claim_allowed_public": { "const": false },
+          "publication_gate": { "const": "BLOCK" }
+        }
+      }
+    },
+    "interpretation": {
+      "type": "object",
+      "required": ["public_claim_allowed"],
+      "properties": {
+        "public_claim_allowed": { "const": false }
+      }
+    }
+  }
+}

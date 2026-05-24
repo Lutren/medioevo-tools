@@ -1,0 +1,268 @@
+import { createHotContext as __vite__createHotContext } from "/duat-city/@vite/client";import.meta.hot = __vite__createHotContext("/src/components/BuildingInspector.tsx");"use strict";
+import __vite__cjsImport0_react_jsxDevRuntime from "/duat-city/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=87a97fe6"; const Fragment = __vite__cjsImport0_react_jsxDevRuntime["Fragment"]; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import { BUILDING_DEFS } from "/duat-city/src/sim/buildings.ts?t=1779189187097";
+import { GATE_COLORS, rColor, TILE_ICONS } from "/duat-city/src/render/palette.ts?t=1779186400457";
+export function BuildingInspector({ state, buildingId, onClose }) {
+  const building = state.buildings.find((b) => b.id === buildingId);
+  if (!building) return null;
+  const def = BUILDING_DEFS[building.type];
+  const icon = TILE_ICONS[building.type] ?? "";
+  const workers = state.agents.filter((a) => building.workers.includes(a.id));
+  const tile = state.tiles.find((t) => t.x === building.x && t.y === building.y);
+  return /* @__PURE__ */ jsxDEV("div", { className: "section", children: [
+    /* @__PURE__ */ jsxDEV("div", { className: "section-title", children: [
+      icon,
+      " ",
+      building.name,
+      /* @__PURE__ */ jsxDEV("button", { style: { float: "right", background: "none", border: "none", color: "#6e7681", cursor: "pointer" }, onClick: onClose, children: "✕" }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx",
+        lineNumber: 24,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx",
+      lineNumber: 22,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "stat-row", children: [
+      /* @__PURE__ */ jsxDEV("span", { className: "stat-key", children: "Type" }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx",
+        lineNumber: 26,
+        columnNumber: 33
+      }, this),
+      /* @__PURE__ */ jsxDEV("span", { className: "stat-val", children: building.type }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx",
+        lineNumber: 26,
+        columnNumber: 71
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx",
+      lineNumber: 26,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "stat-row", children: [
+      /* @__PURE__ */ jsxDEV("span", { className: "stat-key", children: "Pos" }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx",
+        lineNumber: 27,
+        columnNumber: 33
+      }, this),
+      /* @__PURE__ */ jsxDEV("span", { className: "stat-val", children: [
+        "(",
+        building.x,
+        ",",
+        building.y,
+        ")"
+      ] }, void 0, true, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx",
+        lineNumber: 27,
+        columnNumber: 70
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx",
+      lineNumber: 27,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "stat-row", children: [
+      /* @__PURE__ */ jsxDEV("span", { className: "stat-key", children: "Level" }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx",
+        lineNumber: 28,
+        columnNumber: 33
+      }, this),
+      /* @__PURE__ */ jsxDEV("span", { className: "stat-val", children: building.level }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx",
+        lineNumber: 28,
+        columnNumber: 72
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx",
+      lineNumber: 28,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "stat-row", children: [
+      /* @__PURE__ */ jsxDEV("span", { className: "stat-key", children: "R" }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx",
+        lineNumber: 30,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("span", { className: "stat-val", style: { color: rColor(building.R) }, children: building.R.toFixed(3) }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx",
+        lineNumber: 31,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx",
+      lineNumber: 29,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "stat-row", children: [
+      /* @__PURE__ */ jsxDEV("span", { className: "stat-key", children: "Φ_eff" }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx",
+        lineNumber: 34,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("span", { className: "stat-val", style: { color: rColor(1 - building.Phi_eff) }, children: building.Phi_eff.toFixed(3) }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx",
+        lineNumber: 35,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx",
+      lineNumber: 33,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "stat-row", children: [
+      /* @__PURE__ */ jsxDEV("span", { className: "stat-key", children: "Gate" }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx",
+        lineNumber: 38,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("span", { className: "stat-val", style: { color: GATE_COLORS[building.gate] }, children: building.gate }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx",
+        lineNumber: 39,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx",
+      lineNumber: 37,
+      columnNumber: 7
+    }, this),
+    def && /* @__PURE__ */ jsxDEV(Fragment, { children: [
+      /* @__PURE__ */ jsxDEV("div", { style: { marginTop: 6 }, children: /* @__PURE__ */ jsxDEV("span", { className: "stat-key", children: def.description }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx",
+        lineNumber: 45,
+        columnNumber: 13
+      }, this) }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx",
+        lineNumber: 44,
+        columnNumber: 11
+      }, this),
+      Object.keys(def.produces).length > 0 && /* @__PURE__ */ jsxDEV("div", { className: "stat-row", children: [
+        /* @__PURE__ */ jsxDEV("span", { className: "stat-key", children: "Produces" }, void 0, false, {
+          fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx",
+          lineNumber: 49,
+          columnNumber: 15
+        }, this),
+        /* @__PURE__ */ jsxDEV("span", { className: "stat-val", children: Object.entries(def.produces).map(([k, v]) => `${k}+${v}`).join(", ") }, void 0, false, {
+          fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx",
+          lineNumber: 50,
+          columnNumber: 15
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx",
+        lineNumber: 48,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx",
+      lineNumber: 43,
+      columnNumber: 7
+    }, this),
+    tile && /* @__PURE__ */ jsxDEV("div", { style: { marginTop: 4 }, children: [
+      /* @__PURE__ */ jsxDEV("div", { className: "section-title", children: "FibMob" }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx",
+        lineNumber: 58,
+        columnNumber: 11
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "stat-row", children: [
+        /* @__PURE__ */ jsxDEV("span", { className: "stat-key", children: "μ" }, void 0, false, {
+          fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx",
+          lineNumber: 59,
+          columnNumber: 37
+        }, this),
+        /* @__PURE__ */ jsxDEV("span", { className: "stat-val", children: tile.fibmob.mu }, void 0, false, {
+          fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx",
+          lineNumber: 59,
+          columnNumber: 72
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx",
+        lineNumber: 59,
+        columnNumber: 11
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "stat-row", children: [
+        /* @__PURE__ */ jsxDEV("span", { className: "stat-key", children: "LOD" }, void 0, false, {
+          fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx",
+          lineNumber: 60,
+          columnNumber: 37
+        }, this),
+        /* @__PURE__ */ jsxDEV("span", { className: "stat-val", children: tile.fibmob.lodFactor.toFixed(2) }, void 0, false, {
+          fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx",
+          lineNumber: 60,
+          columnNumber: 74
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx",
+        lineNumber: 60,
+        columnNumber: 11
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "stat-row", children: [
+        /* @__PURE__ */ jsxDEV("span", { className: "stat-key", children: "Polarity" }, void 0, false, {
+          fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx",
+          lineNumber: 61,
+          columnNumber: 37
+        }, this),
+        /* @__PURE__ */ jsxDEV("span", { className: "stat-val", children: tile.fibmob.polarity }, void 0, false, {
+          fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx",
+          lineNumber: 61,
+          columnNumber: 79
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx",
+        lineNumber: 61,
+        columnNumber: 11
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "stat-row", children: [
+        /* @__PURE__ */ jsxDEV("span", { className: "stat-key", children: "Rarity" }, void 0, false, {
+          fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx",
+          lineNumber: 62,
+          columnNumber: 37
+        }, this),
+        /* @__PURE__ */ jsxDEV("span", { className: "stat-val", children: tile.fibmob.rarity.toFixed(4) }, void 0, false, {
+          fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx",
+          lineNumber: 62,
+          columnNumber: 77
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx",
+        lineNumber: 62,
+        columnNumber: 11
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx",
+      lineNumber: 57,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx",
+    lineNumber: 21,
+    columnNumber: 5
+  }, this);
+}
+_c = BuildingInspector;
+var _c;
+$RefreshReg$(_c, "BuildingInspector");
+import * as RefreshRuntime from "/duat-city/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react can't detect preamble. Something is wrong."
+    );
+  }
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+function $RefreshReg$(type, id) {
+  return RefreshRuntime.register(type, "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/BuildingInspector.tsx " + id);
+}
+function $RefreshSig$() {
+  return RefreshRuntime.createSignatureFunctionForTransform();
+}
+
+//# sourceMappingURL=data:application/json;base64,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QVk5QixlQUFLMkIsT0FBT0ksT0FBT2xCLFFBQVEsQ0FBQyxLQUF4RDtBQUFBO0FBQUE7QUFBQTtBQUFBLGVBQTBEO0FBQUEsV0FBNUg7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQUFtSTtBQUFBLFNBTHJJO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FNQTtBQUFBLE9BMUNKO0FBQUE7QUFBQTtBQUFBO0FBQUEsU0E0Q0E7QUFFSjtBQUFDbUIsS0F4RGVqRDtBQUFpQixJQUFBaUQ7QUFBQSxhQUFBQSxJQUFBIiwibmFtZXMiOlsiQlVJTERJTkdfREVGUyIsIkdBVEVfQ09MT1JTIiwickNvbG9yIiwiVElMRV9JQ09OUyIsIkJ1aWxkaW5nSW5zcGVjdG9yIiwic3RhdGUiLCJidWlsZGluZ0lkIiwib25DbG9zZSIsImJ1aWxkaW5nIiwiYnVpbGRpbmdzIiwiZmluZCIsImIiLCJpZCIsImRlZiIsInR5cGUiLCJpY29uIiwid29ya2VycyIsImFnZW50cyIsImZpbHRlciIsImEiLCJpbmNsdWRlcyIsInRpbGUiLCJ0aWxlcyIsInQiLCJ4IiwieSIsIm5hbWUiLCJmbG9hdCIsImJhY2tncm91bmQiLCJib3JkZXIiLCJjb2xvciIsImN1cnNvciIsImxldmVsIiwiUiIsInRvRml4ZWQiLCJQaGlfZWZmIiwiZ2F0ZSIsIm1hcmdpblRvcCIsImRlc2NyaXB0aW9uIiwiT2JqZWN0Iiwia2V5cyIsInByb2R1Y2VzIiwibGVuZ3RoIiwiZW50cmllcyIsIm1hcCIsImsiLCJ2Iiwiam9pbiIsImZpYm1vYiIsIm11IiwibG9kRmFjdG9yIiwicG9sYXJpdHkiLCJyYXJpdHkiLCJfYyJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJCdWlsZGluZ0luc3BlY3Rvci50c3giXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHR5cGUgeyBDaXR5U3RhdGUsIEJ1aWxkaW5nIH0gZnJvbSBcIi4uL2NvcmUvdHlwZXNcIjtcbmltcG9ydCB7IEJVSUxESU5HX0RFRlMgfSBmcm9tIFwiLi4vc2ltL2J1aWxkaW5nc1wiO1xuaW1wb3J0IHsgR0FURV9DT0xPUlMsIHJDb2xvciwgVElMRV9JQ09OUyB9IGZyb20gXCIuLi9yZW5kZXIvcGFsZXR0ZVwiO1xuXG5pbnRlcmZhY2UgQnVpbGRpbmdJbnNwZWN0b3JQcm9wcyB7XG4gIHN0YXRlOiBDaXR5U3RhdGU7XG4gIGJ1aWxkaW5nSWQ6IHN0cmluZztcbiAgb25DbG9zZTogKCkgPT4gdm9pZDtcbn1cblxuZXhwb3J0IGZ1bmN0aW9uIEJ1aWxkaW5nSW5zcGVjdG9yKHsgc3RhdGUsIGJ1aWxkaW5nSWQsIG9uQ2xvc2UgfTogQnVpbGRpbmdJbnNwZWN0b3JQcm9wcykge1xuICBjb25zdCBidWlsZGluZyA9IHN0YXRlLmJ1aWxkaW5ncy5maW5kKGIgPT4gYi5pZCA9PT0gYnVpbGRpbmdJZCk7XG4gIGlmICghYnVpbGRpbmcpIHJldHVybiBudWxsO1xuXG4gIGNvbnN0IGRlZiA9IEJVSUxESU5HX0RFRlNbYnVpbGRpbmcudHlwZV07XG4gIGNvbnN0IGljb24gPSBUSUxFX0lDT05TW2J1aWxkaW5nLnR5cGVdID8/IFwiXCI7XG4gIGNvbnN0IHdvcmtlcnMgPSBzdGF0ZS5hZ2VudHMuZmlsdGVyKGEgPT4gYnVpbGRpbmcud29ya2Vycy5pbmNsdWRlcyhhLmlkKSk7XG4gIGNvbnN0IHRpbGUgPSBzdGF0ZS50aWxlcy5maW5kKHQgPT4gdC54ID09PSBidWlsZGluZy54ICYmIHQueSA9PT0gYnVpbGRpbmcueSk7XG5cbiAgcmV0dXJuIChcbiAgICA8ZGl2IGNsYXNzTmFtZT1cInNlY3Rpb25cIj5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwic2VjdGlvbi10aXRsZVwiPlxuICAgICAgICB7aWNvbn0ge2J1aWxkaW5nLm5hbWV9XG4gICAgICAgIDxidXR0b24gc3R5bGU9e3sgZmxvYXQ6IFwicmlnaHRcIiwgYmFja2dyb3VuZDogXCJub25lXCIsIGJvcmRlcjogXCJub25lXCIsIGNvbG9yOiBcIiM2ZTc2ODFcIiwgY3Vyc29yOiBcInBvaW50ZXJcIiB9fSBvbkNsaWNrPXtvbkNsb3NlfT7inJU8L2J1dHRvbj5cbiAgICAgIDwvZGl2PlxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJzdGF0LXJvd1wiPjxzcGFuIGNsYXNzTmFtZT1cInN0YXQta2V5XCI+VHlwZTwvc3Bhbj48c3BhbiBjbGFzc05hbWU9XCJzdGF0LXZhbFwiPntidWlsZGluZy50eXBlfTwvc3Bhbj48L2Rpdj5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwic3RhdC1yb3dcIj48c3BhbiBjbGFzc05hbWU9XCJzdGF0LWtleVwiPlBvczwvc3Bhbj48c3BhbiBjbGFzc05hbWU9XCJzdGF0LXZhbFwiPih7YnVpbGRpbmcueH0se2J1aWxkaW5nLnl9KTwvc3Bhbj48L2Rpdj5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwic3RhdC1yb3dcIj48c3BhbiBjbGFzc05hbWU9XCJzdGF0LWtleVwiPkxldmVsPC9zcGFuPjxzcGFuIGNsYXNzTmFtZT1cInN0YXQtdmFsXCI+e2J1aWxkaW5nLmxldmVsfTwvc3Bhbj48L2Rpdj5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwic3RhdC1yb3dcIj5cbiAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwic3RhdC1rZXlcIj5SPC9zcGFuPlxuICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJzdGF0LXZhbFwiIHN0eWxlPXt7IGNvbG9yOiByQ29sb3IoYnVpbGRpbmcuUikgfX0+e2J1aWxkaW5nLlIudG9GaXhlZCgzKX08L3NwYW4+XG4gICAgICA8L2Rpdj5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwic3RhdC1yb3dcIj5cbiAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwic3RhdC1rZXlcIj7Opl9lZmY8L3NwYW4+XG4gICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInN0YXQtdmFsXCIgc3R5bGU9e3sgY29sb3I6IHJDb2xvcigxIC0gYnVpbGRpbmcuUGhpX2VmZikgfX0+e2J1aWxkaW5nLlBoaV9lZmYudG9GaXhlZCgzKX08L3NwYW4+XG4gICAgICA8L2Rpdj5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwic3RhdC1yb3dcIj5cbiAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwic3RhdC1rZXlcIj5HYXRlPC9zcGFuPlxuICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJzdGF0LXZhbFwiIHN0eWxlPXt7IGNvbG9yOiBHQVRFX0NPTE9SU1tidWlsZGluZy5nYXRlXSB9fT57YnVpbGRpbmcuZ2F0ZX08L3NwYW4+XG4gICAgICA8L2Rpdj5cblxuICAgICAge2RlZiAmJiAoXG4gICAgICAgIDw+XG4gICAgICAgICAgPGRpdiBzdHlsZT17eyBtYXJnaW5Ub3A6IDYgfX0+XG4gICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJzdGF0LWtleVwiPntkZWYuZGVzY3JpcHRpb259PC9zcGFuPlxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgIHtPYmplY3Qua2V5cyhkZWYucHJvZHVjZXMpLmxlbmd0aCA+IDAgJiYgKFxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJzdGF0LXJvd1wiPlxuICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJzdGF0LWtleVwiPlByb2R1Y2VzPC9zcGFuPlxuICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJzdGF0LXZhbFwiPntPYmplY3QuZW50cmllcyhkZWYucHJvZHVjZXMpLm1hcCgoW2ssIHZdKSA9PiBgJHtrfSske3Z9YCkuam9pbihcIiwgXCIpfTwvc3Bhbj5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICl9XG4gICAgICAgIDwvPlxuICAgICAgKX1cblxuICAgICAge3RpbGUgJiYgKFxuICAgICAgICA8ZGl2IHN0eWxlPXt7IG1hcmdpblRvcDogNCB9fT5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInNlY3Rpb24tdGl0bGVcIj5GaWJNb2I8L2Rpdj5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInN0YXQtcm93XCI+PHNwYW4gY2xhc3NOYW1lPVwic3RhdC1rZXlcIj7OvDwvc3Bhbj48c3BhbiBjbGFzc05hbWU9XCJzdGF0LXZhbFwiPnt0aWxlLmZpYm1vYi5tdX08L3NwYW4+PC9kaXY+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJzdGF0LXJvd1wiPjxzcGFuIGNsYXNzTmFtZT1cInN0YXQta2V5XCI+TE9EPC9zcGFuPjxzcGFuIGNsYXNzTmFtZT1cInN0YXQtdmFsXCI+e3RpbGUuZmlibW9iLmxvZEZhY3Rvci50b0ZpeGVkKDIpfTwvc3Bhbj48L2Rpdj5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInN0YXQtcm93XCI+PHNwYW4gY2xhc3NOYW1lPVwic3RhdC1rZXlcIj5Qb2xhcml0eTwvc3Bhbj48c3BhbiBjbGFzc05hbWU9XCJzdGF0LXZhbFwiPnt0aWxlLmZpYm1vYi5wb2xhcml0eX08L3NwYW4+PC9kaXY+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJzdGF0LXJvd1wiPjxzcGFuIGNsYXNzTmFtZT1cInN0YXQta2V5XCI+UmFyaXR5PC9zcGFuPjxzcGFuIGNsYXNzTmFtZT1cInN0YXQtdmFsXCI+e3RpbGUuZmlibW9iLnJhcml0eS50b0ZpeGVkKDQpfTwvc3Bhbj48L2Rpdj5cbiAgICAgICAgPC9kaXY+XG4gICAgICApfVxuICAgIDwvZGl2PlxuICApO1xufVxuIl0sImZpbGUiOiJDOi9Vc2Vycy9MLVR5ci9PbmVEcml2ZS9Fc2NyaXRvcmlvLy09TC5SLkdPTlpBTEVaPS0vYXJ0aWZhY3RzL2R1YXQtY2l0eS9zcmMvY29tcG9uZW50cy9CdWlsZGluZ0luc3BlY3Rvci50c3gifQ==

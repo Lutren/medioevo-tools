@@ -1,0 +1,15 @@
+{
+  "schema_version": "claudio.task_board.v0.1",
+  "tasks": [
+    {
+      "id": "ep_stale_001",
+      "title": "Refresh stale synthetic memory",
+      "status": "pending",
+      "priority": "P2",
+      "owner": "rphi-calibration",
+      "evidence": [
+        "memory/synthetic-stale-index.md"
+      ]
+    }
+  ]
+}

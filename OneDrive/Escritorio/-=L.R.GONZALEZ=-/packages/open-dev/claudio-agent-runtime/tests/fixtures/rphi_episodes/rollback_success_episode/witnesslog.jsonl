@@ -1,0 +1,2 @@
+{"schema_version":"claudio.witness_log.v0.1","event_id":"evt-rollback-success-001","created_at":"2026-05-15T00:00:00Z","command":"execute write","status":"ok","actiongate":"APPROVE","result_summary":{"kind":"dict","redacted":true,"evidence":"rollback created"}}
+{"schema_version":"claudio.witness_log.v0.1","event_id":"evt-rollback-success-002","created_at":"2026-05-15T00:01:00Z","command":"rollback restore","status":"ok","actiongate":"APPROVE","result_summary":{"kind":"dict","redacted":true,"evidence":"restored"}}

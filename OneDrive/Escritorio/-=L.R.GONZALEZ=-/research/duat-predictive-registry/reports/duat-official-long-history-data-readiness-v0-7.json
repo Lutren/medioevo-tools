@@ -1,0 +1,279 @@
+{
+  "schema": "duat.data_readiness_report.v0_7",
+  "run_id": "DUAT_OFFICIAL_LONG_HISTORY_DATA_READINESS_v0_7",
+  "generated_at_utc": "2026-05-15T07:14:32Z",
+  "publication_gate": "BLOCK",
+  "forecast_gate": "REVIEW",
+  "action_gate_local": "REVIEW",
+  "data_gate": "BLOCK",
+  "manifest_validation": "PASS",
+  "manifest_errors": [],
+  "criteria": {
+    "MIN_OBSERVATIONS_WARN": 24,
+    "MIN_OBSERVATIONS_REVIEW": 30,
+    "PREFERRED_OBSERVATIONS": 40,
+    "MIN_OUTER_FOLDS_TARGET": 5,
+    "MIN_TRAIN_WINDOW_TARGET": 15,
+    "FORECAST_HORIZON_DEFAULT": 1
+  },
+  "series_results": [
+    {
+      "indicator_id": "economy.real_growth_rate",
+      "source_id": "world_bank_indicators",
+      "source_name": "World Bank Indicators fixture",
+      "source_url": "https://api.worldbank.org/v2/country/MEX/indicator",
+      "frequency": "annual",
+      "start_year": 2018,
+      "end_year": 2023,
+      "n_observations": 6,
+      "unit": "annual_percent_growth",
+      "definition": "NY.GDP.PCAP.KD.ZG",
+      "license_terms_scan": "REVIEW",
+      "license_reason": "license terms documented but human/legal review remains required",
+      "temporal_coverage_review": "PASS",
+      "temporal_findings": [],
+      "comparability_review": "REVIEW",
+      "comparability_findings": [
+        "explicit_comparability_review"
+      ],
+      "leakage_preflight": "PASS",
+      "leakage_findings": [],
+      "minimum_observation_review": "BLOCK",
+      "minimum_observation_reason": "n_observations=6 below 24",
+      "source_card_gate": "PASS",
+      "imputation_review": "PASS",
+      "readiness_gate": "BLOCK",
+      "recommendation": "collect_data",
+      "publication_gate": "BLOCK",
+      "notes": [
+        "Derived from existing offline fixture evidence.",
+        "Short fixture history; not sufficient for official long-history backtest readiness."
+      ]
+    },
+    {
+      "indicator_id": "economy.real_growth_rate",
+      "source_id": "eurostat_sdmx",
+      "source_name": "Eurostat fixture",
+      "source_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/",
+      "frequency": "annual",
+      "start_year": 2018,
+      "end_year": 2023,
+      "n_observations": 6,
+      "unit": "annual_percent_growth",
+      "definition": "tec00115",
+      "license_terms_scan": "REVIEW",
+      "license_reason": "license terms documented but human/legal review remains required",
+      "temporal_coverage_review": "PASS",
+      "temporal_findings": [],
+      "comparability_review": "REVIEW",
+      "comparability_findings": [
+        "explicit_comparability_review"
+      ],
+      "leakage_preflight": "PASS",
+      "leakage_findings": [],
+      "minimum_observation_review": "BLOCK",
+      "minimum_observation_reason": "n_observations=6 below 24",
+      "source_card_gate": "PASS",
+      "imputation_review": "PASS",
+      "readiness_gate": "BLOCK",
+      "recommendation": "collect_data",
+      "publication_gate": "BLOCK",
+      "notes": [
+        "Derived from existing offline fixture evidence.",
+        "Short fixture history; not sufficient for official long-history backtest readiness."
+      ]
+    },
+    {
+      "indicator_id": "labor_market.unemployment_rate.total",
+      "source_id": "world_bank_indicators",
+      "source_name": "World Bank Indicators fixture",
+      "source_url": "https://api.worldbank.org/v2/country/MEX/indicator",
+      "frequency": "annual",
+      "start_year": 2018,
+      "end_year": 2023,
+      "n_observations": 6,
+      "unit": "percent_of_labor_force",
+      "definition": "SL.UEM.TOTL.ZS",
+      "license_terms_scan": "REVIEW",
+      "license_reason": "license terms documented but human/legal review remains required",
+      "temporal_coverage_review": "PASS",
+      "temporal_findings": [],
+      "comparability_review": "REVIEW",
+      "comparability_findings": [
+        "explicit_comparability_review"
+      ],
+      "leakage_preflight": "PASS",
+      "leakage_findings": [],
+      "minimum_observation_review": "BLOCK",
+      "minimum_observation_reason": "n_observations=6 below 24",
+      "source_card_gate": "PASS",
+      "imputation_review": "PASS",
+      "readiness_gate": "BLOCK",
+      "recommendation": "collect_data",
+      "publication_gate": "BLOCK",
+      "notes": [
+        "Derived from existing offline fixture evidence.",
+        "Short fixture history; not sufficient for official long-history backtest readiness."
+      ]
+    },
+    {
+      "indicator_id": "labor_market.unemployment_rate.total",
+      "source_id": "eurostat_sdmx",
+      "source_name": "Eurostat fixture",
+      "source_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/",
+      "frequency": "annual",
+      "start_year": 2018,
+      "end_year": 2023,
+      "n_observations": 6,
+      "unit": "percent_of_labor_force",
+      "definition": "une_rt_a",
+      "license_terms_scan": "REVIEW",
+      "license_reason": "license terms documented but human/legal review remains required",
+      "temporal_coverage_review": "PASS",
+      "temporal_findings": [],
+      "comparability_review": "REVIEW",
+      "comparability_findings": [
+        "explicit_comparability_review"
+      ],
+      "leakage_preflight": "PASS",
+      "leakage_findings": [],
+      "minimum_observation_review": "BLOCK",
+      "minimum_observation_reason": "n_observations=6 below 24",
+      "source_card_gate": "PASS",
+      "imputation_review": "PASS",
+      "readiness_gate": "BLOCK",
+      "recommendation": "collect_data",
+      "publication_gate": "BLOCK",
+      "notes": [
+        "Derived from existing offline fixture evidence.",
+        "Short fixture history; not sufficient for official long-history backtest readiness."
+      ]
+    },
+    {
+      "indicator_id": "labor_market.unemployment_rate.total",
+      "source_id": "INEGI",
+      "source_name": "INEGI ENOE fixture",
+      "source_url": "https://www.inegi.org.mx/contenidos/programas/enoe/15ymas/tabulados/enoe_indicadores_estrategicos_2005_2026_mensual.xlsx",
+      "frequency": "annual",
+      "start_year": 2018,
+      "end_year": 2023,
+      "n_observations": 6,
+      "unit": "percent_of_labor_force",
+      "definition": "INEGI_ENOE_TASA_DESOCUPACION_ANNUAL_MEAN",
+      "license_terms_scan": "REVIEW",
+      "license_reason": "license terms documented but human/legal review remains required",
+      "temporal_coverage_review": "PASS",
+      "temporal_findings": [],
+      "comparability_review": "REVIEW",
+      "comparability_findings": [
+        "explicit_comparability_review"
+      ],
+      "leakage_preflight": "PASS",
+      "leakage_findings": [],
+      "minimum_observation_review": "BLOCK",
+      "minimum_observation_reason": "n_observations=6 below 24",
+      "source_card_gate": "PASS",
+      "imputation_review": "PASS",
+      "readiness_gate": "BLOCK",
+      "recommendation": "collect_data",
+      "publication_gate": "BLOCK",
+      "notes": [
+        "Derived from existing offline fixture evidence.",
+        "Short fixture history; not sufficient for official long-history backtest readiness."
+      ]
+    },
+    {
+      "indicator_id": "demography.life_expectancy_at_birth.total",
+      "source_id": "world_bank_indicators",
+      "source_name": "World Bank Indicators fixture",
+      "source_url": "https://api.worldbank.org/v2/country/MEX/indicator",
+      "frequency": "annual",
+      "start_year": 2018,
+      "end_year": 2023,
+      "n_observations": 6,
+      "unit": "years",
+      "definition": "SP.DYN.LE00.IN",
+      "license_terms_scan": "REVIEW",
+      "license_reason": "license terms documented but human/legal review remains required",
+      "temporal_coverage_review": "PASS",
+      "temporal_findings": [],
+      "comparability_review": "REVIEW",
+      "comparability_findings": [
+        "explicit_comparability_review"
+      ],
+      "leakage_preflight": "PASS",
+      "leakage_findings": [],
+      "minimum_observation_review": "BLOCK",
+      "minimum_observation_reason": "n_observations=6 below 24",
+      "source_card_gate": "PASS",
+      "imputation_review": "PASS",
+      "readiness_gate": "BLOCK",
+      "recommendation": "collect_data",
+      "publication_gate": "BLOCK",
+      "notes": [
+        "Derived from existing offline fixture evidence.",
+        "Short fixture history; not sufficient for official long-history backtest readiness."
+      ]
+    },
+    {
+      "indicator_id": "demography.life_expectancy_at_birth.total",
+      "source_id": "eurostat_sdmx",
+      "source_name": "Eurostat fixture",
+      "source_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/",
+      "frequency": "annual",
+      "start_year": 2018,
+      "end_year": 2023,
+      "n_observations": 6,
+      "unit": "years",
+      "definition": "demo_mlexpec",
+      "license_terms_scan": "REVIEW",
+      "license_reason": "license terms documented but human/legal review remains required",
+      "temporal_coverage_review": "PASS",
+      "temporal_findings": [],
+      "comparability_review": "REVIEW",
+      "comparability_findings": [
+        "explicit_comparability_review"
+      ],
+      "leakage_preflight": "PASS",
+      "leakage_findings": [],
+      "minimum_observation_review": "BLOCK",
+      "minimum_observation_reason": "n_observations=6 below 24",
+      "source_card_gate": "PASS",
+      "imputation_review": "PASS",
+      "readiness_gate": "BLOCK",
+      "recommendation": "collect_data",
+      "publication_gate": "BLOCK",
+      "notes": [
+        "Derived from existing offline fixture evidence.",
+        "Short fixture history; not sufficient for official long-history backtest readiness."
+      ]
+    }
+  ],
+  "license_terms_scan": "REVIEW",
+  "comparability_review": "REVIEW",
+  "leakage_preflight": "PASS",
+  "minimum_observation_review": "BLOCK",
+  "source_card_gate": "PASS",
+  "recommendation": "collect_data",
+  "reconstruction_test": {
+    "status": "PASS",
+    "score": 5,
+    "max_score": 5,
+    "answers": {
+      "what_v0_6_demonstrated": "The current calibration does not generalize out-of-sample on short fixtures.",
+      "why_not_same_fixture_tuning": "Further tuning on the same short history risks overfitting.",
+      "what_v0_7_builds": "A readiness layer for official long-history data, provenance, license, coverage, comparability and leakage checks.",
+      "publication_gates": "publication_gate=BLOCK with LicenseTermsScan, ComparabilityReview and human/legal review pending.",
+      "minimum_condition_for_backtest": "Official long-history series passing minimum observations, source metadata, license, comparability and leakage preflight."
+    },
+    "critical_omissions": []
+  },
+  "interpretation": {
+    "v0_6_status": "boundary_evidence",
+    "main_result": "Current short fixtures are not ready for renewed predictive backtesting.",
+    "public_claim_allowed": false,
+    "publication_gate_reason": "License terms, comparability and official long-history evidence remain under review."
+  },
+  "payload_sha256": "808d7563a9870ca5a4143689fdc1b79c7c120092c3ab085353128b65eba93b14",
+  "sha256_scope": "canonical_json_without_sha256_fields"
+}

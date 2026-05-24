@@ -10,7 +10,7 @@ from pathlib import Path
 from _common import ROOT, print_json
 
 
-TODAY = "2026-05-05"
+TODAY = "2026-05-06"
 ALLOWED_CACHE_DIRS = {
     "__pycache__",
     ".pytest_cache",
@@ -32,7 +32,13 @@ EXCLUDE_PARTS = {
     ".skills",
     "tools\\vendor",
     "tools/vendor",
+    "tools\\pentest_repos",
+    "tools/pentest_repos",
     "github-modules",
+    "core\\sadtalker",
+    "core/sadtalker",
+    "core\\wav2lip",
+    "core/wav2lip",
     "releases",
     "release",
 }

@@ -1,0 +1,12 @@
+{
+  "records": [
+    {
+      "schema_version": "claudio.memory_lite.v0.1",
+      "type": "episode",
+      "summary": "Synthetic command failed and needs repair.",
+      "source": "qa/example-failure.log",
+      "confidence": 0.9,
+      "durability": "active"
+    }
+  ]
+}

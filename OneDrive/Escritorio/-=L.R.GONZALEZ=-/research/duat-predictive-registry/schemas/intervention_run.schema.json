@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "duat.smallville.intervention_run.v0_2",
+  "title": "DUAT Smallville Intervention Run v0.2",
+  "type": "object",
+  "required": ["schema", "run_id", "intervention", "baseline_hash", "intervention_hash", "hash_linked", "intervention_delta", "boundary", "fingerprint"],
+  "properties": {
+    "schema": { "const": "duat.smallville.intervention_run.v0_2" },
+    "run_id": { "type": "string" },
+    "intervention": { "type": "string" },
+    "baseline_hash": { "type": "string" },
+    "intervention_hash": { "type": "string" },
+    "hash_linked": { "const": true },
+    "intervention_delta": {
+      "type": "object",
+      "required": ["delta_R_mean", "delta_Phi_eff_mean", "changed_agent_count", "changed_plan_count"]
+    },
+    "boundary": {
+      "type": "object",
+      "required": ["uses_real_data", "uses_network", "uses_credentials", "publication_gate"],
+      "properties": {
+        "uses_real_data": { "const": false },
+        "uses_network": { "const": false },
+        "uses_credentials": { "const": false },
+        "publication_gate": { "const": "BLOCK" }
+      }
+    },
+    "fingerprint": { "type": "string" }
+  }
+}

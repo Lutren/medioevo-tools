@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "duat.benchmark_matrix.v0_3",
+  "title": "DUAT Benchmark Matrix v0.3",
+  "type": "object",
+  "required": [
+    "run_id",
+    "publication_gate",
+    "action_gate_local",
+    "objectives",
+    "matrix_interpretation"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "run_id": { "const": "DUAT_PREDICTIVE_BENCHMARK_MATRIX_v0_3" },
+    "publication_gate": { "const": "BLOCK" },
+    "action_gate_local": { "enum": ["APPROVE_LOCAL", "REVIEW", "BLOCK"] },
+    "objectives": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["objective_id", "indicator", "data_mode", "forecast_gate", "publication_gate"],
+        "properties": {
+          "objective_id": { "type": "string" },
+          "indicator": { "type": "string" },
+          "data_mode": { "enum": ["real_fixture", "synthetic_fixture", "blocked_no_data"] },
+          "r_before": { "type": ["number", "null"] },
+          "r_after": { "type": ["number", "null"] },
+          "r_delta": { "type": ["number", "null"] },
+          "forecast_gate": { "enum": ["APPROVE_LOCAL", "APPROVE", "REVIEW", "BLOCK"] },
+          "publication_gate": { "const": "BLOCK" }
+        }
+      }
+    },
+    "matrix_interpretation": {
+      "type": "object",
+      "required": ["replication_status", "claim_level", "public_claim_allowed"],
+      "properties": {
+        "replication_status": {
+          "enum": ["REPLICATED_LOCAL", "MIXED_LOCAL", "NOT_REPLICATED", "BLOCKED_NO_DATA"]
+        },
+        "claim_level": { "const": "internal_technical_evidence_only" },
+        "public_claim_allowed": { "const": false }
+      }
+    }
+  }
+}

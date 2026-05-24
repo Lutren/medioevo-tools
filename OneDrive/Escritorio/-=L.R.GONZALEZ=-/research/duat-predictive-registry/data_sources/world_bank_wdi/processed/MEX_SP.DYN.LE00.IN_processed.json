@@ -1,0 +1,545 @@
+{
+  "run_id": "DUAT_WDI_OFFICIAL_SOURCE_PACK_v0_8",
+  "duat_indicator_id": "demography.life_expectancy_at_birth.total",
+  "wdi_indicator_code": "SP.DYN.LE00.IN",
+  "indicator_name": "Life expectancy at birth, total (years)",
+  "country_code": "MEX",
+  "country_name": "Mexico",
+  "frequency": "annual",
+  "unit": "years",
+  "accessed_at": "2026-05-15T07:47:50Z",
+  "source_url": "https://api.worldbank.org/v2/country/MEX/indicator/SP.DYN.LE00.IN?format=json&per_page=20000",
+  "terms_url": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets",
+  "records": [
+    {
+      "year": 1960,
+      "value": 53.573,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1961,
+      "value": 54.422,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1962,
+      "value": 55.057,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1963,
+      "value": 55.501,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1964,
+      "value": 55.916,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1965,
+      "value": 56.688,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1966,
+      "value": 57.355,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1967,
+      "value": 57.959,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1968,
+      "value": 58.22,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1969,
+      "value": 58.413,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1970,
+      "value": 58.893,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1971,
+      "value": 59.415,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1972,
+      "value": 60.051,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1973,
+      "value": 60.518,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1974,
+      "value": 61.18,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1975,
+      "value": 61.883,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1976,
+      "value": 62.475,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1977,
+      "value": 62.988,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1978,
+      "value": 63.435,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1979,
+      "value": 63.862,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1980,
+      "value": 64.282,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1981,
+      "value": 64.722,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1982,
+      "value": 65.256,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1983,
+      "value": 65.756,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1984,
+      "value": 66.215,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1985,
+      "value": 66.775,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1986,
+      "value": 67.377,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1987,
+      "value": 67.904,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1988,
+      "value": 68.299,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1989,
+      "value": 68.621,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1990,
+      "value": 69.034,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1991,
+      "value": 69.368,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1992,
+      "value": 69.663,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1993,
+      "value": 69.961,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1994,
+      "value": 70.302,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1995,
+      "value": 70.703,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1996,
+      "value": 71.088,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1997,
+      "value": 71.472,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1998,
+      "value": 71.792,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1999,
+      "value": 72.203,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2000,
+      "value": 72.562,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2001,
+      "value": 72.912,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2002,
+      "value": 73.106,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2003,
+      "value": 73.308,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2004,
+      "value": 73.432,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2005,
+      "value": 73.627,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2006,
+      "value": 73.746,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2007,
+      "value": 73.796,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2008,
+      "value": 73.695,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2009,
+      "value": 73.628,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2010,
+      "value": 73.718,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2011,
+      "value": 73.921,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2012,
+      "value": 74.128,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2013,
+      "value": 74.289,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2014,
+      "value": 74.404,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2015,
+      "value": 74.431,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2016,
+      "value": 74.376,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2017,
+      "value": 74.261,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2018,
+      "value": 74.301,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2019,
+      "value": 74.53,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2020,
+      "value": 70.449,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2021,
+      "value": 69.75,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2022,
+      "value": 73.973,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2023,
+      "value": 75.069,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2024,
+      "value": 75.264,
+      "indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    }
+  ],
+  "missing_years": [],
+  "duplicate_years": [],
+  "future_years": [],
+  "raw_file": "data_sources/world_bank_wdi/raw/MEX_SP.DYN.LE00.IN_raw.json",
+  "raw_sha256": "1537ce2600857d557771f844464a3426338b0ad5a274464352ff8d2aa812e798",
+  "transformation_notes": [
+    "Excluded observations with null values.",
+    "Sorted observations ascending by year.",
+    "No interpolation or imputation applied."
+  ]
+}

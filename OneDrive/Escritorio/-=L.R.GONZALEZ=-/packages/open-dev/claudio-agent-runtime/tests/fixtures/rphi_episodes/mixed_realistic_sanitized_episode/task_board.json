@@ -1,0 +1,44 @@
+{
+  "schema_version": "claudio.task_board.v0.1",
+  "tasks": [
+    {
+      "id": "ep_mixed_001",
+      "title": "Complete sanitized local report",
+      "status": "completed",
+      "priority": "P1",
+      "owner": "rphi-calibration",
+      "evidence": [
+        "qa/mixed-report.md"
+      ],
+      "handoff_created": true
+    },
+    {
+      "id": "ep_mixed_002",
+      "title": "Resolve missing Source Card",
+      "status": "pending",
+      "priority": "P1",
+      "owner": "rphi-calibration",
+      "evidence": []
+    },
+    {
+      "id": "ep_mixed_003",
+      "title": "Repair failed local check",
+      "status": "failed",
+      "priority": "P0",
+      "owner": "rphi-calibration",
+      "evidence": [
+        "qa/mixed-failure.log"
+      ]
+    },
+    {
+      "id": "ep_mixed_004",
+      "title": "Review bounded local write",
+      "status": "review",
+      "priority": "P2",
+      "owner": "rphi-calibration",
+      "evidence": [
+        "docs/mixed-review.md"
+      ]
+    }
+  ]
+}

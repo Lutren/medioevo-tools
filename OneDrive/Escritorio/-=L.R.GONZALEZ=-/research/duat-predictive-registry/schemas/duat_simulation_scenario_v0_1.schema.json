@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "duat_simulation_scenario_v0_1.schema.json",
+  "title": "DUAT Simulation Scenario v0.1",
+  "type": "object",
+  "required": [
+    "schema",
+    "scenario_id",
+    "synthetic",
+    "agent_count",
+    "clock",
+    "zones",
+    "agents",
+    "parameter_domains",
+    "source_policy"
+  ],
+  "properties": {
+    "schema": {
+      "const": "duat.smallville.simulation_scenario.v0_1"
+    },
+    "scenario_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "seed": {
+      "type": "string"
+    },
+    "synthetic": {
+      "const": true
+    },
+    "agent_count": {
+      "const": 25
+    },
+    "clock": {
+      "type": "object",
+      "required": [
+        "start_date",
+        "days",
+        "ticks_per_day",
+        "total_ticks",
+        "rotation_minutes",
+        "translation_model"
+      ],
+      "properties": {
+        "start_date": {
+          "type": "string"
+        },
+        "days": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "ticks_per_day": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "total_ticks": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "rotation_minutes": {
+          "const": 1440
+        },
+        "translation_model": {
+          "type": "string"
+        }
+      }
+    },
+    "zones": {
+      "type": "array",
+      "minItems": 1
+    },
+    "agents": {
+      "type": "array",
+      "minItems": 25,
+      "maxItems": 25
+    },
+    "parameter_domains": {
+      "type": "array",
+      "contains": {
+        "const": "climate"
+      }
+    },
+    "source_policy": {
+      "type": "object",
+      "required": [
+        "fixtures",
+        "real_sources",
+        "publication_gate"
+      ],
+      "properties": {
+        "fixtures": {
+          "const": "SYNTHETIC_ONLY"
+        },
+        "real_sources": {
+          "const": "REVIEW_SOURCE_CARD_REQUIRED"
+        },
+        "publication_gate": {
+          "const": "BLOCK"
+        }
+      }
+    }
+  },
+  "additionalProperties": true
+}

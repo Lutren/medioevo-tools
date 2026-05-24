@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "duat.smallville.metrics.v0_2",
+  "title": "DUAT Smallville Metrics v0.2",
+  "type": "object",
+  "required": ["schema", "run_id", "seed", "agents", "ticks", "events", "hash_chain_valid", "replay_verified", "baseline_hash", "intervention_hash", "R", "Phi_eff", "gates", "intervention_delta", "falsifiers", "boundary", "fingerprint"],
+  "properties": {
+    "schema": { "const": "duat.smallville.metrics.v0_2" },
+    "run_id": { "type": "string" },
+    "seed": { "type": "integer" },
+    "agents": { "const": 25 },
+    "ticks": { "type": "integer", "minimum": 1 },
+    "events": { "type": "integer", "minimum": 1 },
+    "hash_chain_valid": { "type": "boolean" },
+    "replay_verified": { "type": "boolean" },
+    "baseline_hash": { "type": "string" },
+    "intervention_hash": { "type": "string" },
+    "R": { "type": "object" },
+    "Phi_eff": { "type": "object" },
+    "gates": { "type": "object" },
+    "intervention_delta": { "type": "object" },
+    "falsifiers": { "type": "object" },
+    "boundary": {
+      "type": "object",
+      "properties": {
+        "uses_real_data": { "const": false },
+        "uses_network": { "const": false },
+        "uses_credentials": { "const": false },
+        "publication_gate": { "const": "BLOCK" }
+      }
+    },
+    "fingerprint": { "type": "string" }
+  }
+}

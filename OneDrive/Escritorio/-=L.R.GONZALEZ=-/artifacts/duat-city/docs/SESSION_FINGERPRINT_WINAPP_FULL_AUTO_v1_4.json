@@ -1,0 +1,59 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "20260520-064011",
+  "project": "MEDIOEVO/DUAT City Windows App",
+  "fingerprint": "DUAT-v1.4-WINAPP-FULL-AUTO",
+  "R_close": 0.18,
+  "Phi_eff": 0.81,
+  "regime_close": "FUNCIONAL",
+  "autonomy_level_used": 4,
+  "actiongate_summary": {
+    "approved": 24,
+    "review_required": 1,
+    "blocked": 0
+  },
+  "files_created": [
+    "tools/run-winapp-benchmark-v1_4.mjs",
+    "docs/HANDOFF_WINAPP_FULL_AUTO_v1_4.json",
+    "docs/TEST_REPORT_WINAPP_FULL_AUTO_v1_4.md",
+    "docs/NEXT_SESSION_BRIEF_WINAPP_FULL_AUTO_v1_4.md"
+  ],
+  "files_modified": [
+    "src/App.tsx",
+    "package.json",
+    "tools/capture-screenshots-v1_4.mjs",
+    "docs/HANDOFF_WINAPP_v1_4.json",
+    "docs/TEST_REPORT_WINAPP_v1_4.md",
+    "docs/NEXT_SESSION_BRIEF_WINAPP_v1_4.md"
+  ],
+  "commands_run": [
+    "pending_review.py --write --quiet",
+    "pnpm test",
+    "pnpm typecheck",
+    "pnpm build",
+    "pnpm winapp:build",
+    "pnpm winapp:smoke",
+    "pnpm winapp:benchmark",
+    "audio headed/headless QA",
+    "screenshot capture QA",
+    "asset integrity scan"
+  ],
+  "tests": {
+    "status": "passed",
+    "evidence": [
+      "106 files / 313 tests PASS",
+      "typecheck PASS",
+      "build PASS",
+      "winapp smoke PASS",
+      "winapp benchmark PASS"
+    ]
+  },
+  "decisions": [
+    "Keep publication/cloud/Wabi/MCP blocked",
+    "Do not claim human speaker audibility without owner confirmation"
+  ],
+  "pending": [
+    "Optional owner ear-check for speaker audibility"
+  ],
+  "next_action": "Optional manual speaker check using dist/winapp/DUATCity.exe"
+}

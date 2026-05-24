@@ -25,6 +25,18 @@ COMMANDS = [
         "private": False,
     },
     {
+        "name": "obs-safe-integration-kit-pytest",
+        "cwd": "packages/open-dev/obs-safe-integration-kit",
+        "command": ["python", "-m", "pytest", "tests", "-q"],
+        "private": False,
+    },
+    {
+        "name": "duat-genesis-pytest",
+        "cwd": "packages/open-dev/duat-genesis",
+        "command": ["python", "-m", "pytest", "tests", "-q"],
+        "private": False,
+    },
+    {
         "name": "geodia-social-observatory-pytest",
         "cwd": "research/geodia-social-observatory",
         "command": ["python", "-m", "pytest", "tests", "-q"],

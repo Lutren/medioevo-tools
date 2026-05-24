@@ -1,0 +1,309 @@
+import { useState, useRef } from "react";
+import { useGeodiaSimulation } from "@/contexts/SimulationContext";
+import {
+  FALSIFIER_CONTROLS, FalsifierControl, FalsifierResult, FalsifierRun,
+  runFalsifierMatrix, BASE_MODELS,
+} from "@/lib/physics";
+import { useAppendWitnessEvent } from "@workspace/api-client-react";
+import { PixelBorder, PixelButton, EpistLabel } from "./custom/PixelComponents";
+
+const CONTROL_DESC: Record<FalsifierControl, string> = {
+  shuffle_velocity: "PSI → señal mínima extrema (R≈0.05, ε≈0.93)",
+  permute_radius:   "R↔ε invertidos (1−R, 1−ε)",
+  flat_noise:       "Todo PSI = 0.5 (prior plano)",
+  mirror_curve:     "Todo PSI reflejado (x → 1−x)",
+};
+
+type Verdict = FalsifierResult["verdict"];
+
+function VerdictBadge({ verdict }: { verdict: Verdict }) {
+  const cls =
+    verdict === "PASS" ? "text-success border-success bg-success/10" :
+    verdict === "FAIL" ? "text-destructive border-destructive bg-destructive/10" :
+    verdict === "WARN" ? "text-yellow-400 border-yellow-400 bg-yellow-400/10" :
+    "text-foreground/30 border-foreground/20";
+  return (
+    <span className={`inline-block px-1 font-mono text-[8px] border ${cls} font-bold`}>
+      {verdict}
+    </span>
+  );
+}
+
+function MatrixCell({ result }: { result: FalsifierResult }) {
+  const [hovered, setHovered] = useState(false);
+  return (
+    <div
+      className="relative flex items-center justify-center cursor-default"
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
+      <VerdictBadge verdict={result.verdict} />
+      {hovered && result.verdict !== "N/A" && (
+        <div className="absolute z-20 bottom-full left-1/2 -translate-x-1/2 mb-1 bg-background border border-border p-1.5 shadow-lg whitespace-nowrap font-mono text-[8px] space-y-0.5 pointer-events-none">
+          <div>real: <span className="text-primary">{result.score_real.toFixed(3)}</span></div>
+          <div>pert: <span className="text-destructive">{result.score_perturbed.toFixed(3)}</span></div>
+          <div>Δ: <span className={result.delta > 0 ? "text-success" : "text-destructive"}>{result.delta > 0 ? "+" : ""}{result.delta.toFixed(3)}</span></div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function ProgressBar({ label, n, total, colorClass }: { label: string; n: number; total: number; colorClass: string }) {
+  return (
+    <div className="flex items-center gap-2">
+      <span className="font-mono text-[9px] w-8 text-foreground/60">{label}</span>
+      <div className="flex-1 h-2 bg-input border border-border/40 relative">
+        <div className={`absolute left-0 top-0 h-full ${colorClass}`} style={{ width: `${(n / Math.max(total, 1)) * 100}%` }} />
+      </div>
+      <span className="font-mono text-[9px] w-6 text-right text-foreground/70">{n}</span>
+    </div>
+  );
+}
+
+export default function FalsifierPanel() {
+  const { state } = useGeodiaSimulation();
+  const appendWitness = useAppendWitnessEvent();
+
+  const [run, setRun] = useState<FalsifierRun | null>(null);
+  const [running, setRunning] = useState(false);
+  const [detail, setDetail] = useState<string | null>(null);
+  const [history, setHistory] = useState<FalsifierRun[]>([]);
+  const stepRef = useRef(0);
+  const [progress, setProgress] = useState(0);
+
+  const totalSteps = BASE_MODELS.length * FALSIFIER_CONTROLS.length;
+
+  const handleRun = () => {
+    setRunning(true);
+    setProgress(0);
+    stepRef.current = 0;
+
+    let p = 0;
+    const tick = setInterval(() => {
+      p += 1;
+      setProgress(p);
+      if (p >= totalSteps) {
+        clearInterval(tick);
+        const result = runFalsifierMatrix(state.psi, state.tick);
+        setRun(result);
+        setHistory(prev => [result, ...prev].slice(0, 5));
+        setRunning(false);
+
+        appendWitness.mutate({
+          data: {
+            event_type: "physics_compare",
+            payload_summary: `tick=${state.tick} pass=${result.pass_count} fail=${result.fail_count} warn=${result.warn_count} label=${result.summary_label}`,
+            mode: state.mode as any,
+            run_fingerprint: state.fingerprint,
+          }
+        });
+      }
+    }, 40);
+  };
+
+  const modelResults = (modelName: string) =>
+    run?.results.filter(r => r.model === modelName) ?? [];
+
+  const controlResults = (control: FalsifierControl) =>
+    run?.results.filter(r => r.control === control) ?? [];
+
+  const detailResults = detail ? modelResults(detail) : [];
+
+  return (
+    <div className="flex flex-col h-full overflow-hidden gap-2">
+      <div className="font-display text-xs border-b border-border pb-1 font-bold flex justify-between shrink-0">
+        <span>FALSIFIER RUN // NEGATIVE CONTROLS</span>
+        <span className="text-destructive text-[9px]">SYNTHETIC_ONLY</span>
+      </div>
+
+      <PixelBorder className="shrink-0 p-2 bg-destructive/5 border-destructive/40">
+        <div className="font-mono text-[8px] text-destructive text-center">
+          CONTROLES NEGATIVOS SINTÉTICOS — sin validación de datos reales
+        </div>
+      </PixelBorder>
+
+      <div className="shrink-0 space-y-1">
+        <div className="font-mono text-[8px] text-foreground/50 space-y-0.5">
+          {FALSIFIER_CONTROLS.map(c => (
+            <div key={c} className="flex gap-1">
+              <span className="text-primary font-bold shrink-0">{c}:</span>
+              <span className="text-foreground/40">{CONTROL_DESC[c]}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="shrink-0 flex items-center gap-2">
+        <PixelButton
+          onClick={handleRun}
+          disabled={running}
+          className={`flex-1 text-[9px] py-1 ${running ? "border-primary text-primary" : "border-success text-success"}`}
+        >
+          {running ? `[EJECUTANDO... ${progress}/${totalSteps}]` : "[EJECUTAR FALSIFIER RUN]"}
+        </PixelButton>
+        <div className="font-mono text-[8px] text-foreground/40">tick {state.tick}</div>
+      </div>
+
+      {running && (
+        <div className="shrink-0 h-1.5 bg-input border border-border overflow-hidden">
+          <div
+            className="h-full bg-primary transition-all duration-100"
+            style={{ width: `${(progress / totalSteps) * 100}%` }}
+          />
+        </div>
+      )}
+
+      {run && !running && (
+        <div className="flex-1 overflow-y-auto space-y-2 pr-1">
+          <PixelBorder className="p-2 space-y-1.5">
+            <div className="font-display text-[9px] font-bold flex justify-between">
+              <span>RESULTADO DEL RUN</span>
+              <EpistLabel label={run.summary_label} className="text-[7px] py-0 px-0.5" />
+            </div>
+            <ProgressBar label="PASS" n={run.pass_count} total={totalSteps - BASE_MODELS.length} colorClass="bg-success" />
+            <ProgressBar label="WARN" n={run.warn_count} total={totalSteps - BASE_MODELS.length} colorClass="bg-yellow-400" />
+            <ProgressBar label="FAIL" n={run.fail_count} total={totalSteps - BASE_MODELS.length} colorClass="bg-destructive" />
+          </PixelBorder>
+
+          <PixelBorder className="p-1.5">
+            <div className="font-display text-[9px] font-bold mb-2 text-primary">
+              MATRIX 10 MODELOS × 4 CONTROLES
+            </div>
+            <div className="overflow-x-auto">
+              <table className="w-full text-[8px] font-mono border-collapse">
+                <thead>
+                  <tr>
+                    <th className="text-left text-foreground/40 font-normal pb-1 pr-1 w-24">modelo</th>
+                    {FALSIFIER_CONTROLS.map(c => (
+                      <th key={c} className="text-center text-foreground/50 font-normal pb-1 px-0.5 w-14">
+                        {c.replace("_", " ").split(" ")[0]}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {BASE_MODELS.map(m => {
+                    const mr = modelResults(m.name);
+                    const allPass = mr.every(r => r.verdict === "PASS" || r.verdict === "N/A");
+                    const anyFail = mr.some(r => r.verdict === "FAIL");
+                    return (
+                      <tr
+                        key={m.name}
+                        onClick={() => setDetail(detail === m.name ? null : m.name)}
+                        className={`cursor-pointer hover:bg-input/50 transition-colors ${detail === m.name ? "bg-input/70" : ""}`}
+                      >
+                        <td className={`py-0.5 pr-1 font-bold uppercase truncate max-w-[90px] ${
+                          m.isBaseline ? "text-foreground/30" :
+                          allPass ? "text-success" :
+                          anyFail ? "text-destructive" : "text-primary"
+                        }`}>
+                          {m.name}
+                        </td>
+                        {FALSIFIER_CONTROLS.map(c => {
+                          const r = mr.find(x => x.control === c);
+                          return (
+                            <td key={c} className="py-0.5 px-0.5 text-center">
+                              {r ? <MatrixCell result={r} /> : <span className="text-foreground/20">—</span>}
+                            </td>
+                          );
+                        })}
+                      </tr>
+                    );
+                  })}
+                  <tr className="border-t border-border/30">
+                    <td className="text-foreground/30 text-[7px] pt-1">total</td>
+                    {FALSIFIER_CONTROLS.map(c => {
+                      const cr = controlResults(c);
+                      const p = cr.filter(r => r.verdict === "PASS").length;
+                      const f = cr.filter(r => r.verdict === "FAIL").length;
+                      return (
+                        <td key={c} className="text-center pt-1">
+                          <span className={`text-[8px] font-mono ${f > 3 ? "text-destructive" : p > 5 ? "text-success" : "text-yellow-400"}`}>
+                            {p}P/{f}F
+                          </span>
+                        </td>
+                      );
+                    })}
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div className="font-mono text-[7px] text-foreground/30 mt-1">
+              Hover celda para ver scores. Click fila para detalle.
+            </div>
+          </PixelBorder>
+
+          {detail && detailResults.length > 0 && (
+            <PixelBorder className="p-2 border-primary/40">
+              <div className="font-display text-[9px] font-bold mb-2 flex justify-between">
+                <span className="uppercase">{detail} // DETALLE</span>
+                <button onClick={() => setDetail(null)} className="text-foreground/40 hover:text-foreground font-mono text-[9px]">✕</button>
+              </div>
+              <div className="space-y-1.5">
+                {detailResults.map(r => (
+                  <div key={r.control} className="flex items-center gap-2">
+                    <span className="font-mono text-[8px] text-foreground/50 w-28 shrink-0">{r.control}</span>
+                    <VerdictBadge verdict={r.verdict} />
+                    {r.verdict !== "N/A" && (
+                      <div className="flex-1 font-mono text-[8px] text-right space-x-2 text-foreground/60">
+                        <span>real <span className="text-primary">{r.score_real.toFixed(3)}</span></span>
+                        <span>pert <span className="text-destructive">{r.score_perturbed.toFixed(3)}</span></span>
+                        <span>Δ <span className={r.delta > 0 ? "text-success" : "text-destructive"}>
+                          {r.delta > 0 ? "+" : ""}{r.delta.toFixed(3)}
+                        </span></span>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </PixelBorder>
+          )}
+
+          {history.length > 1 && (
+            <PixelBorder className="p-2 border-dashed border-border/40">
+              <div className="font-mono text-[9px] font-bold text-foreground/50 mb-1">HISTORIAL DE RUNS</div>
+              <div className="space-y-0.5">
+                {history.map((h, i) => (
+                  <div
+                    key={h.timestamp}
+                    onClick={() => setRun(h)}
+                    className={`flex items-center gap-2 cursor-pointer hover:bg-input/50 px-1 py-0.5 rounded-sm transition-colors ${i === 0 ? "text-foreground" : "text-foreground/50"}`}
+                  >
+                    <span className="font-mono text-[7px] text-foreground/30">
+                      {new Date(h.timestamp).toLocaleTimeString()}
+                    </span>
+                    <span className="font-mono text-[8px]">tick {h.tick}</span>
+                    <span className="font-mono text-[7px] text-success">{h.pass_count}P</span>
+                    <span className="font-mono text-[7px] text-yellow-400">{h.warn_count}W</span>
+                    <span className="font-mono text-[7px] text-destructive">{h.fail_count}F</span>
+                    <EpistLabel label={h.summary_label} className="text-[6px] py-0 px-0.5 ml-auto" />
+                  </div>
+                ))}
+              </div>
+            </PixelBorder>
+          )}
+
+          <div className="font-mono text-[8px] text-foreground/30 border border-border/30 p-1.5 text-center">
+            PASS = modelo pierde ventaja cuando datos son perturbados (Δ &gt; 0.12)<br />
+            FAIL = modelo ajusta datos perturbados igual o mejor (Δ ≤ 0)<br />
+            WARN = caída insuficiente (0 ≤ Δ ≤ 0.12)
+          </div>
+        </div>
+      )}
+
+      {!run && !running && (
+        <div className="flex-1 flex items-center justify-center">
+          <div className="text-center space-y-2">
+            <div className="font-mono text-[9px] text-foreground/40">
+              Ejecuta el falsifier para ver resultados.
+            </div>
+            <div className="font-mono text-[8px] text-foreground/25">
+              {totalSteps} pruebas × PSI actual
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}

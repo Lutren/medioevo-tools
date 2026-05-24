@@ -1,0 +1,57 @@
+{
+  "schema": "duat/audio-headed-qa/v1.4",
+  "fingerprint": "DUAT-v1.4-OSIT-OBSERVACIONISMO-FULL",
+  "generatedAt": "2026-05-20T12:22:00.008Z",
+  "appUrl": "http://127.0.0.1:18651/duat-city/?mode=CITY&view=OPERATIONAL&sceneDemo=fire_smoke&vibe=warm_interior_tavern&nativeWin=1",
+  "browserMode": "Edge/CDP/headed",
+  "focusAttempt": "focused_by_pid",
+  "focusStatus": "focused",
+  "audioOffByDefault": true,
+  "browserAudioAvailable": true,
+  "enableClicked": true,
+  "previewClicked": true,
+  "afterEnable": {
+    "schema": "duat/audio-gamefeel-headed-qa/v1.4",
+    "enabled": true,
+    "lastPreview": "browser audio enabled by local gesture",
+    "cueCount": 22,
+    "topCueKinds": [
+      "material_fire",
+      "material_fire",
+      "cosmology_fire_event",
+      "cosmology_fire_event",
+      "light_fire"
+    ],
+    "browserAudioAvailable": true,
+    "audioOffByDefault": false,
+    "noCloud": true,
+    "noSamples": true
+  },
+  "afterPreview": {
+    "schema": "duat/audio-gamefeel-headed-qa/v1.4",
+    "enabled": true,
+    "lastPreview": "previewed 6 procedural cues",
+    "cueCount": 22,
+    "topCueKinds": [
+      "material_fire",
+      "material_fire",
+      "cosmology_fire_event",
+      "cosmology_fire_event",
+      "light_fire"
+    ],
+    "browserAudioAvailable": true,
+    "audioOffByDefault": false,
+    "noCloud": true,
+    "noSamples": true
+  },
+  "enableLatencyMs": 64603.5,
+  "previewLatencyMs": 60744.9,
+  "proceduralPreviewConfirmed": true,
+  "audibleConfirmedByHuman": false,
+  "notes": [
+    "CDP dispatched headed mouse clicks to Enable and Preview.",
+    "Audio remains off by default before the local gesture.",
+    "This verifies browser AudioContext/procedural preview state, not human-perceived audibility.",
+    "No samples, cloud, Wabi execution, push, deploy or MCP execution were used."
+  ]
+}

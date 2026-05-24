@@ -1,0 +1,35 @@
+{
+  "schema": "medioevo.comms.agent_state.v1",
+  "generated_at_utc": "2026-05-06T14:46:23Z",
+  "agent_id": "publicidad-growth-observatorio",
+  "status": "ACTIVE_LOCAL_AGENT_SPEC_EXTERNAL_BLOCKED",
+  "department_slug": "plaza-mercado-growth",
+  "action_gate": "REVIEW",
+  "reports_to": "publicacion-perfiles-observatorio",
+  "owns": [
+    "growth hypotheses",
+    "landing page angle drafts",
+    "campaign message tests",
+    "visitor funnel recommendations"
+  ],
+  "may_touch": [
+    "docs/publishing/*GROWTH*.md",
+    "docs/publishing/*FUNNEL*.md",
+    "docs/publishing/*CAMPAIGN*.md",
+    "COMMS/agents_state/publicidad-growth-observatorio.json",
+    "COMMS/handoffs/*publicidad-growth-observatorio*.md",
+    "qa_artifacts/release_validation/publicidad-growth-observatorio-*.json"
+  ],
+  "must_not_touch_without_handoff": [
+    "paid ads",
+    "payment changes",
+    "website deploy",
+    "analytics account changes",
+    "Gumroad/GitHub/Sponsors dashboards",
+    "private research raw dumps",
+    "RPG/TCG or unpublished canon"
+  ],
+  "current_handoff": "COMMS/handoffs/2026-05-06-observacionista-public-launch-team.md",
+  "current_outbox": null,
+  "last_observation_fingerprint": "OBSERVACIONISTA_PUBLIC_LAUNCH_TEAM_REGISTERED_2026_05_06"
+}

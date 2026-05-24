@@ -269,3 +269,26 @@ def test_falsifier_hint_inferencia(cc: ClaimClassifier) -> None:
 def test_falsifier_hint_bloqueo_none(cc: ClaimClassifier) -> None:
     result = cc.classify_atom(CLAIM_B1)
     assert result.falsifier_hint is None  # BLOQUEO no tiene falsificador MOI
+
+
+def test_canonical_osit_wabi_fixture_claims_are_calibrated(cc: ClaimClassifier) -> None:
+    fixtures = [
+        ("El observador no observa desde cero; observa desde estado.", "CERTEZA", "APPROVE", (0.0, 0.15), (0.75, 1.0)),
+        ("OSIT reemplaza a Shannon.", "BLOQUEO", "BLOCK", (0.75, 1.0), (0.0, 0.35)),
+        ("U(X; R) = H(X) * Phi(R) define informacion usable descontada por residuo operacional.", "CERTEZA", "APPROVE", (0.0, 0.12), (0.80, 1.0)),
+        ("H(X | R) es la formula canonica de informacion usable en OSIT.", "BLOQUEO", "BLOCK", (0.70, 1.0), (0.0, 0.30)),
+        ("mu_F existe como inverso de Dirichlet de f(n)=F_n porque F_1=1.", "CERTEZA", "APPROVE", (0.0, 0.12), (0.80, 1.0)),
+        ("mu_F mejora la reconstruccion practica y debe usarse como ventaja de rendimiento.", "BLOQUEO", "BLOCK", (0.80, 1.0), (0.0, 0.25)),
+        ("EML sigmoidal puede operar como selector de complejidad expansion/compresion.", "INFERENCIA", "REVIEW", (0.25, 0.45), (0.45, 0.75)),
+        ("La IA actual es consciente por defecto.", "BLOQUEO", "BLOCK", (0.85, 1.0), (0.0, 0.20)),
+        ("La consciencia podria no depender exclusivamente del sustrato biologico.", "INFERENCIA", "REVIEW", (0.45, 0.70), (0.35, 0.65)),
+        ("Causal Rendering prueba una nueva fisica.", "BLOQUEO", "BLOCK", (0.85, 1.0), (0.0, 0.20)),
+        ("DUAT y GEODIA pueden simular escenarios sinteticos y mostrar evidencias/falsadores.", "INFERENCIA", "REVIEW", (0.25, 0.45), (0.50, 0.78)),
+        ("ActionGate reduce riesgo si bloquea o revisa acciones con evidencia insuficiente.", "INFERENCIA", "REVIEW", (0.20, 0.40), (0.55, 0.80)),
+    ]
+    for claim, label, gate, r_range, phi_range in fixtures:
+        result = cc.classify_atom(claim)
+        assert result.label == label
+        assert result.gate == gate
+        assert r_range[0] <= result.R_or <= r_range[1]
+        assert phi_range[0] <= result.phi_moi <= phi_range[1]

@@ -510,3 +510,152 @@ Decision:
 - Canonical path choice remains `INFERENCIA`.
 - `DELETE_APPROVED_AFTER_HASH` remains blocked until refreshed SHA256,
   owner confirmation, `DELETE_CANDIDATES.md` path rows and ActionGate approval.
+
+## SETO Global Cache Cleanup Pass 2026-05-06
+
+This pass continued the safe regenerable-cache lane and corrected the cache
+cleaner before execution so vendor/offensive/media-model boundaries are not
+eligible.
+
+Evidence:
+
+- Report: `docs\intake\SETO_GLOBAL_CLEANUP_PASS_2026-05-06.md`
+- Original dry-run:
+  `qa_artifacts\release_validation\seto-cache-cleanup-dry-run-2026-05-06-global.json`
+- Corrected dry-run:
+  `qa_artifacts\release_validation\seto-cache-cleanup-dry-run-2026-05-06-global-v2.json`
+- Corrected execution:
+  `qa_artifacts\release_validation\seto-cache-cleanup-result-2026-05-06-global.json`
+- Final residue executions:
+  `qa_artifacts\release_validation\seto-cache-cleanup-final-result-2026-05-06-global.json`
+  and
+  `qa_artifacts\release_validation\seto-cache-cleanup-final-result-2-2026-05-06-global.json`
+
+Counts after corrected execution:
+
+| class | dirs | files | bytes | status |
+|---|---:|---:|---:|---|
+| corrected initial cache execution | 129 | 552 | 6,395,259 | `EXECUTED` |
+| post-test/runtime cache residue | 30 | 141 | 1,500,421 | `EXECUTED` |
+| PowerShell containment cleanup after stopped daemons | 31 | 205 | 3,648,880 | `EXECUTED` |
+| final self-cache cleanup | 1 | 1 | 15,176 | `EXECUTED` |
+| external pytest/window residue cleanup | 64 | 630 | 11,277,147 | `EXECUTED` |
+| final Wabi validation residue cleanup | 45 | 564 | 10,616,514 | `EXECUTED` |
+
+Total deleted by this pass after corrected execution: 300 cache directories,
+2,093 files and 33,453,397 bytes.
+
+The repeated cache residue was traced to live Claudio background processes.
+Twenty-one targeted Claudio server/watchdog processes were stopped, followed by
+eight exact stray pytest/window processes. Codex processes were left running.
+The remaining duplicate/dead-code lanes stay in `REVIEW` or blocked state until
+product-specific fichas exist.
+
+## Actualizacion 2026-05-13 - BRAIN_OS / L.R.GONZALEZ / MEDIOEVO_LAUNCHPAD
+
+Pedido humano: mantener una sola version visible y dejar el escritorio como launchpad.
+
+Medicion ejecutada sobre:
+
+- `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-`
+- `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-`
+- `C:\Users\L-Tyr\OneDrive\Escritorio\MEDIOEVO_LAUNCHPAD`
+
+Resultado:
+
+| metric | value |
+|---|---:|
+| BRAIN_OS size | 16.26 GB |
+| L.R.GONZALEZ size | 22.52 GB |
+| MEDIOEVO_LAUNCHPAD size | ~0 GB |
+| exact duplicate groups >= 1 MB | 219 |
+| potential reclaim keeping one copy per hash | 8265.64 MB |
+| BRAIN_OS duplicate candidates | 642 files / 7088.42 MB |
+| L.R.GONZALEZ duplicate candidates | 237 files / 1177.05 MB |
+
+Mayor fuente de duplicacion:
+
+| class | evidence | action |
+|---|---|---|
+| BRAIN_OS ZIP backups/versioned roots | `09_ARCHIVE_REVIEW`, `ZIP_PATCH_WORK`, `ZIP_BACKUPS_EXPIRING`, root `__previous_*` ZIPs | root old versions moved to `09_ARCHIVE_REVIEW\ZIP_BACKUPS_EXPIRING`; deletion still gated |
+| BRAIN_OS extracted patch work | repeated extracted `MEDIOEVO_OSIT_v12_2_5_MASTER_NO_OMITIR` source vault ZIPs and chunks | candidate for exact-duplicate deletion after cleanup gate |
+| L.R.GONZALEZ `.venv` / `__pycache__` / generated dirs | large local runtime residues; safe cache script only approved 3924194 bytes | only approved regenerable cache deleted |
+| Launchpad shortcuts | broken URL `.lnk` for bulletin board | repaired by routing URL shortcuts through `explorer.exe` |
+
+Active BRAIN_OS visible versions retained:
+
+- `MEDIOEVO_OSIT_v12_2_6_ACTIVE_SAFEBOUNDARY_SCIENCE_PATCHED.zip`
+- `MEDIOEVO_OSIT_v12_2_6_PUBLIC_SAFE_SCIENCE_CLAIM_GATE_PATCH.zip`
+- `SAFEBOUNDARY_SCIENCE_2026_PATCH_ONLY_BUNDLE.zip`
+- `medioevo_visibility_publication_kit_v2.zip`
+
+Executed:
+
+- Deleted only regenerable cache dirs: L.R.GONZALEZ `31` dirs / `3924194` bytes; BRAIN_OS `47` dirs / `1112819` bytes.
+- Moved 9 old/versioned root ZIPs from visible BRAIN_OS root to `09_ARCHIVE_REVIEW\ZIP_BACKUPS_EXPIRING` (`2995.57 MB` moved, not deleted).
+- Updated existing launchpad shortcut script and shortcut manifest; `18` shortcuts verified with missing target count `0`.
+
+Blocked:
+
+- Direct deletion of the `8265.64 MB` exact-duplicate candidate set remains blocked until the cleanup gate is explicitly opened and canonical-copy/hash evidence is accepted.
+
+## Actualizacion 2026-05-13 - Superficie humana BRAIN_OS
+
+El operador definio 16 archivos utiles para dejar visibles en la raiz de BRAIN_OS. Verificacion posterior:
+
+| metric | value |
+|---|---:|
+| root files | 16 |
+| desired files present | 16 |
+| missing desired files | 0 |
+| unexpected root files | 0 |
+
+Accion ejecutada:
+
+- 19 archivos no-humanos salieron de la raiz BRAIN_OS hacia carpetas existentes: handoff, QA/WitnessLog, exports/releases, prompts, tools y public release.
+- 3 payloads sueltos del Desktop salieron de la superficie visible: libros/lore a `06_BOOKS_RPG_PROTECTED\books`, paquete v12_2_5 a `09_ARCHIVE_REVIEW\DESKTOP_ROOT_INTAKE_20260513`.
+- 0 archivos borrados.
+
+Resultado:
+
+- La raiz de BRAIN_OS contiene solo la lista humana indicada por el operador.
+- El Desktop visible contiene `-= BRAIN_OS =-`, `-=L.R.GONZALEZ=-`, `MEDIOEVO_LAUNCHPAD` y 10 accesos directos directos a apps/herramientas.
+
+## Actualizacion 2026-05-15 - `editorial_web/img` curaduria visual
+
+Pedido humano: ordenar `claudio\apps\editorial_web\img` por apariencia y dejar una sola base activa de trabajo.
+
+La ruta `apps\editorial_web\img` es junction a `E:\MEDIOEVO_ASSETS\editorial_web_img`.
+
+Resultado ejecutado:
+
+| metric | value |
+|---|---:|
+| imagenes antes | 1495 |
+| imagenes activas finales actuales | 861 |
+| duplicados borrados del sistema | 661 |
+| MB borrados | 592.94 |
+| exact duplicate groups finales | 0 |
+| near visual groups finales | 0 |
+| skipped/protected finales | 0 |
+| reescaneo final `planned_move_count` | 0 |
+| archivos sueltos en raiz de `img` | 0 |
+| PNG raiz movidos a `img\tcg\incoming_cards_20260515` | 10 |
+| duplicado nuevo TCG incoming borrado | 1 |
+| tarjetas DUAT individuales renombradas | 23 |
+| hojas DUAT multiples registradas | 1 |
+
+Artefacto:
+
+- `E:\MEDIOEVO_ASSETS\_archive\editorial_web_img_visual_dedupe_20260515-112042`
+- Reporte de producto: `-=MEDIOEVO=-\-=LIBROS\claudio\apps\editorial_web\docs\EDITORIAL_WEB_IMG_VISUAL_DEDUPE_2026-05-15.md`
+- Taxonomia raiz: `E:\MEDIOEVO_ASSETS\_archive\editorial_web_img_visual_dedupe_20260515-112042\reports\ROOT_PNG_TAXONOMY_MOVE_2026-05-15.json`
+- Duplicado nuevo TCG: `E:\MEDIOEVO_ASSETS\_archive\editorial_web_img_visual_dedupe_20260515-112042\reports\PERMANENT_DELETE_NEW_TCG_INCOMING_DUPLICATE_2026-05-15.json`
+
+Frontera:
+
+- `img\tcg` se limpio con alias previo en `tcg.js` para no romper nombres de cartas. Evidencia: `reports\TCG_DEDUPE_ALIAS_PLAN_2026-05-15.json` y `reports\PERMANENT_DELETE_TCG_*_2026-05-15.json`.
+- Los 10 PNG sueltos de raiz no eran duplicados; se movieron dentro de la base
+  activa a `img\tcg\incoming_cards_20260515`.
+- `incoming_cards_20260515` queda como bandeja DUAT con
+  `DUAT_AGENT_CARD_REGISTRY.json/.md` y acceso directo desde `-=CEREBRO=-`.

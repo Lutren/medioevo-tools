@@ -1,0 +1,16 @@
+{
+  "schema_version": "claudio.task_board.v0.1",
+  "tasks": [
+    {
+      "id": "task-runtime-p0",
+      "title": "Implement local dry-run doctor and permission checks",
+      "status": "pending",
+      "priority": "P0",
+      "owner": "claudio-agent-runtime",
+      "evidence": [
+        "fixtures present"
+      ]
+    }
+  ]
+}
+

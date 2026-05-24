@@ -1,0 +1,35 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "20260520-DUAT-v1.3.2",
+  "project": "DUAT City",
+  "fingerprint": "DUAT-v1.3.2-LOVABLE-ISO-EXTRACTION-VERMEER-LIGHT",
+  "R_close": 0.18,
+  "Phi_eff": 0.82,
+  "regime_close": "FUNCIONAL",
+  "autonomy_level_used": 4,
+  "actiongate_summary": {
+    "approved": 12,
+    "review_required": 1,
+    "blocked": 6
+  },
+  "tests": {
+    "status": "passed",
+    "evidence": [
+      "100 files / 303 tests PASS",
+      "typecheck PASS",
+      "build PASS",
+      "HTTP smoke 200"
+    ]
+  },
+  "decisions": [
+    "No raw zip renderer code executed.",
+    "Iso3D adapter remains feature-flagged with Canvas fallback.",
+    "Audio headed QA timeout documented as fallback."
+  ],
+  "pending": [
+    "Manual audible confirmation",
+    "License review before asset copying",
+    "Headed FPS after Iso3D renderer graduation"
+  ],
+  "next_action": "Open localhost, enable Iso3D preview, enable audio by local gesture, record audible cues and headed FPS."
+}

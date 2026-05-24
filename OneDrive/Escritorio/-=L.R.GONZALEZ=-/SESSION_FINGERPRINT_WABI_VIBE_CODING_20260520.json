@@ -1,0 +1,70 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "WABI_VIBE_CODING_MODE_20260520",
+  "project": "MEDIOEVO/CLAUDIO/WABI",
+  "R_close": 0.08,
+  "Phi_eff": 0.91,
+  "regime_close": "FUNCIONAL_VIBE_CODING",
+  "autonomy_level_used": 4,
+  "actiongate_summary": {
+    "approved": 8,
+    "review_required": 1,
+    "blocked": 0
+  },
+  "cloud_gate": "PROPOSAL_ONLY_DOUBLE_OPT_IN",
+  "cloud_provider_called": false,
+  "applied_to_sources": false,
+  "graphics_live": false,
+  "publication_gate": "BLOCK",
+  "files_created": [
+    "apps/local/wabi-sabi/docs/WABI_VIBE_CODING_MODE_2026-05-20.md",
+    "SESSION_FINGERPRINT_WABI_VIBE_CODING_20260520.json"
+  ],
+  "files_modified": [
+    "apps/local/wabi-sabi/wabi_sabi/core/llm_work_response.py",
+    "apps/local/wabi-sabi/tests/test_llm_work_response.py",
+    "apps/local/wabi-sabi/tests/test_conversational_cli.py",
+    "C:/Users/L-Tyr/OneDrive/Escritorio/-= BRAIN_OS =-/02_CLAUDIO/server/wabi_local_server.py",
+    "C:/Users/L-Tyr/OneDrive/Escritorio/-= BRAIN_OS =-/apps/local/wabi_ui/index.html",
+    "C:/Users/L-Tyr/OneDrive/Escritorio/-= BRAIN_OS =-/02_CLAUDIO/tests/test_wabi_conversation_api.py",
+    "C:/Users/L-Tyr/OneDrive/Escritorio/-= BRAIN_OS =-/02_CLAUDIO/tests/test_wabi_llm_work_response_api.py",
+    "C:/Users/L-Tyr/OneDrive/Escritorio/-= BRAIN_OS =-/02_CLAUDIO/tests/test_wabi_llm_proposal_api.py",
+    "NEXT_SESSION_BRIEF.md",
+    "TEST_REPORT.md",
+    "DECISIONS.md",
+    "RISKS.md",
+    "ASSUMPTIONS.md",
+    "TASKS.md"
+  ],
+  "commands_run": [
+    "python tools/release/pending_review.py --write --quiet (timed out at 120s)",
+    "python -B -m pytest tests/test_llm_work_response.py tests/test_llm_proposal.py tests/test_conversational_cli.py tests/test_cli.py -q -p no:cacheprovider",
+    "python -B -m pytest 02_CLAUDIO/tests/test_wabi_conversation_api.py 02_CLAUDIO/tests/test_wabi_llm_work_response_api.py 02_CLAUDIO/tests/test_wabi_llm_proposal_api.py 02_CLAUDIO/tests/test_wabi_taskspec_review_api.py 02_CLAUDIO/tests/test_wabi_local_apply_api.py -q -p no:cacheprovider",
+    "python -B -m py_compile wabi_sabi/core/llm_work_response.py wabi_sabi/core/llm_proposal.py wabi_sabi/core/conversation_engine.py wabi_sabi/cli/main.py 02_CLAUDIO/server/wabi_local_server.py",
+    "wabi --once \"programa un helper seguro para validar JSON y genera tests asociados\" --json",
+    "wabi --once \"crea una escena DUAT con nodos de agentes y handoff\" --json",
+    "Invoke-WebRequest http://127.0.0.1:8787/"
+  ],
+  "tests": {
+    "status": "passed",
+    "evidence": [
+      "Wabi focal: 30 passed",
+      "BRAIN_OS API/UI focal: 25 passed",
+      "py_compile: PASS",
+      "HTTP UI smoke: 200",
+      "FOCAL_SECRET_PATTERN_COUNT=0"
+    ]
+  },
+  "decisions": [
+    "Vibe Coding is an interaction mode over the existing Wabi gates, not a new executor.",
+    "Cloud remains proposal-only and double-opt-in gated.",
+    "DUAT graphics remains plan-only with graphics_live=false.",
+    "Apply Local remains separate and explicit."
+  ],
+  "pending": [
+    "Run visual screenshot smoke when Browser tool is exposed.",
+    "Use Vibe Coding on a small local task and review Apply Local Preview.",
+    "Keep GitHub/medioevo.space release blocked until repo/assets gates pass."
+  ],
+  "next_action": "Use Wabi Vibe Coding for one small local task, inspect TaskSpec and Apply Local Preview, then apply only if readiness passes."
+}

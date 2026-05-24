@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 from typing import Any
 
+from .epistemic_engine import OSITEpistemicEngine, run_epistemic_server
 from .fingerprint import make_fingerprint
 from .gate import evaluate_action
 from .jsonutil import pretty_json
@@ -75,6 +76,16 @@ def command_simulate_world(args: argparse.Namespace) -> int:
     return 0
 
 
+def command_classify_text(args: argparse.Namespace) -> int:
+    print(pretty_json(OSITEpistemicEngine().classify_text(args.text, task=args.task)))
+    return 0
+
+
+def command_serve_epistemic_engine(args: argparse.Namespace) -> int:
+    run_epistemic_server(host=args.host, port=args.port)
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="obsai-core operational CLI.")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -104,6 +115,16 @@ def build_parser() -> argparse.ArgumentParser:
     world.add_argument("--ticks", type=int, default=20)
     world.add_argument("--seed", default="obsai")
     world.set_defaults(func=command_simulate_world)
+
+    classify = sub.add_parser("classify-text", help="classify text through the local OSIT epistemic engine")
+    classify.add_argument("--text", required=True)
+    classify.add_argument("--task", default="osit_epistemic_engine")
+    classify.set_defaults(func=command_classify_text)
+
+    serve = sub.add_parser("serve-epistemic-engine", help="serve local /health and /classify endpoints")
+    serve.add_argument("--host", default="127.0.0.1")
+    serve.add_argument("--port", type=int, default=8789)
+    serve.set_defaults(func=command_serve_epistemic_engine)
 
     return parser
 

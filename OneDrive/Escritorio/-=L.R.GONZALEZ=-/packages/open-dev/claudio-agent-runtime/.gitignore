@@ -1,0 +1,6 @@
+.pytest_cache/
+__pycache__/
+*.py[cod]
+claudio_agent_runtime/__pycache__/
+tests/__pycache__/
+

@@ -1,0 +1,9 @@
+{
+  "records": [
+    {"schema_version":"claudio.memory_lite.v0.1","type":"claim","summary":"missing evidence item 1","evidence_status":"missing_evidence","confidence":0.2,"durability":"active"},
+    {"schema_version":"claudio.memory_lite.v0.1","type":"claim","summary":"missing evidence item 2","evidence_status":"missing_evidence","confidence":0.2,"durability":"active"},
+    {"schema_version":"claudio.memory_lite.v0.1","type":"claim","summary":"missing evidence item 3","evidence_status":"missing_evidence","confidence":0.2,"durability":"active"},
+    {"schema_version":"claudio.memory_lite.v0.1","type":"claim","summary":"missing evidence item 4","evidence_status":"needs_evidence","confidence":0.2,"durability":"active"},
+    {"schema_version":"claudio.memory_lite.v0.1","type":"claim","summary":"missing evidence item 5","evidence_status":"needs_evidence","confidence":0.2,"durability":"active"}
+  ]
+}

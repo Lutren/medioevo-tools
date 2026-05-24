@@ -1,0 +1,7 @@
+{
+  "records": [
+    {"schema_version":"claudio.memory_lite.v0.1","type":"claim","summary":"Synthetic stale memory record 1.","source":"memory/synthetic-stale-index.md","confidence":0.6,"durability":"stale","status":"stale"},
+    {"schema_version":"claudio.memory_lite.v0.1","type":"claim","summary":"Synthetic outdated memory record 2.","source":"memory/synthetic-stale-index.md","confidence":0.6,"durability":"outdated","status":"outdated"},
+    {"schema_version":"claudio.memory_lite.v0.1","type":"constraint","summary":"Refresh is required before action.","confidence":0.7,"durability":"active","status":"unresolved"}
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "schema": "duat/winapp-qa/v1.5",
+  "fingerprint": "DUAT-v1.5-FULL-LOCAL-REVIEW",
+  "generatedAt": "2026-05-20T17:20:20.544Z",
+  "baseUrl": "http://127.0.0.1:18692/duat-city/?nativeWin=1",
+  "outDir": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\artifacts\\duat-city\\docs\\v1_5_winapp_qa",
+  "steps": [
+    {
+      "label": "screenshots",
+      "code": 0,
+      "stdoutTail": "{\"captured\":\"iso3d_renderer_panel.png\",\"bytes\":143822}\n{\"captured\":\"iso3d_billboards_preview.png\",\"bytes\":143761}\n{\"captured\":\"q_overlay_debug.png\",\"bytes\":368303}\n{\"captured\":\"osit_formula_lab_panel.png\",\"bytes\":376689}\n{\"captured\":\"audio_gamefeel_panel.png\",\"bytes\":140057}\n{\"captured\":\"agent_life_panel.png\",\"bytes\":188814}\n{\"captured\":\"vermeer_light_panel.png\",\"bytes\":307727}\n{\n  \"ok\": true,\n  \"shots\": 8,\n  \"outDir\": \"C:\\\\Users\\\\L-Tyr\\\\OneDrive\\\\Escritorio\\\\-=L.R.GONZALEZ=-\\\\artifacts\\\\duat-city\\\\docs\\\\v1_5_winapp_qa\\\\screenshots\"\n}",
+      "stderrTail": ""
+    },
+    {
+      "label": "audio_headless",
+      "code": 0,
+      "stdoutTail": "{\n  \"ok\": true,\n  \"outJson\": \"C:\\\\Users\\\\L-Tyr\\\\OneDrive\\\\Escritorio\\\\-=L.R.GONZALEZ=-\\\\artifacts\\\\duat-city\\\\docs\\\\v1_5_winapp_qa\\\\AUDIO_QA_REPORT_v1_5.json\",\n  \"outMd\": \"C:\\\\Users\\\\L-Tyr\\\\OneDrive\\\\Escritorio\\\\-=L.R.GONZALEZ=-\\\\artifacts\\\\duat-city\\\\docs\\\\v1_5_winapp_qa\\\\AUDIO_QA_REPORT_v1_5.md\",\n  \"proceduralPreviewConfirmed\": true,\n  \"focusStatus\": \"focused\"\n}",
+      "stderrTail": ""
+    }
+  ],
+  "visual": {
+    "json": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\artifacts\\duat-city\\docs\\v1_5_winapp_qa\\VISUAL_QA_REPORT_v1_5.json",
+    "markdown": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\artifacts\\duat-city\\docs\\v1_5_winapp_qa\\VISUAL_QA_REPORT_v1_5.md",
+    "screenshotDir": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\artifacts\\duat-city\\docs\\v1_5_winapp_qa\\screenshots",
+    "screenshotCount": 8,
+    "allNonblank": true
+  },
+  "audio": {
+    "json": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\artifacts\\duat-city\\docs\\v1_5_winapp_qa\\AUDIO_QA_REPORT_v1_5.json",
+    "markdown": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\artifacts\\duat-city\\docs\\v1_5_winapp_qa\\AUDIO_QA_REPORT_v1_5.md",
+    "proceduralPreviewConfirmed": true,
+    "browserAudioAvailable": true,
+    "audibleConfirmedByHuman": false,
+    "focusStatus": "focused"
+  },
+  "ok": true,
+  "boundary": {
+    "cloudUsed": false,
+    "mcpExecution": false,
+    "wabiExecution": false,
+    "pushDeployCommit": false,
+    "screenshotsOnly": true
+  }
+}

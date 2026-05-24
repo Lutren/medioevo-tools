@@ -20,4 +20,7 @@
 
 - Unit tests cover deterministic simulation, bounded state, report shape,
   falsifier output and CLI JSON output.
+- Unit tests cover Run 8 public helpers: module registry validation, ActionGate
+  v2 decisions, handoff validation, public prompts, source cards, WitnessLog
+  JSONL shape and legacy checklist shape.
 - Calibration is `DEMO_ONLY`.

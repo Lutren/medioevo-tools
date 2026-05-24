@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "actiongate.sandbox.rollback.v1",
+  "rollbackId": "agrb-36323825767ac6e9",
+  "runId": "agsr-d72beed2851a43eb",
+  "proposalId": "agp-181bc6dd9c268472",
+  "createdAt": "2026-05-13T07:46:31.391Z",
+  "sandboxOnly": true,
+  "messagebusBackupPath": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\MEDIOEVO_LIVE_TREE\\02_RUNTIME\\actiongate\\sandbox\\rollback\\agsr-d72beed2851a43eb\\messagebus-before.jsonl",
+  "trackedFiles": [],
+  "rollbackStatus": "restored_sandbox_messagebus_copy",
+  "manifestPath": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\MEDIOEVO_LIVE_TREE\\02_RUNTIME\\actiongate\\sandbox\\rollback\\agsr-d72beed2851a43eb\\rollback-manifest.json",
+  "rollbackHash": "sha256-c30109f372fc63cdbc291d6e3ccf3caff16de1c189dbfbea3f1dbb57c3d818c6",
+  "rolledBackAt": "2026-05-13T07:46:31.391Z"
+}

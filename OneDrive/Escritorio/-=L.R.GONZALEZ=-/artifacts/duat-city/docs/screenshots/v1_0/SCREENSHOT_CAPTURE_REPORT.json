@@ -1,0 +1,72 @@
+[
+  {
+    "file": "beautiful_sunny_castle_lake.png",
+    "url": "http://127.0.0.1:18519/duat-city/?view=BEAUTIFUL&cinematic=1&vibe=sunny_castle_lake&tick=80",
+    "finished": true,
+    "exists": true,
+    "bytes": 256140
+  },
+  {
+    "file": "beautiful_neon_rain_street.png",
+    "url": "http://127.0.0.1:18519/duat-city/?view=BEAUTIFUL&cinematic=1&vibe=neon_rain_street&tick=120",
+    "finished": true,
+    "exists": true,
+    "bytes": 268924
+  },
+  {
+    "file": "warm_interior_tavern.png",
+    "url": "http://127.0.0.1:18519/duat-city/?view=BEAUTIFUL&cinematic=1&vibe=warm_interior_tavern&tick=160",
+    "finished": true,
+    "exists": true,
+    "bytes": 261551
+  },
+  {
+    "file": "winter_tree_reflection.png",
+    "url": "http://127.0.0.1:18519/duat-city/?view=BEAUTIFUL&cinematic=1&vibe=winter_tree_reflection&tick=180",
+    "finished": true,
+    "exists": true,
+    "bytes": 260563
+  },
+  {
+    "file": "jungle_waterfall_ruin.png",
+    "url": "http://127.0.0.1:18519/duat-city/?view=BEAUTIFUL&cinematic=1&vibe=jungle_waterfall_ruin&tick=200",
+    "finished": true,
+    "exists": true,
+    "bytes": 258527
+  },
+  {
+    "file": "desert_skyline.png",
+    "url": "http://127.0.0.1:18519/duat-city/?view=BEAUTIFUL&cinematic=1&vibe=desert_skyline&tick=220",
+    "finished": true,
+    "exists": true,
+    "bytes": 261207
+  },
+  {
+    "file": "archeopunk_city_night.png",
+    "url": "http://127.0.0.1:18519/duat-city/?view=BEAUTIFUL&cinematic=1&vibe=archeopunk_city_night&tick=240",
+    "finished": true,
+    "exists": true,
+    "bytes": 246742
+  },
+  {
+    "file": "debug_light_grid.png",
+    "url": "http://127.0.0.1:18519/duat-city/?mode=OSIT&view=DEBUG&vibe=neon_rain_street&tick=260",
+    "finished": true,
+    "exists": true,
+    "bytes": 316456
+  },
+  {
+    "file": "debug_pixel_field.png",
+    "url": "http://127.0.0.1:18519/duat-city/?mode=OSIT&view=DEBUG&heatmap=1&fibmob=1&vibe=jungle_waterfall_ruin&tick=280",
+    "finished": true,
+    "exists": true,
+    "bytes": 309111
+  },
+  {
+    "file": "vibe_coding_panel.png",
+    "url": "http://127.0.0.1:18519/duat-city/?mode=CITY&view=OPERATIONAL&vibe=neon_rain_street&tick=300",
+    "finished": true,
+    "exists": true,
+    "bytes": 276332
+  }
+]

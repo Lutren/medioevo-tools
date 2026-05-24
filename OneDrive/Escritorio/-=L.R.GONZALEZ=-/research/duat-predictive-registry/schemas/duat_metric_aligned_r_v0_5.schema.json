@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "duat.metric_aligned_r.v0_5",
+  "title": "DUAT Metric-Aligned R Calibration v0.5",
+  "type": "object",
+  "required": ["schema", "run_id", "publication_gate", "action_gate_local", "objectives", "summary", "interpretation"],
+  "additionalProperties": true,
+  "properties": {
+    "schema": { "const": "duat.metric_aligned_r.v0_5" },
+    "run_id": { "const": "DUAT_METRIC_ALIGNED_R_CALIBRATION_v0_5" },
+    "publication_gate": { "const": "BLOCK" },
+    "action_gate_local": { "enum": ["APPROVE_LOCAL", "REVIEW", "BLOCK"] },
+    "objectives": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "indicator",
+          "domain",
+          "data_mode",
+          "r_operational_before",
+          "r_operational_after",
+          "r_operational_delta",
+          "metric_degradation_score",
+          "metric_penalty",
+          "r_after_aligned",
+          "r_delta_aligned",
+          "metric_status",
+          "alignment_classification",
+          "predictive_claim_gate",
+          "publication_gate"
+        ],
+        "properties": {
+          "metric_status": { "enum": ["IMPROVED", "MIXED", "WORSE", "UNKNOWN"] },
+          "alignment_classification": {
+            "enum": [
+              "PREDICTIVE_ALIGNED_IMPROVED",
+              "OPERATIONAL_ONLY_WITH_METRIC_CAVEAT",
+              "METRIC_DEGRADED_NO_PREDICTIVE_CLAIM",
+              "BLOCKED"
+            ]
+          },
+          "predictive_claim_gate": { "enum": ["APPROVE_LOCAL", "REVIEW", "BLOCK"] },
+          "publication_gate": { "const": "BLOCK" }
+        }
+      }
+    },
+    "interpretation": {
+      "type": "object",
+      "required": ["public_claim_allowed"],
+      "properties": {
+        "public_claim_allowed": { "const": false }
+      }
+    }
+  }
+}

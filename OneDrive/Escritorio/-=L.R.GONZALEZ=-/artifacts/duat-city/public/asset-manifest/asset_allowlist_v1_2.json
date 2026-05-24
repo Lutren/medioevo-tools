@@ -1,0 +1,372 @@
+{
+  "schema": "duat.asset_allowlist.v1_2",
+  "generated_at": "2026-05-19T18:39:37.6252884-06:00",
+  "source_manifest": "assets_du_wabi_manifest_v1_2.json",
+  "policy": "No asset is copied or runtime-allowed until explicit provenance/license review.",
+  "max_candidates": 20,
+  "publication_allowed": false,
+  "runtime_asset_mode": "procedural_fallback_only_until_review",
+  "allowed_assets": [],
+  "review_candidates": [
+    {
+      "id": "du_wabi_0001",
+      "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\-=LR WORKING BENCH=-\\Assets Du WABI\\044d4eb7-518c-4521-9b3d-901be587d90d.png",
+      "filename": "044d4eb7-518c-4521-9b3d-901be587d90d.png",
+      "extension": "png",
+      "size_bytes": 2600484,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "kind": "scene_reference",
+      "visual_score": 5,
+      "engine_use": "style_reference_metadata_only",
+      "public_safe_guess": "review",
+      "license_status": "unknown",
+      "copy_recommendation": "review",
+      "notes": "Scanned metadata-only. No runtime/public use until owner/license review."
+    },
+    {
+      "id": "du_wabi_0002",
+      "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\-=LR WORKING BENCH=-\\Assets Du WABI\\214c8758-d67b-4b6d-ac68-39ac6d47c698.png",
+      "filename": "214c8758-d67b-4b6d-ac68-39ac6d47c698.png",
+      "extension": "png",
+      "size_bytes": 2913881,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "kind": "scene_reference",
+      "visual_score": 5,
+      "engine_use": "style_reference_metadata_only",
+      "public_safe_guess": "review",
+      "license_status": "unknown",
+      "copy_recommendation": "review",
+      "notes": "Scanned metadata-only. No runtime/public use until owner/license review."
+    },
+    {
+      "id": "du_wabi_0003",
+      "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\-=LR WORKING BENCH=-\\Assets Du WABI\\2a93eaf6-2123-493f-af0f-fc183f9367bd.png",
+      "filename": "2a93eaf6-2123-493f-af0f-fc183f9367bd.png",
+      "extension": "png",
+      "size_bytes": 2565744,
+      "dimensions": {
+        "width": 1448,
+        "height": 1086
+      },
+      "kind": "scene_reference",
+      "visual_score": 5,
+      "engine_use": "style_reference_metadata_only",
+      "public_safe_guess": "review",
+      "license_status": "unknown",
+      "copy_recommendation": "review",
+      "notes": "Scanned metadata-only. No runtime/public use until owner/license review."
+    },
+    {
+      "id": "du_wabi_0004",
+      "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\-=LR WORKING BENCH=-\\Assets Du WABI\\2fdd77e6-9778-4c87-b0f2-6f83abc90a2a.png",
+      "filename": "2fdd77e6-9778-4c87-b0f2-6f83abc90a2a.png",
+      "extension": "png",
+      "size_bytes": 1827380,
+      "dimensions": {
+        "width": 1448,
+        "height": 1086
+      },
+      "kind": "scene_reference",
+      "visual_score": 5,
+      "engine_use": "style_reference_metadata_only",
+      "public_safe_guess": "review",
+      "license_status": "unknown",
+      "copy_recommendation": "review",
+      "notes": "Scanned metadata-only. No runtime/public use until owner/license review."
+    },
+    {
+      "id": "du_wabi_0005",
+      "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\-=LR WORKING BENCH=-\\Assets Du WABI\\3bfd477c-ddba-44e8-95a5-4daeceec8100.png",
+      "filename": "3bfd477c-ddba-44e8-95a5-4daeceec8100.png",
+      "extension": "png",
+      "size_bytes": 2096918,
+      "dimensions": {
+        "width": 1448,
+        "height": 1086
+      },
+      "kind": "scene_reference",
+      "visual_score": 5,
+      "engine_use": "style_reference_metadata_only",
+      "public_safe_guess": "review",
+      "license_status": "unknown",
+      "copy_recommendation": "review",
+      "notes": "Scanned metadata-only. No runtime/public use until owner/license review."
+    },
+    {
+      "id": "du_wabi_0006",
+      "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\-=LR WORKING BENCH=-\\Assets Du WABI\\3c5ee82c-d0bc-4f1e-a389-073a2a6f249c.png",
+      "filename": "3c5ee82c-d0bc-4f1e-a389-073a2a6f249c.png",
+      "extension": "png",
+      "size_bytes": 2525595,
+      "dimensions": {
+        "width": 1448,
+        "height": 1086
+      },
+      "kind": "scene_reference",
+      "visual_score": 5,
+      "engine_use": "style_reference_metadata_only",
+      "public_safe_guess": "review",
+      "license_status": "unknown",
+      "copy_recommendation": "review",
+      "notes": "Scanned metadata-only. No runtime/public use until owner/license review."
+    },
+    {
+      "id": "du_wabi_0007",
+      "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\-=LR WORKING BENCH=-\\Assets Du WABI\\445645df-160a-4433-a7b0-39101141bb51.png",
+      "filename": "445645df-160a-4433-a7b0-39101141bb51.png",
+      "extension": "png",
+      "size_bytes": 1995009,
+      "dimensions": {
+        "width": 1448,
+        "height": 1086
+      },
+      "kind": "scene_reference",
+      "visual_score": 5,
+      "engine_use": "style_reference_metadata_only",
+      "public_safe_guess": "review",
+      "license_status": "unknown",
+      "copy_recommendation": "review",
+      "notes": "Scanned metadata-only. No runtime/public use until owner/license review."
+    },
+    {
+      "id": "du_wabi_0008",
+      "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\-=LR WORKING BENCH=-\\Assets Du WABI\\4b78c78d-5465-4034-a4eb-e32ef7c44a94.png",
+      "filename": "4b78c78d-5465-4034-a4eb-e32ef7c44a94.png",
+      "extension": "png",
+      "size_bytes": 2492064,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "kind": "scene_reference",
+      "visual_score": 5,
+      "engine_use": "style_reference_metadata_only",
+      "public_safe_guess": "review",
+      "license_status": "unknown",
+      "copy_recommendation": "review",
+      "notes": "Scanned metadata-only. No runtime/public use until owner/license review."
+    },
+    {
+      "id": "du_wabi_0009",
+      "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\-=LR WORKING BENCH=-\\Assets Du WABI\\4f92dc45-6f17-43c8-b366-7eb367204f88.png",
+      "filename": "4f92dc45-6f17-43c8-b366-7eb367204f88.png",
+      "extension": "png",
+      "size_bytes": 2658109,
+      "dimensions": {
+        "width": 1448,
+        "height": 1086
+      },
+      "kind": "scene_reference",
+      "visual_score": 5,
+      "engine_use": "style_reference_metadata_only",
+      "public_safe_guess": "review",
+      "license_status": "unknown",
+      "copy_recommendation": "review",
+      "notes": "Scanned metadata-only. No runtime/public use until owner/license review."
+    },
+    {
+      "id": "du_wabi_0010",
+      "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\-=LR WORKING BENCH=-\\Assets Du WABI\\4fb74c97-2f16-4a0b-805d-cd725f7fe7e2.png",
+      "filename": "4fb74c97-2f16-4a0b-805d-cd725f7fe7e2.png",
+      "extension": "png",
+      "size_bytes": 2400504,
+      "dimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "kind": "scene_reference",
+      "visual_score": 5,
+      "engine_use": "style_reference_metadata_only",
+      "public_safe_guess": "review",
+      "license_status": "unknown",
+      "copy_recommendation": "review",
+      "notes": "Scanned metadata-only. No runtime/public use until owner/license review."
+    },
+    {
+      "id": "du_wabi_0011",
+      "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\-=LR WORKING BENCH=-\\Assets Du WABI\\5182651f-7dcb-45dc-8c93-a7a90b2fdf70.png",
+      "filename": "5182651f-7dcb-45dc-8c93-a7a90b2fdf70.png",
+      "extension": "png",
+      "size_bytes": 2790573,
+      "dimensions": {
+        "width": 1448,
+        "height": 1086
+      },
+      "kind": "scene_reference",
+      "visual_score": 5,
+      "engine_use": "style_reference_metadata_only",
+      "public_safe_guess": "review",
+      "license_status": "unknown",
+      "copy_recommendation": "review",
+      "notes": "Scanned metadata-only. No runtime/public use until owner/license review."
+    },
+    {
+      "id": "du_wabi_0012",
+      "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\-=LR WORKING BENCH=-\\Assets Du WABI\\554163b9-05ea-4a37-9524-52e94bbbe0ee.png",
+      "filename": "554163b9-05ea-4a37-9524-52e94bbbe0ee.png",
+      "extension": "png",
+      "size_bytes": 2687186,
+      "dimensions": {
+        "width": 1448,
+        "height": 1086
+      },
+      "kind": "scene_reference",
+      "visual_score": 5,
+      "engine_use": "style_reference_metadata_only",
+      "public_safe_guess": "review",
+      "license_status": "unknown",
+      "copy_recommendation": "review",
+      "notes": "Scanned metadata-only. No runtime/public use until owner/license review."
+    },
+    {
+      "id": "du_wabi_0013",
+      "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\-=LR WORKING BENCH=-\\Assets Du WABI\\6353205a-d1a4-4d92-a900-ba729af05f24.png",
+      "filename": "6353205a-d1a4-4d92-a900-ba729af05f24.png",
+      "extension": "png",
+      "size_bytes": 2581623,
+      "dimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "kind": "scene_reference",
+      "visual_score": 5,
+      "engine_use": "style_reference_metadata_only",
+      "public_safe_guess": "review",
+      "license_status": "unknown",
+      "copy_recommendation": "review",
+      "notes": "Scanned metadata-only. No runtime/public use until owner/license review."
+    },
+    {
+      "id": "du_wabi_0014",
+      "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\-=LR WORKING BENCH=-\\Assets Du WABI\\67c8da61-b81f-4f29-9a4f-2340e112fac8.png",
+      "filename": "67c8da61-b81f-4f29-9a4f-2340e112fac8.png",
+      "extension": "png",
+      "size_bytes": 2268719,
+      "dimensions": {
+        "width": 1448,
+        "height": 1086
+      },
+      "kind": "scene_reference",
+      "visual_score": 5,
+      "engine_use": "style_reference_metadata_only",
+      "public_safe_guess": "review",
+      "license_status": "unknown",
+      "copy_recommendation": "review",
+      "notes": "Scanned metadata-only. No runtime/public use until owner/license review."
+    },
+    {
+      "id": "du_wabi_0015",
+      "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\-=LR WORKING BENCH=-\\Assets Du WABI\\6c06a80f-8bc9-4a80-9aaa-737638c22f56.png",
+      "filename": "6c06a80f-8bc9-4a80-9aaa-737638c22f56.png",
+      "extension": "png",
+      "size_bytes": 2156446,
+      "dimensions": {
+        "width": 1448,
+        "height": 1086
+      },
+      "kind": "scene_reference",
+      "visual_score": 5,
+      "engine_use": "style_reference_metadata_only",
+      "public_safe_guess": "review",
+      "license_status": "unknown",
+      "copy_recommendation": "review",
+      "notes": "Scanned metadata-only. No runtime/public use until owner/license review."
+    },
+    {
+      "id": "du_wabi_0016",
+      "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\-=LR WORKING BENCH=-\\Assets Du WABI\\76824f9f-cb8f-499a-9160-f5beb0450743.png",
+      "filename": "76824f9f-cb8f-499a-9160-f5beb0450743.png",
+      "extension": "png",
+      "size_bytes": 2158601,
+      "dimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "kind": "scene_reference",
+      "visual_score": 5,
+      "engine_use": "style_reference_metadata_only",
+      "public_safe_guess": "review",
+      "license_status": "unknown",
+      "copy_recommendation": "review",
+      "notes": "Scanned metadata-only. No runtime/public use until owner/license review."
+    },
+    {
+      "id": "du_wabi_0017",
+      "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\-=LR WORKING BENCH=-\\Assets Du WABI\\8661e060-fa06-45c5-bcaa-68d98b8fd19e.png",
+      "filename": "8661e060-fa06-45c5-bcaa-68d98b8fd19e.png",
+      "extension": "png",
+      "size_bytes": 1386275,
+      "dimensions": {
+        "width": 1448,
+        "height": 1086
+      },
+      "kind": "scene_reference",
+      "visual_score": 5,
+      "engine_use": "style_reference_metadata_only",
+      "public_safe_guess": "review",
+      "license_status": "unknown",
+      "copy_recommendation": "review",
+      "notes": "Scanned metadata-only. No runtime/public use until owner/license review."
+    },
+    {
+      "id": "du_wabi_0018",
+      "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\-=LR WORKING BENCH=-\\Assets Du WABI\\9c244381-e0d3-499a-983b-66cda7c9f7a8.png",
+      "filename": "9c244381-e0d3-499a-983b-66cda7c9f7a8.png",
+      "extension": "png",
+      "size_bytes": 2826536,
+      "dimensions": {
+        "width": 1448,
+        "height": 1086
+      },
+      "kind": "scene_reference",
+      "visual_score": 5,
+      "engine_use": "style_reference_metadata_only",
+      "public_safe_guess": "review",
+      "license_status": "unknown",
+      "copy_recommendation": "review",
+      "notes": "Scanned metadata-only. No runtime/public use until owner/license review."
+    },
+    {
+      "id": "du_wabi_0019",
+      "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\-=LR WORKING BENCH=-\\Assets Du WABI\\aec31241-af5c-4a27-9cca-0c94e4d1fdea.png",
+      "filename": "aec31241-af5c-4a27-9cca-0c94e4d1fdea.png",
+      "extension": "png",
+      "size_bytes": 2346144,
+      "dimensions": {
+        "width": 1448,
+        "height": 1086
+      },
+      "kind": "scene_reference",
+      "visual_score": 5,
+      "engine_use": "style_reference_metadata_only",
+      "public_safe_guess": "review",
+      "license_status": "unknown",
+      "copy_recommendation": "review",
+      "notes": "Scanned metadata-only. No runtime/public use until owner/license review."
+    },
+    {
+      "id": "du_wabi_0020",
+      "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\-=LR WORKING BENCH=-\\Assets Du WABI\\b0d87961-f98a-4ebc-8ca4-52764e6ab918.png",
+      "filename": "b0d87961-f98a-4ebc-8ca4-52764e6ab918.png",
+      "extension": "png",
+      "size_bytes": 2693108,
+      "dimensions": {
+        "width": 1448,
+        "height": 1086
+      },
+      "kind": "scene_reference",
+      "visual_score": 5,
+      "engine_use": "style_reference_metadata_only",
+      "public_safe_guess": "review",
+      "license_status": "unknown",
+      "copy_recommendation": "review",
+      "notes": "Scanned metadata-only. No runtime/public use until owner/license review."
+    }
+  ]
+}

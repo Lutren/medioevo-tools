@@ -1,0 +1,3 @@
+{"schema_version":"claudio.witness_log.v0.1","event_id":"evt-mixed-001","created_at":"2026-05-15T00:00:00Z","command":"budget status","status":"ok","actiongate":"APPROVE","result_summary":{"kind":"dict","redacted":true,"evidence":"present"}}
+{"schema_version":"claudio.witness_log.v0.1","event_id":"evt-mixed-002","created_at":"2026-05-15T00:01:00Z","command":"memory status","status":"ok","actiongate":"REVIEW","result_summary":{"kind":"dict","redacted":true,"evidence":"missing"}}
+{"schema_version":"claudio.witness_log.v0.1","event_id":"evt-mixed-003","created_at":"2026-05-15T00:02:00Z","command":"pytest synthetic mixed","status":"failed","actiongate":"REVIEW","result_summary":{"kind":"dict","redacted":true,"evidence":"failure log"}}

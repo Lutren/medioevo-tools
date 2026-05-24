@@ -1,0 +1,11 @@
+{
+  "schema_version": "medioevo.director_command.v0.1",
+  "command_id": "director-command-001",
+  "source_system": "WABI_SABI_CONTROL_PLANE",
+  "command_type": "inject_event",
+  "target": { "world_id": "duat-world-synthetic-001" },
+  "payload": { "event_ref": "event_injection_minimal.json" },
+  "action_gate": { "decision": "APPROVE", "reason": "local_synthetic_event" },
+  "boundary": { "publication_gate": "BLOCK", "contains_private_data": false, "public_safe": true }
+}
+

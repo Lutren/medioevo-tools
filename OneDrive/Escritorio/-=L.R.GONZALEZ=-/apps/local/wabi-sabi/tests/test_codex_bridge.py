@@ -24,7 +24,7 @@ def test_codex_status_uses_openai_when_cli_missing_and_key_present():
     status = codex_status(codex_finder=lambda: None, env={"OPENAI_API_KEY": "test"})
 
     assert status["auto_provider"] == "openai-responses"
-    assert status["openai_responses"]["model"] == "gpt-5.5"
+    assert status["openai_responses"]["model"] == "gpt-4o"  # DEFAULT_CODEX_MODEL updated R01
 
 
 def test_codex_bridge_dry_run_writes_workpack(tmp_path):

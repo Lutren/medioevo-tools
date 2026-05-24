@@ -1,0 +1,3 @@
+{"schema_version":"claudio.memory_lite.v0.1","type":"decision","summary":"Mercury is reference only, not a runtime dependency.","source":"docs/intake/MERCURY_AGENT_SOURCE_CARD_2026-05-15.md","confidence":0.95,"durability":"active","boundary_tags":["public_safe","external_reference"]}
+{"schema_version":"claudio.memory_lite.v0.1","type":"constraint","summary":"External channels remain disabled in P0.","source":"docs/developer/CLAUDIO_PUBLIC_AGENT_RUNTIME_BLUEPRINT_2026-05-15.md","confidence":0.93,"durability":"active","boundary_tags":["no_network","review_required"]}
+

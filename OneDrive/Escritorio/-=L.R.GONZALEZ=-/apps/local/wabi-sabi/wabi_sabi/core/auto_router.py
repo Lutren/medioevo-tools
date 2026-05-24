@@ -169,7 +169,8 @@ def _strip_directive(prompt: str) -> tuple[str | None, str]:
 
 
 def _has_codex_hint(text: str) -> bool:
-    return any(hint in text for hint in CODEX_HINTS)
+    # Require ≥2 matches to reduce false-positive routing to Codex.
+    return sum(1 for hint in CODEX_HINTS if hint in text) >= 2
 
 
 def _is_conversation(text: str) -> bool:

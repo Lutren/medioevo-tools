@@ -1,0 +1,10 @@
+{
+  "schema_version": "medioevo.asset_manifest.v0.1",
+  "manifest_id": "asset-manifest-synthetic-001",
+  "assets": [
+    { "id": "sprite-agent-placeholder", "kind": "synthetic_sprite", "public_safe": true, "hash": "local-fixture" }
+  ],
+  "public_safe": true,
+  "boundary": { "publication_gate": "BLOCK", "contains_private_data": false, "public_safe": true }
+}
+

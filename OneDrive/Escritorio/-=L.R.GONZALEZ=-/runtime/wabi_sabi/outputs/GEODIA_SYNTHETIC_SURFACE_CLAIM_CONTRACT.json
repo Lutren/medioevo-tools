@@ -1,0 +1,16 @@
+{
+  "claim": "geodia_synthetic_surface is a deterministic local smoke surface with bounded synthetic metrics only.",
+  "claim_level": "operational",
+  "evidence": [
+    "python -m wabi_sabi.cli.main geodia-synthetic --json",
+    "python -m pytest tests\\test_geodia_synthetic_surface.py -q"
+  ],
+  "falsifiers": [
+    "Fails if any output leaves the declared numeric domain.",
+    "Fails if repeated local runs diverge without input change.",
+    "Fails if the surface claims scientific, production, or public validation.",
+    "Fails if network, browser, archive import, publication, or source writes are introduced."
+  ],
+  "risk_flags": [],
+  "schema": "wabi.claim_contract.v1"
+}

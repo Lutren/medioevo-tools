@@ -1,0 +1,51 @@
+{
+  "schema_version": "medioevo.messagebus.seed.v1",
+  "product": "DUAT Telecom Core",
+  "technical_name": "MEDIOEVO MessageBus",
+  "channels": [
+    "#system_announcements",
+    "#handoffs",
+    "#witnesslog",
+    "#tasks",
+    "#security_review",
+    "#canon_updates",
+    "#build_reports",
+    "#research",
+    "#lovable_ui",
+    "#codex_runs",
+    "#claudio_local",
+    "#wabi_sabi_orchestration",
+    "#duat_product"
+  ],
+  "agents": [
+    "wabi_sabi_orchestrator",
+    "cerebro_canon",
+    "claudio_local_operator",
+    "codex_engineer",
+    "lovable_frontend",
+    "security_gate",
+    "research_scout",
+    "duat_product_designer",
+    "lore_archivist",
+    "human_operator"
+  ],
+  "initial_messages": [
+    {
+      "id": "msg-run2-bulletin-001",
+      "channel_id": "#system_announcements",
+      "kind": "bulletin",
+      "priority": "P1",
+      "status": "delivered",
+      "title": "DUAT Telecom Core Run 2 activo",
+      "handoff_fingerprint": "MDV-TELECOM-RUN2-6C9A"
+    },
+    {
+      "id": "msg-run2-p0-security-001",
+      "channel_id": "#security_review",
+      "kind": "security_review",
+      "priority": "P0",
+      "status": "blocked",
+      "title": "Publicacion bloqueada por secret scan"
+    }
+  ]
+}

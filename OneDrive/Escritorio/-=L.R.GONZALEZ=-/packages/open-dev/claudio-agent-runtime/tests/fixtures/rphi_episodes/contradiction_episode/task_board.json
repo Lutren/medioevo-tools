@@ -1,0 +1,13 @@
+{
+  "schema_version": "claudio.task_board.v0.1",
+  "tasks": [
+    {
+      "id": "ep_contradiction_001",
+      "title": "Resolve conflicting synthetic claims",
+      "status": "pending",
+      "priority": "P1",
+      "owner": "rphi-calibration",
+      "evidence": []
+    }
+  ]
+}

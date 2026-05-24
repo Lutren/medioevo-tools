@@ -1,0 +1,48 @@
+{
+  "schema": "duat.screenshot_capture.v1_4",
+  "fingerprint": "DUAT-v1.4-OSIT-OBSERVACIONISMO-FULL",
+  "browserMode": "Edge/CDP/headless",
+  "generatedAt": "2026-05-20T12:26:29.666Z",
+  "shots": [
+    {
+      "name": "canvas_fallback_operational.png",
+      "bytes": 139419,
+      "url": "http://127.0.0.1:18655/duat-city/?nativeWin=1&mode=CITY&view=OPERATIONAL&vibe=neon_rain_street&labels=0"
+    },
+    {
+      "name": "iso3d_renderer_panel.png",
+      "bytes": 143822,
+      "url": "http://127.0.0.1:18655/duat-city/?nativeWin=1&mode=CITY&view=OPERATIONAL&vibe=neon_rain_street"
+    },
+    {
+      "name": "iso3d_billboards_preview.png",
+      "bytes": 143766,
+      "url": "http://127.0.0.1:18655/duat-city/?nativeWin=1&mode=CITY&view=OPERATIONAL&vibe=neon_rain_street"
+    },
+    {
+      "name": "q_overlay_debug.png",
+      "bytes": 368412,
+      "url": "http://127.0.0.1:18655/duat-city/?nativeWin=1&mode=OSIT&view=DEBUG&vibe=archeopunk_city_night&labels=0"
+    },
+    {
+      "name": "osit_formula_lab_panel.png",
+      "bytes": 376730,
+      "url": "http://127.0.0.1:18655/duat-city/?nativeWin=1&mode=OSIT&view=DEBUG&vibe=archeopunk_city_night"
+    },
+    {
+      "name": "audio_gamefeel_panel.png",
+      "bytes": 140930,
+      "url": "http://127.0.0.1:18655/duat-city/?nativeWin=1&mode=CITY&view=OPERATIONAL&sceneDemo=fire_smoke&vibe=warm_interior_tavern"
+    },
+    {
+      "name": "agent_life_panel.png",
+      "bytes": 189415,
+      "url": "http://127.0.0.1:18655/duat-city/?nativeWin=1&mode=AGENT&view=OPERATIONAL&vibe=neon_rain_street"
+    },
+    {
+      "name": "vermeer_light_panel.png",
+      "bytes": 307727,
+      "url": "http://127.0.0.1:18655/duat-city/?nativeWin=1&mode=CITY&view=BEAUTIFUL&vibe=warm_interior_tavern&cinematic=1"
+    }
+  ]
+}

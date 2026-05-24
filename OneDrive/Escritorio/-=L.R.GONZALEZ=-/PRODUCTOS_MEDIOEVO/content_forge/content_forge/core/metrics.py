@@ -42,8 +42,11 @@ class StageMetricsStore:
         rows = []
         for current, nxt in zip(events, events[1:]):
             state = str(current.get("state") or "")
-            duration = max(0.0, float(nxt.get("ts", 0.0)) - float(current.get("ts", 0.0)))
-            if state and duration > 0:
+            raw_duration = float(nxt.get("ts", 0.0)) - float(current.get("ts", 0.0))
+            if not state or raw_duration < 0:
+                continue
+            duration = max(0.001, raw_duration)
+            if state:
                 rows.append(
                     {
                         "ts": time.strftime("%Y-%m-%dT%H:%M:%S%z"),

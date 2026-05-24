@@ -1,0 +1,8 @@
+{
+  "schema_version": "claudio.permission_request.v0.1",
+  "action": "public_publish",
+  "target": "github:Lutren/example",
+  "scope": "external",
+  "risk_tags": ["external", "publication", "github"]
+}
+

@@ -1,0 +1,65 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "20260519-193749",
+  "project": "DUAT City Pixel Realism Engine",
+  "fingerprint": "DUAT-v1.2-ASSET-AWARE-PIXEL-GAME-ENGINE",
+  "R_close": 0.16,
+  "Phi_eff": 0.82,
+  "regime_close": "FUNCIONAL",
+  "autonomy_level_used": 4,
+  "actiongate_summary": {
+    "approved": 1,
+    "review_required": 1,
+    "blocked": 0
+  },
+  "evidence": {
+    "tests": "PASS 71 files / 260 tests",
+    "typecheck": "PASS",
+    "build": "PASS",
+    "http_smoke": "200",
+    "benchmark": "docs/PERFORMANCE_BENCHMARK_v1_2.json",
+    "screenshots": "docs/screenshots/v1_2/",
+    "secret_scan": "count_reported=0",
+    "boundary_scan": "asset_copy=NONE; Wabi disabled; no cloud/API/MCP/push/deploy/commit"
+  },
+  "files_created": [
+    "src/artDirection/*",
+    "src/style/*",
+    "src/assets/*",
+    "src/generative/*",
+    "src/game/*",
+    "src/pixelRealism/offscreenLayerCache.ts",
+    "src/pixelRealism/postprocessCache.ts",
+    "src/pixelRealism/layerCompositor.ts",
+    "docs/*_v1_2.md",
+    "public/asset-manifest/*_v1_2.json",
+    "public/reviewed-assets/v1_2/REVIEWED_ASSETS_MANIFEST.json"
+  ],
+  "commands_run": [
+    "corepack pnpm --filter @workspace/duat-city run test",
+    "corepack pnpm --filter @workspace/duat-city run typecheck",
+    "corepack pnpm --filter @workspace/duat-city run build",
+    "corepack pnpm --filter @workspace/duat-city run dev -- --host 127.0.0.1 --port 18519",
+    "Invoke-WebRequest http://127.0.0.1:18519/duat-city/",
+    "python tools/release/curador_preflight.py --path Assets Du WABI",
+    "python tools/release/scan_secrets.py --path artifacts/duat-city --json --limit 0",
+    "node tools/run-focused-benchmark-v1_1_1.mjs ... v1_2",
+    "node tools/capture-screenshots-v1_2.mjs"
+  ],
+  "tests": {
+    "status": "passed",
+    "evidence": [
+      "qa_artifacts/release_validation/RUN_DUAT_ASSET_AWARE_PIXEL_ENGINE_v1_2_20260519/FINAL_TEST_RERUN.log qa_artifacts/release_validation/RUN_DUAT_ASSET_AWARE_PIXEL_ENGINE_v1_2_20260519/FINAL_TYPECHECK_RERUN.log qa_artifacts/release_validation/RUN_DUAT_ASSET_AWARE_PIXEL_ENGINE_v1_2_20260519/FINAL_BUILD_RERUN.log"
+    ]
+  },
+  "decisions": [
+    "No copy of Assets Du WABI in v1.2 because license/provenance remains review.",
+    "RPG export schema moved to medioevo-rpg/world/v3.",
+    "Art-direction names are internal authoring handles; public output uses MEDIOEVO tokens."
+  ],
+  "pending": [
+    "Owner/license review for asset candidates before any copy into reviewed-assets/v1_2.",
+    "Further renderer optimization for HIGH/BEAUTIFUL postprocess cost."
+  ],
+  "next_action": "Review 10-20 asset candidates, assign provenance/license status, then copy only approved internal-review assets with SHA256 and publication_allowed=false."
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": "medioevo.theatre_lineage.v0.1",
+  "lineage_id": "lineage-agent-001",
+  "agent_id": "agent-001",
+  "great_grandparents": ["synthetic-ggp-001", "synthetic-ggp-002"],
+  "grandparents": ["synthetic-gp-001", "synthetic-gp-002"],
+  "parents": ["synthetic-parent-001", "synthetic-parent-002"],
+  "inherited_traits": ["cautious", "observant"],
+  "family_history": ["kept records during a simulated drought"],
+  "predispositions": { "risk_aversion": 0.4, "curiosity": 0.6 },
+  "initial_memory": ["family taught evidence before action"],
+  "boundary": { "publication_gate": "BLOCK", "contains_private_data": false, "public_safe": true }
+}
+

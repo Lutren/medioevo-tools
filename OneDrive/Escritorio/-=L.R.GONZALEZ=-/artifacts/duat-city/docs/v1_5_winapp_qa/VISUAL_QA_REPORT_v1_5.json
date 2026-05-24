@@ -1,0 +1,101 @@
+{
+  "schema": "duat/visual-qa/v1.5",
+  "fingerprint": "DUAT-v1.5-FULL-LOCAL-REVIEW",
+  "generatedAt": "2026-05-20T17:20:20.520Z",
+  "screenshotDir": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\artifacts\\duat-city\\docs\\v1_5_winapp_qa\\screenshots",
+  "screenshots": [
+    {
+      "name": "canvas_fallback_operational.png",
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\artifacts\\duat-city\\docs\\v1_5_winapp_qa\\screenshots\\canvas_fallback_operational.png",
+      "bytes": 141453,
+      "sha256": "70C46D34E881C520E7609A00060011EDC0F6419BE6E5BE619F260AA35B4A060B",
+      "width": 1366,
+      "height": 900,
+      "validPng": true,
+      "uniqueSampleBytes": 256,
+      "nonblank": true
+    },
+    {
+      "name": "iso3d_renderer_panel.png",
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\artifacts\\duat-city\\docs\\v1_5_winapp_qa\\screenshots\\iso3d_renderer_panel.png",
+      "bytes": 143822,
+      "sha256": "7386BB1264F8894B12070886D41516C2225D1AAFAB0ADE5BC06E61D1098C26B2",
+      "width": 1366,
+      "height": 900,
+      "validPng": true,
+      "uniqueSampleBytes": 256,
+      "nonblank": true
+    },
+    {
+      "name": "iso3d_billboards_preview.png",
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\artifacts\\duat-city\\docs\\v1_5_winapp_qa\\screenshots\\iso3d_billboards_preview.png",
+      "bytes": 143761,
+      "sha256": "0F0A02C765E0F35E118DC936855CF3528DE7F9A18042639638744BF11FAD0A98",
+      "width": 1366,
+      "height": 900,
+      "validPng": true,
+      "uniqueSampleBytes": 256,
+      "nonblank": true
+    },
+    {
+      "name": "q_overlay_debug.png",
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\artifacts\\duat-city\\docs\\v1_5_winapp_qa\\screenshots\\q_overlay_debug.png",
+      "bytes": 368303,
+      "sha256": "F62D492281A0A9850290E283AC6E9F66BE762B2C035A13419484B79E71A9D0C7",
+      "width": 1366,
+      "height": 900,
+      "validPng": true,
+      "uniqueSampleBytes": 256,
+      "nonblank": true
+    },
+    {
+      "name": "osit_formula_lab_panel.png",
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\artifacts\\duat-city\\docs\\v1_5_winapp_qa\\screenshots\\osit_formula_lab_panel.png",
+      "bytes": 376689,
+      "sha256": "331E25EF0532358C1CC14529C7C3BC9CA201906872A5BA7FBACED852F9C798F1",
+      "width": 1366,
+      "height": 900,
+      "validPng": true,
+      "uniqueSampleBytes": 256,
+      "nonblank": true
+    },
+    {
+      "name": "audio_gamefeel_panel.png",
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\artifacts\\duat-city\\docs\\v1_5_winapp_qa\\screenshots\\audio_gamefeel_panel.png",
+      "bytes": 140057,
+      "sha256": "41DA6165E9CF325F5F6A0D73DFDFAE9AF5374EB82026369EB036B364D45CD88A",
+      "width": 1366,
+      "height": 900,
+      "validPng": true,
+      "uniqueSampleBytes": 256,
+      "nonblank": true
+    },
+    {
+      "name": "agent_life_panel.png",
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\artifacts\\duat-city\\docs\\v1_5_winapp_qa\\screenshots\\agent_life_panel.png",
+      "bytes": 188814,
+      "sha256": "07AEF3A21EA26C519F04B688217A0A2FFCE343CD10E29F74FA0B20A6734A1A3C",
+      "width": 1366,
+      "height": 900,
+      "validPng": true,
+      "uniqueSampleBytes": 256,
+      "nonblank": true
+    },
+    {
+      "name": "vermeer_light_panel.png",
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\artifacts\\duat-city\\docs\\v1_5_winapp_qa\\screenshots\\vermeer_light_panel.png",
+      "bytes": 307727,
+      "sha256": "F16E2190EBF665E4C1210CD20ED5742490F3D70954EEEC87C5FBE6F9662DF17C",
+      "width": 1366,
+      "height": 900,
+      "validPng": true,
+      "uniqueSampleBytes": 256,
+      "nonblank": true
+    }
+  ],
+  "allNonblank": true,
+  "notes": [
+    "Visual QA checks PNG integrity, dimensions, byte entropy and required panel coverage.",
+    "Screenshots were captured from DUATCity.exe local server through Edge/CDP."
+  ]
+}

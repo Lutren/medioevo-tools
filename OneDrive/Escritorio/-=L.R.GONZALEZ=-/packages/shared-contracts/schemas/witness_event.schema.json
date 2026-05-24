@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "medioevo.witness_event.v0.1",
+  "title": "WitnessEvent",
+  "type": "object",
+  "required": ["schema_version", "event_id", "timestamp", "source_system", "event_type", "summary", "evidence", "R", "Phi_eff", "gate", "boundary"],
+  "properties": {
+    "schema_version": { "const": "medioevo.witness_event.v0.1" },
+    "event_id": { "type": "string" },
+    "timestamp": { "type": "string" },
+    "source_system": { "enum": ["WABI_SABI_CONTROL_PLANE", "DUAT_SIMULATOR_WORLD", "MEDIOEVO_FORGE_APP_GAME_CREATOR", "MEDIOEVO_SPACE_PUBLIC_PORTAL", "SHARED_CONTRACTS"] },
+    "event_type": { "type": "string" },
+    "summary": { "type": "string" },
+    "evidence": { "type": "array" },
+    "R": { "type": "number" },
+    "Phi_eff": { "type": "number" },
+    "gate": { "enum": ["APPROVE", "REVIEW", "BLOCK"] },
+    "boundary": { "type": "object" }
+  },
+  "additionalProperties": false
+}
+

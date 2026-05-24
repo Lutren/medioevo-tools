@@ -1,0 +1,122 @@
+{
+  "release_id": "GEODIA_INTERNAL_RELEASE_RC_v0.1",
+  "timestamp": "2026-05-14T22:24:58Z",
+  "publication_gate": "BLOCK",
+  "action_gate": "APPROVE_LOCAL_DOCS_ONLY",
+  "fixtures": [
+    {
+      "source_id": "WORLD_BANK",
+      "label": "World Bank Indicators API - Mexico 2018-2023",
+      "path": "research/geodia-social-observatory/fixtures/world_bank_mexico_2018_2023_fixture.json",
+      "sha256": "fc05d1c424c04eae43ce1be045455c8feaf56a4241a8e97a6074253edd63b1bc",
+      "source_url": "https://api.worldbank.org/v2/country/MEX/indicator",
+      "role": "baseline official fixture",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "source_id": "EUROSTAT",
+      "label": "Eurostat Social Epoch - Germany 2018-2023",
+      "path": "research/geodia-social-observatory/fixtures/eurostat_social_epoch_2018_2023_fixture.json",
+      "sha256": "fef2ce8e3b523a48c0675646705033465bbce788eac8b532c18e0c3461098ad7",
+      "source_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/",
+      "role": "second official fixture",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "source_id": "INEGI",
+      "label": "INEGI ENOE indicadores estrategicos mensuales - Mexico 2018-2023",
+      "path": "research/geodia-social-observatory/fixtures/inegi_mexico_social_2018_2023_fixture.json",
+      "sha256": "ce8ab13f7c8b89a7e5ce7fbf1d01a00332ca78f78863fa31af76eb8a0fb7abd4",
+      "raw_sha256": "0add6e88da29b8f5eddcafe889f94c353edaab8a9d5ec272565a55c84cae8bd5",
+      "source_url": "https://www.inegi.org.mx/contenidos/programas/enoe/15ymas/tabulados/enoe_indicadores_estrategicos_2005_2026_mensual.xlsx",
+      "role": "third official fixture",
+      "publication_gate": "BLOCK"
+    }
+  ],
+  "hashes": {
+    "world_bank_fixture": "fc05d1c424c04eae43ce1be045455c8feaf56a4241a8e97a6074253edd63b1bc",
+    "eurostat_fixture": "fef2ce8e3b523a48c0675646705033465bbce788eac8b532c18e0c3461098ad7",
+    "inegi_fixture": "ce8ab13f7c8b89a7e5ce7fbf1d01a00332ca78f78863fa31af76eb8a0fb7abd4",
+    "crosswalk": "d96e39b5aad6ac9a17f00d7e5a6e18ce3495556055cd6b83cb0b4024082e2f53",
+    "inegi_source_card": "780cdd3f65a7780addcc00a3e2218bb3a61c853efc21fc7876b935323f075e51",
+    "inegi_manifest": "e35863d7c594c9f4f6d6494fb827b2fb9d071670b3582b8324d4649aecaf9bee",
+    "inegi_raw": "0add6e88da29b8f5eddcafe889f94c353edaab8a9d5ec272565a55c84cae8bd5",
+    "source_intake_report": "e4a3859ee7d828e6ffeb6bb4466b59bd8a252d454fa2f5b4441dc81d16a010b9",
+    "three_fixture_report": "50831700adf9d4a631b25336fdd05813a5ded211eaf49ac4586459bc279e3df1",
+    "third_fixture_final_qa": "ef59abb83cfb2f4c1d55589147570e495cf349940face688cc69bc127ffc12e0",
+    "qa_wrapper_report": "41d5a9bf4c5e54a19f12b1c999d38d4bbd5a513d8e3df2a939064230f69a90b9",
+    "harmonization_report": "10e22e129fc1edfaf9f1bcea43bb6595eb86b9e8c40a74b20038b2478a88f36e"
+  },
+  "source_urls": {
+    "world_bank": "https://api.worldbank.org/v2/country/MEX/indicator",
+    "eurostat": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/",
+    "inegi": "https://www.inegi.org.mx/contenidos/programas/enoe/15ymas/tabulados/enoe_indicadores_estrategicos_2005_2026_mensual.xlsx",
+    "inegi_terms": "https://www.inegi.org.mx/inegi/terminos.html"
+  },
+  "source_cards": [
+    {
+      "source_id": "INEGI",
+      "path": "research/geodia-social-observatory/fixtures/source_intake/inegi/INEGI_SOURCE_CARD.md",
+      "status": "CREATED",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "source_id": "WORLD_BANK",
+      "path": "docs/intake/WORLD_BANK_MEXICO_SOURCE_CARD_2026-05-14.md",
+      "status": "EXISTING_OR_REFERENCED",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "source_id": "EUROSTAT",
+      "path": "docs/intake/EUROSTAT_SOCIAL_EPOCH_SOURCE_CARD_2026-05-14.md",
+      "status": "EXISTING_OR_REFERENCED",
+      "publication_gate": "BLOCK"
+    }
+  ],
+  "reports": [
+    "qa_artifacts/release_validation/geodia-harmonization-qa-wrapper-report-2026-05-14.json",
+    "qa_artifacts/release_validation/geodia-harmonization-report-2026-05-14.json",
+    "qa_artifacts/release_validation/geodia-human-review-packet-2026-05-14.md",
+    "qa_artifacts/release_validation/geodia-inegi-source-intake-report-2026-05-14.json",
+    "qa_artifacts/release_validation/geodia-internal-rc-v0-1-final-report-2026-05-14.json",
+    "qa_artifacts/release_validation/geodia-third-fixture-final-qa-report-2026-05-14.json",
+    "qa_artifacts/release_validation/geodia-three-fixture-harmonization-report-2026-05-14.json"
+  ],
+  "tests_summary": {
+    "status": "PASS",
+    "command": "python -m pytest",
+    "result": "53 passed",
+    "duration_observed": "14.59s"
+  },
+  "scans_summary": {
+    "status": "PASS",
+    "scans": {
+      "SecretScan": "PASS",
+      "BoundaryCheck": "PASS",
+      "SourceAttributionScan": "PASS",
+      "LicenseTermsScan": "PASS",
+      "ForbiddenClaimsScan": "PASS",
+      "PrivatePathScan": "PASS",
+      "PublicationGateScan": "PASS",
+      "JsonValidationScan": "PASS"
+    }
+  },
+  "license_status": "TERMS_DOCUMENTED_HUMAN_REVIEW_REQUIRED",
+  "forbidden_claims_absent": true,
+  "harmonization_network_used": false,
+  "source_intake_network_used": true,
+  "network_used_for_release": false,
+  "public_safe_package_created": false,
+  "external_publication": false,
+  "internal_review_package": "research/geodia-social-observatory/release/internal_rc_v0_1",
+  "qa_wrapper_default": {
+    "status": "PASS",
+    "command": "python research/geodia-social-observatory/scripts/run_harmonization_qa.py --offline --pretty",
+    "publication_gate": "BLOCK"
+  },
+  "qa_wrapper_three_fixture": {
+    "status": "PASS",
+    "command": "python research/geodia-social-observatory/scripts/run_harmonization_qa.py --offline --pretty --fixtures research/geodia-social-observatory/fixtures/world_bank_mexico_2018_2023_fixture.json research/geodia-social-observatory/fixtures/eurostat_social_epoch_2018_2023_fixture.json research/geodia-social-observatory/fixtures/inegi_mexico_social_2018_2023_fixture.json",
+    "publication_gate": "BLOCK"
+  }
+}

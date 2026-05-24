@@ -13,6 +13,14 @@ Scapy. La lectura tecnica es distinta:
 - llama `srp(...)`;
 - apunta a `192.168.1.1/24`.
 
+Fuente local archivada:
+
+- `runtime\curador_seto\source_archive\lobby_alejandria\2026-05-06\20_curaduria_seto\0C7CDDAA915D42C4_escaner-sigiloso.txt`
+- SHA256:
+  `0C7CDDAA915D42C43D2303583A3E0B737BEEB53A54F574EE382AEFFD371E3D4E`
+- QA:
+  `qa_artifacts\release_validation\network-observer-escaner-sigiloso-2026-05-06.json`
+
 Eso es descubrimiento ARP de red local. No es una observacion pasiva pura y no
 es una capacidad que Claudio deba ejecutar autonomamente.
 

@@ -1,0 +1,90 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "20260519-DUAT-v1.1-PLAYABLE-SCENE-QA",
+  "project": "MEDIOEVO/DUAT city",
+  "fingerprint": "DUAT-v1.1-PLAYABLE-SCENE-QA",
+  "R_close": 0.22,
+  "Phi_eff": 0.82,
+  "regime_close": "FUNCIONAL",
+  "autonomy_level_used": 4,
+  "actiongate_summary": {
+    "approved": 12,
+    "review_required": 1,
+    "blocked": 0
+  },
+  "files_created": [
+    "src/scene/sceneTypes.ts",
+    "src/scene/sceneState.ts",
+    "src/scene/sceneLighting.ts",
+    "src/scene/sceneRender.ts",
+    "src/components/SceneInteractionPanel.tsx",
+    "src/performance/benchmarkV11.ts",
+    "tools/run-headed-benchmark-v1_1.mjs",
+    "src/vibecoding/vibeHistory.ts",
+    "src/tests/sceneInteraction.test.ts",
+    "src/tests/vibeParserUsability.test.ts",
+    "src/tests/lightBehavior.test.ts",
+    "src/tests/performanceBenchmarkV11.test.ts",
+    "src/tests/rpgSceneExport.test.ts",
+    "docs/PLAYABLE_SCENE_QA_v1_1.md",
+    "docs/PERFORMANCE_BENCHMARK_v1_1.json",
+    "docs/PERFORMANCE_BENCHMARK_REPORT_v1_1.md",
+    "docs/LIGHT_BEHAVIOR_QA_v1_1.md",
+    "docs/VIBE_CODING_USABILITY_v1_1.md",
+    "docs/VISUAL_COMPARISON_v1_0_to_v1_1.md",
+    "docs/CODEX_CHANGELOG_v1_1.md",
+    "docs/CODEX_FINAL_HANDOFF_v1_1.md",
+    "docs/NEXT_SESSION_BRIEF_v1_1.md",
+    "docs/TEST_REPORT_v1_1.md"
+  ],
+  "files_modified": [
+    "src/App.tsx",
+    "src/components/Toolbar.tsx",
+    "src/components/VibeCodingPanel.tsx",
+    "src/components/MainCanvas.tsx",
+    "src/render/canvasRenderer.ts",
+    "src/graphics/lightEngine.ts",
+    "src/light/lightPropagation.ts",
+    "src/light/lightMetrics.ts",
+    "src/light/reflection.ts",
+    "src/pixelRealism/pixelRealismMetrics.ts",
+    "src/components/OSITPanel.tsx",
+    "src/core/types.ts",
+    "src/rpg/rpgTypes.ts",
+    "src/rpg/worldExport.ts",
+    "src/vibecoding/vibeTypes.ts",
+    "src/vibecoding/vibeParser.ts",
+    "src/vibecoding/vibeSceneCompiler.ts",
+    "src/styles.css"
+  ],
+  "commands_run": [
+    "corepack pnpm --filter @workspace/duat-city run test",
+    "corepack pnpm --filter @workspace/duat-city run typecheck",
+    "corepack pnpm --filter @workspace/duat-city run build",
+    "corepack pnpm --filter @workspace/duat-city run dev -- --host 127.0.0.1 --port 18519",
+    "Invoke-WebRequest http://127.0.0.1:18519/duat-city/",
+    "node artifacts/duat-city/tools/run-headed-benchmark-v1_1.mjs",
+    "msedge --headless --screenshot ... local v1.1 screenshots"
+  ],
+  "tests": {
+    "status": "passed",
+    "evidence": [
+      "54 test files / 219 tests PASS",
+      "typecheck PASS",
+      "build PASS",
+      "HTTP smoke 200"
+    ]
+  },
+  "decisions": [
+    "Keep v1.1 local-only and deterministic.",
+    "Use procedural scene materials/lights instead of copied assets.",
+    "Classify light behavior as physically inspired approximation, not exact physics.",
+    "Use local Edge/CDP for headed benchmark without MCP execution."
+  ],
+  "pending": [
+    "Manual focused headed FPS run with the browser window actively focused.",
+    "Prioritized allowlisted production assets after review.",
+    "Optimization pass for HIGH/BEAUTIFUL light grid cost."
+  ],
+  "next_action": "Run a manual focused gameplay pass in a visible, focused browser and record FPS while placing water, fire, smoke, stone and neon."
+}

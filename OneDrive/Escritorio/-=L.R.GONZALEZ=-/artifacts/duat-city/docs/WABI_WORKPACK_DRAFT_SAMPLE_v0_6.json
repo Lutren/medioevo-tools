@@ -1,0 +1,30 @@
+{
+  "schema": "wabi/duat-city/workpack-draft/v0.6-design",
+  "workpack_type": "graphics-upgrade",
+  "execution_allowed": false,
+  "real_apply_allowed": false,
+  "target_files": [
+    "artifacts/duat-city/src/graphics/isoMath.ts",
+    "artifacts/duat-city/src/graphics/lightEngine.ts",
+    "artifacts/duat-city/src/render/canvasRenderer.ts"
+  ],
+  "planned_changes": [
+    "Extend 2.5D tile/building/agent renderers without WebGL",
+    "Tune day/night and local point lights",
+    "Benchmark 100 agents with debug overlays disabled"
+  ],
+  "tests_to_run": [
+    "corepack pnpm --filter @workspace/duat-city run test",
+    "corepack pnpm --filter @workspace/duat-city run typecheck",
+    "corepack pnpm --filter @workspace/duat-city run build"
+  ],
+  "rollback_plan": [
+    "Keep original source folders untouched",
+    "Remove only path-scoped files listed in target_files if owner rejects the draft",
+    "Regenerate manifests from qa_artifacts run evidence before any future asset copy"
+  ],
+  "required_owner_review": [
+    "Visual acceptance by owner",
+    "Browser screenshot/performance review on target machine"
+  ]
+}

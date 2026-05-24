@@ -1,0 +1,11 @@
+{
+  "commands": [
+    {
+      "event_id": "evt-missing-command-001",
+      "command": "python tools/local_check.py --synthetic",
+      "status": "ok",
+      "actiongate": "REVIEW",
+      "evidence": "missing"
+    }
+  ]
+}

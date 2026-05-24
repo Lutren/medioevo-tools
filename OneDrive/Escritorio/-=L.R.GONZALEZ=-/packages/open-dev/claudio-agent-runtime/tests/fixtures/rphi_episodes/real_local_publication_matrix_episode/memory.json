@@ -1,0 +1,44 @@
+{
+  "records": [
+    {
+      "schema_version": "claudio.memory_lite.v0.1",
+      "type": "claim",
+      "summary": "A local metadata-only book release matrix was generated with row counts verified.",
+      "source": "docs/book-control/BOOK_RELEASE_CONTROL_BOARD_2026-05-15.json",
+      "confidence": 0.94,
+      "durability": "active"
+    },
+    {
+      "schema_version": "claudio.memory_lite.v0.1",
+      "type": "decision",
+      "summary": "Private QA-pass editorial state is not equivalent to public product readiness.",
+      "source": "docs/book-control/BOOK_RELEASE_STORE_GAP_2026-05-15.md",
+      "confidence": 0.93,
+      "durability": "active"
+    },
+    {
+      "schema_version": "claudio.memory_lite.v0.1",
+      "type": "constraint",
+      "summary": "External release and remote write actions remain blocked.",
+      "source": "docs/book-control/BOOK_RELEASE_NEXT_ACTIONS_2026-05-15.md",
+      "confidence": 0.98,
+      "durability": "active"
+    },
+    {
+      "schema_version": "claudio.memory_lite.v0.1",
+      "type": "claim",
+      "summary": "Row count and public anchor count were verified locally.",
+      "source": "qa_artifacts/book-control/row_count_check_2026-05-15.json",
+      "confidence": 0.94,
+      "durability": "active"
+    },
+    {
+      "schema_version": "claudio.memory_lite.v0.1",
+      "type": "claim",
+      "summary": "No manuscript excerpts were included in the generated control artifacts.",
+      "source": "qa_artifacts/book-control/content_boundary_check_2026-05-15.json",
+      "confidence": 0.93,
+      "durability": "active"
+    }
+  ]
+}

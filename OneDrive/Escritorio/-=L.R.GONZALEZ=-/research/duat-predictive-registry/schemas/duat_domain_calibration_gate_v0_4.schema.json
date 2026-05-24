@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "duat.domain_calibration_gate.v0_4",
+  "title": "DUAT Domain Calibration Gate v0.4",
+  "type": "object",
+  "required": [
+    "schema",
+    "run_id",
+    "publication_gate",
+    "action_gate_local",
+    "summary",
+    "objectives",
+    "interpretation"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "schema": { "const": "duat.domain_calibration_gate.v0_4" },
+    "run_id": { "const": "DUAT_DOMAIN_CALIBRATION_GATE_v0_4" },
+    "publication_gate": { "const": "BLOCK" },
+    "action_gate_local": { "enum": ["APPROVE_LOCAL", "REVIEW", "BLOCK"] },
+    "summary": {
+      "type": "object",
+      "required": [
+        "r_reduction_replicated_count",
+        "metrics_improved_count",
+        "metrics_mixed_count",
+        "metrics_worse_count",
+        "blocked_no_data_count"
+      ]
+    },
+    "objectives": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "indicator",
+          "domain",
+          "data_mode",
+          "classification",
+          "domain_calibration_gate",
+          "public_claim_allowed",
+          "publication_gate"
+        ],
+        "properties": {
+          "domain_calibration_gate": { "enum": ["APPROVE_LOCAL", "REVIEW", "BLOCK"] },
+          "classification": {
+            "enum": [
+              "OPERATIONAL_R_IMPROVED_METRICS_IMPROVED",
+              "OPERATIONAL_R_IMPROVED_METRICS_MIXED",
+              "OPERATIONAL_R_IMPROVED_METRICS_WORSE",
+              "R_NOT_IMPROVED_METRICS_IMPROVED",
+              "R_NOT_IMPROVED_METRICS_WORSE",
+              "BLOCKED_NO_DATA",
+              "REVIEW_COMPARABILITY"
+            ]
+          },
+          "public_claim_allowed": { "const": false },
+          "publication_gate": { "const": "BLOCK" }
+        }
+      }
+    },
+    "interpretation": {
+      "type": "object",
+      "required": ["claim_level", "public_claim_allowed"],
+      "properties": {
+        "claim_level": { "const": "internal_technical_evidence_only" },
+        "public_claim_allowed": { "const": false }
+      }
+    }
+  }
+}

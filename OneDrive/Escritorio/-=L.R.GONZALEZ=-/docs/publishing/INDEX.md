@@ -19,6 +19,7 @@ Read:
 - `docs\publishing\GUMROAD_CHANNEL_UPDATE_PACKET_2026-05-05.md`
 - `docs\publishing\PUBLICATION_EXECUTION_REPORT_2026-05-05.md`
 - `docs\publishing\SPONSORS_API_SESSION_AUDIT_2026-05-05.md`
+- `docs\publishing\MEDIOEVO_TOOLS_MASTER_PLAN_WEB_GUMROAD_2026-05-07.md`
 
 Publication evidence exists for the 2026-05-02 limited runs:
 
@@ -74,3 +75,58 @@ as blanket approval for more repos, Gumroad products, deploys or social posts.
   migrates April SaaS/trailer checklists into legacy-marketing references.
 - `docs\publishing\VIDEO_SOCIAL_MANUAL_QUEUE_2026-05-06.md` migrates the
   CapCut/TikTok/Instagram first-video checklist into a manual publishing queue.
+- `docs\publishing\TIER_VALUE_REPORT_2026-05-06.md` and desktop copy
+  `C:\Users\L-Tyr\OneDrive\Escritorio\REPORTE_SIMPLE_TIERS_MEDIOEVO_2026-05-06.md`
+  summarize the free/Gumroad/Sponsors/private value ladder in simple public-safe
+  language and record live HTTP verification for Sponsors, Gumroad and website.
+
+2026-05-07 MEDIOEVO Tools master plan publication:
+
+- Website posts live:
+  `https://medioevo.space/blog/medioevo-tools-plan-maestro.html` and
+  `https://medioevo.space/blog/en/medioevo-tools-master-plan.html`.
+- `publicacion.html` and `sitemap.xml` include the new master-plan URLs.
+- Gumroad `MEDIOEVO Agent Ops Pack` and `DUAT Templates` were updated by API
+  with plan links and scope boundaries; no ZIP was uploaded.
+- Evidence:
+  `docs\publishing\MEDIOEVO_TOOLS_MASTER_PLAN_WEB_GUMROAD_2026-05-07.md` and
+  `qa_artifacts\release_validation\medioevo-tools-master-plan-web-gumroad-2026-05-07.json`.
+- `docs\publishing\SOCIAL_TIER_PROBLEM_COPY_2026-05-06.md` and desktop copy
+  `C:\Users\L-Tyr\OneDrive\Escritorio\COPY_REDES_TIERS_OBSERVACIONISMO_2026-05-06.md`
+  convert the tier ladder into social copy by problem solved: open-source gates
+  for risky agents, Gumroad templates, Sponsors research curation and private IP
+  retention for Observacionismo/information-theory material.
+- `docs\publishing\OBSERVACIONISMO_RELEASE_CASES_AND_INFO_STRATEGY_2026-05-06.md`
+  and desktop copy
+  `C:\Users\L-Tyr\OneDrive\Escritorio\CASOS_ESTRATEGIA_AGENTES_OBSERVACIONISMO_2026-05-06.md`
+  document examples/cases for each solution and the staged information-release
+  ladder for Observacionismo, inverse Observacionismo and MEDIOEVO information
+  theory.
+- `docs\publishing\CRM_PROMPTS_PUBLICATION_PACKET_2026-05-06.md` records the
+  requested LinkedIn/Gumroad/website/GitHub/social copy for the 3 prompt release
+  and FlujoCRM free-GitHub direction. External execution stayed blocked by
+  fresh ActionGate decisions because host was `JAMMING/BLOCK`; FlujoCRM also
+  needs license/staging review before a free public repo.
+- `docs\publishing\FLUJOCRM_FREE_GITHUB_STAGING_2026-05-06.md` records the
+  local review-only FlujoCRM GitHub staging repo at
+  `publish_staging\github\flujocrm-free-review`; it is committed locally,
+  scan-clean and smoke-tested, but still not publishable until license and
+  ActionGate pass.
+- `docs\publishing\WEBSITE_CRM_PROMPTS_DROPIN_2026-05-06.md` records the
+  exact website snippets for the CRM/prompts update without touching the dirty
+  website worktree or claiming a deploy.
+- `docs\publishing\FLUJOCRM_FREE_LICENSE_DECISION_PACKET_2026-05-06.md`
+  records the license blocker and recommended path for turning the local
+  FlujoCRM staging repo into a real free GitHub release.
+- `docs\publishing\FLUJOCRM_GITHUB_REPO_PACKET_2026-05-06.md` records the
+  GitHub repo metadata, release notes, first issue and gated commands for the
+  future FlujoCRM public repo without creating a remote.
+- `docs\publishing\FLUJOCRM_CONTINUATION_HANDOFF_2026-05-07.md` records the
+  current continuation closure: staging is technically ready, license remains
+  blocked, host is `JAMMING/BLOCK`, and no external action was executed.
+- `docs\publishing\FLUJOCRM_LICENSE_PATCH_OPTIONS_2026-05-07.md` records
+  review-only MIT and Apache-2.0 patch options for the FlujoCRM staging repo
+  without changing license metadata or publishing.
+- `docs\publishing\FLUJOCRM_MIT_PUBLICATION_READY_2026-05-07.md` records that
+  MIT was applied to the FlujoCRM staging repo, `publication_ready=true`, and
+  external GitHub publication remains blocked by ActionGate/host.

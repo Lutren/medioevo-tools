@@ -1,0 +1,2759 @@
+{
+    "schema":  "duat/forensics/lovable-renderer-candidates/v1.3.2",
+    "fingerprint":  "DUAT-v1.3.2-LOVABLE-ISO-EXTRACTION-VERMEER-LIGHT",
+    "generated_at":  "2026-05-20T07:08:33.1330792Z",
+    "source_root":  "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\-=LR WORKING BENCH=-",
+    "records":  [
+                    {
+                        "path":  "CODEX_PROMPT_INSTALL_WABI_REAL_CLI_v0_2.md",
+                        "source_zip":  "wabisabi_real_cli_v0_2.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  2606,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "install/install_wabi_real_cli.ps1",
+                        "source_zip":  "wabisabi_real_cli_v0_2.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  3256,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "install_wabi_real_cli.bat",
+                        "source_zip":  "wabisabi_real_cli_v0_2.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  103,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "patch_files/Prompt-Execute-Master/00_START_HERE/LIVE_STATE/NEXT_SESSION_BRIEF_WABI_REAL_CLI_v0_2.md",
+                        "source_zip":  "wabisabi_real_cli_v0_2.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  673,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "patch_files/Prompt-Execute-Master/02_CLAUDIO/config/wabi_providers_real.example.json",
+                        "source_zip":  "wabisabi_real_cli_v0_2.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  651,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "patch_files/Prompt-Execute-Master/02_CLAUDIO/core/wabi.py",
+                        "source_zip":  "wabisabi_real_cli_v0_2.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  32276,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "patch_files/Prompt-Execute-Master/02_CLAUDIO/docs/WABI_REAL_CLI_v0_2.md",
+                        "source_zip":  "wabisabi_real_cli_v0_2.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  1286,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "patch_files/Prompt-Execute-Master/08_QA_WITNESSLOG/WABI_REAL_CLI_v0_2/INSTALL_NOTES.md",
+                        "source_zip":  "wabisabi_real_cli_v0_2.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  438,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "components/agent-deck-section.tsx",
+                        "source_zip":  "agent-foundry-os.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "high",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  14524,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "public/icon-light-32x32.png",
+                        "source_zip":  "agent-foundry-os.zip",
+                        "type":  "lighting",
+                        "stack_detected":  [
+                                               "Light/postprocess"
+                                           ],
+                        "useful_for":  [
+                                           "Vermeer light behavior",
+                                           "render budget"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  566,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "COGNITIVE_ARCHETYPES/49_BACH_ALGO_COMPOSER.yaml",
+                        "source_zip":  "COGNITIVE_ARCHETYPES.zip",
+                        "type":  "lighting",
+                        "stack_detected":  [
+                                               "Light/postprocess"
+                                           ],
+                        "useful_for":  [
+                                           "Vermeer light behavior",
+                                           "render budget"
+                                       ],
+                        "risk":  "medium",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  true,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  1995,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "src/render/Agents.tsx",
+                        "source_zip":  "lovable-project-c1214deb-51fb-453e-90aa-5353b2470e2a-2026-05-18.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "high",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  1380,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "src/sim/agents.ts",
+                        "source_zip":  "lovable-project-c1214deb-51fb-453e-90aa-5353b2470e2a-2026-05-18.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "high",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  4937,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/00_START_HERE/READ_ME_FIRST.md",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  1270,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/00_START_HERE/AGENT_NETWORK_INDEX.md",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  9158,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/01_ARCHITECTURE/AGENT_OS_ARCHITECTURE.md",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  1674,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/01_ARCHITECTURE/ROUTING_MATRIX.md",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  1652,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/01_ARCHITECTURE/OSIT_MIMI_MODEL_CARD.md",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  1006,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/02_SCHEMAS/agent_contract_v2.schema.json",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  1931,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/02_SCHEMAS/task_packet_v2.schema.json",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  1229,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/02_SCHEMAS/witness_event_v2.schema.json",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  766,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/03_REGISTRY/AGENTS_REGISTRY.json",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  29058,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/CORE/01_ORCHESTRATOR.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  2140,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/CORE/02_GATEKEEPER.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  2182,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/CORE/03_INTERFACE_STATE_ESTIMATOR.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  2047,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/CORE/04_KNOWLEDGE_ROUTER.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  2006,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/CORE/05_SOURCE_CURATOR.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  2000,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/CORE/06_MEMORY_KEEPER.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  2024,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/CORE/07_INTEGRATOR.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  1901,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/CORE/08_HUMAN_ROOT_GATE.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  2072,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/OPS/09_CLAIM_AUDITOR.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  1845,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/OPS/10_SCIENCE_LAB_REVIEWER.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  1872,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/OPS/11_TEST_SYNTHESIZER.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  1803,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/OPS/12_RELEASE_SENTINEL.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  1963,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/OPS/13_CODE_REVIEWER.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  1758,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/OPS/14_SECRET_SCANNER.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  1625,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/OPS/15_BOUNDARY_CHECKER.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  1728,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/OPS/16_LEDGER_MANAGER.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  1697,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/OPS/17_RECONSTRUCTION_TESTER.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  1741,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/OPS/18_PATCH_EXECUTOR.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  1974,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/EXT/19_UI_COMPOSER.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "lighting",
+                        "stack_detected":  [
+                                               "Light/postprocess",
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "Vermeer light behavior",
+                                           "render budget"
+                                       ],
+                        "risk":  "medium",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  true,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  1755,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/EXT/20_PRODUCT_STRATEGIST.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  1888,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/EXT/21_DUAT_VISUAL_AGENT.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  1806,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/EXT/22_LORE_GUARDIAN.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  1852,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/EXT/23_ARGUS_COMPANION_INTERFACE.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  1799,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/EXT/24_PUBLIC_VISIBILITY_CURATOR.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  1923,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/COGNITIVE_ARCHETYPES/25_TESLA_FIELD_VISUALIZER.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  2044,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/COGNITIVE_ARCHETYPES/26_PKD_REALITY_FORKER.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  2025,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/COGNITIVE_ARCHETYPES/27_KAFKA_LOOP_STRESS_TESTER.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  2034,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/COGNITIVE_ARCHETYPES/28_ASIMOV_SYSTEM_PREDICTOR.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  1980,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/COGNITIVE_ARCHETYPES/29_TOLKIEN_WORLD_COMPILER.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  2022,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/COGNITIVE_ARCHETYPES/30_WHEELER_INFORMATION_PHYSICIST.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  2091,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/COGNITIVE_ARCHETYPES/31_GUIDO_READABILITY_OPTIMIZER.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  1994,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/COGNITIVE_ARCHETYPES/32_SOCRATES_INDUCTIVE_DECONSTRUCTOR.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  1994,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/COGNITIVE_ARCHETYPES/33_ARISTOTLE_TAXONOMIC_CLASSIFIER.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  2003,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/COGNITIVE_ARCHETYPES/34_DESCARTES_DUALITY_ENGINEER.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  2029,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/COGNITIVE_ARCHETYPES/35_KANT_SYNTHESIS_ATTEMPTER.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  1991,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/COGNITIVE_ARCHETYPES/36_EPICTETUS_STATE_MINIMIZER.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  2018,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/COGNITIVE_ARCHETYPES/37_SENECA_WITNESS_LOGGER.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  1992,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/COGNITIVE_ARCHETYPES/38_MARCUS_AURELIUS_SELF_DEBUGGER.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  2002,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/COGNITIVE_ARCHETYPES/39_ORWELL_NOISE_REDUCER.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  2008,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/COGNITIVE_ARCHETYPES/40_PULLMAN_MULTIVERSE_BRIDGE.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  1983,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/COGNITIVE_ARCHETYPES/41_VOYNICH_CIPHER_KEEPER.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  2010,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/COGNITIVE_ARCHETYPES/42_BORGES_DATABASE_ARCHITECT.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  2013,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/COGNITIVE_ARCHETYPES/43_ADA_LOGIC_POET.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  2012,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/COGNITIVE_ARCHETYPES/44_HEDY_PROTOCOL_ENCRYPTER.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  2009,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/COGNITIVE_ARCHETYPES/45_MACHIAVELLI_STRATEGY_ALLOCATOR.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  2002,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/COGNITIVE_ARCHETYPES/46_GODEL_BOUNDARY_PROVER.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  2039,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/COGNITIVE_ARCHETYPES/47_FEYNMAN_INTUITIVE_EXPLAINER.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  2098,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/COGNITIVE_ARCHETYPES/48_MANDELBROT_SCALE_DETECTOR.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  2031,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/COGNITIVE_ARCHETYPES/49_BACH_ALGO_COMPOSER.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "lighting",
+                        "stack_detected":  [
+                                               "Light/postprocess",
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "Vermeer light behavior",
+                                           "render budget"
+                                       ],
+                        "risk":  "medium",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  true,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  1995,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/04_AGENTS/COGNITIVE_ARCHETYPES/50_ESCHER_PARADOX_VISUALIZER.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  2030,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/05_PROMPTS/CODEX_EXECUTE_AGENT_FOLDER_v2.md",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  4529,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/05_PROMPTS/MASTER_PROMPT_AGENT_NETWORK_v2.md",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  928,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/06_TESTS/RECONSTRUCTION_TEST_AGENT_FOLDER_v2.md",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  1466,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/06_TESTS/QA_CHECKLIST.md",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  613,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/07_TOOLS/validate_agent_registry.py",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  1544,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/07_TOOLS/min_secret_boundary_scan.py",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  2872,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/08_HANDOFF/HANDOFF_v2_1_AGENT_FOLDER_TEMPLATE.yaml",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  3214,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/09_QA_WITNESSLOG/BUILD_REPORT.md",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  801,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/09_QA_WITNESSLOG/MANIFEST_SHA256.csv",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  8115,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_AGENT_FOLDER_v2_0/README.md",
+                        "source_zip":  "MEDIOEVO_AGENT_FOLDER_v2_0.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  1609,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_DUAT_LOCATION_TRADING_CARDS_BATCH_001/location_cards_batch_001.json",
+                        "source_zip":  "MEDIOEVO_DUAT_LOCATION_TRADING_CARDS_BATCH_001.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  11625,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_DUAT_LOCATION_TRADING_CARDS_BATCH_001/location_image_prompts_batch_001.txt",
+                        "source_zip":  "MEDIOEVO_DUAT_LOCATION_TRADING_CARDS_BATCH_001.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  17180,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_DUAT_LOCATION_TRADING_CARDS_BATCH_001/MEDIOEVO_DUAT_LOCATION_TRADING_CARDS_BATCH_001.md",
+                        "source_zip":  "MEDIOEVO_DUAT_LOCATION_TRADING_CARDS_BATCH_001.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  27363,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_DUAT_LOCATION_TRADING_CARDS_BATCH_001/README.md",
+                        "source_zip":  "MEDIOEVO_DUAT_LOCATION_TRADING_CARDS_BATCH_001.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  456,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "MEDIOEVO_VISUAL_BIBLE_EXTRACT_v0_2/trading_card_prompts_characters_v0_2.txt",
+                        "source_zip":  "MEDIOEVO_DUAT_VISUAL_BIBLE_EXTRACT_v0_2.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard",
+                                               "Visual bible",
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  15760,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "CODEX_PROMPT_INSTALL_WABISABI_CLI_PROVIDER_HUB_v0_1.md",
+                        "source_zip":  "wabisabi_cli_provider_patch_v0_1.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  5473,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "patch_files/Prompt-Execute-Master/00_START_HERE/LIVE_STATE/NEXT_SESSION_BRIEF_WABISABI_CLI_PROVIDER_HUB_v0_1.md",
+                        "source_zip":  "wabisabi_cli_provider_patch_v0_1.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  606,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "patch_files/Prompt-Execute-Master/02_CLAUDIO/core/wabisabi_cli.py",
+                        "source_zip":  "wabisabi_cli_provider_patch_v0_1.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  9098,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "patch_files/Prompt-Execute-Master/02_CLAUDIO/core/wabisabi_controller.py",
+                        "source_zip":  "wabisabi_cli_provider_patch_v0_1.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  5174,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "patch_files/Prompt-Execute-Master/02_CLAUDIO/docs/WABISABI_CLI_PROVIDER_HUB_v0_1.md",
+                        "source_zip":  "wabisabi_cli_provider_patch_v0_1.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  1978,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "patch_files/Prompt-Execute-Master/02_CLAUDIO/tests/test_wabisabi_cli_contract.py",
+                        "source_zip":  "wabisabi_cli_provider_patch_v0_1.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  1044,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "patch_files/Prompt-Execute-Master/08_QA_WITNESSLOG/WABISABI_CLI_PROVIDER_HUB_v0_1_PATCH/QA_PLAN.md",
+                        "source_zip":  "wabisabi_cli_provider_patch_v0_1.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  670,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "src/render/Agents.tsx",
+                        "source_zip":  "lovable-project-b08d75ee-a06a-4ec9-bbc8-7837b3f19692-2026-05-20.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "high",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  4022,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "src/sim/agents.ts",
+                        "source_zip":  "lovable-project-b08d75ee-a06a-4ec9-bbc8-7837b3f19692-2026-05-20.zip",
+                        "type":  "billboard_sprite",
+                        "stack_detected":  [
+                                               "Sprite/billboard"
+                                           ],
+                        "useful_for":  [
+                                           "2d pixel population"
+                                       ],
+                        "risk":  "high",
+                        "integration_recommendation":  "adapt",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  4937,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "02_TEORIA_OBSERVACIONISMO_PSI_OSIT.md",
+                        "source_zip":  "MEDIOEVO_OSIT_AI_HUMAN_PACKET_2026-05-19.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  2397,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "06_ARQUITECTURA_DUAT_CLAUDIO_WABI.md",
+                        "source_zip":  "MEDIOEVO_OSIT_AI_HUMAN_PACKET_2026-05-19.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  2173,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_MATEMATICAS_MODELOS_FIBMOB_EML.md",
+                        "source_zip":  "MEDIOEVO_OSIT_AI_HUMAN_PACKET_2026-05-19.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  2202,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "09_MEDIOEVO_OSIT_AI_HUMAN_PACKET_COMPLETO.pdf",
+                        "source_zip":  "MEDIOEVO_OSIT_AI_HUMAN_PACKET_2026-05-19.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  39940,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/00_LIBROS_ES_COMPLETOS_EXPANDIDOS/00_EL_OBSERVADOR/MEDIOEVO_00_EL_OBSERVADOR.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  151620,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/00_LIBROS_ES_COMPLETOS_EXPANDIDOS/01_DESPERTAR/MEDIOEVO_01_DESPERTAR.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  564399,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/00_LIBROS_ES_COMPLETOS_EXPANDIDOS/02_DERIVA/MEDIOEVO_02_DERIVA.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  629114,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/00_LIBROS_ES_COMPLETOS_EXPANDIDOS/03_FRAGMENTOS/MEDIOEVO_03_FRAGMENTOS.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  666174,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/00_LIBROS_ES_COMPLETOS_EXPANDIDOS/04_CALIBRACIÓN/MEDIOEVO_04_CALIBRACIÓN.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  558860,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/00_LIBROS_ES_COMPLETOS_EXPANDIDOS/05_TRANSICIÓN/MEDIOEVO_05_TRANSICIÓN.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  562934,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/00_LIBROS_ES_COMPLETOS_EXPANDIDOS/06_UMBRAL/MEDIOEVO_06_UMBRAL.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  631604,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/00_LIBROS_ES_COMPLETOS_EXPANDIDOS/07_BABEL/MEDIOEVO_07_BABEL.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  671913,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/00_LIBROS_ES_COMPLETOS_EXPANDIDOS/08_POST_BABEL/MEDIOEVO_08_POST_BABEL.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  554660,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/00_LIBROS_ES_COMPLETOS_EXPANDIDOS/09_NOSOTROS_USTEDES_LOS_OTROS/MEDIOEVO_09_NOSOTROS_USTEDES_LOS_OTROS.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  613615,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/00_LIBROS_ES_COMPLETOS_EXPANDIDOS/10_LE_JARDIN/MEDIOEVO_10_LE_JARDIN.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  548772,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/00_LIBROS_ES_COMPLETOS_EXPANDIDOS/11_FRONTERA/MEDIOEVO_11_FRONTERA.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  563911,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/00_LIBROS_ES_COMPLETOS_EXPANDIDOS/12_DON_HUMO/MEDIOEVO_12_DON_HUMO.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  568117,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/00_LIBROS_ES_COMPLETOS_EXPANDIDOS/13_NEXUS/MEDIOEVO_13_NEXUS.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  689710,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/00_LIBROS_ES_COMPLETOS_EXPANDIDOS/14_LA_BIBLIOTECA_COLAPSADA/MEDIOEVO_14_LA_BIBLIOTECA_COLAPSADA.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  533411,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/00_LIBROS_ES_COMPLETOS_EXPANDIDOS/15_LOS_OBSERVADORES/MEDIOEVO_15_LOS_OBSERVADORES.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  502329,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/00_LIBROS_ES_COMPLETOS_EXPANDIDOS/16_LA_HISTORIA_OCULTA/MEDIOEVO_16_LA_HISTORIA_OCULTA.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  565010,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/00_LIBROS_ES_COMPLETOS_EXPANDIDOS/17_JUEGO_DE_ROL/MEDIOEVO_17_JUEGO_DE_ROL.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  723597,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/00_LIBROS_ES_COMPLETOS_EXPANDIDOS/18_VOYNICH/MEDIOEVO_18_VOYNICH.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  594807,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/00_LIBROS_ES_COMPLETOS_EXPANDIDOS/19_NEMONTEMI/MEDIOEVO_19_NEMONTEMI.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  447679,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/00_LIBROS_ES_COMPLETOS_EXPANDIDOS/20_EL_ÚLTIMO_CAFÉ/MEDIOEVO_20_EL_ÚLTIMO_CAFÉ_NOVELA.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  356124,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/00_LIBROS_ES_COMPLETOS_EXPANDIDOS/21_OBSERVAR_PARA_SOBREVIVIR/MEDIOEVO_25_OBSERVAR_PARA_SOBREVIVIR.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  340026,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/00_LIBROS_ES_COMPLETOS_EXPANDIDOS/22_PROTOCOLO_DE_CONTENCIÓN/MEDIOEVO_22_PROTOCOLO_DE_CONTENCIÓN_NOVELA.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  595597,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/00_LIBROS_ES_COMPLETOS_EXPANDIDOS/23_SANGRE_Y_CENIZA/MEDIOEVO_23_SANGRE_Y_CENIZA_NOVELA.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  614204,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/00_LIBROS_ES_COMPLETOS_EXPANDIDOS/24_TRES_REINOS/MEDIOEVO_24_TRES_REINOS_NOVELA.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  596845,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/00_LIBROS_ES_COMPLETOS_EXPANDIDOS/25_CRONONAUTAS/MEDIOEVO_21_CRONONAUTAS_NOVELA.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  605860,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/00_LIBROS_ES_COMPLETOS_EXPANDIDOS/26_PATOREIMOUS/MEDIOEVO_26_PATOREIMOUS.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  567009,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/00_LIBROS_ES_COMPLETOS_EXPANDIDOS/27_TISHA/MEDIOEVO_27_TISHA.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  566152,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/00_LIBROS_ES_COMPLETOS_EXPANDIDOS/28_GONROS/MEDIOEVO_28_GONROS.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  584049,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/00_LIBROS_ES_COMPLETOS_EXPANDIDOS/29_EL_INFIERNO_SILENCIOSO/MEDIOEVO_29_EL_INFIERNO_SILENCIOSO.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  537960,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/00_LIBROS_ES_COMPLETOS_EXPANDIDOS/30_TEYOLIA/MEDIOEVO_30_TEYOLIA.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  565464,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/00_LIBROS_ES_COMPLETOS_EXPANDIDOS/31_CRISTALES_DE_DRAGON/MEDIOEVO_31_CRISTALES_DE_DRAGON.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  557164,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/00_LIBROS_ES_COMPLETOS_EXPANDIDOS/32_FRECUENCIAS/MEDIOEVO_32_FRECUENCIAS.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  578809,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/00_LIBROS_ES_COMPLETOS_EXPANDIDOS/33_DIVISION_47/MEDIOEVO_33_DIVISION_47.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  546193,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/00_LIBROS_ES_COMPLETOS_EXPANDIDOS/34_NIVEL_MENOS_DOCE/MEDIOEVO_34_NIVEL_MENOS_DOCE.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  514774,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/01_LORE_RAW_EXPANDIDO/MEDIOEVO_003_HORROR_SISTEMICO_EXPANDIDO_v24.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  82455,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/01_LORE_RAW_EXPANDIDO/MEDIOEVO_004_MUNDO_PLANOS_DIOSES_v24.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  135744,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/01_LORE_RAW_EXPANDIDO/MEDIOEVO_005_TECNOLOGIA_FISICA_v24.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  53934,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/01_LORE_RAW_EXPANDIDO/MEDIOEVO_006_TOPOLOGIA_GEOGRAFIA_v24.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  50285,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/01_LORE_RAW_EXPANDIDO/MEDIOEVO_007_SOCIEDAD_ECONOMIA_v24.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  53226,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/01_LORE_RAW_EXPANDIDO/MEDIOEVO_008_GRIMORIO_v24.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  45686,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/01_LORE_RAW_EXPANDIDO/MEDIOEVO_010_GOBIERNO_PODER_SISTEMAS_v24.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  84379,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/01_LORE_RAW_EXPANDIDO/MEDIOEVO_011_SOCIEDAD_CULTURA_v24.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  63903,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/01_LORE_RAW_EXPANDIDO/MEDIOEVO_012_ECONOMIA_PUBLICIDAD_TECNOLOGIA_v24.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  83695,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/01_LORE_RAW_EXPANDIDO/MEDIOEVO_017_ARCOS_SECUNDARIOS_v24.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  32829,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/01_LORE_RAW_EXPANDIDO/MEDIOEVO_PRINCIPIO_FUNDACIONAL_FLUJO_v26.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  11745,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/01_LORE_RAW_EXPANDIDO/MUNDO_MEDIOEVO_v27.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  420997,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    },
+                    {
+                        "path":  "07_LORE_LIBROS/LORE_MEDIOEVO_MASTER.md",
+                        "source_zip":  "07_LORE_LIBROS.zip",
+                        "type":  "duat_component",
+                        "stack_detected":  [
+                                               "DUAT/MEDIOEVO"
+                                           ],
+                        "useful_for":  [
+                                           "DUAT integration reference"
+                                       ],
+                        "risk":  "low",
+                        "integration_recommendation":  "reference_only",
+                        "reason":  "Renderer/UI/art-direction signal detected from path metadata.",
+                        "requires_dependency":  false,
+                        "unknown_code_execution_risk":  false,
+                        "size_bytes":  1233,
+                        "notes":  "Read-only metadata scan. No zip code executed; concepts must be adapted through local DUAT adapter."
+                    }
+                ],
+    "missing_paths":  [
+
+                      ],
+    "boundary":  {
+                     "metadata_only":  true,
+                     "unknown_code_executed":  false,
+                     "publication_allowed":  false,
+                     "no_raw_source_adoption":  true,
+                     "staging_dir":  "_external_review/v1_3_2"
+                 }
+}

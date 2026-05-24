@@ -1,0 +1,79 @@
+{
+  "schema": "duat/audio-gamefeel-benchmark/v1.3.1",
+  "fingerprint": "DUAT-v1.3.1-AUDIO-GAMEFEEL-CONTINUITY",
+  "generatedAt": "2026-05-20T05:54:01.117Z",
+  "iterationsPerScenario": 160,
+  "browserAudioUsed": false,
+  "scenarios": [
+    {
+      "scenario": "baseline_city",
+      "label": "baseline city silent/off",
+      "avgMapMs": 0.438,
+      "p95MapMs": 2.382,
+      "cueCount": 1,
+      "R_audio": 0.024,
+      "Phi_audio": 1,
+      "proceduralOnly": true,
+      "finite": true
+    },
+    {
+      "scenario": "fire_smoke",
+      "label": "fire plus smoke material cue stack",
+      "avgMapMs": 0.54,
+      "p95MapMs": 1.437,
+      "cueCount": 5,
+      "R_audio": 0.177,
+      "Phi_audio": 0.953,
+      "proceduralOnly": true,
+      "finite": true
+    },
+    {
+      "scenario": "neon_rain",
+      "label": "neon rain street cues",
+      "avgMapMs": 1.613,
+      "p95MapMs": 2.156,
+      "cueCount": 10,
+      "R_audio": 0.302,
+      "Phi_audio": 0.884,
+      "proceduralOnly": true,
+      "finite": true
+    },
+    {
+      "scenario": "agent_stress",
+      "label": "agent needs and R cue budget",
+      "avgMapMs": 1.391,
+      "p95MapMs": 2.625,
+      "cueCount": 23,
+      "R_audio": 0.495,
+      "Phi_audio": 0.778,
+      "proceduralOnly": true,
+      "finite": true
+    },
+    {
+      "scenario": "rpg_transition",
+      "label": "RPG gate transition cue set",
+      "avgMapMs": 0.566,
+      "p95MapMs": 2.238,
+      "cueCount": 4,
+      "R_audio": 0.121,
+      "Phi_audio": 0.983,
+      "proceduralOnly": true,
+      "finite": true
+    },
+    {
+      "scenario": "metroidvania_gate",
+      "label": "metroidvania gate and ruin anomaly",
+      "avgMapMs": 0.774,
+      "p95MapMs": 3.453,
+      "cueCount": 5,
+      "R_audio": 0.195,
+      "Phi_audio": 0.943,
+      "proceduralOnly": true,
+      "finite": true
+    }
+  ],
+  "notes": [
+    "Pure mapping benchmark: no AudioContext, no samples, no cloud.",
+    "Audio remains off by default until a local user gesture enables browser synthesis."
+  ]
+}

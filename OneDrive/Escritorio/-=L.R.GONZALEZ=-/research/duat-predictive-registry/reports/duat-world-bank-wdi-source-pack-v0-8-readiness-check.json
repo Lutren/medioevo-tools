@@ -1,0 +1,155 @@
+{
+  "schema": "duat.world_bank_wdi_source_pack_report.v0_8",
+  "run_id": "DUAT_WDI_OFFICIAL_SOURCE_PACK_v0_8",
+  "generated_at_utc": "2026-05-15T07:48:07Z",
+  "source": {
+    "name": "World Bank World Development Indicators",
+    "api_base": "https://api.worldbank.org/v2",
+    "license_review_status": "REVIEW",
+    "terms_url": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets",
+    "accessed_at": "2026-05-15T07:47:49Z"
+  },
+  "scope": {
+    "country_code": "MEX",
+    "country_name": "Mexico",
+    "selection_reason": "MEX provided to CLI; existing scope decision checked before execution."
+  },
+  "indicator_mapping": {
+    "economy.real_growth_rate": "NY.GDP.MKTP.KD.ZG",
+    "labor_market.unemployment_rate.total": "SL.UEM.TOTL.ZS",
+    "demography.life_expectancy_at_birth.total": "SP.DYN.LE00.IN"
+  },
+  "manifest": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/research/duat-predictive-registry/data_sources/world_bank_wdi/world_bank_wdi_manifest_v0_8.json",
+  "manifest_sha256": "fe3d7e97baa9cfb7c1d189862a0870cb74b90df5653ed70daa96cabf091981d9",
+  "schema_validation": "PASS",
+  "manifest_errors": [],
+  "raw_downloads": [],
+  "series_results": [
+    {
+      "duat_indicator_id": "economy.real_growth_rate",
+      "wdi_indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "indicator_name": "GDP growth (annual %)",
+      "unit": "annual_percent_growth",
+      "frequency": "annual",
+      "start_year": 1961,
+      "end_year": 2024,
+      "n_observations": 64,
+      "missing_years": [],
+      "duplicate_years": [],
+      "future_years": [],
+      "raw_file": "data_sources/world_bank_wdi/raw/MEX_NY.GDP.MKTP.KD.ZG_raw.json",
+      "raw_sha256": "0277d9db0a5954e5a922c0249ee80e09d88863e44f7d8aa413a504f05703efd5",
+      "processed_file": "data_sources/world_bank_wdi/processed/MEX_NY.GDP.MKTP.KD.ZG_processed.json",
+      "processed_sha256": "3a7eed8f168f9bf3d45cf7a4af55043263083e3e83c7beb094b4c4923722a46d",
+      "processed_csv_file": "data_sources/world_bank_wdi/processed/MEX_NY.GDP.MKTP.KD.ZG_processed.csv",
+      "processed_csv_sha256": "2d6662850a466c7417fb11b7e5ba6a458c9ab4c5d67d4f31d5d72ce912c20db2",
+      "source_card": "data_sources/world_bank_wdi/source_cards/economy_real_growth_rate_WDI_SOURCE_CARD_v0_8.md",
+      "readiness_gate": "REVIEW",
+      "license_terms_scan": "REVIEW",
+      "comparability_review": "REVIEW",
+      "leakage_preflight": "PASS",
+      "notes": [
+        "GDP growth is a WDI annual percentage indicator; base and national accounts methodology may vary across revisions.",
+        "No interpolation or imputation applied in v0.8.",
+        "License and comparability remain under review before any publication."
+      ],
+      "minimum_observation_review": "PASS",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "duat_indicator_id": "labor_market.unemployment_rate.total",
+      "wdi_indicator_code": "SL.UEM.TOTL.ZS",
+      "indicator_name": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+      "unit": "percent_of_total_labor_force",
+      "frequency": "annual",
+      "start_year": 1991,
+      "end_year": 2025,
+      "n_observations": 35,
+      "missing_years": [],
+      "duplicate_years": [],
+      "future_years": [],
+      "raw_file": "data_sources/world_bank_wdi/raw/MEX_SL.UEM.TOTL.ZS_raw.json",
+      "raw_sha256": "8e1266859c8d29852012fc96f688a4097c5d6436a2bd900cccb3d97b66890b23",
+      "processed_file": "data_sources/world_bank_wdi/processed/MEX_SL.UEM.TOTL.ZS_processed.json",
+      "processed_sha256": "c60dab757f0635ad71ce5e5b2d5ffd06a8df64bf4b4d8ddd4fffccb3474f9c64",
+      "processed_csv_file": "data_sources/world_bank_wdi/processed/MEX_SL.UEM.TOTL.ZS_processed.csv",
+      "processed_csv_sha256": "cb55daa7c39a558910095649d3a2f0f3cb8cb4a5c468c7dae4180bea314bf973",
+      "source_card": "data_sources/world_bank_wdi/source_cards/labor_market_unemployment_rate_total_WDI_SOURCE_CARD_v0_8.md",
+      "readiness_gate": "REVIEW",
+      "license_terms_scan": "REVIEW",
+      "comparability_review": "REVIEW",
+      "leakage_preflight": "PASS",
+      "notes": [
+        "Unemployment series may include modeled estimates and national definition differences.",
+        "No interpolation or imputation applied in v0.8.",
+        "License and comparability remain under review before any publication."
+      ],
+      "minimum_observation_review": "PASS",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "duat_indicator_id": "demography.life_expectancy_at_birth.total",
+      "wdi_indicator_code": "SP.DYN.LE00.IN",
+      "indicator_name": "Life expectancy at birth, total (years)",
+      "unit": "years",
+      "frequency": "annual",
+      "start_year": 1960,
+      "end_year": 2024,
+      "n_observations": 65,
+      "missing_years": [],
+      "duplicate_years": [],
+      "future_years": [],
+      "raw_file": "data_sources/world_bank_wdi/raw/MEX_SP.DYN.LE00.IN_raw.json",
+      "raw_sha256": "1537ce2600857d557771f844464a3426338b0ad5a274464352ff8d2aa812e798",
+      "processed_file": "data_sources/world_bank_wdi/processed/MEX_SP.DYN.LE00.IN_processed.json",
+      "processed_sha256": "71a6789f24ab04af469434794bd31e1e44aa5beca67ff8487b360f78c9c2e1c0",
+      "processed_csv_file": "data_sources/world_bank_wdi/processed/MEX_SP.DYN.LE00.IN_processed.csv",
+      "processed_csv_sha256": "9bce49a0b40d8df097d6e382b2680439d78dc23b51cb7aa63b7650c72dab3534",
+      "source_card": "data_sources/world_bank_wdi/source_cards/demography_life_expectancy_at_birth_total_WDI_SOURCE_CARD_v0_8.md",
+      "readiness_gate": "REVIEW",
+      "license_terms_scan": "REVIEW",
+      "comparability_review": "REVIEW",
+      "leakage_preflight": "PASS",
+      "notes": [
+        "Life expectancy is a WDI annual demographic estimate; source revisions remain possible.",
+        "No interpolation or imputation applied in v0.8.",
+        "License and comparability remain under review before any publication."
+      ],
+      "minimum_observation_review": "PASS",
+      "publication_gate": "BLOCK"
+    }
+  ],
+  "license_terms_scan": "REVIEW",
+  "comparability_review": "REVIEW",
+  "leakage_preflight": "PASS",
+  "data_gate": "REVIEW",
+  "publication_gate": "BLOCK",
+  "forecast_gate": "REVIEW",
+  "action_gate_local": "REVIEW",
+  "benchmark_executed": false,
+  "external_publication": false,
+  "reconstruction_test": {
+    "status": "PASS",
+    "score": 5,
+    "max_score": 5,
+    "answers": {
+      "official_source": "World Bank World Development Indicators",
+      "indicator_mapping": "economy.real_growth_rate=NY.GDP.MKTP.KD.ZG; labor_market.unemployment_rate.total=SL.UEM.TOTL.ZS; demography.life_expectancy_at_birth.total=SP.DYN.LE00.IN",
+      "data_gate": "REVIEW; computed from observation counts and license/comparability/leakage gates.",
+      "publication_gates": "publication_gate=BLOCK; ForecastGate=REVIEW; LicenseTermsScan and ComparabilityReview are not public release approvals.",
+      "minimum_v0_9_condition": "Open v0.9 backtest only after source pack gates are reviewed and no BLOCK remains; do not tune or backtest inside v0.8."
+    },
+    "critical_omissions": []
+  },
+  "claims": {
+    "public_prediction_claim_allowed": false,
+    "allowed_language": [
+      "official long-history data source",
+      "source pack",
+      "readiness gate",
+      "not approved for public prediction"
+    ]
+  },
+  "payload_sha256": "9a57d60c509a45d8629e43d2d4d028ca3509e0317a0738120e6ad5af3c82c11c",
+  "sha256_scope": "canonical_json_without_sha256_fields"
+}

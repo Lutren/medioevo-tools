@@ -1,0 +1,11 @@
+{
+  "commands": [
+    {
+      "event_id": "evt-rollback-success-command-001",
+      "command": "python -m claudio_agent_runtime rollback restore rollback-success-001",
+      "status": "ok",
+      "actiongate": "APPROVE",
+      "evidence": "restored"
+    }
+  ]
+}

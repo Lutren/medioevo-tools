@@ -6,6 +6,8 @@ runtime/curador_seto/source_archive/
 runtime/curador_seto/tree_quarantine/
 
 # Regenerable local cache. These trees are noise, not source.
+node_modules/
+**/node_modules/
 **/__pycache__/
 **/.pytest_cache/
 **/.ruff_cache/

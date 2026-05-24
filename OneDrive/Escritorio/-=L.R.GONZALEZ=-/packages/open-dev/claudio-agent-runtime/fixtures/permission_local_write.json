@@ -1,0 +1,9 @@
+{
+  "schema_version": "claudio.permission_request.v0.1",
+  "action": "write_file",
+  "target": "docs/example.md",
+  "scope": "workspace",
+  "risk_tags": ["local", "reversible"],
+  "reversible": true
+}
+

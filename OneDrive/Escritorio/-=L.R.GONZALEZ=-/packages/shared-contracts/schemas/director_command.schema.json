@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "medioevo.director_command.v0.1",
+  "title": "DirectorCommand",
+  "type": "object",
+  "required": ["schema_version", "command_id", "source_system", "command_type", "target", "payload", "action_gate", "boundary"],
+  "properties": {
+    "schema_version": { "const": "medioevo.director_command.v0.1" },
+    "command_id": { "type": "string" },
+    "source_system": { "enum": ["WABI_SABI_CONTROL_PLANE", "DUAT_SIMULATOR_WORLD", "MEDIOEVO_FORGE_APP_GAME_CREATOR", "MEDIOEVO_SPACE_PUBLIC_PORTAL", "SHARED_CONTRACTS"] },
+    "command_type": { "type": "string" },
+    "target": { "type": "object" },
+    "payload": { "type": "object" },
+    "action_gate": { "type": "object" },
+    "boundary": { "type": "object" }
+  },
+  "additionalProperties": false
+}
+

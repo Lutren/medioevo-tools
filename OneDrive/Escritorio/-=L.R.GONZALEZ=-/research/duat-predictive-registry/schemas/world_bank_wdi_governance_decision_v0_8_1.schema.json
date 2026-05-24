@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "world_bank_wdi_governance_decision_v0_8_1.schema.json",
+  "title": "DUAT World Bank WDI Governance Decision v0.8.1",
+  "type": "object",
+  "required": [
+    "run_id",
+    "source_pack_run",
+    "country_scope",
+    "license_terms_scan",
+    "comparability_review",
+    "leakage_preflight",
+    "data_gate",
+    "backtest_open_gate",
+    "series_reviews",
+    "required_attribution",
+    "human_legal_review_required",
+    "recommendation",
+    "publication_gate",
+    "benchmark_executed"
+  ],
+  "properties": {
+    "run_id": {
+      "const": "DUAT_WDI_LICENSE_COMPARABILITY_REVIEW_v0_8_1"
+    },
+    "source_pack_run": {
+      "const": "DUAT_WDI_OFFICIAL_SOURCE_PACK_v0_8"
+    },
+    "country_scope": {
+      "const": "MEX"
+    },
+    "license_terms_scan": {
+      "enum": ["PASS", "REVIEW", "BLOCK"]
+    },
+    "comparability_review": {
+      "enum": ["PASS", "REVIEW", "BLOCK"]
+    },
+    "leakage_preflight": {
+      "enum": ["PASS", "REVIEW", "BLOCK"]
+    },
+    "data_gate": {
+      "enum": ["APPROVE_FOR_INTERNAL_BACKTEST", "REVIEW", "BLOCK"]
+    },
+    "backtest_open_gate": {
+      "enum": ["APPROVE_INTERNAL_BACKTEST", "REVIEW_ONLY_DRY_RUN", "BLOCK_BACKTEST"]
+    },
+    "series_reviews": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": [
+          "duat_indicator_id",
+          "wdi_indicator_code",
+          "n_observations",
+          "comparability_review",
+          "leakage_preflight"
+        ],
+        "properties": {
+          "duat_indicator_id": {"type": "string"},
+          "wdi_indicator_code": {"type": "string"},
+          "n_observations": {"type": "integer"},
+          "comparability_review": {"enum": ["PASS", "REVIEW", "BLOCK"]},
+          "leakage_preflight": {"enum": ["PASS", "REVIEW", "BLOCK"]},
+          "comparability_risk": {"enum": ["LOW", "MED", "HIGH"]}
+        }
+      }
+    },
+    "required_attribution": {
+      "type": ["string", "null"]
+    },
+    "human_legal_review_required": {
+      "const": true
+    },
+    "recommendation": {
+      "enum": ["open_v0_9_internal", "open_v0_9_dry_run_only", "do_not_backtest"]
+    },
+    "publication_gate": {
+      "const": "BLOCK"
+    },
+    "forecast_gate": {
+      "const": "REVIEW"
+    },
+    "benchmark_executed": {
+      "const": false
+    },
+    "external_publication": {
+      "const": false
+    }
+  }
+}

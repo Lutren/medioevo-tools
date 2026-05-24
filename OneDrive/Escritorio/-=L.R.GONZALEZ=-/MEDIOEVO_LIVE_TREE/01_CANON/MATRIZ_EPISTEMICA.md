@@ -1,0 +1,3 @@
+# MATRIZ_EPISTEMICA
+
+Toda afirmacion se marca como CERTEZA, INFERENCIA, INCOGNITA o BLOQUEO.

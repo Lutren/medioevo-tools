@@ -116,6 +116,20 @@ class GateTests(unittest.TestCase):
         self.assertEqual(decision["status"], "BLOCK")
         self.assertIn("scientific claim requires verified evidence", decision["reasons"])
 
+    def test_public_claim_release_example_requires_review(self) -> None:
+        app_root = Path(__file__).resolve().parents[1]
+        sample = app_root / "examples" / "public_claim_review_action.json"
+        action = json.loads(sample.read_text(encoding="utf-8"))
+
+        decision = evaluate_action(action)
+
+        self.assertEqual(decision["status"], "REVIEW")
+        self.assertIn("policy violation requires review", decision["reasons"])
+        self.assertIn(
+            "Policy requires human approval but no human reviewer is attached.",
+            decision["residue"]["policyViolations"],
+        )
+
 
 class StoreTests(unittest.TestCase):
     def test_sqlite_persistence_and_human_review_audit(self) -> None:

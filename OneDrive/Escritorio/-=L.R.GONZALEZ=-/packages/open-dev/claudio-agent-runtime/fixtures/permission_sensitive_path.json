@@ -1,0 +1,8 @@
+{
+  "schema_version": "claudio.permission_request.v0.1",
+  "action": "touch_secret",
+  "target": ".env",
+  "scope": "workspace",
+  "risk_tags": ["secret", "touches_secret"]
+}
+

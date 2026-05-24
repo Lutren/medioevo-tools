@@ -1,0 +1,177 @@
+import { createHotContext as __vite__createHotContext } from "/duat-city/@vite/client";import.meta.hot = __vite__createHotContext("/src/components/VisualEnginePanel.tsx");"use strict";
+import __vite__cjsImport0_react_jsxDevRuntime from "/duat-city/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=87a97fe6"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import { LightPanel } from "/duat-city/src/components/LightPanel.tsx";
+import { MaterialPanel } from "/duat-city/src/components/MaterialPanel.tsx";
+export function VisualEnginePanel({ state, config, onConfig }) {
+  return /* @__PURE__ */ jsxDEV("div", { className: "section visual-engine-panel", children: [
+    /* @__PURE__ */ jsxDEV("div", { className: "section-title", children: "Medioevo Pixel Realism" }, void 0, false, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VisualEnginePanel.tsx",
+      lineNumber: 15,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("label", { className: "field-label", children: "Quality" }, void 0, false, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VisualEnginePanel.tsx",
+      lineNumber: 16,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("select", { className: "select-input", value: config.qualityPreset, onChange: (event) => onConfig({ ...config, qualityPreset: event.target.value }), children: ["LOW", "MEDIUM", "HIGH", "BEAUTIFUL", "DEBUG"].map((value) => /* @__PURE__ */ jsxDEV("option", { value, children: value }, value, false, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VisualEnginePanel.tsx",
+      lineNumber: 18,
+      columnNumber: 100
+    }, this)) }, void 0, false, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VisualEnginePanel.tsx",
+      lineNumber: 17,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("label", { className: "field-label", children: "Time" }, void 0, false, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VisualEnginePanel.tsx",
+      lineNumber: 20,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("select", { className: "select-input", value: config.timeOfDay, onChange: (event) => onConfig({ ...config, timeOfDay: event.target.value }), children: ["dawn", "day", "golden", "night", "interior"].map((value) => /* @__PURE__ */ jsxDEV("option", { value, children: value }, value, false, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VisualEnginePanel.tsx",
+      lineNumber: 22,
+      columnNumber: 89
+    }, this)) }, void 0, false, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VisualEnginePanel.tsx",
+      lineNumber: 21,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("label", { className: "field-label", children: "Weather" }, void 0, false, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VisualEnginePanel.tsx",
+      lineNumber: 24,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("select", { className: "select-input", value: config.weather, onChange: (event) => onConfig({ ...config, weather: event.target.value }), children: ["clear", "rain", "snow", "fog", "jungle_mist", "desert_haze"].map((value) => /* @__PURE__ */ jsxDEV("option", { value, children: value }, value, false, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VisualEnginePanel.tsx",
+      lineNumber: 26,
+      columnNumber: 107
+    }, this)) }, void 0, false, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VisualEnginePanel.tsx",
+      lineNumber: 25,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("label", { className: "field-label", children: "Palette" }, void 0, false, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VisualEnginePanel.tsx",
+      lineNumber: 28,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("select", { className: "select-input", value: config.paletteProfile, onChange: (event) => onConfig({ ...config, paletteProfile: event.target.value }), children: ["medioevo_archeopunk", "cinematic_teal_amber", "warm_interior", "pictorial_nature", "winter_reflection"].map((value) => /* @__PURE__ */ jsxDEV("option", { value, children: value }, value, false, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VisualEnginePanel.tsx",
+      lineNumber: 30,
+      columnNumber: 131
+    }, this)) }, void 0, false, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VisualEnginePanel.tsx",
+      lineNumber: 29,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "toggle-row", children: [
+      /* @__PURE__ */ jsxDEV("label", { children: [
+        /* @__PURE__ */ jsxDEV("input", { type: "checkbox", checked: config.dither, onChange: (event) => onConfig({ ...config, dither: event.target.checked }) }, void 0, false, {
+          fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VisualEnginePanel.tsx",
+          lineNumber: 33,
+          columnNumber: 16
+        }, this),
+        " Dither"
+      ] }, void 0, true, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VisualEnginePanel.tsx",
+        lineNumber: 33,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("label", { children: [
+        /* @__PURE__ */ jsxDEV("input", { type: "checkbox", checked: config.hideUiForCapture, onChange: (event) => onConfig({ ...config, hideUiForCapture: event.target.checked }) }, void 0, false, {
+          fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VisualEnginePanel.tsx",
+          lineNumber: 34,
+          columnNumber: 16
+        }, this),
+        " Capture"
+      ] }, void 0, true, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VisualEnginePanel.tsx",
+        lineNumber: 34,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VisualEnginePanel.tsx",
+      lineNumber: 32,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "stat-row", children: [
+      /* @__PURE__ */ jsxDEV("span", { className: "stat-key", children: "Pixel scale" }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VisualEnginePanel.tsx",
+        lineNumber: 37,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("span", { className: "stat-val", children: config.pixelScale }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VisualEnginePanel.tsx",
+        lineNumber: 38,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VisualEnginePanel.tsx",
+      lineNumber: 36,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV(
+      "input",
+      {
+        className: "range-input",
+        type: "range",
+        min: "1",
+        max: "5",
+        step: "1",
+        value: config.pixelScale,
+        onChange: (event) => onConfig({ ...config, pixelScale: Number(event.target.value) })
+      },
+      void 0,
+      false,
+      {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VisualEnginePanel.tsx",
+        lineNumber: 40,
+        columnNumber: 7
+      },
+      this
+    ),
+    /* @__PURE__ */ jsxDEV(LightPanel, { config, onConfig }, void 0, false, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VisualEnginePanel.tsx",
+      lineNumber: 49,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV(MaterialPanel, { state }, void 0, false, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VisualEnginePanel.tsx",
+      lineNumber: 50,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VisualEnginePanel.tsx",
+    lineNumber: 14,
+    columnNumber: 5
+  }, this);
+}
+_c = VisualEnginePanel;
+var _c;
+$RefreshReg$(_c, "VisualEnginePanel");
+import * as RefreshRuntime from "/duat-city/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react can't detect preamble. Something is wrong."
+    );
+  }
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VisualEnginePanel.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VisualEnginePanel.tsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+function $RefreshReg$(type, id) {
+  return RefreshRuntime.register(type, "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VisualEnginePanel.tsx " + id);
+}
+function $RefreshSig$() {
+  return RefreshRuntime.createSignatureFunctionForTransform();
+}
+
+//# sourceMappingURL=data:application/json;base64,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SUFBQWlCO0FBQUEsYUFBQUEsSUFBQSIsIm5hbWVzIjpbIkxpZ2h0UGFuZWwiLCJNYXRlcmlhbFBhbmVsIiwiVmlzdWFsRW5naW5lUGFuZWwiLCJzdGF0ZSIsImNvbmZpZyIsIm9uQ29uZmlnIiwicXVhbGl0eVByZXNldCIsImV2ZW50IiwidGFyZ2V0IiwidmFsdWUiLCJtYXAiLCJ0aW1lT2ZEYXkiLCJ3ZWF0aGVyIiwicGFsZXR0ZVByb2ZpbGUiLCJkaXRoZXIiLCJjaGVja2VkIiwiaGlkZVVpRm9yQ2FwdHVyZSIsInBpeGVsU2NhbGUiLCJOdW1iZXIiLCJfYyJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJWaXN1YWxFbmdpbmVQYW5lbC50c3giXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHR5cGUgeyBDaXR5U3RhdGUgfSBmcm9tIFwiLi4vY29yZS90eXBlc1wiO1xuaW1wb3J0IHR5cGUgeyBQaXhlbFJlYWxpc21Db25maWcsIFJlbmRlclF1YWxpdHlQcmVzZXQsIFRpbWVPZkRheSwgV2VhdGhlck1vZGUgfSBmcm9tIFwiLi4vcGl4ZWxSZWFsaXNtL3JlbmRlclBhc3Nlc1wiO1xuaW1wb3J0IHsgTGlnaHRQYW5lbCB9IGZyb20gXCIuL0xpZ2h0UGFuZWxcIjtcbmltcG9ydCB7IE1hdGVyaWFsUGFuZWwgfSBmcm9tIFwiLi9NYXRlcmlhbFBhbmVsXCI7XG5cbmludGVyZmFjZSBWaXN1YWxFbmdpbmVQYW5lbFByb3BzIHtcbiAgc3RhdGU6IENpdHlTdGF0ZTtcbiAgY29uZmlnOiBQaXhlbFJlYWxpc21Db25maWc7XG4gIG9uQ29uZmlnOiAoY29uZmlnOiBQaXhlbFJlYWxpc21Db25maWcpID0+IHZvaWQ7XG59XG5cbmV4cG9ydCBmdW5jdGlvbiBWaXN1YWxFbmdpbmVQYW5lbCh7IHN0YXRlLCBjb25maWcsIG9uQ29uZmlnIH06IFZpc3VhbEVuZ2luZVBhbmVsUHJvcHMpIHtcbiAgcmV0dXJuIChcbiAgICA8ZGl2IGNsYXNzTmFtZT1cInNlY3Rpb24gdmlzdWFsLWVuZ2luZS1wYW5lbFwiPlxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJzZWN0aW9uLXRpdGxlXCI+TWVkaW9ldm8gUGl4ZWwgUmVhbGlzbTwvZGl2PlxuICAgICAgPGxhYmVsIGNsYXNzTmFtZT1cImZpZWxkLWxhYmVsXCI+UXVhbGl0eTwvbGFiZWw+XG4gICAgICA8c2VsZWN0IGNsYXNzTmFtZT1cInNlbGVjdC1pbnB1dFwiIHZhbHVlPXtjb25maWcucXVhbGl0eVByZXNldH0gb25DaGFuZ2U9e2V2ZW50ID0+IG9uQ29uZmlnKHsgLi4uY29uZmlnLCBxdWFsaXR5UHJlc2V0OiBldmVudC50YXJnZXQudmFsdWUgYXMgUmVuZGVyUXVhbGl0eVByZXNldCB9KX0+XG4gICAgICAgIHsoW1wiTE9XXCIsIFwiTUVESVVNXCIsIFwiSElHSFwiLCBcIkJFQVVUSUZVTFwiLCBcIkRFQlVHXCJdIGFzIFJlbmRlclF1YWxpdHlQcmVzZXRbXSkubWFwKHZhbHVlID0+IDxvcHRpb24ga2V5PXt2YWx1ZX0gdmFsdWU9e3ZhbHVlfT57dmFsdWV9PC9vcHRpb24+KX1cbiAgICAgIDwvc2VsZWN0PlxuICAgICAgPGxhYmVsIGNsYXNzTmFtZT1cImZpZWxkLWxhYmVsXCI+VGltZTwvbGFiZWw+XG4gICAgICA8c2VsZWN0IGNsYXNzTmFtZT1cInNlbGVjdC1pbnB1dFwiIHZhbHVlPXtjb25maWcudGltZU9mRGF5fSBvbkNoYW5nZT17ZXZlbnQgPT4gb25Db25maWcoeyAuLi5jb25maWcsIHRpbWVPZkRheTogZXZlbnQudGFyZ2V0LnZhbHVlIGFzIFRpbWVPZkRheSB9KX0+XG4gICAgICAgIHsoW1wiZGF3blwiLCBcImRheVwiLCBcImdvbGRlblwiLCBcIm5pZ2h0XCIsIFwiaW50ZXJpb3JcIl0gYXMgVGltZU9mRGF5W10pLm1hcCh2YWx1ZSA9PiA8b3B0aW9uIGtleT17dmFsdWV9IHZhbHVlPXt2YWx1ZX0+e3ZhbHVlfTwvb3B0aW9uPil9XG4gICAgICA8L3NlbGVjdD5cbiAgICAgIDxsYWJlbCBjbGFzc05hbWU9XCJmaWVsZC1sYWJlbFwiPldlYXRoZXI8L2xhYmVsPlxuICAgICAgPHNlbGVjdCBjbGFzc05hbWU9XCJzZWxlY3QtaW5wdXRcIiB2YWx1ZT17Y29uZmlnLndlYXRoZXJ9IG9uQ2hhbmdlPXtldmVudCA9PiBvbkNvbmZpZyh7IC4uLmNvbmZpZywgd2VhdGhlcjogZXZlbnQudGFyZ2V0LnZhbHVlIGFzIFdlYXRoZXJNb2RlIH0pfT5cbiAgICAgICAgeyhbXCJjbGVhclwiLCBcInJhaW5cIiwgXCJzbm93XCIsIFwiZm9nXCIsIFwianVuZ2xlX21pc3RcIiwgXCJkZXNlcnRfaGF6ZVwiXSBhcyBXZWF0aGVyTW9kZVtdKS5tYXAodmFsdWUgPT4gPG9wdGlvbiBrZXk9e3ZhbHVlfSB2YWx1ZT17dmFsdWV9Pnt2YWx1ZX08L29wdGlvbj4pfVxuICAgICAgPC9zZWxlY3Q+XG4gICAgICA8bGFiZWwgY2xhc3NOYW1lPVwiZmllbGQtbGFiZWxcIj5QYWxldHRlPC9sYWJlbD5cbiAgICAgIDxzZWxlY3QgY2xhc3NOYW1lPVwic2VsZWN0LWlucHV0XCIgdmFsdWU9e2NvbmZpZy5wYWxldHRlUHJvZmlsZX0gb25DaGFuZ2U9e2V2ZW50ID0+IG9uQ29uZmlnKHsgLi4uY29uZmlnLCBwYWxldHRlUHJvZmlsZTogZXZlbnQudGFyZ2V0LnZhbHVlIH0pfT5cbiAgICAgICAge1tcIm1lZGlvZXZvX2FyY2hlb3B1bmtcIiwgXCJjaW5lbWF0aWNfdGVhbF9hbWJlclwiLCBcIndhcm1faW50ZXJpb3JcIiwgXCJwaWN0b3JpYWxfbmF0dXJlXCIsIFwid2ludGVyX3JlZmxlY3Rpb25cIl0ubWFwKHZhbHVlID0+IDxvcHRpb24ga2V5PXt2YWx1ZX0gdmFsdWU9e3ZhbHVlfT57dmFsdWV9PC9vcHRpb24+KX1cbiAgICAgIDwvc2VsZWN0PlxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJ0b2dnbGUtcm93XCI+XG4gICAgICAgIDxsYWJlbD48aW5wdXQgdHlwZT1cImNoZWNrYm94XCIgY2hlY2tlZD17Y29uZmlnLmRpdGhlcn0gb25DaGFuZ2U9e2V2ZW50ID0+IG9uQ29uZmlnKHsgLi4uY29uZmlnLCBkaXRoZXI6IGV2ZW50LnRhcmdldC5jaGVja2VkIH0pfSAvPiBEaXRoZXI8L2xhYmVsPlxuICAgICAgICA8bGFiZWw+PGlucHV0IHR5cGU9XCJjaGVja2JveFwiIGNoZWNrZWQ9e2NvbmZpZy5oaWRlVWlGb3JDYXB0dXJlfSBvbkNoYW5nZT17ZXZlbnQgPT4gb25Db25maWcoeyAuLi5jb25maWcsIGhpZGVVaUZvckNhcHR1cmU6IGV2ZW50LnRhcmdldC5jaGVja2VkIH0pfSAvPiBDYXB0dXJlPC9sYWJlbD5cbiAgICAgIDwvZGl2PlxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJzdGF0LXJvd1wiPlxuICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJzdGF0LWtleVwiPlBpeGVsIHNjYWxlPC9zcGFuPlxuICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJzdGF0LXZhbFwiPntjb25maWcucGl4ZWxTY2FsZX08L3NwYW4+XG4gICAgICA8L2Rpdj5cbiAgICAgIDxpbnB1dFxuICAgICAgICBjbGFzc05hbWU9XCJyYW5nZS1pbnB1dFwiXG4gICAgICAgIHR5cGU9XCJyYW5nZVwiXG4gICAgICAgIG1pbj1cIjFcIlxuICAgICAgICBtYXg9XCI1XCJcbiAgICAgICAgc3RlcD1cIjFcIlxuICAgICAgICB2YWx1ZT17Y29uZmlnLnBpeGVsU2NhbGV9XG4gICAgICAgIG9uQ2hhbmdlPXtldmVudCA9PiBvbkNvbmZpZyh7IC4uLmNvbmZpZywgcGl4ZWxTY2FsZTogTnVtYmVyKGV2ZW50LnRhcmdldC52YWx1ZSkgfSl9XG4gICAgICAvPlxuICAgICAgPExpZ2h0UGFuZWwgY29uZmlnPXtjb25maWd9IG9uQ29uZmlnPXtvbkNvbmZpZ30gLz5cbiAgICAgIDxNYXRlcmlhbFBhbmVsIHN0YXRlPXtzdGF0ZX0gLz5cbiAgICA8L2Rpdj5cbiAgKTtcbn1cbiJdLCJmaWxlIjoiQzovVXNlcnMvTC1UeXIvT25lRHJpdmUvRXNjcml0b3Jpby8tPUwuUi5HT05aQUxFWj0tL2FydGlmYWN0cy9kdWF0LWNpdHkvc3JjL2NvbXBvbmVudHMvVmlzdWFsRW5naW5lUGFuZWwudHN4In0=

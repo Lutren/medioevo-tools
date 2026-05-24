@@ -1,0 +1,18 @@
+{
+  "schema_version": "medioevo.world_state.v0.1",
+  "world_id": "duat-world-synthetic-001",
+  "tick": 0,
+  "geography": { "region": "synthetic-valley", "biome": "temperate", "coordinates_mode": "fictional" },
+  "era": { "label": "demo-era", "year": 1200, "calendar": "synthetic" },
+  "climate": { "temperature_c": 18, "humidity": 0.55, "weather": "clear" },
+  "astronomy": { "hour": 9, "sun_altitude": 34, "moon_phase": "waxing" },
+  "culture": { "norms": ["local-first"], "language": "synthetic-common" },
+  "laws": { "publication": "BLOCK", "external_actions": "GATED" },
+  "resources": { "food": 40, "materials": 25, "trust": 60, "knowledge": 10 },
+  "events": [],
+  "factions": [{ "id": "faction-archive", "name": "Archive Guild", "trust": 0.7 }],
+  "map_state": { "chunks": [{ "id": "chunk-0-0", "active": true }], "width": 8, "height": 8 },
+  "active_stimuli": [{ "id": "stimulus-light-window", "channel": "visual", "intensity": 0.7 }],
+  "boundary": { "publication_gate": "BLOCK", "contains_private_data": false, "public_safe": true }
+}
+

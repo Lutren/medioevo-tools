@@ -1,0 +1,56 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "20260523-LRG-MIRROR-WABI-CHAT-MESSAGE-ENDPOINT",
+  "project": "MEDIOEVO/CLAUDIO",
+  "R_close": 0.13,
+  "Phi_eff": 0.89,
+  "regime_close": "FUNCIONAL_TECHNICAL_MIRROR",
+  "autonomy_level_used": 3,
+  "actiongate_summary": {
+    "approved": 3,
+    "review_required": 3,
+    "blocked": 5
+  },
+  "files_created": [],
+  "files_modified": [
+    "NEXT_SESSION_BRIEF.md",
+    "PENDIENTES_MASTER.md",
+    "TASKS.md",
+    "TEST_REPORT.md",
+    "DECISIONS.md",
+    "SESSION_FINGERPRINT.json"
+  ],
+  "commands_run": [
+    "python tools\\release\\pending_review.py --write --quiet"
+  ],
+  "tests": {
+    "status": "passed",
+    "evidence": [
+      "LRG pending_review: active_dedup=0 claudio_open=0",
+      "BRAIN_OS provider-chat focal: 5 passed",
+      "BRAIN_OS Wabi relevant suite: 281 passed",
+      "BRAIN_OS full 02_CLAUDIO/tests: 836 passed in 59.19s",
+      "BRAIN_OS live /api/chat/message: online_ai_called=True model present clock clause present forbidden_mentions=[]"
+    ]
+  },
+  "decisions": [
+    "LRG remains technical mirror; BRAIN_OS is the live execution root for this Wabi chat endpoint closeout.",
+    "Wabi tree consolidation and cost-router remain REVIEW/RFC."
+  ],
+  "pending": [
+    "No local executable pending in LRG pending_review snapshot after closeout.",
+    "Tarea 2 Wabi tree consolidation requires canonical-root decision.",
+    "Tarea 3 cost router requires separate RFC/tests."
+  ],
+  "gates": {
+    "publication": "BLOCK",
+    "push_deploy": "BLOCK",
+    "apply": "BLOCK_BY_DEFAULT",
+    "provider_live_call": "RUN_IN_BRAIN_OS_FOR_REQUESTED_SMOKE",
+    "tree_consolidation": "REVIEW_REQUIRED",
+    "cost_router_feature": "REVIEW_REQUIRED",
+    "secret_credential_access": "HARD_BLOCK_NO_VALUES_PRINTED",
+    "destructive_delete": "BLOCK"
+  },
+  "next_action": "Use BRAIN_OS live queue; open a scoped RFC before Wabi tree consolidation or cost-router implementation."
+}

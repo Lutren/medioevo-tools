@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "world_bank_wdi_series_v0_8.schema.json",
+  "title": "World Bank WDI Series v0.8",
+  "type": "object",
+  "required": [
+    "duat_indicator_id",
+    "wdi_indicator_code",
+    "indicator_name",
+    "unit",
+    "frequency",
+    "start_year",
+    "end_year",
+    "n_observations",
+    "missing_years",
+    "raw_file",
+    "raw_sha256",
+    "processed_file",
+    "processed_sha256",
+    "readiness_gate",
+    "license_terms_scan",
+    "comparability_review",
+    "leakage_preflight"
+  ],
+  "properties": {
+    "duat_indicator_id": {"type": "string"},
+    "wdi_indicator_code": {"type": "string"},
+    "indicator_name": {"type": ["string", "null"]},
+    "unit": {"type": ["string", "null"]},
+    "frequency": {"const": "annual"},
+    "start_year": {"type": ["integer", "null"]},
+    "end_year": {"type": ["integer", "null"]},
+    "n_observations": {"type": "integer"},
+    "missing_years": {
+      "type": "array",
+      "items": {"type": "integer"}
+    },
+    "duplicate_years": {
+      "type": "array",
+      "items": {"type": "integer"}
+    },
+    "future_years": {
+      "type": "array",
+      "items": {"type": "integer"}
+    },
+    "raw_file": {"type": "string"},
+    "raw_sha256": {"type": "string"},
+    "processed_file": {"type": "string"},
+    "processed_sha256": {"type": "string"},
+    "processed_csv_file": {"type": "string"},
+    "processed_csv_sha256": {"type": "string"},
+    "source_card": {"type": "string"},
+    "readiness_gate": {
+      "enum": ["APPROVE_FOR_BACKTEST", "REVIEW", "BLOCK"]
+    },
+    "license_terms_scan": {
+      "enum": ["PASS", "REVIEW", "BLOCK"]
+    },
+    "comparability_review": {
+      "enum": ["PASS", "REVIEW", "BLOCK"]
+    },
+    "leakage_preflight": {
+      "enum": ["PASS", "REVIEW", "BLOCK"]
+    },
+    "notes": {
+      "type": "array",
+      "items": {"type": "string"}
+    }
+  }
+}

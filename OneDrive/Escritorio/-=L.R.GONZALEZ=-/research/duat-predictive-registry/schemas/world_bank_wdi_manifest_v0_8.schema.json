@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "world_bank_wdi_manifest_v0_8.schema.json",
+  "title": "DUAT World Bank WDI Source Pack Manifest v0.8",
+  "type": "object",
+  "required": ["version", "run_id", "source", "scope", "series", "publication_gate", "benchmark_executed"],
+  "properties": {
+    "version": {"const": "0.8"},
+    "run_id": {"const": "DUAT_WDI_OFFICIAL_SOURCE_PACK_v0_8"},
+    "source": {
+      "type": "object",
+      "required": ["name", "api_base", "license_review_status", "terms_url", "accessed_at"],
+      "properties": {
+        "name": {"const": "World Bank World Development Indicators"},
+        "api_base": {"const": "https://api.worldbank.org/v2"},
+        "license_review_status": {"enum": ["PASS", "REVIEW", "BLOCK"]},
+        "terms_url": {"type": "string"},
+        "accessed_at": {"type": ["string", "null"]}
+      }
+    },
+    "scope": {
+      "type": "object",
+      "required": ["country_code", "country_name", "selection_reason"],
+      "properties": {
+        "country_code": {"type": ["string", "null"]},
+        "country_name": {"type": ["string", "null"]},
+        "selection_reason": {"type": ["string", "null"]}
+      }
+    },
+    "series": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "$ref": "world_bank_wdi_series_v0_8.schema.json"
+      }
+    },
+    "publication_gate": {"const": "BLOCK"},
+    "external_publication": {"const": false},
+    "benchmark_executed": {"const": false}
+  }
+}

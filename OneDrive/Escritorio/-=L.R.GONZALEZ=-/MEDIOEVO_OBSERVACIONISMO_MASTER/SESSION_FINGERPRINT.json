@@ -1,0 +1,102 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "20260507T035242",
+  "project": "MEDIOEVO/OBSERVACIONISMO_MASTER",
+  "R_close": 0.15,
+  "Phi_eff": 0.75,
+  "regime_close": "FUNCIONAL",
+  "autonomy_level_used": 3,
+  "actiongate_summary": {
+    "approved": 26,
+    "review_required": 3,
+    "blocked": 0
+  },
+  "project_root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
+  "output_dir": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\MEDIOEVO_OBSERVACIONISMO_MASTER",
+  "sources": [
+    "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\PRODUCTOS_MEDIOEVO",
+    "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-",
+    "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-"
+  ],
+  "source_files_inventoried": 791,
+  "files_created": [
+    "00_README_MASTER.md",
+    "01_MAPA_GENERAL.md",
+    "02_GLOSARIO_CANONICO.md",
+    "03_TEORIA_INFORMACION.md",
+    "04_TEORIA_IA_AGENTES.md",
+    "05_TEORIA_FISICA_REAL.md",
+    "06_HIPOTESIS_FISICAS_OSIT_TUIP_SIGMA.md",
+    "07_OBSERVACIONISMO.md",
+    "08_OBSERVACIONISMO_INVERSO.md",
+    "09_INGENIERIA_OBSERVACIONISTA.md",
+    "10_WABI_SABI_CLAUDIO_AGI.md",
+    "11_DUAT_GEODIA_HORMIGUERO.md",
+    "12_MODULOS_TECNICOS.md",
+    "13_AGENTES.md",
+    "14_PROYECTOS_ACTIVOS.md",
+    "15_PROYECTOS_FUTUROS.md",
+    "16_CLAIMS_REGISTER.md",
+    "17_FALSADORES_Y_TESTS.md",
+    "18_RIESGOS_CONTRADICCIONES.md",
+    "19_ROADMAP.md",
+    "20_NEXT_SESSION_BRIEF.md",
+    "21_ACTION_GATES.md",
+    "22_PROMPTS_OPERATIVOS.md",
+    "SOURCE_MANIFEST.md",
+    "SOURCE_MANIFEST.json",
+    "PENDIENTES_DE_INPUT.md"
+  ],
+  "files_modified": [],
+  "commands_run": [
+    "python tools\\release\\pending_review.py --write --quiet",
+    "python tools\\release\\build_observacionismo_master.py --emit-cerebro-index",
+    "python -m pytest tests\\test_cerebro_index.py tests\\test_curator_assistant.py -q",
+    "python -m wabi_sabi.cli.main cerebro-index --json",
+    "python -m json.tool SOURCE_MANIFEST.json",
+    "python -m json.tool CEREBRO_NAVIGATION_MANIFEST.json"
+  ],
+  "tests": {
+    "status": "passed",
+    "evidence": [
+      "Required CEREBRO human library docs present.",
+      "SOURCE_MANIFEST.json validates with python -m json.tool.",
+      "CEREBRO_NAVIGATION_MANIFEST.json validates with python -m json.tool.",
+      "Focused Wabi-Sabi tests passed: 6 passed.",
+      "Wabi-Sabi cerebro-index CLI dry-run returned ok=true."
+    ]
+  },
+  "verification": [
+    {
+      "command": "python -m json.tool SOURCE_MANIFEST.json",
+      "result": "pass"
+    },
+    {
+      "command": "python -m json.tool CEREBRO_NAVIGATION_MANIFEST.json",
+      "result": "pass"
+    },
+    {
+      "command": "rg '\\[[ xX]\\]' generated docs",
+      "result": "pass"
+    },
+    {
+      "command": "python -m pytest tests\\test_cerebro_index.py tests\\test_curator_assistant.py -q",
+      "result": "pass"
+    },
+    {
+      "command": "python -m wabi_sabi.cli.main cerebro-index --json",
+      "result": "pass"
+    }
+  ],
+  "decisions": [
+    "Create a new master folder instead of moving or deleting source files.",
+    "Treat PSI 00-19 as canonical base and append PRODUCTOS/CEREBRO curation.",
+    "Keep physics strong claims gated until independent symbolic/numeric validation."
+  ],
+  "pending": [
+    "Process heavy PDFs/DOCX/ZIP/TAR only when needed for a specific claim.",
+    "Run module tests for DSL/model-slimmer/manifest validator in a later implementation pass.",
+    "Convert more master modules into runtime contracts once CEREBRO navigation is stable."
+  ],
+  "next_action": "Implement JSON schemas for OSO, AgentMessage, WitnessLog, ActionGate and ModuleManifest."
+}

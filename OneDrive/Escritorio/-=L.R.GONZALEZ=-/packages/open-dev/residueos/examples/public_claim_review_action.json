@@ -1,0 +1,51 @@
+{
+  "actor": "agent",
+  "actionType": "publish",
+  "input": "Publish a GitHub/Sponsors update about public-safe MEDIOEVO prompts and evidence-before-action tooling.",
+  "output": "Public copy that says the prompts help agents map evidence, reduce open loops and downgrade risky claims before publishing.",
+  "risk": 0.55,
+  "reversibility": 0.6,
+  "receptorId": "public_copy_review_receptor",
+  "receptorAuthorized": true,
+  "selectivity": 0.76,
+  "calibration": 0.62,
+  "policyTags": [
+    "requires_human_approval",
+    "public_claim"
+  ],
+  "sources": [
+    {
+      "label": "Public-safe prompts packet",
+      "confidence": 0.9,
+      "verified": true
+    },
+    {
+      "label": "Coverage report summary",
+      "confidence": 0.85,
+      "verified": true
+    }
+  ],
+  "toolCalls": [
+    {
+      "name": "focused_secret_scan",
+      "status": "pending"
+    }
+  ],
+  "humanReviewers": [],
+  "selfCheck": {
+    "summary": "The copy is public-safe, but live publication still needs human review and account confirmation.",
+    "confidence": 0.7,
+    "assumptions": [
+      "The target account is controlled by the project owner."
+    ],
+    "uncertainties": [
+      "Live GitHub/Sponsors dashboard account has not been confirmed in this action."
+    ],
+    "contradictions": [],
+    "falsifiers": [
+      "secret scan reports a finding",
+      "copy includes private runtime or raw theory",
+      "account target is not Lutren"
+    ]
+  }
+}

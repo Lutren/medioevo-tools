@@ -1,0 +1,44 @@
+{
+  "schema_version": "medioevo.publication_human_gate_packet.v1",
+  "generated_at": "2026-05-22",
+  "publication_gate": "BLOCK",
+  "action_gate": "REVIEW_HUMAN_EDITORIAL",
+  "external_actions_performed": false,
+  "books": [
+    {
+      "id": "03_FRAGMENTOS",
+      "title": "MEDIOEVO: Fragmentos",
+      "internal_export": "books/editorial/internal_exports/FRAGMENTOS_INTERNAL_EXPORT_2026-05-22",
+      "qa_status": "PASS_AUTOMATED_FULL_PAGE_COVERAGE",
+      "word_pages": 688,
+      "rendered_pages": 688,
+      "blank_candidates": 0,
+      "edge_contact_candidates": 0,
+      "human_gate": "REVIEW",
+      "recommended_next": "cover_public_safe_review"
+    },
+    {
+      "id": "04_CALIBRACION",
+      "title": "MEDIOEVO: Calibracion",
+      "internal_export": "books/editorial/internal_exports/CALIBRACION_INTERNAL_EXPORT_2026-05-22",
+      "qa_status": "PASS_AUTOMATED_FULL_PAGE_COVERAGE",
+      "word_pages": 477,
+      "rendered_pages": 477,
+      "blank_candidates": 0,
+      "edge_contact_candidates": 0,
+      "human_gate": "REVIEW",
+      "recommended_next": "cover_public_safe_review"
+    }
+  ],
+  "blocked_actions": [
+    "kdp_upload",
+    "gumroad_upload",
+    "website_publish",
+    "social_post",
+    "git_push",
+    "deploy",
+    "public_zip",
+    "external_release"
+  ],
+  "next_safe_action": "choose_one_book_for_public_safe_cover_brief"
+}

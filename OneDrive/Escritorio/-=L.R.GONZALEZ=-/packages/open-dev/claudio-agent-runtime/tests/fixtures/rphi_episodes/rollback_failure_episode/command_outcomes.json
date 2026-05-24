@@ -1,0 +1,11 @@
+{
+  "commands": [
+    {
+      "event_id": "evt-rollback-failure-command-001",
+      "command": "rollback restore rollback-failure-001",
+      "status": "not_found",
+      "actiongate": "APPROVE",
+      "evidence": "restore failed"
+    }
+  ]
+}

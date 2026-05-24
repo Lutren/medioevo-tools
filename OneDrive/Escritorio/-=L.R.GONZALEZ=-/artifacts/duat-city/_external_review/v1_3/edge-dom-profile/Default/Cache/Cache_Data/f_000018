@@ -1,0 +1,321 @@
+import { createHotContext as __vite__createHotContext } from "/duat-city/@vite/client";import.meta.hot = __vite__createHotContext("/src/components/VibeCodingPanel.tsx");"use strict";
+import __vite__cjsImport0_react_jsxDevRuntime from "/duat-city/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=87a97fe6"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+var _s = $RefreshSig$();
+import __vite__cjsImport1_react from "/duat-city/node_modules/.vite/deps/react.js?v=87a97fe6"; const useMemo = __vite__cjsImport1_react["useMemo"]; const useState = __vite__cjsImport1_react["useState"];
+import { compileVibeScene } from "/duat-city/src/vibecoding/vibeSceneCompiler.ts?t=1779238132491";
+import { VIBE_PRESETS } from "/duat-city/src/vibecoding/vibePresets.ts";
+import { noCloudSafetyNote } from "/duat-city/src/vibecoding/vibeSafety.ts";
+import { compileSceneMood } from "/duat-city/src/artDirection/sceneMoodCompiler.ts";
+import { NARRATIVE_LENSES } from "/duat-city/src/artDirection/narrativeLenses.ts";
+export function VibeCodingPanel({ activeScene, onApply, onUndo, canUndo }) {
+  _s();
+  const [prompt, setPrompt] = useState("haz una calle lluviosa de noche con luces neon cian y ambar, charcos reflectantes, humo saliendo del mercado, agentes caminando lento");
+  const [preset, setPreset] = useState(activeScene?.id ?? "neon_rain_street");
+  const [compiled, setCompiled] = useState(() => compileVibeScene("neon_rain_street", "preset"));
+  const [lightCanon, setLightCanon] = useState("balanced_medioevo");
+  const [narrativeLens, setNarrativeLens] = useState("mythic_archive_lens");
+  const [detailDensity, setDetailDensity] = useState(0.66);
+  const [symbolicObjectDensity, setSymbolicObjectDensity] = useState(0.62);
+  const [shadowStrength, setShadowStrength] = useState(0.58);
+  const [materialReflection, setMaterialReflection] = useState(0.62);
+  const [atmosphere, setAtmosphere] = useState(0.42);
+  const compiledArt = useMemo(() => compileSceneMood(`${prompt} ${lightCanon} ${narrativeLens}`), [lightCanon, narrativeLens, prompt]);
+  const sceneWithArt = useMemo(() => ({
+    ...compiled.config,
+    artDirection: {
+      lightCanon,
+      lightToken: compiledArt.lightToken,
+      narrativeLenses: Array.from(/* @__PURE__ */ new Set([narrativeLens, ...compiledArt.narrativeLenses])),
+      narrativeTokens: Array.from(/* @__PURE__ */ new Set([narrativeLens, ...compiledArt.narrativeLenses])).map((lens) => NARRATIVE_LENSES[lens].internalToken),
+      materialDetailProfile: compiledArt.materialDetailProfile,
+      moodTags: Array.from(/* @__PURE__ */ new Set([...compiledArt.moodTags, `detail_${detailDensity.toFixed(2)}`, `symbols_${symbolicObjectDensity.toFixed(2)}`, `shadow_${shadowStrength.toFixed(2)}`, `reflection_${materialReflection.toFixed(2)}`, `atmosphere_${atmosphere.toFixed(2)}`])),
+      publicBoundaryNote: compiledArt.publicBoundaryNote
+    },
+    visualTags: Array.from(/* @__PURE__ */ new Set([...compiled.config.visualTags, ...compiledArt.moodTags, "medioevo-original-output"]))
+  }), [atmosphere, compiled.config, compiledArt, detailDensity, lightCanon, materialReflection, narrativeLens, shadowStrength, symbolicObjectDensity]);
+  const json = useMemo(() => JSON.stringify(sceneWithArt, null, 2), [sceneWithArt]);
+  const compilePrompt = () => setCompiled(compileVibeScene(prompt, "prompt"));
+  const compilePreset = (id) => {
+    setPreset(id);
+    setCompiled(compileVibeScene(id, "preset"));
+  };
+  const copyJson = () => {
+    if (navigator.clipboard?.writeText) void navigator.clipboard.writeText(json);
+  };
+  return /* @__PURE__ */ jsxDEV("div", { className: "section vibe-panel", children: [
+    /* @__PURE__ */ jsxDEV("div", { className: "section-title", children: "VibeCoding Scene" }, void 0, false, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx",
+      lineNumber: 55,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("select", { className: "select-input", value: preset, onChange: (event) => compilePreset(event.target.value), children: Object.keys(VIBE_PRESETS).map((id) => /* @__PURE__ */ jsxDEV("option", { value: id, children: id }, id, false, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx",
+      lineNumber: 57,
+      columnNumber: 48
+    }, this)) }, void 0, false, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx",
+      lineNumber: 56,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("textarea", { className: "vibe-textarea", value: prompt, onChange: (event) => setPrompt(event.target.value) }, void 0, false, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx",
+      lineNumber: 59,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "ctrl-row compact", children: [
+      /* @__PURE__ */ jsxDEV("button", { className: "ctrl-btn", onClick: compilePrompt, children: "Compile" }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx",
+        lineNumber: 61,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("button", { className: "ctrl-btn primary", onClick: () => onApply(sceneWithArt), children: "Apply" }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx",
+        lineNumber: 62,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx",
+      lineNumber: 60,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "ctrl-row compact", children: [
+      /* @__PURE__ */ jsxDEV("button", { className: "ctrl-btn", onClick: copyJson, children: "Copy JSON" }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx",
+        lineNumber: 65,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("button", { className: "ctrl-btn", onClick: onUndo, disabled: !canUndo, children: "Undo Vibe" }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx",
+        lineNumber: 66,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx",
+      lineNumber: 64,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "scene-preview", children: [
+      /* @__PURE__ */ jsxDEV("div", { children: [
+        /* @__PURE__ */ jsxDEV("b", { children: "Preview:" }, void 0, false, {
+          fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx",
+          lineNumber: 69,
+          columnNumber: 14
+        }, this),
+        " ",
+        compiled.config.timeOfDay,
+        " · ",
+        compiled.config.weather,
+        " · ",
+        compiled.config.lightProfile
+      ] }, void 0, true, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx",
+        lineNumber: 69,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { children: [
+        /* @__PURE__ */ jsxDEV("b", { children: "Intent:" }, void 0, false, {
+          fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx",
+          lineNumber: 70,
+          columnNumber: 14
+        }, this),
+        " ",
+        compiled.parsedIntent.join(", ")
+      ] }, void 0, true, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx",
+        lineNumber: 70,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx",
+      lineNumber: 68,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "section-title", children: "Art Direction" }, void 0, false, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx",
+      lineNumber: 72,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("select", { className: "select-input", value: lightCanon, onChange: (event) => setLightCanon(event.target.value), children: [
+      /* @__PURE__ */ jsxDEV("option", { value: "balanced_medioevo", children: "Balanced MEDIOEVO" }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx",
+        lineNumber: 74,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("option", { value: "caravaggio_chiaroscuro", children: "Caravaggio" }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx",
+        lineNumber: 75,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("option", { value: "vermeer_interior_light", children: "Vermeer" }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx",
+        lineNumber: 76,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("option", { value: "van_eyck_detail_light", children: "van Eyck" }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx",
+        lineNumber: 77,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx",
+      lineNumber: 73,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("select", { className: "select-input", value: narrativeLens, onChange: (event) => setNarrativeLens(event.target.value), children: Object.keys(NARRATIVE_LENSES).map((id) => /* @__PURE__ */ jsxDEV("option", { value: id, children: id }, id, false, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx",
+      lineNumber: 80,
+      columnNumber: 52
+    }, this)) }, void 0, false, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx",
+      lineNumber: 79,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("label", { className: "mini-label", children: [
+      "Detail Density ",
+      /* @__PURE__ */ jsxDEV("input", { type: "range", min: "0", max: "1", step: "0.01", value: detailDensity, onChange: (event) => setDetailDensity(Number(event.target.value)) }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx",
+        lineNumber: 82,
+        columnNumber: 52
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx",
+      lineNumber: 82,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("label", { className: "mini-label", children: [
+      "Symbol Density ",
+      /* @__PURE__ */ jsxDEV("input", { type: "range", min: "0", max: "1", step: "0.01", value: symbolicObjectDensity, onChange: (event) => setSymbolicObjectDensity(Number(event.target.value)) }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx",
+        lineNumber: 83,
+        columnNumber: 52
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx",
+      lineNumber: 83,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("label", { className: "mini-label", children: [
+      "Shadow Strength ",
+      /* @__PURE__ */ jsxDEV("input", { type: "range", min: "0", max: "1", step: "0.01", value: shadowStrength, onChange: (event) => setShadowStrength(Number(event.target.value)) }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx",
+        lineNumber: 84,
+        columnNumber: 53
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx",
+      lineNumber: 84,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("label", { className: "mini-label", children: [
+      "Material Reflection ",
+      /* @__PURE__ */ jsxDEV("input", { type: "range", min: "0", max: "1", step: "0.01", value: materialReflection, onChange: (event) => setMaterialReflection(Number(event.target.value)) }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx",
+        lineNumber: 85,
+        columnNumber: 57
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx",
+      lineNumber: 85,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("label", { className: "mini-label", children: [
+      "Atmosphere / Fog / Rain ",
+      /* @__PURE__ */ jsxDEV("input", { type: "range", min: "0", max: "1", step: "0.01", value: atmosphere, onChange: (event) => setAtmosphere(Number(event.target.value)) }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx",
+        lineNumber: 86,
+        columnNumber: 61
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx",
+      lineNumber: 86,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "scene-preview", children: [
+      /* @__PURE__ */ jsxDEV("div", { children: [
+        /* @__PURE__ */ jsxDEV("b", { children: "Parsed art:" }, void 0, false, {
+          fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx",
+          lineNumber: 88,
+          columnNumber: 14
+        }, this),
+        " ",
+        sceneWithArt.artDirection.lightToken
+      ] }, void 0, true, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx",
+        lineNumber: 88,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { children: [
+        /* @__PURE__ */ jsxDEV("b", { children: "Lens:" }, void 0, false, {
+          fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx",
+          lineNumber: 89,
+          columnNumber: 14
+        }, this),
+        " ",
+        sceneWithArt.artDirection.narrativeTokens.join(", ")
+      ] }, void 0, true, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx",
+        lineNumber: 89,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { children: [
+        /* @__PURE__ */ jsxDEV("b", { children: "Output:" }, void 0, false, {
+          fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx",
+          lineNumber: 90,
+          columnNumber: 14
+        }, this),
+        " MEDIOEVO-original scene tokens, no copied work."
+      ] }, void 0, true, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx",
+        lineNumber: 90,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx",
+      lineNumber: 87,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "panel-note", children: noCloudSafetyNote() }, void 0, false, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx",
+      lineNumber: 92,
+      columnNumber: 7
+    }, this),
+    [...compiled.warnings, ...compiledArt.warnings].length > 0 && /* @__PURE__ */ jsxDEV("div", { className: "panel-note warn", children: [...compiled.warnings, ...compiledArt.warnings].join(" ") }, void 0, false, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx",
+      lineNumber: 93,
+      columnNumber: 70
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx",
+    lineNumber: 54,
+    columnNumber: 5
+  }, this);
+}
+_s(VibeCodingPanel, "1VA0AnQgffGeRgUyiK9jiKrtS3o=");
+_c = VibeCodingPanel;
+var _c;
+$RefreshReg$(_c, "VibeCodingPanel");
+import * as RefreshRuntime from "/duat-city/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react can't detect preamble. Something is wrong."
+    );
+  }
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+function $RefreshReg$(type, id) {
+  return RefreshRuntime.register(type, "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/VibeCodingPanel.tsx " + id);
+}
+function $RefreshSig$() {
+  return RefreshRuntime.createSignatureFunctionForTransform();
+}
+
+//# sourceMappingURL=data:application/json;base64,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OEQ7QUFBQSxNQUM5RCx1QkFBQyxTQUFJO0FBQUEsK0JBQUMsT0FBRSxxQkFBSDtBQUFBO0FBQUE7QUFBQTtBQUFBLGVBQVE7QUFBQSxRQUFJO0FBQUEsUUFBRUgsYUFBYUUsYUFBYU0sZ0JBQWdCMkIsS0FBSyxJQUFJO0FBQUEsV0FBdEU7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQUF3RTtBQUFBLE1BQ3hFLHVCQUFDLFNBQUk7QUFBQSwrQkFBQyxPQUFFLHVCQUFIO0FBQUE7QUFBQTtBQUFBO0FBQUEsZUFBVTtBQUFBLFFBQUk7QUFBQSxXQUFuQjtBQUFBO0FBQUE7QUFBQTtBQUFBLGFBQW1FO0FBQUEsU0FIckU7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQUlBO0FBQUEsSUFDQSx1QkFBQyxTQUFJLFdBQVUsY0FBY2xFLDRCQUFrQixLQUEvQztBQUFBO0FBQUE7QUFBQTtBQUFBLFdBQWlEO0FBQUEsSUFDaEQsQ0FBQyxHQUFHYyxTQUFTc0QsVUFBVSxHQUFHdEMsWUFBWXNDLFFBQVEsRUFBRUMsU0FBUyxLQUFLLHVCQUFDLFNBQUksV0FBVSxtQkFBbUIsV0FBQyxHQUFHdkQsU0FBU3NELFVBQVUsR0FBR3RDLFlBQVlzQyxRQUFRLEVBQUVGLEtBQUssR0FBRyxLQUExRjtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBQTRGO0FBQUEsT0F2QzdKO0FBQUE7QUFBQTtBQUFBO0FBQUEsU0F3Q0E7QUFFSjtBQUFDMUQsR0EvRWVMLGlCQUFlO0FBQUEsS0FBZkE7QUFBZSxJQUFBbUU7QUFBQSxhQUFBQSxJQUFBIiwibmFtZXMiOlsidXNlTWVtbyIsInVzZVN0YXRlIiwiY29tcGlsZVZpYmVTY2VuZSIsIlZJQkVfUFJFU0VUUyIsIm5vQ2xvdWRTYWZldHlOb3RlIiwiY29tcGlsZVNjZW5lTW9vZCIsIk5BUlJBVElWRV9MRU5TRVMiLCJWaWJlQ29kaW5nUGFuZWwiLCJhY3RpdmVTY2VuZSIsIm9uQXBwbHkiLCJvblVuZG8iLCJjYW5VbmRvIiwiX3MiLCJwcm9tcHQiLCJzZXRQcm9tcHQiLCJwcmVzZXQiLCJzZXRQcmVzZXQiLCJpZCIsImNvbXBpbGVkIiwic2V0Q29tcGlsZWQiLCJsaWdodENhbm9uIiwic2V0TGlnaHRDYW5vbiIsIm5hcnJhdGl2ZUxlbnMiLCJzZXROYXJyYXRpdmVMZW5zIiwiZGV0YWlsRGVuc2l0eSIsInNldERldGFpbERlbnNpdHkiLCJzeW1ib2xpY09iamVjdERlbnNpdHkiLCJzZXRTeW1ib2xpY09iamVjdERlbnNpdHkiLCJzaGFkb3dTdHJlbmd0aCIsInNldFNoYWRvd1N0cmVuZ3RoIiwibWF0ZXJpYWxSZWZsZWN0aW9uIiwic2V0TWF0ZXJpYWxSZWZsZWN0aW9uIiwiYXRtb3NwaGVyZSIsInNldEF0bW9zcGhlcmUiLCJjb21waWxlZEFydCIsInNjZW5lV2l0aEFydCIsImNvbmZpZyIsImFydERpcmVjdGlvbiIsImxpZ2h0VG9rZW4iLCJuYXJyYXRpdmVMZW5zZXMiLCJBcnJheSIsImZyb20iLCJTZXQiLCJuYXJyYXRpdmVUb2tlbnMiLCJtYXAiLCJsZW5zIiwiaW50ZXJuYWxUb2tlbiIsIm1hdGVyaWFsRGV0YWlsUHJvZmlsZSIsIm1vb2RUYWdzIiwidG9GaXhlZCIsInB1YmxpY0JvdW5kYXJ5Tm90ZSIsInZpc3VhbFRhZ3MiLCJqc29uIiwiSlNPTiIsInN0cmluZ2lmeSIsImNvbXBpbGVQcm9tcHQiLCJjb21waWxlUHJlc2V0IiwiY29weUpzb24iLCJuYXZpZ2F0b3IiLCJjbGlwYm9hcmQiLCJ3cml0ZVRleHQiLCJldmVudCIsInRhcmdldCIsInZhbHVlIiwiT2JqZWN0Iiwia2V5cyIsInRpbWVPZkRheSIsIndlYXRoZXIiLCJsaWdodFByb2ZpbGUiLCJwYXJzZWRJbnRlbnQiLCJqb2luIiwiTnVtYmVyIiwid2FybmluZ3MiLCJsZW5ndGgiLCJfYyJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJWaWJlQ29kaW5nUGFuZWwudHN4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IHVzZU1lbW8sIHVzZVN0YXRlIH0gZnJvbSBcInJlYWN0XCI7XG5pbXBvcnQgdHlwZSB7IFZpYmVTY2VuZUNvbmZpZyB9IGZyb20gXCIuLi92aWJlY29kaW5nL3ZpYmVUeXBlc1wiO1xuaW1wb3J0IHsgY29tcGlsZVZpYmVTY2VuZSB9IGZyb20gXCIuLi92aWJlY29kaW5nL3ZpYmVTY2VuZUNvbXBpbGVyXCI7XG5pbXBvcnQgeyBWSUJFX1BSRVNFVFMgfSBmcm9tIFwiLi4vdmliZWNvZGluZy92aWJlUHJlc2V0c1wiO1xuaW1wb3J0IHsgbm9DbG91ZFNhZmV0eU5vdGUgfSBmcm9tIFwiLi4vdmliZWNvZGluZy92aWJlU2FmZXR5XCI7XG5pbXBvcnQgdHlwZSB7IExpZ2h0Q2Fub25OYW1lLCBOYXJyYXRpdmVMZW5zSWQgfSBmcm9tIFwiLi4vYXJ0RGlyZWN0aW9uL2FydERpcmVjdGlvblR5cGVzXCI7XG5pbXBvcnQgeyBjb21waWxlU2NlbmVNb29kIH0gZnJvbSBcIi4uL2FydERpcmVjdGlvbi9zY2VuZU1vb2RDb21waWxlclwiO1xuaW1wb3J0IHsgTkFSUkFUSVZFX0xFTlNFUyB9IGZyb20gXCIuLi9hcnREaXJlY3Rpb24vbmFycmF0aXZlTGVuc2VzXCI7XG5cbmludGVyZmFjZSBWaWJlQ29kaW5nUGFuZWxQcm9wcyB7XG4gIGFjdGl2ZVNjZW5lPzogVmliZVNjZW5lQ29uZmlnO1xuICBvbkFwcGx5OiAoc2NlbmU6IFZpYmVTY2VuZUNvbmZpZykgPT4gdm9pZDtcbiAgb25VbmRvPzogKCkgPT4gdm9pZDtcbiAgY2FuVW5kbz86IGJvb2xlYW47XG59XG5cbmV4cG9ydCBmdW5jdGlvbiBWaWJlQ29kaW5nUGFuZWwoeyBhY3RpdmVTY2VuZSwgb25BcHBseSwgb25VbmRvLCBjYW5VbmRvIH06IFZpYmVDb2RpbmdQYW5lbFByb3BzKSB7XG4gIGNvbnN0IFtwcm9tcHQsIHNldFByb21wdF0gPSB1c2VTdGF0ZShcImhheiB1bmEgY2FsbGUgbGx1dmlvc2EgZGUgbm9jaGUgY29uIGx1Y2VzIG5lb24gY2lhbiB5IGFtYmFyLCBjaGFyY29zIHJlZmxlY3RhbnRlcywgaHVtbyBzYWxpZW5kbyBkZWwgbWVyY2FkbywgYWdlbnRlcyBjYW1pbmFuZG8gbGVudG9cIik7XG4gIGNvbnN0IFtwcmVzZXQsIHNldFByZXNldF0gPSB1c2VTdGF0ZShhY3RpdmVTY2VuZT8uaWQgPz8gXCJuZW9uX3JhaW5fc3RyZWV0XCIpO1xuICBjb25zdCBbY29tcGlsZWQsIHNldENvbXBpbGVkXSA9IHVzZVN0YXRlKCgpID0+IGNvbXBpbGVWaWJlU2NlbmUoXCJuZW9uX3JhaW5fc3RyZWV0XCIsIFwicHJlc2V0XCIpKTtcbiAgY29uc3QgW2xpZ2h0Q2Fub24sIHNldExpZ2h0Q2Fub25dID0gdXNlU3RhdGU8TGlnaHRDYW5vbk5hbWU+KFwiYmFsYW5jZWRfbWVkaW9ldm9cIik7XG4gIGNvbnN0IFtuYXJyYXRpdmVMZW5zLCBzZXROYXJyYXRpdmVMZW5zXSA9IHVzZVN0YXRlPE5hcnJhdGl2ZUxlbnNJZD4oXCJteXRoaWNfYXJjaGl2ZV9sZW5zXCIpO1xuICBjb25zdCBbZGV0YWlsRGVuc2l0eSwgc2V0RGV0YWlsRGVuc2l0eV0gPSB1c2VTdGF0ZSgwLjY2KTtcbiAgY29uc3QgW3N5bWJvbGljT2JqZWN0RGVuc2l0eSwgc2V0U3ltYm9saWNPYmplY3REZW5zaXR5XSA9IHVzZVN0YXRlKDAuNjIpO1xuICBjb25zdCBbc2hhZG93U3RyZW5ndGgsIHNldFNoYWRvd1N0cmVuZ3RoXSA9IHVzZVN0YXRlKDAuNTgpO1xuICBjb25zdCBbbWF0ZXJpYWxSZWZsZWN0aW9uLCBzZXRNYXRlcmlhbFJlZmxlY3Rpb25dID0gdXNlU3RhdGUoMC42Mik7XG4gIGNvbnN0IFthdG1vc3BoZXJlLCBzZXRBdG1vc3BoZXJlXSA9IHVzZVN0YXRlKDAuNDIpO1xuICBjb25zdCBjb21waWxlZEFydCA9IHVzZU1lbW8oKCkgPT4gY29tcGlsZVNjZW5lTW9vZChgJHtwcm9tcHR9ICR7bGlnaHRDYW5vbn0gJHtuYXJyYXRpdmVMZW5zfWApLCBbbGlnaHRDYW5vbiwgbmFycmF0aXZlTGVucywgcHJvbXB0XSk7XG4gIGNvbnN0IHNjZW5lV2l0aEFydCA9IHVzZU1lbW8oKCkgPT4gKHtcbiAgICAuLi5jb21waWxlZC5jb25maWcsXG4gICAgYXJ0RGlyZWN0aW9uOiB7XG4gICAgICBsaWdodENhbm9uLFxuICAgICAgbGlnaHRUb2tlbjogY29tcGlsZWRBcnQubGlnaHRUb2tlbixcbiAgICAgIG5hcnJhdGl2ZUxlbnNlczogQXJyYXkuZnJvbShuZXcgU2V0KFtuYXJyYXRpdmVMZW5zLCAuLi5jb21waWxlZEFydC5uYXJyYXRpdmVMZW5zZXNdKSksXG4gICAgICBuYXJyYXRpdmVUb2tlbnM6IEFycmF5LmZyb20obmV3IFNldChbbmFycmF0aXZlTGVucywgLi4uY29tcGlsZWRBcnQubmFycmF0aXZlTGVuc2VzXSkpLm1hcChsZW5zID0+IE5BUlJBVElWRV9MRU5TRVNbbGVuc10uaW50ZXJuYWxUb2tlbiksXG4gICAgICBtYXRlcmlhbERldGFpbFByb2ZpbGU6IGNvbXBpbGVkQXJ0Lm1hdGVyaWFsRGV0YWlsUHJvZmlsZSxcbiAgICAgIG1vb2RUYWdzOiBBcnJheS5mcm9tKG5ldyBTZXQoWy4uLmNvbXBpbGVkQXJ0Lm1vb2RUYWdzLCBgZGV0YWlsXyR7ZGV0YWlsRGVuc2l0eS50b0ZpeGVkKDIpfWAsIGBzeW1ib2xzXyR7c3ltYm9saWNPYmplY3REZW5zaXR5LnRvRml4ZWQoMil9YCwgYHNoYWRvd18ke3NoYWRvd1N0cmVuZ3RoLnRvRml4ZWQoMil9YCwgYHJlZmxlY3Rpb25fJHttYXRlcmlhbFJlZmxlY3Rpb24udG9GaXhlZCgyKX1gLCBgYXRtb3NwaGVyZV8ke2F0bW9zcGhlcmUudG9GaXhlZCgyKX1gXSkpLFxuICAgICAgcHVibGljQm91bmRhcnlOb3RlOiBjb21waWxlZEFydC5wdWJsaWNCb3VuZGFyeU5vdGUsXG4gICAgfSxcbiAgICB2aXN1YWxUYWdzOiBBcnJheS5mcm9tKG5ldyBTZXQoWy4uLmNvbXBpbGVkLmNvbmZpZy52aXN1YWxUYWdzLCAuLi5jb21waWxlZEFydC5tb29kVGFncywgXCJtZWRpb2V2by1vcmlnaW5hbC1vdXRwdXRcIl0pKSxcbiAgfSksIFthdG1vc3BoZXJlLCBjb21waWxlZC5jb25maWcsIGNvbXBpbGVkQXJ0LCBkZXRhaWxEZW5zaXR5LCBsaWdodENhbm9uLCBtYXRlcmlhbFJlZmxlY3Rpb24sIG5hcnJhdGl2ZUxlbnMsIHNoYWRvd1N0cmVuZ3RoLCBzeW1ib2xpY09iamVjdERlbnNpdHldKTtcbiAgY29uc3QganNvbiA9IHVzZU1lbW8oKCkgPT4gSlNPTi5zdHJpbmdpZnkoc2NlbmVXaXRoQXJ0LCBudWxsLCAyKSwgW3NjZW5lV2l0aEFydF0pO1xuXG4gIGNvbnN0IGNvbXBpbGVQcm9tcHQgPSAoKSA9PiBzZXRDb21waWxlZChjb21waWxlVmliZVNjZW5lKHByb21wdCwgXCJwcm9tcHRcIikpO1xuICBjb25zdCBjb21waWxlUHJlc2V0ID0gKGlkOiBzdHJpbmcpID0+IHtcbiAgICBzZXRQcmVzZXQoaWQpO1xuICAgIHNldENvbXBpbGVkKGNvbXBpbGVWaWJlU2NlbmUoaWQsIFwicHJlc2V0XCIpKTtcbiAgfTtcbiAgY29uc3QgY29weUpzb24gPSAoKSA9PiB7XG4gICAgaWYgKG5hdmlnYXRvci5jbGlwYm9hcmQ/LndyaXRlVGV4dCkgdm9pZCBuYXZpZ2F0b3IuY2xpcGJvYXJkLndyaXRlVGV4dChqc29uKTtcbiAgfTtcblxuICByZXR1cm4gKFxuICAgIDxkaXYgY2xhc3NOYW1lPVwic2VjdGlvbiB2aWJlLXBhbmVsXCI+XG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cInNlY3Rpb24tdGl0bGVcIj5WaWJlQ29kaW5nIFNjZW5lPC9kaXY+XG4gICAgICA8c2VsZWN0IGNsYXNzTmFtZT1cInNlbGVjdC1pbnB1dFwiIHZhbHVlPXtwcmVzZXR9IG9uQ2hhbmdlPXtldmVudCA9PiBjb21waWxlUHJlc2V0KGV2ZW50LnRhcmdldC52YWx1ZSl9PlxuICAgICAgICB7T2JqZWN0LmtleXMoVklCRV9QUkVTRVRTKS5tYXAoaWQgPT4gPG9wdGlvbiBrZXk9e2lkfSB2YWx1ZT17aWR9PntpZH08L29wdGlvbj4pfVxuICAgICAgPC9zZWxlY3Q+XG4gICAgICA8dGV4dGFyZWEgY2xhc3NOYW1lPVwidmliZS10ZXh0YXJlYVwiIHZhbHVlPXtwcm9tcHR9IG9uQ2hhbmdlPXtldmVudCA9PiBzZXRQcm9tcHQoZXZlbnQudGFyZ2V0LnZhbHVlKX0gLz5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY3RybC1yb3cgY29tcGFjdFwiPlxuICAgICAgICA8YnV0dG9uIGNsYXNzTmFtZT1cImN0cmwtYnRuXCIgb25DbGljaz17Y29tcGlsZVByb21wdH0+Q29tcGlsZTwvYnV0dG9uPlxuICAgICAgICA8YnV0dG9uIGNsYXNzTmFtZT1cImN0cmwtYnRuIHByaW1hcnlcIiBvbkNsaWNrPXsoKSA9PiBvbkFwcGx5KHNjZW5lV2l0aEFydCl9PkFwcGx5PC9idXR0b24+XG4gICAgICA8L2Rpdj5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY3RybC1yb3cgY29tcGFjdFwiPlxuICAgICAgICA8YnV0dG9uIGNsYXNzTmFtZT1cImN0cmwtYnRuXCIgb25DbGljaz17Y29weUpzb259PkNvcHkgSlNPTjwvYnV0dG9uPlxuICAgICAgICA8YnV0dG9uIGNsYXNzTmFtZT1cImN0cmwtYnRuXCIgb25DbGljaz17b25VbmRvfSBkaXNhYmxlZD17IWNhblVuZG99PlVuZG8gVmliZTwvYnV0dG9uPlxuICAgICAgPC9kaXY+XG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cInNjZW5lLXByZXZpZXdcIj5cbiAgICAgICAgPGRpdj48Yj5QcmV2aWV3OjwvYj4ge2NvbXBpbGVkLmNvbmZpZy50aW1lT2ZEYXl9IMK3IHtjb21waWxlZC5jb25maWcud2VhdGhlcn0gwrcge2NvbXBpbGVkLmNvbmZpZy5saWdodFByb2ZpbGV9PC9kaXY+XG4gICAgICAgIDxkaXY+PGI+SW50ZW50OjwvYj4ge2NvbXBpbGVkLnBhcnNlZEludGVudC5qb2luKFwiLCBcIil9PC9kaXY+XG4gICAgICA8L2Rpdj5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwic2VjdGlvbi10aXRsZVwiPkFydCBEaXJlY3Rpb248L2Rpdj5cbiAgICAgIDxzZWxlY3QgY2xhc3NOYW1lPVwic2VsZWN0LWlucHV0XCIgdmFsdWU9e2xpZ2h0Q2Fub259IG9uQ2hhbmdlPXtldmVudCA9PiBzZXRMaWdodENhbm9uKGV2ZW50LnRhcmdldC52YWx1ZSBhcyBMaWdodENhbm9uTmFtZSl9PlxuICAgICAgICA8b3B0aW9uIHZhbHVlPVwiYmFsYW5jZWRfbWVkaW9ldm9cIj5CYWxhbmNlZCBNRURJT0VWTzwvb3B0aW9uPlxuICAgICAgICA8b3B0aW9uIHZhbHVlPVwiY2FyYXZhZ2dpb19jaGlhcm9zY3Vyb1wiPkNhcmF2YWdnaW88L29wdGlvbj5cbiAgICAgICAgPG9wdGlvbiB2YWx1ZT1cInZlcm1lZXJfaW50ZXJpb3JfbGlnaHRcIj5WZXJtZWVyPC9vcHRpb24+XG4gICAgICAgIDxvcHRpb24gdmFsdWU9XCJ2YW5fZXlja19kZXRhaWxfbGlnaHRcIj52YW4gRXljazwvb3B0aW9uPlxuICAgICAgPC9zZWxlY3Q+XG4gICAgICA8c2VsZWN0IGNsYXNzTmFtZT1cInNlbGVjdC1pbnB1dFwiIHZhbHVlPXtuYXJyYXRpdmVMZW5zfSBvbkNoYW5nZT17ZXZlbnQgPT4gc2V0TmFycmF0aXZlTGVucyhldmVudC50YXJnZXQudmFsdWUgYXMgTmFycmF0aXZlTGVuc0lkKX0+XG4gICAgICAgIHtPYmplY3Qua2V5cyhOQVJSQVRJVkVfTEVOU0VTKS5tYXAoaWQgPT4gPG9wdGlvbiBrZXk9e2lkfSB2YWx1ZT17aWR9PntpZH08L29wdGlvbj4pfVxuICAgICAgPC9zZWxlY3Q+XG4gICAgICA8bGFiZWwgY2xhc3NOYW1lPVwibWluaS1sYWJlbFwiPkRldGFpbCBEZW5zaXR5IDxpbnB1dCB0eXBlPVwicmFuZ2VcIiBtaW49XCIwXCIgbWF4PVwiMVwiIHN0ZXA9XCIwLjAxXCIgdmFsdWU9e2RldGFpbERlbnNpdHl9IG9uQ2hhbmdlPXtldmVudCA9PiBzZXREZXRhaWxEZW5zaXR5KE51bWJlcihldmVudC50YXJnZXQudmFsdWUpKX0gLz48L2xhYmVsPlxuICAgICAgPGxhYmVsIGNsYXNzTmFtZT1cIm1pbmktbGFiZWxcIj5TeW1ib2wgRGVuc2l0eSA8aW5wdXQgdHlwZT1cInJhbmdlXCIgbWluPVwiMFwiIG1heD1cIjFcIiBzdGVwPVwiMC4wMVwiIHZhbHVlPXtzeW1ib2xpY09iamVjdERlbnNpdHl9IG9uQ2hhbmdlPXtldmVudCA9PiBzZXRTeW1ib2xpY09iamVjdERlbnNpdHkoTnVtYmVyKGV2ZW50LnRhcmdldC52YWx1ZSkpfSAvPjwvbGFiZWw+XG4gICAgICA8bGFiZWwgY2xhc3NOYW1lPVwibWluaS1sYWJlbFwiPlNoYWRvdyBTdHJlbmd0aCA8aW5wdXQgdHlwZT1cInJhbmdlXCIgbWluPVwiMFwiIG1heD1cIjFcIiBzdGVwPVwiMC4wMVwiIHZhbHVlPXtzaGFkb3dTdHJlbmd0aH0gb25DaGFuZ2U9e2V2ZW50ID0+IHNldFNoYWRvd1N0cmVuZ3RoKE51bWJlcihldmVudC50YXJnZXQudmFsdWUpKX0gLz48L2xhYmVsPlxuICAgICAgPGxhYmVsIGNsYXNzTmFtZT1cIm1pbmktbGFiZWxcIj5NYXRlcmlhbCBSZWZsZWN0aW9uIDxpbnB1dCB0eXBlPVwicmFuZ2VcIiBtaW49XCIwXCIgbWF4PVwiMVwiIHN0ZXA9XCIwLjAxXCIgdmFsdWU9e21hdGVyaWFsUmVmbGVjdGlvbn0gb25DaGFuZ2U9e2V2ZW50ID0+IHNldE1hdGVyaWFsUmVmbGVjdGlvbihOdW1iZXIoZXZlbnQudGFyZ2V0LnZhbHVlKSl9IC8+PC9sYWJlbD5cbiAgICAgIDxsYWJlbCBjbGFzc05hbWU9XCJtaW5pLWxhYmVsXCI+QXRtb3NwaGVyZSAvIEZvZyAvIFJhaW4gPGlucHV0IHR5cGU9XCJyYW5nZVwiIG1pbj1cIjBcIiBtYXg9XCIxXCIgc3RlcD1cIjAuMDFcIiB2YWx1ZT17YXRtb3NwaGVyZX0gb25DaGFuZ2U9e2V2ZW50ID0+IHNldEF0bW9zcGhlcmUoTnVtYmVyKGV2ZW50LnRhcmdldC52YWx1ZSkpfSAvPjwvbGFiZWw+XG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cInNjZW5lLXByZXZpZXdcIj5cbiAgICAgICAgPGRpdj48Yj5QYXJzZWQgYXJ0OjwvYj4ge3NjZW5lV2l0aEFydC5hcnREaXJlY3Rpb24ubGlnaHRUb2tlbn08L2Rpdj5cbiAgICAgICAgPGRpdj48Yj5MZW5zOjwvYj4ge3NjZW5lV2l0aEFydC5hcnREaXJlY3Rpb24ubmFycmF0aXZlVG9rZW5zLmpvaW4oXCIsIFwiKX08L2Rpdj5cbiAgICAgICAgPGRpdj48Yj5PdXRwdXQ6PC9iPiBNRURJT0VWTy1vcmlnaW5hbCBzY2VuZSB0b2tlbnMsIG5vIGNvcGllZCB3b3JrLjwvZGl2PlxuICAgICAgPC9kaXY+XG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cInBhbmVsLW5vdGVcIj57bm9DbG91ZFNhZmV0eU5vdGUoKX08L2Rpdj5cbiAgICAgIHtbLi4uY29tcGlsZWQud2FybmluZ3MsIC4uLmNvbXBpbGVkQXJ0Lndhcm5pbmdzXS5sZW5ndGggPiAwICYmIDxkaXYgY2xhc3NOYW1lPVwicGFuZWwtbm90ZSB3YXJuXCI+e1suLi5jb21waWxlZC53YXJuaW5ncywgLi4uY29tcGlsZWRBcnQud2FybmluZ3NdLmpvaW4oXCIgXCIpfTwvZGl2Pn1cbiAgICA8L2Rpdj5cbiAgKTtcbn1cbiJdLCJmaWxlIjoiQzovVXNlcnMvTC1UeXIvT25lRHJpdmUvRXNjcml0b3Jpby8tPUwuUi5HT05aQUxFWj0tL2FydGlmYWN0cy9kdWF0LWNpdHkvc3JjL2NvbXBvbmVudHMvVmliZUNvZGluZ1BhbmVsLnRzeCJ9

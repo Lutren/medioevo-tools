@@ -35,6 +35,18 @@ PATTERNS = [
 ]
 SECRET_NAME_ALLOWLIST = {"scan_secrets.py", "SECRET_SCAN_REPORT.md", "secret_scan_report.schema.json"}
 
+# Path-exact filename-only allowlist. These entries suppress only the
+# "secret-like filename" reason; content markers are still scanned normally.
+# Date: 2026-05-15. Fingerprint: AUTONOMIA-8H-PUBLIC-SAFE-20260515-8F2A.
+SECRET_NAME_PATH_ALLOWLIST = {
+    "publish_staging/medioevo-duat-public-release/08_QA_WITNESSLOG/SECRET_SCAN_RESULTS.json": "generated local QA report; content scan remains active",
+    "publish_staging/medioevo-duat-public-release/08_QA_WITNESSLOG/SECRET_SCAN_RESULTS.md": "generated local QA report; content scan remains active",
+    "publish_staging/medioevo-duat-public-release/public/prompts/02_ahorro_tokens_extremo.md": "public prompt title uses tokens as cost/context term; content scan remains active",
+    "publish_staging/medioevo-duat-public-release/public_release_package/public/prompts/02_ahorro_tokens_extremo.md": "generated public package copy of public prompt; content scan remains active",
+    "docs/ops/PUBLIC_RELEASE_SECRET_SCAN_TRIAGE_2026-05-15.md": "required triage artifact; content scan remains active",
+    "qa_artifacts/release_validation/public-release-secret-scan-triage-2026-05-15.json": "required triage artifact; content scan remains active",
+}
+
 
 def is_code_placeholder_assignment(path: Path | None, line: str, match: re.Match[str]) -> bool:
     if path is not None and path.suffix.lower() != ".py":
@@ -80,7 +92,8 @@ def scan_text_value(text: str) -> list[str]:
 
 def finding_for_file(path: Path, max_bytes: int) -> dict[str, object] | None:
     reasons = []
-    if path.name not in SECRET_NAME_ALLOWLIST and is_secret_named(path):
+    rel_path = rel(path).replace("\\", "/")
+    if path.name not in SECRET_NAME_ALLOWLIST and rel_path not in SECRET_NAME_PATH_ALLOWLIST and is_secret_named(path):
         reasons.append("secret-like filename")
     content_hits = scan_text(path, max_bytes)
     if content_hits:

@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "claudio-agent-runtime"
+version = "0.1.0"
+description = "Public-safe local Claudio agent runtime CLI."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "LEGAL_REVIEW_REQUIRED" }
+dependencies = []
+
+[project.scripts]
+claudio-agent-runtime = "claudio_agent_runtime.cli:main"
+
+[tool.claudio-agent-runtime]
+status = "p0_local_dry_run"
+external_channels = "disabled"
+source_intake = "../../../docs/intake/MERCURY_AGENT_SOURCE_CARD_2026-05-15.md"
+

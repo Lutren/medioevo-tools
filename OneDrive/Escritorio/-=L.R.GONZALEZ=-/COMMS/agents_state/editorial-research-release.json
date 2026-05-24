@@ -1,0 +1,36 @@
+{
+  "schema": "medioevo.comms.agent_state.v1",
+  "generated_at_utc": "2026-05-06T14:46:23Z",
+  "agent_id": "editorial-research-release",
+  "status": "ACTIVE_LOCAL_AGENT_SPEC_EXTERNAL_BLOCKED",
+  "department_slug": "biblioteca-research",
+  "action_gate": "REVIEW",
+  "reports_to": "publicacion-perfiles-observatorio",
+  "owns": [
+    "staged release of Observacionismo papers",
+    "research brief structure",
+    "public/private paper slicing",
+    "sponsor-tier research sequencing"
+  ],
+  "may_touch": [
+    "docs/publishing/*RESEARCH*.md",
+    "docs/publishing/*PAPER*.md",
+    "docs/publishing/*OBSERVACIONISMO*.md",
+    "docs/observacionismo/*HANDOFF*.md",
+    "COMMS/agents_state/editorial-research-release.json",
+    "COMMS/handoffs/*editorial-research-release*.md",
+    "qa_artifacts/release_validation/editorial-research-release-*.json"
+  ],
+  "must_not_touch_without_handoff": [
+    "full unpublished books",
+    "canon vault release",
+    "raw formula release",
+    "raw notebooks or dumps",
+    "private datasets",
+    "RPG/TCG material",
+    "publication without claims/falsifier review"
+  ],
+  "current_handoff": "COMMS/handoffs/2026-05-06-observacionista-public-launch-team.md",
+  "current_outbox": null,
+  "last_observation_fingerprint": "OBSERVACIONISTA_PUBLIC_LAUNCH_TEAM_REGISTERED_2026_05_06"
+}

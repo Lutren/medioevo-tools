@@ -1,0 +1,36 @@
+{
+  "schema": "duat/agents-gamefeel-manifest/v1.3.1",
+  "fingerprint": "DUAT-v1.3.1-AUDIO-GAMEFEEL-CONTINUITY",
+  "generatedAt": "2026-05-20T00:00:00.000Z",
+  "boundary": {
+    "proceduralOnly": true,
+    "externalSamplesCopied": false,
+    "publicationAllowed": false,
+    "noCloud": true,
+    "wabiExecutionAllowed": false
+  },
+  "agentLifeSignals": [
+    "need_floor",
+    "current_task",
+    "recent_memory",
+    "relationship_edge",
+    "R",
+    "Phi_eff",
+    "gate",
+    "mood",
+    "vibe"
+  ],
+  "graphPolicy": {
+    "maxNodes": 24,
+    "maxEdges": 48,
+    "edgeKinds": ["declared", "proximity", "task"],
+    "omniscientSpeech": false,
+    "npcKnowledgeBoundary": "agent-local causal knowledge only"
+  },
+  "audioMapping": {
+    "agent_need": "low need or high R cue",
+    "agent_task": "active task cue",
+    "gate_block": "blocked action cue",
+    "language_bloqueo": "language cortex blocked classification cue"
+  }
+}

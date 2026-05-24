@@ -1,0 +1,76 @@
+{
+  "schema": "duat/winapp-full-auto-handoff/v1.4",
+  "fingerprint": "DUAT-v1.4-WINAPP-FULL-AUTO",
+  "generatedAt": "2026-05-20T12:40:11.1796593Z",
+  "R_est": 0.18,
+  "Phi_eff_est": 0.81,
+  "regime": "FUNCIONAL",
+  "actionGate": "APPROVE_LOCAL_ONLY",
+  "runDir": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\qa_artifacts\\release_validation\\RUN_DUAT_WINAPP_FULL_AUTO_v1_4_20260520_060254",
+  "executable": {
+    "path": "artifacts/duat-city/dist/winapp/DUATCity.exe",
+    "sha256": "7498B8281B828BC9729AE7A2C9A69E74E72E10A18507F0846F74BBC14B372992",
+    "size_bytes": 11264,
+    "wrapper": "native_dotnet_edge_app_mode"
+  },
+  "qa": {
+    "tests": "106 files / 313 tests PASS",
+    "typecheck": "PASS",
+    "build": "PASS",
+    "winappBuild": "PASS",
+    "winappSmoke": "PASS",
+    "httpStatus": 200,
+    "jsAssetStatus": 200,
+    "minAppAvgFps": 60.17,
+    "benchmarkThresholdFps": 30,
+    "benchmarkAllPass": true,
+    "audioProceduralPreview": true,
+    "audioHeadedFocus": "focused",
+    "audioCueCount": 22,
+    "audioPreviewText": "previewed 6 procedural cues",
+    "audioAudibleHumanConfirmed": false,
+    "audioControlEnableLatencyMs": 7209.5,
+    "audioControlPreviewLatencyMs": 3165.6,
+    "screenshots": 8,
+    "screenshotsNonblank": true,
+    "assetManifestCount": 21,
+    "reviewedAssetCount": 8,
+    "reviewedAssetHashesOk": true,
+    "activeZipCount": 0
+  },
+  "corrections": [
+    {
+      "issue": "Benchmark instability and High/Operational below 30 FPS in unattended Edge/CDP runs",
+      "source": "React snapshot updates recreated render dependencies and inline render callback, forcing unnecessary canvas redraws",
+      "changes": [
+        "memoized LOD/graphics budget/graphics metrics",
+        "made onRenderCounters callback stable",
+        "added retrying winapp benchmark runner with warmed sampler"
+      ],
+      "R_before": 0.39,
+      "Phi_eff_before": 0.64,
+      "R_after": 0.18,
+      "Phi_eff_after": 0.81
+    }
+  ],
+  "boundaries": {
+    "publicationAllowed": false,
+    "wabiExecution": false,
+    "cloudUsed": false,
+    "mcpExecution": false,
+    "pushDeployCommit": false,
+    "unknownZipExecuted": false,
+    "assetsCopiedOutsideAllowlist": false
+  },
+  "artifacts": {
+    "manifest": "artifacts/duat-city/dist/winapp/WINAPP_MANIFEST_v1_4.json",
+    "smoke": "artifacts/duat-city/docs/WINDOWS_APP_SMOKE_v1_4.json",
+    "benchmark": "artifacts/duat-city/docs/PERFORMANCE_BENCHMARK_WINAPP_v1_4.json",
+    "audio": "artifacts/duat-city/docs/AUDIO_WINAPP_QA_v1_4.json",
+    "screenshots": "artifacts/duat-city/docs/screenshots/v1_4_winapp/",
+    "assetIntegrity": "artifacts/duat-city/docs/ASSET_INTEGRITY_MANIFEST_v1_4.json",
+    "testReport": "artifacts/duat-city/docs/TEST_REPORT_WINAPP_v1_4.md",
+    "handoff": "artifacts/duat-city/docs/HANDOFF_WINAPP_v1_4.json"
+  },
+  "nextAction": "Manual speaker check only if owner needs human-perceived audibility beyond AudioContext/procedural preview evidence."
+}

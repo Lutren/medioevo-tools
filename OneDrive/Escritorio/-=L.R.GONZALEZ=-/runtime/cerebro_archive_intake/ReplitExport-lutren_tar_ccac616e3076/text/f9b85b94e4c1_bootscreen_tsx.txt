@@ -1,0 +1,297 @@
+import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { Link } from "wouter";
+
+// ─── OSIT Digital Rain Characters ─────────────────────────────────────────────
+const RAIN_CHARS = "ΦεΣΠμν∂∇⬡◈Rε01Jc∑OSIT⌬◆▓░∞≡⟨⟩01ΦΦεε10".split("");
+
+function DigitalRain() {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    const resize = () => {
+      const rect = canvas.parentElement?.getBoundingClientRect();
+      canvas.width  = rect?.width  ?? window.innerWidth;
+      canvas.height = rect?.height ?? window.innerHeight;
+    };
+    resize();
+
+    const CHAR_W   = 16;
+    const CHAR_H   = 18;
+    const cols     = Math.ceil(canvas.width / CHAR_W);
+    const drops    = Array.from({ length: cols }, () => -Math.random() * 30);
+    const speeds   = Array.from({ length: cols }, () => 0.25 + Math.random() * 0.55);
+    // Assign each column a hue: 80% cyan, 10% magenta, 10% green
+    const hues     = Array.from({ length: cols }, () => {
+      const r = Math.random();
+      if (r < 0.80) return "cyan";
+      if (r < 0.90) return "magenta";
+      return "green";
+    });
+
+    let raf: number;
+    let last = 0;
+
+    const COLORS: Record<string, [number, number, number]> = {
+      cyan:    [0,   240, 255],
+      magenta: [255, 0,   184],
+      green:   [0,   255, 136],
+    };
+
+    const draw = (t: number) => {
+      raf = requestAnimationFrame(draw);
+      if (t - last < 55) return;           // ~18 fps
+      last = t;
+
+      ctx.fillStyle = "rgba(2, 6, 9, 0.065)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.font = `${CHAR_H - 4}px 'Share Tech Mono', monospace`;
+
+      for (let i = 0; i < cols; i++) {
+        const y = drops[i] * CHAR_H;
+        if (y < -CHAR_H) { drops[i] += speeds[i]; continue; }
+
+        const char = RAIN_CHARS[Math.floor(Math.random() * RAIN_CHARS.length)];
+        const [r, g, b] = COLORS[hues[i]];
+        const frac = drops[i] - Math.floor(drops[i]);
+
+        // Lead char: bright white
+        if (frac < 0.15) {
+          ctx.fillStyle = "#e8faff";
+        } else {
+          const alpha = 0.15 + Math.random() * 0.70;
+          ctx.fillStyle = `rgba(${r},${g},${b},${alpha})`;
+        }
+
+        ctx.fillText(char, i * CHAR_W, y);
+
+        drops[i] += speeds[i];
+        if (y > canvas.height && Math.random() > 0.975) {
+          drops[i] = -8 - Math.random() * 25;
+        }
+      }
+    };
+
+    raf = requestAnimationFrame(draw);
+    return () => cancelAnimationFrame(raf);
+  }, []);
+
+  return (
+    <canvas
+      ref={canvasRef}
+      className="absolute inset-0 w-full h-full pointer-events-none"
+      style={{ opacity: 0.38 }}
+    />
+  );
+}
+
+// ─── Boot Log ─────────────────────────────────────────────────────────────────
+const BOOT_LOG: Array<{ text: string; type: "sys" | "ok" | "warn" | "init" }> = [
+  { text: "[BOOT]  CIUDAD DUAT — SISTEMA NEURAL // AÑO 3026",          type: "sys"  },
+  { text: "[INIT]  Cargando arquitectura de sectores...",                type: "init" },
+  { text: "[OK]    SECTOR-A: RED DE OBSERVACIÓN — EN LÍNEA",            type: "ok"   },
+  { text: "[OK]    SECTOR-B: MOTOR GEODIA 16×16 — OPERATIVO",          type: "ok"   },
+  { text: "[OK]    SECTOR-C: SENSORIUM 8-CH [Mi=√(1−ε²)·Π+ε·K] — OK", type: "ok"  },
+  { text: "[OK]    SECTOR-D: PUENTE EML v3 [Φeff OSIT] — OPERATIVO",   type: "ok"   },
+  { text: "[OK]    SECTOR-E: LABORATORIO EPISTÉMICO DE FÍSICA — OK",    type: "ok"   },
+  { text: "[OK]    SECTOR-F: FALSIFIER MATRIX [10×4] — OPERATIVO",     type: "ok"   },
+  { text: "[OK]    SECTOR-G: WITNESSLOG HASH-CHAIN — OPERATIVO",        type: "ok"   },
+  { text: "[OK]    SECTOR-H: AGENTE DUAT CODING — EN ESPERA",           type: "ok"   },
+  { text: "[WARN]  SYNTHETIC_ONLY — sin conexión a física real",        type: "warn" },
+  { text: "[WARN]  Sin ejecución real de filesystem externo",            type: "warn" },
+  { text: "[WARN]  Toda salida: SIMULACIÓN | DEMO_ONLY | PROTOTIPO",    type: "warn" },
+  { text: "[SYS]   OSIT v2.3 // ν=2.5 // ε₀=0.15 // Jc=1.0",         type: "sys"  },
+];
+
+const SKYLINE = [3,5,8,4,7,12,6,5,10,4,8,11,5,9,4,7,12,5,8,3,10,6,4,9,7,5,8,4,6,11,7,4,9,5,3,8,6,10,4,7];
+
+const ENTRY_POINTS = [
+  { href: "/lab",               label: "ENTRAR A GEODIA",    sub: "SECTOR PRINCIPAL",   color: "cyan"    },
+  { href: "/lab?panel=falsif",  label: "FALSIFIER LAB",      sub: "SECTOR ANÁLISIS",    color: "magenta" },
+  { href: "/lab?panel=coding",  label: "AGENT HARNESS",      sub: "SECTOR COMPUTACIÓN", color: "green"   },
+  { href: "/lab?panel=handoff", label: "HANDOFF BRIEF",      sub: "SECTOR EXPORTACIÓN", color: "amber"   },
+];
+
+const NEON: Record<string, { border: string; bg: string; text: string; glow: string }> = {
+  cyan:    { border:"#00f0ff", bg:"rgba(0,240,255,0.08)",  text:"#00f0ff", glow:"0 0 12px #00f0ff, 0 0 24px rgba(0,240,255,0.25)" },
+  magenta: { border:"#ff00b8", bg:"rgba(255,0,184,0.08)",  text:"#ff00b8", glow:"0 0 12px #ff00b8, 0 0 24px rgba(255,0,184,0.25)" },
+  green:   { border:"#00ff88", bg:"rgba(0,255,136,0.08)",  text:"#00ff88", glow:"0 0 12px #00ff88, 0 0 24px rgba(0,255,136,0.25)" },
+  amber:   { border:"#ffb347", bg:"rgba(255,179,71,0.08)", text:"#ffb347", glow:"0 0 12px #ffb347, 0 0 24px rgba(255,179,71,0.25)" },
+};
+
+export default function BootScreen() {
+  const [lines, setLines] = useState<typeof BOOT_LOG>([]);
+  const [ready, setReady]   = useState(false);
+  const [fp]   = useState(() => Math.random().toString(36).slice(2, 10).toUpperCase());
+  const [seed] = useState(() => Math.floor(Math.random() * 9999) + 1000);
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", "neon-city");
+  }, []);
+
+  useEffect(() => {
+    let i = 0;
+    const id = setInterval(() => {
+      if (i < BOOT_LOG.length) {
+        setLines(prev => [...prev, BOOT_LOG[i]]);
+        i++;
+      } else {
+        clearInterval(id);
+        setTimeout(() => setReady(true), 400);
+      }
+    }, 130);
+    return () => clearInterval(id);
+  }, []);
+
+  return (
+    <div
+      className="min-h-[100dvh] w-full flex flex-col items-center justify-center p-6 relative overflow-hidden"
+      style={{ background: "#020609" }}
+    >
+      {/* Digital rain background */}
+      <DigitalRain />
+
+      {/* Scan sweep */}
+      <div className="scan-sweep-line" />
+
+      {/* City grid */}
+      <div className="absolute inset-0 city-grid-bg opacity-60 pointer-events-none" />
+
+      {/* Neon accent lines */}
+      <div className="absolute top-0 left-0 right-0 h-px pointer-events-none"
+        style={{ background: "linear-gradient(90deg, transparent, #00f0ff, transparent)", boxShadow: "0 0 8px #00f0ff" }} />
+      <div className="absolute bottom-0 left-0 right-0 h-px pointer-events-none"
+        style={{ background: "linear-gradient(90deg, transparent, #00f0ff, transparent)", boxShadow: "0 0 8px #00f0ff" }} />
+      <div className="absolute top-0 bottom-0 left-6 w-px pointer-events-none opacity-25"
+        style={{ background: "linear-gradient(180deg, transparent, #ff00b8 40%, transparent)" }} />
+      <div className="absolute top-0 bottom-0 right-6 w-px pointer-events-none opacity-25"
+        style={{ background: "linear-gradient(180deg, transparent, #ff00b8 40%, transparent)" }} />
+
+      {/* City skyline */}
+      <div className="absolute bottom-0 left-0 right-0 flex items-end overflow-hidden pointer-events-none">
+        {SKYLINE.map((h, i) => (
+          <div key={i} className="flex-1" style={{
+            height: `${h * 7}px`,
+            background: i % 3 === 0 ? "rgba(0,240,255,0.10)" : i % 3 === 1 ? "rgba(0,240,255,0.05)" : "rgba(0,240,255,0.07)",
+            borderTop: `1px solid rgba(0,240,255,${0.08 + (h / 12) * 0.22})`,
+            borderLeft: "1px solid rgba(0,240,255,0.03)",
+          }} />
+        ))}
+      </div>
+
+      {/* Content */}
+      <div className="z-10 w-full max-w-2xl flex flex-col items-center gap-6 relative">
+
+        {/* Title */}
+        <div className="text-center space-y-2">
+          <div className="font-mono text-[10px] tracking-[0.4em] uppercase"
+            style={{ color: "#ff00b8", textShadow: "0 0 8px #ff00b8" }}>
+            CIUDAD SINTÉTICA — SECTOR GEODIA — AÑO 3026
+          </div>
+          <h1 className="font-pixel text-4xl md:text-5xl tracking-widest neon-flicker"
+            style={{ color: "#00f0ff", textShadow: "0 0 6px #00f0ff, 0 0 16px #00f0ff, 0 0 36px rgba(0,240,255,0.4)" }}>
+            DUAT GEODIA
+          </h1>
+          <p className="font-display text-sm md:text-base uppercase tracking-[0.3em]"
+            style={{ color: "rgba(168,216,232,0.65)" }}>
+            OBSERVACIONISMO v8.1 // LABORATORIO LOCAL-FIRST
+          </p>
+        </div>
+
+        {/* Boot terminal */}
+        <div className="w-full border p-4 font-mono text-xs space-y-[2px] relative overflow-hidden"
+          style={{
+            height: "220px", overflowY: "auto",
+            background: "rgba(2,10,18,0.92)",
+            borderColor: "#093848",
+            boxShadow: "0 0 16px rgba(0,240,255,0.12), inset 0 0 24px rgba(0,0,0,0.8)",
+          }}>
+          {/* Scan lines inside terminal */}
+          <div className="absolute inset-0 pointer-events-none" style={{
+            background: "repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.08) 2px, rgba(0,0,0,0.08) 4px)"
+          }} />
+
+          {/* Safe null-guard: only render entries that are valid objects */}
+          {lines.map((line, idx) => {
+            if (!line || typeof line !== "object") return null;
+            return (
+              <motion.div key={idx}
+                initial={{ opacity: 0, x: -8 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.12 }}
+                style={{
+                  color: line.type === "warn" ? "#ff2244"
+                       : line.type === "ok"   ? "#00ff88"
+                       : line.type === "sys"  ? "#ff00b8"
+                       :                        "#00f0ff",
+                  textShadow: line.type === "ok" ? "0 0 4px #00ff88" : undefined,
+                }}>
+                {line.text}
+              </motion.div>
+            );
+          })}
+
+          {ready && (
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} style={{ color: "#a8d8e8", marginTop: "8px" }}>
+              <span style={{ color: "#ff00b8" }}>[SYS]</span>  Run fingerprint: DUAT-GEODIA-{fp}<br />
+              <span style={{ color: "#ff00b8" }}>[SYS]</span>  Seed: {seed} // Régimen inicial: ÓPTIMO<br />
+              <span style={{ color: "#00ff88", textShadow: "0 0 4px #00ff88" }}>
+                [OK]   Sistema listo. Seleccione punto de acceso.
+              </span>
+              <span className="cursor-blink" style={{ color: "#00f0ff" }}>█</span>
+            </motion.div>
+          )}
+        </div>
+
+        {/* Entry buttons */}
+        {ready && (
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.15 }}
+            className="grid grid-cols-2 gap-3 w-full"
+          >
+            {ENTRY_POINTS.map(ep => {
+              const c = NEON[ep.color];
+              return (
+                <Link key={ep.href} href={ep.href} className="block">
+                  <button
+                    className="w-full h-16 font-display font-bold uppercase tracking-wider transition-all duration-150 group"
+                    style={{
+                      background: "rgba(2,10,18,0.9)",
+                      border: `1px solid ${c.border}`,
+                      color: c.text,
+                      boxShadow: `0 0 6px ${c.border}50`,
+                    }}
+                    onMouseEnter={e => {
+                      (e.currentTarget as HTMLButtonElement).style.background = c.bg;
+                      (e.currentTarget as HTMLButtonElement).style.boxShadow  = c.glow;
+                    }}
+                    onMouseLeave={e => {
+                      (e.currentTarget as HTMLButtonElement).style.background = "rgba(2,10,18,0.9)";
+                      (e.currentTarget as HTMLButtonElement).style.boxShadow  = `0 0 6px ${c.border}50`;
+                    }}
+                  >
+                    <div className="text-sm">[{ep.label}]</div>
+                    <div className="text-[9px] font-mono opacity-55 mt-0.5 tracking-widest">{ep.sub}</div>
+                  </button>
+                </Link>
+              );
+            })}
+          </motion.div>
+        )}
+
+        {/* Footer */}
+        <div className="font-mono text-[9px] tracking-widest" style={{ color: "rgba(0,240,255,0.22)" }}>
+          SYNTHETIC_ONLY · DEMO_ONLY · SIMULACIÓN · REVIEW_REQUIRED
+        </div>
+      </div>
+    </div>
+  );
+}

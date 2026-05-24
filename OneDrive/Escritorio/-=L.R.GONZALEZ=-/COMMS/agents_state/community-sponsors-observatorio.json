@@ -1,0 +1,34 @@
+{
+  "schema": "medioevo.comms.agent_state.v1",
+  "generated_at_utc": "2026-05-06T14:46:23Z",
+  "agent_id": "community-sponsors-observatorio",
+  "status": "ACTIVE_LOCAL_AGENT_SPEC_EXTERNAL_BLOCKED",
+  "department_slug": "plaza-mercado-sponsors",
+  "action_gate": "REVIEW",
+  "reports_to": "publicacion-perfiles-observatorio",
+  "owns": [
+    "monthly sponsor update drafts",
+    "tier benefit clarity",
+    "community support language",
+    "retention and gratitude notes without overpromising"
+  ],
+  "may_touch": [
+    "docs/publishing/*SPONSOR*.md",
+    "docs/publishing/*TIER*.md",
+    "docs/publishing/*COMMUNITY*.md",
+    "COMMS/agents_state/community-sponsors-observatorio.json",
+    "COMMS/handoffs/*community-sponsors-observatorio*.md",
+    "qa_artifacts/release_validation/community-sponsors-observatorio-*.json"
+  ],
+  "must_not_touch_without_handoff": [
+    "GitHub Sponsors dashboard",
+    "price or tier edits",
+    "private sponsor account data",
+    "external messages",
+    "raw research release",
+    "private books, RPG/TCG or canon vault"
+  ],
+  "current_handoff": "COMMS/handoffs/2026-05-06-observacionista-public-launch-team.md",
+  "current_outbox": null,
+  "last_observation_fingerprint": "OBSERVACIONISTA_PUBLIC_LAUNCH_TEAM_REGISTERED_2026_05_06"
+}

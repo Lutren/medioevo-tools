@@ -1,0 +1,1880 @@
+{
+  "schema": "wabi.curator_assistant_report.v1",
+  "ok": true,
+  "action": "curator_assistant_report",
+  "gate": "APPROVE",
+  "generated_at_utc": "2026-05-07T17:12:46Z",
+  "workspace": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
+  "mode": "dry_run_only",
+  "policy": {
+    "source_writes": false,
+    "delete_files": false,
+    "move_files": false,
+    "git_stage": false,
+    "git_commit": false,
+    "read_file_contents": false,
+    "metadata_only": true
+  },
+  "assistant_contract": {
+    "name": "curador_orden_assistant",
+    "display_name": "Curador Orden Assistant",
+    "role": "assistant to the curator that keeps order, creates dry-run cleanup evidence and teaches workspace hygiene",
+    "operating_mode": "READ_ONLY_PLUS_REPORTS",
+    "reads": [
+      "git metadata",
+      "workspace filenames",
+      "project scan metadata",
+      "existing reports and handoffs by path reference"
+    ],
+    "may_write": [
+      "runtime/outputs/curator_assistant_report_*.json",
+      "runtime/outputs/curator_assistant_report_*.md",
+      "runtime/logs/wabi_events.jsonl",
+      "runtime/witness/wabi_patch_witness.sqlite",
+      "curator assistant docs when explicitly maintaining the contract"
+    ],
+    "never_does": [
+      "delete files",
+      "move or rename files",
+      "stage or commit git changes",
+      "revert another agent's work",
+      "publish or upload material",
+      "read or print secret values",
+      "touch private game or TCG lanes"
+    ],
+    "handoff_contract": [
+      "CERTEZA: metadata observed directly",
+      "INFERENCIA: likely category from path/status only",
+      "INCOGNITA: untracked or ambiguous material awaiting ficha",
+      "BLOQUEADO: secret/private/publication/destructive risk"
+    ]
+  },
+  "workspace_state": {
+    "workspace": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
+    "repo_root": "C:\\Users\\L-Tyr",
+    "branch": "codex/curador-seto-loops-2026-05-05",
+    "base_commit": "db09f69",
+    "dirty": true,
+    "status_count": 219,
+    "project_scan_schema": "wabi.project_scan.v1",
+    "files_sampled": 1989,
+    "package_managers": [],
+    "languages": [
+      "python",
+      "javascript/typescript",
+      "markdown"
+    ],
+    "test_commands": [
+      {
+        "command": "python -m pytest -q",
+        "source": "python_tests_detected"
+      }
+    ],
+    "content_included": false,
+    "limits": {
+      "git_status_sample": 120,
+      "project_scan_max_files": 3000
+    }
+  },
+  "summary": {
+    "candidate_count": 120,
+    "category_counts": {
+      "BOUNDARY_BLOCKED": 3,
+      "CONCURRENT_TRACKED_CHANGE": 36,
+      "HANDOFF_EVIDENCE": 6,
+      "RUNTIME_EVIDENCE": 2,
+      "UNTRACKED_REVIEW": 73
+    },
+    "decision_counts": {
+      "KEEP": 47,
+      "UNKNOWN_REVIEW_REQUIRED": 73
+    },
+    "gate_counts": {
+      "APPROVE": 8,
+      "BLOCK": 3,
+      "REVIEW": 109
+    },
+    "concurrent_worktree": true,
+    "safe_cleanup_performed": false
+  },
+  "cleanup_plan": {
+    "plan_gate": "REVIEW",
+    "cleanup_performed": false,
+    "allowed_now": [
+      "write dry-run reports under runtime/outputs",
+      "teach operators and agents the order protocol",
+      "create fichas or manifests for owned files",
+      "run safe tests through run-safe-tests"
+    ],
+    "forbidden_now": [
+      "delete files",
+      "move files",
+      "git add .",
+      "git reset, checkout or broad revert",
+      "publish, push, deploy or upload",
+      "inspect or print secret values",
+      "touch private game, TCG or game bridge lanes"
+    ],
+    "review_required_count": 109,
+    "blocked_count": 3,
+    "candidate_delete_count": 0,
+    "delete_approved_count": 0
+  },
+  "candidates": [
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/COMMS/agents_state/publicacion-perfiles-observatorio.json",
+      "source_status": "M",
+      "category": "CONCURRENT_TRACKED_CHANGE",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "tracked_change",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Do not revert or overwrite; wait for the owning agent handoff or inspect only the files this task owns."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/COMMS/outbox/publicacion-perfiles-observatorio.jsonl",
+      "source_status": "M",
+      "category": "CONCURRENT_TRACKED_CHANGE",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "tracked_change",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Do not revert or overwrite; wait for the owning agent handoff or inspect only the files this task owns."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/COMMS/topics/agent-city-coordination.jsonl",
+      "source_status": "M",
+      "category": "CONCURRENT_TRACKED_CHANGE",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "tracked_change",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Do not revert or overwrite; wait for the owning agent handoff or inspect only the files this task owns."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/DELETED_OR_ARCHIVED.md",
+      "source_status": "M",
+      "category": "CONCURRENT_TRACKED_CHANGE",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "tracked_change",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Do not revert or overwrite; wait for the owning agent handoff or inspect only the files this task owns."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/DUPLICATES_AND_DEAD_CODE.md",
+      "source_status": "M",
+      "category": "CONCURRENT_TRACKED_CHANGE",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "tracked_change",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Do not revert or overwrite; wait for the owning agent handoff or inspect only the files this task owns."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/PRODUCTOS_MEDIOEVO/content_forge/content_forge/core/metrics.py",
+      "source_status": "M",
+      "category": "CONCURRENT_TRACKED_CHANGE",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "tracked_change",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Do not revert or overwrite; wait for the owning agent handoff or inspect only the files this task owns."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/SOURCE_INTAKE_REGISTER.md",
+      "source_status": "M",
+      "category": "CONCURRENT_TRACKED_CHANGE",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "tracked_change",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Do not revert or overwrite; wait for the owning agent handoff or inspect only the files this task owns."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/README.md",
+      "source_status": "M",
+      "category": "CONCURRENT_TRACKED_CHANGE",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "tracked_change",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Do not revert or overwrite; wait for the owning agent handoff or inspect only the files this task owns."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/REPORT_WABI_SABI_LOCAL_AGENTS.md",
+      "source_status": "M",
+      "category": "CONCURRENT_TRACKED_CHANGE",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "tracked_change",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Do not revert or overwrite; wait for the owning agent handoff or inspect only the files this task owns."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/docs/ARCHITECTURE.md",
+      "source_status": "M",
+      "category": "CONCURRENT_TRACKED_CHANGE",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "tracked_change",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Do not revert or overwrite; wait for the owning agent handoff or inspect only the files this task owns."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/docs/USAGE.md",
+      "source_status": "M",
+      "category": "CONCURRENT_TRACKED_CHANGE",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "tracked_change",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Do not revert or overwrite; wait for the owning agent handoff or inspect only the files this task owns."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/pyproject.toml",
+      "source_status": "M",
+      "category": "CONCURRENT_TRACKED_CHANGE",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "tracked_change",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Do not revert or overwrite; wait for the owning agent handoff or inspect only the files this task owns."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/tests/test_cli.py",
+      "source_status": "M",
+      "category": "CONCURRENT_TRACKED_CHANGE",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "tracked_change",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Do not revert or overwrite; wait for the owning agent handoff or inspect only the files this task owns."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/tests/test_codex_bridge.py",
+      "source_status": "M",
+      "category": "CONCURRENT_TRACKED_CHANGE",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "tracked_change",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Do not revert or overwrite; wait for the owning agent handoff or inspect only the files this task owns."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/tests/test_memory.py",
+      "source_status": "M",
+      "category": "CONCURRENT_TRACKED_CHANGE",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "tracked_change",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Do not revert or overwrite; wait for the owning agent handoff or inspect only the files this task owns."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/wabi_sabi/agents/programmer_agent.py",
+      "source_status": "M",
+      "category": "CONCURRENT_TRACKED_CHANGE",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "tracked_change",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Do not revert or overwrite; wait for the owning agent handoff or inspect only the files this task owns."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/wabi_sabi/cli/main.py",
+      "source_status": "M",
+      "category": "CONCURRENT_TRACKED_CHANGE",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "tracked_change",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Do not revert or overwrite; wait for the owning agent handoff or inspect only the files this task owns."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/wabi_sabi/cli/parser.py",
+      "source_status": "M",
+      "category": "CONCURRENT_TRACKED_CHANGE",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "tracked_change",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Do not revert or overwrite; wait for the owning agent handoff or inspect only the files this task owns."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/wabi_sabi/core/codex_bridge.py",
+      "source_status": "M",
+      "category": "CONCURRENT_TRACKED_CHANGE",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "tracked_change",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Do not revert or overwrite; wait for the owning agent handoff or inspect only the files this task owns."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/wabi_sabi/core/memory.py",
+      "source_status": "M",
+      "category": "CONCURRENT_TRACKED_CHANGE",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "tracked_change",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Do not revert or overwrite; wait for the owning agent handoff or inspect only the files this task owns."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/wabi_sabi/core/programming.py",
+      "source_status": "M",
+      "category": "CONCURRENT_TRACKED_CHANGE",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "tracked_change",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Do not revert or overwrite; wait for the owning agent handoff or inspect only the files this task owns."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/docs/canon/atlas/claudio-wabisabi.md",
+      "source_status": "M",
+      "category": "CONCURRENT_TRACKED_CHANGE",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "tracked_change",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Do not revert or overwrite; wait for the owning agent handoff or inspect only the files this task owns."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/docs/canon/atlas/curaduria.md",
+      "source_status": "M",
+      "category": "CONCURRENT_TRACKED_CHANGE",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "tracked_change",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Do not revert or overwrite; wait for the owning agent handoff or inspect only the files this task owns."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/docs/canon/atlas/psi-observacionismo.md",
+      "source_status": "M",
+      "category": "CONCURRENT_TRACKED_CHANGE",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "tracked_change",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Do not revert or overwrite; wait for the owning agent handoff or inspect only the files this task owns."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/docs/intake/ATLAS_MAIN.md",
+      "source_status": "M",
+      "category": "CONCURRENT_TRACKED_CHANGE",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "tracked_change",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Do not revert or overwrite; wait for the owning agent handoff or inspect only the files this task owns."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/docs/intake/CURADOR_MASTER_INDEX.md",
+      "source_status": "M",
+      "category": "CONCURRENT_TRACKED_CHANGE",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "tracked_change",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Do not revert or overwrite; wait for the owning agent handoff or inspect only the files this task owns."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/docs/ops/AGENT_CITY_LIVE_MAP_2026-05-06.md",
+      "source_status": "M",
+      "category": "CONCURRENT_TRACKED_CHANGE",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "tracked_change",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Do not revert or overwrite; wait for the owning agent handoff or inspect only the files this task owns."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/docs/pending/PENDING_REVIEW_LATEST.md",
+      "source_status": "M",
+      "category": "CONCURRENT_TRACKED_CHANGE",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "tracked_change",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Do not revert or overwrite; wait for the owning agent handoff or inspect only the files this task owns."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/docs/publishing/INDEX.md",
+      "source_status": "M",
+      "category": "CONCURRENT_TRACKED_CHANGE",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "tracked_change",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Do not revert or overwrite; wait for the owning agent handoff or inspect only the files this task owns."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/docs/security/NETWORK_OBSERVER_POLICY_2026-05-06.md",
+      "source_status": "M",
+      "category": "CONCURRENT_TRACKED_CHANGE",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "tracked_change",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Do not revert or overwrite; wait for the owning agent handoff or inspect only the files this task owns."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/open-dev/obsai-core/obsai_core/__init__.py",
+      "source_status": "M",
+      "category": "CONCURRENT_TRACKED_CHANGE",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "tracked_change",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Do not revert or overwrite; wait for the owning agent handoff or inspect only the files this task owns."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/paid/duat-templates/commerce/gumroad_listing.json",
+      "source_status": "M",
+      "category": "BOUNDARY_BLOCKED",
+      "psi_state": "BLOQUEADO",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "BLOCK",
+      "risk_flags": [
+        "private_or_secret_like_path"
+      ],
+      "teaching_hint": "Do not copy, publish, move or inspect content without the specific gate for this lane."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/paid/medioevo-agent-ops-pack/commerce/gumroad_listing.json",
+      "source_status": "M",
+      "category": "BOUNDARY_BLOCKED",
+      "psi_state": "BLOQUEADO",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "BLOCK",
+      "risk_flags": [
+        "private_or_secret_like_path"
+      ],
+      "teaching_hint": "Do not copy, publish, move or inspect content without the specific gate for this lane."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/qa_artifacts/pending/pending_review_2026-05-06.json",
+      "source_status": "M",
+      "category": "CONCURRENT_TRACKED_CHANGE",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "tracked_change",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Do not revert or overwrite; wait for the owning agent handoff or inspect only the files this task owns."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/qa_artifacts/pending/pending_review_latest.json",
+      "source_status": "M",
+      "category": "CONCURRENT_TRACKED_CHANGE",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "tracked_change",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Do not revert or overwrite; wait for the owning agent handoff or inspect only the files this task owns."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/qa_artifacts/witness_log/curador_seto_witnesslog.jsonl",
+      "source_status": "M",
+      "category": "CONCURRENT_TRACKED_CHANGE",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "tracked_change",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Do not revert or overwrite; wait for the owning agent handoff or inspect only the files this task owns."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/runtime/curador_seto/curador_index.sqlite",
+      "source_status": "M",
+      "category": "RUNTIME_EVIDENCE",
+      "psi_state": "CERTEZA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "APPROVE",
+      "risk_flags": [
+        "generated_evidence"
+      ],
+      "teaching_hint": "Keep runtime evidence unless a dedicated retention policy marks it as regenerable."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/runtime/curador_seto/source_intake_export.json",
+      "source_status": "M",
+      "category": "RUNTIME_EVIDENCE",
+      "psi_state": "CERTEZA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "APPROVE",
+      "risk_flags": [
+        "generated_evidence"
+      ],
+      "teaching_hint": "Keep runtime evidence unless a dedicated retention policy marks it as regenerable."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/tools/release/cleanup_regenerable_cache.py",
+      "source_status": "M",
+      "category": "CONCURRENT_TRACKED_CHANGE",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "tracked_change",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Do not revert or overwrite; wait for the owning agent handoff or inspect only the files this task owns."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/tools/release/run_tests.py",
+      "source_status": "M",
+      "category": "CONCURRENT_TRACKED_CHANGE",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "tracked_change",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Do not revert or overwrite; wait for the owning agent handoff or inspect only the files this task owns."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/ASSUMPTIONS.md",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/AUDIT_CLAUDIO.md",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/BLOCKED_ACTIONS.md",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/CHANGELOG.md",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/COMMS/agents_state/claims-falsifier-observatorio.json",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/COMMS/agents_state/community-sponsors-observatorio.json",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/COMMS/agents_state/editorial-research-release.json",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/COMMS/agents_state/prensa-observatorio.json",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/COMMS/agents_state/publicidad-growth-observatorio.json",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/COMMS/agents_state/social-media-observatorio.json",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/COMMS/handoffs/2026-05-06-observacionista-public-launch-team.md",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/CORE_MODULE_INVENTORY.md",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/DECISIONS.md",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/IMPLEMENTATION_PLAN.md",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/MEDIOEVO_OBSERVACIONISMO_MASTER/",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/NEXT_SESSION_BRIEF.md",
+      "source_status": "??",
+      "category": "HANDOFF_EVIDENCE",
+      "psi_state": "CERTEZA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "APPROVE",
+      "risk_flags": [
+        "handoff_state"
+      ],
+      "teaching_hint": "Preserve handoff files; update them only when this task owns the closure."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/PRIVATE_BOUNDARY.md",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/PRODUCTOS_MEDIOEVO/PRODUCT_MAP.md",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/PRODUCTOS_MEDIOEVO/RISK_REGISTER.md",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/PRODUCTOS_MEDIOEVO/VISIBILITY_MATRIX.md",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/RELEASE_CHECKLIST.md",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/REVIEW_REQUIRED.md",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/RISKS.md",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/SECRET_SCAN_REPORT.md",
+      "source_status": "??",
+      "category": "BOUNDARY_BLOCKED",
+      "psi_state": "BLOQUEADO",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "BLOCK",
+      "risk_flags": [
+        "private_or_secret_like_path"
+      ],
+      "teaching_hint": "Do not copy, publish, move or inspect content without the specific gate for this lane."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/SESSION_FINGERPRINT.json",
+      "source_status": "??",
+      "category": "HANDOFF_EVIDENCE",
+      "psi_state": "CERTEZA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "APPROVE",
+      "risk_flags": [
+        "handoff_state"
+      ],
+      "teaching_hint": "Preserve handoff files; update them only when this task owns the closure."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/TASKS.md",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/TEST_REPORT.md",
+      "source_status": "??",
+      "category": "HANDOFF_EVIDENCE",
+      "psi_state": "CERTEZA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "APPROVE",
+      "risk_flags": [
+        "handoff_state"
+      ],
+      "teaching_hint": "Preserve handoff files; update them only when this task owns the closure."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/TREE_PLAN.md",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/INDEX.md",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/HANDOFF_WABI_SABI_CURADOR_ORDEN_2026-05-07.md",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/NEXT_SESSION_BRIEF.md",
+      "source_status": "??",
+      "category": "HANDOFF_EVIDENCE",
+      "psi_state": "CERTEZA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "APPROVE",
+      "risk_flags": [
+        "handoff_state"
+      ],
+      "teaching_hint": "Preserve handoff files; update them only when this task owns the closure."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/SESSION_FINGERPRINT.json",
+      "source_status": "??",
+      "category": "HANDOFF_EVIDENCE",
+      "psi_state": "CERTEZA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "APPROVE",
+      "risk_flags": [
+        "handoff_state"
+      ],
+      "teaching_hint": "Preserve handoff files; update them only when this task owns the closure."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/TEST_REPORT.md",
+      "source_status": "??",
+      "category": "HANDOFF_EVIDENCE",
+      "psi_state": "CERTEZA",
+      "claim_level": "operational",
+      "decision": "KEEP",
+      "action_gate": "APPROVE",
+      "risk_flags": [
+        "handoff_state"
+      ],
+      "teaching_hint": "Preserve handoff files; update them only when this task owns the closure."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/docs/CONVERSATIONAL_BLUEPRINTS_2026-05-06.md",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/docs/WABI_SABI_BASE_MODEL_RUNTIME_2026-05-07.md",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/docs/wabi_claim_contract.example.json",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/docs/wabi_task_spec.example.json",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/tests/test_auto_router.py",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/tests/test_blueprint_policy.py",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/tests/test_browser_gate.py",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/tests/test_cerebro_index.py",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/tests/test_cerebro_line_audit.py",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/tests/test_claim_contract.py",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/tests/test_curator_assistant.py",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/tests/test_curator_fichas.py",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/tests/test_decision_log.py",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/tests/test_eml.py",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/tests/test_environment.py",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/tests/test_functional_status.py",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/tests/test_job_queue.py",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/tests/test_ollama_bridge.py",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/tests/test_operator_panel.py",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/tests/test_patch_cli.py",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/tests/test_project_scan.py",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/tests/test_provider_orchestrator.py",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/tests/test_safe_executor.py",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/tests/test_safe_test_runner.py",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/tests/test_task_spec_planner.py",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/tests/test_test_plan.py",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/tests/test_worktree.py",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/wabi-window.cmd",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/wabi-window.ps1",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/wabi_sabi/cli/job_runner.py",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/wabi_sabi/core/auto_router.py",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/wabi_sabi/core/blueprint_policy.py",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/wabi_sabi/core/browser_gate.py",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/wabi_sabi/core/cerebro_index.py",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/wabi_sabi/core/cerebro_line_audit.py",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/wabi_sabi/core/claim_contract.py",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/wabi_sabi/core/comms_append.py",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/wabi_sabi/core/conversation.py",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/wabi_sabi/core/curator_assistant.py",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/wabi_sabi/core/curator_fichas.py",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/wabi_sabi/core/decision_log.py",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/wabi_sabi/core/eml.py",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/wabi_sabi/core/environment.py",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/wabi_sabi/core/functional_status.py",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/wabi_sabi/core/job_queue.py",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/wabi_sabi/core/ollama_bridge.py",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    },
+    {
+      "path": "OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/wabi_sabi/core/operator_panel.py",
+      "source_status": "??",
+      "category": "UNTRACKED_REVIEW",
+      "psi_state": "INCOGNITA",
+      "claim_level": "operational",
+      "decision": "UNKNOWN_REVIEW_REQUIRED",
+      "action_gate": "REVIEW",
+      "risk_flags": [
+        "untracked",
+        "concurrent_agent_possible"
+      ],
+      "teaching_hint": "Create a ficha or assign an owner before moving, staging or deleting."
+    }
+  ],
+  "teaching": {
+    "rules": [
+      {
+        "title": "Start with status",
+        "rule": "Run worktree-status or curator-assistant before changing broad folders."
+      },
+      {
+        "title": "No broad staging",
+        "rule": "Never use git add . in this workspace; stage only files owned by the current task."
+      },
+      {
+        "title": "No physical cleanup during concurrency",
+        "rule": "When other agents are active, do not delete, move, revert or rename their files."
+      },
+      {
+        "title": "Use evidence folders",
+        "rule": "Generated outputs go to runtime/outputs, logs to runtime/logs and handoffs to NEXT_SESSION_BRIEF/SESSION_FINGERPRINT."
+      },
+      {
+        "title": "Ficha before archive",
+        "rule": "Unknown material needs a ficha, hash or manifest before archive/delete candidates are trusted."
+      },
+      {
+        "title": "Keep private lanes blocked",
+        "rule": "Game, TCG, secrets, paid content and publication actions stay BLOCK unless a specific gate authorizes them."
+      },
+      {
+        "title": "Close with verification",
+        "rule": "Use claim-contract, project-scan, test-plan and run-safe-tests before claiming a feature is done."
+      }
+    ],
+    "operator_checklist": [
+      "1. Read AGENTS.md and the current handoff.",
+      "2. Run curator-assistant --json for a dry report.",
+      "3. Work only in owned files.",
+      "4. Write artifacts to runtime/outputs.",
+      "5. Add evidence before changing task status.",
+      "6. Leave a handoff if the work remains open."
+    ],
+    "anti_clutter_defaults": [
+      "Prefer docs/intake or runtime/outputs over loose root files.",
+      "Prefer manifests and fichas over copying raw source trees.",
+      "Prefer REVIEW over cleanup when lineage is unclear.",
+      "Prefer small reversible patches over broad reorganizations."
+    ]
+  },
+  "next_safe_actions": [
+    "Share this report path with agents before broad cleanup work.",
+    "Convert high-value unknown files into fichas before any archive or delete decision.",
+    "Run project-scan, claim-contract and run-safe-tests before claiming implementation closure.",
+    "Keep concurrent tracked changes untouched until their owning agent writes a handoff."
+  ],
+  "artifact": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\wabi_sabi\\outputs\\curator_assistant_report_20260507-111246.json",
+  "markdown_artifact": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\wabi_sabi\\outputs\\curator_assistant_report_20260507-111246.md",
+  "witness_event_id": 1,
+  "witness_verified": true,
+  "witness_verify_reason": "ok",
+  "witness_db": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\wabi_sabi\\witness\\wabi_patch_witness.sqlite",
+  "observation": {
+    "envelope_version": "wabi-observation-v1",
+    "observed_at_utc": "2026-05-07T17:12:46.050382+00:00",
+    "prompt": "curator-assistant",
+    "intent": "workspace_order_dry_run",
+    "agent": "curador_orden_assistant",
+    "action_gate": "APPROVE",
+    "certainty": [
+      "Generated a dry-run order report from git metadata and project scan metadata.",
+      "No files were deleted, moved, staged, committed or reverted."
+    ],
+    "inference": [
+      "Unknown or untracked files are treated as active or review-required while other agents are working."
+    ],
+    "unknown": [
+      "File contents, exact duplicate hashes and canonical targets were not inspected in this lightweight pass."
+    ],
+    "artifacts": [
+      "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\wabi_sabi\\outputs\\curator_assistant_report_20260507-111246.json",
+      "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\wabi_sabi\\outputs\\curator_assistant_report_20260507-111246.md"
+    ],
+    "evidence": [
+      "status_count=219",
+      "candidate_count=120",
+      "mode=dry_run_only"
+    ],
+    "fingerprint": "3c81193217f7a2881a41085bf4b3d9d8860e1963bbb9615bc5f25ecdca9f100a"
+  }
+}

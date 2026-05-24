@@ -5,8 +5,8 @@
   "price": 1900,
   "currency": "usd",
   "content_type": "digital",
-  "status": "draft_ready_local_not_published",
-  "description": "Synthetic lab templates for DUAT Genesis: scenario cards, falsifier reports and observation notes for public-safe simulation work.\n\nWhat you get:\n- DUAT Genesis lab card\n- Synthetic scenario brief\n- Falsifier report template\n- Example synthetic lattice study\n- Support notes for keeping claims low-risk and reviewable\n\nWhat this does not include:\n- Private DUAT Geodia engineering\n- GEODIA Social Observatory runtime or real datasets\n- MEDIOEVO RPG/TCG source, assets, lore or bridge code\n- Scientific validation, real-world prediction, diagnosis or decision guarantees\n- Private prompts, credentials or local automation state\n\nBuyer-safe boundary:\nThese are templates for synthetic simulation labs. They are not a prediction engine, not a scientific proof pack and not access to the private MEDIOEVO/DUAT runtime.",
+  "status": "published_gumroad_live_public_assets_updated",
+  "description": "Synthetic lab templates for DUAT Genesis: scenario cards, falsifier reports and observation notes for public-safe simulation work.\n\nMEDIOEVO Tools is working toward a local-first OS for personal AIs: portable continuity across devices, shared displays, skill packets and future hardware interfaces. DUAT Templates support the scenario/falsifier layer of that plan.\n\nPublic plan:\nhttps://medioevo.space/blog/medioevo-tools-plan-maestro.html\n\nWhat you get:\n- DUAT Genesis lab card\n- Synthetic scenario brief\n- Falsifier report template\n- Example synthetic lattice study\n- Support notes for keeping claims low-risk and reviewable\n\nWhat this does not include:\n- Private DUAT Geodia engineering\n- GEODIA Social Observatory runtime or real datasets\n- MEDIOEVO RPG/TCG source, assets, lore or bridge code\n- Scientific validation, real-world prediction, diagnosis or decision guarantees\n- Private prompts, credentials or local automation state\n- A guarantee of autonomous AI safety, hardware delivery or a one-year product timeline\n\nBuyer-safe boundary:\nThese are templates for synthetic simulation labs. They are not a prediction engine, not a scientific proof pack, not access to the private MEDIOEVO/DUAT runtime and not the future MEDIOEVO OS itself.",
   "includes": [
     "DUAT Genesis lab card template",
     "Synthetic scenario brief",
@@ -23,5 +23,11 @@
   "product_file": "releases/paid/duat-templates.zip",
   "source_dir": "packages/paid/duat-templates",
   "delivery_file": "duat-templates.zip",
-  "refund_note": "Digital template pack. Refunds follow the store policy when the file cannot be accessed or materially differs from the listing."
+  "refund_note": "Digital template pack. Refunds follow the store policy when the file cannot be accessed or materially differs from the listing.",
+  "assets": {
+    "cover_image": "assets/cover/duat-templates-cover-v1.png",
+    "square_image": "assets/cover/duat-templates-square-v1.png",
+    "social_image": "assets/cover/duat-templates-social-v1.png",
+    "generated_background": "assets/cover/duat-templates-background-generated-v1.png"
+  }
 }

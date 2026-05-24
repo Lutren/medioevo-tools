@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "duat.residue_classification.v0_1",
+  "title": "DUAT Residue Classification v0.1",
+  "type": "object",
+  "required": [
+    "publication_gate",
+    "clean_signal",
+    "structured_residue",
+    "true_noise",
+    "contradictions",
+    "sensitive_hits",
+    "action_gate"
+  ],
+  "properties": {
+    "publication_gate": { "const": "BLOCK" },
+    "clean_signal": { "type": "array", "items": { "type": "string" } },
+    "structured_residue": { "type": "array", "items": { "type": "string" } },
+    "true_noise": { "type": "array", "items": { "type": "string" } },
+    "contradictions": { "type": "array", "items": { "type": "string" } },
+    "sensitive_hits": { "type": "array", "items": { "type": "string" } },
+    "action_gate": { "enum": ["APPROVE", "REVIEW", "BLOCK"] }
+  },
+  "additionalProperties": true
+}

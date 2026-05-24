@@ -16,7 +16,7 @@ from wabi_sabi.core.redaction import redact_mapping, redact_text
 from wabi_sabi.core.tools import stamp, write_artifact
 
 
-DEFAULT_CODEX_MODEL = "gpt-5.5"
+DEFAULT_CODEX_MODEL = os.environ.get("WABI_CODEX_MODEL", "gpt-4o")
 OPENAI_RESPONSES_URL = "https://api.openai.com/v1/responses"
 
 

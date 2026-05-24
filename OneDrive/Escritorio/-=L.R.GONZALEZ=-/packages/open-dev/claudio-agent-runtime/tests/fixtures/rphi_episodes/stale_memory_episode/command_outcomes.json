@@ -1,0 +1,11 @@
+{
+  "commands": [
+    {
+      "event_id": "evt-stale-command-001",
+      "command": "python tools/local_memory_check.py",
+      "status": "ok",
+      "actiongate": "REVIEW",
+      "evidence": "stale state"
+    }
+  ]
+}

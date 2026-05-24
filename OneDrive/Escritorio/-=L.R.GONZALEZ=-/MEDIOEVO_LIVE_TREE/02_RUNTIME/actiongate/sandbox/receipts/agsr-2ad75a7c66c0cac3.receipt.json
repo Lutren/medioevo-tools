@@ -1,0 +1,429 @@
+{
+  "schemaVersion": "actiongate.execution.receipt.v1",
+  "receiptId": "ager-6e386b6dc8973125",
+  "runId": "agsr-2ad75a7c66c0cac3",
+  "proposalId": "agp-4e1c71fad59e2254",
+  "proposalHash": "sha256-6c5b2d7380cda489dfeb08ec0eb1102d2eee7ff96618d21bbd190fc49f115248",
+  "decisionId": "agd-2dcbec6911efd332",
+  "decisionHash": "sha256-50667db294cf1d47021a9ed31864c9936fc4151cb2727e059bb6cdd5985af61b",
+  "status": "executed_sandbox",
+  "createdAt": "2026-05-13T07:52:19.964Z",
+  "executor": "actiongate-run8-sandbox",
+  "sandboxOnly": true,
+  "productionMutation": false,
+  "actionExecutedInProduction": false,
+  "sandboxRoot": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\MEDIOEVO_LIVE_TREE\\02_RUNTIME\\actiongate\\sandbox",
+  "sandboxFiles": [],
+  "sandboxMessageBus": {
+    "copiedFrom": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\MEDIOEVO_LIVE_TREE\\02_RUNTIME\\messagebus\\logs\\messagebus-main.jsonl",
+    "sandboxLogPath": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\MEDIOEVO_LIVE_TREE\\02_RUNTIME\\actiongate\\sandbox\\messagebus\\agsr-2ad75a7c66c0cac3-messagebus-main.copy.jsonl",
+    "appended": true,
+    "replay": {
+      "sandboxLogPath": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\MEDIOEVO_LIVE_TREE\\02_RUNTIME\\actiongate\\sandbox\\messagebus\\agsr-2ad75a7c66c0cac3-messagebus-main.copy.jsonl",
+      "totalEntries": 2,
+      "entries": [
+        {
+          "schemaVersion": "medioevo.messagebus.jsonl.v1",
+          "id": "msg-run4-jsonl-20260512100904",
+          "channel": "#codex_runs",
+          "kind": "build_report",
+          "from": "codex_engineer",
+          "to": [
+            "human_operator",
+            "wabi_sabi_orchestrator"
+          ],
+          "createdAt": "2026-05-12T10:09:04.690Z",
+          "payload": {
+            "id": "msg-run4-jsonl-20260512100904",
+            "thread_id": "thread-run4-durable-jsonl",
+            "channel_id": "#codex_runs",
+            "from_agent": "codex_engineer",
+            "to_agents": [
+              "human_operator",
+              "wabi_sabi_orchestrator"
+            ],
+            "kind": "build_report",
+            "priority": "P1",
+            "status": "delivered",
+            "title": "Run 4 durable JSONL sample",
+            "body": "Sample append-only message written by the local Node-only MessageBus CLI.",
+            "certeza": [
+              "JSONL durable log exists on disk.",
+              "This sample was generated without backend externo."
+            ],
+            "inferencia": [
+              "Run 5 can read this ledger through a read-only MCP adapter."
+            ],
+            "incognita": [
+              "This is not yet a public server."
+            ],
+            "bloqueo": [
+              "No push.",
+              "No deploy.",
+              "No publication."
+            ],
+            "action_required": "Run messagebus:verify and messagebus:replay.",
+            "evidence_refs": [
+              "MEDIOEVO_LIVE_TREE/03_SYSTEMS/MESSAGEBUS_DURABLE_JSONL.md"
+            ],
+            "artifact_refs": [
+              "MEDIOEVO_LIVE_TREE/02_RUNTIME/messagebus/logs/messagebus-main.jsonl"
+            ],
+            "witness_event_ids": [],
+            "R_estimado": 0.21,
+            "Phi_eff": 0.8,
+            "created_at": "2026-05-12T10:09:04.690Z",
+            "updated_at": "2026-05-12T10:09:04.690Z",
+            "ack_by": [
+              "codex_engineer"
+            ],
+            "hash": ""
+          },
+          "prevHash": null,
+          "canonicalData": "{\"channel\":\"#codex_runs\",\"createdAt\":\"2026-05-12T10:09:04.690Z\",\"from\":\"codex_engineer\",\"id\":\"msg-run4-jsonl-20260512100904\",\"kind\":\"build_report\",\"payload\":{\"Phi_eff\":0.8,\"R_estimado\":0.21,\"ack_by\":[\"codex_engineer\"],\"action_required\":\"Run messagebus:verify and messagebus:replay.\",\"artifact_refs\":[\"MEDIOEVO_LIVE_TREE/02_RUNTIME/messagebus/logs/messagebus-main.jsonl\"],\"bloqueo\":[\"No push.\",\"No deploy.\",\"No publication.\"],\"body\":\"Sample append-only message written by the local Node-only MessageBus CLI.\",\"certeza\":[\"JSONL durable log exists on disk.\",\"This sample was generated without backend externo.\"],\"channel_id\":\"#codex_runs\",\"created_at\":\"2026-05-12T10:09:04.690Z\",\"evidence_refs\":[\"MEDIOEVO_LIVE_TREE/03_SYSTEMS/MESSAGEBUS_DURABLE_JSONL.md\"],\"from_agent\":\"codex_engineer\",\"hash\":\"\",\"id\":\"msg-run4-jsonl-20260512100904\",\"incognita\":[\"This is not yet a public server.\"],\"inferencia\":[\"Run 5 can read this ledger through a read-only MCP adapter.\"],\"kind\":\"build_report\",\"priority\":\"P1\",\"status\":\"delivered\",\"thread_id\":\"thread-run4-durable-jsonl\",\"title\":\"Run 4 durable JSONL sample\",\"to_agents\":[\"human_operator\",\"wabi_sabi_orchestrator\"],\"updated_at\":\"2026-05-12T10:09:04.690Z\",\"witness_event_ids\":[]},\"prevHash\":null,\"schemaVersion\":\"medioevo.messagebus.jsonl.v1\",\"to\":[\"human_operator\",\"wabi_sabi_orchestrator\"]}",
+          "hash": "sha256-a3eb743da2b85b1096440c4b406b06f2e9b0141c69d103779a97dcc93c160791"
+        },
+        {
+          "schemaVersion": "medioevo.messagebus.jsonl.v1",
+          "id": "sandbox-agp-4e1c71fad59e2254",
+          "channel": "#handoffs",
+          "kind": "handoff",
+          "from": "codex_engineer",
+          "to": [
+            "human_operator"
+          ],
+          "createdAt": "2026-05-13T07:52:19.964Z",
+          "payload": {
+            "id": "sandbox-agp-4e1c71fad59e2254",
+            "thread_id": "sandbox-agp-4e1c71fad59e2254",
+            "channel_id": "#handoffs",
+            "from_agent": "codex_engineer",
+            "to_agents": [
+              "human_operator"
+            ],
+            "kind": "handoff",
+            "priority": "P2",
+            "status": "delivered",
+            "title": "Propose future MessageBus append",
+            "body": "Run 8 sandbox append preview",
+            "certeza": [
+              "Sandbox append only.",
+              "Main MessageBus was not mutated."
+            ],
+            "inferencia": [
+              "This entry previews a future approved append."
+            ],
+            "incognita": [],
+            "bloqueo": [
+              "No production write in Run 8."
+            ],
+            "evidence_refs": [
+              "sha256-6c5b2d7380cda489dfeb08ec0eb1102d2eee7ff96618d21bbd190fc49f115248"
+            ],
+            "artifact_refs": [],
+            "witness_event_ids": [],
+            "R_estimado": 0.12,
+            "Phi_eff": 0.88,
+            "created_at": "2026-05-13T07:52:19.964Z",
+            "updated_at": "2026-05-13T07:52:19.964Z",
+            "ack_by": [
+              "codex_engineer"
+            ],
+            "hash": ""
+          },
+          "prevHash": "sha256-a3eb743da2b85b1096440c4b406b06f2e9b0141c69d103779a97dcc93c160791",
+          "canonicalData": "{\"channel\":\"#handoffs\",\"createdAt\":\"2026-05-13T07:52:19.964Z\",\"from\":\"codex_engineer\",\"id\":\"sandbox-agp-4e1c71fad59e2254\",\"kind\":\"handoff\",\"payload\":{\"Phi_eff\":0.88,\"R_estimado\":0.12,\"ack_by\":[\"codex_engineer\"],\"artifact_refs\":[],\"bloqueo\":[\"No production write in Run 8.\"],\"body\":\"Run 8 sandbox append preview\",\"certeza\":[\"Sandbox append only.\",\"Main MessageBus was not mutated.\"],\"channel_id\":\"#handoffs\",\"created_at\":\"2026-05-13T07:52:19.964Z\",\"evidence_refs\":[\"sha256-6c5b2d7380cda489dfeb08ec0eb1102d2eee7ff96618d21bbd190fc49f115248\"],\"from_agent\":\"codex_engineer\",\"hash\":\"\",\"id\":\"sandbox-agp-4e1c71fad59e2254\",\"incognita\":[],\"inferencia\":[\"This entry previews a future approved append.\"],\"kind\":\"handoff\",\"priority\":\"P2\",\"status\":\"delivered\",\"thread_id\":\"sandbox-agp-4e1c71fad59e2254\",\"title\":\"Propose future MessageBus append\",\"to_agents\":[\"human_operator\"],\"updated_at\":\"2026-05-13T07:52:19.964Z\",\"witness_event_ids\":[]},\"prevHash\":\"sha256-a3eb743da2b85b1096440c4b406b06f2e9b0141c69d103779a97dcc93c160791\",\"schemaVersion\":\"medioevo.messagebus.jsonl.v1\",\"to\":[\"human_operator\"]}",
+          "hash": "sha256-0bb42dafb026a4927e85f1fddbc6e3f177746fba5102bf3cea16981af0f94274"
+        }
+      ],
+      "messages": [
+        {
+          "id": "msg-run4-jsonl-20260512100904",
+          "thread_id": "thread-run4-durable-jsonl",
+          "channel_id": "#codex_runs",
+          "from_agent": "codex_engineer",
+          "to_agents": [
+            "human_operator",
+            "wabi_sabi_orchestrator"
+          ],
+          "kind": "build_report",
+          "priority": "P1",
+          "status": "delivered",
+          "title": "Run 4 durable JSONL sample",
+          "body": "Sample append-only message written by the local Node-only MessageBus CLI.",
+          "certeza": [
+            "JSONL durable log exists on disk.",
+            "This sample was generated without backend externo."
+          ],
+          "inferencia": [
+            "Run 5 can read this ledger through a read-only MCP adapter."
+          ],
+          "incognita": [
+            "This is not yet a public server."
+          ],
+          "bloqueo": [
+            "No push.",
+            "No deploy.",
+            "No publication."
+          ],
+          "action_required": "Run messagebus:verify and messagebus:replay.",
+          "evidence_refs": [
+            "MEDIOEVO_LIVE_TREE/03_SYSTEMS/MESSAGEBUS_DURABLE_JSONL.md"
+          ],
+          "artifact_refs": [
+            "MEDIOEVO_LIVE_TREE/02_RUNTIME/messagebus/logs/messagebus-main.jsonl"
+          ],
+          "witness_event_ids": [],
+          "R_estimado": 0.21,
+          "Phi_eff": 0.8,
+          "created_at": "2026-05-12T10:09:04.690Z",
+          "updated_at": "2026-05-12T10:09:04.690Z",
+          "ack_by": [
+            "codex_engineer"
+          ],
+          "hash": ""
+        },
+        {
+          "id": "sandbox-agp-4e1c71fad59e2254",
+          "thread_id": "sandbox-agp-4e1c71fad59e2254",
+          "channel_id": "#handoffs",
+          "from_agent": "codex_engineer",
+          "to_agents": [
+            "human_operator"
+          ],
+          "kind": "handoff",
+          "priority": "P2",
+          "status": "delivered",
+          "title": "Propose future MessageBus append",
+          "body": "Run 8 sandbox append preview",
+          "certeza": [
+            "Sandbox append only.",
+            "Main MessageBus was not mutated."
+          ],
+          "inferencia": [
+            "This entry previews a future approved append."
+          ],
+          "incognita": [],
+          "bloqueo": [
+            "No production write in Run 8."
+          ],
+          "evidence_refs": [
+            "sha256-6c5b2d7380cda489dfeb08ec0eb1102d2eee7ff96618d21bbd190fc49f115248"
+          ],
+          "artifact_refs": [],
+          "witness_event_ids": [],
+          "R_estimado": 0.12,
+          "Phi_eff": 0.88,
+          "created_at": "2026-05-13T07:52:19.964Z",
+          "updated_at": "2026-05-13T07:52:19.964Z",
+          "ack_by": [
+            "codex_engineer"
+          ],
+          "hash": ""
+        }
+      ],
+      "lastHash": "sha256-0bb42dafb026a4927e85f1fddbc6e3f177746fba5102bf3cea16981af0f94274"
+    },
+    "appendedEntryHash": "sha256-0bb42dafb026a4927e85f1fddbc6e3f177746fba5102bf3cea16981af0f94274",
+    "verification": {
+      "ok": true,
+      "logPath": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\MEDIOEVO_LIVE_TREE\\02_RUNTIME\\actiongate\\sandbox\\messagebus\\agsr-2ad75a7c66c0cac3-messagebus-main.copy.jsonl",
+      "totalLines": 2,
+      "totalEntries": 2,
+      "lastHash": "sha256-0bb42dafb026a4927e85f1fddbc6e3f177746fba5102bf3cea16981af0f94274",
+      "checks": {
+        "jsonlSyntax": true,
+        "schema": true,
+        "allowedChannels": true,
+        "hashChain": true,
+        "appendOnlyContinuity": true,
+        "noDuplicateIds": true,
+        "timestampsMonotonic": true
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  "dryRun": {
+    "dryRunId": "agdr-6c5b2d7380cda489",
+    "proposalId": "agp-4e1c71fad59e2254",
+    "createdAt": "2026-05-13T07:52:19.964Z",
+    "sandboxOnly": true,
+    "wouldExecuteInSandbox": true,
+    "wouldExecuteInProduction": false,
+    "executionStatus": "would_execute_in_sandbox",
+    "allowedTypes": [
+      "append_message",
+      "create_task",
+      "update_handoff"
+    ],
+    "blockedTypes": [
+      "publish_release",
+      "modify_file",
+      "delete_or_move"
+    ],
+    "planPreview": {
+      "planId": "agep-6c5b2d7380cda489",
+      "proposalId": "agp-4e1c71fad59e2254",
+      "createdAt": "2026-05-13T07:52:19.964Z",
+      "wouldExecute": false,
+      "commandsPreview": [
+        "DRY_PREVIEW_ONLY: would append handoff to #handoffs"
+      ],
+      "filesAffectedPreview": [],
+      "messagebusMutationPreview": {
+        "wouldMutateMainMessageBus": true,
+        "targetChannel": "#handoffs",
+        "messageKind": "handoff",
+        "payloadPreview": "Run 8 sandbox append preview",
+        "run7Execution": "disabled"
+      },
+      "requiredApprovals": [],
+      "requiredChecks": [
+        "Validate proposal schema",
+        "Verify proposal seal",
+        "Generate inert execution plan",
+        "MessageBus main JSONL snapshot before future approved append"
+      ],
+      "stopConditions": [
+        "Run 7 proposal-only mode",
+        "operator approval missing",
+        "seal verification fails",
+        "policy result BLOCK",
+        "attempt to mutate MessageBus principal",
+        "attempt to execute shell/network write"
+      ],
+      "rollbackPlan": "No rollback required in Run 7 because no real action is executed.",
+      "executionStatus": "not_executed"
+    },
+    "policy": {
+      "ok": true,
+      "policyVersion": "actiongate.sandbox.policy.v1",
+      "result": "ALLOW_SANDBOX_EXECUTION",
+      "errors": [],
+      "warnings": [],
+      "allowedTypes": [
+        "append_message",
+        "create_task",
+        "update_handoff"
+      ],
+      "blockedTypes": [
+        "publish_release",
+        "modify_file",
+        "delete_or_move"
+      ],
+      "seal": {
+        "ok": true,
+        "errors": [],
+        "canonicalPayloadHash": "sha256-6c5b2d7380cda489dfeb08ec0eb1102d2eee7ff96618d21bbd190fc49f115248",
+        "proposalHash": "sha256-6c5b2d7380cda489dfeb08ec0eb1102d2eee7ff96618d21bbd190fc49f115248",
+        "expectedSeal": "sha256-85c7dcffbe97019bcaf22938a8d43e03aa7aa315ad8f67c9c8838f5cfd3f7389"
+      },
+      "actionGatePolicy": {
+        "result": "ALLOW_PROPOSAL",
+        "reason": "proposal allowed; execution remains disabled in Run 7",
+        "blockedActions": [],
+        "allowedActions": [
+          "append_message"
+        ]
+      },
+      "tokenValidation": {
+        "ok": true,
+        "errors": [],
+        "tokenAccepted": true,
+        "tokenScope": "local-sandbox-only",
+        "approvalContext": {
+          "proposalId": "agp-4e1c71fad59e2254",
+          "proposalHash": "sha256-6c5b2d7380cda489dfeb08ec0eb1102d2eee7ff96618d21bbd190fc49f115248",
+          "decisionId": "agd-2dcbec6911efd332",
+          "decisionHash": "sha256-50667db294cf1d47021a9ed31864c9936fc4151cb2727e059bb6cdd5985af61b",
+          "tokenScope": "local-sandbox-only"
+        },
+        "approvalFingerprint": "sha256-99050b9edef7a0ff51377714500caa89ec3cfedbb78926d151ae2bb3f92e1ea1",
+        "secretMaterial": false
+      },
+      "productionExecutionAllowed": false,
+      "sandboxOnly": true
+    }
+  },
+  "rollback": {
+    "schemaVersion": "actiongate.sandbox.rollback.v1",
+    "rollbackId": "agrb-1075917d0051bca1",
+    "runId": "agsr-2ad75a7c66c0cac3",
+    "proposalId": "agp-4e1c71fad59e2254",
+    "createdAt": "2026-05-13T07:52:19.964Z",
+    "sandboxOnly": true,
+    "messagebusBackupPath": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\MEDIOEVO_LIVE_TREE\\02_RUNTIME\\actiongate\\sandbox\\rollback\\agsr-2ad75a7c66c0cac3\\messagebus-before.jsonl",
+    "trackedFiles": [],
+    "rollbackStatus": "prepared",
+    "manifestPath": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\MEDIOEVO_LIVE_TREE\\02_RUNTIME\\actiongate\\sandbox\\rollback\\agsr-2ad75a7c66c0cac3\\rollback-manifest.json",
+    "rollbackHash": "sha256-1f5726a56e2c6411565b8267c33acdccbeb3955fc5ef6b4d7553f98d3d644906"
+  },
+  "policy": {
+    "ok": true,
+    "policyVersion": "actiongate.sandbox.policy.v1",
+    "result": "ALLOW_SANDBOX_EXECUTION",
+    "errors": [],
+    "warnings": [],
+    "allowedTypes": [
+      "append_message",
+      "create_task",
+      "update_handoff"
+    ],
+    "blockedTypes": [
+      "publish_release",
+      "modify_file",
+      "delete_or_move"
+    ],
+    "seal": {
+      "ok": true,
+      "errors": [],
+      "canonicalPayloadHash": "sha256-6c5b2d7380cda489dfeb08ec0eb1102d2eee7ff96618d21bbd190fc49f115248",
+      "proposalHash": "sha256-6c5b2d7380cda489dfeb08ec0eb1102d2eee7ff96618d21bbd190fc49f115248",
+      "expectedSeal": "sha256-85c7dcffbe97019bcaf22938a8d43e03aa7aa315ad8f67c9c8838f5cfd3f7389"
+    },
+    "actionGatePolicy": {
+      "result": "ALLOW_PROPOSAL",
+      "reason": "proposal allowed; execution remains disabled in Run 7",
+      "blockedActions": [],
+      "allowedActions": [
+        "append_message"
+      ]
+    },
+    "tokenValidation": {
+      "ok": true,
+      "errors": [],
+      "tokenAccepted": true,
+      "tokenScope": "local-sandbox-only",
+      "approvalContext": {
+        "proposalId": "agp-4e1c71fad59e2254",
+        "proposalHash": "sha256-6c5b2d7380cda489dfeb08ec0eb1102d2eee7ff96618d21bbd190fc49f115248",
+        "decisionId": "agd-2dcbec6911efd332",
+        "decisionHash": "sha256-50667db294cf1d47021a9ed31864c9936fc4151cb2727e059bb6cdd5985af61b",
+        "tokenScope": "local-sandbox-only"
+      },
+      "approvalFingerprint": "sha256-99050b9edef7a0ff51377714500caa89ec3cfedbb78926d151ae2bb3f92e1ea1",
+      "secretMaterial": false
+    },
+    "productionExecutionAllowed": false,
+    "sandboxOnly": true
+  },
+  "approval": {
+    "ok": true,
+    "errors": [],
+    "tokenAccepted": true,
+    "tokenScope": "local-sandbox-only",
+    "approvalContext": {
+      "proposalId": "agp-4e1c71fad59e2254",
+      "proposalHash": "sha256-6c5b2d7380cda489dfeb08ec0eb1102d2eee7ff96618d21bbd190fc49f115248",
+      "decisionId": "agd-2dcbec6911efd332",
+      "decisionHash": "sha256-50667db294cf1d47021a9ed31864c9936fc4151cb2727e059bb6cdd5985af61b",
+      "tokenScope": "local-sandbox-only"
+    },
+    "approvalFingerprint": "sha256-99050b9edef7a0ff51377714500caa89ec3cfedbb78926d151ae2bb3f92e1ea1",
+    "secretMaterial": false
+  },
+  "errors": [],
+  "warnings": [],
+  "receiptHash": "sha256-1904a5dae55c6339f999cbeed83736b8ec3fc95c7fc52b5a2b4ae5d91f301d81"
+}

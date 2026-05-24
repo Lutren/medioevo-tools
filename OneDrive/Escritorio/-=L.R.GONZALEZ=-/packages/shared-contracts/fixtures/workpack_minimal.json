@@ -1,0 +1,10 @@
+{
+  "schema_version": "medioevo.workpack.v0.1",
+  "workpack_id": "workpack-shared-contracts-p0",
+  "source_system": "WABI_SABI_CONTROL_PLANE",
+  "tasks": ["task-shared-contracts-p0"],
+  "operation": { "kind": "propose", "name": "prepare_local_p0" },
+  "action_gate": { "decision": "REVIEW", "reason": "local_contract_proposal" },
+  "boundary": { "publication_gate": "BLOCK", "contains_private_data": false, "public_safe": true }
+}
+

@@ -1,0 +1,94 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "20260507-111557Z-wabi-cerebro-functional",
+  "agent": "Wabi/Sabi",
+  "base_model": "unknown_env_not_exposed",
+  "project": "MEDIOEVO/CLAUDIO",
+  "project_root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
+  "branch": "codex/curador-seto-loops-2026-05-05",
+  "base_commit": "db09f69",
+  "R_close": 0.15,
+  "Phi_eff": 0.78,
+  "regime_close": "FUNCIONAL_LOCAL_VERIFICADO",
+  "autonomy_level_used": 4,
+  "actiongate_summary": {
+    "approved": 9,
+    "review_required": 4,
+    "blocked": 0
+  },
+  "files_created": [
+    "apps/local/wabi-sabi/wabi_sabi/core/browser_gate.py",
+    "apps/local/wabi-sabi/wabi_sabi/core/cerebro_line_audit.py",
+    "apps/local/wabi-sabi/wabi_sabi/core/functional_status.py",
+    "apps/local/wabi-sabi/tests/test_browser_gate.py",
+    "apps/local/wabi-sabi/tests/test_cerebro_line_audit.py",
+    "apps/local/wabi-sabi/tests/test_functional_status.py",
+    "docs/ops/WABI_CEREBRO_FUNCTIONAL_HANDOFF_2026-05-07.md",
+    "runtime/wabi_sabi/outputs/SESSION_FINGERPRINT_WABI_CEREBRO_20260507.json"
+  ],
+  "files_modified": [
+    "apps/local/wabi-sabi/wabi_sabi/cli/main.py",
+    "apps/local/wabi-sabi/wabi_sabi/core/tool_registry.py",
+    "-=MEDIOEVO=-/-=LIBROS/claudio/claudio_api_server.py",
+    "-=MEDIOEVO=-/-=LIBROS/claudio/tools/launchers/start_claudio_boot.bat",
+    "-=MEDIOEVO=-/-=LIBROS/claudio/tests/test_claudio_boot_supervisor.py"
+  ],
+  "generated_artifacts": [
+    "runtime/cerebro_master_index/LINE_AUDIT_MANIFEST.jsonl",
+    "runtime/cerebro_master_index/LINE_SIGNAL_INDEX.jsonl",
+    "runtime/cerebro_master_index/TECHNOLOGY_ATOMS.json",
+    "runtime/cerebro_master_index/VARIANT_DIFF_REGISTER.md",
+    "runtime/cerebro_master_index/MASTER_PROJECT_GRAPH.json",
+    "runtime/cerebro_master_index/MASTER_PROJECT_GRAPH.md",
+    "runtime/cerebro_master_index/UNKNOWN_REGISTRY.md",
+    "runtime/cerebro_master_index/ACTION_GATE_REGISTER.md",
+    "runtime/cerebro_master_index/FUNCTIONAL_STATUS.json",
+    "runtime/cerebro_master_index/CEREBRO_READ_COMPLETE_REPORT.md",
+    "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/wabi_sabi/DUAT_GEODIA_CURRENT_VERIFICATION.json",
+    "runtime/wabi_sabi/outputs/WABI_FUNCTIONAL_STATUS.json"
+  ],
+  "commands_run": [
+    "python -m pytest tests\\test_browser_gate.py tests\\test_cerebro_line_audit.py tests\\test_functional_status.py tests\\test_cerebro_index.py -q",
+    "python -m wabi_sabi.cli.main cerebro-audit --write-docs",
+    "python -m wabi_sabi.cli.main project-graph --write-docs",
+    "python -m wabi_sabi.cli.main browser-gate http://localhost:3000 --json",
+    "python -m wabi_sabi.cli.main functional-status --json",
+    "python tools\\brain_os_cli.py status",
+    "python tools\\brain_os_cli.py kernel-boot-audit",
+    "python -m pytest tests\\test_brain_os_kernel.py tests\\test_duat_geodia_os_orchestrator.py tests\\test_duat_geodia_iso_builder.py tests\\test_duat_geodia_multistage_benchmark.py -q",
+    "python -m pytest tests\\test_claudio_boot_supervisor.py tests\\test_claudio_api_server_assets.py tests\\test_city_ecosystem_api.py -q",
+    "powershell -NoProfile -ExecutionPolicy Bypass -File tools\\restart_claudio_api.ps1",
+    "Start-ScheduledTask -TaskName ClaudioAlwaysAlertWatchdog",
+    "python tools\\monitor_fugitive_windows.py --seconds 12 --interval 0.5 --log runtime\\logs\\fugitive_windows_codex_watchdog_20260507.jsonl"
+  ],
+  "tests": {
+    "status": "passed",
+    "evidence": [
+      "10 passed Wabi/Sabi focused tests",
+      "34 passed Claudio boot/API focused tests",
+      "36 passed DUAT/GEODIA OS focused tests",
+      "Brain OS boot audit ok=true decision=allow event_id=110",
+      "Wabi functional-status LOCAL_FUNCTIONAL_VERIFIED"
+    ]
+  },
+  "decisions": [
+    "Use live index instead of physical source migration.",
+    "Keep binary/DOCX/PDF/archive material in REVIEW until dedicated extraction.",
+    "Gate browser capability as local/read-only APPROVE and auth/publication/payment/secrets REVIEW/BLOCK.",
+    "Treat previous DUAT/GEODIA reports as previous evidence; current boot success requires a current verification artifact."
+  ],
+  "pending": [
+    "Dedicated extraction for DOCX/PDF/archives.",
+    "Semantic review of 118 variant groups.",
+    "Convert technology atoms into module contracts and tests.",
+    "Host pressure remains REVIEW/MIXTO; keep heavy/external actions gated."
+  ],
+  "next_action": "Convert TECHNOLOGY_ATOMS priority atoms into module contracts with tests.",
+  "status": "completed",
+  "residual_risks": [
+    "workspace remains globally dirty with unrelated existing changes",
+    "binary documents not line-absorbed",
+    "host pressure REVIEW/MIXTO",
+    "no public release/deploy/push performed"
+  ]
+}

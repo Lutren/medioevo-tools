@@ -1,0 +1,22 @@
+{
+  "schema_version": "medioevo.agent_state.v0.1",
+  "agent_id": "agent-001",
+  "body": { "pose": { "x": 2, "y": 2, "z": 0 }, "health": 0.92 },
+  "needs": { "energy": 0.8, "hunger": 0.65, "social": 0.5, "purpose": 0.7 },
+  "traits": ["observer", "patient"],
+  "lineage": { "lineage_id": "lineage-agent-001", "inherited_traits": ["cautious"] },
+  "sensory_profile": { "visual": 0.8, "audio": 0.6, "text": 0.7 },
+  "bias_profile": { "profile_id": "bias-agent-001", "role_bias": { "archive": 0.4 } },
+  "memory": ["arrived_at_synthetic_valley"],
+  "beliefs": ["evidence_before_action"],
+  "goals": ["inspect_world_state"],
+  "relationships": { "agent-002": 0.1 },
+  "role": "Observer",
+  "skills": ["noticing", "logging"],
+  "emotional_state": { "valence": 0.2, "arousal": 0.3 },
+  "cognitive_load": 0.25,
+  "R_i": 0.12,
+  "Phi_eff_i": 0.78,
+  "boundary": { "publication_gate": "BLOCK", "contains_private_data": false, "public_safe": true }
+}
+

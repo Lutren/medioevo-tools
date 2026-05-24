@@ -5,6 +5,7 @@ from .epistemic_guard import Claim, ClaimStatus, EpistemicGuard
 from .equivalence import EquivalenceCheck, EquivalenceTester, EquivalenceVerdict
 from .eml import EMLDomainError, EXPERIMENTAL_OPERATOR_STATUS, eml, gap_eml, operator_contract, residue_eml
 from .hypothesis import Hypothesis, HypothesisScorer
+from .math_canon import EML, MATH_CANON_VERSION, SCIENCE_CLAIM_GATE, R_noisy_or, classify_claim_math_status, phi_moi, validate_R_bounds
 from .operator_profile import OperatorProfile, OperatorProfiler
 from .orchestrator import ObservacionismoResearchKernel
 from .topology import CijEdge, OperatorTopology
@@ -27,6 +28,13 @@ __all__ = [
     "operator_contract",
     "EMLDomainError",
     "EXPERIMENTAL_OPERATOR_STATUS",
+    "MATH_CANON_VERSION",
+    "SCIENCE_CLAIM_GATE",
+    "R_noisy_or",
+    "phi_moi",
+    "EML",
+    "validate_R_bounds",
+    "classify_claim_math_status",
     "Hypothesis",
     "HypothesisScorer",
     "OperatorProfile",

@@ -109,3 +109,27 @@ Los agentes activos registrados en `COMMS/agents_state` son:
 Siguiente prompt recomendado: `7. Claudio Mission Control / COMMS`.
 
 Motivo: ya existe mapa de agentes; el paso natural es que Mission Control lo lea como vista local de estado, sin crear otra capa.
+
+## ACTUALIZACION 2026-05-06 - EQUIPO PUBLICO OBSERVACIONISTA
+
+Por nueva instruccion del operador, se registraron agentes especializados de
+publicidad, social media, prensa, growth, release editorial, claims/falsadores y
+Sponsors dentro del canon `COMMS/agents_state`, sin crear otro silo.
+
+Nuevos agentes locales:
+
+- `social-media-observatorio`
+- `prensa-observatorio`
+- `publicidad-growth-observatorio`
+- `editorial-research-release`
+- `claims-falsifier-observatorio`
+- `community-sponsors-observatorio`
+
+Contrato de equipo:
+`docs/ops/OBSERVACIONISTA_PUBLIC_LAUNCH_TEAM_2026-05-06.md`.
+
+Handoff:
+`COMMS/handoffs/2026-05-06-observacionista-public-launch-team.md`.
+
+Gate: `REVIEW`. No publican, no envian mensajes, no editan dashboards, no hacen
+deploy y no liberan material privado. Preparan paquetes locales con evidencia.

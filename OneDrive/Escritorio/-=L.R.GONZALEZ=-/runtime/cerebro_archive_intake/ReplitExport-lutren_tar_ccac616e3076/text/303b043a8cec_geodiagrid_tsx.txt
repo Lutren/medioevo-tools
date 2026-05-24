@@ -1,0 +1,168 @@
+import { useGeodiaSimulation } from "@/contexts/SimulationContext";
+import { GeodiaCell, computeRegime, computeEpsilon } from "@/lib/geodia";
+import { useState } from "react";
+import { cn } from "@/lib/utils";
+
+// ─── Neon city palette per OSIT regime ────────────────────────────────────────
+const REGIME_NEON: Record<string, { fill: string; glow: string }> = {
+  "ÓPTIMO":            { fill: "#00f0ff", glow: "0 0 6px #00f0ff" },   // cyan — district optimal
+  "FUNCIONAL":         { fill: "#00cc88", glow: "0 0 5px #00cc88" },   // teal-green — functional
+  "PRE_JAMMING":       { fill: "#eecc00", glow: "0 0 5px #eecc00" },   // neon yellow — congestion
+  "JAMMING_TEMPRANO":  { fill: "#ff7700", glow: "0 0 5px #ff7700" },   // orange — early jamming
+  "JAMMING":           { fill: "#ff2244", glow: "0 0 6px #ff2244" },   // red — jammed sector
+};
+
+function getCellRegime(cell: GeodiaCell): string {
+  const local_R = cell.conflict * 0.5 + cell.signal_noise * 0.3 + (1 - cell.stability) * 0.2;
+  return computeRegime(local_R);
+}
+
+function getCellEpsilon(cell: GeodiaCell): number {
+  const local_R = cell.conflict * 0.5 + cell.signal_noise * 0.3 + (1 - cell.stability) * 0.2;
+  return computeEpsilon(local_R);
+}
+
+function getCellStyle(cell: GeodiaCell, isSelected: boolean): React.CSSProperties {
+  const regime  = getCellRegime(cell);
+  const eps     = getCellEpsilon(cell);
+  const neon    = REGIME_NEON[regime] ?? { fill: "#0a1e2e", glow: "none" };
+
+  // Building "density" — opacity driven by resources (height of city block)
+  const opacity = 0.12 + cell.resources * 0.88;
+
+  // Neon glow intensity driven by resources and regime health
+  const glowIntensity = cell.resources > 0.6 && regime !== "JAMMING";
+  const glowMultiplier = cell.resources;
+
+  let boxShadow = "none";
+  if (isSelected) {
+    boxShadow = `0 0 0 2px white, 0 0 10px white`;
+  } else if (glowIntensity) {
+    const alpha = Math.round(glowMultiplier * 80).toString(16).padStart(2, "0");
+    boxShadow = `0 0 ${Math.round(glowMultiplier * 8)}px ${neon.fill}${alpha}`;
+  }
+
+  return {
+    backgroundColor: neon.fill,
+    opacity,
+    boxShadow,
+    // Distortion pixels: epsilon drives micro-flickering via transition delay
+    transition: `background-color 0.3s ease, opacity ${(0.2 + eps * 0.4).toFixed(2)}s ease`,
+  };
+}
+
+export default function GeodiaGrid({ onCellSelect }: { onCellSelect: (c: GeodiaCell | null) => void }) {
+  const { state } = useGeodiaSimulation();
+  const [selectedIdx, setSelectedIdx] = useState<number | null>(null);
+
+  const handleSelect = (idx: number, cell: GeodiaCell) => {
+    if (selectedIdx === idx) {
+      setSelectedIdx(null);
+      onCellSelect(null);
+    } else {
+      setSelectedIdx(idx);
+      onCellSelect(cell);
+    }
+  };
+
+  const gridStyle: React.CSSProperties = {
+    display: "grid",
+    gridTemplateColumns: `repeat(${state.gridSize}, minmax(0, 1fr))`,
+    gap: "2px",
+  };
+
+  const { regime, phi_eff, R, epsilon, I_obs } = state.psi;
+  const regimeNeon = REGIME_NEON[regime] ?? REGIME_NEON["FUNCIONAL"];
+
+  return (
+    <div className="flex-1 flex flex-col min-h-0">
+      {/* Grid header bar */}
+      <div
+        className="font-display font-bold px-2 py-1 flex justify-between items-center text-sm"
+        style={{
+          background: "var(--primary)",
+          color: "var(--primary-foreground)",
+          textShadow: "none",
+        }}
+      >
+        <span>⬡ GEODIA // SECTOR SINTÉTICO</span>
+        <span className="font-mono text-xs">TICK {state.tick}</span>
+      </div>
+
+      {/* Grid container */}
+      <div
+        className="flex-1 flex flex-col p-3 overflow-hidden relative"
+        style={{
+          background: "rgba(2,6,9,0.97)",
+          border: "2px solid var(--border)",
+          boxShadow: "inset 0 0 30px rgba(0,0,0,0.8)",
+        }}
+      >
+        {/* Scan line overlay on grid */}
+        <div
+          className="absolute inset-0 pointer-events-none z-10"
+          style={{
+            background: "repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(0,0,0,0.12) 3px, rgba(0,0,0,0.12) 4px)"
+          }}
+        />
+
+        {/* The grid itself */}
+        <div className="flex-1 relative" style={gridStyle}>
+          {state.cells.map((cell, idx) => {
+            const isSelected = selectedIdx === idx;
+            const cellStyle  = getCellStyle(cell, isSelected);
+            const eps        = getCellEpsilon(cell);
+
+            return (
+              <div
+                key={idx}
+                onClick={() => handleSelect(idx, cell)}
+                className="cursor-crosshair relative overflow-hidden"
+                style={cellStyle}
+              >
+                {/* High-noise dither overlay */}
+                {eps > 0.25 && (
+                  <div
+                    className="absolute inset-0 pointer-events-none dither-bg"
+                    style={{ opacity: eps * 0.5 }}
+                  />
+                )}
+                {/* High-density agent indicator */}
+                {cell.agent_density > 0.7 && (
+                  <div
+                    className="absolute inset-0 pointer-events-none"
+                    style={{
+                      background: `radial-gradient(circle at 50% 50%, ${regimeNeon.fill}30, transparent 70%)`,
+                    }}
+                  />
+                )}
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Status footer */}
+        <div
+          className="mt-2 font-mono text-[10px] border-t pt-1.5 flex flex-wrap gap-x-4 gap-y-0.5"
+          style={{
+            borderColor: "var(--border)",
+            color: "var(--foreground)",
+            opacity: 0.7,
+          }}
+        >
+          <span>MODO: <span className="font-bold" style={{ color: "var(--primary)" }}>{state.mode}</span></span>
+          <span>
+            régimen:{" "}
+            <span style={{ color: regimeNeon.fill, textShadow: regimeNeon.glow }}>
+              {regime}
+            </span>
+          </span>
+          <span>Φeff: <span style={{ color: "var(--primary)" }}>{phi_eff.toFixed(3)}</span></span>
+          <span>R: <span style={{ color: R > 0.6 ? "#ff7700" : "var(--primary)" }}>{R.toFixed(3)}</span></span>
+          <span>ε: <span>{epsilon.toFixed(3)}</span></span>
+          <span>I_obs: <span style={{ color: "#00ff88" }}>{I_obs.toFixed(3)}</span></span>
+        </div>
+      </div>
+    </div>
+  );
+}

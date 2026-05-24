@@ -1,0 +1,191 @@
+import { useState, useEffect } from "react";
+import { Link } from "wouter";
+import OperatorInventory from "@/components/OperatorInventory";
+import SimControls from "@/components/SimControls";
+import GeodiaGrid from "@/components/GeodiaGrid";
+import CellInspector from "@/components/CellInspector";
+import SensoriumPanel from "@/components/SensoriumPanel";
+import EMLPanel from "@/components/EMLPanel";
+import PhysicsPanel from "@/components/PhysicsPanel";
+import ClaimsPanel from "@/components/ClaimsPanel";
+import WitnessPanel from "@/components/WitnessPanel";
+import HandoffPanel from "@/components/HandoffPanel";
+import CodingAgentPanel from "@/components/CodingAgentPanel";
+import GenesisPanel from "@/components/GenesisPanel";
+import DuatMapPanel from "@/components/DuatMapPanel";
+import ReplayPanel from "@/components/ReplayPanel";
+import FalsifierPanel from "@/components/FalsifierPanel";
+import { TabPanel } from "@/components/custom/ExtraPixelComponents";
+import { GeodiaCell } from "@/lib/geodia";
+import { useGeodiaSimulation } from "@/contexts/SimulationContext";
+import { ModeBadge } from "@/components/custom/PixelComponents";
+
+const THEMES = [
+  { id: "neon-city", name: "Neon City 3026" },
+  { id: "amber",     name: "Amber CRT"      },
+  { id: "green",     name: "Green Phosphor"  },
+  { id: "dusty",     name: "Dusty Manual"    },
+  { id: "obsidian",  name: "Obsidian"        },
+];
+
+const TABS = [
+  "SENSORIUM", "EML", "PHYSICS", "FALSIF",
+  "CLAIMS", "WITNESS", "HANDOFF", "CODING", "GENESIS", "DUAT MAP", "REPLAY"
+];
+
+const REGIME_COLOR: Record<string, string> = {
+  "ÓPTIMO":            "#00f0ff",
+  "FUNCIONAL":         "#00ff88",
+  "PRE_JAMMING":       "#ffee00",
+  "JAMMING_TEMPRANO":  "#ff7700",
+  "JAMMING":           "#ff2244",
+};
+
+export default function MainLab() {
+  const { state } = useGeodiaSimulation();
+  const [activeTab, setActiveTab]     = useState("SENSORIUM");
+  const [selectedCell, setSelectedCell] = useState<GeodiaCell | null>(null);
+  const [theme, setTheme]             = useState("neon-city");
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const p = params.get("panel");
+    if (p) {
+      const target = TABS.find(t => t.toLowerCase() === p.toLowerCase());
+      if (target) setActiveTab(target);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (theme === "amber") {
+      document.documentElement.removeAttribute("data-theme");
+    } else {
+      document.documentElement.setAttribute("data-theme", theme);
+    }
+  }, [theme]);
+
+  const regimeColor = REGIME_COLOR[state.psi.regime] ?? "var(--primary)";
+  const isNeonCity  = theme === "neon-city";
+
+  return (
+    <div className="flex flex-col h-[100dvh] w-full bg-background overflow-hidden relative">
+      {/* Animated scan sweep (neon-city only) */}
+      {isNeonCity && <div className="scan-sweep-line" />}
+
+      {/* City grid background (subtle in main lab) */}
+      {isNeonCity && <div className="absolute inset-0 city-grid-bg opacity-100 pointer-events-none z-0" />}
+
+      {/* HEADER */}
+      <header
+        className="flex-none h-11 border-b-2 border-border flex items-center px-3 justify-between shrink-0 relative z-10"
+        style={{
+          background: isNeonCity
+            ? "linear-gradient(90deg, #030d16, #040f1a, #030d16)"
+            : "var(--input)",
+          boxShadow: isNeonCity ? "0 1px 0 #093848, 0 2px 12px rgba(0,240,255,0.08)" : undefined,
+        }}
+      >
+        <div className="flex items-center gap-3">
+          <Link
+            href="/"
+            className="font-pixel text-[10px] hover:opacity-80 transition-opacity"
+            style={{
+              color: "var(--primary)",
+              textShadow: isNeonCity ? "0 0 8px var(--primary)" : undefined,
+            }}
+          >
+            ⬡ DUAT GEODIA
+          </Link>
+
+          {isNeonCity && (
+            <span className="font-mono text-[9px] opacity-40" style={{ color: "var(--primary)" }}>
+              CIUDAD SINTÉTICA // AÑO 3026
+            </span>
+          )}
+
+          <ModeBadge mode={state.mode} className="hidden sm:inline-block" />
+
+          {/* Regime badge */}
+          <span
+            className="hidden md:inline-block font-mono text-[9px] border px-1.5 py-0.5 tracking-wider"
+            style={{
+              color: regimeColor,
+              borderColor: regimeColor + "60",
+              boxShadow: isNeonCity ? `0 0 6px ${regimeColor}40` : undefined,
+            }}
+          >
+            {state.psi.regime}
+          </span>
+        </div>
+
+        <div className="flex items-center gap-3">
+          {/* Live PSI quick-read */}
+          <div className="hidden lg:flex items-center gap-3 font-mono text-[9px]" style={{ color: "var(--primary)", opacity: 0.7 }}>
+            <span>Φeff <span style={{ color: regimeColor }}>{ state.psi.phi_eff.toFixed(3) }</span></span>
+            <span>ε <span>{ state.psi.epsilon.toFixed(3) }</span></span>
+            <span>I_obs <span style={{ color: "#00ff88" }}>{ state.psi.I_obs.toFixed(3) }</span></span>
+            <span className="opacity-40">T:{state.tick}</span>
+          </div>
+
+          <span className="font-mono text-[9px] text-foreground/30 hidden md:inline-block">
+            FP:{state.fingerprint}
+          </span>
+
+          <select
+            value={theme}
+            onChange={e => setTheme(e.target.value)}
+            className="bg-transparent border border-border text-primary font-mono text-[10px] px-1 outline-none cursor-pointer"
+            style={{ boxShadow: isNeonCity ? "0 0 4px var(--primary)40" : undefined }}
+          >
+            {THEMES.map(t => <option key={t.id} value={t.id}>{t.name}</option>)}
+          </select>
+        </div>
+      </header>
+
+      {/* MAIN CONTENT */}
+      <div className="flex-1 flex overflow-hidden p-2 gap-2 relative z-10">
+
+        {/* LEFT PANEL — OPERADOR */}
+        <aside
+          className="w-[260px] flex-none border-2 border-border bg-background/95 relative hidden md:block"
+          style={{ boxShadow: isNeonCity ? "0 0 12px rgba(0,240,255,0.06)" : undefined }}
+        >
+          <OperatorInventory />
+        </aside>
+
+        {/* CENTER PANEL — GEODIA GRID */}
+        <main
+          className="flex-1 flex flex-col min-w-0 border-2 border-border bg-background/95 p-2 relative"
+          style={{ boxShadow: isNeonCity ? "0 0 12px rgba(0,240,255,0.06)" : undefined }}
+        >
+          <SimControls />
+          <GeodiaGrid onCellSelect={setSelectedCell} />
+          {selectedCell && (
+            <CellInspector cell={selectedCell} onClose={() => setSelectedCell(null)} />
+          )}
+        </main>
+
+        {/* RIGHT PANEL — ANALYSIS TERMINAL */}
+        <aside
+          className="w-[320px] flex-none flex flex-col border-2 border-border bg-background/95 p-2 hidden lg:flex relative overflow-hidden"
+          style={{ boxShadow: isNeonCity ? "0 0 12px rgba(0,240,255,0.06)" : undefined }}
+        >
+          <TabPanel tabs={TABS} activeTab={activeTab} onTabChange={setActiveTab} />
+          <div className="flex-1 overflow-y-auto overflow-x-hidden">
+            {activeTab === "SENSORIUM" && <SensoriumPanel selectedCell={selectedCell} />}
+            {activeTab === "EML"       && <EMLPanel />}
+            {activeTab === "PHYSICS"   && <PhysicsPanel />}
+            {activeTab === "FALSIF"    && <FalsifierPanel />}
+            {activeTab === "CLAIMS"    && <ClaimsPanel />}
+            {activeTab === "WITNESS"   && <WitnessPanel />}
+            {activeTab === "HANDOFF"   && <HandoffPanel />}
+            {activeTab === "CODING"    && <CodingAgentPanel />}
+            {activeTab === "GENESIS"   && <GenesisPanel />}
+            {activeTab === "DUAT MAP"  && <DuatMapPanel />}
+            {activeTab === "REPLAY"    && <ReplayPanel />}
+          </div>
+        </aside>
+      </div>
+    </div>
+  );
+}

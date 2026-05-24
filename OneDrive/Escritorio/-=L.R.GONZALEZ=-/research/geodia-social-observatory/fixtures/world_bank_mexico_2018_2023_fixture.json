@@ -1,0 +1,43 @@
+{
+  "source_id": "world_bank_indicators",
+  "source_url": "https://api.worldbank.org/v2/country/MEX/indicator",
+  "captured_at_utc": "2026-05-14T15:10:00Z",
+  "retrieval_mode": "offline_fixture_from_public_api_snapshot",
+  "data_license": "World Bank data terms apply; attribution and no-endorsement required; review before publication or redistribution",
+  "geography": "MEX",
+  "period": "2018-2023",
+  "source_queries": [
+    "https://api.worldbank.org/v2/country/MEX/indicator/SL.UEM.TOTL.ZS?format=json&date=2018:2023&per_page=100",
+    "https://api.worldbank.org/v2/country/MEX/indicator/NY.GDP.PCAP.KD.ZG?format=json&date=2018:2023&per_page=100",
+    "https://api.worldbank.org/v2/country/MEX/indicator/SP.DYN.LE00.IN?format=json&date=2018:2023&per_page=100"
+  ],
+  "provider_lastupdated": "2026-04-08",
+  "observations": [
+    {"indicator": "unemployment_total_percent_labor_force", "source_indicator_id": "SL.UEM.TOTL.ZS", "year": 2018, "value": 3.275, "unit": "percent", "polarity": "negative"},
+    {"indicator": "unemployment_total_percent_labor_force", "source_indicator_id": "SL.UEM.TOTL.ZS", "year": 2019, "value": 3.477, "unit": "percent", "polarity": "negative"},
+    {"indicator": "unemployment_total_percent_labor_force", "source_indicator_id": "SL.UEM.TOTL.ZS", "year": 2020, "value": 4.44, "unit": "percent", "polarity": "negative"},
+    {"indicator": "unemployment_total_percent_labor_force", "source_indicator_id": "SL.UEM.TOTL.ZS", "year": 2021, "value": 4.019, "unit": "percent", "polarity": "negative"},
+    {"indicator": "unemployment_total_percent_labor_force", "source_indicator_id": "SL.UEM.TOTL.ZS", "year": 2022, "value": 3.256, "unit": "percent", "polarity": "negative"},
+    {"indicator": "unemployment_total_percent_labor_force", "source_indicator_id": "SL.UEM.TOTL.ZS", "year": 2023, "value": 2.765, "unit": "percent", "polarity": "negative"},
+    {"indicator": "gdp_per_capita_growth_annual_percent", "source_indicator_id": "NY.GDP.PCAP.KD.ZG", "year": 2018, "value": 1.01136621686764, "unit": "annual_percent", "polarity": "positive"},
+    {"indicator": "gdp_per_capita_growth_annual_percent", "source_indicator_id": "NY.GDP.PCAP.KD.ZG", "year": 2019, "value": -1.33462176883367, "unit": "annual_percent", "polarity": "positive"},
+    {"indicator": "gdp_per_capita_growth_annual_percent", "source_indicator_id": "NY.GDP.PCAP.KD.ZG", "year": 2020, "value": -9.10287154605422, "unit": "annual_percent", "polarity": "positive"},
+    {"indicator": "gdp_per_capita_growth_annual_percent", "source_indicator_id": "NY.GDP.PCAP.KD.ZG", "year": 2021, "value": 5.34306679586261, "unit": "annual_percent", "polarity": "positive"},
+    {"indicator": "gdp_per_capita_growth_annual_percent", "source_indicator_id": "NY.GDP.PCAP.KD.ZG", "year": 2022, "value": 2.93163505458958, "unit": "annual_percent", "polarity": "positive"},
+    {"indicator": "gdp_per_capita_growth_annual_percent", "source_indicator_id": "NY.GDP.PCAP.KD.ZG", "year": 2023, "value": 2.45603364564664, "unit": "annual_percent", "polarity": "positive"},
+    {"indicator": "life_expectancy_at_birth_years", "source_indicator_id": "SP.DYN.LE00.IN", "year": 2018, "value": 74.301, "unit": "years", "polarity": "positive"},
+    {"indicator": "life_expectancy_at_birth_years", "source_indicator_id": "SP.DYN.LE00.IN", "year": 2019, "value": 74.53, "unit": "years", "polarity": "positive"},
+    {"indicator": "life_expectancy_at_birth_years", "source_indicator_id": "SP.DYN.LE00.IN", "year": 2020, "value": 70.449, "unit": "years", "polarity": "positive"},
+    {"indicator": "life_expectancy_at_birth_years", "source_indicator_id": "SP.DYN.LE00.IN", "year": 2021, "value": 69.75, "unit": "years", "polarity": "positive"},
+    {"indicator": "life_expectancy_at_birth_years", "source_indicator_id": "SP.DYN.LE00.IN", "year": 2022, "value": 73.973, "unit": "years", "polarity": "positive"},
+    {"indicator": "life_expectancy_at_birth_years", "source_indicator_id": "SP.DYN.LE00.IN", "year": 2023, "value": 75.069, "unit": "years", "polarity": "positive"}
+  ],
+  "events": [
+    {
+      "date": "2020-01-01",
+      "label": "covid-era discontinuity marker",
+      "classification": "INFERENCIA",
+      "description": "Local modeling marker for 2020 discontinuity; not a standalone causal claim."
+    }
+  ]
+}

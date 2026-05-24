@@ -1,0 +1,1571 @@
+{
+  "schema": "duat.benchmark_matrix.v0_4",
+  "run_id": "DUAT_BENCHMARK_MATRIX_v0_4",
+  "generated_at_utc": "2026-05-15T04:46:55Z",
+  "publication_gate": "BLOCK",
+  "action_gate_local": "REVIEW",
+  "objectives": [
+    {
+      "objective_id": "DUAT_GEODIA_HARMONIZED_INDICATOR_ONE_STEP_FORECAST_v0_1",
+      "indicator": "economy.real_growth_rate",
+      "data_mode": "real_fixture",
+      "r_before": 0.22888520901307724,
+      "r_after": 0.16431596112341315,
+      "r_delta": -0.06456924788966409,
+      "forecast_gate": "REVIEW",
+      "publication_gate": "BLOCK",
+      "license_terms_scan": "REVIEW",
+      "leakage_check": "PASS",
+      "n_observations": 6,
+      "n_splits": 6,
+      "coverage": 1.0,
+      "source_quality": 0.8200000000000001,
+      "baseline_metrics": {
+        "MAE": 3.8967183222746695,
+        "RMSE": 4.585415858753202,
+        "MAPE_if_safe": {
+          "value": null,
+          "reason": "actual_contains_negative_values"
+        }
+      },
+      "enhanced_metrics": {
+        "MAE": 3.878444278018328,
+        "RMSE": 5.610771537413714,
+        "MAPE_if_safe": {
+          "value": null,
+          "reason": "actual_contains_negative_values"
+        }
+      }
+    },
+    {
+      "objective_id": "DUAT_GEODIA_LABOR_MARKET_UNEMPLOYMENT_ONE_STEP_FORECAST_v0_1",
+      "indicator": "labor_market.unemployment_rate.total",
+      "data_mode": "real_fixture",
+      "r_before": 0.22124626865671643,
+      "r_after": 0.1734437934736715,
+      "r_delta": -0.047802475183044923,
+      "forecast_gate": "REVIEW",
+      "publication_gate": "BLOCK",
+      "license_terms_scan": "REVIEW",
+      "leakage_check": "PASS",
+      "n_observations": 9,
+      "n_splits": 9,
+      "coverage": 1.0,
+      "source_quality": 0.7799999999999999,
+      "baseline_metrics": {
+        "MAE": 0.423388888888889,
+        "RMSE": 0.5068877072663904,
+        "MAPE_if_safe": {
+          "value": 0.13152845158975401,
+          "reason": "PASS"
+        }
+      },
+      "enhanced_metrics": {
+        "MAE": 0.45390189792977714,
+        "RMSE": 0.5559875713415802,
+        "MAPE_if_safe": {
+          "value": 0.14824925009444975,
+          "reason": "PASS"
+        }
+      }
+    },
+    {
+      "objective_id": "DUAT_GEODIA_DEMOGRAPHY_LIFE_EXPECTANCY_ONE_STEP_FORECAST_v0_1",
+      "indicator": "demography.life_expectancy_at_birth.total",
+      "data_mode": "real_fixture",
+      "r_before": 0.15177272727272717,
+      "r_after": 0.10090843688613735,
+      "r_delta": -0.05086429038658982,
+      "forecast_gate": "REVIEW",
+      "publication_gate": "BLOCK",
+      "license_terms_scan": "REVIEW",
+      "leakage_check": "PASS",
+      "n_observations": 6,
+      "n_splits": 6,
+      "coverage": 1.0,
+      "source_quality": 0.8200000000000001,
+      "baseline_metrics": {
+        "MAE": 1.1363333333333305,
+        "RMSE": 1.8158352531732236,
+        "MAPE_if_safe": {
+          "value": 0.015265669178183615,
+          "reason": "PASS"
+        }
+      },
+      "enhanced_metrics": {
+        "MAE": 1.4734832134108586,
+        "RMSE": 1.9447531449224402,
+        "MAPE_if_safe": {
+          "value": 0.019954627868863848,
+          "reason": "PASS"
+        }
+      }
+    }
+  ],
+  "matrix_interpretation": {
+    "replication_status": "REPLICATED_LOCAL",
+    "claim_level": "internal_technical_evidence_only",
+    "public_claim_allowed": false,
+    "interpretation_note": "R_delta is negative for all real-fixture objectives; this is internal technical evidence only. Metric caveats exist; report them before any stronger interpretation.",
+    "metric_caveats": [
+      {
+        "indicator": "labor_market.unemployment_rate.total",
+        "status": "ENHANCED_MAE_WORSE_THAN_SELECTED_BASELINE",
+        "baseline_mae": 0.423388888888889,
+        "enhanced_mae": 0.45390189792977714,
+        "note": "R_delta improved through SourceQuality/R components, but raw MAE worsened; do not treat as robust predictive accuracy gain."
+      },
+      {
+        "indicator": "demography.life_expectancy_at_birth.total",
+        "status": "ENHANCED_MAE_WORSE_THAN_SELECTED_BASELINE",
+        "baseline_mae": 1.1363333333333305,
+        "enhanced_mae": 1.4734832134108586,
+        "note": "R_delta improved through SourceQuality/R components, but raw MAE worsened; do not treat as robust predictive accuracy gain."
+      }
+    ]
+  },
+  "license_review": {
+    "schema": "duat.license_review.v0_1",
+    "publication_gate": "BLOCK",
+    "license_terms_scan": "REVIEW",
+    "reason": "LicenseTermsScan remains REVIEW pending human/legal review.",
+    "fixtures": [
+      {
+        "fixture": "research/geodia-social-observatory/fixtures/eurostat_social_epoch_2018_2023_fixture.json",
+        "source_id": "eurostat_sdmx",
+        "source_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/",
+        "geography": "DE",
+        "period": "2018-2023",
+        "license_status": "Eurostat reuse notice applies; attribution required; no endorsement implied; dataset-specific terms require review before publication or commercial redistribution",
+        "license_review_required": true,
+        "publication_gate": "BLOCK"
+      },
+      {
+        "fixture": "research/geodia-social-observatory/fixtures/inegi_mexico_social_2018_2023_fixture.json",
+        "source_id": "INEGI",
+        "source_url": "https://www.inegi.org.mx/contenidos/programas/enoe/15ymas/tabulados/enoe_indicadores_estrategicos_2005_2026_mensual.xlsx",
+        "geography": "MEX",
+        "period": "2018-2023",
+        "license_status": "REVIEW_TERMS_DOCUMENTED",
+        "license_review_required": true,
+        "publication_gate": "BLOCK"
+      },
+      {
+        "fixture": "research/geodia-social-observatory/fixtures/world_bank_mexico_2018_2023_fixture.json",
+        "source_id": "world_bank_indicators",
+        "source_url": "https://api.worldbank.org/v2/country/MEX/indicator",
+        "geography": "MEX",
+        "period": "2018-2023",
+        "license_status": "World Bank data terms apply; attribution and no-endorsement required; review before publication or redistribution",
+        "license_review_required": true,
+        "publication_gate": "BLOCK"
+      }
+    ],
+    "missing_for_pass": [
+      "human/legal review of source-specific redistribution terms",
+      "public-safe attribution text approved for each source",
+      "explicit decision that derived fixture redistribution is allowed"
+    ]
+  },
+  "comparability_review": {
+    "schema": "duat.license_comparability_review.v0_1",
+    "publication_gate": "BLOCK",
+    "reviews": [
+      {
+        "objective_id": "DUAT_GEODIA_HARMONIZED_INDICATOR_ONE_STEP_FORECAST_v0_1",
+        "indicator": "economy.real_growth_rate",
+        "entries": [
+          {
+            "source_id": "world_bank_indicators",
+            "source_indicator_id": "NY.GDP.PCAP.KD.ZG",
+            "country_or_region": "MEX",
+            "year_range": "2018-2023",
+            "frequency": "annual",
+            "unit_original": "annual_percent",
+            "unit_canonical": "annual_percent_growth",
+            "polarity_original": "positive",
+            "polarity_canonical": "positive",
+            "transformation_applied": "raw percent growth preserved; semantic equivalence held for review",
+            "comparability_class": "REVIEW",
+            "caveats": [
+              "GDP per capita growth is not the same semantic unit as aggregate real GDP volume growth.",
+              "Use only as economic-growth REVIEW until a stricter harmonization rule exists."
+            ]
+          },
+          {
+            "source_id": "eurostat_sdmx",
+            "source_indicator_id": "tec00115",
+            "country_or_region": "DE",
+            "year_range": "2018-2023",
+            "frequency": "annual",
+            "unit_original": "CLV_PCH_PRE",
+            "unit_canonical": "annual_percent_growth",
+            "polarity_original": "positive",
+            "polarity_canonical": "positive",
+            "transformation_applied": "raw percent growth preserved; semantic equivalence held for review",
+            "comparability_class": "REVIEW",
+            "caveats": [
+              "Eurostat value is real GDP volume growth, not per-capita growth.",
+              "2022 and 2023 are provisional in the Eurostat fixture."
+            ]
+          }
+        ],
+        "review_status": "REVIEW_MIXED_OR_WEAK_COMPARABILITY",
+        "publication_gate": "BLOCK"
+      },
+      {
+        "objective_id": "DUAT_GEODIA_LABOR_MARKET_UNEMPLOYMENT_ONE_STEP_FORECAST_v0_1",
+        "indicator": "labor_market.unemployment_rate.total",
+        "entries": [
+          {
+            "source_id": "world_bank_indicators",
+            "source_indicator_id": "SL.UEM.TOTL.ZS",
+            "country_or_region": "MEX",
+            "year_range": "2018-2023",
+            "frequency": "annual",
+            "unit_original": "percent",
+            "unit_canonical": "percent_of_labor_force",
+            "polarity_original": "negative",
+            "polarity_canonical": "negative",
+            "transformation_applied": "unit_alias_only; raw values preserved; negative polarity can be sign-inverted only for technical scoring",
+            "comparability_class": "STRONG_PROXY",
+            "caveats": [
+              "Provider definition and population scope may differ from Eurostat.",
+              "This class does not permit ranking Mexico against Germany."
+            ]
+          },
+          {
+            "source_id": "eurostat_sdmx",
+            "source_indicator_id": "une_rt_a",
+            "country_or_region": "DE",
+            "year_range": "2018-2023",
+            "frequency": "annual",
+            "unit_original": "PC_ACT",
+            "unit_canonical": "percent_of_labor_force",
+            "polarity_original": "negative",
+            "polarity_canonical": "negative",
+            "transformation_applied": "unit_alias_only; raw values preserved; negative polarity can be sign-inverted only for technical scoring",
+            "comparability_class": "STRONG_PROXY",
+            "caveats": [
+              "Eurostat age code is Y15-74 and 2020 has break-in-series status.",
+              "This class does not permit ranking Germany against Mexico."
+            ]
+          },
+          {
+            "source_id": "INEGI",
+            "source_indicator_id": "INEGI_ENOE_TASA_DESOCUPACION_ANNUAL_MEAN",
+            "country_or_region": "MEX",
+            "year_range": "2018-2023",
+            "frequency": "annual_mean_from_monthly",
+            "unit_original": "percent_of_economically_active_population",
+            "unit_canonical": "percent_of_labor_force",
+            "polarity_original": "negative",
+            "polarity_canonical": "negative",
+            "transformation_applied": "annual arithmetic mean from 12 official monthly ENOE percentage observations per year; raw monthly workbook preserved by SHA256",
+            "comparability_class": "STRONG_PROXY",
+            "caveats": [
+              "INEGI ENOE is survey-derived and is not an EXACT semantic match to provider-modelled or Eurostat unemployment definitions.",
+              "2020-2022 carry ENOE/ETOE/ENOE_N continuity caveats from the source workbook.",
+              "This class does not permit ranking Mexico, Germany, providers or sources."
+            ]
+          }
+        ],
+        "review_status": "REVIEW_STRONG_PROXY_NOT_EXACT",
+        "publication_gate": "BLOCK"
+      },
+      {
+        "objective_id": "DUAT_GEODIA_DEMOGRAPHY_LIFE_EXPECTANCY_ONE_STEP_FORECAST_v0_1",
+        "indicator": "demography.life_expectancy_at_birth.total",
+        "entries": [
+          {
+            "source_id": "world_bank_indicators",
+            "source_indicator_id": "SP.DYN.LE00.IN",
+            "country_or_region": "MEX",
+            "year_range": "2018-2023",
+            "frequency": "annual",
+            "unit_original": "years",
+            "unit_canonical": "years",
+            "polarity_original": "positive",
+            "polarity_canonical": "positive",
+            "transformation_applied": "unit_alias_only; raw years preserved",
+            "comparability_class": "STRONG_PROXY",
+            "caveats": [
+              "Provider method may differ from Eurostat.",
+              "No causal interpretation is allowed."
+            ]
+          },
+          {
+            "source_id": "eurostat_sdmx",
+            "source_indicator_id": "demo_mlexpec",
+            "country_or_region": "DE",
+            "year_range": "2018-2023",
+            "frequency": "annual",
+            "unit_original": "YR",
+            "unit_canonical": "years",
+            "polarity_original": "positive",
+            "polarity_canonical": "positive",
+            "transformation_applied": "unit_alias_only; raw years preserved",
+            "comparability_class": "STRONG_PROXY",
+            "caveats": [
+              "2023 has break-in-series status in the Eurostat fixture.",
+              "No causal interpretation is allowed."
+            ]
+          }
+        ],
+        "review_status": "REVIEW_STRONG_PROXY_NOT_EXACT",
+        "publication_gate": "BLOCK"
+      }
+    ],
+    "summary": "Technical comparability only; no ranking, public prediction or causal claim."
+  },
+  "raw_reports": [
+    {
+      "schema": "duat.r_before_after_benchmark.v0_1",
+      "objective_id": "DUAT_GEODIA_HARMONIZED_INDICATOR_ONE_STEP_FORECAST_v0_1",
+      "canonical_indicator_id": "economy.real_growth_rate",
+      "status": "internal_benchmark",
+      "synthetic": false,
+      "data_mode": "real_fixture",
+      "clock": {
+        "local_iso": "2026-05-14T22:46:55-06:00",
+        "utc_iso": "2026-05-15T04:46:55Z",
+        "local_date": "2026-05-14",
+        "utc_date": "2026-05-15"
+      },
+      "clock_discrepancy": true,
+      "objective_path": "research/duat-predictive-registry/fixtures/duat_first_predictive_objective_v0_1.json",
+      "series_count": 2,
+      "series": [
+        {
+          "series_id": "world_bank_indicators:NY.GDP.PCAP.KD.ZG:MEX",
+          "source_id": "world_bank_indicators",
+          "source_indicator_id": "NY.GDP.PCAP.KD.ZG",
+          "country_or_region": "MEX",
+          "comparability_class": "REVIEW",
+          "unit": "annual_percent_growth",
+          "polarity": "positive",
+          "fixture_path": "research/geodia-social-observatory/fixtures/world_bank_mexico_2018_2023_fixture.json",
+          "source_quality": 0.84,
+          "years": [
+            2021,
+            2022,
+            2023
+          ],
+          "actual": [
+            5.34306679586261,
+            2.93163505458958,
+            2.45603364564664
+          ],
+          "full_years": [
+            2018,
+            2019,
+            2020,
+            2021,
+            2022,
+            2023
+          ],
+          "full_values": [
+            1.01136621686764,
+            -1.33462176883367,
+            -9.10287154605422,
+            5.34306679586261,
+            2.93163505458958,
+            2.45603364564664
+          ],
+          "predictions": {
+            "last_value": [
+              -9.10287154605422,
+              5.34306679586261,
+              2.93163505458958
+            ],
+            "moving_average": [
+              -3.1420423660067502,
+              -1.6981421730084272,
+              -0.276056565200677
+            ],
+            "enhanced_weighted_ensemble": [
+              -6.517616744946108,
+              1.159536322766298,
+              1.2186029702345091
+            ]
+          },
+          "metrics": {
+            "last_value": {
+              "MAE": 5.777657164044267,
+              "RMSE": 8.460227229443868,
+              "MAPE_if_safe": {
+                "value": 1.2399601722147853,
+                "reason": "PASS"
+              }
+            },
+            "moving_average": {
+              "MAE": 5.282325533438228,
+              "RMSE": 5.7993169593850205,
+              "MAPE_if_safe": {
+                "value": 1.426568842319987,
+                "reason": "PASS"
+              }
+            },
+            "enhanced_weighted_ensemble": {
+              "MAE": 4.956737649348044,
+              "RMSE": 6.9605407511914725,
+              "MAPE_if_safe": {
+                "value": 1.1093781362606736,
+                "reason": "PASS"
+              }
+            }
+          },
+          "folds": [
+            {
+              "target_year": 2021,
+              "train_years": [
+                2018,
+                2019,
+                2020
+              ],
+              "actual": 5.34306679586261,
+              "last_value": -9.10287154605422,
+              "moving_average": -3.1420423660067502,
+              "enhanced_weighted_ensemble": -6.517616744946108,
+              "leakage_check": "PASS"
+            },
+            {
+              "target_year": 2022,
+              "train_years": [
+                2018,
+                2019,
+                2020,
+                2021
+              ],
+              "actual": 2.93163505458958,
+              "last_value": 5.34306679586261,
+              "moving_average": -1.6981421730084272,
+              "enhanced_weighted_ensemble": 1.159536322766298,
+              "leakage_check": "PASS"
+            },
+            {
+              "target_year": 2023,
+              "train_years": [
+                2018,
+                2019,
+                2020,
+                2021,
+                2022
+              ],
+              "actual": 2.45603364564664,
+              "last_value": 2.93163505458958,
+              "moving_average": -0.276056565200677,
+              "enhanced_weighted_ensemble": 1.2186029702345091,
+              "leakage_check": "PASS"
+            }
+          ],
+          "leakage_check": "PASS"
+        },
+        {
+          "series_id": "eurostat_sdmx:tec00115:DE",
+          "source_id": "eurostat_sdmx",
+          "source_indicator_id": "tec00115",
+          "country_or_region": "DE",
+          "comparability_class": "REVIEW",
+          "unit": "annual_percent_growth",
+          "polarity": "positive",
+          "fixture_path": "research/geodia-social-observatory/fixtures/eurostat_social_epoch_2018_2023_fixture.json",
+          "source_quality": 0.8,
+          "years": [
+            2021,
+            2022,
+            2023
+          ],
+          "actual": [
+            3.9,
+            1.8,
+            -0.9
+          ],
+          "full_years": [
+            2018,
+            2019,
+            2020,
+            2021,
+            2022,
+            2023
+          ],
+          "full_values": [
+            1.1,
+            1.0,
+            -4.1,
+            3.9,
+            1.8,
+            -0.9
+          ],
+          "predictions": {
+            "last_value": [
+              -4.1,
+              3.9,
+              1.8
+            ],
+            "moving_average": [
+              -0.6666666666666665,
+              0.2666666666666668,
+              0.5333333333333334
+            ],
+            "enhanced_weighted_ensemble": [
+              -2.40231493149165,
+              1.6500685361693415,
+              1.0482063247435256
+            ]
+          },
+          "metrics": {
+            "last_value": {
+              "MAE": 4.266666666666667,
+              "RMSE": 5.02327914149048,
+              "MAPE_if_safe": {
+                "value": null,
+                "reason": "actual_contains_negative_values"
+              }
+            },
+            "moving_average": {
+              "MAE": 2.511111111111111,
+              "RMSE": 2.9017236257093817,
+              "MAPE_if_safe": {
+                "value": null,
+                "reason": "actual_contains_negative_values"
+              }
+            },
+            "enhanced_weighted_ensemble": {
+              "MAE": 2.800150906688611,
+              "RMSE": 3.809512690765915,
+              "MAPE_if_safe": {
+                "value": null,
+                "reason": "actual_contains_negative_values"
+              }
+            }
+          },
+          "folds": [
+            {
+              "target_year": 2021,
+              "train_years": [
+                2018,
+                2019,
+                2020
+              ],
+              "actual": 3.9,
+              "last_value": -4.1,
+              "moving_average": -0.6666666666666665,
+              "enhanced_weighted_ensemble": -2.40231493149165,
+              "leakage_check": "PASS"
+            },
+            {
+              "target_year": 2022,
+              "train_years": [
+                2018,
+                2019,
+                2020,
+                2021
+              ],
+              "actual": 1.8,
+              "last_value": 3.9,
+              "moving_average": 0.2666666666666668,
+              "enhanced_weighted_ensemble": 1.6500685361693415,
+              "leakage_check": "PASS"
+            },
+            {
+              "target_year": 2023,
+              "train_years": [
+                2018,
+                2019,
+                2020,
+                2021,
+                2022
+              ],
+              "actual": -0.9,
+              "last_value": 1.8,
+              "moving_average": 0.5333333333333334,
+              "enhanced_weighted_ensemble": 1.0482063247435256,
+              "leakage_check": "PASS"
+            }
+          ],
+          "leakage_check": "PASS"
+        }
+      ],
+      "timeseries_split": {
+        "method": "expanding_one_step_ahead",
+        "minimum_train_points": 3,
+        "fold_count": 6,
+        "leakage_check": "PASS"
+      },
+      "selected_baseline": "moving_average",
+      "baseline_predictions": [
+        -3.1420423660067502,
+        -1.6981421730084272,
+        -0.276056565200677,
+        -0.6666666666666665,
+        0.2666666666666668,
+        0.5333333333333334
+      ],
+      "enhanced_predictions": [
+        -6.517616744946108,
+        1.159536322766298,
+        1.2186029702345091,
+        -2.40231493149165,
+        1.6500685361693415,
+        1.0482063247435256
+      ],
+      "actual": [
+        5.34306679586261,
+        2.93163505458958,
+        2.45603364564664,
+        3.9,
+        1.8,
+        -0.9
+      ],
+      "baseline_metrics": {
+        "last_value": {
+          "MAE": 5.022161915355467,
+          "RMSE": 6.957326286266759,
+          "MAPE_if_safe": {
+            "value": null,
+            "reason": "actual_contains_negative_values"
+          }
+        },
+        "moving_average": {
+          "MAE": 3.8967183222746695,
+          "RMSE": 4.585415858753202,
+          "MAPE_if_safe": {
+            "value": null,
+            "reason": "actual_contains_negative_values"
+          }
+        },
+        "selected": {
+          "MAE": 3.8967183222746695,
+          "RMSE": 4.585415858753202,
+          "MAPE_if_safe": {
+            "value": null,
+            "reason": "actual_contains_negative_values"
+          }
+        }
+      },
+      "enhanced_metrics": {
+        "MAE": 3.878444278018328,
+        "RMSE": 5.610771537413714,
+        "MAPE_if_safe": {
+          "value": null,
+          "reason": "actual_contains_negative_values"
+        }
+      },
+      "source_quality": {
+        "baseline_neutral": 0.5,
+        "enhanced_average": 0.8200000000000001,
+        "per_series": {
+          "world_bank_indicators:NY.GDP.PCAP.KD.ZG:MEX": 0.84,
+          "eurostat_sdmx:tec00115:DE": 0.8
+        }
+      },
+      "r_before": 0.22888520901307724,
+      "r_after": 0.16431596112341315,
+      "r_delta": -0.06456924788966409,
+      "r_interpretation": "improves",
+      "forecast_gate": "REVIEW",
+      "forecast_gate_detail": {
+        "forecast_gate": "REVIEW",
+        "reason": "license_terms_review_publication_block",
+        "r_after": 0.16431596112341315,
+        "r_delta": -0.06456924788966409,
+        "minimum_evidence_passed": true,
+        "leakage_check": "PASS",
+        "license_terms": "REVIEW",
+        "publication_gate": "BLOCK"
+      },
+      "publication_gate": "BLOCK",
+      "license_terms_scan": "REVIEW",
+      "secret_scan": "PASS",
+      "boundary_check": "PASS",
+      "leakage_check": "PASS",
+      "minimum_evidence_passed": true,
+      "claims": [
+        {
+          "classification": "INFERENCIA",
+          "text": "Benchmark compares retrospective one-step errors only; it does not validate public prediction, ranking or causality."
+        }
+      ]
+    },
+    {
+      "schema": "duat.r_before_after_benchmark.v0_1",
+      "objective_id": "DUAT_GEODIA_LABOR_MARKET_UNEMPLOYMENT_ONE_STEP_FORECAST_v0_1",
+      "canonical_indicator_id": "labor_market.unemployment_rate.total",
+      "status": "internal_benchmark",
+      "synthetic": false,
+      "data_mode": "real_fixture",
+      "clock": {
+        "local_iso": "2026-05-14T22:46:55-06:00",
+        "utc_iso": "2026-05-15T04:46:55Z",
+        "local_date": "2026-05-14",
+        "utc_date": "2026-05-15"
+      },
+      "clock_discrepancy": true,
+      "objective_path": "research/duat-predictive-registry/fixtures/duat_labor_market_unemployment_objective_v0_1.json",
+      "series_count": 3,
+      "series": [
+        {
+          "series_id": "world_bank_indicators:SL.UEM.TOTL.ZS:MEX",
+          "source_id": "world_bank_indicators",
+          "source_indicator_id": "SL.UEM.TOTL.ZS",
+          "country_or_region": "MEX",
+          "comparability_class": "STRONG_PROXY",
+          "unit": "percent_of_labor_force",
+          "polarity": "negative",
+          "fixture_path": "research/geodia-social-observatory/fixtures/world_bank_mexico_2018_2023_fixture.json",
+          "source_quality": 0.84,
+          "years": [
+            2021,
+            2022,
+            2023
+          ],
+          "actual": [
+            4.019,
+            3.256,
+            2.765
+          ],
+          "full_years": [
+            2018,
+            2019,
+            2020,
+            2021,
+            2022,
+            2023
+          ],
+          "full_values": [
+            3.275,
+            3.477,
+            4.44,
+            4.019,
+            3.256,
+            2.765
+          ],
+          "predictions": {
+            "last_value": [
+              4.44,
+              4.019,
+              3.256
+            ],
+            "moving_average": [
+              3.7306666666666666,
+              3.978666666666667,
+              3.905
+            ],
+            "enhanced_weighted_ensemble": [
+              4.120576751845864,
+              3.9985181646708594,
+              3.5880629882638333
+            ]
+          },
+          "metrics": {
+            "last_value": {
+              "MAE": 0.5583333333333335,
+              "RMSE": 0.5774919912864594,
+              "MAPE_if_safe": {
+                "value": 0.17222196294648037,
+                "reason": "PASS"
+              }
+            },
+            "moving_average": {
+              "MAE": 0.7170000000000001,
+              "RMSE": 0.7968653634130469,
+              "MAPE_if_safe": {
+                "value": 0.2353294474453148,
+                "reason": "PASS"
+              }
+            },
+            "enhanced_weighted_ensemble": {
+              "MAE": 0.5557193015935188,
+              "RMSE": 0.6426724785434461,
+              "MAPE_if_safe": {
+                "value": 0.18366407400311938,
+                "reason": "PASS"
+              }
+            }
+          },
+          "folds": [
+            {
+              "target_year": 2021,
+              "train_years": [
+                2018,
+                2019,
+                2020
+              ],
+              "actual": 4.019,
+              "last_value": 4.44,
+              "moving_average": 3.7306666666666666,
+              "enhanced_weighted_ensemble": 4.120576751845864,
+              "leakage_check": "PASS"
+            },
+            {
+              "target_year": 2022,
+              "train_years": [
+                2018,
+                2019,
+                2020,
+                2021
+              ],
+              "actual": 3.256,
+              "last_value": 4.019,
+              "moving_average": 3.978666666666667,
+              "enhanced_weighted_ensemble": 3.9985181646708594,
+              "leakage_check": "PASS"
+            },
+            {
+              "target_year": 2023,
+              "train_years": [
+                2018,
+                2019,
+                2020,
+                2021,
+                2022
+              ],
+              "actual": 2.765,
+              "last_value": 3.256,
+              "moving_average": 3.905,
+              "enhanced_weighted_ensemble": 3.5880629882638333,
+              "leakage_check": "PASS"
+            }
+          ],
+          "leakage_check": "PASS"
+        },
+        {
+          "series_id": "eurostat_sdmx:une_rt_a:DE",
+          "source_id": "eurostat_sdmx",
+          "source_indicator_id": "une_rt_a",
+          "country_or_region": "DE",
+          "comparability_class": "STRONG_PROXY",
+          "unit": "percent_of_labor_force",
+          "polarity": "negative",
+          "fixture_path": "research/geodia-social-observatory/fixtures/eurostat_social_epoch_2018_2023_fixture.json",
+          "source_quality": 0.8,
+          "years": [
+            2021,
+            2022,
+            2023
+          ],
+          "actual": [
+            3.6,
+            3.1,
+            3.1
+          ],
+          "full_years": [
+            2018,
+            2019,
+            2020,
+            2021,
+            2022,
+            2023
+          ],
+          "full_values": [
+            3.2,
+            2.9,
+            3.6,
+            3.6,
+            3.1,
+            3.1
+          ],
+          "predictions": {
+            "last_value": [
+              3.6,
+              3.6,
+              3.1
+            ],
+            "moving_average": [
+              3.233333333333333,
+              3.3666666666666667,
+              3.4333333333333336
+            ],
+            "enhanced_weighted_ensemble": [
+              3.385351657985863,
+              3.497793321657909,
+              3.2677314669938826
+            ]
+          },
+          "metrics": {
+            "last_value": {
+              "MAE": 0.16666666666666666,
+              "RMSE": 0.28867513459481287,
+              "MAPE_if_safe": {
+                "value": 0.053763440860215055,
+                "reason": "PASS"
+              }
+            },
+            "moving_average": {
+              "MAE": 0.3222222222222224,
+              "RMSE": 0.3248931448269657,
+              "MAPE_if_safe": {
+                "value": 0.09846674631620873,
+                "reason": "PASS"
+              }
+            },
+            "enhanced_weighted_ensemble": {
+              "MAE": 0.2600577102219761,
+              "RMSE": 0.278356655213517,
+              "MAPE_if_safe": {
+                "value": 0.08068396354212286,
+                "reason": "PASS"
+              }
+            }
+          },
+          "folds": [
+            {
+              "target_year": 2021,
+              "train_years": [
+                2018,
+                2019,
+                2020
+              ],
+              "actual": 3.6,
+              "last_value": 3.6,
+              "moving_average": 3.233333333333333,
+              "enhanced_weighted_ensemble": 3.385351657985863,
+              "leakage_check": "PASS"
+            },
+            {
+              "target_year": 2022,
+              "train_years": [
+                2018,
+                2019,
+                2020,
+                2021
+              ],
+              "actual": 3.1,
+              "last_value": 3.6,
+              "moving_average": 3.3666666666666667,
+              "enhanced_weighted_ensemble": 3.497793321657909,
+              "leakage_check": "PASS"
+            },
+            {
+              "target_year": 2023,
+              "train_years": [
+                2018,
+                2019,
+                2020,
+                2021,
+                2022
+              ],
+              "actual": 3.1,
+              "last_value": 3.1,
+              "moving_average": 3.4333333333333336,
+              "enhanced_weighted_ensemble": 3.2677314669938826,
+              "leakage_check": "PASS"
+            }
+          ],
+          "leakage_check": "PASS"
+        },
+        {
+          "series_id": "INEGI:INEGI_ENOE_TASA_DESOCUPACION_ANNUAL_MEAN:MEX",
+          "source_id": "INEGI",
+          "source_indicator_id": "INEGI_ENOE_TASA_DESOCUPACION_ANNUAL_MEAN",
+          "country_or_region": "MEX",
+          "comparability_class": "STRONG_PROXY",
+          "unit": "percent_of_labor_force",
+          "polarity": "negative",
+          "fixture_path": "research/geodia-social-observatory/fixtures/inegi_mexico_social_2018_2023_fixture.json",
+          "source_quality": 0.7,
+          "years": [
+            2021,
+            2022,
+            2023
+          ],
+          "actual": [
+            4.1386,
+            3.2738,
+            2.7961
+          ],
+          "full_years": [
+            2018,
+            2019,
+            2020,
+            2021,
+            2022,
+            2023
+          ],
+          "full_values": [
+            3.3202,
+            3.4905,
+            4.4316,
+            4.1386,
+            3.2738,
+            2.7961
+          ],
+          "predictions": {
+            "last_value": [
+              4.4316,
+              4.1386,
+              3.2738
+            ],
+            "moving_average": [
+              3.7474333333333334,
+              4.0202333333333335,
+              3.948
+            ],
+            "enhanced_weighted_ensemble": [
+              4.1195789699137855,
+              4.085012946200802,
+              3.603652069634493
+            ]
+          },
+          "metrics": {
+            "last_value": {
+              "MAE": 0.5451666666666668,
+              "RMSE": 0.594958074153129,
+              "MAPE_if_safe": {
+                "value": 0.16859995096256672,
+                "reason": "PASS"
+              }
+            },
+            "moving_average": {
+              "MAE": 0.7631666666666668,
+              "RMSE": 0.8240242092362381,
+              "MAPE_if_safe": {
+                "value": 0.24482848331117893,
+                "reason": "PASS"
+              }
+            },
+            "enhanced_weighted_ensemble": {
+              "MAE": 0.5459286819738366,
+              "RMSE": 0.6609509787269348,
+              "MAPE_if_safe": {
+                "value": 0.18039971273810695,
+                "reason": "PASS"
+              }
+            }
+          },
+          "folds": [
+            {
+              "target_year": 2021,
+              "train_years": [
+                2018,
+                2019,
+                2020
+              ],
+              "actual": 4.1386,
+              "last_value": 4.4316,
+              "moving_average": 3.7474333333333334,
+              "enhanced_weighted_ensemble": 4.1195789699137855,
+              "leakage_check": "PASS"
+            },
+            {
+              "target_year": 2022,
+              "train_years": [
+                2018,
+                2019,
+                2020,
+                2021
+              ],
+              "actual": 3.2738,
+              "last_value": 4.1386,
+              "moving_average": 4.0202333333333335,
+              "enhanced_weighted_ensemble": 4.085012946200802,
+              "leakage_check": "PASS"
+            },
+            {
+              "target_year": 2023,
+              "train_years": [
+                2018,
+                2019,
+                2020,
+                2021,
+                2022
+              ],
+              "actual": 2.7961,
+              "last_value": 3.2738,
+              "moving_average": 3.948,
+              "enhanced_weighted_ensemble": 3.603652069634493,
+              "leakage_check": "PASS"
+            }
+          ],
+          "leakage_check": "PASS"
+        }
+      ],
+      "timeseries_split": {
+        "method": "expanding_one_step_ahead",
+        "minimum_train_points": 3,
+        "fold_count": 9,
+        "leakage_check": "PASS"
+      },
+      "selected_baseline": "last_value",
+      "baseline_predictions": [
+        4.44,
+        4.019,
+        3.256,
+        3.6,
+        3.6,
+        3.1,
+        4.4316,
+        4.1386,
+        3.2738
+      ],
+      "enhanced_predictions": [
+        4.120576751845864,
+        3.9985181646708594,
+        3.5880629882638333,
+        3.385351657985863,
+        3.497793321657909,
+        3.2677314669938826,
+        4.1195789699137855,
+        4.085012946200802,
+        3.603652069634493
+      ],
+      "actual": [
+        4.019,
+        3.256,
+        2.765,
+        3.6,
+        3.1,
+        3.1,
+        4.1386,
+        3.2738,
+        2.7961
+      ],
+      "baseline_metrics": {
+        "last_value": {
+          "MAE": 0.423388888888889,
+          "RMSE": 0.5068877072663904,
+          "MAPE_if_safe": {
+            "value": 0.13152845158975401,
+            "reason": "PASS"
+          }
+        },
+        "moving_average": {
+          "MAE": 0.6007962962962963,
+          "RMSE": 0.6878870693096772,
+          "MAPE_if_safe": {
+            "value": 0.1928748923575675,
+            "reason": "PASS"
+          }
+        },
+        "selected": {
+          "MAE": 0.423388888888889,
+          "RMSE": 0.5068877072663904,
+          "MAPE_if_safe": {
+            "value": 0.13152845158975401,
+            "reason": "PASS"
+          }
+        }
+      },
+      "enhanced_metrics": {
+        "MAE": 0.45390189792977714,
+        "RMSE": 0.5559875713415802,
+        "MAPE_if_safe": {
+          "value": 0.14824925009444975,
+          "reason": "PASS"
+        }
+      },
+      "source_quality": {
+        "baseline_neutral": 0.5,
+        "enhanced_average": 0.7799999999999999,
+        "per_series": {
+          "world_bank_indicators:SL.UEM.TOTL.ZS:MEX": 0.84,
+          "eurostat_sdmx:une_rt_a:DE": 0.8,
+          "INEGI:INEGI_ENOE_TASA_DESOCUPACION_ANNUAL_MEAN:MEX": 0.7
+        }
+      },
+      "r_before": 0.22124626865671643,
+      "r_after": 0.1734437934736715,
+      "r_delta": -0.047802475183044923,
+      "r_interpretation": "improves",
+      "forecast_gate": "REVIEW",
+      "forecast_gate_detail": {
+        "forecast_gate": "REVIEW",
+        "reason": "enhanced_worse_than_selected_baseline",
+        "r_after": 0.1734437934736715,
+        "r_delta": -0.047802475183044923,
+        "minimum_evidence_passed": true,
+        "leakage_check": "PASS",
+        "license_terms": "REVIEW",
+        "publication_gate": "BLOCK"
+      },
+      "publication_gate": "BLOCK",
+      "license_terms_scan": "REVIEW",
+      "secret_scan": "PASS",
+      "boundary_check": "PASS",
+      "leakage_check": "PASS",
+      "minimum_evidence_passed": true,
+      "claims": [
+        {
+          "classification": "INFERENCIA",
+          "text": "Benchmark compares retrospective one-step errors only; it does not validate public prediction, ranking or causality."
+        }
+      ]
+    },
+    {
+      "schema": "duat.r_before_after_benchmark.v0_1",
+      "objective_id": "DUAT_GEODIA_DEMOGRAPHY_LIFE_EXPECTANCY_ONE_STEP_FORECAST_v0_1",
+      "canonical_indicator_id": "demography.life_expectancy_at_birth.total",
+      "status": "internal_benchmark",
+      "synthetic": false,
+      "data_mode": "real_fixture",
+      "clock": {
+        "local_iso": "2026-05-14T22:46:55-06:00",
+        "utc_iso": "2026-05-15T04:46:55Z",
+        "local_date": "2026-05-14",
+        "utc_date": "2026-05-15"
+      },
+      "clock_discrepancy": true,
+      "objective_path": "research/duat-predictive-registry/fixtures/duat_non_economic_third_indicator_objective_v0_1.json",
+      "series_count": 2,
+      "series": [
+        {
+          "series_id": "world_bank_indicators:SP.DYN.LE00.IN:MEX",
+          "source_id": "world_bank_indicators",
+          "source_indicator_id": "SP.DYN.LE00.IN",
+          "country_or_region": "MEX",
+          "comparability_class": "STRONG_PROXY",
+          "unit": "years",
+          "polarity": "positive",
+          "fixture_path": "research/geodia-social-observatory/fixtures/world_bank_mexico_2018_2023_fixture.json",
+          "source_quality": 0.84,
+          "years": [
+            2021,
+            2022,
+            2023
+          ],
+          "actual": [
+            69.75,
+            73.973,
+            75.069
+          ],
+          "full_years": [
+            2018,
+            2019,
+            2020,
+            2021,
+            2022,
+            2023
+          ],
+          "full_values": [
+            74.301,
+            74.53,
+            70.449,
+            69.75,
+            73.973,
+            75.069
+          ],
+          "predictions": {
+            "last_value": [
+              70.449,
+              69.75,
+              73.973
+            ],
+            "moving_average": [
+              73.09333333333335,
+              71.57633333333332,
+              71.39066666666668
+            ],
+            "enhanced_weighted_ensemble": [
+              71.81381207377362,
+              70.39354335744497,
+              72.7546003656945
+            ]
+          },
+          "metrics": {
+            "last_value": {
+              "MAE": 2.0060000000000002,
+              "RMSE": 2.551048542593156,
+              "MAPE_if_safe": {
+                "value": 0.027236601306078217,
+                "reason": "PASS"
+              }
+            },
+            "moving_average": {
+              "MAE": 3.1394444444444503,
+              "RMSE": 3.1860123979670942,
+              "MAPE_if_safe": {
+                "value": 0.043110556044541504,
+                "reason": "PASS"
+              }
+            },
+            "enhanced_weighted_ensemble": {
+              "MAE": 2.6525561168780505,
+              "RMSE": 2.7342443074859846,
+              "MAPE_if_safe": {
+                "value": 0.03626923084224174,
+                "reason": "PASS"
+              }
+            }
+          },
+          "folds": [
+            {
+              "target_year": 2021,
+              "train_years": [
+                2018,
+                2019,
+                2020
+              ],
+              "actual": 69.75,
+              "last_value": 70.449,
+              "moving_average": 73.09333333333335,
+              "enhanced_weighted_ensemble": 71.81381207377362,
+              "leakage_check": "PASS"
+            },
+            {
+              "target_year": 2022,
+              "train_years": [
+                2018,
+                2019,
+                2020,
+                2021
+              ],
+              "actual": 73.973,
+              "last_value": 69.75,
+              "moving_average": 71.57633333333332,
+              "enhanced_weighted_ensemble": 70.39354335744497,
+              "leakage_check": "PASS"
+            },
+            {
+              "target_year": 2023,
+              "train_years": [
+                2018,
+                2019,
+                2020,
+                2021,
+                2022
+              ],
+              "actual": 75.069,
+              "last_value": 73.973,
+              "moving_average": 71.39066666666668,
+              "enhanced_weighted_ensemble": 72.7546003656945,
+              "leakage_check": "PASS"
+            }
+          ],
+          "leakage_check": "PASS"
+        },
+        {
+          "series_id": "eurostat_sdmx:demo_mlexpec:DE",
+          "source_id": "eurostat_sdmx",
+          "source_indicator_id": "demo_mlexpec",
+          "country_or_region": "DE",
+          "comparability_class": "STRONG_PROXY",
+          "unit": "years",
+          "polarity": "positive",
+          "fixture_path": "research/geodia-social-observatory/fixtures/eurostat_social_epoch_2018_2023_fixture.json",
+          "source_quality": 0.8,
+          "years": [
+            2021,
+            2022,
+            2023
+          ],
+          "actual": [
+            80.8,
+            80.7,
+            81.1
+          ],
+          "full_years": [
+            2018,
+            2019,
+            2020,
+            2021,
+            2022,
+            2023
+          ],
+          "full_values": [
+            81.0,
+            81.3,
+            81.1,
+            80.8,
+            80.7,
+            81.1
+          ],
+          "predictions": {
+            "last_value": [
+              81.1,
+              80.8,
+              80.7
+            ],
+            "moving_average": [
+              81.13333333333334,
+              81.06666666666666,
+              80.86666666666666
+            ],
+            "enhanced_weighted_ensemble": [
+              81.11951348563765,
+              80.94226438470143,
+              80.77854694050808
+            ]
+          },
+          "metrics": {
+            "last_value": {
+              "MAE": 0.266666666666661,
+              "RMSE": 0.2943920288775894,
+              "MAPE_if_safe": {
+                "value": 0.00329473705028901,
+                "reason": "PASS"
+              }
+            },
+            "moving_average": {
+              "MAE": 0.3111111111111124,
+              "RMSE": 0.31622776601683894,
+              "MAPE_if_safe": {
+                "value": 0.003848698676158762,
+                "reason": "PASS"
+              }
+            },
+            "enhanced_weighted_ensemble": {
+              "MAE": 0.29441030994366696,
+              "RMSE": 0.2967114024636284,
+              "MAPE_if_safe": {
+                "value": 0.003640024895485962,
+                "reason": "PASS"
+              }
+            }
+          },
+          "folds": [
+            {
+              "target_year": 2021,
+              "train_years": [
+                2018,
+                2019,
+                2020
+              ],
+              "actual": 80.8,
+              "last_value": 81.1,
+              "moving_average": 81.13333333333334,
+              "enhanced_weighted_ensemble": 81.11951348563765,
+              "leakage_check": "PASS"
+            },
+            {
+              "target_year": 2022,
+              "train_years": [
+                2018,
+                2019,
+                2020,
+                2021
+              ],
+              "actual": 80.7,
+              "last_value": 80.8,
+              "moving_average": 81.06666666666666,
+              "enhanced_weighted_ensemble": 80.94226438470143,
+              "leakage_check": "PASS"
+            },
+            {
+              "target_year": 2023,
+              "train_years": [
+                2018,
+                2019,
+                2020,
+                2021,
+                2022
+              ],
+              "actual": 81.1,
+              "last_value": 80.7,
+              "moving_average": 80.86666666666666,
+              "enhanced_weighted_ensemble": 80.77854694050808,
+              "leakage_check": "PASS"
+            }
+          ],
+          "leakage_check": "PASS"
+        }
+      ],
+      "timeseries_split": {
+        "method": "expanding_one_step_ahead",
+        "minimum_train_points": 3,
+        "fold_count": 6,
+        "leakage_check": "PASS"
+      },
+      "selected_baseline": "last_value",
+      "baseline_predictions": [
+        70.449,
+        69.75,
+        73.973,
+        81.1,
+        80.8,
+        80.7
+      ],
+      "enhanced_predictions": [
+        71.81381207377362,
+        70.39354335744497,
+        72.7546003656945,
+        81.11951348563765,
+        80.94226438470143,
+        80.77854694050808
+      ],
+      "actual": [
+        69.75,
+        73.973,
+        75.069,
+        80.8,
+        80.7,
+        81.1
+      ],
+      "baseline_metrics": {
+        "last_value": {
+          "MAE": 1.1363333333333305,
+          "RMSE": 1.8158352531732236,
+          "MAPE_if_safe": {
+            "value": 0.015265669178183615,
+            "reason": "PASS"
+          }
+        },
+        "moving_average": {
+          "MAE": 1.7252777777777812,
+          "RMSE": 2.263920824587295,
+          "MAPE_if_safe": {
+            "value": 0.023479627360350128,
+            "reason": "PASS"
+          }
+        },
+        "selected": {
+          "MAE": 1.1363333333333305,
+          "RMSE": 1.8158352531732236,
+          "MAPE_if_safe": {
+            "value": 0.015265669178183615,
+            "reason": "PASS"
+          }
+        }
+      },
+      "enhanced_metrics": {
+        "MAE": 1.4734832134108586,
+        "RMSE": 1.9447531449224402,
+        "MAPE_if_safe": {
+          "value": 0.019954627868863848,
+          "reason": "PASS"
+        }
+      },
+      "source_quality": {
+        "baseline_neutral": 0.5,
+        "enhanced_average": 0.8200000000000001,
+        "per_series": {
+          "world_bank_indicators:SP.DYN.LE00.IN:MEX": 0.84,
+          "eurostat_sdmx:demo_mlexpec:DE": 0.8
+        }
+      },
+      "r_before": 0.15177272727272717,
+      "r_after": 0.10090843688613735,
+      "r_delta": -0.05086429038658982,
+      "r_interpretation": "improves",
+      "forecast_gate": "REVIEW",
+      "forecast_gate_detail": {
+        "forecast_gate": "REVIEW",
+        "reason": "enhanced_worse_than_selected_baseline",
+        "r_after": 0.10090843688613735,
+        "r_delta": -0.05086429038658982,
+        "minimum_evidence_passed": true,
+        "leakage_check": "PASS",
+        "license_terms": "REVIEW",
+        "publication_gate": "BLOCK"
+      },
+      "publication_gate": "BLOCK",
+      "license_terms_scan": "REVIEW",
+      "secret_scan": "PASS",
+      "boundary_check": "PASS",
+      "leakage_check": "PASS",
+      "minimum_evidence_passed": true,
+      "claims": [
+        {
+          "classification": "INFERENCIA",
+          "text": "Benchmark compares retrospective one-step errors only; it does not validate public prediction, ranking or causality."
+        }
+      ]
+    }
+  ],
+  "scans": {
+    "LicenseTermsScan": "REVIEW",
+    "LeakageCheck": "PASS",
+    "PublicationGateScan": "PASS"
+  },
+  "sha256": "895d75b17e2e0baefdfb831ef9bc5b328e9a40c96dd025f2cfefe1503f369093"
+}

@@ -1,0 +1,79 @@
+{
+  "schema_version": "medioevo.editorial.internal_export.v1",
+  "package_id": "CALIBRACION_INTERNAL_EXPORT_2026-05-22",
+  "generated_at": "2026-05-21T23:00:04.7191986-06:00",
+  "project": "MEDIOEVO / canon10 / book_04_calibracion",
+  "title": "MEDIOEVO IV - Calibracion",
+  "author": "Luis Rene Gonzalez",
+  "classification": "BOOKS_EDITORIAL_INTERNAL_FULL_TEXT",
+  "license": "all_rights_reserved",
+  "source_root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\editorial\\canon10_pipeline\\book_04_calibracion_calibracion",
+  "target_root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\books\\editorial\\internal_exports\\CALIBRACION_INTERNAL_EXPORT_2026-05-22",
+  "publication_gate": "BLOCK",
+  "external_actions_performed": false,
+  "originals_modified": false,
+  "ebook_conversion": {
+    "tool": "Calibre ebook-convert",
+    "input": "16_calibracion_integrado_0713.html",
+    "output": "MEDIOEVO_IV_CALIBRACION_INTERNAL_2026-05-22.epub",
+    "toc_note": "Generated locally for internal review only."
+  },
+  "files": [
+    {
+      "file": "00_source_manifest.json",
+      "bytes": 1256,
+      "sha256": "abd0942e3cdf20fd2547f6d3980882722573bbc53271f028ce2f08ee3ba47a7b",
+      "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\editorial\\canon10_pipeline\\book_04_calibracion_calibracion\\00_source_manifest.json",
+      "source_sha256": "abd0942e3cdf20fd2547f6d3980882722573bbc53271f028ce2f08ee3ba47a7b",
+      "copied_from_source_verified": true
+    },
+    {
+      "file": "14_calibracion_integrado_0713.md",
+      "bytes": 556979,
+      "sha256": "a162a898f78421076beed743a70e6b60392b0f921b35130b8bc9f80b27f7b68c",
+      "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\editorial\\canon10_pipeline\\book_04_calibracion_calibracion\\14_calibracion_integrado_0713.md",
+      "source_sha256": "a162a898f78421076beed743a70e6b60392b0f921b35130b8bc9f80b27f7b68c",
+      "copied_from_source_verified": true
+    },
+    {
+      "file": "15_calibracion_integrado_0713_metrics.json",
+      "bytes": 969,
+      "sha256": "1a18df37e5e1d09bd7100ae8a6ad49bb961b82ae272da2d6b1847a8bca679fe6",
+      "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\editorial\\canon10_pipeline\\book_04_calibracion_calibracion\\15_calibracion_integrado_0713_metrics.json",
+      "source_sha256": "1a18df37e5e1d09bd7100ae8a6ad49bb961b82ae272da2d6b1847a8bca679fe6",
+      "copied_from_source_verified": true
+    },
+    {
+      "file": "16_calibracion_integrado_0713.html",
+      "bytes": 593105,
+      "sha256": "613d5466cab0dbd1314199e8fcd1d59ce48e3877100236efd2f6fa9ca20f8c2b",
+      "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\editorial\\canon10_pipeline\\book_04_calibracion_calibracion\\16_calibracion_integrado_0713.html",
+      "source_sha256": "613d5466cab0dbd1314199e8fcd1d59ce48e3877100236efd2f6fa9ca20f8c2b",
+      "copied_from_source_verified": true
+    },
+    {
+      "file": "17_calibracion_integrado_0713.docx",
+      "bytes": 246399,
+      "sha256": "67cba76bf148e2499d04e55f279bf6824a114911dcd55ccb2283df422be7ddb8",
+      "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\editorial\\canon10_pipeline\\book_04_calibracion_calibracion\\17_calibracion_integrado_0713.docx",
+      "source_sha256": "67cba76bf148e2499d04e55f279bf6824a114911dcd55ccb2283df422be7ddb8",
+      "copied_from_source_verified": true
+    },
+    {
+      "file": "18_calibracion_integrado_0713.pdf",
+      "bytes": 641326,
+      "sha256": "11a9be748839942902c46e554b9e5325b6dd9a6808225ebff373c66e42ab6fb2",
+      "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\editorial\\canon10_pipeline\\book_04_calibracion_calibracion\\18_calibracion_integrado_0713.pdf",
+      "source_sha256": "11a9be748839942902c46e554b9e5325b6dd9a6808225ebff373c66e42ab6fb2",
+      "copied_from_source_verified": true
+    },
+    {
+      "file": "MEDIOEVO_IV_CALIBRACION_INTERNAL_2026-05-22.epub",
+      "bytes": 233667,
+      "sha256": "5a7c57d0cea13c930424b6e3f35bbf568ec749a09e0bc22cd85e8818ce3bb061",
+      "source_path": null,
+      "source_sha256": null,
+      "copied_from_source_verified": false
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+import { useState } from "react";
+import { PixelBorder, PixelButton, ModeBadge } from "./custom/PixelComponents";
+
+export default function ClaimsPanel() {
+  const [level, setLevel] = useState("SYNTHETIC_RESULT");
+  const [claim, setClaim] = useState("");
+  const [evidence, setEvidence] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+
+  const isPhysics = level === "PHYSICS_CLAIM";
+  const decision = isPhysics ? "BLOCK" : "ALLOW";
+
+  return (
+    <div className="space-y-4">
+      <div className="font-display text-xs border-b border-border pb-1 font-bold">
+        CLAIMGATE + RAPIDGUARDIAN // EPISTEMIC GATE
+      </div>
+
+      <div className="space-y-3 font-mono text-[10px]">
+        <div className="space-y-1">
+          <label>NIVEL DE CLAIM:</label>
+          <select 
+            className="w-full bg-input border border-border text-primary p-1 focus:outline-none"
+            value={level}
+            onChange={e => { setLevel(e.target.value); setSubmitted(false); }}
+          >
+            <option value="IMPLEMENTED">IMPLEMENTED</option>
+            <option value="SYNTHETIC_RESULT">SYNTHETIC_RESULT</option>
+            <option value="REAL_DATA_RESULT">REAL_DATA_RESULT</option>
+            <option value="PHYSICS_CLAIM">PHYSICS_CLAIM</option>
+          </select>
+        </div>
+
+        <div className="space-y-1">
+          <label>TEXTO DEL CLAIM:</label>
+          <textarea 
+            className="w-full h-20 bg-input border border-border text-primary p-1 focus:outline-none resize-none"
+            placeholder="Describa el resultado..."
+            value={claim}
+            onChange={e => setClaim(e.target.value)}
+          />
+        </div>
+
+        <div className="space-y-1">
+          <label>EVIDENCIA (SUMMARY):</label>
+          <input 
+            type="text"
+            className="w-full bg-input border border-border text-primary p-1 focus:outline-none"
+            placeholder="Refs, hashes, etc..."
+            value={evidence}
+            onChange={e => setEvidence(e.target.value)}
+          />
+        </div>
+
+        <PixelButton 
+          className="w-full py-1 text-xs" 
+          onClick={() => setSubmitted(true)}
+        >
+          [EVALUAR CLAIM]
+        </PixelButton>
+      </div>
+
+      {submitted && (
+        <PixelBorder className={`mt-4 ${decision === 'BLOCK' ? 'border-destructive bg-destructive/10' : 'border-success bg-success/10'}`}>
+          <div className="text-[10px] font-display font-bold mb-2">DECISIÓN DE LA PUERTA</div>
+          <div className="font-mono text-xl font-bold text-center my-2">
+            {decision === 'BLOCK' ? <span className="text-destructive">BLOCK</span> : <span className="text-success">ALLOW</span>}
+          </div>
+          
+          <div className="font-mono text-[9px] space-y-2 mt-2">
+            {decision === 'BLOCK' && (
+              <>
+                <div className="text-destructive">MOTIVO: Requiere validación independiente — BLOQUEADO por RapidGuardian.</div>
+                <div className="text-foreground/70">NEXT STEPS: Degradado a SYNTHETIC_ONLY o preparar para external review.</div>
+              </>
+            )}
+            {decision === 'ALLOW' && (
+              <>
+                <div className="text-success">MOTIVO: Nivel epistémico adecuado para entorno sintético.</div>
+                <div className="flex items-center gap-2">LABEL: <ModeBadge mode="PROTOTIPO" /></div>
+              </>
+            )}
+          </div>
+        </PixelBorder>
+      )}
+    </div>
+  );
+}

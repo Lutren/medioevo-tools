@@ -306,6 +306,14 @@ PRODUCTS = [
         include=("packages/paid/duat-templates",),
         notes="Paid synthetic DUAT Genesis templates and study worksheets; no DUAT Geodia, RPG/TCG, private data or scientific guarantees.",
     ),
+    Product(
+        name="medioevo-despertar-preview",
+        classification="COMMERCIAL_BOOKS_PUBLIC_SAFE_PREVIEW",
+        source="PRODUCTOS_MEDIOEVO/01_LIBROS_Y_BUNDLES/despertar-preview-gumroad_20260513_232758",
+        lane="books-preview",
+        include=("PRODUCTOS_MEDIOEVO/01_LIBROS_Y_BUNDLES/despertar-preview-gumroad_20260513_232758",),
+        notes="Public-safe DESPERTAR reader entry; excludes full archive, RPG/TCG, private runtime, scientific claims and real bestseller claims.",
+    ),
 ]
 
 

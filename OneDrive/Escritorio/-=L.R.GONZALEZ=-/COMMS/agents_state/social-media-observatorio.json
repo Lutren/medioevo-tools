@@ -1,0 +1,34 @@
+{
+  "schema": "medioevo.comms.agent_state.v1",
+  "generated_at_utc": "2026-05-06T14:46:23Z",
+  "agent_id": "social-media-observatorio",
+  "status": "ACTIVE_LOCAL_AGENT_SPEC_EXTERNAL_BLOCKED",
+  "department_slug": "plaza-mercado-social",
+  "action_gate": "REVIEW",
+  "reports_to": "publicacion-perfiles-observatorio",
+  "owns": [
+    "platform-specific public-safe post drafts",
+    "threads and carousel copy",
+    "social calendar adaptation",
+    "audience-specific language for MEDIOEVO tiers"
+  ],
+  "may_touch": [
+    "docs/publishing/*SOCIAL*.md",
+    "docs/publishing/*COPY*.md",
+    "docs/publishing/assets/social/**",
+    "COMMS/agents_state/social-media-observatorio.json",
+    "COMMS/handoffs/*social-media-observatorio*.md",
+    "qa_artifacts/release_validation/social-media-observatorio-*.json"
+  ],
+  "must_not_touch_without_handoff": [
+    "live social posting or scheduling",
+    "LinkedIn/X/Bluesky/Instagram/TikTok account UI",
+    "browser auth state or account sessions",
+    "Gumroad/GitHub/Sponsors dashboards",
+    "private research raw dumps",
+    "RPG/TCG, unpublished books or canon vault"
+  ],
+  "current_handoff": "COMMS/handoffs/2026-05-06-observacionista-public-launch-team.md",
+  "current_outbox": null,
+  "last_observation_fingerprint": "OBSERVACIONISTA_PUBLIC_LAUNCH_TEAM_REGISTERED_2026_05_06"
+}

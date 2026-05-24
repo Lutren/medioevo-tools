@@ -1,3 +1,36 @@
+## 2026-05-15 - DUAT Dual-Lane Predictive Registry v0.1
+- Fecha UTC: 2026-05-15T03:02:47Z
+- Estado: DUAT Multidimensional Filter Ecology + Predictive Registry v0.1 implementado localmente.
+- Fuentes catalogadas: 29; metodos: 17; filtros: 10.
+- Tests: DUAT registry 20 passed; GEODIA regression 53 passed.
+- Scans: FAIL.
+- Gate: publication_gate=BLOCK; external_publication=false; no keys used or printed.
+- Nota: pending_review active_dedup=1 queda en REVIEW tracker, no en bloqueo de implementacion local.
+- Proxima accion verificable: escoger un objetivo predictivo concreto y correr benchmark R_before/R_after.
+
+## 2026-05-15 - GEODIA Public-Safe Candidate v0.1
+- Fecha UTC: 2026-05-15T01:34:07Z
+- Estado: GEODIA Public-Safe Package Candidate v0.1 creado como artefacto local de revision.
+- Zip local: `qa_artifacts/release_validation/geodia-public-safe-candidate-v0-1.zip`.
+- SHA256: `719ca8a7ef4c7439fe8859b5894483afa062c2b88883303fd5e0628fa9de0e43`.
+- Excluye: raw XLSX, fixtures reales, rutas privadas, source vaults, privados/RPG/TCG y runtime privado.
+- Incluye: README public-safe, claims boundary, attribution/terms review, source card INEGI sanitizada, QA summary, manifest, ejemplo sintetico de fixture.
+- Gate: publication_gate=BLOCK; external_publication=false; human/legal review REQUIRED.
+- Proxima accion verificable: revision humana/legal y decision A/B/C/D del candidate.
+
+## 2026-05-14 - GEODIA Internal Release RC v0.1
+- Fecha: 2026-05-14T22:17:54Z
+- Estado: GEODIA internal RC v0.1 documentado para revision humana/legal.
+- Evidencia: tres fixtures oficiales, wrapper QA offline, source card INEGI, hashes y human review packet.
+- Gate: publication_gate=BLOCK; public_safe_package_created=false; external_publication=false.
+- Proxima accion verificable: revision humana del packet y decision entre paquete public-safe, modulo interno o cuarto fixture oficial.
+
+## 2026-05-14 - INEGI ENOE Third Fixture
+
+| source | decision | risks | notes |
+|---|---|---|---|
+| `https://www.inegi.org.mx/contenidos/programas/enoe/15ymas/tabulados/enoe_indicadores_estrategicos_2005_2026_mensual.xlsx` | keep_as_official_data_fixture/local_rehearsal_only | Terms documented but publication/commercial redistribution remains REVIEW.; ENOE unemployment is STRONG_PROXY, not EXACT.; 2020-2022 continuity caveats apply. | Third GEODIA official fixture. Source card `research/geodia-social-observatory/fixtures/source_intake/inegi/INEGI_SOURCE_CARD.md`; fixture `research/geodia-social-observatory/fixtures/inegi_mexico_social_2018_2023_fixture.json`; raw SHA256 `0add6e88da29b8f5eddcafe889f94c353edaab8a9d5ec272565a55c84cae8bd5`; final QA `qa_artifacts/release_validation/geodia-third-fixture-final-qa-report-2026-05-14.json`; publication gate `BLOCK`. |
+
 # SOURCE_INTAKE_REGISTER
 
 Generated UTC: `2026-05-05T05:56:01.036569+00:00`
@@ -11,6 +44,13 @@ Status: active control document. This is a manifest of sources, not permission t
 - Keep research claims separate from product claims.
 - Keep the game and TCG private unless a separate private release lane is explicitly authorized.
 - Mark thresholds, weights and calibration as DEMO_ONLY until a real dataset exists.
+
+## Formal Intake
+
+| source | exists | bytes | lines | sha256_prefix | classification | lane | intake_action | target |
+|---|---:|---:|---:|---|---|---|---|---|
+| `C:\Users\L-Tyr\OneDrive\Escritorio\Formal` | yes |  |  |  | FORMAL_OBSERVACIONISMO_INBOX | psi-canon-intake | SELECTIVE_DELTA_EXTRACTION_ONLY | docs/intake/FORMAL_TO_PSI_INTAKE_2026-05-08.md |
+| `C:\Users\L-Tyr\OneDrive\Escritorio\Formal\banananana.txt` | yes | 365 | 19 | 2fa50b657189ae22 | PRIVATE_SECRET_CONFIG | provider-secrets | REDACTED_EVIDENCE_ONLY_DO_NOT_STAGE | docs/intake/FORMAL_SECRET_PROVIDER_INTAKE_2026-05-08.md |
 
 ## Downloads Intake
 
@@ -55,6 +95,13 @@ Status: active control document. This is a manifest of sources, not permission t
 
 | source | decision | risks | notes |
 |---|---|---|---|
+| `https://github.com/awesomedata/awesome-public-datasets` | keep_as_catalog_index/source_discovery_only | Catalog MIT license does not clear downstream dataset licenses.; Some linked datasets may be paid, restricted, stale or unsuitable for public claims.; Do not copy catalog wholesale or use catalog presence as proof of dataset validity. | Useful source index for DUAT/GEODIA simulations. Integrated locally as GEODIA `dataset_catalog_index_only` policy and DUAT Genesis public `SourceCard`; every selected dataset still needs its own source card, hash, license and claim boundary. |
+| `https://api.worldbank.org/v2/country/MEX/indicator` | keep_as_official_data_fixture/local_rehearsal_only | World Bank terms and attribution must be reviewed before public/commercial reuse.; A GEODIA report over a small fixture is not prediction, policy advice or validation of DUAT claims.; Data can update, so fixture hashes and provider `lastupdated` must be preserved. | First real-data DUAT/GEODIA rehearsal. Fixture `research/geodia-social-observatory/fixtures/world_bank_mexico_2018_2023_fixture.json`; SHA256 `FC05D1C424C04EAE43CE1BE045455C8FEAF56A4241A8E97A6074253EDD63B1BC`; report gate `BLOCK`. |
+| `https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/` | keep_as_official_data_fixture/local_rehearsal_only | Eurostat reuse and dataset-specific terms require review before public/commercial redistribution.; API values can update; fixture is only the captured offline snapshot.; Cross-source comparison with World Bank Mexico is not valid without harmonization. | Second real-data DUAT/GEODIA rehearsal. Fixture `research/geodia-social-observatory/fixtures/eurostat_social_epoch_2018_2023_fixture.json`; SHA256 `FEF2CE8E3B523A48C0675646705033465BBCE788EAC8B532C18E0C3461098AD7`; comparison gate `BLOCK`. |
+| `research/geodia-social-observatory/fixtures/geodia_indicator_crosswalk_v0_1.json` | keep_as_harmonization_crosswalk/local_qa_only | Crosswalk can be mistaken for semantic equivalence or ranking permission.; GDP/economy remains REVIEW.; No entry is EXACT in v0.1. | Harmonization layer v0.1 for technical compatibility only. Report `qa_artifacts/release_validation/geodia-harmonization-report-2026-05-14.json`; tests `23 passed`; publication gate `BLOCK`. |
+| `research/geodia-social-observatory/geodia_social_observatory/cli.py harmonize` | keep_as_offline_reproducibility_tool/local_qa_only | CLI reproducibility can be mistaken for release readiness.; It must stay offline, explicit-input only and publication-blocked. | Harmonization CLI v0.1 regenerates `qa_artifacts/release_validation/geodia-harmonization-report-2026-05-14.json`; execution report `qa_artifacts/release_validation/geodia-harmonization-cli-report-2026-05-14.json`; tests `32 passed`; publication gate `BLOCK`. |
+| `research/geodia-social-observatory/scripts/run_harmonization_qa.py` | keep_as_offline_qa_wrapper/local_qa_only | QA closure can be mistaken for release readiness.; Status-doc scans must not print sensitive values.; Wrapper does not authorize a third fixture or publication. | GEODIA Harmonization QA Wrapper v0.1 regenerates the harmonization report, validates JSON, runs focal scans and pending review; report `qa_artifacts/release_validation/geodia-harmonization-qa-wrapper-report-2026-05-14.json`; tests `37 passed`; publication gate `BLOCK`. |
+| `INEGI / Mexico official social indicators` | candidate_third_official_fixture/review_needed | No local official INEGI fixture or source card with captured values was found.; Do not invent official values.; License and terms must be reviewed before redistribution. | Preferred third GEODIA fixture candidate. Scaffold `research/geodia-social-observatory/fixtures/README_THIRD_OFFICIAL_FIXTURE_REVIEW.md`; readiness report `qa_artifacts/release_validation/geodia-third-fixture-readiness-report-2026-05-14.json`; action gate `REVIEW_FIXTURE_SOURCE_NEEDED`; publication gate `BLOCK`. |
 | `C:\Users\L-Tyr\Downloads\obs_antigravity_runtime.zip` | keep_gated/research_runtime_to_claim_gate | Domain name can invite overclaiming; public copy must say epistemic filter, not physical antigravity.; ZIP contains generated bytecode in the original source; clean before any package or repo import.; Scientific evidence references must stay tied to primary sources and current uncertainty. | Tests passed locally. Reuse generic parts only: evidence record, PAC gate, conservative validator pattern, ontology handoff and simulation-only fixtures. |
 | `C:\Users\L-Tyr\Downloads\Aquí tienes el código completo para.txt` | keep_gated/anti_information_dark_information_code_triage | Contains useful anti-information and dark-information code mixed with speculative claims and aggressive deployment language.; Contains external commands and product-like claims that must not be executed or copied into public copy.; Use only tested, low-claim research primitives; verify sources before novelty claims. | Large mixed source for anti-informacion, informacion oscura, academic search agents and PSI runtime ideas. Treat as research input, not production code. |
 | `C:\Users\L-Tyr\Downloads\SFAEFAGF.txt` | keep_gated/observacionismo_engine_iterations | Contains multiple engine versions, optional heavy dependencies and local model references.; Contains subprocess/Ollama patterns that need sandboxing and timeouts before runtime use.; Do not promote claims about non-human discovery without primary-source validation. | Iteration source for persistent PSI state, SQLite cache, graph persistence, surprise/entropy metrics and SESSION_FINGERPRINT continuity. |
@@ -831,6 +878,45 @@ Result:
 - Exact active references to redundant vault paths before deletion: `0`.
 - Secret scan on touched logs and evidence: `0` findings.
 
+## Lobby de Alejandria / Escaner Sigiloso 2026-05-06
+
+Source:
+
+- `C:\Users\L-Tyr\OneDrive\Escritorio\Lobby de Alejandria\escaner sigiloso.txt`
+
+Classification:
+
+- `EXTERNAL_SECURITY_SNIPPET`
+- Lane: `security.network / Curaduria SETO`
+- Intake action: `ABSORB_TO_POLICY_AND_ARCHIVE_SOURCE`
+- Public boundary: `NO_PUBLICATION`
+- Runtime boundary: `NO_NETWORK_EXECUTION`
+
+Evidence:
+
+- SHA256:
+  `0C7CDDAA915D42C43D2303583A3E0B737BEEB53A54F574EE382AEFFD371E3D4E`
+- Archivo Frio:
+  `runtime\curador_seto\source_archive\lobby_alejandria\2026-05-06\20_curaduria_seto\0C7CDDAA915D42C4_escaner-sigiloso.txt`
+- Ficha:
+  `docs\intake\lobby_alejandria_escaner_sigiloso_2026-05-06_REPORT.md`
+- Manifest:
+  `docs\intake\lobby_alejandria_escaner_sigiloso_2026-05-06_MANIFEST.json`
+- QA:
+  `qa_artifacts\release_validation\network-observer-escaner-sigiloso-2026-05-06.json`
+
+Decision:
+
+- `BLOCK`: stealth, Scapy/raw packets, ARP/broadcast and LAN/CIDR discovery.
+- `APPROVE` only for local loopback read-only inventory.
+- No packets were sent; `network_executed=false`.
+
+Tests:
+
+- `python -B -m pytest tests\test_security_network_observer.py -q`:
+  `5 passed`.
+- `python -B tools\matrix\validate_library.py --json`: `PASS`.
+
 ## CEREBRO / DUAT / Brain OS / Observacionismo Systems Pass 2026-05-05
 
 This pass did not import raw sources, move files, delete files or publish. It
@@ -859,3 +945,370 @@ Decision:
 - `READY_LOCAL`: Brain OS, Observacion Engineering gates, DUAT kernel/ISO.
 - `REVIEW`: DUAT Living Matrix productization, local code-agent write lane.
 - `BLOCK`: publication, raw-source import, strong science/social claims.
+
+## MEDIOEVO AI Context Batch 2026-05-07
+
+Source:
+
+- `C:\Users\L-Tyr\OneDrive\Escritorio\MEDIOEVO_AI_CONTEXT_BATCH_2026-05-07`
+
+Classification:
+
+- `AI_CONTEXT_PACKET`
+- Lane: `CEREBRO / Observacionismo / Claudio / Wabi-Sabi`
+- Intake action: `GENERATED_CURATED_BATCH`
+- Public boundary: `NO_PUBLICATION`
+- Runtime boundary: `LOCAL_CONTEXT_TRANSFER_ONLY`
+
+Evidence:
+
+- ZIP:
+  `C:\Users\L-Tyr\OneDrive\Escritorio\MEDIOEVO_AI_CONTEXT_BATCH_2026-05-07\MEDIOEVO_AI_CONTEXT_FULL_CANON_20260507.zip`
+- ZIP SHA256:
+  `3E4C75BE918877228A6B8817EF716108A90D265E8949500CEE6D879DFC2F1A1D`
+- Files generated: `97`.
+- CEREBRO records indexed: `648`.
+- Source mutations: `0`.
+- Security scan: `SECURITY_SCAN_LOCAL_REPORT.json`, `finding_count=0`, `result=pass`.
+- ZIP policy verified: only `08_VERSION_COMPLETA_CANONICA/`; no 1/5/10 summary variants inside ZIP.
+- Ficha:
+  `C:\Users\L-Tyr\OneDrive\Escritorio\MEDIOEVO_AI_CONTEXT_BATCH_2026-05-07\CURADOR_FICHA_PAQUETE_IA.md`
+
+Decision:
+
+- `KEEP`: generated local IA context batch.
+- `APPROVE`: local reading, local agent context transfer, internal curation.
+- `REVIEW`: publication, upload, release, claims reuse outside local context.
+- `BLOCK`: treating the package as scientific proof, public source dump or license-cleared product.
+
+## Formal to PSI Intake 2026-05-08
+
+Source:
+
+- `C:\Users\L-Tyr\OneDrive\Escritorio\Formal`
+
+Classification:
+
+- `FORMAL_PSI_RAW_INBOX`
+- Lane: `CEREBRO / PSI / Observacionismo / Wabi-Sabi`
+- Intake action: `SELECTIVE_DELTA_EXTRACTION_ONLY`
+- Public boundary: `NO_PUBLICATION`
+- Runtime boundary: `NO_CODE_IMPORT_OR_EXECUTION`
+- Cleanup boundary: `NO_DELETE_MOVE_RENAME`
+
+Evidence:
+
+- Curador preflight: `NEEDS_FICHA_BEFORE_USE`.
+- Files observed: `47`.
+- Exact SHA256 matches against PSI/master/runtime index: `0`.
+- Wabi/Sabi checks: `cerebro-audit`, `variant-compare`, `duplicate-migration-plan`, `cerebro-merge-review`.
+- Wabi/Sabi mutation status: `source_mutations=0`, `auto_merge_actions=0`, duplicate plan `dry_run_only=true`.
+
+Artifacts:
+
+- `docs\intake\FORMAL_TO_PSI_INTAKE_2026-05-08.md`
+- `docs\intake\FORMAL_DUPLICATES_REVIEW_2026-05-08.md`
+- `docs\intake\FORMAL_CODE_INSIGHTS_2026-05-08.md`
+- `docs\intake\FORMAL_CLAIMS_DELTA_2026-05-08.md`
+- `docs\intake\FORMAL_CLEANUP_GATE_2026-05-08.md`
+
+Decision:
+
+- `KEEP_REVIEW`: all 47 files in `Formal`.
+- `BLOCK`: execution of `uno.py`, `nucleo.txt`, `Para materializar este Pipeline Dir.txt` and `The Solution deploy_overlord.shThis.txt`.
+- `REVIEW_EXTRACTION_REQUIRED`: PDF, PNG and ZIP sources.
+- `NO_DELETE`: no `Formal` file qualifies for third-pass deletion yet.
+
+## Lovable ZIP Tech Intake 2026-05-10
+
+Source:
+
+- `C:\Users\L-Tyr\OneDrive\Escritorio\Formal\lovable-project-dff2f093-e843-43ad-94f5-91f91f8cec15-2026-05-10.zip`
+- `C:\Users\L-Tyr\OneDrive\Escritorio\Formal\lovable-project-15e48d05-7be7-4ec9-ab77-5af7c665fb3c-2026-05-10.zip`
+- `C:\Users\L-Tyr\OneDrive\Escritorio\Formal\lovable-project-f60723f6-2a07-4b63-9cd8-1c1734b15597-2026-05-10.zip`
+
+Classification:
+
+- `FORMAL_LOVABLE_SOURCE_REVIEW`
+- Lane: `Wabi-Sabi / Claudio / DUAT / public-safe UI review`
+- Intake action: `SELECTIVE_TECH_EXTRACTION_ONLY`
+- Public boundary: `NO_PUBLICATION`
+- Runtime boundary: `NO_EXECUTION_NO_INSTALL`
+- Secret boundary: `NO_ENV_NO_SUPABASE_KEYS`
+
+Evidence:
+
+- Curador preflight: all three returned `NEEDS_FICHA_BEFORE_USE`.
+- ZIP SHA256:
+  - `E2753462500D0EE8840FACCCD39AF77ABCDA889F50795A79CA6D508CC32A4E21`
+  - `48350CBB474ECD7A3DC392EF0E591CF4073E9144343E356A21F6404A83A7BBEC`
+  - `9CC67E39166ABDA3B99770CFD4D3498B9B7B4BD2229A8D449C7E5D2D5FA8D7A5`
+- File counts: `86`, `159`, `87`.
+- Internal secret-like markers:
+  - `dff2f093`: `0`.
+  - `15e48d05`: `.env` and Supabase client/config present; `PRIVATE_REVIEW`.
+  - `f60723f6`: policy/security vocabulary marker only; no `.env` observed.
+
+Artifacts:
+
+- `docs\intake\LOVABLE_ZIP_TECH_INTAKE_2026-05-10.md`
+- `qa_artifacts\intake\lovable_zip_inventory_2026-05-10.json`
+
+Decision:
+
+- `KEEP_REVIEW`: all three ZIPs are useful sources.
+- `INTEGRATE_SELECTIVELY`: ActionGate/Witness/Handoff UI, DUAT console flow, typed artifacts, deterministic tests and math specs.
+- `BLOCK`: copying `.env`, Supabase keys/config, raw ZIP publication, full Lovable scaffold vendoring, or treating mock claims as validated runtime truth.
+
+---
+
+## MEDIOEVO GM Lite private MVP ZIP - 2026-05-14
+
+- Source: `C:\Users\L-Tyr\Downloads\medioevo-gm-lite-private-mvp.zip`
+- SHA256: `0421D51E6C1EB76E7F060A589169DC8E42E7B22336F63C5E38B79D74D0CEF57C`
+- Classification: `PRIVATE_REPO_CANDIDATE`
+- Intake action: `LOCAL_STAGING_ONLY_UNTIL_GATE`
+- Public boundary: `NO_PUBLIC_REPO_NO_PUBLIC_DEPLOY`
+- Runtime boundary: `NO_BACKEND_NO_PAID_SERVICE_NO_DEPLOY_IN_THIS_CYCLE`
+- Secret boundary: `NO_ENV_NO_CREDENTIALS_NO_TOKENS`
+
+Evidence:
+
+- Curador preflight: `NEEDS_FICHA_BEFORE_USE`.
+- Staging: `publish_staging\github-private\medioevo-gm-lite-private-mvp`.
+- File count: `32`.
+- Boundary check: `PASS`.
+- Secret scan focalizado: `count_reported=0`.
+- Host gate: `CONTAMINADO/REVIEW`.
+
+Artifacts:
+
+- `docs\intake\MEDIOEVO_GM_LITE_PRIVATE_MVP_FICHA_2026-05-14.md`
+- `qa_artifacts\release_validation\MEDIOEVO_GM_LITE_PRIVATE_GITHUB_REVIEW_2026-05-14.md`
+
+Decision:
+
+- `KEEP_REVIEW`: package is ready for private-repo upload after gate/override.
+- `PRIVATE_REPO_LIVE`: uploaded to `https://github.com/Lutren/medioevo-gm-lite` after explicit private-repo override; commit `ec755ca64ed3fb949ce5908036f0be01f3e51fd8`; `private=true`.
+- `BLOCK`: public GitHub, public deploy, secret publication, full books, RPG/TCG complete material, DUAT/GEODIA private runtime, Wabi-Sabi internals, Claudio private runtime.
+
+---
+
+## Prompt-Analyzer Base44 Split - 2026-05-14
+
+- Source: `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-\Prompt-Analyzer.zip`
+- SHA256: `48FD6D4CEB5E52CECA596279264F2FAB767F3B0F225F98CCCC9C9827E3928B18`
+- Classification: `UNKNOWN_REVIEW_REQUIRED_BASE44_UPLOAD_SOURCE`
+- Intake action: `LOCAL_REPACKAGING_ONLY`
+- Public boundary: user-directed Base44 upload candidate only; no Codex upload/deploy/push/publication.
+- Secret boundary: local repository/cache/build material excluded before split.
+
+Evidence:
+
+- Curador preflight: `NEEDS_FICHA_BEFORE_USE`.
+- Original ZIP `testzip`: `None`.
+- Generated output: `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-\Prompt-Analyzer_base44_parts_20260514_195722`.
+- Generated parts: `4`.
+- Kept files: `234`.
+- Excluded files: `30030` (`.git` and `.local` cache/store dominated the original ZIP weight).
+- Output ZIP `testzip`: all four parts `None`.
+- Direct sensitive-name hits in output parts: `0`.
+
+Artifacts:
+
+- `docs\intake\PROMPT_ANALYZER_BASE44_SPLIT_FICHA_2026-05-14.md`
+- `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-\Prompt-Analyzer_base44_parts_20260514_195722\BASE44_SPLIT_MANIFEST.json`
+- `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-\Prompt-Analyzer_base44_parts_20260514_195722\README_BASE44_UPLOAD.md`
+
+Decision:
+
+- `KEEP_REVIEW`: original ZIP remains untouched.
+- `APPROVE_LOCAL`: four local Base44 upload parts generated.
+- `BLOCK`: no upload to Base44, no deploy, no push, no deletion.
+
+## DUAT Predictive Registry v0.1
+
+- Catalogadas 29 fuentes gratuitas o revisables.
+- Source cards piloto: Open-Meteo, World Bank, GDELT, Wikidata, FRED REVIEW_KEY_REQUIRED.
+- Fuentes con key: FRED, NOAA CDO, EIA, Census quedan REVIEW_KEY_REQUIRED.
+
+## DUAT Predictive Benchmark v0.2
+
+- Reutiliza fixtures oficiales ya ingeridos por GEODIA: World Bank Mexico 2018-2023 y Eurostat Germany 2018-2023.
+- No se agregaron fuentes nuevas ni APIs live.
+- Licencia/terminos siguen en REVIEW para publicacion o redistribucion.
+
+## DUAT Benchmark Matrix v0.3
+
+- Reutiliza fixtures GEODIA oficiales existentes: World Bank, Eurostat e INEGI.
+- No se agregaron fuentes nuevas.
+- Comparabilidad: economy=REVIEW; labor_market=STRONG_PROXY; publication_gate=BLOCK.
+
+## DUAT Domain Calibration Gate v0.4
+
+- Reutiliza fixtures GEODIA oficiales existentes: World Bank Mexico 2018-2023 y Eurostat Germany 2018-2023 para `demography.life_expectancy_at_birth.total`.
+- No se descargaron fuentes nuevas ni se usaron APIs live.
+- Comparabilidad: demography/life expectancy=STRONG_PROXY, no EXACT.
+- LicenseTermsScan sigue REVIEW; redistribution/publication sigue BLOCK.
+
+## 2026-05-14 - DUAT Metric-Aligned R Calibration v0.5
+
+- No new external source was added.
+- No network/API call was used.
+- Existing GEODIA fixtures remain the data basis; license terms stay REVIEW before publication.
+
+## 2026-05-14 - DUAT Nested Domain Backtest v0.6
+
+- No new source intake.
+- No network/API call used.
+- Existing GEODIA offline fixtures remain the basis; longer official history is the next evidence need if benchmark continues.
+## 2026-05-15 - DUAT Official Long-History Data Readiness v0.7
+
+- Manifest: `research/duat-predictive-registry/data_sources/duat_official_long_history_manifest_v0_7.json`.
+- Fuentes derivadas de fixtures offline existentes: World Bank Indicators, Eurostat, INEGI ENOE.
+- Estado: no se descargaron datos nuevos; no se inventaron datos oficiales.
+- DataGate: BLOCK por 6 observaciones por serie, menor que MIN_OBSERVATIONS_WARN=24.
+- LicenseTermsScan: REVIEW.
+- ComparabilityReview: REVIEW.
+- LeakagePreflight: PASS.
+- Proxima accion: recolectar fuente oficial de historia larga con licencia/terminos y source card antes de otro benchmark.
+
+## 2026-05-15 - DUAT World Bank WDI Source Pack v0.8
+
+- Source: World Bank World Development Indicators API v2.
+- Scope: MEX, por fixtures/manifests previos.
+- Indicators: `NY.GDP.MKTP.KD.ZG`, `SL.UEM.TOTL.ZS`, `SP.DYN.LE00.IN`.
+- Raw/processed stored under `research/duat-predictive-registry/data_sources/world_bank_wdi/`.
+- Manifest: `research/duat-predictive-registry/data_sources/world_bank_wdi/world_bank_wdi_manifest_v0_8.json`.
+- Manifest SHA256: `fe3d7e97baa9cfb7c1d189862a0870cb74b90df5653ed70daa96cabf091981d9`.
+- DataGate: REVIEW.
+- LicenseTermsScan: REVIEW.
+- ComparabilityReview: REVIEW.
+- LeakagePreflight: PASS.
+- publication_gate: BLOCK.
+
+## 2026-05-15 - DUAT WDI License/Comparability Governance v0.8.1
+
+- License audit: `research/duat-predictive-registry/data_sources/world_bank_wdi/WORLD_BANK_WDI_LICENSE_TERMS_AUDIT_v0_8_1.md`.
+- Comparability audit: `research/duat-predictive-registry/data_sources/world_bank_wdi/WORLD_BANK_WDI_COMPARABILITY_AUDIT_v0_8_1.md`.
+- Governance decision: `research/duat-predictive-registry/data_sources/world_bank_wdi/world_bank_wdi_governance_decision_v0_8_1.json`.
+- LicenseTermsScan: REVIEW.
+- ComparabilityReview: REVIEW.
+- LeakagePreflight: PASS.
+- DataGate: REVIEW.
+- BacktestOpenGate: REVIEW_ONLY_DRY_RUN.
+- publication_gate: BLOCK.
+
+## 2026-05-18 - BRAIN_OS POST Selective Extraction
+
+| source | exists | sha256 | classification | lane | intake_action | publication_gate | ficha | evidence |
+|---|---|---|---|---|---|---|---|---|
+| `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-\POST\# 00 — LEER PRIMERO Portafolio MEDI.txt` | yes | `C1169FF35BC0ED886992C330121B3EAC744A5B051136A15C6FF256C085B6DDAD` | `INTERNAL_CANON_PORTFOLIO_SOURCE` | `claim-boundary` | `SELECTIVE_CLAIM_EXTRACTION_ONLY` | `NO_PUBLICATION` | `docs/intake/curador_fichas/brain_os_post/2026-05-18_portafolio_medi.md` | `docs/intake/BRAIN_OS_POST_CLAIMS_DELTA_2026-05-18.md` |
+| `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-\POST\Untitled.txt` | yes | `F5C992E17FAE57AB6B3F43488F0017BC635C0FE84A97EF1BBD34B5A90B84DF4B` | `OSIT_RUNTIME_PROTOTYPE_SOURCE` | `runtime-comparison` | `CODE_INSIGHT_ONLY` | `NO_RUNTIME_IMPORT / NO_PUBLICATION` | `docs/intake/curador_fichas/brain_os_post/2026-05-18_osit_epistemic_engine.md` | `docs/intake/BRAIN_OS_POST_CODE_INSIGHTS_2026-05-18.md` |
+
+Decision:
+
+- `Adopcion cruda`: `BLOCK`.
+- `Extraccion selectiva`: `APPROVE_LOCAL_DOCS_ONLY` for this pass.
+- Raw source move/rename/delete: `BLOCK`.
+- Future runtime implementation: `REVIEW` until target-lane tests and evidence exist.
+
+<!-- BRAIN_OS_POST_BATCH_INSIGHTS_2026_05_18_START -->
+## 2026-05-18 - BRAIN_OS POST Batch Insights Matrix
+
+Scope: exact-path fichas for the 14 new POST sources. The previously fichado `Portafolio MEDI` and `Untitled.txt` entries remain governed by the earlier `BRAIN_OS POST Selective Extraction` section.
+
+| source | exists | sha256 | classification | lane | intake_action | gate | ficha |
+|---|---|---|---|---|---|---|---|
+| `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-\POST\deep-research-report.md` | yes | `26B51C23C6B2CA503CFE62B947835D0AFA88A05E0F059F6817E7A7B76FD44A18` | `POST_SYNTHESIS_REVIEW_SOURCE` | `claim-boundary` | `INSIGHT_DELTA_ONLY` | `REVIEW / PublicationGate=BLOCK / RuntimeImport=BLOCK / RawAdoption=BLOCK` | `docs/intake/curador_fichas/brain_os_post/2026-05-18_batch_deep_research_report.md` |
+| `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-\POST\Del Cálculo al Gate_ Cómo OSIT Transforma la Planificación en la Nube en Acciones Locales Seguras y Auditables.pdf` | yes | `F294EF4A73202F8BE5B2C58FBD38053F299423DFDE03654F8FBAEAF2F2143578` | `POST_PDF_CLOUD_GATE_REVIEW_SOURCE` | `gate` | `PDF_INSIGHT_ONLY` | `REVIEW / PublicationGate=BLOCK / RuntimeImport=BLOCK / RawAdoption=BLOCK` | `docs/intake/curador_fichas/brain_os_post/2026-05-18_batch_cloud_gate_pdf.md` |
+| `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-\POST\El Noúmeno Informacional Unificació.txt` | yes | `F9D5B122A9B82C568C9CAEBBBFC0869DD5165CF7B4D2684C6C222FF030AEFCAD` | `POST_STRONG_THEORY_SOURCE` | `claim-boundary` | `STRONG_CLAIM_REVIEW_ONLY` | `BLOCK / PublicationGate=BLOCK / RuntimeImport=BLOCK / RawAdoption=BLOCK` | `docs/intake/curador_fichas/brain_os_post/2026-05-18_batch_noumeno_informacional.md` |
+| `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-\POST\ESTADO ANÁLISIS_ARQUITECTÓNICO  REV.txt` | yes | `F3805545DB1163971149DC25892467D5F958955A2494740ECCA6D2A70B35180D` | `POST_ARCHITECTURE_REVIEW_STATUS` | `gate` | `ARCHITECTURE_DELTA_ONLY` | `APPROVE_LOCAL_DOCS_ONLY / PublicationGate=BLOCK / RuntimeImport=BLOCK / RawAdoption=BLOCK` | `docs/intake/curador_fichas/brain_os_post/2026-05-18_batch_estado_arquitectonico_rev.md` |
+| `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-\POST\ESTADO.txt` | yes | `9B9EC7C6723FB037CA0370B40E31EBD5FD4A79D830DE80B947CA576268AD2D60` | `POST_FORMAL_LAB_STATUS_SOURCE` | `math-state` | `CLAIM_BOUNDARY_DELTA_ONLY` | `REVIEW / PublicationGate=BLOCK / RuntimeImport=BLOCK / RawAdoption=BLOCK` | `docs/intake/curador_fichas/brain_os_post/2026-05-18_batch_estado.md` |
+| `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-\POST\ESTADOqqqqq.txt` | yes | `4744D5E3947591D8B5D7D53A9B284D4B0EFC13ECE0B3239C07F40FE53982E473` | `POST_BATCH_META_REVIEW_SOURCE` | `continuity` | `CURATED_META_REVIEW_ONLY` | `APPROVE_LOCAL_DOCS_ONLY / PublicationGate=BLOCK / RuntimeImport=BLOCK / RawAdoption=BLOCK` | `docs/intake/curador_fichas/brain_os_post/2026-05-18_batch_estadoqqqqq.md` |
+| `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-\POST\ESTADO222222222.txt` | yes | `2E118556099DEAE74E07A8CCDC2B6F7D97C9BBBF5828EB2C41BDF244EC1137FE` | `POST_ETHICAL_SECURITY_WORKBENCH_SOURCE` | `security` | `DEFENSIVE_SECURITY_WORKBENCH_INSIGHT_ONLY` | `REVIEW / PublicationGate=BLOCK / RuntimeImport=BLOCK / RawAdoption=BLOCK` | `docs/intake/curador_fichas/brain_os_post/2026-05-18_batch_estado_security_workbench.md` |
+| `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-\POST\Ingeniería Observacionista Inversa_ Un Modelo Operativo para Elevar la Eficiencia de la Investigación desde un Estado Óptimo.md` | yes | `5BE0BF57AB98AE8AC8F21C53DCDB0864DA943BFDF703B928B337008319BEE5BB` | `POST_ENGINEERING_METHOD_SOURCE` | `math-state` | `METHOD_DELTA_ONLY` | `REVIEW / PublicationGate=BLOCK / RuntimeImport=BLOCK / RawAdoption=BLOCK` | `docs/intake/curador_fichas/brain_os_post/2026-05-18_batch_ingenieria_observacionista_inversa.md` |
+| `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-\POST\MEDIOEVO_OSIT_DOCUMENTOS_ACTUALIZADOS_TRUTHGATE_EIC_v0_3_2026-05-17.zip` | yes | `1FFC289E526E2BA81987B074DF1BDE6805C3E4A3C551E9BB7816BF29699FBE0C` | `ZIP_CONTAINER_TRUTHGATE_EIC_SOURCE` | `gate` | `ZIP_METADATA_AND_MEMBER_ANCHORS_ONLY` | `REVIEW / PublicationGate=BLOCK / RuntimeImport=BLOCK / RawAdoption=BLOCK` | `docs/intake/curador_fichas/brain_os_post/2026-05-18_batch_zip_truthgate_eic_v0_3.md` |
+| `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-\POST\MEDIOEVO_OSIT_DOCUMENTOS_FORMALIZADOS_v2_1_2026-05-17.zip` | yes | `44190A3DE0CC6EEB6E3DC7BA37D361DE50653965BCBDFD9B82BD050C9F698937` | `ZIP_CONTAINER_FORMALIZED_DOCS_SOURCE` | `math-state` | `ZIP_METADATA_AND_MEMBER_ANCHORS_ONLY` | `REVIEW / PublicationGate=BLOCK / RuntimeImport=BLOCK / RawAdoption=BLOCK` | `docs/intake/curador_fichas/brain_os_post/2026-05-18_batch_zip_formalizados_v2_1.md` |
+| `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-\POST\MEDIOEVO_OSIT_TEORIAS_COMUNICACION_CONSCIENCIA_v0_1_2026-05-17.zip` | yes | `6D1A0E1A686A44599BDB61C66DDC4E8B5212D56FE71ECBD79F8B514CAAFA438C` | `ZIP_CONTAINER_THEORY_CONSCIOUSNESS_SOURCE` | `claim-boundary` | `ZIP_METADATA_AND_MEMBER_ANCHORS_ONLY` | `BLOCK / PublicationGate=BLOCK / RuntimeImport=BLOCK / RawAdoption=BLOCK` | `docs/intake/curador_fichas/brain_os_post/2026-05-18_batch_zip_teorias_consciencia_v0_1.md` |
+| `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-\POST\MEDIOEVO_OSIT_TRABAJO_MEJORADO_v0_2_2026-05-17.zip` | yes | `9871A6010E6E5BEF410C78314D6F60C790DC9E1BE591D6A86F93C7351EFA3523` | `ZIP_CONTAINER_WORK_IMPROVED_SOURCE` | `continuity` | `ZIP_METADATA_AND_MEMBER_ANCHORS_ONLY` | `REVIEW / PublicationGate=BLOCK / RuntimeImport=BLOCK / RawAdoption=BLOCK` | `docs/intake/curador_fichas/brain_os_post/2026-05-18_batch_zip_trabajo_mejorado_v0_2.md` |
+| `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-\POST\# OSIT Epistemic Engine A Formal Fr.txt` | yes | `94BE9A64DF6AD002F0F6B7DB4B2C2FA052314C31AABE2FE5E55ADFCFD40348D2` | `POST_FORMAL_FRAMEWORK_PREPRINT_SOURCE` | `math-state` | `FORMAL_FRAMEWORK_INSIGHT_ONLY` | `REVIEW / PublicationGate=BLOCK / RuntimeImport=BLOCK / RawAdoption=BLOCK` | `docs/intake/curador_fichas/brain_os_post/2026-05-18_batch_osit_epistemic_engine_formal_framework.md` |
+| `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-\POST\El Ojo de Ra y el Ojo de Horus (a m.txt` | yes | `F397D144BEA1471761838E7B9D7F209ED31CEC1F3D805B30548D6E0AF0BA6C30` | `POST_SYMBOLIC_AGENCY_AND_DREAM_MODULES_SOURCE` | `gate` | `SYMBOLIC_AGENCY_INSIGHT_ONLY` | `REVIEW / PublicationGate=BLOCK / RuntimeImport=BLOCK / RawAdoption=BLOCK` | `docs/intake/curador_fichas/brain_os_post/2026-05-18_batch_ra_horus_symbolic_agency.md` |
+
+Decision:
+
+- `Adopcion cruda`: `BLOCK`.
+- `RuntimeImport`: `BLOCK`.
+- `PublicationGate`: `BLOCK`.
+- ZIP handling: metadata/member-reference only; no extraction to runtime.
+- Missing alias `# 00  LEER PRIMERO...`: `NOT_FOUND_ALIAS_DO_NOT_REGISTER`.
+
+<!-- BRAIN_OS_POST_BATCH_INSIGHTS_2026_05_18_END -->
+
+<!-- BRAIN_OS_POST_ABSORPTION_CLEANUP_POSTERIOR_2026_05_18_START -->
+## 2026-05-18 - BRAIN_OS POST Absorcion y Limpieza Posterior
+
+Scope: exact-path register for POST posterior cleanup and the three BRAIN_OS portfolio sets. This section is documentary only: no movement, deletion, archive, runtime import, publication or raw adoption.
+
+| source | exists | hash_kind | sha256 | classification | lane | intake_action | gate | ficha |
+|---|---|---|---|---|---|---|---|---|
+| `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-\POST` | yes | `directory_tree_sha256` | `96EA09ADE2F9D350687DDF727B3850C1B944034D58CBC54A5EBD4DDCFA937492` | `POST_CONTAINER_SCOPE` | `archive` | `TOP_LEVEL_INVENTORY_ONLY` | `REVIEW / PublicationGate=BLOCK / RuntimeImport=BLOCK / RawAdoption=BLOCK` | `docs/intake/curador_fichas/brain_os_post_posterior/2026-05-18_post_container_scope.md` |
+| `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-\POST\# 00 — LEER PRIMERO Portafolio MEDI.txt` | yes | `file_sha256` | `C1169FF35BC0ED886992C330121B3EAC744A5B051136A15C6FF256C085B6DDAD` | `INTERNAL_CANON_PORTFOLIO_SOURCE` | `claims` | `EXISTING_FICHA_REFERENCE_ONLY` | `APPROVE_LOCAL_DOCS_ONLY / PublicationGate=BLOCK / RuntimeImport=BLOCK / RawAdoption=BLOCK` | `docs/intake/curador_fichas/brain_os_post_posterior/2026-05-18_post_medi_portfolio_existing.md` |
+| `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-\POST\Assets Du WABI` | yes | `directory_tree_sha256` | `E772C97A4D5F816F3F2267E03BE0E8ADDFC0EB9561CEFC0FDE74FABD7706724F` | `POST_WABI_ASSET_BATCH` | `ui_design` | `ASSET_METADATA_ONLY` | `REVIEW / PublicationGate=BLOCK / RuntimeImport=BLOCK / RawAdoption=BLOCK` | `docs/intake/curador_fichas/brain_os_post_posterior/2026-05-18_post_assets_du_wabi.md` |
+| `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-\POST\BU` | yes | `directory_tree_sha256` | `2B55F1A2835662AFF20E36772FF41F66C0927D186ECEE7683392BEB44003026F` | `POST_BACKUP_LEGACY_BATCH` | `archive` | `BACKUP_INDEX_ONLY` | `REVIEW / PublicationGate=BLOCK / RuntimeImport=BLOCK / RawAdoption=BLOCK` | `docs/intake/curador_fichas/brain_os_post_posterior/2026-05-18_post_bu_backup.md` |
+| `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-\POST\MEDIOEVO_OSIT_TEORIAS_COMUNICACION_CONSCIENCIA_v0_1_2026-05-17` | yes | `directory_tree_sha256` | `7DACC829297F4D548E032F36981E6253912D9B54F661722215765D648FF3187D` | `EXTRACTED_POST_ZIP_SHADOW_COPY` | `claims` | `DIRECTORY_MANIFEST_ONLY` | `BLOCK / PublicationGate=BLOCK / RuntimeImport=BLOCK / RawAdoption=BLOCK` | `docs/intake/curador_fichas/brain_os_post_posterior/2026-05-18_post_teorias_consciencia_extracted_dir.md` |
+| `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-\POST\MEDIOEVO_OSIT_TRABAJO_MEJORADO_v0_2_2026-05-17` | yes | `directory_tree_sha256` | `7070F87939A382AB4AC25DF45F0EC86C5A72D8CA058E7B940CC7811A41C7CD70` | `EXTRACTED_POST_ZIP_SHADOW_COPY` | `continuity` | `DIRECTORY_MANIFEST_ONLY` | `REVIEW / PublicationGate=BLOCK / RuntimeImport=BLOCK / RawAdoption=BLOCK` | `docs/intake/curador_fichas/brain_os_post_posterior/2026-05-18_post_trabajo_mejorado_extracted_dir.md` |
+| `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-\POST\codcx.txt` | yes | `file_sha256` | `F73F3A98C7757D8767213EE2BA59B748396D4E962F708651CA1D298E7C1607B2` | `POST_CODEX_COORDINATION_SOURCE` | `continuity` | `PROMPT_DELTA_ONLY` | `REVIEW / PublicationGate=BLOCK / RuntimeImport=BLOCK / RawAdoption=BLOCK` | `docs/intake/curador_fichas/brain_os_post_posterior/2026-05-18_post_codcx.md` |
+| `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-\POST\Continúo. Exploración abierta. Deri.md` | yes | `file_sha256` | `53827A6366C01CDC245C0A2588FB04D508DB3060EEC402D1422CF204E4417B36` | `POST_DERIVATION_CONTINUITY_SOURCE` | `theory` | `DERIVATION_DELTA_ONLY` | `REVIEW / PublicationGate=BLOCK / RuntimeImport=BLOCK / RawAdoption=BLOCK` | `docs/intake/curador_fichas/brain_os_post_posterior/2026-05-18_post_deriva_continuo.md` |
+| `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-\POST\Entendido. au poe favior = aun por.txt` | yes | `file_sha256` | `5E5486DFCBF8339C79FDE8553BDBC4F827E652664D8B30082B4E7B870A7AB4DB` | `POST_PENDING_ANALYSIS_SOURCE` | `continuity` | `PENDING_DELTA_ONLY` | `REVIEW / PublicationGate=BLOCK / RuntimeImport=BLOCK / RawAdoption=BLOCK` | `docs/intake/curador_fichas/brain_os_post_posterior/2026-05-18_post_entendido_pendiente.md` |
+| `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-\POST\Voy a aplicar DO → IOI con rigor. T.txt` | yes | `file_sha256` | `A2CD0DE77703A828C2B87CE05ADF1D83FCC1FF76F7F25CAA1604ED15439518DD` | `POST_DO_IOI_METHOD_SOURCE` | `theory` | `METHOD_DELTA_ONLY` | `REVIEW / PublicationGate=BLOCK / RuntimeImport=BLOCK / RawAdoption=BLOCK` | `docs/intake/curador_fichas/brain_os_post_posterior/2026-05-18_post_doi_ioi_rigor.md` |
+| `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-\POST\OSIT-EXPLORACION-COMPLETA-v2-2026-0518.pdf` | yes | `file_sha256` | `95645EE4BCF0BDEF39098449D1B8BFF44280578A4F7BFE586F029F4B64FA2245` | `POST_OSIT_EXPLORATION_PDF_SOURCE` | `claims` | `PDF_INSIGHT_ONLY` | `REVIEW / PublicationGate=BLOCK / RuntimeImport=BLOCK / RawAdoption=BLOCK` | `docs/intake/curador_fichas/brain_os_post_posterior/2026-05-18_post_osit_exploracion_pdf.md` |
+| `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-\POST\OSIT-RESOLUCION-BLOQUEOS-2026-0518.pdf` | yes | `file_sha256` | `615E9EC6EE246F208D083B89BD87F38541A2CFF3FF61D6E589FAD03738BC5248` | `POST_OSIT_BLOCKER_RESOLUTION_PDF_SOURCE` | `runtime` | `PDF_BLOCKER_DELTA_ONLY` | `REVIEW / PublicationGate=BLOCK / RuntimeImport=BLOCK / RawAdoption=BLOCK` | `docs/intake/curador_fichas/brain_os_post_posterior/2026-05-18_post_osit_resolucion_pdf.md` |
+| `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-\POST\OSIT-RESOLUCION-BLOQUEOS-2026-0518 (1).pdf` | yes | `file_sha256` | `615E9EC6EE246F208D083B89BD87F38541A2CFF3FF61D6E589FAD03738BC5248` | `POST_OSIT_BLOCKER_RESOLUTION_DUPLICATE_CANDIDATE` | `archive` | `DUPLICATE_EVIDENCE_ONLY` | `REVIEW / PublicationGate=BLOCK / RuntimeImport=BLOCK / RawAdoption=BLOCK` | `docs/intake/curador_fichas/brain_os_post_posterior/2026-05-18_post_osit_resolucion_pdf_duplicate.md` |
+| `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-\POST\OSIT-SPIN-TORSION-ANSAZ.pdf` | yes | `file_sha256` | `3D4BD7389AE69D5D13F32C7E36738B328B795795D119BFC060EC2BDEE9E3D6FE` | `POST_SPIN_TORSION_STRONG_CLAIM_SOURCE` | `claims` | `STRONG_CLAIM_REVIEW_ONLY` | `BLOCK / PublicationGate=BLOCK / RuntimeImport=BLOCK / RawAdoption=BLOCK` | `docs/intake/curador_fichas/brain_os_post_posterior/2026-05-18_post_spin_torsion_ansaz_pdf.md` |
+| `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-\POST\OSIT-SPIN-TORSION-SCALE.pdf` | yes | `file_sha256` | `0B68E7A67E0A3673D8B84414777077DD7F79FF120F547476007F0976642EEC79` | `POST_SPIN_TORSION_SCALE_STRONG_CLAIM_SOURCE` | `claims` | `STRONG_CLAIM_REVIEW_ONLY` | `BLOCK / PublicationGate=BLOCK / RuntimeImport=BLOCK / RawAdoption=BLOCK` | `docs/intake/curador_fichas/brain_os_post_posterior/2026-05-18_post_spin_torsion_scale_pdf.md` |
+| `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-\01_PORTFOLIO_AND_IDENTITY.md` | yes | `file_sha256` | `59AF0A5CDB0319D9D5F8A9FDC64F76F09A86651390D0A24D5F075F1A1EA7D9A3` | `BRAIN_OS_IDENTITY_PORTFOLIO_SOURCE` | `portfolio` | `PORTFOLIO_BOUNDARY_ONLY` | `REVIEW / PublicationGate=BLOCK / RuntimeImport=BLOCK / RawAdoption=BLOCK` | `docs/intake/curador_fichas/brain_os_post_posterior/2026-05-18_brain_os_identity_portfolio.md` |
+| `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-\MEDIOEVO_OSIT_AGENT_KNOWLEDGE_PORTFOLIO_v1_0.md` | yes | `file_sha256` | `C2830B50F44E7CF13651697BB88DEA63F08FB31EFE3AECC2B1C73B7388C93F35` | `OSIT_AGENT_KNOWLEDGE_PORTFOLIO_MD_SOURCE` | `portfolio` | `PORTFOLIO_DELTA_ONLY` | `REVIEW / PublicationGate=BLOCK / RuntimeImport=BLOCK / RawAdoption=BLOCK` | `docs/intake/curador_fichas/brain_os_post_posterior/2026-05-18_osit_agent_knowledge_portfolio_md.md` |
+| `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-\MEDIOEVO_OSIT_AGENT_KNOWLEDGE_PORTFOLIO_v1_0.pdf` | yes | `file_sha256` | `B66A721DBC083A116E880A46438F9B082B1A75BCD7A8B1575C176E11749E46C1` | `OSIT_AGENT_KNOWLEDGE_PORTFOLIO_PDF_SOURCE` | `portfolio` | `PDF_PORTFOLIO_REFERENCE_ONLY` | `REVIEW / PublicationGate=BLOCK / RuntimeImport=BLOCK / RawAdoption=BLOCK` | `docs/intake/curador_fichas/brain_os_post_posterior/2026-05-18_osit_agent_knowledge_portfolio_pdf.md` |
+| `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-\MEDIOEVO_OSIT_KNOWLEDGE_FOLDER_v1_0.zip` | yes | `file_sha256` | `DE0C9BDF775D2CBD32AA84003F10026B710196D44989E8325888616D54657254` | `OSIT_KNOWLEDGE_FOLDER_ZIP_SOURCE` | `portfolio` | `ZIP_METADATA_ONLY` | `REVIEW / PublicationGate=BLOCK / RuntimeImport=BLOCK / RawAdoption=BLOCK` | `docs/intake/curador_fichas/brain_os_post_posterior/2026-05-18_osit_knowledge_folder_zip.md` |
+
+Decision:
+
+- `Adopcion cruda`: `BLOCK`.
+- `RuntimeImport`: `BLOCK`.
+- `PublicationGate`: `BLOCK`.
+- `MIGRATION_LOG` required before any move/archive/delete by exact path.
+- Useful deltas flow only through `docs/intake/BRAIN_OS_POST_ABSORPTION_CLEANUP_POSTERIOR_2026-05-18.*` and per-path fichas.
+
+<!-- BRAIN_OS_POST_ABSORPTION_CLEANUP_POSTERIOR_2026_05_18_END -->
+
+<!-- BRAIN_OS_LR_WORKING_BENCH_DESCUBRIMIENTOS_2026_05_21_START -->
+## 2026-05-21 - BRAIN_OS LR Working Bench Descubrimientos
+
+Scope: exact-path ficha for the technical discovery folder requested for math,
+Wabi, DUAT and system review. This is documentary/local-only. No movement,
+deletion, archive, publication, external action or raw runtime import was
+executed.
+
+| source | exists | classification | lane | intake_action | gate | ficha |
+|---|---|---|---|---|---|---|
+| `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-\-=LR WORKING BENCH=-\Descubrimientos` | yes | `BRAIN_OS_FORMAL_LAB_TECH_REVIEW_SOURCE` | `math-state / wabi-duat-system` | `SELECTIVE_ABSORPTION_ONLY` | `REVIEW / PublicationGate=BLOCK / RuntimeImport=REVIEW / RawAdoption=BLOCK` | `docs/intake/curador_fichas/brain_os_workbench/2026-05-21_descubrimientos.md` |
+
+Evidence:
+
+- Inventory: 45 files, 4,182,106 bytes.
+- `python -m pytest -q`: 34 passed.
+- `python mu_f.py`: Fibonacci base, `mu_F[1..8]`, inversion through `n=100`,
+  reconstruction exact.
+- Duplicate evidence: `osit_source_cards_gs_osit.json` and
+  `osit_source_cards_gs_osit (1).json` have SHA256
+  `AC24620C3AEA2FC70DB647185062C24A3FCA6242549F6E677A859F738E1CED20`.
+
+Decision:
+
+- `Adopcion cruda`: `BLOCK`.
+- `Extraccion selectiva`: `APPROVE_LOCAL_DOCS_AND_TESTED_PATCHES`.
+- Wabi/DUAT runtime integration: `REVIEW` until adapter, fixtures and tests.
+- Publication: `BLOCK`.
+
+<!-- BRAIN_OS_LR_WORKING_BENCH_DESCUBRIMIENTOS_2026_05_21_END -->

@@ -1,0 +1,229 @@
+import { createHotContext as __vite__createHotContext } from "/duat-city/@vite/client";import.meta.hot = __vite__createHotContext("/src/components/WabiPanel.tsx");"use strict";
+import __vite__cjsImport0_react_jsxDevRuntime from "/duat-city/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=87a97fe6"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import { downloadJson } from "/duat-city/src/core/persistence.ts";
+import { getWabiMcpStatus } from "/duat-city/src/wabi/mcpDesignBridge.ts";
+import { createSandboxExecutionDesign } from "/duat-city/src/wabi/sandboxPolicy.ts";
+import {
+  createAssetWorkpackDraft,
+  createAssetAllowlistWorkpackDraft,
+  createGraphicsUpgradeWorkpackDraft,
+  createPixelFieldBenchmarkWorkpackDraft,
+  createPhysicsFieldWorkpackDraft,
+  createQuaternaryTimingDiagnosticsWorkpackDraft,
+  createRPGExportWorkpackDraft,
+  createRPGVisualExportWorkpackDraft,
+  createWorkpackDraftFromCity,
+  createVisualAtlasIntegrationWorkpackDraft
+} from "/duat-city/src/wabi/workpackDraft.ts?t=1779218199579";
+import { toWabiHandoff } from "/duat-city/src/wabi/wabiHandoff.ts?t=1779218243089";
+export function WabiPanel({ state }) {
+  const status = getWabiMcpStatus();
+  const draft = createWorkpackDraftFromCity(state);
+  const policy = createSandboxExecutionDesign(state);
+  function downloadDraft() {
+    downloadJson(`wabi-workpack-draft-t${state.tick}.json`, JSON.stringify(draft, null, 2));
+  }
+  function downloadTypedDraft(label, payload) {
+    downloadJson(`wabi-${label}-draft-t${state.tick}.json`, JSON.stringify(payload, null, 2));
+  }
+  function downloadHandoff() {
+    const handoff = toWabiHandoff({
+      state,
+      physicsMetrics: state.physicsMetrics,
+      graphicsMetrics: state.graphicsMetrics
+    });
+    downloadJson(`wabi-duat-handoff-t${state.tick}.json`, JSON.stringify(handoff, null, 2));
+  }
+  return /* @__PURE__ */ jsxDEV("div", { className: "section", children: [
+    /* @__PURE__ */ jsxDEV("div", { className: "section-title", children: "Wabi MCP v0.5" }, void 0, false, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/WabiPanel.tsx",
+      lineNumber: 47,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "stat-row", children: [
+      /* @__PURE__ */ jsxDEV("span", { className: "stat-key", children: "Mode" }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/WabiPanel.tsx",
+        lineNumber: 48,
+        columnNumber: 33
+      }, this),
+      /* @__PURE__ */ jsxDEV("span", { className: "stat-val", children: "DESIGN ONLY" }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/WabiPanel.tsx",
+        lineNumber: 48,
+        columnNumber: 71
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/WabiPanel.tsx",
+      lineNumber: 48,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "stat-row", children: [
+      /* @__PURE__ */ jsxDEV("span", { className: "stat-key", children: "Execution" }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/WabiPanel.tsx",
+        lineNumber: 49,
+        columnNumber: 33
+      }, this),
+      /* @__PURE__ */ jsxDEV("span", { className: "stat-val", style: { color: "#ffcc00" }, children: String(status.execution_allowed) }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/WabiPanel.tsx",
+        lineNumber: 49,
+        columnNumber: 76
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/WabiPanel.tsx",
+      lineNumber: 49,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "stat-row", children: [
+      /* @__PURE__ */ jsxDEV("span", { className: "stat-key", children: "Real Apply" }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/WabiPanel.tsx",
+        lineNumber: 50,
+        columnNumber: 33
+      }, this),
+      /* @__PURE__ */ jsxDEV("span", { className: "stat-val", style: { color: "#ffcc00" }, children: String(status.real_apply_allowed) }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/WabiPanel.tsx",
+        lineNumber: 50,
+        columnNumber: 77
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/WabiPanel.tsx",
+      lineNumber: 50,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "stat-row", children: [
+      /* @__PURE__ */ jsxDEV("span", { className: "stat-key", children: "Sandbox" }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/WabiPanel.tsx",
+        lineNumber: 51,
+        columnNumber: 33
+      }, this),
+      /* @__PURE__ */ jsxDEV("span", { className: "stat-val", children: policy.default_disabled ? "disabled" : "enabled" }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/WabiPanel.tsx",
+        lineNumber: 51,
+        columnNumber: 74
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/WabiPanel.tsx",
+      lineNumber: 51,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "ctrl-row", children: [
+      /* @__PURE__ */ jsxDEV("button", { className: "ctrl-btn", onClick: downloadDraft, children: "Workpack Draft" }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/WabiPanel.tsx",
+        lineNumber: 53,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("button", { className: "ctrl-btn", onClick: downloadHandoff, children: "Wabi Handoff" }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/WabiPanel.tsx",
+        lineNumber: 54,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/WabiPanel.tsx",
+      lineNumber: 52,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "ctrl-row", children: [
+      /* @__PURE__ */ jsxDEV("button", { className: "ctrl-btn", onClick: () => downloadTypedDraft("asset", createAssetWorkpackDraft(state)), children: "Asset Draft" }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/WabiPanel.tsx",
+        lineNumber: 57,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("button", { className: "ctrl-btn", onClick: () => downloadTypedDraft("graphics", createGraphicsUpgradeWorkpackDraft(state)), children: "Graphics Draft" }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/WabiPanel.tsx",
+        lineNumber: 58,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/WabiPanel.tsx",
+      lineNumber: 56,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "ctrl-row", children: [
+      /* @__PURE__ */ jsxDEV("button", { className: "ctrl-btn", onClick: () => downloadTypedDraft("physics-field", createPhysicsFieldWorkpackDraft(state)), children: "Field Draft" }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/WabiPanel.tsx",
+        lineNumber: 61,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("button", { className: "ctrl-btn", onClick: () => downloadTypedDraft("rpg-export", createRPGExportWorkpackDraft(state)), children: "RPG Draft" }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/WabiPanel.tsx",
+        lineNumber: 62,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/WabiPanel.tsx",
+      lineNumber: 60,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "ctrl-row", children: [
+      /* @__PURE__ */ jsxDEV("button", { className: "ctrl-btn", onClick: () => downloadTypedDraft("asset-allowlist", createAssetAllowlistWorkpackDraft(state)), children: "Asset Allowlist" }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/WabiPanel.tsx",
+        lineNumber: 65,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("button", { className: "ctrl-btn", onClick: () => downloadTypedDraft("visual-atlas", createVisualAtlasIntegrationWorkpackDraft(state)), children: "Atlas Draft" }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/WabiPanel.tsx",
+        lineNumber: 66,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/WabiPanel.tsx",
+      lineNumber: 64,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "ctrl-row", children: [
+      /* @__PURE__ */ jsxDEV("button", { className: "ctrl-btn", onClick: () => downloadTypedDraft("pixel-benchmark", createPixelFieldBenchmarkWorkpackDraft(state)), children: "Benchmark Draft" }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/WabiPanel.tsx",
+        lineNumber: 69,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("button", { className: "ctrl-btn", onClick: () => downloadTypedDraft("rpg-visual", createRPGVisualExportWorkpackDraft(state)), children: "RPG Visual" }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/WabiPanel.tsx",
+        lineNumber: 70,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/WabiPanel.tsx",
+      lineNumber: 68,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "ctrl-row", children: /* @__PURE__ */ jsxDEV("button", { className: "ctrl-btn", onClick: () => downloadTypedDraft("quaternary-timing", createQuaternaryTimingDiagnosticsWorkpackDraft(state)), children: "Q Timing" }, void 0, false, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/WabiPanel.tsx",
+      lineNumber: 73,
+      columnNumber: 9
+    }, this) }, void 0, false, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/WabiPanel.tsx",
+      lineNumber: 72,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/WabiPanel.tsx",
+    lineNumber: 46,
+    columnNumber: 5
+  }, this);
+}
+_c = WabiPanel;
+var _c;
+$RefreshReg$(_c, "WabiPanel");
+import * as RefreshRuntime from "/duat-city/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react can't detect preamble. Something is wrong."
+    );
+  }
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/WabiPanel.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/WabiPanel.tsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+function $RefreshReg$(type, id) {
+  return RefreshRuntime.register(type, "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/WabiPanel.tsx " + id);
+}
+function $RefreshSig$() {
+  return RefreshRuntime.createSignatureFunctionForTransform();
+}
+
+//# sourceMappingURL=data:application/json;base64,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QUFBQSxNQUM1SSx1QkFBQyxZQUFPLFdBQVUsWUFBVyxTQUFTLE1BQU1RLG1CQUFtQixnQkFBZ0JYLDBDQUEwQ0csS0FBSyxDQUFDLEdBQUcsMkJBQWxJO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFBNkk7QUFBQSxTQUYvSTtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBR0E7QUFBQSxJQUNBLHVCQUFDLFNBQUksV0FBVSxZQUNiO0FBQUEsNkJBQUMsWUFBTyxXQUFVLFlBQVcsU0FBUyxNQUFNUSxtQkFBbUIsbUJBQW1CakIsdUNBQXVDUyxLQUFLLENBQUMsR0FBRywrQkFBbEk7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQUFpSjtBQUFBLE1BQ2pKLHVCQUFDLFlBQU8sV0FBVSxZQUFXLFNBQVMsTUFBTVEsbUJBQW1CLGNBQWNiLG1DQUFtQ0ssS0FBSyxDQUFDLEdBQUcsMEJBQXpIO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFBbUk7QUFBQSxTQUZySTtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBR0E7QUFBQSxJQUNBLHVCQUFDLFNBQUksV0FBVSxZQUNiLGlDQUFDLFlBQU8sV0FBVSxZQUFXLFNBQVMsTUFBTVEsbUJBQW1CLHFCQUFxQmYsK0NBQStDTyxLQUFLLENBQUMsR0FBRyx3QkFBNUk7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQUFvSixLQUR0SjtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBRUE7QUFBQSxPQTVCRjtBQUFBO0FBQUE7QUFBQTtBQUFBLFNBNkJBO0FBRUo7QUFBQ29CLEtBdERlckI7QUFBUyxJQUFBcUI7QUFBQSxhQUFBQSxJQUFBIiwibmFtZXMiOlsiZG93bmxvYWRKc29uIiwiZ2V0V2FiaU1jcFN0YXR1cyIsImNyZWF0ZVNhbmRib3hFeGVjdXRpb25EZXNpZ24iLCJjcmVhdGVBc3NldFdvcmtwYWNrRHJhZnQiLCJjcmVhdGVBc3NldEFsbG93bGlzdFdvcmtwYWNrRHJhZnQiLCJjcmVhdGVHcmFwaGljc1VwZ3JhZGVXb3JrcGFja0RyYWZ0IiwiY3JlYXRlUGl4ZWxGaWVsZEJlbmNobWFya1dvcmtwYWNrRHJhZnQiLCJjcmVhdGVQaHlzaWNzRmllbGRXb3JrcGFja0RyYWZ0IiwiY3JlYXRlUXVhdGVybmFyeVRpbWluZ0RpYWdub3N0aWNzV29ya3BhY2tEcmFmdCIsImNyZWF0ZVJQR0V4cG9ydFdvcmtwYWNrRHJhZnQiLCJjcmVhdGVSUEdWaXN1YWxFeHBvcnRXb3JrcGFja0RyYWZ0IiwiY3JlYXRlV29ya3BhY2tEcmFmdEZyb21DaXR5IiwiY3JlYXRlVmlzdWFsQXRsYXNJbnRlZ3JhdGlvbldvcmtwYWNrRHJhZnQiLCJ0b1dhYmlIYW5kb2ZmIiwiV2FiaVBhbmVsIiwic3RhdGUiLCJzdGF0dXMiLCJkcmFmdCIsInBvbGljeSIsImRvd25sb2FkRHJhZnQiLCJ0aWNrIiwiSlNPTiIsInN0cmluZ2lmeSIsImRvd25sb2FkVHlwZWREcmFmdCIsImxhYmVsIiwicGF5bG9hZCIsImRvd25sb2FkSGFuZG9mZiIsImhhbmRvZmYiLCJwaHlzaWNzTWV0cmljcyIsImdyYXBoaWNzTWV0cmljcyIsImNvbG9yIiwiU3RyaW5nIiwiZXhlY3V0aW9uX2FsbG93ZWQiLCJyZWFsX2FwcGx5X2FsbG93ZWQiLCJkZWZhdWx0X2Rpc2FibGVkIiwiX2MiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsiV2FiaVBhbmVsLnRzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgdHlwZSB7IENpdHlTdGF0ZSB9IGZyb20gXCIuLi9jb3JlL3R5cGVzXCI7XG5pbXBvcnQgeyBkb3dubG9hZEpzb24gfSBmcm9tIFwiLi4vY29yZS9wZXJzaXN0ZW5jZVwiO1xuaW1wb3J0IHsgZ2V0V2FiaU1jcFN0YXR1cyB9IGZyb20gXCIuLi93YWJpL21jcERlc2lnbkJyaWRnZVwiO1xuaW1wb3J0IHsgY3JlYXRlU2FuZGJveEV4ZWN1dGlvbkRlc2lnbiB9IGZyb20gXCIuLi93YWJpL3NhbmRib3hQb2xpY3lcIjtcbmltcG9ydCB7XG4gIGNyZWF0ZUFzc2V0V29ya3BhY2tEcmFmdCxcbiAgY3JlYXRlQXNzZXRBbGxvd2xpc3RXb3JrcGFja0RyYWZ0LFxuICBjcmVhdGVHcmFwaGljc1VwZ3JhZGVXb3JrcGFja0RyYWZ0LFxuICBjcmVhdGVQaXhlbEZpZWxkQmVuY2htYXJrV29ya3BhY2tEcmFmdCxcbiAgY3JlYXRlUGh5c2ljc0ZpZWxkV29ya3BhY2tEcmFmdCxcbiAgY3JlYXRlUXVhdGVybmFyeVRpbWluZ0RpYWdub3N0aWNzV29ya3BhY2tEcmFmdCxcbiAgY3JlYXRlUlBHRXhwb3J0V29ya3BhY2tEcmFmdCxcbiAgY3JlYXRlUlBHVmlzdWFsRXhwb3J0V29ya3BhY2tEcmFmdCxcbiAgY3JlYXRlV29ya3BhY2tEcmFmdEZyb21DaXR5LFxuICBjcmVhdGVWaXN1YWxBdGxhc0ludGVncmF0aW9uV29ya3BhY2tEcmFmdCxcbn0gZnJvbSBcIi4uL3dhYmkvd29ya3BhY2tEcmFmdFwiO1xuaW1wb3J0IHsgdG9XYWJpSGFuZG9mZiB9IGZyb20gXCIuLi93YWJpL3dhYmlIYW5kb2ZmXCI7XG5cbmludGVyZmFjZSBXYWJpUGFuZWxQcm9wcyB7XG4gIHN0YXRlOiBDaXR5U3RhdGU7XG59XG5cbmV4cG9ydCBmdW5jdGlvbiBXYWJpUGFuZWwoeyBzdGF0ZSB9OiBXYWJpUGFuZWxQcm9wcykge1xuICBjb25zdCBzdGF0dXMgPSBnZXRXYWJpTWNwU3RhdHVzKCk7XG4gIGNvbnN0IGRyYWZ0ID0gY3JlYXRlV29ya3BhY2tEcmFmdEZyb21DaXR5KHN0YXRlKTtcbiAgY29uc3QgcG9saWN5ID0gY3JlYXRlU2FuZGJveEV4ZWN1dGlvbkRlc2lnbihzdGF0ZSk7XG5cbiAgZnVuY3Rpb24gZG93bmxvYWREcmFmdCgpIHtcbiAgICBkb3dubG9hZEpzb24oYHdhYmktd29ya3BhY2stZHJhZnQtdCR7c3RhdGUudGlja30uanNvbmAsIEpTT04uc3RyaW5naWZ5KGRyYWZ0LCBudWxsLCAyKSk7XG4gIH1cblxuICBmdW5jdGlvbiBkb3dubG9hZFR5cGVkRHJhZnQobGFiZWw6IHN0cmluZywgcGF5bG9hZDogdW5rbm93bikge1xuICAgIGRvd25sb2FkSnNvbihgd2FiaS0ke2xhYmVsfS1kcmFmdC10JHtzdGF0ZS50aWNrfS5qc29uYCwgSlNPTi5zdHJpbmdpZnkocGF5bG9hZCwgbnVsbCwgMikpO1xuICB9XG5cbiAgZnVuY3Rpb24gZG93bmxvYWRIYW5kb2ZmKCkge1xuICAgIGNvbnN0IGhhbmRvZmYgPSB0b1dhYmlIYW5kb2ZmKHtcbiAgICAgIHN0YXRlLFxuICAgICAgcGh5c2ljc01ldHJpY3M6IHN0YXRlLnBoeXNpY3NNZXRyaWNzLFxuICAgICAgZ3JhcGhpY3NNZXRyaWNzOiBzdGF0ZS5ncmFwaGljc01ldHJpY3MsXG4gICAgfSk7XG4gICAgZG93bmxvYWRKc29uKGB3YWJpLWR1YXQtaGFuZG9mZi10JHtzdGF0ZS50aWNrfS5qc29uYCwgSlNPTi5zdHJpbmdpZnkoaGFuZG9mZiwgbnVsbCwgMikpO1xuICB9XG5cbiAgcmV0dXJuIChcbiAgICA8ZGl2IGNsYXNzTmFtZT1cInNlY3Rpb25cIj5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwic2VjdGlvbi10aXRsZVwiPldhYmkgTUNQIHYwLjU8L2Rpdj5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwic3RhdC1yb3dcIj48c3BhbiBjbGFzc05hbWU9XCJzdGF0LWtleVwiPk1vZGU8L3NwYW4+PHNwYW4gY2xhc3NOYW1lPVwic3RhdC12YWxcIj5ERVNJR04gT05MWTwvc3Bhbj48L2Rpdj5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwic3RhdC1yb3dcIj48c3BhbiBjbGFzc05hbWU9XCJzdGF0LWtleVwiPkV4ZWN1dGlvbjwvc3Bhbj48c3BhbiBjbGFzc05hbWU9XCJzdGF0LXZhbFwiIHN0eWxlPXt7IGNvbG9yOiBcIiNmZmNjMDBcIiB9fT57U3RyaW5nKHN0YXR1cy5leGVjdXRpb25fYWxsb3dlZCl9PC9zcGFuPjwvZGl2PlxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJzdGF0LXJvd1wiPjxzcGFuIGNsYXNzTmFtZT1cInN0YXQta2V5XCI+UmVhbCBBcHBseTwvc3Bhbj48c3BhbiBjbGFzc05hbWU9XCJzdGF0LXZhbFwiIHN0eWxlPXt7IGNvbG9yOiBcIiNmZmNjMDBcIiB9fT57U3RyaW5nKHN0YXR1cy5yZWFsX2FwcGx5X2FsbG93ZWQpfTwvc3Bhbj48L2Rpdj5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwic3RhdC1yb3dcIj48c3BhbiBjbGFzc05hbWU9XCJzdGF0LWtleVwiPlNhbmRib3g8L3NwYW4+PHNwYW4gY2xhc3NOYW1lPVwic3RhdC12YWxcIj57cG9saWN5LmRlZmF1bHRfZGlzYWJsZWQgPyBcImRpc2FibGVkXCIgOiBcImVuYWJsZWRcIn08L3NwYW4+PC9kaXY+XG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cImN0cmwtcm93XCI+XG4gICAgICAgIDxidXR0b24gY2xhc3NOYW1lPVwiY3RybC1idG5cIiBvbkNsaWNrPXtkb3dubG9hZERyYWZ0fT5Xb3JrcGFjayBEcmFmdDwvYnV0dG9uPlxuICAgICAgICA8YnV0dG9uIGNsYXNzTmFtZT1cImN0cmwtYnRuXCIgb25DbGljaz17ZG93bmxvYWRIYW5kb2ZmfT5XYWJpIEhhbmRvZmY8L2J1dHRvbj5cbiAgICAgIDwvZGl2PlxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJjdHJsLXJvd1wiPlxuICAgICAgICA8YnV0dG9uIGNsYXNzTmFtZT1cImN0cmwtYnRuXCIgb25DbGljaz17KCkgPT4gZG93bmxvYWRUeXBlZERyYWZ0KFwiYXNzZXRcIiwgY3JlYXRlQXNzZXRXb3JrcGFja0RyYWZ0KHN0YXRlKSl9PkFzc2V0IERyYWZ0PC9idXR0b24+XG4gICAgICAgIDxidXR0b24gY2xhc3NOYW1lPVwiY3RybC1idG5cIiBvbkNsaWNrPXsoKSA9PiBkb3dubG9hZFR5cGVkRHJhZnQoXCJncmFwaGljc1wiLCBjcmVhdGVHcmFwaGljc1VwZ3JhZGVXb3JrcGFja0RyYWZ0KHN0YXRlKSl9PkdyYXBoaWNzIERyYWZ0PC9idXR0b24+XG4gICAgICA8L2Rpdj5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY3RybC1yb3dcIj5cbiAgICAgICAgPGJ1dHRvbiBjbGFzc05hbWU9XCJjdHJsLWJ0blwiIG9uQ2xpY2s9eygpID0+IGRvd25sb2FkVHlwZWREcmFmdChcInBoeXNpY3MtZmllbGRcIiwgY3JlYXRlUGh5c2ljc0ZpZWxkV29ya3BhY2tEcmFmdChzdGF0ZSkpfT5GaWVsZCBEcmFmdDwvYnV0dG9uPlxuICAgICAgICA8YnV0dG9uIGNsYXNzTmFtZT1cImN0cmwtYnRuXCIgb25DbGljaz17KCkgPT4gZG93bmxvYWRUeXBlZERyYWZ0KFwicnBnLWV4cG9ydFwiLCBjcmVhdGVSUEdFeHBvcnRXb3JrcGFja0RyYWZ0KHN0YXRlKSl9PlJQRyBEcmFmdDwvYnV0dG9uPlxuICAgICAgPC9kaXY+XG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cImN0cmwtcm93XCI+XG4gICAgICAgIDxidXR0b24gY2xhc3NOYW1lPVwiY3RybC1idG5cIiBvbkNsaWNrPXsoKSA9PiBkb3dubG9hZFR5cGVkRHJhZnQoXCJhc3NldC1hbGxvd2xpc3RcIiwgY3JlYXRlQXNzZXRBbGxvd2xpc3RXb3JrcGFja0RyYWZ0KHN0YXRlKSl9PkFzc2V0IEFsbG93bGlzdDwvYnV0dG9uPlxuICAgICAgICA8YnV0dG9uIGNsYXNzTmFtZT1cImN0cmwtYnRuXCIgb25DbGljaz17KCkgPT4gZG93bmxvYWRUeXBlZERyYWZ0KFwidmlzdWFsLWF0bGFzXCIsIGNyZWF0ZVZpc3VhbEF0bGFzSW50ZWdyYXRpb25Xb3JrcGFja0RyYWZ0KHN0YXRlKSl9PkF0bGFzIERyYWZ0PC9idXR0b24+XG4gICAgICA8L2Rpdj5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY3RybC1yb3dcIj5cbiAgICAgICAgPGJ1dHRvbiBjbGFzc05hbWU9XCJjdHJsLWJ0blwiIG9uQ2xpY2s9eygpID0+IGRvd25sb2FkVHlwZWREcmFmdChcInBpeGVsLWJlbmNobWFya1wiLCBjcmVhdGVQaXhlbEZpZWxkQmVuY2htYXJrV29ya3BhY2tEcmFmdChzdGF0ZSkpfT5CZW5jaG1hcmsgRHJhZnQ8L2J1dHRvbj5cbiAgICAgICAgPGJ1dHRvbiBjbGFzc05hbWU9XCJjdHJsLWJ0blwiIG9uQ2xpY2s9eygpID0+IGRvd25sb2FkVHlwZWREcmFmdChcInJwZy12aXN1YWxcIiwgY3JlYXRlUlBHVmlzdWFsRXhwb3J0V29ya3BhY2tEcmFmdChzdGF0ZSkpfT5SUEcgVmlzdWFsPC9idXR0b24+XG4gICAgICA8L2Rpdj5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY3RybC1yb3dcIj5cbiAgICAgICAgPGJ1dHRvbiBjbGFzc05hbWU9XCJjdHJsLWJ0blwiIG9uQ2xpY2s9eygpID0+IGRvd25sb2FkVHlwZWREcmFmdChcInF1YXRlcm5hcnktdGltaW5nXCIsIGNyZWF0ZVF1YXRlcm5hcnlUaW1pbmdEaWFnbm9zdGljc1dvcmtwYWNrRHJhZnQoc3RhdGUpKX0+USBUaW1pbmc8L2J1dHRvbj5cbiAgICAgIDwvZGl2PlxuICAgIDwvZGl2PlxuICApO1xufVxuIl0sImZpbGUiOiJDOi9Vc2Vycy9MLVR5ci9PbmVEcml2ZS9Fc2NyaXRvcmlvLy09TC5SLkdPTlpBTEVaPS0vYXJ0aWZhY3RzL2R1YXQtY2l0eS9zcmMvY29tcG9uZW50cy9XYWJpUGFuZWwudHN4In0=

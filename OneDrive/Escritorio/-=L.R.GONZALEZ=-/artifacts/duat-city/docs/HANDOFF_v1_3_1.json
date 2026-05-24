@@ -1,0 +1,48 @@
+{
+  "schema": "duat/codex-final-handoff/v1.3.1",
+  "fingerprint": "DUAT-v1.3.1-AUDIO-GAMEFEEL-CONTINUITY",
+  "brief": "Audio/game-feel adapter local determinista integrado con Pixel/Light Engine, Agent Life, Game OS, Brain Runtime, Handoff y RPG export.",
+  "status": {
+    "R_est": 0.14,
+    "Phi_eff_est": 0.86,
+    "regimen": "FUNCIONAL/OPTIMO",
+    "autonomia_usada": "LEVEL 4 local-only",
+    "actionGate": "APPROVE_LOCAL"
+  },
+  "evidence": {
+    "tests": "PASS 92 files / 292 tests",
+    "typecheck": "PASS",
+    "build": "PASS",
+    "http_smoke": "HTTP 200",
+    "secret_scan": "high_confidence_secret_count=0",
+    "boundary_scan": {
+      "publication_allowed_true_property_count": 0,
+      "wabi_execution_true_property_count": 0,
+      "new_or_external_asset_copy_true_property_count": 0
+    }
+  },
+  "artifacts": {
+    "run_dir": "qa_artifacts/release_validation/RUN_DUAT_AUDIO_GAMEFEEL_v1_3_1_20260520",
+    "benchmark_json": "docs/PERFORMANCE_BENCHMARK_v1_3_1.json",
+    "benchmark_report": "docs/PERFORMANCE_BENCHMARK_REPORT_v1_3_1.md",
+    "visual_report": "docs/VISUAL_QA_REPORT_v1_3_1.md",
+    "test_report": "docs/TEST_REPORT_v1_3_1.md",
+    "screenshots_dir": "docs/screenshots/v1_3_1",
+    "handoff_md": "docs/CODEX_FINAL_HANDOFF_v1_3_1.md",
+    "next_session_brief": "docs/NEXT_SESSION_BRIEF_v1_3_1.md"
+  },
+  "boundaries": {
+    "wabi": {
+      "execution_allowed": false,
+      "sandbox_execution_allowed": false,
+      "real_apply_allowed": false
+    },
+    "publication_allowed": false,
+    "cloud_used": false,
+    "push_deploy_commit": false,
+    "mcp_execution": false,
+    "assets_copied": false,
+    "external_samples_copied": false
+  },
+  "nextAction": "Run headed browser manual audio preview after user gesture and record audible QA."
+}

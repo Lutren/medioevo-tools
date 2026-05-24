@@ -1,0 +1,91 @@
+{
+  "schema": "medioevo.lobby_alejandria.absorption.v1",
+  "generated_at_utc": "2026-05-06T19:08:19.237457+00:00",
+  "records": [
+    {
+      "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\Lobby de Alejandria\\escaner sigiloso.txt",
+      "archived_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\lobby_alejandria\\2026-05-06\\20_curaduria_seto\\0C7CDDAA915D42C4_escaner-sigiloso.txt",
+      "filename": "escaner sigiloso.txt",
+      "sha256": "0C7CDDAA915D42C43D2303583A3E0B737BEEB53A54F574EE382AEFFD371E3D4E",
+      "size_bytes": 1713,
+      "line_count": 37,
+      "character_count": 1661,
+      "lane": "Curaduria SETO",
+      "psi_state": "INFERENCIA",
+      "action_gate": "REVIEW",
+      "status": "ABSORBIDO_ARCHIVO_FRIO",
+      "decision": "ABSORB_TO_ATLAS_AND_ARCHIVE_SOURCE",
+      "target_artifacts": [
+        "docs/intake",
+        "runtime/curador_seto"
+      ],
+      "evidence_markers": [],
+      "extracted_patterns": [
+        "# Creamos un paquete ARP para obtener la MAC del objetivo",
+        "# Enviamos y recibimos respuesta",
+        "# Este es el 'kernel' de observación inversa:",
+        "# Identificar la presencia del sistema por su respuesta al vacío."
+      ],
+      "falsifiers": [
+        "sha256_mismatch",
+        "target_artifact_missing",
+        "private_boundary_leaks_to_public",
+        "source_left_in_lobby_after_archive"
+      ],
+      "risk_flags": []
+    },
+    {
+      "original_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\Lobby de Alejandria\\README_LOBBY_DE_ALEJANDRIA.md",
+      "archived_path": null,
+      "filename": "README_LOBBY_DE_ALEJANDRIA.md",
+      "sha256": "462F1B416C3803A454E6F6D6E23DA5F92398BCCC11C9CBBF6B6D314487165B1B",
+      "size_bytes": 1476,
+      "line_count": 37,
+      "character_count": 1475,
+      "lane": "Matrix/Biblioteca",
+      "psi_state": "INFERENCIA",
+      "action_gate": "REVIEW",
+      "status": "CANONICO_EN_LOBBY",
+      "decision": "KEEP_LOBBY_OPERATING_README",
+      "target_artifacts": [
+        "docs/matrix",
+        "library/index.json",
+        "library/modules"
+      ],
+      "evidence_markers": [
+        "actiongate"
+      ],
+      "extracted_patterns": [
+        "# Lobby de Alejandria",
+        "## Regla",
+        "## Prohibido",
+        "- Publicar contenido sin ActionGate.",
+        "## Ritmo",
+        "## Ultimo pase"
+      ],
+      "falsifiers": [
+        "sha256_mismatch",
+        "target_artifact_missing",
+        "private_boundary_leaks_to_public",
+        "source_left_in_lobby_after_archive"
+      ],
+      "risk_flags": [
+        "private_boundary",
+        "publication_boundary"
+      ]
+    }
+  ],
+  "summary": {
+    "files": 2,
+    "archived": 1,
+    "kept_in_lobby": 1,
+    "total_lines_read": 74,
+    "lanes": {
+      "Curaduria SETO": 1,
+      "Matrix/Biblioteca": 1
+    },
+    "gates": {
+      "REVIEW": 2
+    }
+  }
+}

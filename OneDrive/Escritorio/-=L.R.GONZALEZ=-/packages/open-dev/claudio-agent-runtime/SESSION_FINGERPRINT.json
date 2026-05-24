@@ -1,0 +1,60 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "20260515-032950",
+  "project": "MEDIOEVO/CLAUDIO - Claudio Agent Runtime R/Phi Calibration",
+  "R_close": 0.04,
+  "Phi_eff": 0.91,
+  "regime_close": "OPTIMO",
+  "autonomy_level_used": 3,
+  "actiongate_summary": {
+    "approved": 9,
+    "review_required": 0,
+    "blocked": 0
+  },
+  "files_created": [
+    "packages/open-dev/claudio-agent-runtime/claudio_agent_runtime/rphi_calibration.py",
+    "packages/open-dev/claudio-agent-runtime/tests/test_rphi_calibration.py",
+    "packages/open-dev/claudio-agent-runtime/tests/fixtures/rphi_episodes",
+    "packages/open-dev/claudio-agent-runtime/docs/RPHI_CALIBRATION_v0_1.md",
+    "packages/open-dev/claudio-agent-runtime/qa_artifacts/rphi-calibration-latest.json",
+    "packages/open-dev/claudio-agent-runtime/qa_artifacts/rphi-calibration-report-latest.md"
+  ],
+  "files_modified": [
+    "packages/open-dev/claudio-agent-runtime/README.md",
+    "packages/open-dev/claudio-agent-runtime/TEST_REPORT.md",
+    "packages/open-dev/claudio-agent-runtime/NEXT_SESSION_BRIEF.md",
+    "packages/open-dev/claudio-agent-runtime/SESSION_FINGERPRINT.json",
+    "packages/open-dev/claudio-agent-runtime/claudio_agent_runtime/brief.py",
+    "packages/open-dev/claudio-agent-runtime/claudio_agent_runtime/cli.py",
+    "packages/open-dev/claudio-agent-runtime/claudio_agent_runtime/doctor.py",
+    "packages/open-dev/claudio-agent-runtime/docs/RPHI_BUDGET_v0_1.md"
+  ],
+  "commands_run": [
+    "python -m claudio_agent_runtime budget calibrate --output-root qa_artifacts --json",
+    "python -m pytest packages\\open-dev\\claudio-agent-runtime\\tests -q",
+    "python -m compileall packages\\open-dev\\claudio-agent-runtime",
+    "python tools\\release\\scan_secrets.py --path packages\\open-dev\\claudio-agent-runtime --json",
+    "python -m claudio_agent_runtime budget status --root fixtures\\state --json",
+    "python -m claudio_agent_runtime budget report --root fixtures\\state --output-root qa_artifacts --json",
+    "python -m claudio_agent_runtime doctor --root fixtures\\state --json",
+    "python -m claudio_agent_runtime brief --root fixtures\\state"
+  ],
+  "tests": {
+    "status": "passed",
+    "evidence": [
+      "34 passed in 2.34s",
+      "calibration_status=PASS, 9/9 episodes",
+      "secret scan count_reported=0"
+    ]
+  },
+  "decisions": [
+    "Synthetic calibration is directional regression evidence, not external validation",
+    "Default R/Phi weights remain unchanged",
+    "Weight changes remain REVIEW_REQUIRED unless a concrete bug blocks expected movement"
+  ],
+  "pending": [
+    "Add a real sanitized local work episode to calibration fixtures",
+    "Keep publication and external channels gated"
+  ],
+  "next_action": "Add one real sanitized work episode and compare it against the synthetic calibration matrix without changing weights automatically."
+}

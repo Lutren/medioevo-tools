@@ -1,0 +1,60 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "20260519-DUAT-v0.9",
+  "project": "MEDIOEVO/DUAT City",
+  "fingerprint": "DUAT-v0.9-QUATERNARY-TIMING-CORE",
+  "R_close": 0.17,
+  "Phi_eff": 0.86,
+  "regime_close": "FUNCIONAL",
+  "autonomy_level_used": 4,
+  "actiongate_summary": {
+    "approved": 1,
+    "review_required": 2,
+    "blocked": 0
+  },
+  "files_created": [
+    "artifacts/duat-city/src/quaternary/*",
+    "artifacts/duat-city/src/sim/quaternaryAdapter.ts",
+    "artifacts/duat-city/src/components/QuaternaryPanel.tsx",
+    "artifacts/duat-city/docs/*v0_9*"
+  ],
+  "files_modified": [
+    "artifacts/duat-city/src/App.tsx",
+    "artifacts/duat-city/src/core/types.ts",
+    "artifacts/duat-city/src/core/handoff.ts",
+    "artifacts/duat-city/src/sim/engine.ts",
+    "artifacts/duat-city/src/render/canvasRenderer.ts",
+    "artifacts/duat-city/src/graphics/graphicsMetrics.ts",
+    "artifacts/duat-city/src/rpg/worldExport.ts",
+    "artifacts/duat-city/src/wabi/*"
+  ],
+  "commands_run": [
+    "corepack pnpm --filter @workspace/duat-city run test",
+    "corepack pnpm --filter @workspace/duat-city run typecheck",
+    "corepack pnpm --filter @workspace/duat-city run build",
+    "Invoke-WebRequest http://127.0.0.1:18519/duat-city/",
+    "python tools/release/scan_secrets.py --path artifacts/duat-city/src --json",
+    "python tools/release/scan_secrets.py --path artifacts/duat-city/docs --json"
+  ],
+  "tests": {
+    "status": "passed",
+    "evidence": [
+      "42 files / 177 tests passed",
+      "typecheck PASS",
+      "build PASS",
+      "HTTP smoke 200"
+    ]
+  },
+  "decisions": [
+    "No asset copy in v0.9",
+    "Quaternary metrics augment but do not overwrite base city R/Phi_eff",
+    "Wabi remains design-only"
+  ],
+  "pending": [
+    "Browser screenshot QA when Browser control is available",
+    "Threshold calibration",
+    "Reviewed retrofuture asset candidate lane"
+  ],
+  "next_action": "Capture OSIT/DEBUG/Beautiful screenshots and verify QuaternaryPanel/overlay visibility boundaries."
+}
+

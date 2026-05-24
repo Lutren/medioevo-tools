@@ -1,0 +1,22 @@
+{
+  "schema_version": "medioevo.agent_state.v0.1",
+  "agent_id": "agent-002",
+  "body": { "pose": { "x": 3, "y": 2, "z": 0 }, "health": 0.88 },
+  "needs": { "energy": 0.7, "hunger": 0.72, "social": 0.64, "purpose": 0.62 },
+  "traits": ["builder", "direct"],
+  "lineage": { "lineage_id": "lineage-agent-002", "inherited_traits": ["practical"] },
+  "sensory_profile": { "visual": 0.65, "audio": 0.7, "text": 0.45 },
+  "bias_profile": { "profile_id": "bias-agent-002", "role_bias": { "workshop": 0.5 } },
+  "memory": ["repaired_demo_bridge"],
+  "beliefs": ["tools_should_be_tested"],
+  "goals": ["maintain_resources"],
+  "relationships": { "agent-001": 0.1 },
+  "role": "Builder",
+  "skills": ["repair", "planning"],
+  "emotional_state": { "valence": 0.1, "arousal": 0.4 },
+  "cognitive_load": 0.32,
+  "R_i": 0.16,
+  "Phi_eff_i": 0.74,
+  "boundary": { "publication_gate": "BLOCK", "contains_private_data": false, "public_safe": true }
+}
+

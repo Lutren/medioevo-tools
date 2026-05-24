@@ -1,0 +1,319 @@
+{
+  "schema": "duat.nested_domain_backtest.v0_6",
+  "run_id": "DUAT_NESTED_DOMAIN_BACKTEST_v0_6",
+  "generated_at_utc": "2026-05-15T05:53:25Z",
+  "publication_gate": "BLOCK",
+  "action_gate_local": "REVIEW",
+  "parameters": {
+    "min_observations": 8,
+    "outer_min_train_size": 5,
+    "inner_min_train_size": 4,
+    "horizon": 1,
+    "grid": {
+      "moving_average_windows": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "ensemble_weights": [
+        0.25,
+        0.5,
+        0.75
+      ],
+      "domain_lambdas": {
+        "economy": [
+          0.25,
+          0.35,
+          0.45
+        ],
+        "labor_market": [
+          0.35,
+          0.45,
+          0.55
+        ],
+        "demography": [
+          0.3,
+          0.4,
+          0.5
+        ],
+        "unknown": [
+          0.4,
+          0.5,
+          0.6
+        ]
+      }
+    }
+  },
+  "source_runs": {
+    "matrix_v0_4": "DUAT_BENCHMARK_MATRIX_v0_4",
+    "metric_aligned_v0_5": "DUAT_METRIC_ALIGNED_R_CALIBRATION_v0_5"
+  },
+  "objectives": [
+    {
+      "objective_id": "DUAT_GEODIA_HARMONIZED_INDICATOR_ONE_STEP_FORECAST_v0_1",
+      "indicator": "economy.real_growth_rate",
+      "domain": "economy",
+      "data_mode": "real_fixture",
+      "n_observations": 12,
+      "n_outer_folds": 2,
+      "n_inner_folds_mean": 1.0,
+      "selected_configs_by_fold": [
+        {
+          "series_id": "world_bank_indicators:NY.GDP.PCAP.KD.ZG:MEX",
+          "series_index": 0,
+          "outer_fold_index": 0,
+          "target_time": 2023,
+          "selected_config": {
+            "window": 2,
+            "last_value_weight": 0.75,
+            "domain_lambda": 0.25
+          },
+          "inner_folds": 1,
+          "inner_selection_score": 0.06969123426338547,
+          "outer_test_used_for_selection": false
+        },
+        {
+          "series_id": "eurostat_sdmx:tec00115:DE",
+          "series_index": 1,
+          "outer_fold_index": 0,
+          "target_time": 2023,
+          "selected_config": {
+            "window": 2,
+            "last_value_weight": 0.5,
+            "domain_lambda": 0.25
+          },
+          "inner_folds": 1,
+          "inner_selection_score": 0.02124999999999998,
+          "outer_test_used_for_selection": false
+        }
+      ],
+      "baseline_outer_metrics": {
+        "MAE": 1.5878007044714701,
+        "RMSE": 1.9385815304222453,
+        "MAPE_if_safe": {
+          "value": null,
+          "reason": "actual_contains_negative_values"
+        }
+      },
+      "calibrated_outer_metrics": {
+        "MAE": 2.001015188301034,
+        "RMSE": 2.3456770031445457,
+        "MAPE_if_safe": {
+          "value": null,
+          "reason": "actual_contains_negative_values"
+        }
+      },
+      "metric_delta_outer": {
+        "MAE": 0.41321448382956394,
+        "RMSE": 0.4070954727223004,
+        "MAPE_if_safe": null,
+        "mape_status": "SKIPPED_UNSAFE_DENOMINATOR"
+      },
+      "r_operational_delta_outer": 0.05540663096882503,
+      "r_aligned_delta_outer": 0.13769860703984477,
+      "oos_classification": "OOS_METRICS_WORSE",
+      "out_of_sample_gate": "REVIEW",
+      "out_of_sample_gate_reason": "classification=OOS_METRICS_WORSE. ComparabilityReview is REVIEW. LicenseTermsScan is REVIEW. R_aligned_delta_outer is not negative.",
+      "claim_allowed_public": false,
+      "publication_gate": "BLOCK",
+      "comparability_status": "REVIEW",
+      "license_terms_scan": "REVIEW",
+      "leakage_check": "PASS",
+      "backtest_leakage_guard": {
+        "leakage_check": "PASS",
+        "findings": [],
+        "critical": false
+      }
+    },
+    {
+      "objective_id": "DUAT_GEODIA_LABOR_MARKET_UNEMPLOYMENT_ONE_STEP_FORECAST_v0_1",
+      "indicator": "labor_market.unemployment_rate.total",
+      "domain": "labor_market",
+      "data_mode": "real_fixture",
+      "n_observations": 18,
+      "n_outer_folds": 3,
+      "n_inner_folds_mean": 1.0,
+      "selected_configs_by_fold": [
+        {
+          "series_id": "world_bank_indicators:SL.UEM.TOTL.ZS:MEX",
+          "series_index": 0,
+          "outer_fold_index": 0,
+          "target_time": 2023,
+          "selected_config": {
+            "window": 4,
+            "last_value_weight": 0.25,
+            "domain_lambda": 0.35
+          },
+          "inner_folds": 1,
+          "inner_selection_score": 0.48843525337837845,
+          "outer_test_used_for_selection": false
+        },
+        {
+          "series_id": "eurostat_sdmx:une_rt_a:DE",
+          "series_index": 1,
+          "outer_fold_index": 0,
+          "target_time": 2023,
+          "selected_config": {
+            "window": 4,
+            "last_value_weight": 0.25,
+            "domain_lambda": 0.35
+          },
+          "inner_folds": 1,
+          "inner_selection_score": 0.28309374999999976,
+          "outer_test_used_for_selection": false
+        },
+        {
+          "series_id": "INEGI:INEGI_ENOE_TASA_DESOCUPACION_ANNUAL_MEAN:MEX",
+          "series_index": 2,
+          "outer_fold_index": 0,
+          "target_time": 2023,
+          "selected_config": {
+            "window": 4,
+            "last_value_weight": 0.25,
+            "domain_lambda": 0.35
+          },
+          "inner_folds": 1,
+          "inner_selection_score": 0.5377167659731821,
+          "outer_test_used_for_selection": false
+        }
+      ],
+      "baseline_outer_metrics": {
+        "MAE": 0.3228999999999999,
+        "RMSE": 0.39550739141849994,
+        "MAPE_if_safe": {
+          "value": 0.116140653069712,
+          "reason": "PASS"
+        }
+      },
+      "calibrated_outer_metrics": {
+        "MAE": 0.6483562499999999,
+        "RMSE": 0.7379331295306195,
+        "MAPE_if_safe": {
+          "value": 0.23132920348381314,
+          "reason": "PASS"
+        }
+      },
+      "metric_delta_outer": {
+        "MAE": 0.32545624999999995,
+        "RMSE": 0.34242573811211957,
+        "MAPE_if_safe": 0.11518855041410114,
+        "mape_status": "PASS"
+      },
+      "r_operational_delta_outer": 0.14645531249999993,
+      "r_aligned_delta_outer": 0.5680389385462083,
+      "oos_classification": "OOS_METRICS_WORSE",
+      "out_of_sample_gate": "REVIEW",
+      "out_of_sample_gate_reason": "classification=OOS_METRICS_WORSE. ComparabilityReview is REVIEW. LicenseTermsScan is REVIEW. R_aligned_delta_outer is not negative.",
+      "claim_allowed_public": false,
+      "publication_gate": "BLOCK",
+      "comparability_status": "REVIEW",
+      "license_terms_scan": "REVIEW",
+      "leakage_check": "PASS",
+      "backtest_leakage_guard": {
+        "leakage_check": "PASS",
+        "findings": [],
+        "critical": false
+      }
+    },
+    {
+      "objective_id": "DUAT_GEODIA_DEMOGRAPHY_LIFE_EXPECTANCY_ONE_STEP_FORECAST_v0_1",
+      "indicator": "demography.life_expectancy_at_birth.total",
+      "domain": "demography",
+      "data_mode": "real_fixture",
+      "n_observations": 12,
+      "n_outer_folds": 2,
+      "n_inner_folds_mean": 1.0,
+      "selected_configs_by_fold": [
+        {
+          "series_id": "world_bank_indicators:SP.DYN.LE00.IN:MEX",
+          "series_index": 0,
+          "outer_fold_index": 0,
+          "target_time": 2023,
+          "selected_config": {
+            "window": 4,
+            "last_value_weight": 0.25,
+            "domain_lambda": 0.3
+          },
+          "inner_folds": 1,
+          "inner_selection_score": 0.490732949790793,
+          "outer_test_used_for_selection": false
+        },
+        {
+          "series_id": "eurostat_sdmx:demo_mlexpec:DE",
+          "series_index": 1,
+          "outer_fold_index": 0,
+          "target_time": 2023,
+          "selected_config": {
+            "window": 2,
+            "last_value_weight": 0.75,
+            "domain_lambda": 0.3
+          },
+          "inner_folds": 1,
+          "inner_selection_score": 0.1466874999999882,
+          "outer_test_used_for_selection": false
+        }
+      ],
+      "baseline_outer_metrics": {
+        "MAE": 0.7479999999999976,
+        "RMSE": 0.8249896969053617,
+        "MAPE_if_safe": {
+          "value": 0.009766041957387667,
+          "reason": "PASS"
+        }
+      },
+      "calibrated_outer_metrics": {
+        "MAE": 1.4158124999999941,
+        "RMSE": 1.7498433166465204,
+        "MAPE_if_safe": {
+          "value": 0.018668215705997596,
+          "reason": "PASS"
+        }
+      },
+      "metric_delta_outer": {
+        "MAE": 0.6678124999999966,
+        "RMSE": 0.9248536197411587,
+        "MAPE_if_safe": 0.008902173748609929,
+        "mape_status": "PASS"
+      },
+      "r_operational_delta_outer": 0.049828490300115894,
+      "r_aligned_delta_outer": 0.45259772046343194,
+      "oos_classification": "OOS_METRICS_WORSE",
+      "out_of_sample_gate": "REVIEW",
+      "out_of_sample_gate_reason": "classification=OOS_METRICS_WORSE. ComparabilityReview is REVIEW. LicenseTermsScan is REVIEW. R_aligned_delta_outer is not negative.",
+      "claim_allowed_public": false,
+      "publication_gate": "BLOCK",
+      "comparability_status": "REVIEW",
+      "license_terms_scan": "REVIEW",
+      "leakage_check": "PASS",
+      "backtest_leakage_guard": {
+        "leakage_check": "PASS",
+        "findings": [],
+        "critical": false
+      }
+    }
+  ],
+  "summary": {
+    "oos_metrics_improved_count": 0,
+    "oos_metrics_mixed_count": 0,
+    "oos_metrics_worse_count": 3,
+    "oos_r_only_improved_count": 0,
+    "blocked_insufficient_data_count": 0,
+    "blocked_leakage_count": 0
+  },
+  "interpretation": {
+    "main_result": "Nested backtest is mixed or review-gated; treat as internal diagnostic only.",
+    "public_claim_allowed": false,
+    "publication_gate_reason": "LicenseTermsScan/ComparabilityReview/human legal review pending.",
+    "claim_level": "internal_technical_evidence_only"
+  },
+  "scans": {
+    "LicenseTermsScan": "REVIEW",
+    "LeakageCheck": "PASS",
+    "BacktestLeakageGuard": "PASS",
+    "PublicationGateScan": "PASS",
+    "ComparabilityReview": "REVIEW"
+  },
+  "payload_sha256": "f4afdea0fd000f8366256c65f2891e9704884b0bbe626aeaa70a6177646e27ac",
+  "sha256_scope": "canonical_json_without_sha256_fields"
+}

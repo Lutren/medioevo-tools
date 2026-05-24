@@ -1,0 +1,12 @@
+{
+  "proposalId": "agp-4ca98f6bb0c6d47d",
+  "taskTitle": "Run 8 sandbox task",
+  "taskDescription": "Review pending proposals and decide whether Run 8 should sandbox them.",
+  "assignedAgent": "canon-auditor-agent",
+  "priority": "P1",
+  "acceptanceCriteria": [
+    "Proposal remains non-executing",
+    "Evidence is attached before approval"
+  ],
+  "sandboxOnly": true
+}

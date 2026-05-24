@@ -1,0 +1,28 @@
+{
+  "counts": {
+    "document_review_files": 0,
+    "document_text_files": 33,
+    "files": 648,
+    "lines": 291270,
+    "signal_lines": 29614,
+    "technology_atoms": 29,
+    "text_files": 577,
+    "variant_groups": 118
+  },
+  "evidence": {
+    "line_audit_manifest": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_master_index\\LINE_AUDIT_MANIFEST.jsonl",
+    "line_signal_index": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_master_index\\LINE_SIGNAL_INDEX.jsonl",
+    "project_graph": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_master_index\\MASTER_PROJECT_GRAPH.json",
+    "technology_atoms": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_master_index\\TECHNOLOGY_ATOMS.json"
+  },
+  "generated_at_utc": "2026-05-07T17:23:22+00:00",
+  "not_claimed": [
+    "No physical source tree migration was performed.",
+    "No public publication/deploy/push was performed.",
+    "No ZIP/archive or unsupported binary was treated as fully absorbed text by this pass.",
+    "No DUAT/GEODIA boot success is claimed by the audit alone."
+  ],
+  "schema": "wabi.cerebro_functional_status.v1",
+  "status": "PARTIAL_LOCAL_FUNCTIONAL",
+  "workspace": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-"
+}

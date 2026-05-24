@@ -1,0 +1,68 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "20260520T172434Z",
+  "project": "DUAT/RPG",
+  "fingerprint": "DUAT-v1.5-FULL-LOCAL-REVIEW",
+  "R_close": 0.16,
+  "Phi_eff": 0.84,
+  "regime_close": "FUNCIONAL",
+  "autonomy_level_used": 4,
+  "actiongate_summary": {
+    "approved": 10,
+    "review_required": 0,
+    "blocked": 0
+  },
+  "files_created_or_modified": [
+    "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\artifacts\\duat-city\\docs\\asset_manifest_v1_5.json",
+    "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\artifacts\\duat-city\\docs\\TEST_REPORT_v1_5.md",
+    "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\artifacts\\duat-city\\docs\\PERFORMANCE_BENCHMARK_v1_5.json",
+    "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\artifacts\\duat-city\\docs\\PERFORMANCE_BENCHMARK_REPORT_v1_5.md",
+    "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\artifacts\\duat-city\\docs\\VISUAL_QA_REPORT_v1_5.json",
+    "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\artifacts\\duat-city\\docs\\VISUAL_QA_REPORT_v1_5.md",
+    "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\artifacts\\duat-city\\docs\\AUDIO_QA_REPORT_v1_5.json",
+    "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\artifacts\\duat-city\\docs\\AUDIO_QA_REPORT_v1_5.md",
+    "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\artifacts\\duat-city\\docs\\v1_5_winapp_qa\\WINAPP_QA_v1_5.json",
+    "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\artifacts\\duat-city\\docs\\v1_5_winapp_qa\\screenshots",
+    "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\qa_artifacts\\release_validation\\RUN_DUAT_FULL_LOCAL_REVIEW_v1_5_20260520_105426\\screenshots",
+    "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\artifacts\\duat-city\\docs\\HANDOFF_FINAL_REVIEW_v1_5.json",
+    "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\artifacts\\duat-city\\docs\\CODEX_FINAL_HANDOFF_v1_5.md",
+    "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\artifacts\\duat-city\\docs\\SESSION_FINGERPRINT_FINAL_REVIEW_v1_5.json",
+    "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\artifacts\\duat-city\\docs\\NEXT_SESSION_BRIEF_FINAL_REVIEW_v1_5.md"
+  ],
+  "commands_run": [
+    "python tools\\release\\pending_review.py --write --quiet",
+    "node tools\\scan-local-review-v1_5.mjs docs\\asset_manifest_v1_5.json <roots>",
+    "corepack pnpm --filter @workspace/duat-city run test",
+    "corepack pnpm --filter @workspace/duat-city run typecheck",
+    "corepack pnpm --filter @workspace/duat-city run build",
+    "corepack pnpm --filter @workspace/duat-city run winapp:build",
+    "corepack pnpm --filter @workspace/duat-city run winapp:smoke",
+    "node tools\\run-winapp-benchmark-v1_4.mjs docs\\PERFORMANCE_BENCHMARK_v1_5.json ...",
+    "node tools\\run-winapp-qa-v1_5.mjs docs\\v1_5_winapp_qa ...",
+    "node --check tools\\scan-local-review-v1_5.mjs && node --check tools\\run-winapp-qa-v1_5.mjs"
+  ],
+  "tests": {
+    "status": "passed",
+    "evidence": [
+      "pending_review date=2026-05-20 active_dedup=32 claudio_open=0",
+      "filesSeen=8638; relevantFiles=4095; zipEntriesIncluded=4445",
+      "106 test files / 313 tests passed",
+      "tsc -p tsconfig.json --noEmit",
+      "vite build completed; 249 modules transformed",
+      "DUATCity.exe sha256=12731EC7C6CF0E1D662C3DB87C17D717DFFD89BD9DE0F03C31821D0A11E0969E",
+      "httpStatus=200; jsAssetStatus=200",
+      "minAppAvgFps=59.9; threshold=30",
+      "screenshots=8; allNonblank=true; proceduralPreviewConfirmed=true",
+      "syntax checks passed"
+    ]
+  },
+  "decisions": [
+    "Keep v1.5 review local-only.",
+    "Classify protected RPG/lore sources as reference_only unless future ficha allows selective extraction.",
+    "Use DUATCity.exe local server as benchmark and QA source."
+  ],
+  "pending": [
+    "Optional manual speaker check for human-perceived audio."
+  ],
+  "next_action": "Optional manual speaker check if human-perceived audio, not just AudioContext/procedural preview, must be certified."
+}

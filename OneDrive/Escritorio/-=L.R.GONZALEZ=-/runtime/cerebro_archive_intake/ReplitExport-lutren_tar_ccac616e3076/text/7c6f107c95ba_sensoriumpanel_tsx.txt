@@ -1,0 +1,130 @@
+import { useGeodiaSimulation } from "@/contexts/SimulationContext";
+import { GeodiaCell, SensoriumChannel, observeSignal, computeEpsilon } from "@/lib/geodia";
+import { PixelBorder } from "./custom/PixelComponents";
+import { PixelMeter } from "./custom/ExtraPixelComponents";
+
+const PROFILE_WEIGHTS: Record<string, Record<string, number>> = {
+  instrument_balanced:   { photon: 1,   electric: 1,   magnetic: 1,   gravity: 1,   thermal: 1,   acoustic: 1,   chemical: 1,   temporal_phase: 1   },
+  human_visual_log:      { photon: 1.3, electric: 0.8, magnetic: 0.7, gravity: 1.1, thermal: 0.9, acoustic: 0.9, chemical: 0.9, temporal_phase: 0.9 },
+  phase_observer:        { photon: 0.8, electric: 0.8, magnetic: 1.5, gravity: 0.8, thermal: 0.8, acoustic: 0.8, chemical: 0.8, temporal_phase: 2.0 },
+  dark_gravity_observer: { photon: 0.7, electric: 0.7, magnetic: 1.5, gravity: 2.0, thermal: 0.3, acoustic: 0.7, chemical: 0.7, temporal_phase: 0.7 },
+  linguistic_human_mdl:  { photon: 0.8, electric: 1.4, magnetic: 0.8, gravity: 0.8, thermal: 0.8, acoustic: 1.8, chemical: 0.8, temporal_phase: 0.8 },
+  adversarial_systematics:{ photon: 1,  electric: 1,   magnetic: 1,   gravity: 1,   thermal: 1,   acoustic: 1,   chemical: 1,   temporal_phase: 1   },
+};
+
+// Kernels de ruido por canal Ki — específicos por dominio físico del canal
+const CHANNEL_NOISE_KERNELS: Record<string, number> = {
+  photon:        0.10,  // ruido bajo — fotones coherentes
+  electric:      0.12,  // ruido bajo — campo eléctrico estable
+  magnetic:      0.15,  // ruido medio-bajo
+  gravity:       0.08,  // ruido muy bajo — señal gravitacional estable
+  thermal:       0.30,  // ruido alto — fluctuaciones térmicas
+  acoustic:      0.25,  // ruido medio-alto — dispersión acústica
+  chemical:      0.20,  // ruido medio
+  temporal_phase:0.18,  // ruido medio-bajo
+};
+
+function computeChannels(cell: GeodiaCell | null, psi: any, profile: string, epsilon: number): SensoriumChannel[] {
+  const c = cell || {
+    resources:    psi.R,
+    knowledge:    psi.phi_eff,
+    memory:       psi.phi_eff,
+    conflict:     1 - psi.j_c,
+    signal_noise: psi.epsilon,
+    stability:    psi.j_c,
+  } as any;
+
+  const weights = PROFILE_WEIGHTS[profile] || PROFILE_WEIGHTS.instrument_balanced;
+
+  // Señales verdaderas (Πi)
+  const rawChannels: Array<{ name: string; metaphorLabel: string; signal: number; ki: number; weight: number }> = [
+    { name: "photon",        metaphorLabel: "recursos",            signal: c.resources,                       ki: CHANNEL_NOISE_KERNELS.photon,        weight: weights.photon        },
+    { name: "electric",      metaphorLabel: "conocimiento",        signal: c.knowledge,                       ki: CHANNEL_NOISE_KERNELS.electric,      weight: weights.electric      },
+    { name: "magnetic",      metaphorLabel: "memoria",             signal: c.memory,                          ki: CHANNEL_NOISE_KERNELS.magnetic,      weight: weights.magnetic      },
+    { name: "gravity",       metaphorLabel: "1 − conflicto",       signal: 1 - c.conflict,                    ki: CHANNEL_NOISE_KERNELS.gravity,       weight: weights.gravity       },
+    { name: "thermal",       metaphorLabel: "conflicto",           signal: c.conflict,                        ki: CHANNEL_NOISE_KERNELS.thermal,       weight: weights.thermal       },
+    { name: "acoustic",      metaphorLabel: "ruido señal",         signal: c.signal_noise,                    ki: CHANNEL_NOISE_KERNELS.acoustic,      weight: weights.acoustic      },
+    { name: "chemical",      metaphorLabel: "recursos·(1−ruido)",  signal: c.resources * (1 - c.signal_noise),ki: CHANNEL_NOISE_KERNELS.chemical,      weight: weights.chemical      },
+    { name: "temporal_phase",metaphorLabel: "memoria·(1−conflict)",signal: c.memory * (1 - c.conflict),       ki: CHANNEL_NOISE_KERNELS.temporal_phase,weight: weights.temporal_phase},
+  ];
+
+  return rawChannels.map(ch => {
+    // Mi(t) = √(1−ε²)·Πi + ε·Ki — operador de observación por canal
+    const observed = observeSignal(ch.signal, ch.ki, epsilon);
+    return {
+      name:         ch.name,
+      metaphorLabel:ch.metaphorLabel,
+      value:        Math.min(ch.signal, 1),
+      observed:     Math.min(observed * ch.weight, 1),
+      profileWeight:ch.weight,
+    };
+  });
+}
+
+export default function SensoriumPanel({ selectedCell }: { selectedCell: GeodiaCell | null }) {
+  const { state } = useGeodiaSimulation();
+  const { psi } = state;
+
+  // ε local de la celda seleccionada o global
+  const local_R = selectedCell
+    ? (selectedCell.conflict * 0.5 + selectedCell.signal_noise * 0.3 + (1 - selectedCell.stability) * 0.2)
+    : psi.R;
+  const local_eps = computeEpsilon(local_R);
+
+  const channels = computeChannels(selectedCell, psi, state.observerProfile, local_eps);
+
+  // Heff(X|R) = H(X) · Φeff(R) — información efectiva por canal
+  const intrinsic_clarity = 0.85;
+  const computed_clarity  = intrinsic_clarity * psi.phi_eff;
+
+  return (
+    <div className="space-y-4">
+      <div className="font-display text-xs border-b border-border pb-1">SENSORIUM // 8-CH — Mi(t) = √(1−ε²)·Πi + ε·Ki</div>
+
+      <div className="space-y-3">
+        {channels.map(ch => {
+          const isNoise = ch.name === "thermal" || ch.name === "acoustic";
+          return (
+            <div key={ch.name} className="space-y-1">
+              <div className="flex justify-between text-[10px] font-mono">
+                <span className="text-foreground/80">
+                  {ch.name} <span className="text-primary/50">[{ch.metaphorLabel}]</span>
+                </span>
+                <span className="flex gap-2">
+                  <span className="text-foreground/40" title="Señal verdadera Πi">{ch.value.toFixed(3)}</span>
+                  <span className="text-primary"     title="Observado Mi(t)"   >{ch.observed.toFixed(3)}</span>
+                </span>
+              </div>
+              <PixelMeter value={ch.observed} colorClass={isNoise ? "bg-accent" : "bg-primary"} />
+            </div>
+          );
+        })}
+      </div>
+
+      <div className="text-[9px] font-mono text-accent border border-accent p-1 mt-2">
+        ⚠ PROTOCOLO OSIT — valores observados via Mi(t), no señal verdadera
+      </div>
+
+      <PixelBorder className="mt-4 space-y-2">
+        <div className="text-[10px] font-display font-bold">HEFF(X|R) — INFORMACIÓN EFECTIVA</div>
+        <div className="font-mono text-[9px] text-foreground/50 mb-1">Heff = H(X) · Φeff(R)</div>
+        <div className="flex justify-between text-xs font-mono">
+          <span>ε_canal:</span>
+          <span className="text-accent">{local_eps.toFixed(4)}</span>
+        </div>
+        <div className="flex justify-between text-xs font-mono">
+          <span>claridad_obs:</span>
+          <span className="text-success">{computed_clarity.toFixed(4)}</span>
+        </div>
+        <div className="flex justify-between text-xs font-mono">
+          <span>I_obs:</span>
+          <span className="text-primary">{psi.I_obs.toFixed(4)}</span>
+        </div>
+        <div className="flex justify-between text-xs font-mono">
+          <span>Φeff:</span>
+          <span className="text-primary">{psi.phi_eff.toFixed(4)}</span>
+        </div>
+      </PixelBorder>
+    </div>
+  );
+}

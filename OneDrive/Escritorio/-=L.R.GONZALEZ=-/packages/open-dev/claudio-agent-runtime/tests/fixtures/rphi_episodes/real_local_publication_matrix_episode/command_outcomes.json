@@ -1,0 +1,11 @@
+{
+  "commands": [
+    {
+      "event_id": "evt-real-pub-matrix-command-001",
+      "command": "python local_book_release_matrix_inventory --metadata-only",
+      "status": "ok",
+      "actiongate": "APPROVE",
+      "evidence": "35 rows, scan summary and reconstruction verified"
+    }
+  ]
+}

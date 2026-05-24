@@ -1,0 +1,33 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "20260520-DUAT-v1.3",
+  "project": "DUAT City",
+  "fingerprint": "DUAT-v1.3-GAME-OS-DISK-FORENSICS-LANGUAGE-CORTEX",
+  "R_close": 0.16,
+  "Phi_eff": 0.86,
+  "regime_close": "FUNCIONAL",
+  "autonomy_level_used": 4,
+  "actiongate_summary": {
+    "approved": 18,
+    "review_required": 2,
+    "blocked": 0
+  },
+  "tests": {
+    "status": "passed",
+    "evidence": [
+      "84 files / 280 tests PASS",
+      "typecheck PASS",
+      "build PASS",
+      "HTTP smoke 200"
+    ]
+  },
+  "boundaries": {
+    "wabi_execution_allowed": false,
+    "sandbox_execution_allowed": false,
+    "real_apply_allowed": false,
+    "unknown_zip_code_executed": false,
+    "publication_allowed": false,
+    "assets_copied_v1_3": 0
+  },
+  "next_action": "DUAT v1.3.1 deterministic local audio/game-feel adapter"
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "20260520-DUAT-v1.3.1",
+  "project": "DUAT City",
+  "fingerprint": "DUAT-v1.3.1-AUDIO-GAMEFEEL-CONTINUITY",
+  "R_close": 0.14,
+  "Phi_eff": 0.86,
+  "regime_close": "FUNCIONAL/OPTIMO",
+  "autonomy_level_used": 4,
+  "actiongate_summary": {
+    "approved": 1,
+    "review_required": 0,
+    "blocked": 0
+  },
+  "files_created_summary": [
+    "src/audio/*",
+    "src/agents/agentRelationshipGraph.ts",
+    "src/components/AudioGameFeelPanel.tsx",
+    "src/components/AgentLifeDashboardPanel.tsx",
+    "docs/*v1_3_1*",
+    "public/asset-manifest/*v1_3_1.json"
+  ],
+  "commands_run": [
+    "corepack pnpm --filter @workspace/duat-city run test",
+    "corepack pnpm --filter @workspace/duat-city run typecheck",
+    "corepack pnpm --filter @workspace/duat-city run build",
+    "Invoke-WebRequest http://127.0.0.1:18519/duat-city/",
+    "node tools/run-audio-gamefeel-benchmark-v1_3_1.mjs 160 docs/PERFORMANCE_BENCHMARK_v1_3_1.json",
+    "node tools/capture-screenshots-v1_3_1.mjs docs/screenshots/v1_3_1 18573 http://127.0.0.1:18519/duat-city/"
+  ],
+  "tests": {
+    "status": "passed",
+    "evidence": [
+      "92 files / 292 tests PASS",
+      "typecheck PASS",
+      "build PASS",
+      "HTTP 200"
+    ]
+  },
+  "boundary": {
+    "execution_allowed": false,
+    "sandbox_execution_allowed": false,
+    "real_apply_allowed": false,
+    "publication_allowed": false,
+    "cloud_used": false,
+    "assets_copied": false,
+    "external_samples_copied": false
+  },
+  "next_action": "Headed manual audio preview after local user gesture."
+}

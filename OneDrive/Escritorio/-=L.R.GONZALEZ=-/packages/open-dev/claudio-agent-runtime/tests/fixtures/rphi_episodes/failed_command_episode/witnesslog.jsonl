@@ -1,0 +1,1 @@
+{"schema_version":"claudio.witness_log.v0.1","event_id":"evt-failed-001","created_at":"2026-05-15T00:00:00Z","command":"pytest synthetic","status":"failed","actiongate":"APPROVE","result_summary":{"kind":"dict","redacted":true,"evidence":"failure log"}}

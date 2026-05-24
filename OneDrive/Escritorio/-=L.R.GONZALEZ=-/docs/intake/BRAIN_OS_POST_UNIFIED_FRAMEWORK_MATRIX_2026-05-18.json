@@ -1,0 +1,311 @@
+{
+  "schema_version": "brain_os.post_unified_framework_matrix.v1",
+  "created_date": "2026-05-18",
+  "status": "LOCAL_INTAKE_GOVERNANCE",
+  "decision": "INTEGRATE_DELTAS_BY_UNIQUENESS_AND_CONVERGENCE",
+  "gate_summary": {
+    "ActionGate": "APPROVE_LOCAL_DOCS_ONLY",
+    "RuntimeImport": "BLOCK",
+    "PublicationGate": "BLOCK",
+    "RawAdoption": "BLOCK"
+  },
+  "sources": [
+    {
+      "id": "portfolio_medi_post",
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\# 00 — LEER PRIMERO Portafolio MEDI.txt",
+      "sha256": "C1169FF35BC0ED886992C330121B3EAC744A5B051136A15C6FF256C085B6DDAD",
+      "kind": "RAW_SOURCE",
+      "intake_action": "SELECTIVE_CLAIM_EXTRACTION_ONLY",
+      "ficha": "docs/intake/curador_fichas/brain_os_post/2026-05-18_portafolio_medi.md",
+      "preflight_before_ficha": "NEEDS_FICHA_BEFORE_USE",
+      "preflight_after_ficha": "REGISTERED_CONTINUE_WITH_BOUNDARY"
+    },
+    {
+      "id": "osit_epistemic_engine_post",
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\Untitled.txt",
+      "sha256": "F5C992E17FAE57AB6B3F43488F0017BC635C0FE84A97EF1BBD34B5A90B84DF4B",
+      "kind": "RAW_SOURCE_CODE_PROTOTYPE",
+      "intake_action": "CODE_INSIGHT_ONLY",
+      "ficha": "docs/intake/curador_fichas/brain_os_post/2026-05-18_osit_epistemic_engine.md",
+      "preflight_before_ficha": "NEEDS_FICHA_BEFORE_USE_NAME_ONLY_PARTIAL",
+      "preflight_after_ficha": "REGISTERED_CONTINUE_WITH_BOUNDARY"
+    }
+  ],
+  "layers": [
+    "Boundary",
+    "Math/State",
+    "Gate",
+    "Continuity",
+    "Falsifiers"
+  ],
+  "deltas": [
+    {
+      "id": "boundary.publication_gate_and_raw_adoption",
+      "layer": "Boundary",
+      "source_id": "portfolio_medi_post",
+      "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\# 00 — LEER PRIMERO Portafolio MEDI.txt",
+      "source_sha256": "C1169FF35BC0ED886992C330121B3EAC744A5B051136A15C6FF256C085B6DDAD",
+      "line_evidence": [
+        "5-7",
+        "160-165"
+      ],
+      "delta": "Mantener frontera interna/local, publicacion bloqueada y adopcion cruda bloqueada para fuentes POST.",
+      "target_lane": "docs/intake, VISIBILITY_MATRIX.md, publication review docs",
+      "claim_boundary": "BLOCK_PUBLICATION_AND_RAW_ADOPTION",
+      "evidence_state": "CERTEZA_FROM_EXACT_PATH_FICHA_AND_EXISTING_POLICY",
+      "action_gate": "APPROVE_LOCAL_DOCS_ONLY",
+      "integration_status": "OVERLAP_REINFORCES_EXISTING",
+      "existing_refs": [
+        "VISIBILITY_MATRIX.md",
+        "docs/intake/BRAIN_OS_POST_SELECTIVE_EXTRACTION_2026-05-18.md"
+      ]
+    },
+    {
+      "id": "boundary.epistemic_labels",
+      "layer": "Boundary",
+      "source_id": "portfolio_medi_post",
+      "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\# 00 — LEER PRIMERO Portafolio MEDI.txt",
+      "source_sha256": "C1169FF35BC0ED886992C330121B3EAC744A5B051136A15C6FF256C085B6DDAD",
+      "line_evidence": [
+        "29-33"
+      ],
+      "delta": "Usar CERTEZA, INFERENCIA, INCOGNITA y BLOQUEO como etiquetas de curaduria y reporte, no como prueba cientifica.",
+      "target_lane": "curador fichas, ActionGate docs, ObservationEnvelope-style reports",
+      "claim_boundary": "OPERATIONAL_LABELS_ONLY",
+      "evidence_state": "OVERLAP_REINFORCES_EXISTING",
+      "action_gate": "APPROVE_LOCAL_DOCS_ONLY",
+      "integration_status": "OVERLAP_REINFORCES_EXISTING",
+      "existing_refs": [
+        "tests/release/test_curador_preflight_selective_extraction.py",
+        "apps/local/wabi-sabi/tests/test_formal_contract_intake.py"
+      ]
+    },
+    {
+      "id": "boundary.overclaim_downgrade",
+      "layer": "Boundary",
+      "source_id": "portfolio_medi_post",
+      "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\# 00 — LEER PRIMERO Portafolio MEDI.txt",
+      "source_sha256": "C1169FF35BC0ED886992C330121B3EAC744A5B051136A15C6FF256C085B6DDAD",
+      "line_evidence": [
+        "108-112",
+        "157",
+        "973-989",
+        "1013-1016"
+      ],
+      "delta": "Claims fuertes, etiquetas de prueba y derivacion se degradan hasta que exista evidencia local actual y revision primaria.",
+      "target_lane": "claim falsification register, public copy review, research backlog",
+      "claim_boundary": "REQUIRES_EVIDENCE_OR_BLOCKED_CLAIM",
+      "evidence_state": "REQUIRES_EVIDENCE",
+      "action_gate": "REVIEW",
+      "integration_status": "REQUIRES_EVIDENCE",
+      "existing_refs": [
+        "docs/intake/BRAIN_OS_POST_CLAIMS_DELTA_2026-05-18.md"
+      ]
+    },
+    {
+      "id": "math_state.r_phi_comparison",
+      "layer": "Math/State",
+      "source_id": "osit_epistemic_engine_post",
+      "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\Untitled.txt",
+      "source_sha256": "F5C992E17FAE57AB6B3F43488F0017BC635C0FE84A97EF1BBD34B5A90B84DF4B",
+      "line_evidence": [
+        "54-90",
+        "127-160",
+        "301-310",
+        "381-400"
+      ],
+      "delta": "OSITMath y RCalibrator sirven como comparacion para R/Phi, no como reemplazo de helpers probados.",
+      "target_lane": "apps/local/wabi-sabi/wabi_sabi/core/geodia_math_core.py; packages/open-dev/claudio-agent-runtime/claudio_agent_runtime/rphi_budget.py; packages/open-dev/claudio-agent-runtime/claudio_agent_runtime/rphi_calibration.py",
+      "claim_boundary": "CODE_INSIGHT_ONLY_NO_RUNTIME_IMPORT",
+      "evidence_state": "REQUIRES_EVIDENCE",
+      "action_gate": "REVIEW",
+      "integration_status": "REQUIRES_EVIDENCE",
+      "existing_refs": [
+        "apps/local/wabi-sabi/tests/test_formal_contract_intake.py"
+      ]
+    },
+    {
+      "id": "math_state.psi_state_observation_envelope",
+      "layer": "Math/State",
+      "source_id": "osit_epistemic_engine_post",
+      "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\Untitled.txt",
+      "source_sha256": "F5C992E17FAE57AB6B3F43488F0017BC635C0FE84A97EF1BBD34B5A90B84DF4B",
+      "line_evidence": [
+        "240-294",
+        "774-788"
+      ],
+      "delta": "PSIState y ObservationEnvelope convergen con el contrato Wabi de observation envelope; comparar vocabulario, no duplicar fuente.",
+      "target_lane": "apps/local/wabi-sabi/wabi_sabi/core/observation.py; Wabi observation/runtime state docs",
+      "claim_boundary": "VOCABULARY_ALIGNMENT_ONLY",
+      "evidence_state": "OVERLAP_REINFORCES_EXISTING",
+      "action_gate": "APPROVE_LOCAL_DOCS_ONLY",
+      "integration_status": "OVERLAP_REINFORCES_EXISTING",
+      "existing_refs": [
+        "apps/local/wabi-sabi/tests/test_formal_contract_intake.py"
+      ]
+    },
+    {
+      "id": "gate.ghostgate_actiongate_split",
+      "layer": "Gate",
+      "source_id": "osit_epistemic_engine_post",
+      "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\Untitled.txt",
+      "source_sha256": "F5C992E17FAE57AB6B3F43488F0017BC635C0FE84A97EF1BBD34B5A90B84DF4B",
+      "line_evidence": [
+        "485-540",
+        "721-751",
+        "801-802"
+      ],
+      "delta": "GhostGate queda como plan/simulacion antes de actuar; ActionGate queda como permiso de ejecucion con evidencia.",
+      "target_lane": "packages/open-dev/claudio-agent-runtime GhostGate planning lane; Wabi ActionGate contracts",
+      "claim_boundary": "PLAN_VS_EXECUTE_SEPARATION",
+      "evidence_state": "OVERLAP_REINFORCES_EXISTING",
+      "action_gate": "APPROVE_LOCAL_DOCS_ONLY",
+      "integration_status": "OVERLAP_REINFORCES_EXISTING",
+      "existing_refs": [
+        "apps/local/wabi-sabi/tests/test_formal_contract_intake.py",
+        "packages/open-dev/claudio-agent-runtime"
+      ]
+    },
+    {
+      "id": "continuity.handoff_fingerprint_truth",
+      "layer": "Continuity",
+      "source_id": "osit_epistemic_engine_post",
+      "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\Untitled.txt",
+      "source_sha256": "F5C992E17FAE57AB6B3F43488F0017BC635C0FE84A97EF1BBD34B5A90B84DF4B",
+      "line_evidence": [
+        "419-469",
+        "806-808",
+        "921-923"
+      ],
+      "delta": "Handoff/fingerprint/brief deben derivarse de resultados reales; el texto de cierre no puede declarar un benchmark que no paso.",
+      "target_lane": "SESSION_FINGERPRINT.json, NEXT_SESSION_BRIEF.md, Claudio handoff docs",
+      "claim_boundary": "DERIVED_FROM_REAL_RESULTS_ONLY",
+      "evidence_state": "FALSIFIER_OR_DEFECT_REQUIRES_EVIDENCE",
+      "action_gate": "REVIEW",
+      "integration_status": "FALSIFIER_OR_DEFECT",
+      "existing_refs": [
+        "docs/intake/BRAIN_OS_POST_CODE_INSIGHTS_2026-05-18.md"
+      ]
+    },
+    {
+      "id": "falsifiers.benchmark_negative_fixtures",
+      "layer": "Falsifiers",
+      "source_id": "osit_epistemic_engine_post",
+      "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\Untitled.txt",
+      "source_sha256": "F5C992E17FAE57AB6B3F43488F0017BC635C0FE84A97EF1BBD34B5A90B84DF4B",
+      "line_evidence": [
+        "615",
+        "923",
+        "935-936"
+      ],
+      "delta": "Conservar benchmark 5/6, falla F1_regime_prediction, handoff falso y tolerancia Lyapunov como falsificadores de cualquier runtime futuro.",
+      "target_lane": "tests/release; apps/local/wabi-sabi tests; Claudio R/Phi backlog",
+      "claim_boundary": "NEGATIVE_FIXTURE_REQUIRES_EVIDENCE",
+      "evidence_state": "FALSIFIER_OR_DEFECT_REQUIRES_EVIDENCE",
+      "action_gate": "REVIEW",
+      "integration_status": "FALSIFIER_OR_DEFECT",
+      "existing_refs": [
+        "docs/intake/BRAIN_OS_POST_CODE_INSIGHTS_2026-05-18.md"
+      ]
+    }
+  ],
+  "claim_guardrails": [
+    {
+      "term": "PASS",
+      "source_id": "portfolio_medi_post",
+      "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\# 00 — LEER PRIMERO Portafolio MEDI.txt",
+      "source_sha256": "C1169FF35BC0ED886992C330121B3EAC744A5B051136A15C6FF256C085B6DDAD",
+      "line_evidence": [
+        "169-177"
+      ],
+      "target_lane": "intake evidence queue",
+      "claim_boundary": "SOURCE_SELF_REPORT_REQUIRES_EVIDENCE",
+      "evidence_state": "REQUIRES_EVIDENCE",
+      "action_gate": "REVIEW"
+    },
+    {
+      "term": "PROBADO",
+      "source_id": "portfolio_medi_post",
+      "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\# 00 — LEER PRIMERO Portafolio MEDI.txt",
+      "source_sha256": "C1169FF35BC0ED886992C330121B3EAC744A5B051136A15C6FF256C085B6DDAD",
+      "line_evidence": [
+        "973-989"
+      ],
+      "target_lane": "research-only backlog",
+      "claim_boundary": "REQUIRES_EVIDENCE",
+      "evidence_state": "REQUIRES_EVIDENCE",
+      "action_gate": "REVIEW"
+    },
+    {
+      "term": "derivada no conjetura",
+      "source_id": "portfolio_medi_post",
+      "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\# 00 — LEER PRIMERO Portafolio MEDI.txt",
+      "source_sha256": "C1169FF35BC0ED886992C330121B3EAC744A5B051136A15C6FF256C085B6DDAD",
+      "line_evidence": [
+        "1013-1016"
+      ],
+      "target_lane": "research-only backlog",
+      "claim_boundary": "REQUIRES_EVIDENCE",
+      "evidence_state": "REQUIRES_EVIDENCE",
+      "action_gate": "REVIEW"
+    },
+    {
+      "term": "Benchmark 5/5 OK",
+      "source_id": "osit_epistemic_engine_post",
+      "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\Untitled.txt",
+      "source_sha256": "F5C992E17FAE57AB6B3F43488F0017BC635C0FE84A97EF1BBD34B5A90B84DF4B",
+      "line_evidence": [
+        "923"
+      ],
+      "target_lane": "handoff truth tests and docs",
+      "claim_boundary": "FALSE_HANDOFF_REQUIRES_EVIDENCE",
+      "evidence_state": "FALSIFIER_OR_DEFECT_REQUIRES_EVIDENCE",
+      "action_gate": "REVIEW"
+    }
+  ],
+  "falsifiers": [
+    {
+      "id": "benchmark_score_partial",
+      "raw_claim": "SCORE: 5/6",
+      "source_id": "osit_epistemic_engine_post",
+      "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\Untitled.txt",
+      "source_sha256": "F5C992E17FAE57AB6B3F43488F0017BC635C0FE84A97EF1BBD34B5A90B84DF4B",
+      "line_evidence": [
+        "615"
+      ],
+      "target_lane": "benchmark negative fixtures",
+      "claim_boundary": "NOT_A_PASS_REQUIRES_EVIDENCE",
+      "evidence_state": "FALSIFIER_OR_DEFECT_REQUIRES_EVIDENCE",
+      "action_gate": "REVIEW"
+    },
+    {
+      "id": "regime_prediction_failed",
+      "raw_claim": "F1_regime_prediction",
+      "source_id": "osit_epistemic_engine_post",
+      "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\Untitled.txt",
+      "source_sha256": "F5C992E17FAE57AB6B3F43488F0017BC635C0FE84A97EF1BBD34B5A90B84DF4B",
+      "line_evidence": [
+        "615"
+      ],
+      "target_lane": "R/Phi regime calibration tests",
+      "claim_boundary": "FAILED_PARTIAL_REQUIRES_EVIDENCE",
+      "evidence_state": "FALSIFIER_OR_DEFECT_REQUIRES_EVIDENCE",
+      "action_gate": "REVIEW"
+    },
+    {
+      "id": "lyapunov_tolerance_bug",
+      "raw_claim": "lambda=0.0000 -> INESTABLE",
+      "source_id": "osit_epistemic_engine_post",
+      "source_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\POST\\Untitled.txt",
+      "source_sha256": "F5C992E17FAE57AB6B3F43488F0017BC635C0FE84A97EF1BBD34B5A90B84DF4B",
+      "line_evidence": [
+        "935-936"
+      ],
+      "target_lane": "math/state tolerance fixtures",
+      "claim_boundary": "REQUIRES_EPSILON_TEST",
+      "evidence_state": "FALSIFIER_OR_DEFECT_REQUIRES_EVIDENCE",
+      "action_gate": "REVIEW"
+    }
+  ],
+  "next_gate": "Use this matrix to select convergent deltas and negative fixtures; do not import runtime code or publish claims until target-lane tests and evidence exist."
+}

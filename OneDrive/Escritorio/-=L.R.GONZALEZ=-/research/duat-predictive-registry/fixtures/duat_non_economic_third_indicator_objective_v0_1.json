@@ -1,0 +1,44 @@
+{
+  "objective_id": "DUAT_GEODIA_DEMOGRAPHY_LIFE_EXPECTANCY_ONE_STEP_FORECAST_v0_1",
+  "version": "0.1",
+  "status": "internal_benchmark",
+  "synthetic": false,
+  "target_indicator": "demography.life_expectancy_at_birth.total",
+  "canonical_indicator_id": "demography.life_expectancy_at_birth.total",
+  "target_type": "numeric_time_series",
+  "prediction_task": "one_step_ahead_forecast",
+  "objective_note": "Real offline fixture benchmark over GEODIA harmonized life-expectancy entries. Cross-source comparability is STRONG_PROXY, not EXACT; this validates local retrospective mechanics only.",
+  "data_policy": {
+    "offline_only": true,
+    "private_data": false,
+    "external_api": false,
+    "political_targeting": false,
+    "publication_gate": "BLOCK"
+  },
+  "inputs": {
+    "preferred_sources": [
+      "research/duat-predictive-registry/fixtures",
+      "research/geodia-social-observatory/fixtures"
+    ],
+    "fixture_paths": [
+      "research/geodia-social-observatory/fixtures/world_bank_mexico_2018_2023_fixture.json",
+      "research/geodia-social-observatory/fixtures/eurostat_social_epoch_2018_2023_fixture.json"
+    ],
+    "crosswalk_path": "research/geodia-social-observatory/fixtures/geodia_indicator_crosswalk_v0_1.json",
+    "accepted_comparability_classes": ["STRONG_PROXY"]
+  },
+  "evaluation": {
+    "split": "TimeSeriesSplit",
+    "minimum_train_points": 3,
+    "baselines": ["last_value", "moving_average"],
+    "enhanced_methods": ["SourceQuality", "ForecastGate", "WeightedEnsemble", "Coverage", "Freshness", "CalibrationScore"],
+    "metrics": ["MAE", "RMSE", "MAPE_if_safe", "R_pred", "R_before", "R_after", "R_delta"]
+  },
+  "gates": {
+    "required": ["GhostGate", "ActionGate", "SecretScan", "BoundaryCheck", "LicenseTermsScan", "LeakageCheck", "PublicationGateScan"],
+    "stop_on_secret": true,
+    "stop_on_private_data": true,
+    "stop_on_target_leakage": true,
+    "license_review_is_publication_block": true
+  }
+}

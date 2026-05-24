@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "medioevo.observation_envelope.v0.1",
+  "title": "ObservationEnvelope",
+  "type": "object",
+  "required": ["schema_version", "observation_id", "agent_id", "channel", "raw_observation_proxy", "missingness", "noise", "contradiction", "confidence", "timestamp", "boundary"],
+  "properties": {
+    "schema_version": { "const": "medioevo.observation_envelope.v0.1" },
+    "observation_id": { "type": "string" },
+    "agent_id": { "type": "string" },
+    "channel": { "type": "string" },
+    "raw_observation_proxy": { "type": "object" },
+    "missingness": { "type": "number" },
+    "noise": { "type": "number" },
+    "contradiction": { "type": "number" },
+    "confidence": { "type": "number" },
+    "timestamp": { "type": "string" },
+    "spatial_ref": { "type": "object" },
+    "evidence_refs": { "type": "array" },
+    "boundary": { "type": "object" }
+  },
+  "additionalProperties": false
+}
+

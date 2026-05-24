@@ -28,6 +28,7 @@ Este mapa es inferido por rutas, manifests y nombres. No es autorizacion de publ
 | `packages\open-dev\gemma-observacionismo-cleanup` | limpieza/observacion de modelos | OPEN | MIT | nuevo toolkit publico-safe con fixtures sinteticos |
 | `packages\open-dev\obs-safe-integration-kit` | OBS Safe Integration Kit / ActionGate adapter kernel | OPEN | MIT | ZIP/staging local verificados; manifest 20 files/0 blocked; secret scans fuente/ZIP/staging `0`; publicacion externa `BLOCK` |
 | `packages\open-dev\duat-genesis` | DUAT Genesis synthetic simulation sandbox | OPEN_PUBLIC_REPO_LIVE | MIT | paquete publico sintetico creado; tests `3 passed`; ZIP `f672d974...`, staging Git limpio `3488b49`, repo publicado `https://github.com/Lutren/duat-genesis`; no contiene ingenieria privada DUAT Geodia, RPG/TCG ni claims cientificos |
+| `packages\open-dev\claudio-agent-runtime` | Claudio Public Agent Runtime / DUAT Operator Shell P0/P1 kernel | OPEN_LOCAL_P0_REVIEW | LEGAL_REVIEW_REQUIRED | paquete stdlib-only local dry-run creado desde patrones Mercury sin copiar codigo; tests `15 passed`; scan focalizado `count_reported=0`; incluye WitnessLog, GhostGate plan y execute/rollback local limitado; canales externos/publicacion `REVIEW` |
 | `hackathons\google-rapid-agent-2026` | Agent Safety Gate for Real Work / Google Rapid Agent Hackathon | OPEN_PUBLIC_REPO_LIVE | MIT | repo limpio publicado en `https://github.com/Lutren/rapid-agent-guardian`; cloud/partner MCP pendiente de reglas finales |
 | `research\geodia-social-observatory` | GEODIA Social Observatory | INTERNAL_RESEARCH | propietario/research | MVP local privado; contratos sociales, fixtures offline, backtest y publication gate `BLOCK` |
 | `research\obs-info-kernel` | Observacionismo anti-informacion / informacion oscura / EOR / Operator Atlas kernel | INTERNAL_RESEARCH | license review required | paquete limpio extraido desde Downloads; EOR/AIA, perfiles K_source, guardas epistémicas, HypothesisScorer y estados dark_* integrados; tests pasan; no publicar ni mover a open-dev sin validacion de claims/licencia |
@@ -35,9 +36,10 @@ Este mapa es inferido por rutas, manifests y nombres. No es autorizacion de publ
 | `apps\commercial\asistente-negocio` | Asistente Negocio | COMMERCIAL | propietario comercial | Windows current-user installer/E2E QA; clean VM/legal/signing pendientes |
 | `apps\commercial\flujocrm` | FlujoCRM | COMMERCIAL | propietario comercial | lockfile/audit/smoke, ZIP fuente, Windows installer, current-user install/launch/uninstall QA, SQLite storage E2E y customer pilot copy verificados; clean VM y firma/legal pendientes |
 | `apps\commercial\mini-office` | Mini Office | COMMERCIAL | propietario comercial | runtime/test local OK; copy/licencia/installers/generators limpiados; venta bloqueada por legal, clean-machine, paquete final y checkout |
-| `packages\paid\duat-templates` | DUAT Templates paid pack | COMMERCIAL_PUBLISHED | propietario comercial | ZIP `03c926b5...`, manifest 8 files/0 blocked, source/artifact secret scans 0, path/claims scan OK, Gumroad publicado `https://lrgonzalez.gumroad.com/l/duat-templates` |
+| `packages\paid\duat-templates` | DUAT Templates paid pack | COMMERCIAL_PUBLISHED | propietario comercial | ZIP `03c926b5...`, manifest 8 files/0 blocked, source/artifact secret scans 0, path/claims scan OK, Gumroad publicado `https://lrgonzalez.gumroad.com/l/duat-templates`; portada/product assets v1 generados |
+| `packages\paid\medioevo-agent-ops-pack` | MEDIOEVO Agent Ops Pack | COMMERCIAL_PUBLISHED | propietario comercial | ZIP `7cf8fdf5...`, source/artifact secret scans 0, claims/path scrub OK, Gumroad `https://lrgonzalez.gumroad.com/l/medioevo-agent-ops-pack`; portada/product assets v1 generados |
 | `docs\product\wave-collapse.md` | Wave Function Collapse | COMMERCIAL_DRAFT | propietario comercial | MVP 1 Document Collapse local-only; landing local no desplegada |
-| `books\editorial` | canon, muestras y borradores | BOOKS_EDITORIAL | all rights reserved | solo material editorial aprobado; no libros completos movidos |
+| `books\editorial` | canon, muestras, borradores y exports internos | BOOKS_EDITORIAL | all rights reserved | `internal_exports\DERIVA_INTERNAL_EXPORT_2026-05-17`, `FRAGMENTOS_INTERNAL_EXPORT_2026-05-22` y `CALIBRACION_INTERNAL_EXPORT_2026-05-22` contienen texto completo interno con `PublicationGate=BLOCK`; no son public staging |
 | `game-private` | frontera del videojuego | PRIVATE_BOUNDARY | all rights reserved | documentacion/frontera solamente; fuente activa no movida |
 | `docs\developer\OPEN_SOURCE_MAX_PATRIMONY_IMPLEMENTATION_2026-05-02.md` | Open Source Max + Patrimony Guard | GOVERNANCE | n/a | decision de carril: abrir herramientas, proteger patrimonio |
 | `docs\developer\TECHNOLOGY_IMPLEMENTATION_BACKLOG_2026-05-02.md` | Technology implementation backlog | GOVERNANCE | n/a | cola accionable desde curador |
@@ -107,6 +109,7 @@ Este mapa es inferido por rutas, manifests y nombres. No es autorizacion de publ
 - `ai-web-gateway-observacionista` como gateway de observacion/evidence envelopes, sin credenciales ni browser action insegura
 - `obs-info-kernel-lite` como claim registry/evidence store con corpus sintetico
 - `obs-safe-integration-kit` como kernel local-first con `ObservationEnvelope`, `ActionGate`, `EvidenceStore`, wrappers dry-run y docs de frontera
+- `claudio-agent-runtime` como kernel P0 para DUAT Operator Shell: CLI stdlib-only con `doctor`, `permissions check`, `skills list`, `memory status`, `tasks list` y `brief`
 - `observational-calibration-toolkit` como schemas/falsadores/calibracion operativa low-claim
 - `duat-genesis` como laboratorio sintetico de simulacion observable/falsadores, sin RPG/canon privado ni claims de fisica validada
 - `neurostate-ui` como prototipo local de observabilidad de estado, con privacidad y claims review antes de abrir
@@ -161,3 +164,31 @@ Crear en Fase 1:
 - `OPEN_SOURCE_STRATEGY.md`
 - `COMMERCIAL_STRATEGY.md`
 - `MIGRATION_MAP.md`
+# DESPERTAR Preview Publication Ficha
+
+- path: `PRODUCTOS_MEDIOEVO\01_LIBROS_Y_BUNDLES\despertar-preview-gumroad_20260513_232758`
+- classification: `COMMERCIAL_BOOKS_PUBLIC_SAFE_PREVIEW`
+- artifact: `releases\books\MEDIOEVO_DESPERTAR_PREVIEW_20260513_232758.zip`
+- listing: `PRODUCTOS_MEDIOEVO\01_LIBROS_Y_BUNDLES\despertar-preview-gumroad_20260513_232758\commerce\gumroad_listing.json`
+- status: `PUBLIC_ROUTE_LIVE_GUMROAD_LINK_VERIFIED_ASSETS_V1`
+- evidence: anti-AI review PASS; secret scan 0; ZIP testzip None; executables 0; nested_zips 0; release manifest `blocked_count=0`; Gumroad dry-run ActionGate PASS; public route deployed at `https://medioevo.space/despertar-preview`; Gumroad direct link `https://lrgonzalez.gumroad.com/l/dmqgzi`; portada/product assets v1 generated.
+- boundary: no full archive, no RPG/TCG, no runtime private, no science proof claim, no real bestseller claim.
+
+# MEDIOEVO GM Lite Private Repo Ficha
+
+- path: `publish_staging\github-private\medioevo-gm-lite-private-mvp`
+- source_zip: `C:\Users\L-Tyr\Downloads\medioevo-gm-lite-private-mvp.zip`
+- classification: `PRIVATE_REPO_LIVE`
+- artifact/repo: `https://github.com/Lutren/medioevo-gm-lite`
+- status: `PRIVATE_REPO_LIVE_NO_PUBLIC_DEPLOY`
+- evidence: ZIP SHA256 `0421D51E6C1EB76E7F060A589169DC8E42E7B22336F63C5E38B79D74D0CEF57C`; ActionGate shell command PASS `e90290a9-b7d5-4d0a-8c39-2e6cf283cc83`; `npm install` PASS; `npm run build` PASS; `npm audit` 0 vulnerabilities; boundary check PASS; secret scan `count_reported=0`; GitHub API `private=true`, `visibility=private`; commit `ec755ca64ed3fb949ce5908036f0be01f3e51fd8`.
+- boundary: repo privado solamente; no public GitHub, no Cloudflare/Netlify deploy, no GitHub Release, no libros completos, no RPG/TCG completo, no DUAT/GEODIA privado, no Wabi-Sabi internals, no Claudio runtime privado, no credenciales.
+
+# MEDIOEVO OSIT Formal Lab Ficha
+
+- path: `publish_staging\open-dev\medioevo-osit-formal-lab`
+- classification: `OPEN_PUBLIC_SAFE_CANDIDATE`
+- artifact/repo: `https://github.com/Lutren/medioevo-osit-formal-lab`
+- status: `PUBLIC_SAFE_FORMAL_LAB_READY_FOR_PUSH`
+- evidence: `pytest 12 passed`; compileall exit 0; source secret scan `count_reported=0`; site secret scan `count_reported=0`; claim boundary in `CLAIMS.md`; private exclusions in `PRIVATE_EXCLUSIONS.md`; license state `LEGAL_REVIEW_REQUIRED`.
+- boundary: public-safe metrics lab only; no private books, RPG/TCG, private runtime, raw prompts, real datasets, secrets, proprietary calibration or strong science claims.

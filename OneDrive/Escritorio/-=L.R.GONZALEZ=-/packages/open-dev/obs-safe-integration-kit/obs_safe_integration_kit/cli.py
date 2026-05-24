@@ -6,7 +6,20 @@ from pathlib import Path
 
 from .core import ObservationEnvelope, EstadoPSI
 from .gates import ActionGate, ActionProposal
+from .security_workbench import (
+    SecurityAction,
+    build_security_dry_run,
+    build_security_handoff,
+    build_security_report,
+    default_security_tool_catalog,
+    parse_security_fixture,
+    validate_security_scope,
+)
 from .storage import EvidenceStore
+
+
+def _load_json(path: str) -> dict:
+    return json.loads(Path(path).read_text(encoding="utf-8"))
 
 
 def main(argv=None) -> int:
@@ -36,12 +49,32 @@ def main(argv=None) -> int:
     p_claim.add_argument("--claim", required=True)
     p_claim.add_argument("--confidence", type=float, default=0.5)
 
+    sub.add_parser("security-tools", help="List defensive security workbench tools and default gates")
+
+    p_scope = sub.add_parser("security-scope-validate", help="Validate a security ScopeRecord JSON file")
+    p_scope.add_argument("--scope-file", required=True)
+
+    p_dry = sub.add_parser("security-dry-run", help="Build a no-execution security dry-run plan")
+    p_dry.add_argument("--tool", required=True)
+    p_dry.add_argument("--scope-file", required=True)
+    p_dry.add_argument("--mode", required=True)
+
+    p_fixture = sub.add_parser("security-parse-fixture", help="Parse a synthetic security fixture with redaction")
+    p_fixture.add_argument("--tool", required=True)
+    p_fixture.add_argument("--fixture", required=True)
+
+    p_report = sub.add_parser("security-report", help="Generate a fixture-only security report and handoff")
+    p_report.add_argument("--fixture", required=True)
+    p_report.add_argument("--scope-file", required=True)
+    p_report.add_argument("--tool", default="nikto")
+    p_report.add_argument("--mode", default="fixture")
+
     sub.add_parser("status", help="Show store status")
 
     args = parser.parse_args(argv)
-    store = EvidenceStore(args.db)
 
     if args.cmd == "observe-text":
+        store = EvidenceStore(args.db)
         text = args.text
         if args.file:
             text = Path(args.file).read_text(encoding="utf-8")
@@ -54,6 +87,7 @@ def main(argv=None) -> int:
         return 0
 
     if args.cmd == "gate-action":
+        store = EvidenceStore(args.db)
         psi = EstadoPSI(topic=args.intent)
         proposal = ActionProposal(
             tool=args.tool,
@@ -72,11 +106,49 @@ def main(argv=None) -> int:
         return 0
 
     if args.cmd == "claim":
+        store = EvidenceStore(args.db)
         cid = store.add_claim(args.observation_id, args.claim, args.confidence, evidence_ref=args.observation_id)
         print(json.dumps({"claim_id": cid}, ensure_ascii=False, indent=2))
         return 0
 
+    if args.cmd == "security-tools":
+        catalog = default_security_tool_catalog()
+        print(json.dumps({"tools": [tool.to_dict() for tool in catalog.values()]}, ensure_ascii=False, indent=2))
+        return 0
+
+    if args.cmd == "security-scope-validate":
+        decision = validate_security_scope(_load_json(args.scope_file))
+        print(json.dumps({"decision": decision.to_dict()}, ensure_ascii=False, indent=2))
+        return 0
+
+    if args.cmd == "security-dry-run":
+        scope = _load_json(args.scope_file)
+        action = SecurityAction(tool_id=args.tool, mode=args.mode, target=str(scope.get("target_value", "")))
+        plan = build_security_dry_run(action, scope)
+        print(json.dumps({"dry_run": plan.to_dict()}, ensure_ascii=False, indent=2))
+        return 0
+
+    if args.cmd == "security-parse-fixture":
+        evidence = parse_security_fixture(args.tool, Path(args.fixture))
+        print(json.dumps({"evidence": [item.to_dict() for item in evidence]}, ensure_ascii=False, indent=2))
+        return 0
+
+    if args.cmd == "security-report":
+        report = build_security_report(Path(args.fixture), _load_json(args.scope_file), tool=args.tool, mode=args.mode)
+        print(
+            json.dumps(
+                {
+                    "report": report.to_dict(),
+                    "handoff": build_security_handoff(report),
+                },
+                ensure_ascii=False,
+                indent=2,
+            )
+        )
+        return 0
+
     if args.cmd == "status":
+        store = EvidenceStore(args.db)
         print(json.dumps(store.latest_status(), ensure_ascii=False, indent=2))
         return 0
 

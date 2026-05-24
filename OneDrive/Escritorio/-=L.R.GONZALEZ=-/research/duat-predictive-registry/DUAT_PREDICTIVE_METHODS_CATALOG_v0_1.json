@@ -1,0 +1,363 @@
+{
+  "schema": "duat.predictive_methods_catalog.v0_1",
+  "generated_at_utc": "2026-05-15T02:59:10Z",
+  "publication_gate": "BLOCK",
+  "methods": [
+    {
+      "method_id": "kalman_state_space",
+      "name": "Kalman / State Space",
+      "type": "filter",
+      "formula": "K = P H^T (H P H^T + R)^-1",
+      "best_for": [
+        "noisy signal fusion",
+        "online updates"
+      ],
+      "failure_modes": [
+        "bad linear assumptions",
+        "misestimated observation noise"
+      ],
+      "metrics_required": [
+        "holdout error",
+        "innovation residuals"
+      ],
+      "osit_mapping": "R as observation covariance",
+      "integration_gate": "APPROVE",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "method_id": "bayesian_updating",
+      "name": "Bayesian Updating",
+      "type": "calibrator",
+      "formula": "posterior = prior * likelihood / evidence",
+      "best_for": [
+        "prior/evidence updates",
+        "hypothesis weighting"
+      ],
+      "failure_modes": [
+        "arbitrary priors",
+        "bad likelihood model"
+      ],
+      "metrics_required": [
+        "posterior calibration",
+        "sensitivity analysis"
+      ],
+      "osit_mapping": "Phi_eff as update quality",
+      "integration_gate": "APPROVE",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "method_id": "sarimax",
+      "name": "SARIMAX",
+      "type": "model",
+      "formula": "state-space ARIMA with exogenous variables",
+      "best_for": [
+        "seasonal time series",
+        "external regressors"
+      ],
+      "failure_modes": [
+        "leakage",
+        "nonstationarity",
+        "bad exogenous timing"
+      ],
+      "metrics_required": [
+        "MAE",
+        "RMSE",
+        "TimeSeriesSplit"
+      ],
+      "osit_mapping": "model R and temporal R",
+      "integration_gate": "REVIEW",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "method_id": "var_vecm",
+      "name": "VAR / VECM",
+      "type": "model",
+      "formula": "multivariate autoregression / cointegration",
+      "best_for": [
+        "multiseries dynamics",
+        "lagged dependencies"
+      ],
+      "failure_modes": [
+        "spurious correlation",
+        "unstable coefficients"
+      ],
+      "metrics_required": [
+        "walk-forward error",
+        "stability tests"
+      ],
+      "osit_mapping": "contra and temporal R",
+      "integration_gate": "REVIEW",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "method_id": "prophet",
+      "name": "Prophet",
+      "type": "model",
+      "formula": "trend + seasonality + changepoints",
+      "best_for": [
+        "business time series",
+        "strong seasonality"
+      ],
+      "failure_modes": [
+        "overfitting changepoints",
+        "holiday leakage"
+      ],
+      "metrics_required": [
+        "backtest error",
+        "coverage"
+      ],
+      "osit_mapping": "model R",
+      "integration_gate": "REVIEW",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "method_id": "darts",
+      "name": "Darts",
+      "type": "model",
+      "formula": "library wrapper for statistical and ML time-series models",
+      "best_for": [
+        "model comparison",
+        "ensembles"
+      ],
+      "failure_modes": [
+        "dependency weight",
+        "opaque defaults"
+      ],
+      "metrics_required": [
+        "backtest error",
+        "coverage"
+      ],
+      "osit_mapping": "model catalog tool",
+      "integration_gate": "REVIEW",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "method_id": "statsforecast",
+      "name": "StatsForecast",
+      "type": "model",
+      "formula": "fast statistical forecast models",
+      "best_for": [
+        "large panels",
+        "baseline ensembles"
+      ],
+      "failure_modes": [
+        "misuse without backtest"
+      ],
+      "metrics_required": [
+        "MAE",
+        "RMSE",
+        "coverage"
+      ],
+      "osit_mapping": "baseline generator",
+      "integration_gate": "REVIEW",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "method_id": "sktime",
+      "name": "sktime",
+      "type": "model",
+      "formula": "time-series ML framework",
+      "best_for": [
+        "pipelines",
+        "forecasting tasks"
+      ],
+      "failure_modes": [
+        "dependency complexity"
+      ],
+      "metrics_required": [
+        "TimeSeriesSplit",
+        "forecast metrics"
+      ],
+      "osit_mapping": "model registry tool",
+      "integration_gate": "REVIEW",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "method_id": "pymc",
+      "name": "PyMC",
+      "type": "calibrator",
+      "formula": "probabilistic programming over priors and likelihoods",
+      "best_for": [
+        "Bayesian uncertainty",
+        "hierarchical models"
+      ],
+      "failure_modes": [
+        "bad priors",
+        "slow inference"
+      ],
+      "metrics_required": [
+        "posterior predictive checks"
+      ],
+      "osit_mapping": "uncertainty and priors",
+      "integration_gate": "REVIEW",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "method_id": "tensorflow_probability",
+      "name": "TensorFlow Probability",
+      "type": "calibrator",
+      "formula": "probabilistic models and distributions",
+      "best_for": [
+        "probabilistic ML",
+        "uncertainty"
+      ],
+      "failure_modes": [
+        "dependency weight",
+        "overcomplexity"
+      ],
+      "metrics_required": [
+        "calibration",
+        "coverage"
+      ],
+      "osit_mapping": "uncertainty modeling",
+      "integration_gate": "REVIEW",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "method_id": "conformal_mapie",
+      "name": "Conformal Prediction / MAPIE",
+      "type": "uncertainty",
+      "formula": "interval = y_hat +/- q_(1-alpha)(abs(error))",
+      "best_for": [
+        "prediction intervals",
+        "distribution-light uncertainty"
+      ],
+      "failure_modes": [
+        "exchangeability assumption breaks"
+      ],
+      "metrics_required": [
+        "coverage",
+        "interval width"
+      ],
+      "osit_mapping": "uncertainty gate",
+      "integration_gate": "APPROVE",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "method_id": "time_series_split",
+      "name": "TimeSeriesSplit",
+      "type": "validator",
+      "formula": "temporal train/test splits",
+      "best_for": [
+        "leakage prevention",
+        "backtest"
+      ],
+      "failure_modes": [
+        "bad horizon design"
+      ],
+      "metrics_required": [
+        "split audit"
+      ],
+      "osit_mapping": "ForecastGate prerequisite",
+      "integration_gate": "APPROVE",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "method_id": "brier_logloss_calibration",
+      "name": "Brier / Log Loss / Calibration Curve",
+      "type": "validator",
+      "formula": "proper scoring and reliability checks",
+      "best_for": [
+        "probabilistic events"
+      ],
+      "failure_modes": [
+        "rare event instability"
+      ],
+      "metrics_required": [
+        "Brier",
+        "log-loss",
+        "calibration error"
+      ],
+      "osit_mapping": "probability truthfulness",
+      "integration_gate": "APPROVE",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "method_id": "isolation_forest_pyod",
+      "name": "Isolation Forest / PyOD",
+      "type": "filter",
+      "formula": "outlier isolation and anomaly scores",
+      "best_for": [
+        "anomaly detection",
+        "sensor quality"
+      ],
+      "failure_modes": [
+        "labels absent",
+        "outlier != false"
+      ],
+      "metrics_required": [
+        "precision/recall if labels",
+        "manual review"
+      ],
+      "osit_mapping": "R_noise isolation",
+      "integration_gate": "REVIEW",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "method_id": "savitzky_wavelet",
+      "name": "Savitzky-Golay / Wavelet Denoising",
+      "type": "filter",
+      "formula": "local polynomial smoothing / wavelet thresholding",
+      "best_for": [
+        "technical denoising",
+        "sensor smoothing"
+      ],
+      "failure_modes": [
+        "signal destruction",
+        "edge artifacts"
+      ],
+      "metrics_required": [
+        "before/after error",
+        "residual inspection"
+      ],
+      "osit_mapping": "noise filter",
+      "integration_gate": "APPROVE",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "method_id": "weighted_ensemble",
+      "name": "Weighted Ensemble",
+      "type": "ensemble",
+      "formula": "sum(w_i * pred_i) / sum(w_i)",
+      "best_for": [
+        "model fusion",
+        "source fusion"
+      ],
+      "failure_modes": [
+        "correlated errors",
+        "bad weights"
+      ],
+      "metrics_required": [
+        "backtest vs best component",
+        "correlation audit"
+      ],
+      "osit_mapping": "R cancellation if independence holds",
+      "integration_gate": "REVIEW",
+      "publication_gate": "BLOCK"
+    },
+    {
+      "method_id": "dowhy_econml_causalnex",
+      "name": "DoWhy / EconML / CausalNex",
+      "type": "causal_research",
+      "formula": "REVIEW_ONLY: causal graph + identification + estimation; no causal claims",
+      "best_for": [
+        "causal research only"
+      ],
+      "failure_modes": [
+        "false causal claims",
+        "unidentified graph"
+      ],
+      "metrics_required": [
+        "falsification tests",
+        "refutation tests"
+      ],
+      "osit_mapping": "causal claims stay gated",
+      "integration_gate": "REVIEW",
+      "publication_gate": "BLOCK"
+    }
+  ],
+  "notes": [
+    "Methods require benchmark before production.",
+    "Causal methods do not authorize causal claims."
+  ]
+}

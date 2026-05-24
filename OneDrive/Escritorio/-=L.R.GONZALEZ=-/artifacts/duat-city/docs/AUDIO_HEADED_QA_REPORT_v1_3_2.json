@@ -1,0 +1,26 @@
+{
+  "schema": "duat/audio-headed-qa/v1.3.2",
+  "fingerprint": "DUAT-v1.3.2-LOVABLE-ISO-EXTRACTION-VERMEER-LIGHT",
+  "generatedAt": "2026-05-20T07:13:02.8411693Z",
+  "url": "http://127.0.0.1:18519/duat-city/?mode=CITY&view=OPERATIONAL&sceneDemo=fire_smoke&vibe=neon_rain_street",
+  "browserMode": "Edge/CDP/headed-timeout-fallback",
+  "focusedBrowserAttempted": true,
+  "focusStatus": "unconfirmed",
+  "audioOffByDefault": true,
+  "enableButtonClicked": false,
+  "previewButtonClicked": false,
+  "previewRequiresEnableFlag": true,
+  "perceptualAudio": "AUDIO_HEADED_QA_NOT_AVAILABLE_TIMEOUT",
+  "latencyMsApprox": 124080,
+  "consoleEventCount": 0,
+  "consoleEvents": [],
+  "panelTextSample": "Headed Edge launched, but CDP QA runner exceeded timeout before reliable button interaction evidence. Audio remains off-by-default and requires local user gesture.",
+  "screenshot": "",
+  "boundary": {
+    "autoplay": false,
+    "localGestureRequired": true,
+    "externalSamplesCopied": false,
+    "cloudUsed": false,
+    "wabiExecution": false
+  }
+}

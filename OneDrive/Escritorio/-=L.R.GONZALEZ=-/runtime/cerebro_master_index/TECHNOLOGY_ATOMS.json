@@ -1,0 +1,414 @@
+[
+  {
+    "atom_id": "r",
+    "count": 10314,
+    "first_refs": [
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:15",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:26",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:89",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:108",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:109"
+    ],
+    "gate": "APPROVE_LOCAL_DOC_OR_MODULE_SPEC",
+    "module_contract_minimum": "extract definition -> inputs -> outputs -> evidence -> falsifier or unit test",
+    "source_signal": "R",
+    "target": "MEDIOEVO_OBSERVACIONISMO_MASTER",
+    "test_minimum": "minimum parser/classifier test with fixture source lines"
+  },
+  {
+    "atom_id": "sigma",
+    "count": 4241,
+    "first_refs": [
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:15",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:23",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:42",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:511",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:528"
+    ],
+    "gate": "RESEARCH_REVIEW_REQUIRED",
+    "module_contract_minimum": "extract definition -> inputs -> outputs -> evidence -> falsifier or unit test",
+    "source_signal": "Sigma",
+    "target": "CEREBRO_PSI_RESEARCH",
+    "test_minimum": "minimum parser/classifier test with fixture source lines"
+  },
+  {
+    "atom_id": "j_c",
+    "count": 4124,
+    "first_refs": [
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:26",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:109",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:254",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:256",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:295"
+    ],
+    "gate": "APPROVE_LOCAL_DOC_OR_MODULE_SPEC",
+    "module_contract_minimum": "extract definition -> inputs -> outputs -> evidence -> falsifier or unit test",
+    "source_signal": "J_c",
+    "target": "MEDIOEVO_OBSERVACIONISMO_MASTER",
+    "test_minimum": "minimum parser/classifier test with fixture source lines"
+  },
+  {
+    "atom_id": "claudio",
+    "count": 3104,
+    "first_refs": [
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:43",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:114",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:135",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:513",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:560"
+    ],
+    "gate": "APPROVE_LOCAL_DOC_OR_MODULE_SPEC",
+    "module_contract_minimum": "extract definition -> inputs -> outputs -> evidence -> falsifier or unit test",
+    "source_signal": "Claudio",
+    "target": "CLAUDIO_RUNTIME",
+    "test_minimum": "minimum parser/classifier test with fixture source lines"
+  },
+  {
+    "atom_id": "phi_eff",
+    "count": 2967,
+    "first_refs": [
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:232",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:236",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:246",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:248",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:375"
+    ],
+    "gate": "APPROVE_LOCAL_DOC_OR_MODULE_SPEC",
+    "module_contract_minimum": "extract definition -> inputs -> outputs -> evidence -> falsifier or unit test",
+    "source_signal": "Phi_eff",
+    "target": "MEDIOEVO_OBSERVACIONISMO_MASTER",
+    "test_minimum": "minimum parser/classifier test with fixture source lines"
+  },
+  {
+    "atom_id": "osit",
+    "count": 2324,
+    "first_refs": [
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:23",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:528",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:1092",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:1424",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# INGENIERÍA OBSERVACIONISTA INVERS.txt:2"
+    ],
+    "gate": "RESEARCH_REVIEW_REQUIRED",
+    "module_contract_minimum": "extract definition -> inputs -> outputs -> evidence -> falsifier or unit test",
+    "source_signal": "OSIT",
+    "target": "CEREBRO_PSI_RESEARCH",
+    "test_minimum": "minimum parser/classifier test with fixture source lines"
+  },
+  {
+    "atom_id": "epsilon",
+    "count": 1706,
+    "first_refs": [
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# INGENIERÍA OBSERVACIONISTA INVERS.txt:245",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# INGENIERÍA OBSERVACIONISTA INVERS.txt:453",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# INGENIERÍA OBSERVACIONISTA INVERS.txt:456",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# INGENIERÍA OBSERVACIONISTA INVERS.txt:786",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# MEDIOEVO — Teoría Unificada Compl.txt:239"
+    ],
+    "gate": "APPROVE_LOCAL_DOC_OR_MODULE_SPEC",
+    "module_contract_minimum": "extract definition -> inputs -> outputs -> evidence -> falsifier or unit test",
+    "source_signal": "epsilon",
+    "target": "MEDIOEVO_OBSERVACIONISMO_MASTER",
+    "test_minimum": "minimum parser/classifier test with fixture source lines"
+  },
+  {
+    "atom_id": "nu",
+    "count": 1448,
+    "first_refs": [
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# OBSERVACIONISMO — TEORÍA COMPLETA.txt:133",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# OBSERVACIONISMO — TEORÍA COMPLETA.txt:266",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# OBSERVACIONISMO — TEORÍA COMPLETA.txt:418",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# OBSERVACIONISMO — TEORÍA COMPLETA.txt:596",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# OBSERVACIONISMO — TEORÍA COMPLETA.txt:670"
+    ],
+    "gate": "APPROVE_LOCAL_DOC_OR_MODULE_SPEC",
+    "module_contract_minimum": "extract definition -> inputs -> outputs -> evidence -> falsifier or unit test",
+    "source_signal": "nu",
+    "target": "MEDIOEVO_OBSERVACIONISMO_MASTER",
+    "test_minimum": "minimum parser/classifier test with fixture source lines"
+  },
+  {
+    "atom_id": "lambda",
+    "count": 1179,
+    "first_refs": [
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:1175",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:1453",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:1454",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# INGENIERÍA OBSERVACIONISTA INVERS.txt:109",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# INGENIERÍA OBSERVACIONISTA INVERS.txt:144"
+    ],
+    "gate": "APPROVE_LOCAL_DOC_OR_MODULE_SPEC",
+    "module_contract_minimum": "extract definition -> inputs -> outputs -> evidence -> falsifier or unit test",
+    "source_signal": "lambda",
+    "target": "MEDIOEVO_OBSERVACIONISMO_MASTER",
+    "test_minimum": "minimum parser/classifier test with fixture source lines"
+  },
+  {
+    "atom_id": "witnesslog",
+    "count": 1086,
+    "first_refs": [
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:29",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:51",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:100",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:118",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:139"
+    ],
+    "gate": "APPROVE_LOCAL_DOC_OR_MODULE_SPEC",
+    "module_contract_minimum": "append event -> verify hash chain -> return evidence id",
+    "source_signal": "WitnessLog",
+    "target": "apps/local/wabi-sabi",
+    "test_minimum": "append two events and verify chain"
+  },
+  {
+    "atom_id": "agent_programming",
+    "count": 879,
+    "first_refs": [
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:1392",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# OBSERVACIONISMO — TEORÍA COMPLETA.txt:518",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# OBSERVACIONISMO — TEORÍA COMPLETA.txt:2352",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# OBSERVACIONISMO — TEORÍA COMPLETA.txt:2361",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# OBSERVACIONISMO — TEORÍA COMPLETA.txt:2377"
+    ],
+    "gate": "APPROVE_WITH_SAFE_EXECUTOR_AND_TESTS",
+    "module_contract_minimum": "convert task spec -> patch plan -> safe executor -> tests -> witness",
+    "source_signal": "agent_programming",
+    "target": "apps/local/wabi-sabi",
+    "test_minimum": "patch plan against temp workspace plus rollback/test evidence"
+  },
+  {
+    "atom_id": "eml",
+    "count": 636,
+    "first_refs": [
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# MEDIOEVO — Teoría Unificada Compl.txt:2",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# MEDIOEVO — Teoría Unificada Compl.txt:97",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# MEDIOEVO — Teoría Unificada Compl.txt:163",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# MEDIOEVO — Teoría Unificada Compl.txt:168",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# MEDIOEVO — Teoría Unificada Compl.txt:174"
+    ],
+    "gate": "APPROVE_LOCAL_DOC_OR_MODULE_SPEC",
+    "module_contract_minimum": "measure context/load/jamming indicators -> regime recommendation",
+    "source_signal": "EML",
+    "target": "apps/local/wabi-sabi",
+    "test_minimum": "minimum parser/classifier test with fixture source lines"
+  },
+  {
+    "atom_id": "actiongate",
+    "count": 625,
+    "first_refs": [
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:12",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:15",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:21",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:27",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:92"
+    ],
+    "gate": "APPROVE_LOCAL_DOC_OR_MODULE_SPEC",
+    "module_contract_minimum": "evaluate action text or typed request -> APPROVE/REVIEW/BLOCK with reasons",
+    "source_signal": "ActionGate",
+    "target": "apps/local/wabi-sabi",
+    "test_minimum": "table-driven APPROVE/REVIEW/BLOCK cases"
+  },
+  {
+    "atom_id": "ghostgate",
+    "count": 538,
+    "first_refs": [
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:28",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:88",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:125",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:154",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:347"
+    ],
+    "gate": "APPROVE_LOCAL_DOC_OR_MODULE_SPEC",
+    "module_contract_minimum": "extract definition -> inputs -> outputs -> evidence -> falsifier or unit test",
+    "source_signal": "GhostGate",
+    "target": "apps/local/wabi-sabi",
+    "test_minimum": "minimum parser/classifier test with fixture source lines"
+  },
+  {
+    "atom_id": "oso",
+    "count": 366,
+    "first_refs": [],
+    "gate": "APPROVE_LOCAL_DOC_OR_MODULE_SPEC",
+    "module_contract_minimum": "extract definition -> inputs -> outputs -> evidence -> falsifier or unit test",
+    "source_signal": "OSO",
+    "target": "apps/local/wabi-sabi",
+    "test_minimum": "minimum parser/classifier test with fixture source lines"
+  },
+  {
+    "atom_id": "tuip",
+    "count": 345,
+    "first_refs": [
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:15",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:23",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:42",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:511",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:528"
+    ],
+    "gate": "RESEARCH_REVIEW_REQUIRED",
+    "module_contract_minimum": "extract definition -> inputs -> outputs -> evidence -> falsifier or unit test",
+    "source_signal": "TUIP",
+    "target": "CEREBRO_PSI_RESEARCH",
+    "test_minimum": "minimum parser/classifier test with fixture source lines"
+  },
+  {
+    "atom_id": "duat",
+    "count": 298,
+    "first_refs": [],
+    "gate": "APPROVE_LOCAL_DOC_OR_MODULE_SPEC",
+    "module_contract_minimum": "boot/build/test report -> OS status and missing host toolchain evidence",
+    "source_signal": "DUAT",
+    "target": "DUAT_GEODIA_OS",
+    "test_minimum": "kernel/ISO/QEMU command exits 0 or reports missing toolchain explicitly"
+  },
+  {
+    "atom_id": "browser",
+    "count": 286,
+    "first_refs": [],
+    "gate": "COMPLETO_GATEADO",
+    "module_contract_minimum": "evaluate URL/action -> gate and evidence requirements",
+    "source_signal": "browser",
+    "target": "BROWSER_GATE",
+    "test_minimum": "local URL approve, external read approve, login/publish review/block"
+  },
+  {
+    "atom_id": "conway",
+    "count": 279,
+    "first_refs": [],
+    "gate": "APPROVE_LOCAL_DOC_OR_MODULE_SPEC",
+    "module_contract_minimum": "extract definition -> inputs -> outputs -> evidence -> falsifier or unit test",
+    "source_signal": "Conway",
+    "target": "MEDIOEVO_OBSERVACIONISMO_MASTER",
+    "test_minimum": "minimum parser/classifier test with fixture source lines"
+  },
+  {
+    "atom_id": "wabi_sabi",
+    "count": 269,
+    "first_refs": [],
+    "gate": "APPROVE_LOCAL_DOC_OR_MODULE_SPEC",
+    "module_contract_minimum": "extract definition -> inputs -> outputs -> evidence -> falsifier or unit test",
+    "source_signal": "Wabi-Sabi",
+    "target": "apps/local/wabi-sabi",
+    "test_minimum": "minimum parser/classifier test with fixture source lines"
+  },
+  {
+    "atom_id": "geodia",
+    "count": 247,
+    "first_refs": [],
+    "gate": "APPROVE_LOCAL_DOC_OR_MODULE_SPEC",
+    "module_contract_minimum": "city/runtime module -> local proof artifact -> no public claim without gate",
+    "source_signal": "GEODIA",
+    "target": "DUAT_GEODIA_OS",
+    "test_minimum": "current route/surface/OS artifact exists and is referenced by status"
+  },
+  {
+    "atom_id": "gauss_bonnet",
+    "count": 184,
+    "first_refs": [
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\## ESTADO.txt:42",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\## ESTADO.txt:85",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\## ESTADO.txt:757",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\## ESTADO.txt:977",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\## ESTADO.txt:993"
+    ],
+    "gate": "RESEARCH_REVIEW_REQUIRED",
+    "module_contract_minimum": "extract definition -> inputs -> outputs -> evidence -> falsifier or unit test",
+    "source_signal": "Gauss-Bonnet",
+    "target": "CEREBRO_PSI_RESEARCH",
+    "test_minimum": "minimum parser/classifier test with fixture source lines"
+  },
+  {
+    "atom_id": "nec",
+    "count": 100,
+    "first_refs": [
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\## ESTADO.txt:939",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\## ESTADO.txt:949",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\## ESTADO.txt:1045",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\## ESTADO.txt:1108",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\## ESTADO.txt:1118"
+    ],
+    "gate": "RESEARCH_REVIEW_REQUIRED",
+    "module_contract_minimum": "extract definition -> inputs -> outputs -> evidence -> falsifier or unit test",
+    "source_signal": "NEC",
+    "target": "CEREBRO_PSI_RESEARCH",
+    "test_minimum": "minimum parser/classifier test with fixture source lines"
+  },
+  {
+    "atom_id": "povm",
+    "count": 92,
+    "first_refs": [
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# MEDIOEVO — Teoría Unificada Compl.txt:246",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# MEDIOEVO — Teoría Unificada Compl.txt:497"
+    ],
+    "gate": "RESEARCH_REVIEW_REQUIRED",
+    "module_contract_minimum": "extract definition -> inputs -> outputs -> evidence -> falsifier or unit test",
+    "source_signal": "POVM",
+    "target": "CEREBRO_PSI_RESEARCH",
+    "test_minimum": "minimum parser/classifier test with fixture source lines"
+  },
+  {
+    "atom_id": "h_eff",
+    "count": 53,
+    "first_refs": [
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# MEDIOEVO — Teoría Unificada Compl.txt:230",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# MEDIOEVO — Teoría Unificada Compl.txt:233",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# MEDIOEVO — Teoría Unificada Compl.txt:495",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# MEDIOEVO — Teoría Unificada Compl.txt:497",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# OSIT — Observer-State Information.txt:71"
+    ],
+    "gate": "RESEARCH_REVIEW_REQUIRED",
+    "module_contract_minimum": "extract definition -> inputs -> outputs -> evidence -> falsifier or unit test",
+    "source_signal": "H_eff",
+    "target": "CEREBRO_PSI_RESEARCH",
+    "test_minimum": "minimum parser/classifier test with fixture source lines"
+  },
+  {
+    "atom_id": "qnm",
+    "count": 31,
+    "first_refs": [],
+    "gate": "RESEARCH_REVIEW_REQUIRED",
+    "module_contract_minimum": "extract definition -> inputs -> outputs -> evidence -> falsifier or unit test",
+    "source_signal": "QNM",
+    "target": "CEREBRO_PSI_RESEARCH",
+    "test_minimum": "minimum parser/classifier test with fixture source lines"
+  },
+  {
+    "atom_id": "dark_information",
+    "count": 6,
+    "first_refs": [],
+    "gate": "APPROVE_LOCAL_DOC_OR_MODULE_SPEC",
+    "module_contract_minimum": "extract definition -> inputs -> outputs -> evidence -> falsifier or unit test",
+    "source_signal": "dark information",
+    "target": "MEDIOEVO_OBSERVACIONISMO_MASTER",
+    "test_minimum": "minimum parser/classifier test with fixture source lines"
+  },
+  {
+    "atom_id": "anti_information",
+    "count": 4,
+    "first_refs": [],
+    "gate": "APPROVE_LOCAL_DOC_OR_MODULE_SPEC",
+    "module_contract_minimum": "extract definition -> inputs -> outputs -> evidence -> falsifier or unit test",
+    "source_signal": "anti-information",
+    "target": "MEDIOEVO_OBSERVACIONISMO_MASTER",
+    "test_minimum": "minimum parser/classifier test with fixture source lines"
+  },
+  {
+    "atom_id": "code_candidates",
+    "count": 76924,
+    "first_refs": [
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:35",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:36",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:37",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:38",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:39",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:40",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:41",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:42",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:43",
+      "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\# Ingeniería Observacionista del En.txt:44"
+    ],
+    "gate": "REVIEW_REQUIRED_BEFORE_IMPORT",
+    "module_contract_minimum": "extract purpose, inputs, outputs, dependencies, risks before implementation",
+    "source_signal": "CODE_CANDIDATE",
+    "target": "WABI_SABI_REVIEW",
+    "test_minimum": "static parse or isolated unit test before moving into runtime"
+  }
+]

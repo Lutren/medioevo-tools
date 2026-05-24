@@ -1,0 +1,12 @@
+{
+  "records": [
+    {
+      "schema_version": "claudio.memory_lite.v0.1",
+      "type": "episode",
+      "summary": "Synthetic rollback restore failure must block follow-up writes.",
+      "source": "qa/rollback-failure.log",
+      "confidence": 0.95,
+      "durability": "active"
+    }
+  ]
+}

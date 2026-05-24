@@ -37,6 +37,20 @@ Before using, copying, extracting, publishing, archiving or discarding it:
 The default state for undocumented material is `UNKNOWN_REVIEW_REQUIRED`, not
 "safe", not "trash", and not "publishable".
 
+Selective extraction law:
+
+- `Adopcion cruda` / wholesale import of unregistered material is `BLOCK`.
+- `Extraccion selectiva` is `REVIEW` until ficha, provenance, target lane,
+  claim boundary and tests/evidence exist.
+- `Extraccion selectiva` may become `APPROVE` only for local, reversible,
+  path-scoped integration with evidence.
+
+Archive, move, rename and delete actions stay blocked unless the exact source
+has a ficha, migration map/log evidence, rollback path and ActionGate decision.
+If the Codex session is already running with `danger-full-access`, degrade
+operationally to read-first, no destructive commands, no global configuration
+changes and no broad private-folder traversal beyond the task scope.
+
 Current global cleanup contract:
 `docs/developer/CURADOR_SETO_GLOBAL_OPERATING_CONTRACT_2026-05-05.md`.
 Use it for SETO folder vocabulary, `ObservationEnvelope`, `ActionGate`,
@@ -288,3 +302,14 @@ A release is closed only when:
 - tests/build/smoke checks pass or are explicitly blocked;
 - package contents are generated from allowlist, not broad globs;
 - final report lists files, commands, test results, risks, residue, and next tasks.
+
+## DESKTOP_LIVE_CONTINUITY_RULE
+
+DESKTOP_LIVE_CONTINUITY_RULE:
+Desde este run, NEXT_SESSION_BRIEF, PENDIENTES_MASTER y HANDOFF vigente deben tener version viva y acceso humano desde el escritorio. Cada agente debe actualizar en tiempo real el documento maestro correspondiente y tambien el mirror visible del escritorio antes de responder o cerrar bloque. El bulletin board local debe recibir un update por cada bloque de trabajo verificable.
+
+Aplicacion local:
+- Raiz humana: `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-`.
+- Mirrors vivos: `00_START_HERE\LIVE_STATE`.
+- Bulletin board: `apps\local\agent_bulletin_board`.
+- Escritorio visible: launchpad y accesos directos, no vault de documentos.

@@ -1,0 +1,14 @@
+{
+  "schema_version": "medioevo.witness_event.v0.1",
+  "event_id": "witness-shared-contracts-001",
+  "timestamp": "2026-05-20T00:00:00Z",
+  "source_system": "SHARED_CONTRACTS",
+  "event_type": "fixture_validation",
+  "summary": "Synthetic shared-contracts fixture parsed and validated.",
+  "evidence": ["fixtures/world_state_minimal.json", "fixtures/agent_state_001.json"],
+  "R": 0.14,
+  "Phi_eff": 0.78,
+  "gate": "APPROVE",
+  "boundary": { "publication_gate": "BLOCK", "contains_private_data": false, "public_safe": true }
+}
+

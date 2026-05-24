@@ -11,9 +11,17 @@ from .behavior import analyze_behavior_signature
 from .duat_sim import run_duat_conway_simulation
 from .duat_v2_intake import build_duat_v2_intake
 from .events import JsonlEventStore, build_event
+from .harmonization import build_harmonization_report
 from .health import duat_health_window
 from .model import build_scenario_report, run_backtest
+from .remote_compute import build_colab_kaggle_notebook, build_remote_compute_plan
+from .signal_source_pack import build_signal_source_pack
+from .intervention_engine import build_baseline_intervention_pair
+from .metrics_v0_2 import build_metrics_v0_2, falsify_v0_2
+from .replay_verifier import verify_replay
 from .router import decide_route, features_from_mapping
+from .smallville_v02_release import build_release_artifacts
+from .smallville_lab import falsify_smallville_run, run_smallville_duat_lab
 from .snapshot import create_snapshot_from_fixture
 from .sources import source_catalog, validate_source
 from .source_registry import build_local_source_intake
@@ -66,6 +74,14 @@ def main(argv: list[str] | None = None) -> int:
     backtest.add_argument("--pretty", action="store_true")
     backtest.add_argument("--out")
 
+    harmonize = sub.add_parser("harmonize", help="rebuild the offline GEODIA harmonization report")
+    harmonize.add_argument("--offline", action="store_true")
+    harmonize.add_argument("--fixtures", nargs="+", required=True)
+    harmonize.add_argument("--crosswalk", required=True)
+    harmonize.add_argument("--schema", required=True)
+    harmonize.add_argument("--pretty", action="store_true")
+    harmonize.add_argument("--out", required=True)
+
     intake = sub.add_parser("intake", help="classify the selected Downloads sources without copying them")
     intake.add_argument("--pretty", action="store_true")
     intake.add_argument("--out")
@@ -101,6 +117,69 @@ def main(argv: list[str] | None = None) -> int:
     sim.add_argument("--sigma", type=float, default=0.12)
     sim.add_argument("--pretty", action="store_true")
     sim.add_argument("--out")
+
+    smallville = sub.add_parser("smallville-duat", help="run the synthetic DUAT Smallville simulation lab")
+    smallville.add_argument("--seed", default="duat-smallville-v0-1")
+    smallville.add_argument("--days", type=int, default=2)
+    smallville.add_argument("--ticks-per-day", type=int, default=6)
+    smallville.add_argument("--agent-count", type=int, default=25)
+    smallville.add_argument("--pretty", action="store_true")
+    smallville.add_argument("--out")
+
+    smallville_falsify = sub.add_parser("smallville-falsify", help="run falsifiers for a DUAT Smallville ledger")
+    smallville_falsify.add_argument("--ledger", required=True)
+    smallville_falsify.add_argument("--pretty", action="store_true")
+    smallville_falsify.add_argument("--out")
+
+    signal_pack = sub.add_parser("smallville-signal-pack", help="create the synthetic v0.2 SignalSourcePack")
+    signal_pack.add_argument("--seed", type=int, default=20260517)
+    signal_pack.add_argument("--ticks", type=int, default=1440)
+    signal_pack.add_argument("--pretty", action="store_true")
+    signal_pack.add_argument("--out")
+
+    intervene = sub.add_parser("smallville-intervene", help="run baseline and counterfactual intervention for v0.2")
+    intervene.add_argument("--seed", type=int, default=20260517)
+    intervene.add_argument("--ticks", type=int, default=1440)
+    intervene.add_argument("--intervention", default="weather_shock")
+    intervene.add_argument("--baseline-out")
+    intervene.add_argument("--intervention-out")
+    intervene.add_argument("--delta-out")
+    intervene.add_argument("--pretty", action="store_true")
+    intervene.add_argument("--out")
+
+    replay_verify = sub.add_parser("smallville-replay-verify", help="verify deterministic replay for v0.2")
+    replay_verify.add_argument("--ledger", required=True)
+    replay_verify.add_argument("--pack", required=True)
+    replay_verify.add_argument("--pretty", action="store_true")
+    replay_verify.add_argument("--out")
+
+    metrics_v02 = sub.add_parser("smallville-metrics", help="compute v0.2 metrics and falsifiers")
+    metrics_v02.add_argument("--baseline", required=True)
+    metrics_v02.add_argument("--intervention-run", required=True)
+    metrics_v02.add_argument("--delta", required=True)
+    metrics_v02.add_argument("--pack", required=True)
+    metrics_v02.add_argument("--pretty", action="store_true")
+    metrics_v02.add_argument("--out")
+
+    v02_report = sub.add_parser("smallville-v02-report", help="write all v0.2 release-validation artifacts")
+    v02_report.add_argument("--seed", type=int, default=20260517)
+    v02_report.add_argument("--ticks", type=int, default=1440)
+    v02_report.add_argument("--intervention", default="weather_shock")
+    v02_report.add_argument("--out-dir")
+    v02_report.add_argument("--pretty", action="store_true")
+    v02_report.add_argument("--out")
+
+    remote_plan = sub.add_parser("remote-compute-plan", help="create a gated local/Colab/Kaggle/SimScale run plan")
+    remote_plan.add_argument("--scenario-id", default="duat_smallville_city_v0_1")
+    remote_plan.add_argument("--seed", default="duat-smallville-v0-1")
+    remote_plan.add_argument("--pretty", action="store_true")
+    remote_plan.add_argument("--out")
+
+    remote_notebook = sub.add_parser("remote-notebook-template", help="export a Colab/Kaggle notebook template")
+    remote_notebook.add_argument("--scenario-id", default="duat_smallville_city_v0_1")
+    remote_notebook.add_argument("--seed", default="duat-smallville-v0-1")
+    remote_notebook.add_argument("--pretty", action="store_true")
+    remote_notebook.add_argument("--out", required=True)
 
     append_event = sub.add_parser("event-append", help="append one event to a local JSONL event store")
     append_event.add_argument("--store", required=True)
@@ -146,6 +225,14 @@ def main(argv: list[str] | None = None) -> int:
         _require_offline(args)
         _write_or_print(run_backtest(args.fixture, args.holdout_year), args.out, args.pretty)
         return 0
+    if args.command == "harmonize":
+        _require_offline(args)
+        try:
+            report = build_harmonization_report(args.fixtures, args.crosswalk, args.schema)
+        except Exception as exc:
+            raise SystemExit(f"harmonize failed safely: {exc}") from exc
+        _write_or_print(report, args.out, args.pretty)
+        return 0
     if args.command == "run":
         _require_offline(args)
         snap = create_snapshot_from_fixture(args.fixture)
@@ -185,6 +272,83 @@ def main(argv: list[str] | None = None) -> int:
                 chi=args.chi,
                 sigma=args.sigma,
             ),
+            args.out,
+            args.pretty,
+        )
+        return 0
+    if args.command == "smallville-duat":
+        _write_or_print(
+            run_smallville_duat_lab(
+                seed=args.seed,
+                days=args.days,
+                ticks_per_day=args.ticks_per_day,
+                agent_count=args.agent_count,
+            ),
+            args.out,
+            args.pretty,
+        )
+        return 0
+    if args.command == "smallville-falsify":
+        ledger = json.loads(Path(args.ledger).read_text(encoding="utf-8"))
+        report = falsify_smallville_run(ledger)
+        _write_or_print(report, args.out, args.pretty)
+        return 0 if report["passed"] else 2
+    if args.command == "smallville-signal-pack":
+        _write_or_print(build_signal_source_pack(seed=args.seed, ticks=args.ticks), args.out, args.pretty)
+        return 0
+    if args.command == "smallville-intervene":
+        pair = build_baseline_intervention_pair(seed=args.seed, ticks=args.ticks, intervention_name=args.intervention)
+        if args.baseline_out:
+            _write_or_print(pair["baseline"], args.baseline_out, args.pretty)
+        if args.intervention_out:
+            _write_or_print(pair["intervention"], args.intervention_out, args.pretty)
+        if args.delta_out:
+            _write_or_print(pair["delta"], args.delta_out, args.pretty)
+        _write_or_print(pair["delta"], args.out, args.pretty)
+        return 0
+    if args.command == "smallville-replay-verify":
+        ledger = json.loads(Path(args.ledger).read_text(encoding="utf-8"))
+        pack = json.loads(Path(args.pack).read_text(encoding="utf-8"))
+        report = verify_replay(ledger, pack)
+        _write_or_print(report, args.out, args.pretty)
+        return 0 if report["replay_verified"] else 2
+    if args.command == "smallville-metrics":
+        baseline = json.loads(Path(args.baseline).read_text(encoding="utf-8"))
+        intervention_run = json.loads(Path(args.intervention_run).read_text(encoding="utf-8"))
+        delta = json.loads(Path(args.delta).read_text(encoding="utf-8"))
+        pack = json.loads(Path(args.pack).read_text(encoding="utf-8"))
+        replay = verify_replay(baseline, pack)
+        falsifier = falsify_v0_2(pack, baseline, intervention_run, delta)
+        metrics = build_metrics_v0_2(
+            seed=int(baseline["seed"]),
+            pack=pack,
+            baseline=baseline,
+            intervention=intervention_run,
+            delta=delta,
+            replay=replay,
+            falsifier=falsifier,
+        )
+        _write_or_print(metrics, args.out, args.pretty)
+        return 0 if metrics["falsifiers"]["passed"] else 2
+    if args.command == "smallville-v02-report":
+        manifest = build_release_artifacts(
+            out_dir=args.out_dir,
+            seed=args.seed,
+            ticks=args.ticks,
+            intervention_name=args.intervention,
+        )
+        _write_or_print(manifest, args.out, args.pretty)
+        return 0
+    if args.command == "remote-compute-plan":
+        _write_or_print(
+            build_remote_compute_plan(scenario_id=args.scenario_id, seed=args.seed),
+            args.out,
+            args.pretty,
+        )
+        return 0
+    if args.command == "remote-notebook-template":
+        _write_or_print(
+            build_colab_kaggle_notebook(scenario_id=args.scenario_id, seed=args.seed),
             args.out,
             args.pretty,
         )

@@ -1,0 +1,80 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "20260520-DUAT-v1.4",
+  "project": "DUAT / MEDIOEVO",
+  "fingerprint": "DUAT-v1.4-OSIT-OBSERVACIONISMO-FULL",
+  "R_close": 0.30,
+  "Phi_eff": 0.71,
+  "regime_close": "FUNCIONAL_REVIEW",
+  "autonomy_level_used": 4,
+  "actiongate_summary": {
+    "approved": 9,
+    "review_required": 2,
+    "blocked": 0
+  },
+  "files_created": [
+    "src/tests/audioHeadedQaV14.test.ts",
+    "docs/OBSERVACIONISMO_ASSET_SCAN_v1_4.md",
+    "docs/HANDOFF_v1_4.md",
+    "docs/AUDIO_HEADED_QA_v1_4.json",
+    "docs/AUDIO_GAMEFEEL_QA_v1_4.md",
+    "docs/SESSION_FINGERPRINT_v1_4.json"
+  ],
+  "files_modified": [
+    "src/App.tsx",
+    "src/audio/worldAudioAdapter.ts",
+    "src/components/AudioGameFeelPanel.tsx",
+    "src/render/canvasRenderer.ts",
+    "src/osit/ositTypes.ts",
+    "src/osit/ositIntegration.ts",
+    "src/tests/duatOSITFullInventory.test.ts",
+    "src/tests/performanceBenchmarkV14.test.ts",
+    "tools/generate-duat-osit-full-inventory-v1_4.ps1",
+    "tools/run-v14-frame-sampler.mjs",
+    "tools/run-audio-headed-qa-v1_4.mjs",
+    "tools/capture-screenshots-v1_4.mjs",
+    "docs/CODEX_CHANGELOG_v1_4.md",
+    "docs/CODEX_FINAL_HANDOFF_v1_4.md",
+    "docs/DUAT_OSIT_FULL_INTEGRATION_v1_4.md",
+    "docs/HANDOFF_v1_4.json",
+    "docs/NEXT_SESSION_BRIEF_v1_4.md",
+    "docs/PERFORMANCE_BENCHMARK_REPORT_v1_4.md",
+    "docs/PERFORMANCE_BENCHMARK_v1_4.json",
+    "docs/TEST_REPORT_v1_4.md",
+    "docs/VISUAL_QA_REPORT_v1_4.md",
+    "public/asset-manifest/duat_osit_full_sources_manifest_v1_4.json"
+  ],
+  "commands_run": [
+    "corepack pnpm --filter @workspace/duat-city run test",
+    "corepack pnpm --filter @workspace/duat-city run typecheck",
+    "corepack pnpm --filter @workspace/duat-city run build",
+    "Invoke-WebRequest http://127.0.0.1:18519/duat-city/",
+    "tools/generate-duat-osit-full-inventory-v1_4.ps1",
+    "node tools/run-v14-frame-sampler.mjs",
+    "node tools/run-audio-headed-qa-v1_4.mjs",
+    "node tools/capture-screenshots-v1_4.mjs"
+  ],
+  "tests": {
+    "status": "passed",
+    "evidence": [
+      "105 files / 310 tests PASS",
+      "typecheck PASS",
+      "build PASS",
+      "HTTP smoke 200",
+      "secret scan count-only",
+      "boundary scan PASS"
+    ]
+  },
+  "decisions": [
+    "Kept Wabi execution disabled.",
+    "Kept asset adoption metadata-only; no v1.4 public asset copies.",
+    "Kept ActionGate REVIEW because true headed FPS and human-audible audio still require manual confirmation.",
+    "Aligned OSIT formula profile fingerprint with DUAT-v1.4-OSIT-OBSERVACIONISMO-FULL."
+  ],
+  "pending": [
+    "Owner/manual headed FPS verification.",
+    "Owner/manual audible audio confirmation.",
+    "Asset/license review before any further public copy/adoption."
+  ],
+  "next_action": "Open localhost manually in a headed browser, enable Audio/Game-Feel, confirm audible cues by ear, and record native browser FPS for High/Beautiful Iso3D scenes."
+}

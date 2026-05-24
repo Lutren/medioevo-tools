@@ -233,13 +233,21 @@ def ficha_template(raw_path: str, classification: dict[str, object], tech: dict[
             "- status: `NEEDS_FICHA`",
             "- classification: `UNKNOWN_REVIEW_REQUIRED`",
             f"- tech_signals: `{signals}`",
+            "- default_decision: `UNKNOWN_REVIEW_REQUIRED / SELECTIVE_ABSORPTION_ONLY`",
             "- useful_tech: `CERTEZA: pending`",
+            "- useful_deltas: `pending; name exact deltas, not whole-source adoption`",
+            "- rejected_material: `pending; raw source, unsafe claims, secrets/private context, unrelated payloads`",
+            "- target_lane: `pending; docs/intake, research, package docs or runtime only after gate`",
+            "- claim_boundary: `requires_evidence`",
             "- extraction_mode: `SELECTIVE_ABSORPTION_ONLY`",
+            "- raw_adoption: `BLOCK`",
             "- public_boundary: `do not publish until scan/path/claim/license pass`",
             "- private_boundary: `do not copy secrets, sessions, RPG/TCG, paid sources or raw private notes`",
             "- discard_rule: `if not useful, list in DELETE_CANDIDATES.md; do not delete directly`",
             f"- required_registers: `{registers}`",
             "- evidence: `command, hash, test, scan or line reference here`",
+            "- tests: `focused preflight/test/scan evidence here`",
+            "- action_gate: `REVIEW`",
         ]
     )
 

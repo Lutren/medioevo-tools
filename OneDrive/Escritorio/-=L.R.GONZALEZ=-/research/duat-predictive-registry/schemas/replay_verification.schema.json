@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "duat.smallville.replay_verification.v0_2",
+  "title": "DUAT Smallville Replay Verification v0.2",
+  "type": "object",
+  "required": ["schema", "run_id", "seed", "ticks", "expected_hash", "observed_hash", "hash_chain_valid", "replay_verified", "status", "boundary"],
+  "properties": {
+    "schema": { "const": "duat.smallville.replay_verification.v0_2" },
+    "run_id": { "type": "string" },
+    "seed": { "type": "integer" },
+    "ticks": { "type": "integer" },
+    "expected_hash": { "type": "string" },
+    "observed_hash": { "type": "string" },
+    "hash_chain_valid": { "type": "boolean" },
+    "replay_verified": { "type": "boolean" },
+    "status": { "enum": ["REPLAY_PASS", "REPLAY_FAIL"] },
+    "boundary": {
+      "type": "object",
+      "properties": {
+        "uses_real_data": { "const": false },
+        "uses_network": { "const": false },
+        "uses_credentials": { "const": false },
+        "publication_gate": { "const": "BLOCK" }
+      }
+    }
+  }
+}

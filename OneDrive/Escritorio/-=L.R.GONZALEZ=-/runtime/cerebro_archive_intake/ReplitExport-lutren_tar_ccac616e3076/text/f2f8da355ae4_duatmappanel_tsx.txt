@@ -1,0 +1,72 @@
+import { useGeodiaSimulation } from "@/contexts/SimulationContext";
+import { useGetLatestSimulationSnapshot, getGetLatestSimulationSnapshotQueryKey } from "@workspace/api-client-react";
+import { PixelBorder } from "./custom/PixelComponents";
+
+export default function DuatMapPanel() {
+  const { state } = useGeodiaSimulation();
+  const { data: snap } = useGetLatestSimulationSnapshot({ query: { refetchInterval: 10000, queryKey: getGetLatestSimulationSnapshotQueryKey() } });
+
+  return (
+    <div className="flex flex-col h-full">
+      <div className="font-display text-xs border-b border-border pb-1 font-bold mb-4">
+        DUAT MAP // VISIÓN GENERAL
+      </div>
+
+      <PixelBorder className="flex-1 flex items-center justify-center bg-black/60 relative overflow-hidden p-2">
+        <div className="absolute inset-0 dither-bg opacity-20 pointer-events-none" />
+        
+        {/* Very simple static SVG diagram */}
+        <svg className="w-full h-full max-h-full max-w-full" viewBox="0 0 200 300" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--border)" />
+            </marker>
+          </defs>
+
+          {/* Lines */}
+          <path d="M 100 25 L 100 50" stroke="var(--border)" strokeWidth="1" markerEnd="url(#arrow)" />
+          <path d="M 100 75 L 100 100" stroke="var(--border)" strokeWidth="1" markerEnd="url(#arrow)" />
+          <path d="M 100 125 L 100 150" stroke="var(--border)" strokeWidth="1" markerEnd="url(#arrow)" />
+          <path d="M 100 175 L 100 200" stroke="var(--border)" strokeWidth="1" markerEnd="url(#arrow)" />
+          <path d="M 100 225 L 100 250" stroke="var(--border)" strokeWidth="1" markerEnd="url(#arrow)" />
+          
+          <path d="M 125 62 L 150 62 L 150 150 L 125 150" stroke="var(--border)" strokeWidth="1" fill="none" strokeDasharray="2 2" markerEnd="url(#arrow)" />
+          <path d="M 125 212 L 150 212 L 150 262 L 125 262" stroke="var(--border)" strokeWidth="1" fill="none" strokeDasharray="2 2" markerEnd="url(#arrow)" />
+
+          {/* Nodes */}
+          <rect x="40" y="10" width="120" height="15" fill="var(--background)" stroke="var(--primary)" />
+          <text x="100" y="20" fontSize="6" fontFamily="var(--font-mono)" fill="var(--primary)" textAnchor="middle" dominantBaseline="middle">Observacionismo</text>
+
+          <rect x="50" y="50" width="100" height="25" fill="var(--background)" stroke="var(--border)" />
+          <text x="100" y="62" fontSize="8" fontFamily="var(--font-display)" fill="var(--foreground)" textAnchor="middle" dominantBaseline="middle">Geodia Grid</text>
+
+          <rect x="60" y="100" width="80" height="25" fill="var(--background)" stroke="var(--accent)" />
+          <text x="100" y="112" fontSize="7" fontFamily="var(--font-mono)" fill="var(--accent)" textAnchor="middle" dominantBaseline="middle">Sensorium</text>
+
+          <rect x="60" y="150" width="80" height="25" fill="var(--background)" stroke="var(--border)" />
+          <text x="100" y="162" fontSize="7" fontFamily="var(--font-mono)" fill="var(--foreground)" textAnchor="middle" dominantBaseline="middle">EML Bridge</text>
+
+          <rect x="40" y="200" width="120" height="25" fill="var(--background)" stroke="var(--primary)" />
+          <text x="100" y="212" fontSize="7" fontFamily="var(--font-mono)" fill="var(--primary)" textAnchor="middle" dominantBaseline="middle">Physics / ClaimGate</text>
+
+          <rect x="50" y="250" width="100" height="25" fill="var(--background)" stroke="var(--success)" />
+          <text x="100" y="262" fontSize="7" fontFamily="var(--font-mono)" fill="var(--success)" textAnchor="middle" dominantBaseline="middle">WitnessLog</text>
+
+          {/* Side nodes */}
+          <rect x="150" y="100" width="40" height="15" fill="var(--background)" stroke="var(--destructive)" />
+          <text x="170" y="107" fontSize="4" fontFamily="var(--font-mono)" fill="var(--destructive)" textAnchor="middle" dominantBaseline="middle">Coding Agent</text>
+        </svg>
+      </PixelBorder>
+
+      {snap && (
+        <div className="mt-4 font-mono text-[9px] text-foreground/80 space-y-1 border border-border p-2 bg-input">
+          <div className="text-primary font-bold border-b border-border pb-1 mb-1 text-[10px]">SNAPSHOT RECIENTE</div>
+          <div className="flex justify-between"><span>TICK:</span> <span>{snap.tick}</span></div>
+          <div className="flex justify-between"><span>MODO:</span> <span>{snap.mode}</span></div>
+          <div className="flex justify-between"><span>R (Psi):</span> <span>{snap.psi_r.toFixed(4)}</span></div>
+          <div className="flex justify-between"><span>LEADER:</span> <span className="text-accent">{snap.leading_model}</span></div>
+        </div>
+      )}
+    </div>
+  );
+}

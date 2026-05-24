@@ -1,0 +1,2 @@
+{"schema_version":"claudio.witness_log.v0.1","event_id":"evt-clean-001","created_at":"2026-05-15T00:00:00Z","command":"budget status","status":"ok","actiongate":"APPROVE","result_summary":{"kind":"dict","redacted":true,"evidence":"present"}}
+{"schema_version":"claudio.witness_log.v0.1","event_id":"evt-clean-002","created_at":"2026-05-15T00:01:00Z","command":"brief","status":"ok","actiongate":"APPROVE","result_summary":{"kind":"dict","redacted":true,"evidence":"present"}}

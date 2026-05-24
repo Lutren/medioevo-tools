@@ -19,7 +19,13 @@ DESTRUCTIVE_WORDS = {
     "wipe",
     "purge",
     "clear all",
+    "clear",
     "limpia todo",
+    "limpiar todo",
+    "quita",
+    "quitar",
+    "purga",
+    "remove all",
     "reset hard",
 }
 

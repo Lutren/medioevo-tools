@@ -1,0 +1,130 @@
+{
+  "schema": "duat.reviewed-assets.v0.7",
+  "generated_at": "2026-05-19T04:57:14.1774522-06:00",
+  "boundary": "INTERNAL_REVIEWED_ASSET",
+  "publication_allowed": false,
+  "assets": [
+    {
+      "id": "duat-icon-gate",
+      "filename": "duat-icon-gate.svg",
+      "original_path": "ROOT_BRAIN_OS/DUAT ASSETS/icons/svg/duat-icon-gate.svg",
+      "copied_path": "/reviewed-assets/v0_7/duat-icon-gate.svg",
+      "intended_use": "gate state icon",
+      "boundary": "INTERNAL_REVIEWED_ASSET",
+      "publication_allowed": false,
+      "sha256": "DE35C04A3EE2616C444E7EFA1ADCA19FFBFF69978C6473073D7EFBDD50C1CA19",
+      "origin_sha256": "DE35C04A3EE2616C444E7EFA1ADCA19FFBFF69978C6473073D7EFBDD50C1CA19",
+      "sprite_ids": [
+        "ui/gate",
+        "building/gatehouse",
+        "effect/gate"
+      ]
+    },
+    {
+      "id": "duat-icon-geo",
+      "filename": "duat-icon-geo.svg",
+      "original_path": "ROOT_BRAIN_OS/DUAT ASSETS/icons/svg/duat-icon-geo.svg",
+      "copied_path": "/reviewed-assets/v0_7/duat-icon-geo.svg",
+      "intended_use": "map/geospatial icon",
+      "boundary": "INTERNAL_REVIEWED_ASSET",
+      "publication_allowed": false,
+      "sha256": "C2DA4BD06A225BD85A9722A4F2C1359D6CDA9001CB9123FD87A0DFB8F48F58F3",
+      "origin_sha256": "C2DA4BD06A225BD85A9722A4F2C1359D6CDA9001CB9123FD87A0DFB8F48F58F3",
+      "sprite_ids": [
+        "ui/geo",
+        "tile/road",
+        "effect/geo"
+      ]
+    },
+    {
+      "id": "duat-icon-memory",
+      "filename": "duat-icon-memory.svg",
+      "original_path": "ROOT_BRAIN_OS/DUAT ASSETS/icons/svg/duat-icon-memory.svg",
+      "copied_path": "/reviewed-assets/v0_7/duat-icon-memory.svg",
+      "intended_use": "agent memory icon",
+      "boundary": "INTERNAL_REVIEWED_ASSET",
+      "publication_allowed": false,
+      "sha256": "42547798891F19B14AE03CF93359524E51C008A127BE9C468BC12A3FBEFC4203",
+      "origin_sha256": "42547798891F19B14AE03CF93359524E51C008A127BE9C468BC12A3FBEFC4203",
+      "sprite_ids": [
+        "ui/memory",
+        "agent/Archivist"
+      ]
+    },
+    {
+      "id": "duat-icon-multi-agent",
+      "filename": "duat-icon-multi-agent.svg",
+      "original_path": "ROOT_BRAIN_OS/DUAT ASSETS/icons/svg/duat-icon-multi-agent.svg",
+      "copied_path": "/reviewed-assets/v0_7/duat-icon-multi-agent.svg",
+      "intended_use": "agent group icon",
+      "boundary": "INTERNAL_REVIEWED_ASSET",
+      "publication_allowed": false,
+      "sha256": "CA5231252B8752DA7B14F885AB1FCF4D08A5C2F1913A34116F5BE25CB29314D7",
+      "origin_sha256": "CA5231252B8752DA7B14F885AB1FCF4D08A5C2F1913A34116F5BE25CB29314D7",
+      "sprite_ids": [
+        "ui/multi-agent",
+        "agent/default"
+      ]
+    },
+    {
+      "id": "duat-icon-witness",
+      "filename": "duat-icon-witness.svg",
+      "original_path": "ROOT_BRAIN_OS/DUAT ASSETS/icons/svg/duat-icon-witness.svg",
+      "copied_path": "/reviewed-assets/v0_7/duat-icon-witness.svg",
+      "intended_use": "witnesslog icon",
+      "boundary": "INTERNAL_REVIEWED_ASSET",
+      "publication_allowed": false,
+      "sha256": "A6E80B90F5254498732337EF8FC48F704201821EA3D2EB692B42CEB1D8294D09",
+      "origin_sha256": "A6E80B90F5254498732337EF8FC48F704201821EA3D2EB692B42CEB1D8294D09",
+      "sprite_ids": [
+        "ui/witness",
+        "effect/witness"
+      ]
+    },
+    {
+      "id": "duat-icon-handoff",
+      "filename": "duat-icon-handoff.svg",
+      "original_path": "ROOT_BRAIN_OS/DUAT ASSETS/icons/svg/duat-icon-handoff.svg",
+      "copied_path": "/reviewed-assets/v0_7/duat-icon-handoff.svg",
+      "intended_use": "handoff icon",
+      "boundary": "INTERNAL_REVIEWED_ASSET",
+      "publication_allowed": false,
+      "sha256": "D1C703EF2E7F971BE9E6EC9190387A390F62F64849523D6CD1622E1E77A53A2E",
+      "origin_sha256": "D1C703EF2E7F971BE9E6EC9190387A390F62F64849523D6CD1622E1E77A53A2E",
+      "sprite_ids": [
+        "ui/handoff",
+        "effect/handoff"
+      ]
+    },
+    {
+      "id": "duat-icon-simulate",
+      "filename": "duat-icon-simulate.svg",
+      "original_path": "ROOT_BRAIN_OS/DUAT ASSETS/icons/svg/duat-icon-simulate.svg",
+      "copied_path": "/reviewed-assets/v0_7/duat-icon-simulate.svg",
+      "intended_use": "simulation icon",
+      "boundary": "INTERNAL_REVIEWED_ASSET",
+      "publication_allowed": false,
+      "sha256": "72B38D0A24309D3C7BE1ED1A832EC36C92D6C618A88ABC5691A605966A009E48",
+      "origin_sha256": "72B38D0A24309D3C7BE1ED1A832EC36C92D6C618A88ABC5691A605966A009E48",
+      "sprite_ids": [
+        "ui/simulate",
+        "effect/simulate"
+      ]
+    },
+    {
+      "id": "duat-icon-repair",
+      "filename": "duat-icon-repair.svg",
+      "original_path": "ROOT_BRAIN_OS/DUAT ASSETS/icons/svg/duat-icon-repair.svg",
+      "copied_path": "/reviewed-assets/v0_7/duat-icon-repair.svg",
+      "intended_use": "repair/build icon",
+      "boundary": "INTERNAL_REVIEWED_ASSET",
+      "publication_allowed": false,
+      "sha256": "93F410D77AE5DEEE8CE5FFB0594CCBEA27B58E3F2992FE2A3BA15233CC3BC046",
+      "origin_sha256": "93F410D77AE5DEEE8CE5FFB0594CCBEA27B58E3F2992FE2A3BA15233CC3BC046",
+      "sprite_ids": [
+        "ui/repair",
+        "building/workshop"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "rollbacks": [
+    {
+      "schema_version": "claudio.rollback.v0.1",
+      "rollback_id": "rollback-failure-001",
+      "created_at": "2026-05-15T00:00:00Z",
+      "target": "docs/example.md",
+      "existed": true,
+      "backup": "runtime/rollback/rollback-failure-001/backup"
+    }
+  ]
+}

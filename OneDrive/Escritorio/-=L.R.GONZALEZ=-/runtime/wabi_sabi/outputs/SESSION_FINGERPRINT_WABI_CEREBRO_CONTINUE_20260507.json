@@ -1,0 +1,235 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "20260507-123710-wabi-cerebro-review-pack",
+  "project": "MEDIOEVO/CLAUDIO/WABI_CEREBRO",
+  "agent": "Wabi/Sabi-Codex",
+  "base_model": "unknown_env_not_exposed",
+  "project_root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
+  "branch": "codex/curador-seto-loops-2026-05-05",
+  "base_commit": "db09f69",
+  "R_close": 0.15,
+  "Phi_eff": 0.8,
+  "regime_close": "FUNCIONAL_LOCAL_VERIFICADO",
+  "autonomy_level_used": 4,
+  "actiongate_summary": {
+    "approved": 14,
+    "review_required": 2,
+    "blocked": 0
+  },
+  "files_created": [
+    "apps/local/wabi-sabi/wabi_sabi/core/cerebro_archive_intake.py",
+    "apps/local/wabi-sabi/wabi_sabi/core/geodia_math_core.py",
+    "apps/local/wabi-sabi/wabi_sabi/core/cerebro_variant_compare.py",
+    "apps/local/wabi-sabi/wabi_sabi/core/cerebro_duplicate_migration_plan.py",
+    "apps/local/wabi-sabi/wabi_sabi/core/cerebro_canon_merge_review.py",
+    "apps/local/wabi-sabi/wabi_sabi/core/geodia_synthetic_surface.py",
+    "apps/local/wabi-sabi/wabi_sabi/core/geodia_synthetic_falsifier.py",
+    "apps/local/wabi-sabi/tests/test_cerebro_archive_intake.py",
+    "apps/local/wabi-sabi/tests/test_cerebro_variant_compare.py",
+    "apps/local/wabi-sabi/tests/test_cerebro_duplicate_migration_plan.py",
+    "apps/local/wabi-sabi/tests/test_cerebro_canon_merge_review.py",
+    "apps/local/wabi-sabi/tests/test_geodia_math_core.py",
+    "apps/local/wabi-sabi/tests/test_geodia_synthetic_surface.py",
+    "apps/local/wabi-sabi/tests/test_geodia_synthetic_falsifier.py",
+    "runtime/cerebro_master_index/DOCUMENT_EXTRACTION_REGISTER.md",
+    "runtime/cerebro_master_index/HUMAN_NAVIGATION_INDEX.md",
+    "runtime/cerebro_archive_intake/ReplitExport-lutren_tar_ccac616e3076/ARCHIVE_MEMBER_MANIFEST.jsonl",
+    "runtime/cerebro_archive_intake/ReplitExport-lutren_tar_ccac616e3076/ARCHIVE_TEXT_INDEX.jsonl",
+    "runtime/cerebro_archive_intake/ReplitExport-lutren_tar_ccac616e3076/ARCHIVE_INTAKE_REPORT.md",
+    "runtime/cerebro_archive_intake/ReplitExport-lutren_tar_ccac616e3076/ARCHIVE_INTAKE_PAYLOAD.json",
+    "docs/ops/WABI_CEREBRO_CONTINUATION_HANDOFF_2026-05-07.md",
+    "docs/ops/STABILITY_FREEZE_WABI_CEREBRO_2026-05-07.md",
+    "docs/intake/REPLIT_DUAT_GEODIA_MODULE_CANDIDATES_2026-05-07.md",
+    "runtime/wabi_sabi/outputs/SESSION_FINGERPRINT_WABI_CEREBRO_CONTINUE_20260507.json",
+    "runtime/wabi_sabi/outputs/STABILITY_CHECKPOINT_WABI_CEREBRO_20260507.json",
+    "runtime/cerebro_master_index/VARIANT_SEMANTIC_COMPARISON.json",
+    "runtime/cerebro_master_index/VARIANT_SEMANTIC_COMPARISON.md",
+    "runtime/cerebro_master_index/VARIANT_ACTION_QUEUE.jsonl",
+    "runtime/cerebro_master_index/VARIANT_EXACT_DUPLICATE_MIGRATION_PLAN.json",
+    "runtime/cerebro_master_index/VARIANT_EXACT_DUPLICATE_MIGRATION_PLAN.md",
+    "runtime/cerebro_master_index/VARIANT_EXACT_DUPLICATE_MIGRATION_QUEUE.jsonl",
+    "runtime/cerebro_master_index/VARIANT_EXACT_DUPLICATE_MIGRATION_PLAN.csv",
+    "runtime/cerebro_master_index/VARIANT_CANON_MERGE_REVIEW_PACK.json",
+    "runtime/cerebro_master_index/VARIANT_CANON_MERGE_REVIEW_PACK.md",
+    "runtime/cerebro_master_index/VARIANT_CANON_MERGE_REVIEW_QUEUE.jsonl",
+    "runtime/wabi_sabi/outputs/GEODIA_SYNTHETIC_FALSIFIER.json",
+    "runtime/wabi_sabi/outputs/GEODIA_SYNTHETIC_SURFACE_CLAIM_CONTRACT.json"
+  ],
+  "files_modified": [
+    "apps/local/wabi-sabi/wabi_sabi/core/cerebro_line_audit.py",
+    "apps/local/wabi-sabi/wabi_sabi/cli/main.py",
+    "apps/local/wabi-sabi/wabi_sabi/core/tool_registry.py",
+    "apps/local/wabi-sabi/wabi_sabi/core/functional_status.py",
+    "apps/local/wabi-sabi/wabi_sabi/core/claim_contract.py",
+    "apps/local/wabi-sabi/wabi_sabi/core/operator_panel.py",
+    "apps/local/wabi-sabi/tests/test_cerebro_line_audit.py",
+    "apps/local/wabi-sabi/tests/test_claim_contract.py",
+    "apps/local/wabi-sabi/tests/test_functional_status.py",
+    "apps/local/wabi-sabi/tests/test_operator_panel.py",
+    "MEDIOEVO_OBSERVACIONISMO_MASTER/00_README_MASTER.md",
+    "MEDIOEVO_OBSERVACIONISMO_MASTER/20_NEXT_SESSION_BRIEF.md",
+    "MEDIOEVO_OBSERVACIONISMO_MASTER/PENDIENTES_DE_INPUT.md"
+  ],
+  "commands_run": [
+    "python tools\\release\\pending_review.py --write --quiet",
+    "python -m pytest tests\\test_cerebro_archive_intake.py tests\\test_cerebro_line_audit.py -q",
+    "python -m py_compile wabi_sabi\\core\\cerebro_archive_intake.py wabi_sabi\\core\\cerebro_line_audit.py wabi_sabi\\cli\\main.py",
+    "python -m wabi_sabi.cli.main cerebro-audit --write-docs --json --workspace <workspace> --runtime <runtime>",
+    "python -m wabi_sabi.cli.main archive-intake <ReplitExport-lutren.tar.gz> --json --workspace <workspace> --runtime <runtime>",
+    "python -m wabi_sabi.cli.main curator-fichas --json --workspace <workspace> --runtime <runtime>",
+    "python -m wabi_sabi.cli.main cerebro-index --write-docs --json --workspace <workspace> --runtime <runtime>",
+    "python -m pytest tests\\test_geodia_math_core.py tests\\test_geodia_synthetic_surface.py tests\\test_functional_status.py -q",
+    "python -m wabi_sabi.cli.main geodia-synthetic --json --workspace <workspace> --runtime <runtime>",
+    "python -m pytest tests\\test_geodia_math_core.py tests\\test_geodia_synthetic_surface.py tests\\test_geodia_synthetic_falsifier.py tests\\test_claim_contract.py tests\\test_functional_status.py -q",
+    "python -m wabi_sabi.cli.main geodia-falsifier --json --workspace <workspace> --runtime <runtime>",
+    "python -m pytest tests\\test_operator_panel.py tests\\test_task_spec_planner.py tests\\test_geodia_synthetic_falsifier.py -q",
+    "python -m wabi_sabi.cli.main operator-status --json --workspace <workspace> --runtime <runtime>",
+    "python -m pytest tests\\test_cerebro_variant_compare.py tests\\test_functional_status.py -q",
+    "python -m py_compile wabi_sabi\\core\\cerebro_variant_compare.py wabi_sabi\\cli\\main.py wabi_sabi\\core\\functional_status.py wabi_sabi\\core\\tool_registry.py",
+    "python -m wabi_sabi.cli.main variant-compare --write-docs --json --workspace <workspace> --runtime <runtime>",
+    "python -m py_compile wabi_sabi\\core\\cerebro_duplicate_migration_plan.py wabi_sabi\\cli\\main.py wabi_sabi\\core\\functional_status.py wabi_sabi\\core\\tool_registry.py",
+    "python -m pytest tests\\test_cerebro_duplicate_migration_plan.py tests\\test_cerebro_variant_compare.py tests\\test_functional_status.py -q",
+    "python -m wabi_sabi.cli.main plan-duplicados --write-docs --json --workspace <workspace> --runtime <runtime>",
+    "python -m py_compile wabi_sabi\\core\\cerebro_canon_merge_review.py wabi_sabi\\cli\\main.py wabi_sabi\\core\\functional_status.py wabi_sabi\\core\\tool_registry.py",
+    "python -m pytest tests\\test_cerebro_canon_merge_review.py tests\\test_cerebro_duplicate_migration_plan.py tests\\test_cerebro_variant_compare.py tests\\test_functional_status.py -q",
+    "python -m wabi_sabi.cli.main merge-review-pack --write-docs --json --workspace <workspace> --runtime <runtime>",
+    "python -m pytest -q",
+    "python -m wabi_sabi.cli.main functional-status --json --workspace <workspace> --runtime <runtime>"
+  ],
+  "tests": {
+    "status": "passed",
+    "evidence": [
+      "apps/local/wabi-sabi: 151 passed",
+      "canon merge review pack tests: 14 passed",
+      "duplicate migration plan tests: 10 passed",
+      "variant compare tests: 6 passed",
+      "geodia focused tests: 18 passed",
+      "geodia falsifier focused tests: 26 passed",
+      "operator panel geodia tests: 11 passed",
+      "focused archive/audit tests: 5 passed"
+    ]
+  },
+  "evidence": {
+    "cerebro_line_audit": {
+      "schema": "wabi.cerebro_line_audit.v2",
+      "files": 648,
+      "text_files": 577,
+      "document_text_files": 33,
+      "document_review_files": 0,
+      "lines": 291270,
+      "signal_lines": 29614,
+      "variants": 118
+    },
+    "archive_intake": {
+      "archive": "ReplitExport-lutren.tar.gz",
+      "sha256": "ccac616e3076026284b3e3b5ad25e331fb66340d4ed992831ad5d8059e9aabe2",
+      "members": 888,
+      "files": 630,
+      "text_indexed": 215,
+      "blocked_metadata_or_cache": 402,
+      "binary_review": 13
+    },
+    "geodia_math_core": {
+      "status": "implemented_synthetic_only",
+      "module": "apps/local/wabi-sabi/wabi_sabi/core/geodia_math_core.py",
+      "tests": "apps/local/wabi-sabi/tests/test_geodia_math_core.py"
+    },
+    "geodia_synthetic_surface": {
+      "schema": "wabi.geodia_synthetic_surface.v1",
+      "status": "SYNTHETIC_ONLY",
+      "bounded": true,
+      "claim_gate": "NO_PUBLIC_STRONG_CLAIM_UNTIL_NUMERIC_VALIDATION",
+      "module": "apps/local/wabi-sabi/wabi_sabi/core/geodia_synthetic_surface.py",
+      "tests": "apps/local/wabi-sabi/tests/test_geodia_synthetic_surface.py"
+    },
+    "geodia_synthetic_falsifier": {
+      "schema": "wabi.geodia_synthetic_falsifier.v1",
+      "status": "RESEARCH_ONLY_SYNTHETIC_FALSIFIER",
+      "result": "PASS",
+      "claim_gate": "OPERATIONAL_ONLY_NO_PUBLIC_STRONG_CLAIM",
+      "claim_evaluation_gate": "APPROVE",
+      "claim_level": "operational",
+      "artifacts": [
+        "runtime/wabi_sabi/outputs/GEODIA_SYNTHETIC_FALSIFIER.json",
+        "runtime/wabi_sabi/outputs/GEODIA_SYNTHETIC_SURFACE_CLAIM_CONTRACT.json"
+      ]
+    },
+    "operator_panel": {
+      "schema": "wabi.operator_panel.v1",
+      "gate": "APPROVE",
+      "geodia_research": "RESEARCH_ONLY"
+    },
+    "variant_semantic_comparison": {
+      "schema": "wabi.cerebro_variant_semantic_comparison.v1",
+      "variant_groups": 118,
+      "archive_review_candidates": 45,
+      "canon_merge_review_candidates": 3,
+      "must_keep_separate_count": 70,
+      "artifacts": [
+        "runtime/cerebro_master_index/VARIANT_SEMANTIC_COMPARISON.json",
+        "runtime/cerebro_master_index/VARIANT_SEMANTIC_COMPARISON.md",
+        "runtime/cerebro_master_index/VARIANT_ACTION_QUEUE.jsonl"
+      ]
+    },
+    "duplicate_migration_plan": {
+      "schema": "wabi.cerebro_duplicate_migration_plan.v1",
+      "exact_duplicate_groups": 45,
+      "proposed_archive_moves": 57,
+      "ready_for_review": 57,
+      "blocked_moves": 0,
+      "binary_or_archive_duplicates": 14,
+      "source_mutations": 0,
+      "artifacts": [
+        "runtime/cerebro_master_index/VARIANT_EXACT_DUPLICATE_MIGRATION_PLAN.json",
+        "runtime/cerebro_master_index/VARIANT_EXACT_DUPLICATE_MIGRATION_PLAN.md",
+        "runtime/cerebro_master_index/VARIANT_EXACT_DUPLICATE_MIGRATION_QUEUE.jsonl",
+        "runtime/cerebro_master_index/VARIANT_EXACT_DUPLICATE_MIGRATION_PLAN.csv"
+      ]
+    },
+    "canon_merge_review_pack": {
+      "schema": "wabi.cerebro_canon_merge_review.v1",
+      "review_candidate_groups": 3,
+      "unique_candidate_sets": 2,
+      "duplicate_candidate_sets": 1,
+      "license_boundary_candidates": 2,
+      "content_canonicalization_candidates": 1,
+      "auto_merge_actions": 0,
+      "source_mutations": 0,
+      "artifacts": [
+        "runtime/cerebro_master_index/VARIANT_CANON_MERGE_REVIEW_PACK.json",
+        "runtime/cerebro_master_index/VARIANT_CANON_MERGE_REVIEW_PACK.md",
+        "runtime/cerebro_master_index/VARIANT_CANON_MERGE_REVIEW_QUEUE.jsonl"
+      ]
+    },
+    "functional_status": "LOCAL_FUNCTIONAL_VERIFIED"
+  },
+  "decisions": [
+    "DOCX/PDF are now treated as extractable text sources when parsers succeed.",
+    "Archives are not raw-extracted; only text-like non-secret members go into quarantine.",
+    "geodia_math_core was reimplemented locally as SYNTHETIC_ONLY from the Replit intake candidate.",
+    "geodia_synthetic_surface exposes geodia_math_core as deterministic local CLI/JSON without strong claims.",
+    "geodia_synthetic_falsifier gates the surface with operational claim_contract only.",
+    "claim_contract now supports in-memory evaluation for internally generated contracts without using source-path resolver.",
+    "operator_panel exposes GEODIA only as RESEARCH_ONLY and now resolves the packaged default task spec when workspace root is the portfolio root.",
+    "cerebro_variant_compare compares the 118 registered groups and writes review queues without moving, merging or archiving source files.",
+    "cerebro_duplicate_migration_plan creates a dry-run queue for exact duplicates without moving source files.",
+    "cerebro_canon_merge_review writes excerpt review packs for canonical merge candidates and marks LICENSE files as package/license boundaries.",
+    "Stability freeze selected consolidation before further expansion.",
+    "Git metadata/cache and secret-like archive paths are blocked from text extraction.",
+    "Last curation record must remain agent-owned; curator-fichas recorded 12 agent-processed fichas."
+  ],
+  "pending": [
+    "Review 57 dry-run duplicate archive actions before any physical archive move.",
+    "Resolve 3 canon merge review candidates with no auto-merge; keep LICENSE candidates separate until package/license review.",
+    "Process remaining ZIP/TAR.GZ/binarios by priority with the same archive-intake gate.",
+    "Review 3 canon merge candidates and 45 exact duplicate archive candidates before any physical action.",
+    "Run visual QA only when DOCX/PDF layout or formulas matter for a claim."
+  ],
+  "next_action": "Review the 57 dry-run duplicate archive actions and resolve the 3 canon merge review candidates without auto-merge.",
+  "status": "completed_local_cycle",
+  "residual_risks": [
+    "workspace remains dirty and has untracked/concurrent work",
+    "archive text quarantine is not a production import",
+    "strong physics claims remain research-gated"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "schema": "geodia.public_safe.fixture_schema_example.v0_1",
+  "publication_gate": "BLOCK",
+  "synthetic_example": true,
+  "raw_data_included": false,
+  "source_id": "SYNTHETIC_PUBLIC_SAFE_EXAMPLE",
+  "source_url": "https://example.invalid/public-safe-schema-only",
+  "license_status": "EXAMPLE_ONLY_NOT_A_SOURCE_LICENSE",
+  "country_or_region": "EXAMPLE_REGION",
+  "temporal_coverage": {
+    "start_year": 2018,
+    "end_year": 2023
+  },
+  "indicators": [
+    {
+      "canonical_indicator_id": "unemployment_rate_example",
+      "source_indicator_id": "example_unemployment_rate",
+      "unit_original": "percent",
+      "unit_canonical": "percent",
+      "polarity_original": "negative",
+      "polarity_canonical": "negative",
+      "comparability_class": "STRONG_PROXY",
+      "values": {
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null
+      },
+      "caveats": [
+        "Synthetic schema example only; no official observations included."
+      ]
+    }
+  ]
+}

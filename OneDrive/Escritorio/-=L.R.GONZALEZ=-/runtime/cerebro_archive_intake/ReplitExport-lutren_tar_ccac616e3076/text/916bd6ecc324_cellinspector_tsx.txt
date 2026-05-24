@@ -1,0 +1,23 @@
+import { GeodiaCell } from "@/lib/geodia";
+import { PixelBorder } from "./custom/PixelComponents";
+
+export default function CellInspector({ cell, onClose }: { cell: GeodiaCell, onClose: () => void }) {
+  return (
+    <PixelBorder className="absolute top-4 right-4 w-64 bg-background/95 backdrop-blur-sm z-50 shadow-2xl">
+      <div className="flex justify-between items-center border-b border-border pb-1 mb-2">
+        <span className="font-display font-bold text-xs">OBSERVATION ENVELOPE</span>
+        <button onClick={onClose} className="text-destructive hover:text-white px-1">X</button>
+      </div>
+      <div className="font-mono text-[10px] space-y-1">
+        <div>CELL: [{cell.x}, {cell.y}]</div>
+        <div className="flex justify-between"><span>resources:</span> <span className="text-primary">{cell.resources.toFixed(4)}</span></div>
+        <div className="flex justify-between"><span>knowledge:</span> <span className="text-primary">{cell.knowledge.toFixed(4)}</span></div>
+        <div className="flex justify-between"><span>memory:</span> <span className="text-primary">{cell.memory.toFixed(4)}</span></div>
+        <div className="flex justify-between"><span>conflict:</span> <span className="text-destructive">{cell.conflict.toFixed(4)}</span></div>
+        <div className="flex justify-between"><span>signal_noise:</span> <span className="text-accent">{cell.signal_noise.toFixed(4)}</span></div>
+        <div className="flex justify-between"><span>stability:</span> <span className="text-success">{cell.stability.toFixed(4)}</span></div>
+        <div className="flex justify-between"><span>agent_density:</span> <span className="text-primary">{cell.agent_density.toFixed(4)}</span></div>
+      </div>
+    </PixelBorder>
+  );
+}

@@ -1,0 +1,145 @@
+{
+  "schema": "duat.domain_weight_calibration.v0_5",
+  "run_id": "DUAT_DOMAIN_WEIGHT_CALIBRATION_v0_5",
+  "generated_at_utc": "2026-05-15T05:20:03Z",
+  "publication_gate": "BLOCK",
+  "action_gate_local": "REVIEW",
+  "domain_weight_calibration_status": "REVIEW",
+  "selection_protocol": "fold_local_predictions_with_non_nested_grid_selection_REVIEW_ONLY",
+  "candidate_windows": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "candidate_last_value_weights": [
+    0.25,
+    0.5,
+    0.75
+  ],
+  "objectives": [
+    {
+      "objective_id": "DUAT_GEODIA_HARMONIZED_INDICATOR_ONE_STEP_FORECAST_v0_1",
+      "indicator": "economy.real_growth_rate",
+      "data_mode": "real_fixture",
+      "domain_weight_calibration_status": "NOT_IMPROVED",
+      "n_folds": 6,
+      "baseline_metrics": {
+        "MAE": 3.8967183222746695,
+        "RMSE": 4.585415858753202,
+        "MAPE_if_safe": {
+          "value": null,
+          "reason": "actual_contains_negative_values"
+        }
+      },
+      "v0_4_enhanced_metrics": {
+        "MAE": 3.878444278018328,
+        "RMSE": 5.610771537413714,
+        "MAPE_if_safe": {
+          "value": null,
+          "reason": "actual_contains_negative_values"
+        }
+      },
+      "best_candidate": {
+        "window": 5,
+        "last_value_weight": 0.25,
+        "metrics": {
+          "MAE": 3.6718912147156946,
+          "RMSE": 4.864101978142136,
+          "MAPE_if_safe": {
+            "value": null,
+            "reason": "actual_contains_negative_values"
+          }
+        }
+      },
+      "candidate_count": 12,
+      "leakage_check": "PASS",
+      "publication_gate": "BLOCK",
+      "claim_allowed_public": false
+    },
+    {
+      "objective_id": "DUAT_GEODIA_LABOR_MARKET_UNEMPLOYMENT_ONE_STEP_FORECAST_v0_1",
+      "indicator": "labor_market.unemployment_rate.total",
+      "data_mode": "real_fixture",
+      "domain_weight_calibration_status": "REVIEW",
+      "n_folds": 9,
+      "baseline_metrics": {
+        "MAE": 0.423388888888889,
+        "RMSE": 0.5068877072663904,
+        "MAPE_if_safe": {
+          "value": 0.13152845158975401,
+          "reason": "PASS"
+        }
+      },
+      "v0_4_enhanced_metrics": {
+        "MAE": 0.45390189792977714,
+        "RMSE": 0.5559875713415802,
+        "MAPE_if_safe": {
+          "value": 0.14824925009444975,
+          "reason": "PASS"
+        }
+      },
+      "best_candidate": {
+        "window": 5,
+        "last_value_weight": 0.5,
+        "metrics": {
+          "MAE": 0.3933563888888889,
+          "RMSE": 0.4861372550827575,
+          "MAPE_if_safe": {
+            "value": 0.12833359392104393,
+            "reason": "PASS"
+          }
+        }
+      },
+      "candidate_count": 12,
+      "leakage_check": "PASS",
+      "publication_gate": "BLOCK",
+      "claim_allowed_public": false
+    },
+    {
+      "objective_id": "DUAT_GEODIA_DEMOGRAPHY_LIFE_EXPECTANCY_ONE_STEP_FORECAST_v0_1",
+      "indicator": "demography.life_expectancy_at_birth.total",
+      "data_mode": "real_fixture",
+      "domain_weight_calibration_status": "NOT_IMPROVED",
+      "n_folds": 6,
+      "baseline_metrics": {
+        "MAE": 1.1363333333333305,
+        "RMSE": 1.8158352531732236,
+        "MAPE_if_safe": {
+          "value": 0.015265669178183615,
+          "reason": "PASS"
+        }
+      },
+      "v0_4_enhanced_metrics": {
+        "MAE": 1.4734832134108586,
+        "RMSE": 1.9447531449224402,
+        "MAPE_if_safe": {
+          "value": 0.019954627868863848,
+          "reason": "PASS"
+        }
+      },
+      "best_candidate": {
+        "window": 5,
+        "last_value_weight": 0.75,
+        "metrics": {
+          "MAE": 1.1993569444444436,
+          "RMSE": 1.6873710416740288,
+          "MAPE_if_safe": {
+            "value": 0.016197079185495237,
+            "reason": "PASS"
+          }
+        }
+      },
+      "candidate_count": 12,
+      "leakage_check": "PASS",
+      "publication_gate": "BLOCK",
+      "claim_allowed_public": false
+    }
+  ],
+  "interpretation": {
+    "public_claim_allowed": false,
+    "note": "This is a local calibration diagnostic. It does not prove generalization."
+  },
+  "sha256": "f0519c974abc2002a4656f0a74d2c52e1b6070829133600219e3d4a70be514bc",
+  "sha256_scope": "canonical_json_without_sha256_field"
+}

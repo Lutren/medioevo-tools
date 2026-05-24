@@ -71,6 +71,18 @@ Evidencia mas reciente:
 | external actions | website Sponsors route desplegado y verificado; Sponsors high tiers ya cerrado; Gumroad copy-only actualizado; PNGs sociales renderizados localmente; sin LinkedIn, redes, GitHub push, DNS, Gumroad media upload ni subida de artefactos de producto |
 | LinkedIn ActionGate | dry-run `browser_post` `4a3ffd58-458f-4bd7-acc1-7e270cfcc3d0`; no edit, no post, no owner-view probado |
 
+Actualizacion 2026-05-16:
+
+| check | resultado |
+|---|---|
+| GitHub profile README | `DONE_VERIFIED`; commit `10f103834e1d72895ce73fb1511fe1ebf715d954` agrego `Start Here` con rutas a software, store, Sponsors y boundary |
+| GitHub profile SecretScan | `PASS`; `count_reported=0` |
+| Website staging SEO | `PASS`; audit `seo-growth-medioevo` sin findings mayores |
+| Website staging hardening | `LOCAL_DONE`; home/sitemap dejaron de empujar `play-medioevo.html`, checkout directo queda deshabilitado localmente, `play-medioevo.html` queda `noindex,nofollow` |
+| Website deploy | `REVIEW`; no desplegado porque el site completo aun tiene 4 findings de SecretScan a triage antes de publicacion |
+| Gumroad | `NO_CHANGE`; profile y dos productos vivos HTTP `200` |
+| LinkedIn | `AUTHENTICATED_CONFIRMATION_REQUIRED`; las dos URLs candidatas devuelven `999` en lectura publica |
+
 ## Pendientes Por Target
 
 | prioridad | target | pendiente | estado | evidencia/base |

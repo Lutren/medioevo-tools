@@ -1,0 +1,89 @@
+{
+  "edges": [
+    {
+      "from": "CEREBRO",
+      "relation": "curated_into",
+      "to": "MEDIOEVO_OBSERVACIONISMO_MASTER"
+    },
+    {
+      "from": "CEREBRO",
+      "relation": "runtime_requirements",
+      "to": "WABI_SABI"
+    },
+    {
+      "from": "WABI_SABI",
+      "relation": "implements_or_mirrors_core_patterns",
+      "to": "OBSAI_CORE"
+    },
+    {
+      "from": "WABI_SABI",
+      "relation": "gates_browser_capability",
+      "to": "BROWSER_GATE"
+    },
+    {
+      "from": "CLAUDIO_RUNTIME",
+      "relation": "contains_os_lane",
+      "to": "DUAT_GEODIA_OS"
+    },
+    {
+      "from": "MEDIOEVO_OBSERVACIONISMO_MASTER",
+      "relation": "eligible_after_review",
+      "to": "PRODUCTOS_MEDIOEVO"
+    },
+    {
+      "from": "CEREBRO",
+      "relation": "unresolved_evidence_queue",
+      "to": "UNKNOWN_REGISTRY"
+    }
+  ],
+  "graph_gate": "APPROVE_LOCAL_INDEX",
+  "nodes": [
+    {
+      "id": "CEREBRO",
+      "kind": "source_canon",
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-"
+    },
+    {
+      "id": "MEDIOEVO_OBSERVACIONISMO_MASTER",
+      "kind": "compiled_canon",
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\MEDIOEVO_OBSERVACIONISMO_MASTER"
+    },
+    {
+      "id": "WABI_SABI",
+      "kind": "local_agent_runtime",
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\apps\\local\\wabi-sabi"
+    },
+    {
+      "id": "OBSAI_CORE",
+      "kind": "open_dev_toolkit",
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\packages\\open-dev\\obsai-core"
+    },
+    {
+      "id": "CLAUDIO_RUNTIME",
+      "kind": "local_runtime",
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio"
+    },
+    {
+      "id": "DUAT_GEODIA_OS",
+      "kind": "os_kernel_city_system",
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\os\\duat_geodia_kernel"
+    },
+    {
+      "id": "PRODUCTOS_MEDIOEVO",
+      "kind": "product_lane",
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\PRODUCTOS_MEDIOEVO"
+    },
+    {
+      "id": "BROWSER_GATE",
+      "kind": "capability_gate",
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\apps\\local\\wabi-sabi\\wabi_sabi\\core\\browser_gate.py"
+    },
+    {
+      "id": "UNKNOWN_REGISTRY",
+      "kind": "review_queue",
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_master_index\\UNKNOWN_REGISTRY.md"
+    }
+  ],
+  "schema": "wabi.master_project_graph.v1",
+  "workspace": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-"
+}

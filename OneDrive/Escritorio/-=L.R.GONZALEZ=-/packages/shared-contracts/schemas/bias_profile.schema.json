@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "medioevo.bias_profile.v0.1",
+  "title": "BiasProfile",
+  "type": "object",
+  "required": ["schema_version", "profile_id", "cultural_bias", "lineage_bias", "trauma_history", "role_bias", "perceptual_weighting", "boundary"],
+  "properties": {
+    "schema_version": { "const": "medioevo.bias_profile.v0.1" },
+    "profile_id": { "type": "string" },
+    "cultural_bias": { "type": "object" },
+    "lineage_bias": { "type": "object" },
+    "trauma_history": { "type": "array" },
+    "role_bias": { "type": "object" },
+    "perceptual_weighting": { "type": "object" },
+    "boundary": { "type": "object" }
+  },
+  "additionalProperties": false
+}
+

@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "claudio.geodia_indicator_harmonization.v0_1",
+  "title": "GEODIA Indicator Harmonization v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "harmonization_schema",
+    "generated_at_utc",
+    "publication_gate",
+    "entries"
+  ],
+  "properties": {
+    "schema": {
+      "const": "claudio.geodia_indicator_crosswalk.v0_1"
+    },
+    "harmonization_schema": {
+      "const": "claudio.geodia_indicator_harmonization.v0_1"
+    },
+    "generated_at_utc": {
+      "type": "string"
+    },
+    "publication_gate": {
+      "const": "BLOCK"
+    },
+    "claim_boundary": {
+      "type": "string"
+    },
+    "entries": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "canonical_indicator_id",
+          "source_indicator_id",
+          "source_id",
+          "country_or_region",
+          "year_range",
+          "unit_original",
+          "unit_canonical",
+          "polarity_original",
+          "polarity_canonical",
+          "frequency",
+          "transformation_applied",
+          "comparability_class",
+          "evidence",
+          "caveats",
+          "publication_gate"
+        ],
+        "properties": {
+          "canonical_indicator_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_indicator_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "country_or_region": {
+            "type": "string",
+            "minLength": 1
+          },
+          "year_range": {
+            "type": "string",
+            "pattern": "^[0-9]{4}-[0-9]{4}$"
+          },
+          "unit_original": {
+            "type": "string",
+            "minLength": 1
+          },
+          "unit_canonical": {
+            "type": "string",
+            "minLength": 1
+          },
+          "polarity_original": {
+            "enum": ["positive", "negative", "neutral", "review"]
+          },
+          "polarity_canonical": {
+            "enum": ["positive", "negative", "neutral", "review"]
+          },
+          "frequency": {
+            "enum": ["annual", "quarterly", "monthly", "irregular", "review"]
+          },
+          "transformation_applied": {
+            "type": "string",
+            "minLength": 1
+          },
+          "comparability_class": {
+            "enum": [
+              "EXACT",
+              "STRONG_PROXY",
+              "WEAK_PROXY",
+              "NOT_COMPARABLE",
+              "REVIEW"
+            ]
+          },
+          "evidence": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "caveats": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "publication_gate": {
+            "const": "BLOCK"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,305 @@
+{
+  "run_id": "DUAT_WDI_OFFICIAL_SOURCE_PACK_v0_8",
+  "duat_indicator_id": "labor_market.unemployment_rate.total",
+  "wdi_indicator_code": "SL.UEM.TOTL.ZS",
+  "indicator_name": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+  "country_code": "MEX",
+  "country_name": "Mexico",
+  "frequency": "annual",
+  "unit": "percent_of_total_labor_force",
+  "accessed_at": "2026-05-15T07:47:49Z",
+  "source_url": "https://api.worldbank.org/v2/country/MEX/indicator/SL.UEM.TOTL.ZS?format=json&per_page=20000",
+  "terms_url": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets",
+  "records": [
+    {
+      "year": 1991,
+      "value": 3.145,
+      "indicator_code": "SL.UEM.TOTL.ZS",
+      "indicator_name": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1992,
+      "value": 3.235,
+      "indicator_code": "SL.UEM.TOTL.ZS",
+      "indicator_name": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1993,
+      "value": 3.365,
+      "indicator_code": "SL.UEM.TOTL.ZS",
+      "indicator_name": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1994,
+      "value": 4.436,
+      "indicator_code": "SL.UEM.TOTL.ZS",
+      "indicator_name": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1995,
+      "value": 7.095,
+      "indicator_code": "SL.UEM.TOTL.ZS",
+      "indicator_name": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1996,
+      "value": 5.465,
+      "indicator_code": "SL.UEM.TOTL.ZS",
+      "indicator_name": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1997,
+      "value": 4.235,
+      "indicator_code": "SL.UEM.TOTL.ZS",
+      "indicator_name": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1998,
+      "value": 3.733,
+      "indicator_code": "SL.UEM.TOTL.ZS",
+      "indicator_name": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 1999,
+      "value": 2.598,
+      "indicator_code": "SL.UEM.TOTL.ZS",
+      "indicator_name": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2000,
+      "value": 2.646,
+      "indicator_code": "SL.UEM.TOTL.ZS",
+      "indicator_name": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2001,
+      "value": 2.627,
+      "indicator_code": "SL.UEM.TOTL.ZS",
+      "indicator_name": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2002,
+      "value": 3.003,
+      "indicator_code": "SL.UEM.TOTL.ZS",
+      "indicator_name": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2003,
+      "value": 3.455,
+      "indicator_code": "SL.UEM.TOTL.ZS",
+      "indicator_name": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2004,
+      "value": 3.937,
+      "indicator_code": "SL.UEM.TOTL.ZS",
+      "indicator_name": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2005,
+      "value": 3.558,
+      "indicator_code": "SL.UEM.TOTL.ZS",
+      "indicator_name": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2006,
+      "value": 3.566,
+      "indicator_code": "SL.UEM.TOTL.ZS",
+      "indicator_name": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2007,
+      "value": 3.628,
+      "indicator_code": "SL.UEM.TOTL.ZS",
+      "indicator_name": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2008,
+      "value": 3.874,
+      "indicator_code": "SL.UEM.TOTL.ZS",
+      "indicator_name": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2009,
+      "value": 5.356,
+      "indicator_code": "SL.UEM.TOTL.ZS",
+      "indicator_name": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2010,
+      "value": 5.303,
+      "indicator_code": "SL.UEM.TOTL.ZS",
+      "indicator_name": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2011,
+      "value": 5.175,
+      "indicator_code": "SL.UEM.TOTL.ZS",
+      "indicator_name": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2012,
+      "value": 4.892,
+      "indicator_code": "SL.UEM.TOTL.ZS",
+      "indicator_name": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2013,
+      "value": 4.921,
+      "indicator_code": "SL.UEM.TOTL.ZS",
+      "indicator_name": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2014,
+      "value": 4.819,
+      "indicator_code": "SL.UEM.TOTL.ZS",
+      "indicator_name": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2015,
+      "value": 4.311,
+      "indicator_code": "SL.UEM.TOTL.ZS",
+      "indicator_name": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2016,
+      "value": 3.853,
+      "indicator_code": "SL.UEM.TOTL.ZS",
+      "indicator_name": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2017,
+      "value": 3.419,
+      "indicator_code": "SL.UEM.TOTL.ZS",
+      "indicator_name": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2018,
+      "value": 3.275,
+      "indicator_code": "SL.UEM.TOTL.ZS",
+      "indicator_name": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2019,
+      "value": 3.477,
+      "indicator_code": "SL.UEM.TOTL.ZS",
+      "indicator_name": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2020,
+      "value": 4.44,
+      "indicator_code": "SL.UEM.TOTL.ZS",
+      "indicator_name": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2021,
+      "value": 4.019,
+      "indicator_code": "SL.UEM.TOTL.ZS",
+      "indicator_name": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2022,
+      "value": 3.256,
+      "indicator_code": "SL.UEM.TOTL.ZS",
+      "indicator_name": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2023,
+      "value": 2.765,
+      "indicator_code": "SL.UEM.TOTL.ZS",
+      "indicator_name": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2024,
+      "value": 2.678,
+      "indicator_code": "SL.UEM.TOTL.ZS",
+      "indicator_name": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    },
+    {
+      "year": 2025,
+      "value": 2.673,
+      "indicator_code": "SL.UEM.TOTL.ZS",
+      "indicator_name": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+      "country_code": "MEX",
+      "country_name": "Mexico"
+    }
+  ],
+  "missing_years": [],
+  "duplicate_years": [],
+  "future_years": [],
+  "raw_file": "data_sources/world_bank_wdi/raw/MEX_SL.UEM.TOTL.ZS_raw.json",
+  "raw_sha256": "8e1266859c8d29852012fc96f688a4097c5d6436a2bd900cccb3d97b66890b23",
+  "transformation_notes": [
+    "Excluded observations with null values.",
+    "Sorted observations ascending by year.",
+    "No interpolation or imputation applied."
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "books": [
+    {
+      "categories": [
+        "Fiction / Science Fiction / General",
+        "Fiction / Literary",
+        "Philosophy / Mind & Body"
+      ],
+      "cover_notes": "Needs public-safe cover. Visual direction: threshold, drift, navigation, signal/noise. No private symbols, no RPG/TCG, no claim-heavy science imagery.",
+      "export_target": "EPUB first, PDF review copy second, DOCX source package internal only, KPF after cover/metadata review",
+      "id": "02_DERIVA",
+      "keywords": [
+        "medioevo",
+        "ficcion especulativa",
+        "observacion",
+        "memoria",
+        "continuidad",
+        "sistemas",
+        "deriva"
+      ],
+      "language": "es",
+      "long_description": "Deriva se propone como el segundo candidato de lanzamiento despues de Despertar. La descripcion comercial debe mantenerse como una invitacion narrativa de bajo claim: una obra sobre continuidad, desvio, observacion y reconstruccion de sentido dentro del universo MEDIOEVO. Este copy no usa manuscrito privado ni resume tramas no aprobadas; funciona como placeholder revisable para catalogo, tienda y contraportada.",
+      "metadata_status": "DRAFT_REVIEW_REQUIRED",
+      "missing_assets": [
+        "final_epub_or_kpf_export",
+        "kdp_ready_cover",
+        "human_approved_price",
+        "store_listing_approval",
+        "legal_commercial_review"
+      ],
+      "price_proposal": {
+        "EUR": "4.49 ebook",
+        "MXN": "89 ebook",
+        "USD": "4.99 ebook / 9.99 bundle-anchor paperback review"
+      },
+      "publication_gate": "BLOCK",
+      "series_order": 2,
+      "short_description": "Una continuacion public-safe de MEDIOEVO sobre perdida de rumbo, memoria y orientacion en sistemas que intentan sostener continuidad.",
+      "store_action": "NO_UPLOAD_NO_PUBLIC_PAGE_CHANGE",
+      "store_readiness_checklist": {
+        "categories": true,
+        "cover_ready": false,
+        "export_target": false,
+        "human_review_done": false,
+        "keywords": true,
+        "long_description": true,
+        "price_proposal": true,
+        "series_order": true,
+        "short_description": true,
+        "store_page_ready": false,
+        "title": true
+      },
+      "title": "MEDIOEVO: Deriva"
+    },
+    {
+      "categories": [
+        "Fiction / Literary",
+        "Fiction / Science Fiction / General",
+        "Fiction / Psychological"
+      ],
+      "cover_notes": "Needs public-safe cover. Visual direction: fragments, archive pieces, reconstructed map. Avoid manuscript text, private canon diagrams and protected lore.",
+      "export_target": "EPUB first, PDF proof, KPF only after cover passes specs",
+      "id": "03_FRAGMENTOS",
+      "keywords": [
+        "medioevo",
+        "fragmentos",
+        "memoria",
+        "archivo",
+        "reconstruccion",
+        "ficcion literaria",
+        "observacion"
+      ],
+      "language": "es",
+      "long_description": "Fragmentos puede presentarse como una entrada de MEDIOEVO sobre partes, rastros y recomposicion. La promesa comercial debe ser literaria y contenida: seguir una constelacion de senales que exige ordenar sin convertir la incertidumbre en certeza falsa. Este texto es metadata preliminar, no excerpt ni resumen autorizado del manuscrito.",
+      "metadata_status": "DRAFT_REVIEW_REQUIRED",
+      "missing_assets": [
+        "final_epub_or_kpf_export",
+        "kdp_ready_cover",
+        "human_approved_price",
+        "store_listing_approval",
+        "legal_commercial_review"
+      ],
+      "price_proposal": {
+        "EUR": "4.49 ebook",
+        "MXN": "89 ebook",
+        "USD": "4.99 ebook"
+      },
+      "publication_gate": "BLOCK",
+      "series_order": 3,
+      "short_description": "Un volumen MEDIOEVO orientado a piezas, memoria parcial y reconstruccion de una continuidad que no llega completa.",
+      "store_action": "NO_UPLOAD_NO_PUBLIC_PAGE_CHANGE",
+      "store_readiness_checklist": {
+        "categories": true,
+        "cover_ready": false,
+        "export_target": false,
+        "human_review_done": false,
+        "keywords": true,
+        "long_description": true,
+        "price_proposal": true,
+        "series_order": true,
+        "short_description": true,
+        "store_page_ready": false,
+        "title": true
+      },
+      "title": "MEDIOEVO: Fragmentos"
+    },
+    {
+      "categories": [
+        "Fiction / Science Fiction / General",
+        "Fiction / Literary",
+        "Technology & Engineering / Social Aspects"
+      ],
+      "cover_notes": "Needs public-safe cover. Visual direction: instrument calibration, signal alignment, threshold. Avoid formulas, runtime internals and proprietary diagrams.",
+      "export_target": "EPUB first, PDF proof, KPF only after KDP cover validation",
+      "id": "04_CALIBRACION",
+      "keywords": [
+        "medioevo",
+        "calibracion",
+        "criterio",
+        "decision",
+        "memoria",
+        "observacion",
+        "ficcion especulativa"
+      ],
+      "language": "es",
+      "long_description": "Calibracion funciona como candidato fuerte para conectar el costado narrativo con el lenguaje de metodo sin regalar teoria privada. El copy recomendado debe hablar de criterio, ajuste, residuo, memoria y decision en terminos humanos y literarios. No debe prometer ciencia validada, AGI, fisica ni metodologia propietaria; este borrador es una ficha comercial interna para revision.",
+      "metadata_status": "DRAFT_REVIEW_REQUIRED",
+      "missing_assets": [
+        "final_epub_or_kpf_export",
+        "kdp_ready_cover",
+        "human_approved_price",
+        "store_listing_approval",
+        "legal_commercial_review"
+      ],
+      "price_proposal": {
+        "EUR": "4.49 ebook",
+        "MXN": "89 ebook",
+        "USD": "4.99 ebook"
+      },
+      "publication_gate": "BLOCK",
+      "series_order": 4,
+      "short_description": "Una entrega MEDIOEVO sobre ajuste, criterio y el costo de observar desde estados incompletos.",
+      "store_action": "NO_UPLOAD_NO_PUBLIC_PAGE_CHANGE",
+      "store_readiness_checklist": {
+        "categories": true,
+        "cover_ready": false,
+        "export_target": false,
+        "human_review_done": false,
+        "keywords": true,
+        "long_description": true,
+        "price_proposal": true,
+        "series_order": true,
+        "short_description": true,
+        "store_page_ready": false,
+        "title": true
+      },
+      "title": "MEDIOEVO: Calibracion"
+    }
+  ],
+  "content_policy": "No manuscript excerpts, no private canon dumps, no public page edits.",
+  "generated_at_utc": "2026-05-15T08:56:57Z",
+  "next_local_action": "Prepare export/cover work orders for the three candidates after human metadata review.",
+  "publication_gate": "BLOCK",
+  "schema": "medioevo.book_metadata_sprint.v0_1",
+  "scope": "Deriva, Fragmentos, Calibracion metadata-first sprint"
+}

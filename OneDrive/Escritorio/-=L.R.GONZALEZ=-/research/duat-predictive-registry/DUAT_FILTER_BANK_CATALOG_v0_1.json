@@ -1,0 +1,77 @@
+{
+  "schema": "duat.filter_bank_catalog.v0_1",
+  "generated_at_utc": "2026-05-15T02:59:10Z",
+  "publication_gate": "BLOCK",
+  "filters": [
+    {
+      "filter_id": "cognitive_residue_filter",
+      "r_dimension": "R_cognitive",
+      "purpose": "Separate nonlinear associations from unresolved ambiguity.",
+      "gate_on_high_r": "REVIEW",
+      "falsifier": "If metaphors cannot be translated into an operational instruction, keep as notes only."
+    },
+    {
+      "filter_id": "entertainment_noise_filter",
+      "r_dimension": "R_entertainment",
+      "purpose": "Detect attention capture, novelty loops and dopamine-shaped distraction.",
+      "gate_on_high_r": "REVIEW",
+      "falsifier": "If entertainment content changes the technical decision, isolate it."
+    },
+    {
+      "filter_id": "social_manipulation_filter",
+      "r_dimension": "R_social_manipulative",
+      "purpose": "Detect propaganda, coercive framing, tribal labels and engagement bait.",
+      "gate_on_high_r": "BLOCK",
+      "falsifier": "If a source urges action without evidence, demote it to manipulation risk."
+    },
+    {
+      "filter_id": "temporal_drift_filter",
+      "r_dimension": "R_temporal",
+      "purpose": "Detect stale data, revision lag, schema drift and mismatch in frequency.",
+      "gate_on_high_r": "REVIEW",
+      "falsifier": "If timestamp, capture date or version is missing, require snapshot review."
+    },
+    {
+      "filter_id": "source_quality_filter",
+      "r_dimension": "R_source",
+      "purpose": "Score provenance, license, coverage, stability and reproducibility.",
+      "gate_on_high_r": "REVIEW",
+      "falsifier": "If source card or terms are missing, integration cannot be approved."
+    },
+    {
+      "filter_id": "contradiction_filter",
+      "r_dimension": "R_contra",
+      "purpose": "Detect conflicting requirements or incompatible claims.",
+      "gate_on_high_r": "REVIEW",
+      "falsifier": "If a critical contradiction remains unresolved, block execution."
+    },
+    {
+      "filter_id": "sensitive_boundary_filter",
+      "r_dimension": "R_sensitive",
+      "purpose": "Detect secrets, PII, private material, legal/political risk and unsafe domains.",
+      "gate_on_high_r": "BLOCK",
+      "falsifier": "Any credential, PII, private RPG/TCG or electoral prediction request blocks."
+    },
+    {
+      "filter_id": "model_risk_filter",
+      "r_dimension": "R_model",
+      "purpose": "Detect overfit, leakage, bad calibration and invalid causal interpretation.",
+      "gate_on_high_r": "REVIEW",
+      "falsifier": "If backtest is worse than baseline or leakage is detected, block production."
+    },
+    {
+      "filter_id": "user_style_adapter",
+      "r_dimension": "R_user_style",
+      "purpose": "Preserve useful user cognitive style without letting it override facts.",
+      "gate_on_high_r": "APPROVE",
+      "falsifier": "If style changes technical content, lower beta or remove adaptation."
+    },
+    {
+      "filter_id": "agent_clarity_filter",
+      "r_dimension": "R_agent_operational",
+      "purpose": "Transform mixed context into clear instructions, schemas and tests for agents.",
+      "gate_on_high_r": "REVIEW",
+      "falsifier": "If an agent cannot identify inputs, outputs and gates, require handoff repair."
+    }
+  ]
+}

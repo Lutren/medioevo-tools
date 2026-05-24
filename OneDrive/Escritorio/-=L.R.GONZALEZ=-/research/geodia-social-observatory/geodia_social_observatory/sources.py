@@ -85,6 +85,18 @@ ALLOWED_SOURCES: dict[str, SourcePolicy] = {
         classification_floor="INFERENCIA",
         special_notice="GDELT claims must remain narrative/media-signal claims unless corroborated.",
     ),
+    "awesomedata_public_datasets": SourcePolicy(
+        source_id="awesomedata_public_datasets",
+        label="Awesomedata Awesome Public Datasets",
+        url_prefixes=("https://github.com/awesomedata/awesome-public-datasets",),
+        role="dataset_catalog_index_only",
+        license_notice=(
+            "The repository is a MIT catalog index; every linked dataset still needs its own "
+            "license, provenance, hash and claim review before live simulation use."
+        ),
+        classification_floor="INFERENCIA",
+        special_notice="Do not copy the catalog wholesale or treat linked datasets as automatically cleared.",
+    ),
 }
 
 

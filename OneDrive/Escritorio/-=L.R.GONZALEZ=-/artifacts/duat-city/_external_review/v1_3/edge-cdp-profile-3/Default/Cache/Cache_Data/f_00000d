@@ -1,0 +1,254 @@
+import { createHotContext as __vite__createHotContext } from "/duat-city/@vite/client";import.meta.hot = __vite__createHotContext("/src/components/CityPanel.tsx");"use strict";
+import __vite__cjsImport0_react_jsxDevRuntime from "/duat-city/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=87a97fe6"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import { ResourcePanel } from "/duat-city/src/components/ResourcePanel.tsx?t=1779189212428";
+import { rColor, GATE_COLORS } from "/duat-city/src/render/palette.ts?t=1779186400457";
+export function CityPanel({
+  state,
+  selectedId,
+  onSelect,
+  showHeatmap,
+  onShowHeatmap,
+  showFibmob,
+  onShowFibmob,
+  showAgentLabels,
+  onShowAgentLabels,
+  onResetCamera
+}) {
+  const { buildings, agents, R, Phi_eff } = state;
+  return /* @__PURE__ */ jsxDEV("div", { className: "panel-right", children: [
+    /* @__PURE__ */ jsxDEV("div", { className: "section", children: [
+      /* @__PURE__ */ jsxDEV("div", { className: "section-title", children: "City Metrics" }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/CityPanel.tsx",
+        lineNumber: 30,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "stat-row", children: [
+        /* @__PURE__ */ jsxDEV("span", { className: "stat-key", children: "Global R" }, void 0, false, {
+          fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/CityPanel.tsx",
+          lineNumber: 32,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("span", { className: "stat-val", style: { color: rColor(R) }, children: R.toFixed(3) }, void 0, false, {
+          fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/CityPanel.tsx",
+          lineNumber: 33,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/CityPanel.tsx",
+        lineNumber: 31,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "need-row", style: { marginBottom: 3 }, children: /* @__PURE__ */ jsxDEV("div", { className: "need-bar-wrap", children: /* @__PURE__ */ jsxDEV("div", { className: "progress-bar", children: /* @__PURE__ */ jsxDEV("div", { className: "progress-fill bar-r", style: { width: `${R * 100}%` } }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/CityPanel.tsx",
+        lineNumber: 37,
+        columnNumber: 43
+      }, this) }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/CityPanel.tsx",
+        lineNumber: 37,
+        columnNumber: 13
+      }, this) }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/CityPanel.tsx",
+        lineNumber: 36,
+        columnNumber: 11
+      }, this) }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/CityPanel.tsx",
+        lineNumber: 35,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "stat-row", children: [
+        /* @__PURE__ */ jsxDEV("span", { className: "stat-key", children: "Φ_eff" }, void 0, false, {
+          fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/CityPanel.tsx",
+          lineNumber: 41,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("span", { className: "stat-val", style: { color: rColor(1 - Phi_eff) }, children: Phi_eff.toFixed(3) }, void 0, false, {
+          fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/CityPanel.tsx",
+          lineNumber: 42,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/CityPanel.tsx",
+        lineNumber: 40,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "need-row", style: { marginBottom: 3 }, children: /* @__PURE__ */ jsxDEV("div", { className: "need-bar-wrap", children: /* @__PURE__ */ jsxDEV("div", { className: "progress-bar", children: /* @__PURE__ */ jsxDEV("div", { className: "progress-fill bar-phi", style: { width: `${Phi_eff * 100}%` } }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/CityPanel.tsx",
+        lineNumber: 46,
+        columnNumber: 43
+      }, this) }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/CityPanel.tsx",
+        lineNumber: 46,
+        columnNumber: 13
+      }, this) }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/CityPanel.tsx",
+        lineNumber: 45,
+        columnNumber: 11
+      }, this) }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/CityPanel.tsx",
+        lineNumber: 44,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "stat-row", children: [
+        /* @__PURE__ */ jsxDEV("span", { className: "stat-key", children: "Buildings" }, void 0, false, {
+          fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/CityPanel.tsx",
+          lineNumber: 50,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("span", { className: "stat-val", children: buildings.length }, void 0, false, {
+          fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/CityPanel.tsx",
+          lineNumber: 51,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/CityPanel.tsx",
+        lineNumber: 49,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "stat-row", children: [
+        /* @__PURE__ */ jsxDEV("span", { className: "stat-key", children: "Tasks pending" }, void 0, false, {
+          fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/CityPanel.tsx",
+          lineNumber: 54,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("span", { className: "stat-val", children: state.tasks.filter((t) => t.status === "active").length }, void 0, false, {
+          fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/CityPanel.tsx",
+          lineNumber: 55,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/CityPanel.tsx",
+        lineNumber: 53,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/CityPanel.tsx",
+      lineNumber: 29,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "section", children: [
+      /* @__PURE__ */ jsxDEV("div", { className: "section-title", children: "View" }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/CityPanel.tsx",
+        lineNumber: 60,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "ctrl-row", children: [
+        /* @__PURE__ */ jsxDEV("button", { className: `ctrl-btn ${showHeatmap ? "primary" : ""}`, onClick: () => onShowHeatmap(!showHeatmap), children: "R Heatmap" }, void 0, false, {
+          fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/CityPanel.tsx",
+          lineNumber: 62,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("button", { className: `ctrl-btn ${showFibmob ? "primary" : ""}`, onClick: () => onShowFibmob(!showFibmob), children: "FibMob" }, void 0, false, {
+          fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/CityPanel.tsx",
+          lineNumber: 63,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/CityPanel.tsx",
+        lineNumber: 61,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "ctrl-row", children: [
+        /* @__PURE__ */ jsxDEV("button", { className: `ctrl-btn ${showAgentLabels ? "primary" : ""}`, onClick: () => onShowAgentLabels(!showAgentLabels), children: "Labels" }, void 0, false, {
+          fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/CityPanel.tsx",
+          lineNumber: 66,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("button", { className: "ctrl-btn", onClick: onResetCamera, children: "⌂ Center" }, void 0, false, {
+          fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/CityPanel.tsx",
+          lineNumber: 67,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/CityPanel.tsx",
+        lineNumber: 65,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/CityPanel.tsx",
+      lineNumber: 59,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV(ResourcePanel, { state }, void 0, false, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/CityPanel.tsx",
+      lineNumber: 71,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "section", children: [
+      /* @__PURE__ */ jsxDEV("div", { className: "section-title", children: "Buildings" }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/CityPanel.tsx",
+        lineNumber: 74,
+        columnNumber: 9
+      }, this),
+      buildings.length === 0 && /* @__PURE__ */ jsxDEV("div", { className: "stat-key", children: "No buildings yet" }, void 0, false, {
+        fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/CityPanel.tsx",
+        lineNumber: 75,
+        columnNumber: 36
+      }, this),
+      buildings.slice(-8).reverse().map(
+        (b) => /* @__PURE__ */ jsxDEV(
+          "div",
+          {
+            className: `agent-item ${selectedId === b.id ? "selected" : ""}`,
+            onClick: () => onSelect(b.id),
+            children: [
+              /* @__PURE__ */ jsxDEV("span", { className: "agent-name", children: b.name }, void 0, false, {
+                fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/CityPanel.tsx",
+                lineNumber: 82,
+                columnNumber: 13
+              }, this),
+              /* @__PURE__ */ jsxDEV("span", { className: "agent-gate-tag", style: { background: `${GATE_COLORS[b.gate]}22`, color: GATE_COLORS[b.gate] }, children: b.gate.slice(0, 3) }, void 0, false, {
+                fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/CityPanel.tsx",
+                lineNumber: 83,
+                columnNumber: 13
+              }, this)
+            ]
+          },
+          b.id,
+          true,
+          {
+            fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/CityPanel.tsx",
+            lineNumber: 77,
+            columnNumber: 9
+          },
+          this
+        )
+      )
+    ] }, void 0, true, {
+      fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/CityPanel.tsx",
+      lineNumber: 73,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/CityPanel.tsx",
+    lineNumber: 28,
+    columnNumber: 5
+  }, this);
+}
+_c = CityPanel;
+var _c;
+$RefreshReg$(_c, "CityPanel");
+import * as RefreshRuntime from "/duat-city/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react can't detect preamble. Something is wrong."
+    );
+  }
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/CityPanel.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/CityPanel.tsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+function $RefreshReg$(type, id) {
+  return RefreshRuntime.register(type, "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/artifacts/duat-city/src/components/CityPanel.tsx " + id);
+}
+function $RefreshSig$() {
+  return RefreshRuntime.createSignatureFunctionForTransform();
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IjtBQTZCUTtBQTVCUixTQUFTQSxxQkFBcUI7QUFDOUIsU0FBU0MsUUFBUUMsbUJBQW1CO0FBZTdCLGdCQUFTQyxVQUFVO0FBQUEsRUFDeEJDO0FBQUFBLEVBQU9DO0FBQUFBLEVBQVlDO0FBQUFBLEVBQ25CQztBQUFBQSxFQUFhQztBQUFBQSxFQUNiQztBQUFBQSxFQUFZQztBQUFBQSxFQUNaQztBQUFBQSxFQUFpQkM7QUFBQUEsRUFDakJDO0FBQ2MsR0FBRztBQUNqQixRQUFNLEVBQUVDLFdBQVdDLFFBQVFDLEdBQUdDLFFBQVEsSUFBSWI7QUFFMUMsU0FDRSx1QkFBQyxTQUFJLFdBQVUsZUFDYjtBQUFBLDJCQUFDLFNBQUksV0FBVSxXQUNiO0FBQUEsNkJBQUMsU0FBSSxXQUFVLGlCQUFnQiw0QkFBL0I7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQUEyQztBQUFBLE1BQzNDLHVCQUFDLFNBQUksV0FBVSxZQUNiO0FBQUEsK0JBQUMsVUFBSyxXQUFVLFlBQVcsd0JBQTNCO0FBQUE7QUFBQTtBQUFBO0FBQUEsZUFBbUM7QUFBQSxRQUNuQyx1QkFBQyxVQUFLLFdBQVUsWUFBVyxPQUFPLEVBQUVjLE9BQU9qQixPQUFPZSxDQUFDLEVBQUUsR0FBSUEsWUFBRUcsUUFBUSxDQUFDLEtBQXBFO0FBQUE7QUFBQTtBQUFBO0FBQUEsZUFBc0U7QUFBQSxXQUZ4RTtBQUFBO0FBQUE7QUFBQTtBQUFBLGFBR0E7QUFBQSxNQUNBLHVCQUFDLFNBQUksV0FBVSxZQUFXLE9BQU8sRUFBRUMsY0FBYyxFQUFFLEdBQ2pELGlDQUFDLFNBQUksV0FBVSxpQkFDYixpQ0FBQyxTQUFJLFdBQVUsZ0JBQWUsaUNBQUMsU0FBSSxXQUFVLHVCQUFzQixPQUFPLEVBQUVDLE9BQU8sR0FBR0wsSUFBSSxHQUFHLElBQUksS0FBbkU7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQUFxRSxLQUFuRztBQUFBO0FBQUE7QUFBQTtBQUFBLGFBQXNHLEtBRHhHO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFFQSxLQUhGO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFJQTtBQUFBLE1BQ0EsdUJBQUMsU0FBSSxXQUFVLFlBQ2I7QUFBQSwrQkFBQyxVQUFLLFdBQVUsWUFBVyxxQkFBM0I7QUFBQTtBQUFBO0FBQUE7QUFBQSxlQUFnQztBQUFBLFFBQ2hDLHVCQUFDLFVBQUssV0FBVSxZQUFXLE9BQU8sRUFBRUUsT0FBT2pCLE9BQU8sSUFBSWdCLE9BQU8sRUFBRSxHQUFJQSxrQkFBUUUsUUFBUSxDQUFDLEtBQXBGO0FBQUE7QUFBQTtBQUFBO0FBQUEsZUFBc0Y7QUFBQSxXQUZ4RjtBQUFBO0FBQUE7QUFBQTtBQUFBLGFBR0E7QUFBQSxNQUNBLHVCQUFDLFNBQUksV0FBVSxZQUFXLE9BQU8sRUFBRUMsY0FBYyxFQUFFLEdBQ2pELGlDQUFDLFNBQUksV0FBVSxpQkFDYixpQ0FBQyxTQUFJLFdBQVUsZ0JBQWUsaUNBQUMsU0FBSSxXQUFVLHlCQUF3QixPQUFPLEVBQUVDLE9BQU8sR0FBR0osVUFBVSxHQUFHLElBQUksS0FBM0U7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQUE2RSxLQUEzRztBQUFBO0FBQUE7QUFBQTtBQUFBLGFBQThHLEtBRGhIO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFFQSxLQUhGO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFJQTtBQUFBLE1BQ0EsdUJBQUMsU0FBSSxXQUFVLFlBQ2I7QUFBQSwrQkFBQyxVQUFLLFdBQVUsWUFBVyx5QkFBM0I7QUFBQTtBQUFBO0FBQUE7QUFBQSxlQUFvQztBQUFBLFFBQ3BDLHVCQUFDLFVBQUssV0FBVSxZQUFZSCxvQkFBVVEsVUFBdEM7QUFBQTtBQUFBO0FBQUE7QUFBQSxlQUE2QztBQUFBLFdBRi9DO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFHQTtBQUFBLE1BQ0EsdUJBQUMsU0FBSSxXQUFVLFlBQ2I7QUFBQSwrQkFBQyxVQUFLLFdBQVUsWUFBVyw2QkFBM0I7QUFBQTtBQUFBO0FBQUE7QUFBQSxlQUF3QztBQUFBLFFBQ3hDLHVCQUFDLFVBQUssV0FBVSxZQUFZbEIsZ0JBQU1tQixNQUFNQyxPQUFPLENBQUFDLE1BQUtBLEVBQUVDLFdBQVcsUUFBUSxFQUFFSixVQUEzRTtBQUFBO0FBQUE7QUFBQTtBQUFBLGVBQWtGO0FBQUEsV0FGcEY7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQUdBO0FBQUEsU0EzQkY7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQTRCQTtBQUFBLElBRUEsdUJBQUMsU0FBSSxXQUFVLFdBQ2I7QUFBQSw2QkFBQyxTQUFJLFdBQVUsaUJBQWdCLG9CQUEvQjtBQUFBO0FBQUE7QUFBQTtBQUFBLGFBQW1DO0FBQUEsTUFDbkMsdUJBQUMsU0FBSSxXQUFVLFlBQ2I7QUFBQSwrQkFBQyxZQUFPLFdBQVcsWUFBWWYsY0FBYyxZQUFZLEVBQUUsSUFBSSxTQUFTLE1BQU1DLGNBQWMsQ0FBQ0QsV0FBVyxHQUFHLHlCQUEzRztBQUFBO0FBQUE7QUFBQTtBQUFBLGVBQW9IO0FBQUEsUUFDcEgsdUJBQUMsWUFBTyxXQUFXLFlBQVlFLGFBQWEsWUFBWSxFQUFFLElBQUksU0FBUyxNQUFNQyxhQUFhLENBQUNELFVBQVUsR0FBRyxzQkFBeEc7QUFBQTtBQUFBO0FBQUE7QUFBQSxlQUE4RztBQUFBLFdBRmhIO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFHQTtBQUFBLE1BQ0EsdUJBQUMsU0FBSSxXQUFVLFlBQ2I7QUFBQSwrQkFBQyxZQUFPLFdBQVcsWUFBWUUsa0JBQWtCLFlBQVksRUFBRSxJQUFJLFNBQVMsTUFBTUMsa0JBQWtCLENBQUNELGVBQWUsR0FBRyxzQkFBdkg7QUFBQTtBQUFBO0FBQUE7QUFBQSxlQUE2SDtBQUFBLFFBQzdILHVCQUFDLFlBQU8sV0FBVSxZQUFXLFNBQVNFLGVBQWUsd0JBQXJEO0FBQUE7QUFBQTtBQUFBO0FBQUEsZUFBNkQ7QUFBQSxXQUYvRDtBQUFBO0FBQUE7QUFBQTtBQUFBLGFBR0E7QUFBQSxTQVRGO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FVQTtBQUFBLElBRUEsdUJBQUMsaUJBQWMsU0FBZjtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBQTRCO0FBQUEsSUFFNUIsdUJBQUMsU0FBSSxXQUFVLFdBQ2I7QUFBQSw2QkFBQyxTQUFJLFdBQVUsaUJBQWdCLHlCQUEvQjtBQUFBO0FBQUE7QUFBQTtBQUFBLGFBQXdDO0FBQUEsTUFDdkNDLFVBQVVRLFdBQVcsS0FBSyx1QkFBQyxTQUFJLFdBQVUsWUFBVyxnQ0FBMUI7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQUEwQztBQUFBLE1BQ3BFUixVQUFVYSxNQUFNLEVBQUUsRUFBRUMsUUFBUSxFQUFFQztBQUFBQSxRQUFJLENBQUFDLE1BQ2pDO0FBQUEsVUFBQztBQUFBO0FBQUEsWUFFQyxXQUFXLGNBQWN6QixlQUFleUIsRUFBRUMsS0FBSyxhQUFhLEVBQUU7QUFBQSxZQUM5RCxTQUFTLE1BQU16QixTQUFTd0IsRUFBRUMsRUFBRTtBQUFBLFlBRTVCO0FBQUEscUNBQUMsVUFBSyxXQUFVLGNBQWNELFlBQUVFLFFBQWhDO0FBQUE7QUFBQTtBQUFBO0FBQUEscUJBQXFDO0FBQUEsY0FDckMsdUJBQUMsVUFBSyxXQUFVLGtCQUFpQixPQUFPLEVBQUVDLFlBQVksR0FBRy9CLFlBQVk0QixFQUFFSSxJQUFJLENBQUMsTUFBTWhCLE9BQU9oQixZQUFZNEIsRUFBRUksSUFBSSxFQUFFLEdBQzFHSixZQUFFSSxLQUFLUCxNQUFNLEdBQUcsQ0FBQyxLQURwQjtBQUFBO0FBQUE7QUFBQTtBQUFBLHFCQUVBO0FBQUE7QUFBQTtBQUFBLFVBUEtHLEVBQUVDO0FBQUFBLFVBRFQ7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxRQVNBO0FBQUEsTUFDRDtBQUFBLFNBZEg7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQWVBO0FBQUEsT0E1REY7QUFBQTtBQUFBO0FBQUE7QUFBQSxTQTZEQTtBQUVKO0FBQUNJLEtBekVlaEM7QUFBUyxJQUFBZ0M7QUFBQSxhQUFBQSxJQUFBIiwibmFtZXMiOlsiUmVzb3VyY2VQYW5lbCIsInJDb2xvciIsIkdBVEVfQ09MT1JTIiwiQ2l0eVBhbmVsIiwic3RhdGUiLCJzZWxlY3RlZElkIiwib25TZWxlY3QiLCJzaG93SGVhdG1hcCIsIm9uU2hvd0hlYXRtYXAiLCJzaG93RmlibW9iIiwib25TaG93RmlibW9iIiwic2hvd0FnZW50TGFiZWxzIiwib25TaG93QWdlbnRMYWJlbHMiLCJvblJlc2V0Q2FtZXJhIiwiYnVpbGRpbmdzIiwiYWdlbnRzIiwiUiIsIlBoaV9lZmYiLCJjb2xvciIsInRvRml4ZWQiLCJtYXJnaW5Cb3R0b20iLCJ3aWR0aCIsImxlbmd0aCIsInRhc2tzIiwiZmlsdGVyIiwidCIsInN0YXR1cyIsInNsaWNlIiwicmV2ZXJzZSIsIm1hcCIsImIiLCJpZCIsIm5hbWUiLCJiYWNrZ3JvdW5kIiwiZ2F0ZSIsIl9jIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbIkNpdHlQYW5lbC50c3giXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHR5cGUgeyBDaXR5U3RhdGUgfSBmcm9tIFwiLi4vY29yZS90eXBlc1wiO1xuaW1wb3J0IHsgUmVzb3VyY2VQYW5lbCB9IGZyb20gXCIuL1Jlc291cmNlUGFuZWxcIjtcbmltcG9ydCB7IHJDb2xvciwgR0FURV9DT0xPUlMgfSBmcm9tIFwiLi4vcmVuZGVyL3BhbGV0dGVcIjtcblxuaW50ZXJmYWNlIENpdHlQYW5lbFByb3BzIHtcbiAgc3RhdGU6IENpdHlTdGF0ZTtcbiAgc2VsZWN0ZWRJZDogc3RyaW5nIHwgbnVsbDtcbiAgb25TZWxlY3Q6IChpZDogc3RyaW5nIHwgbnVsbCkgPT4gdm9pZDtcbiAgc2hvd0hlYXRtYXA6IGJvb2xlYW47XG4gIG9uU2hvd0hlYXRtYXA6ICh2OiBib29sZWFuKSA9PiB2b2lkO1xuICBzaG93RmlibW9iOiBib29sZWFuO1xuICBvblNob3dGaWJtb2I6ICh2OiBib29sZWFuKSA9PiB2b2lkO1xuICBzaG93QWdlbnRMYWJlbHM6IGJvb2xlYW47XG4gIG9uU2hvd0FnZW50TGFiZWxzOiAodjogYm9vbGVhbikgPT4gdm9pZDtcbiAgb25SZXNldENhbWVyYTogKCkgPT4gdm9pZDtcbn1cblxuZXhwb3J0IGZ1bmN0aW9uIENpdHlQYW5lbCh7XG4gIHN0YXRlLCBzZWxlY3RlZElkLCBvblNlbGVjdCxcbiAgc2hvd0hlYXRtYXAsIG9uU2hvd0hlYXRtYXAsXG4gIHNob3dGaWJtb2IsIG9uU2hvd0ZpYm1vYixcbiAgc2hvd0FnZW50TGFiZWxzLCBvblNob3dBZ2VudExhYmVscyxcbiAgb25SZXNldENhbWVyYSxcbn06IENpdHlQYW5lbFByb3BzKSB7XG4gIGNvbnN0IHsgYnVpbGRpbmdzLCBhZ2VudHMsIFIsIFBoaV9lZmYgfSA9IHN0YXRlO1xuXG4gIHJldHVybiAoXG4gICAgPGRpdiBjbGFzc05hbWU9XCJwYW5lbC1yaWdodFwiPlxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJzZWN0aW9uXCI+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwic2VjdGlvbi10aXRsZVwiPkNpdHkgTWV0cmljczwvZGl2PlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInN0YXQtcm93XCI+XG4gICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwic3RhdC1rZXlcIj5HbG9iYWwgUjwvc3Bhbj5cbiAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJzdGF0LXZhbFwiIHN0eWxlPXt7IGNvbG9yOiByQ29sb3IoUikgfX0+e1IudG9GaXhlZCgzKX08L3NwYW4+XG4gICAgICAgIDwvZGl2PlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cIm5lZWQtcm93XCIgc3R5bGU9e3sgbWFyZ2luQm90dG9tOiAzIH19PlxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibmVlZC1iYXItd3JhcFwiPlxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJwcm9ncmVzcy1iYXJcIj48ZGl2IGNsYXNzTmFtZT1cInByb2dyZXNzLWZpbGwgYmFyLXJcIiBzdHlsZT17eyB3aWR0aDogYCR7UiAqIDEwMH0lYCB9fSAvPjwvZGl2PlxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICA8L2Rpdj5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJzdGF0LXJvd1wiPlxuICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInN0YXQta2V5XCI+zqZfZWZmPC9zcGFuPlxuICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInN0YXQtdmFsXCIgc3R5bGU9e3sgY29sb3I6IHJDb2xvcigxIC0gUGhpX2VmZikgfX0+e1BoaV9lZmYudG9GaXhlZCgzKX08L3NwYW4+XG4gICAgICAgIDwvZGl2PlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cIm5lZWQtcm93XCIgc3R5bGU9e3sgbWFyZ2luQm90dG9tOiAzIH19PlxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibmVlZC1iYXItd3JhcFwiPlxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJwcm9ncmVzcy1iYXJcIj48ZGl2IGNsYXNzTmFtZT1cInByb2dyZXNzLWZpbGwgYmFyLXBoaVwiIHN0eWxlPXt7IHdpZHRoOiBgJHtQaGlfZWZmICogMTAwfSVgIH19IC8+PC9kaXY+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgIDwvZGl2PlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInN0YXQtcm93XCI+XG4gICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwic3RhdC1rZXlcIj5CdWlsZGluZ3M8L3NwYW4+XG4gICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwic3RhdC12YWxcIj57YnVpbGRpbmdzLmxlbmd0aH08L3NwYW4+XG4gICAgICAgIDwvZGl2PlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInN0YXQtcm93XCI+XG4gICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwic3RhdC1rZXlcIj5UYXNrcyBwZW5kaW5nPC9zcGFuPlxuICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInN0YXQtdmFsXCI+e3N0YXRlLnRhc2tzLmZpbHRlcih0ID0+IHQuc3RhdHVzID09PSBcImFjdGl2ZVwiKS5sZW5ndGh9PC9zcGFuPlxuICAgICAgICA8L2Rpdj5cbiAgICAgIDwvZGl2PlxuXG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cInNlY3Rpb25cIj5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJzZWN0aW9uLXRpdGxlXCI+VmlldzwvZGl2PlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImN0cmwtcm93XCI+XG4gICAgICAgICAgPGJ1dHRvbiBjbGFzc05hbWU9e2BjdHJsLWJ0biAke3Nob3dIZWF0bWFwID8gXCJwcmltYXJ5XCIgOiBcIlwifWB9IG9uQ2xpY2s9eygpID0+IG9uU2hvd0hlYXRtYXAoIXNob3dIZWF0bWFwKX0+UiBIZWF0bWFwPC9idXR0b24+XG4gICAgICAgICAgPGJ1dHRvbiBjbGFzc05hbWU9e2BjdHJsLWJ0biAke3Nob3dGaWJtb2IgPyBcInByaW1hcnlcIiA6IFwiXCJ9YH0gb25DbGljaz17KCkgPT4gb25TaG93RmlibW9iKCFzaG93RmlibW9iKX0+RmliTW9iPC9idXR0b24+XG4gICAgICAgIDwvZGl2PlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImN0cmwtcm93XCI+XG4gICAgICAgICAgPGJ1dHRvbiBjbGFzc05hbWU9e2BjdHJsLWJ0biAke3Nob3dBZ2VudExhYmVscyA/IFwicHJpbWFyeVwiIDogXCJcIn1gfSBvbkNsaWNrPXsoKSA9PiBvblNob3dBZ2VudExhYmVscyghc2hvd0FnZW50TGFiZWxzKX0+TGFiZWxzPC9idXR0b24+XG4gICAgICAgICAgPGJ1dHRvbiBjbGFzc05hbWU9XCJjdHJsLWJ0blwiIG9uQ2xpY2s9e29uUmVzZXRDYW1lcmF9PuKMgiBDZW50ZXI8L2J1dHRvbj5cbiAgICAgICAgPC9kaXY+XG4gICAgICA8L2Rpdj5cblxuICAgICAgPFJlc291cmNlUGFuZWwgc3RhdGU9e3N0YXRlfSAvPlxuXG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cInNlY3Rpb25cIj5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJzZWN0aW9uLXRpdGxlXCI+QnVpbGRpbmdzPC9kaXY+XG4gICAgICAgIHtidWlsZGluZ3MubGVuZ3RoID09PSAwICYmIDxkaXYgY2xhc3NOYW1lPVwic3RhdC1rZXlcIj5ObyBidWlsZGluZ3MgeWV0PC9kaXY+fVxuICAgICAgICB7YnVpbGRpbmdzLnNsaWNlKC04KS5yZXZlcnNlKCkubWFwKGIgPT4gKFxuICAgICAgICAgIDxkaXZcbiAgICAgICAgICAgIGtleT17Yi5pZH1cbiAgICAgICAgICAgIGNsYXNzTmFtZT17YGFnZW50LWl0ZW0gJHtzZWxlY3RlZElkID09PSBiLmlkID8gXCJzZWxlY3RlZFwiIDogXCJcIn1gfVxuICAgICAgICAgICAgb25DbGljaz17KCkgPT4gb25TZWxlY3QoYi5pZCl9XG4gICAgICAgICAgPlxuICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwiYWdlbnQtbmFtZVwiPntiLm5hbWV9PC9zcGFuPlxuICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwiYWdlbnQtZ2F0ZS10YWdcIiBzdHlsZT17eyBiYWNrZ3JvdW5kOiBgJHtHQVRFX0NPTE9SU1tiLmdhdGVdfTIyYCwgY29sb3I6IEdBVEVfQ09MT1JTW2IuZ2F0ZV0gfX0+XG4gICAgICAgICAgICAgIHtiLmdhdGUuc2xpY2UoMCwgMyl9XG4gICAgICAgICAgICA8L3NwYW4+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgICkpfVxuICAgICAgPC9kaXY+XG4gICAgPC9kaXY+XG4gICk7XG59XG4iXSwiZmlsZSI6IkM6L1VzZXJzL0wtVHlyL09uZURyaXZlL0VzY3JpdG9yaW8vLT1MLlIuR09OWkFMRVo9LS9hcnRpZmFjdHMvZHVhdC1jaXR5L3NyYy9jb21wb25lbnRzL0NpdHlQYW5lbC50c3gifQ==

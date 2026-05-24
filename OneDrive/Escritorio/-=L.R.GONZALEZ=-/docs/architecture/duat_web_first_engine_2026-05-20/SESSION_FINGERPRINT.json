@@ -1,0 +1,85 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "20260520-duat-web-first-engine-architecture",
+  "project": "MEDIOEVO/DUAT/WABI-SABI",
+  "R_close": 0.22,
+  "Phi_eff": 0.78,
+  "regime_close": "FUNCIONAL",
+  "autonomy_level_used": 3,
+  "actiongate_summary": {
+    "approved": 2,
+    "review_required": 4,
+    "blocked": 4
+  },
+  "files_created": [
+    "docs/architecture/duat_web_first_engine_2026-05-20/PROJECT_INVENTORY.md",
+    "docs/architecture/duat_web_first_engine_2026-05-20/MODULE_BOUNDARY_MAP.md",
+    "docs/architecture/duat_web_first_engine_2026-05-20/DUPLICATE_AND_OVERLAP_REPORT.md",
+    "docs/architecture/duat_web_first_engine_2026-05-20/ENGINE_AND_SIM_AUDIT.md",
+    "docs/architecture/duat_web_first_engine_2026-05-20/MATH_AND_MODELING_GAPS.md",
+    "docs/architecture/duat_web_first_engine_2026-05-20/ARCHITECTURE_SPLIT_PLAN.md",
+    "docs/architecture/duat_web_first_engine_2026-05-20/DUAT_SIM_CORE_SPEC.md",
+    "docs/architecture/duat_web_first_engine_2026-05-20/DUAT_RENDER_STRATEGY_WEB_FIRST.md",
+    "docs/architecture/duat_web_first_engine_2026-05-20/GODOT_VS_CUSTOM_ENGINE_ANALYSIS.md",
+    "docs/architecture/duat_web_first_engine_2026-05-20/GLOMO_UNISENSORIAL_EVALUATION_PLAN.md",
+    "docs/architecture/duat_web_first_engine_2026-05-20/SPRITE_LIGHTING_PIPELINE_OPTIONS.md",
+    "docs/architecture/duat_web_first_engine_2026-05-20/VERMEER_LIGHTING_MODEL_NOTES.md",
+    "docs/architecture/duat_web_first_engine_2026-05-20/ENGINE_FIX_QUEUE.md",
+    "docs/architecture/duat_web_first_engine_2026-05-20/MATH_CONTRACTS_v0_1.md",
+    "docs/architecture/duat_web_first_engine_2026-05-20/NEXT_SESSION_HANDOFF.md",
+    "docs/architecture/duat_web_first_engine_2026-05-20/TEST_REPORT.md",
+    "docs/architecture/duat_web_first_engine_2026-05-20/NEXT_SESSION_BRIEF.md",
+    "docs/architecture/duat_web_first_engine_2026-05-20/DECISIONS.md",
+    "docs/architecture/duat_web_first_engine_2026-05-20/TASKS.md",
+    "docs/architecture/duat_web_first_engine_2026-05-20/RISKS.md",
+    "docs/architecture/duat_web_first_engine_2026-05-20/ASSUMPTIONS.md"
+  ],
+  "files_modified": [
+    "artifacts/duat-city/src/core/math.ts",
+    "artifacts/duat-city/src/sim/agents.ts",
+    "artifacts/duat-city/src/sim/buildings.ts",
+    "artifacts/duat-city/src/sim/needs.ts",
+    "artifacts/duat-city/src/sim/tasks.ts",
+    "artifacts/duat-city/src/sim/scheduler.ts",
+    "artifacts/duat-city/src/sim/events.ts",
+    "artifacts/duat-city/src/sim/city.ts",
+    "artifacts/duat-city/src/sim/engine.ts",
+    "artifacts/duat-city/src/sim/agentLife.ts",
+    "artifacts/duat-city/src/rpg/encounterGenerator.ts",
+    "artifacts/duat-city/src/tests/engine.test.ts"
+  ],
+  "commands_run": [
+    "rg --files keyword inventory",
+    "metadata-only zip inspection",
+    "npm run typecheck",
+    "npm run build",
+    "npm run test -- src/tests/engine.test.ts src/tests/rpgExport.test.ts src/tests/rpgWorldV2.test.ts",
+    "rg -n Math.random src",
+    "SESSION_FINGERPRINT.json ConvertFrom-Json",
+    "basic touched-file secret scan"
+  ],
+  "tests": {
+    "status": "passed",
+    "evidence": [
+      "typecheck passed",
+      "build passed",
+      "20 focused vitest tests passed",
+      "basic touched-file secret scan had no matches",
+      "sim/RPG Math.random removed; only UI placeholder remains"
+    ]
+  },
+  "decisions": [
+    "Use HYBRID as primary route",
+    "Use CUSTOM WEB ENGINE as fallback",
+    "Keep Godot optional/review until contracts and benchmark exist",
+    "Keep Forge separated from DUAT core"
+  ],
+  "pending": [
+    "state-local witness/quaternary replay",
+    "DUAT_SIM_CORE extraction",
+    "RenderSnapshot and worker loop",
+    "GLOMO benchmark",
+    "sprite lighting benchmark"
+  ],
+  "next_action": "Implement ReplayHash v0.1 and remove process-global replay state from witnesslog/quaternary."
+}

@@ -1,0 +1,40 @@
+{
+  "schema": "medioevo.public_safe_release_manifest.v1",
+  "run_id": "RUN_PUBLIC_SAFE_MEDIOEVO_UPDATE_20260517",
+  "state_fingerprint": "PUBLIC-SAFE-MEDIOEVO-UPDATE-20260517",
+  "packet_dir": "qa_artifacts/release_validation/public_safe_update_20260517",
+  "publication_gate": "APPROVE_PUBLIC_SAFE_AFTER_QA",
+  "network_gate": "APPROVE_RELEASE_ENDPOINTS_ONLY",
+  "credential_gate": "USE_EXISTING_AUTH_ONLY_DO_NOT_PRINT_VALUES",
+  "remote_compute_gate": "BLOCK_THIS_RUN",
+  "comms_live_gate": "BLOCK_THIS_RUN",
+  "public_scope": [
+    "status update",
+    "DUAT evidence panel summary",
+    "Smallville-DUAT synthetic lab summary",
+    "OSIT runtime summary",
+    "Canon Tripartito local active status",
+    "Fragmentos QA status"
+  ],
+  "excluded": [
+    "complete canon",
+    "book or manuscript contents",
+    "private runtime internals",
+    "private datasets",
+    "private prompts",
+    "credentials",
+    "private game material",
+    "strong scientific proof claims"
+  ],
+  "scans": {
+    "secret_scan": "PASS",
+    "boundary_scan": "PASS_PUBLIC_SAFE",
+    "science_claim_gate": "PASS_PUBLIC_SAFE"
+  },
+  "rollback": {
+    "github": "revert commit or close branch/PR",
+    "site": "revert page commit or redeploy previous build",
+    "linkedin": "edit/delete post if needed",
+    "local": "preserve append-only evidence"
+  }
+}

@@ -116,6 +116,8 @@ python -m obsai_core.cli evaluate-action examples\action_review.json
 python -m obsai_core.cli validate-envelope examples\observation_envelope.json --db runtime\observations.sqlite
 python -m obsai_core.cli fingerprint --session-id demo-001
 python -m obsai_core.cli simulate-world --ticks 12 --seed demo
+python -m obsai_core.cli classify-text --text "El observador no observa desde cero; observa desde estado."
+python -m obsai_core.cli serve-epistemic-engine --host 127.0.0.1 --port 8789
 python -m unittest discover -s tests
 ```
 

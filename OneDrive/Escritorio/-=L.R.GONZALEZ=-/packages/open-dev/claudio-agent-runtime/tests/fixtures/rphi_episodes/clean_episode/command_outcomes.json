@@ -1,0 +1,18 @@
+{
+  "commands": [
+    {
+      "event_id": "evt-clean-command-001",
+      "command": "python -m pytest tests/example -q",
+      "status": "ok",
+      "actiongate": "APPROVE",
+      "evidence": "passed"
+    },
+    {
+      "event_id": "evt-clean-command-002",
+      "command": "python -m compileall example_module",
+      "status": "ok",
+      "actiongate": "APPROVE",
+      "evidence": "passed"
+    }
+  ]
+}

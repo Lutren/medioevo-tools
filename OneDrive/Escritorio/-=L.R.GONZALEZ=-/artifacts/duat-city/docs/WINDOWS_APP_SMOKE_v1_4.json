@@ -1,0 +1,25 @@
+{
+  "schema": "duat/windows-app-smoke/v1.4",
+  "fingerprint": "DUAT-v1.4-WINAPP-CONVERSION",
+  "generatedAt": "2026-05-20T17:15:08.803Z",
+  "executable": "dist/winapp/DUATCity.exe",
+  "wrapper": "native_dotnet_edge_app_mode",
+  "preferredWrappers": [
+    "electron",
+    "tauri"
+  ],
+  "smokeStatus": "PASS",
+  "serverUrl": "http://127.0.0.1:18641/duat-city/?nativeWin=1",
+  "httpStatus": 200,
+  "indexContainsRoot": true,
+  "jsAssetStatus": 200,
+  "publication_allowed": false,
+  "wabi_execution_allowed": false,
+  "cloud_used": false,
+  "mcp_execution": false,
+  "unknown_zip_code_executed": false,
+  "notes": [
+    "Serve-only smoke uses the native launcher static server without launching external cloud services.",
+    "Electron/Tauri were not installed locally; this is the no-new-dependency Windows wrapper path."
+  ]
+}

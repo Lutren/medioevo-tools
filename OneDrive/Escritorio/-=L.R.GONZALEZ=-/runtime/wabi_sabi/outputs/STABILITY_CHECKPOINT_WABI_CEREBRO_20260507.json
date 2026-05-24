@@ -1,0 +1,128 @@
+{
+  "schema": "wabi.stability_checkpoint.v1",
+  "generated_at_local": "2026-05-07T12:37:10-06:00",
+  "agent": "Wabi/Sabi-Codex",
+  "project": "MEDIOEVO/CLAUDIO/WABI_CEREBRO",
+  "project_root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
+  "branch": "codex/curador-seto-loops-2026-05-05",
+  "base_commit": "db09f69",
+  "mode": "CONSOLIDACION_ANTES_DE_EXPANSION",
+  "R_est": 0.15,
+  "Phi_eff_est": 0.8,
+  "regime": "FUNCIONAL_LOCAL_VERIFICADO",
+  "functional_status": "LOCAL_FUNCTIONAL_VERIFIED",
+  "pending_review": {
+    "active_dedup": 31,
+    "claudio_open": 0
+  },
+  "verified": {
+    "wabi_tests": "151 passed",
+    "cerebro_audit_v2": {
+      "files": 648,
+      "text_files": 577,
+      "document_text_files": 33,
+      "document_review_files": 0,
+      "lines": 291270
+    },
+    "archive_intake_replit": {
+      "members": 888,
+      "files": 630,
+      "text_indexed": 215,
+      "blocked_metadata_or_cache": 402,
+      "binary_review": 13
+    },
+    "duat_geodia": "BOOT_VERIFIED_CURRENT_SESSION",
+    "geodia_synthetic_surface": {
+      "schema": "wabi.geodia_synthetic_surface.v1",
+      "status": "SYNTHETIC_ONLY",
+      "bounded": true,
+      "claim_gate": "NO_PUBLIC_STRONG_CLAIM_UNTIL_NUMERIC_VALIDATION",
+      "cli": "python -m wabi_sabi.cli.main geodia-synthetic --json"
+    },
+    "geodia_synthetic_falsifier": {
+      "schema": "wabi.geodia_synthetic_falsifier.v1",
+      "status": "RESEARCH_ONLY_SYNTHETIC_FALSIFIER",
+      "result": "PASS",
+      "claim_gate": "OPERATIONAL_ONLY_NO_PUBLIC_STRONG_CLAIM",
+      "claim_evaluation_gate": "APPROVE",
+      "claim_level": "operational",
+      "cli": "python -m wabi_sabi.cli.main geodia-falsifier --json"
+    },
+    "operator_panel": {
+      "schema": "wabi.operator_panel.v1",
+      "gate": "APPROVE",
+      "geodia_research": "RESEARCH_ONLY",
+      "cli": "python -m wabi_sabi.cli.main operator-status --json"
+    },
+    "variant_semantic_comparison": {
+      "schema": "wabi.cerebro_variant_semantic_comparison.v1",
+      "variant_groups": 118,
+      "archive_review_candidates": 45,
+      "canon_merge_review_candidates": 3,
+      "must_keep_separate_count": 70,
+      "cli": "python -m wabi_sabi.cli.main variant-compare --write-docs --json"
+    },
+    "duplicate_migration_plan": {
+      "schema": "wabi.cerebro_duplicate_migration_plan.v1",
+      "exact_duplicate_groups": 45,
+      "proposed_archive_moves": 57,
+      "ready_for_review": 57,
+      "blocked_moves": 0,
+      "binary_or_archive_duplicates": 14,
+      "source_mutations": 0,
+      "cli": "python -m wabi_sabi.cli.main plan-duplicados --write-docs --json"
+    },
+    "canon_merge_review_pack": {
+      "schema": "wabi.cerebro_canon_merge_review.v1",
+      "review_candidate_groups": 3,
+      "unique_candidate_sets": 2,
+      "duplicate_candidate_sets": 1,
+      "license_boundary_candidates": 2,
+      "content_canonicalization_candidates": 1,
+      "auto_merge_actions": 0,
+      "source_mutations": 0,
+      "cli": "python -m wabi_sabi.cli.main merge-review-pack --write-docs --json"
+    }
+  },
+  "freeze_rules": [
+    "no_new_features_without_contract_test_owner",
+    "no_source_moves",
+    "no_raw_archive_imports",
+    "no_git_add_dot",
+    "no_publication_or_push",
+    "strong_claims_require_claim_contract_and_falsifier",
+    "last_curation_record_must_be_agent",
+    "geodia_surface_remains_synthetic_only",
+    "geodia_falsifier_remains_research_only_operational_claim",
+    "operator_panel_geodia_research_only",
+    "variant_compare_no_source_moves_no_auto_merge",
+    "duplicate_migration_plan_dry_run_only_no_source_moves",
+    "canon_merge_review_pack_no_auto_merge"
+  ],
+  "next_single_action": "Review the 57 dry-run duplicate archive actions and resolve the 3 canon merge review candidates without auto-merge.",
+  "resume_artifacts": [
+    "docs/ops/STABILITY_FREEZE_WABI_CEREBRO_2026-05-07.md",
+    "docs/ops/WABI_CEREBRO_CONTINUATION_HANDOFF_2026-05-07.md",
+    "runtime/wabi_sabi/outputs/SESSION_FINGERPRINT_WABI_CEREBRO_CONTINUE_20260507.json",
+    "runtime/cerebro_master_index/HUMAN_NAVIGATION_INDEX.md",
+    "runtime/cerebro_archive_intake/ReplitExport-lutren_tar_ccac616e3076/ARCHIVE_INTAKE_REPORT.md",
+    "docs/intake/REPLIT_DUAT_GEODIA_MODULE_CANDIDATES_2026-05-07.md",
+    "apps/local/wabi-sabi/wabi_sabi/core/geodia_synthetic_surface.py",
+    "apps/local/wabi-sabi/wabi_sabi/core/geodia_synthetic_falsifier.py",
+    "apps/local/wabi-sabi/wabi_sabi/core/operator_panel.py",
+    "apps/local/wabi-sabi/wabi_sabi/core/cerebro_variant_compare.py",
+    "runtime/cerebro_master_index/VARIANT_SEMANTIC_COMPARISON.json",
+    "runtime/cerebro_master_index/VARIANT_SEMANTIC_COMPARISON.md",
+    "runtime/cerebro_master_index/VARIANT_ACTION_QUEUE.jsonl",
+    "runtime/cerebro_master_index/VARIANT_EXACT_DUPLICATE_MIGRATION_PLAN.json",
+    "runtime/cerebro_master_index/VARIANT_EXACT_DUPLICATE_MIGRATION_PLAN.md",
+    "runtime/cerebro_master_index/VARIANT_EXACT_DUPLICATE_MIGRATION_QUEUE.jsonl",
+    "runtime/cerebro_master_index/VARIANT_EXACT_DUPLICATE_MIGRATION_PLAN.csv",
+    "runtime/cerebro_master_index/VARIANT_CANON_MERGE_REVIEW_PACK.json",
+    "runtime/cerebro_master_index/VARIANT_CANON_MERGE_REVIEW_PACK.md",
+    "runtime/cerebro_master_index/VARIANT_CANON_MERGE_REVIEW_QUEUE.jsonl",
+    "runtime/wabi_sabi/outputs/GEODIA_SYNTHETIC_FALSIFIER.json",
+    "runtime/wabi_sabi/outputs/GEODIA_SYNTHETIC_SURFACE_CLAIM_CONTRACT.json"
+  ],
+  "status": "stable_checkpoint_ready"
+}

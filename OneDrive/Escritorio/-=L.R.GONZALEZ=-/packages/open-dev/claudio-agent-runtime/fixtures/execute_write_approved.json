@@ -1,0 +1,10 @@
+{
+  "schema_version": "claudio.execute_request.v0.1",
+  "action": "write_file",
+  "target": "runtime/outputs/example.txt",
+  "scope": "workspace",
+  "risk_tags": ["local", "reversible"],
+  "reversible": true,
+  "content": "hello from claudio-agent-runtime\n"
+}
+

@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "duat.r_vector.v0_1",
+  "title": "DUAT R Vector v0.1",
+  "type": "object",
+  "required": ["publication_gate", "r_vector"],
+  "properties": {
+    "publication_gate": { "const": "BLOCK" },
+    "r_vector": {
+      "type": "object",
+      "required": [
+        "R_cognitive",
+        "R_entertainment",
+        "R_social_manipulative",
+        "R_temporal",
+        "R_source",
+        "R_contra",
+        "R_sensitive",
+        "R_model",
+        "R_user_style",
+        "R_agent_operational"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "R_cognitive": { "type": "number", "minimum": 0, "maximum": 1 },
+        "R_entertainment": { "type": "number", "minimum": 0, "maximum": 1 },
+        "R_social_manipulative": { "type": "number", "minimum": 0, "maximum": 1 },
+        "R_temporal": { "type": "number", "minimum": 0, "maximum": 1 },
+        "R_source": { "type": "number", "minimum": 0, "maximum": 1 },
+        "R_contra": { "type": "number", "minimum": 0, "maximum": 1 },
+        "R_sensitive": { "type": "number", "minimum": 0, "maximum": 1 },
+        "R_model": { "type": "number", "minimum": 0, "maximum": 1 },
+        "R_user_style": { "type": "number", "minimum": 0, "maximum": 1 },
+        "R_agent_operational": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    }
+  },
+  "additionalProperties": true
+}

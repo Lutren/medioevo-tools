@@ -1,0 +1,142 @@
+{
+  "BacktestOpenGate": "REVIEW_ONLY_DRY_RUN",
+  "DataGate": "REVIEW",
+  "benchmark_public": false,
+  "blocked_public_claims": [
+    "public prediction",
+    "validated model",
+    "causal inference",
+    "country ranking",
+    "electoral prediction",
+    "benchmark leaderboard"
+  ],
+  "causal_claim_allowed": false,
+  "claims_scan": "PASS_LOW_CLAIM_INTERNAL_ONLY",
+  "dry_run_internal_only": true,
+  "electoral_prediction_allowed": false,
+  "generated_at_utc": "2026-05-19T07:06:36Z",
+  "governance_run": "DUAT_WDI_LICENSE_COMPARABILITY_REVIEW_v0_8_1",
+  "interpretation": "Internal dry-run only. Gates remain REVIEW/BLOCK, so results cannot be used as public prediction, ranking, causality, or benchmark evidence.",
+  "leakage_preflight": {
+    "findings": [],
+    "status": "PASS"
+  },
+  "model_claim_allowed": false,
+  "payload_sha256": "a2f562f8131161e0b003e32c7b6a1065e41982dd505e4dd92320c3848b8e87e8",
+  "publication_gate": "BLOCK",
+  "ranking_allowed": false,
+  "run_id": "DUAT_WDI_BACKTEST_DRY_RUN_v0_9",
+  "schema": "duat.world_bank_wdi_backtest_dry_run.v0_9",
+  "schema_validation": "PASS",
+  "series": [
+    {
+      "comparability_review": "REVIEW",
+      "dry_run_folds": 54,
+      "dry_run_policy": {
+        "public_claim_allowed": false,
+        "tunes_model": false,
+        "uses_future_data": false,
+        "uses_holdout_for_recalibration": false,
+        "uses_official_captured_processed_file": true
+      },
+      "duat_indicator_id": "economy.real_growth_rate",
+      "first_prediction_year": 1971,
+      "last_prediction_year": 2024,
+      "license_terms_scan": "REVIEW",
+      "metrics": {
+        "moving_average_3": {
+          "mae": 3.142176,
+          "n": 54,
+          "rmse": 4.139562
+        },
+        "naive_last": {
+          "mae": 3.10185,
+          "n": 54,
+          "rmse": 4.596045
+        }
+      },
+      "n_observations": 64,
+      "processed_file": "data_sources/world_bank_wdi/processed/MEX_NY.GDP.MKTP.KD.ZG_processed.json",
+      "processed_sha256": "3a7eed8f168f9bf3d45cf7a4af55043263083e3e83c7beb094b4c4923722a46d",
+      "readiness_gate": "REVIEW",
+      "wdi_indicator_code": "NY.GDP.MKTP.KD.ZG"
+    },
+    {
+      "comparability_review": "REVIEW",
+      "dry_run_folds": 25,
+      "dry_run_policy": {
+        "public_claim_allowed": false,
+        "tunes_model": false,
+        "uses_future_data": false,
+        "uses_holdout_for_recalibration": false,
+        "uses_official_captured_processed_file": true
+      },
+      "duat_indicator_id": "labor_market.unemployment_rate.total",
+      "first_prediction_year": 2001,
+      "last_prediction_year": 2025,
+      "license_terms_scan": "REVIEW",
+      "metrics": {
+        "moving_average_3": {
+          "mae": 0.547267,
+          "n": 25,
+          "rmse": 0.678836
+        },
+        "naive_last": {
+          "mae": 0.34308,
+          "n": 25,
+          "rmse": 0.479435
+        }
+      },
+      "n_observations": 35,
+      "processed_file": "data_sources/world_bank_wdi/processed/MEX_SL.UEM.TOTL.ZS_processed.json",
+      "processed_sha256": "c60dab757f0635ad71ce5e5b2d5ffd06a8df64bf4b4d8ddd4fffccb3474f9c64",
+      "readiness_gate": "REVIEW",
+      "wdi_indicator_code": "SL.UEM.TOTL.ZS"
+    },
+    {
+      "comparability_review": "REVIEW",
+      "dry_run_folds": 55,
+      "dry_run_policy": {
+        "public_claim_allowed": false,
+        "tunes_model": false,
+        "uses_future_data": false,
+        "uses_holdout_for_recalibration": false,
+        "uses_official_captured_processed_file": true
+      },
+      "duat_indicator_id": "demography.life_expectancy_at_birth.total",
+      "first_prediction_year": 1970,
+      "last_prediction_year": 2024,
+      "license_terms_scan": "REVIEW",
+      "metrics": {
+        "moving_average_3": {
+          "mae": 0.884091,
+          "n": 55,
+          "rmse": 1.203937
+        },
+        "naive_last": {
+          "mae": 0.492491,
+          "n": 55,
+          "rmse": 0.889515
+        }
+      },
+      "n_observations": 65,
+      "processed_file": "data_sources/world_bank_wdi/processed/MEX_SP.DYN.LE00.IN_processed.json",
+      "processed_sha256": "71a6789f24ab04af469434794bd31e1e44aa5beca67ff8487b360f78c9c2e1c0",
+      "readiness_gate": "REVIEW",
+      "wdi_indicator_code": "SP.DYN.LE00.IN"
+    }
+  ],
+  "sha256_scope": "canonical_json_without_sha256_fields",
+  "source_files": {
+    "governance": "data_sources/world_bank_wdi/world_bank_wdi_governance_decision_v0_8_1.json",
+    "manifest": "data_sources/world_bank_wdi/world_bank_wdi_manifest_v0_8.json"
+  },
+  "source_run": "DUAT_WDI_OFFICIAL_SOURCE_PACK_v0_8",
+  "status": "REVIEW_INTERNAL_ONLY",
+  "summary": {
+    "all_public_claims_blocked": true,
+    "license_or_comparability_review_present": true,
+    "series_count": 3,
+    "total_dry_run_folds": 134
+  }
+}

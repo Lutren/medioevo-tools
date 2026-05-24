@@ -1,0 +1,27 @@
+{
+  "schema_version": "claudio.task_board.v0.1",
+  "tasks": [
+    {
+      "id": "ep_clean_001",
+      "title": "Close synthetic local task with evidence",
+      "status": "completed",
+      "priority": "P1",
+      "owner": "rphi-calibration",
+      "evidence": [
+        "qa/example-test-pass.txt"
+      ],
+      "handoff_created": true
+    },
+    {
+      "id": "ep_clean_002",
+      "title": "Write sanitized handoff",
+      "status": "completed",
+      "priority": "P2",
+      "owner": "rphi-calibration",
+      "evidence": [
+        "docs/example-handoff.md"
+      ],
+      "handoff_created": true
+    }
+  ]
+}

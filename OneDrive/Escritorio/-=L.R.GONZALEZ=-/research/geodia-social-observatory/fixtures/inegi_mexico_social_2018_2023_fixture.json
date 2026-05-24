@@ -1,0 +1,358 @@
+{
+  "access_date": "2026-05-14",
+  "captured_at_utc": "2026-05-14T21:56:44Z",
+  "caveats": [
+    "INEGI ENOE unemployment is a survey-derived national labor indicator and is not an EXACT semantic match to World Bank or Eurostat unemployment fixtures.",
+    "2020-2022 include ENOE/ETOE/ENOE_N continuity caveats as documented in the workbook footnote.",
+    "Labor-force participation and informal labor are local context indicators in this fixture and are not mapped to World Bank/Eurostat harmonization classes in v0.1.",
+    "License and terms review remain required before public or commercial redistribution.",
+    "publication_gate=BLOCK; no public release, ranking, causality or prediction is authorized."
+  ],
+  "claims": [
+    {
+      "classification": "INFERENCIA",
+      "text": "This fixture supports local technical harmonization checks only and does not validate any social prediction or causal claim."
+    }
+  ],
+  "country_or_region": "MEX",
+  "data_license": "INEGI Terms of Free Use documented; GEODIA publication or commercial redistribution remains blocked pending review.",
+  "events": [
+    {
+      "classification": "INFERENCIA",
+      "date": "2020-04-01",
+      "description": "Source workbook footnote identifies ENOE through March 2020, ETOE April-June 2020 and ENOE_N July 2020-December 2022; this is a data-continuity caveat, not a causal claim.",
+      "label": "ENOE/ETOE pandemic collection discontinuity marker"
+    }
+  ],
+  "frequency": "annual_mean_from_monthly_source",
+  "geography": "MEX",
+  "indicators": [
+    {
+      "classification": "INFERENCIA",
+      "comparability_note": "STRONG_PROXY only against broad unemployment-rate fixtures; provider and estimation method differ.",
+      "indicator": "unemployment_rate_total_annual_mean",
+      "label": "Tasa de desocupación",
+      "monthly_counts": {
+        "2018": 12,
+        "2019": 12,
+        "2020": 12,
+        "2021": 12,
+        "2022": 12,
+        "2023": 12
+      },
+      "normalized_values": {
+        "2018": 0.0,
+        "2019": 0.051292,
+        "2020": 0.334739,
+        "2021": 0.246491,
+        "2022": -0.013975,
+        "2023": -0.157852,
+        "method": "delta_from_2018_annual_mean_divided_by_max_abs_first_or_one"
+      },
+      "polarity": "negative",
+      "raw_values": {
+        "2018": 3.3202,
+        "2019": 3.4905,
+        "2020": 4.4316,
+        "2021": 4.1386,
+        "2022": 3.2738,
+        "2023": 2.7961
+      },
+      "source_indicator_id": "INEGI_ENOE_TASA_DESOCUPACION_ANNUAL_MEAN",
+      "source_location": {
+        "source_label": "Tasa de desocupación",
+        "workbook_row": 289,
+        "workbook_sheet": "1.2"
+      },
+      "transformation": "annual arithmetic mean of monthly percentage observations; raw monthly values remain in source workbook",
+      "unit": "percent_of_economically_active_population",
+      "unit_label": "Porcentaje de la población económicamente activa"
+    },
+    {
+      "classification": "INFERENCIA",
+      "comparability_note": "Local social-labor context only; no cross-source mapping in v0.1.",
+      "indicator": "labor_force_participation_rate_annual_mean",
+      "label": "Tasa de participación",
+      "monthly_counts": {
+        "2018": 12,
+        "2019": 12,
+        "2020": 12,
+        "2021": 12,
+        "2022": 12,
+        "2023": 12
+      },
+      "normalized_values": {
+        "2018": 0.0,
+        "2019": 0.008796,
+        "2020": -0.071291,
+        "2021": -0.017606,
+        "2022": 0.001302,
+        "2023": 0.01285,
+        "method": "delta_from_2018_annual_mean_divided_by_max_abs_first_or_one"
+      },
+      "polarity": "review",
+      "raw_values": {
+        "2018": 59.6053,
+        "2019": 60.1296,
+        "2020": 55.356,
+        "2021": 58.5559,
+        "2022": 59.6829,
+        "2023": 60.3712
+      },
+      "source_indicator_id": "INEGI_ENOE_TASA_PARTICIPACION_ANNUAL_MEAN",
+      "source_location": {
+        "source_label": "Tasa de participación",
+        "workbook_row": 287,
+        "workbook_sheet": "1.2"
+      },
+      "transformation": "annual arithmetic mean of monthly percentage observations; raw monthly values remain in source workbook",
+      "unit": "percent_of_working_age_population",
+      "unit_label": "Porcentaje de población en edad de trabajar"
+    },
+    {
+      "classification": "INFERENCIA",
+      "comparability_note": "Local social-labor context only; no cross-source mapping in v0.1.",
+      "indicator": "informal_labor_rate_1_annual_mean",
+      "label": "Tasa de informalidad laboral 1 (TIL1)",
+      "monthly_counts": {
+        "2018": 12,
+        "2019": 12,
+        "2020": 12,
+        "2021": 12,
+        "2022": 12,
+        "2023": 12
+      },
+      "normalized_values": {
+        "2018": 0.0,
+        "2019": -0.003434,
+        "2020": -0.037044,
+        "2021": -0.011071,
+        "2022": -0.020732,
+        "2023": -0.027295,
+        "method": "delta_from_2018_annual_mean_divided_by_max_abs_first_or_one"
+      },
+      "polarity": "negative",
+      "raw_values": {
+        "2018": 56.516,
+        "2019": 56.3219,
+        "2020": 54.4224,
+        "2021": 55.8903,
+        "2022": 55.3443,
+        "2023": 54.9734
+      },
+      "source_indicator_id": "INEGI_ENOE_TASA_INFORMALIDAD_LABORAL_1_ANNUAL_MEAN",
+      "source_location": {
+        "source_label": "Tasa de informalidad laboral 1 (TIL1)",
+        "workbook_row": 297,
+        "workbook_sheet": "1.2"
+      },
+      "transformation": "annual arithmetic mean of monthly percentage observations; raw monthly values remain in source workbook",
+      "unit": "percent_of_occupied_population",
+      "unit_label": "Porcentaje de población ocupada"
+    }
+  ],
+  "landing_url": "https://www.inegi.org.mx/app/descarga/default.html",
+  "license_review_required": true,
+  "license_status": "REVIEW_TERMS_DOCUMENTED",
+  "license_terms_summary": "INEGI terms page indicates free use with metadata preservation, attribution to INEGI and no implication of INEGI endorsement; GEODIA keeps redistribution/publication in REVIEW/BLOCK.",
+  "observations": [
+    {
+      "aggregation": "annual_mean_from_12_monthly_values",
+      "classification": "INFERENCIA",
+      "indicator": "unemployment_rate_total_annual_mean",
+      "polarity": "negative",
+      "source_indicator_id": "INEGI_ENOE_TASA_DESOCUPACION_ANNUAL_MEAN",
+      "unit": "percent_of_economically_active_population",
+      "value": 3.3202,
+      "year": 2018
+    },
+    {
+      "aggregation": "annual_mean_from_12_monthly_values",
+      "classification": "INFERENCIA",
+      "indicator": "unemployment_rate_total_annual_mean",
+      "polarity": "negative",
+      "source_indicator_id": "INEGI_ENOE_TASA_DESOCUPACION_ANNUAL_MEAN",
+      "unit": "percent_of_economically_active_population",
+      "value": 3.4905,
+      "year": 2019
+    },
+    {
+      "aggregation": "annual_mean_from_12_monthly_values",
+      "classification": "INFERENCIA",
+      "indicator": "unemployment_rate_total_annual_mean",
+      "polarity": "negative",
+      "source_indicator_id": "INEGI_ENOE_TASA_DESOCUPACION_ANNUAL_MEAN",
+      "unit": "percent_of_economically_active_population",
+      "value": 4.4316,
+      "year": 2020
+    },
+    {
+      "aggregation": "annual_mean_from_12_monthly_values",
+      "classification": "INFERENCIA",
+      "indicator": "unemployment_rate_total_annual_mean",
+      "polarity": "negative",
+      "source_indicator_id": "INEGI_ENOE_TASA_DESOCUPACION_ANNUAL_MEAN",
+      "unit": "percent_of_economically_active_population",
+      "value": 4.1386,
+      "year": 2021
+    },
+    {
+      "aggregation": "annual_mean_from_12_monthly_values",
+      "classification": "INFERENCIA",
+      "indicator": "unemployment_rate_total_annual_mean",
+      "polarity": "negative",
+      "source_indicator_id": "INEGI_ENOE_TASA_DESOCUPACION_ANNUAL_MEAN",
+      "unit": "percent_of_economically_active_population",
+      "value": 3.2738,
+      "year": 2022
+    },
+    {
+      "aggregation": "annual_mean_from_12_monthly_values",
+      "classification": "INFERENCIA",
+      "indicator": "unemployment_rate_total_annual_mean",
+      "polarity": "negative",
+      "source_indicator_id": "INEGI_ENOE_TASA_DESOCUPACION_ANNUAL_MEAN",
+      "unit": "percent_of_economically_active_population",
+      "value": 2.7961,
+      "year": 2023
+    },
+    {
+      "aggregation": "annual_mean_from_12_monthly_values",
+      "classification": "INFERENCIA",
+      "indicator": "labor_force_participation_rate_annual_mean",
+      "polarity": "review",
+      "source_indicator_id": "INEGI_ENOE_TASA_PARTICIPACION_ANNUAL_MEAN",
+      "unit": "percent_of_working_age_population",
+      "value": 59.6053,
+      "year": 2018
+    },
+    {
+      "aggregation": "annual_mean_from_12_monthly_values",
+      "classification": "INFERENCIA",
+      "indicator": "labor_force_participation_rate_annual_mean",
+      "polarity": "review",
+      "source_indicator_id": "INEGI_ENOE_TASA_PARTICIPACION_ANNUAL_MEAN",
+      "unit": "percent_of_working_age_population",
+      "value": 60.1296,
+      "year": 2019
+    },
+    {
+      "aggregation": "annual_mean_from_12_monthly_values",
+      "classification": "INFERENCIA",
+      "indicator": "labor_force_participation_rate_annual_mean",
+      "polarity": "review",
+      "source_indicator_id": "INEGI_ENOE_TASA_PARTICIPACION_ANNUAL_MEAN",
+      "unit": "percent_of_working_age_population",
+      "value": 55.356,
+      "year": 2020
+    },
+    {
+      "aggregation": "annual_mean_from_12_monthly_values",
+      "classification": "INFERENCIA",
+      "indicator": "labor_force_participation_rate_annual_mean",
+      "polarity": "review",
+      "source_indicator_id": "INEGI_ENOE_TASA_PARTICIPACION_ANNUAL_MEAN",
+      "unit": "percent_of_working_age_population",
+      "value": 58.5559,
+      "year": 2021
+    },
+    {
+      "aggregation": "annual_mean_from_12_monthly_values",
+      "classification": "INFERENCIA",
+      "indicator": "labor_force_participation_rate_annual_mean",
+      "polarity": "review",
+      "source_indicator_id": "INEGI_ENOE_TASA_PARTICIPACION_ANNUAL_MEAN",
+      "unit": "percent_of_working_age_population",
+      "value": 59.6829,
+      "year": 2022
+    },
+    {
+      "aggregation": "annual_mean_from_12_monthly_values",
+      "classification": "INFERENCIA",
+      "indicator": "labor_force_participation_rate_annual_mean",
+      "polarity": "review",
+      "source_indicator_id": "INEGI_ENOE_TASA_PARTICIPACION_ANNUAL_MEAN",
+      "unit": "percent_of_working_age_population",
+      "value": 60.3712,
+      "year": 2023
+    },
+    {
+      "aggregation": "annual_mean_from_12_monthly_values",
+      "classification": "INFERENCIA",
+      "indicator": "informal_labor_rate_1_annual_mean",
+      "polarity": "negative",
+      "source_indicator_id": "INEGI_ENOE_TASA_INFORMALIDAD_LABORAL_1_ANNUAL_MEAN",
+      "unit": "percent_of_occupied_population",
+      "value": 56.516,
+      "year": 2018
+    },
+    {
+      "aggregation": "annual_mean_from_12_monthly_values",
+      "classification": "INFERENCIA",
+      "indicator": "informal_labor_rate_1_annual_mean",
+      "polarity": "negative",
+      "source_indicator_id": "INEGI_ENOE_TASA_INFORMALIDAD_LABORAL_1_ANNUAL_MEAN",
+      "unit": "percent_of_occupied_population",
+      "value": 56.3219,
+      "year": 2019
+    },
+    {
+      "aggregation": "annual_mean_from_12_monthly_values",
+      "classification": "INFERENCIA",
+      "indicator": "informal_labor_rate_1_annual_mean",
+      "polarity": "negative",
+      "source_indicator_id": "INEGI_ENOE_TASA_INFORMALIDAD_LABORAL_1_ANNUAL_MEAN",
+      "unit": "percent_of_occupied_population",
+      "value": 54.4224,
+      "year": 2020
+    },
+    {
+      "aggregation": "annual_mean_from_12_monthly_values",
+      "classification": "INFERENCIA",
+      "indicator": "informal_labor_rate_1_annual_mean",
+      "polarity": "negative",
+      "source_indicator_id": "INEGI_ENOE_TASA_INFORMALIDAD_LABORAL_1_ANNUAL_MEAN",
+      "unit": "percent_of_occupied_population",
+      "value": 55.8903,
+      "year": 2021
+    },
+    {
+      "aggregation": "annual_mean_from_12_monthly_values",
+      "classification": "INFERENCIA",
+      "indicator": "informal_labor_rate_1_annual_mean",
+      "polarity": "negative",
+      "source_indicator_id": "INEGI_ENOE_TASA_INFORMALIDAD_LABORAL_1_ANNUAL_MEAN",
+      "unit": "percent_of_occupied_population",
+      "value": 55.3443,
+      "year": 2022
+    },
+    {
+      "aggregation": "annual_mean_from_12_monthly_values",
+      "classification": "INFERENCIA",
+      "indicator": "informal_labor_rate_1_annual_mean",
+      "polarity": "negative",
+      "source_indicator_id": "INEGI_ENOE_TASA_INFORMALIDAD_LABORAL_1_ANNUAL_MEAN",
+      "unit": "percent_of_occupied_population",
+      "value": 54.9734,
+      "year": 2023
+    }
+  ],
+  "period": "2018-2023",
+  "publication_gate": "BLOCK",
+  "raw_source_file": "fixtures/source_intake/inegi/raw/enoe_indicadores_estrategicos_2005_2026_mensual.xlsx",
+  "raw_source_hash": "sha256:0add6e88da29b8f5eddcafe889f94c353edaab8a9d5ec272565a55c84cae8bd5",
+  "retrieval_mode": "offline_fixture_from_official_download_snapshot",
+  "schema": "claudio.geodia_official_fixture.v0_1",
+  "source_card_ref": "fixtures/source_intake/inegi/INEGI_SOURCE_CARD.md",
+  "source_id": "INEGI",
+  "source_manifest_ref": "fixtures/source_intake/inegi/INEGI_ENOE_SOURCE_MANIFEST_2026-05-14.json",
+  "source_name": "Instituto Nacional de Estadística y Geografía (INEGI) - ENOE indicadores estratégicos",
+  "source_url": "https://www.inegi.org.mx/contenidos/programas/enoe/15ymas/tabulados/enoe_indicadores_estrategicos_2005_2026_mensual.xlsx",
+  "temporal_coverage": "source workbook 2005-01 to 2026-03; fixture extracts annual means for 2018-2023",
+  "transformation_notes": [
+    "Values are not hand-entered; they were extracted from workbook sheet 1.2 rows 287, 289 and 297.",
+    "Each annual observation is the arithmetic mean of 12 monthly percentage values for that calendar year.",
+    "No external API token, private credential, ranking, prediction or causal model was used."
+  ],
+  "year_range": "2018-2023"
+}

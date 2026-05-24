@@ -1,0 +1,1650 @@
+{
+  "archive": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\ReplitExport-lutren.tar.gz",
+  "archive_sha256": "ccac616e3076026284b3e3b5ad25e331fb66340d4ed992831ad5d8059e9aabe2",
+  "certainty": [
+    "Archive source was not moved, deleted or extracted raw into the workspace.",
+    "Text-like non-secret members were copied into a quarantine text directory for review.",
+    "Git metadata, path traversal, secret-like paths and large/binary files were blocked from text extraction."
+  ],
+  "generated_at_utc": "2026-05-07T17:23:02+00:00",
+  "inference": [
+    "Indexed text members can feed module review, but import into runtime still requires per-file review and tests."
+  ],
+  "manifest_sample": [
+    {
+      "classification": "DIRECTORY",
+      "is_file": false,
+      "line_count": 0,
+      "name": "Duat-Geodia/.agents",
+      "quarantine_text": "",
+      "reasons": [],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 0
+    },
+    {
+      "classification": "DIRECTORY",
+      "is_file": false,
+      "line_count": 0,
+      "name": "Duat-Geodia/.config",
+      "quarantine_text": "",
+      "reasons": [],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 0
+    },
+    {
+      "classification": "DIRECTORY",
+      "is_file": false,
+      "line_count": 0,
+      "name": "Duat-Geodia/.config/npm",
+      "quarantine_text": "",
+      "reasons": [],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 0
+    },
+    {
+      "classification": "DIRECTORY",
+      "is_file": false,
+      "line_count": 0,
+      "name": "Duat-Geodia/.config/npm/node_global",
+      "quarantine_text": "",
+      "reasons": [],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 0
+    },
+    {
+      "classification": "DIRECTORY",
+      "is_file": false,
+      "line_count": 0,
+      "name": "Duat-Geodia/.config/npm/node_global/lib",
+      "quarantine_text": "",
+      "reasons": [],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 0
+    },
+    {
+      "classification": "DIRECTORY",
+      "is_file": false,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git",
+      "quarantine_text": "",
+      "reasons": [],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 0
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/COMMIT_EDITMSG",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 512
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/HEAD",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 21
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/config",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 287
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/description",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 73
+    },
+    {
+      "classification": "DIRECTORY",
+      "is_file": false,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/hooks",
+      "quarantine_text": "",
+      "reasons": [],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 0
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/hooks/applypatch-msg.sample",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 535
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/hooks/commit-msg.sample",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 953
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/hooks/fsmonitor-watchman.sample",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 4777
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/hooks/post-update.sample",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 246
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/hooks/pre-applypatch.sample",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 481
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/hooks/pre-commit.sample",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 1706
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/hooks/pre-merge-commit.sample",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 473
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/hooks/pre-push.sample",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 1431
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/hooks/pre-rebase.sample",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 5006
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/hooks/pre-receive.sample",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 601
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/hooks/prepare-commit-msg.sample",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 1702
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/hooks/push-to-checkout.sample",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 2840
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/hooks/sendemail-validate.sample",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 2365
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/hooks/update.sample",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 3707
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/index",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 27131
+    },
+    {
+      "classification": "DIRECTORY",
+      "is_file": false,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/info",
+      "quarantine_text": "",
+      "reasons": [],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 0
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/info/exclude",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 240
+    },
+    {
+      "classification": "DIRECTORY",
+      "is_file": false,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/lfs",
+      "quarantine_text": "",
+      "reasons": [],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 0
+    },
+    {
+      "classification": "DIRECTORY",
+      "is_file": false,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/lfs/tmp",
+      "quarantine_text": "",
+      "reasons": [],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 0
+    },
+    {
+      "classification": "DIRECTORY",
+      "is_file": false,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/logs",
+      "quarantine_text": "",
+      "reasons": [],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 0
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/logs/HEAD",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 2102
+    },
+    {
+      "classification": "DIRECTORY",
+      "is_file": false,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/logs/refs",
+      "quarantine_text": "",
+      "reasons": [],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 0
+    },
+    {
+      "classification": "DIRECTORY",
+      "is_file": false,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/logs/refs/heads",
+      "quarantine_text": "",
+      "reasons": [],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 0
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/logs/refs/heads/main",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 2102
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/logs/refs/heads/replit-agent",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 1341
+    },
+    {
+      "classification": "DIRECTORY",
+      "is_file": false,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/logs/refs/remotes",
+      "quarantine_text": "",
+      "reasons": [],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 0
+    },
+    {
+      "classification": "DIRECTORY",
+      "is_file": false,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/logs/refs/remotes/gitsafe-backup",
+      "quarantine_text": "",
+      "reasons": [],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 0
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/logs/refs/remotes/gitsafe-backup/main",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 1476
+    },
+    {
+      "classification": "DIRECTORY",
+      "is_file": false,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/objects",
+      "quarantine_text": "",
+      "reasons": [],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 0
+    },
+    {
+      "classification": "DIRECTORY",
+      "is_file": false,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/objects/04",
+      "quarantine_text": "",
+      "reasons": [],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 0
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/objects/04/39d7d6744c9cabef5921934f6fb1e9d8636ff3",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 177
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/objects/04/e415058b1613cc79692abdb9239ab4483f146b",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 142
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/objects/04/e991164ab7a56fa6d62fb05d5d66dcfcbab967",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 433
+    },
+    {
+      "classification": "DIRECTORY",
+      "is_file": false,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/objects/05",
+      "quarantine_text": "",
+      "reasons": [],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 0
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/objects/05/1d0ccbea915bbd1758db8b9299aa100313a367",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 128
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/objects/05/6354bf824bf1f06e9dbceeacad512ce21b03d1",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 1636
+    },
+    {
+      "classification": "DIRECTORY",
+      "is_file": false,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/objects/06",
+      "quarantine_text": "",
+      "reasons": [],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 0
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/objects/06/6f9ec076ba94fc00de888e5d52b48eb24a8efd",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 2293
+    },
+    {
+      "classification": "DIRECTORY",
+      "is_file": false,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/objects/07",
+      "quarantine_text": "",
+      "reasons": [],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 0
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/objects/07/e260079c43c7a37852b133d1c361b95a5cf1db",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 2704
+    },
+    {
+      "classification": "DIRECTORY",
+      "is_file": false,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/objects/0a",
+      "quarantine_text": "",
+      "reasons": [],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 0
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/objects/0a/276fcb1d7623b0d57fd649fddfb043b535ea62",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 2239
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/objects/0a/fd9b8416d58a3fe7197b2bb5f2f68c5a7a9fd6",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 239
+    },
+    {
+      "classification": "DIRECTORY",
+      "is_file": false,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/objects/0c",
+      "quarantine_text": "",
+      "reasons": [],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 0
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/objects/0c/a36e003d911786a5b061082ce82f1a330eb3a3",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 294
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/objects/0c/a4121e5538f3c157e245fb92db92f54beeca4c",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 720
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/objects/0c/d4b2c03d306c38836d43c7f3dc2cb2547c64a7",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 1831
+    },
+    {
+      "classification": "DIRECTORY",
+      "is_file": false,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/objects/0d",
+      "quarantine_text": "",
+      "reasons": [],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 0
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/objects/0d/23073d3770dec1286f7c1bbd6eab24fd915fbe",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 413
+    },
+    {
+      "classification": "DIRECTORY",
+      "is_file": false,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/objects/0e",
+      "quarantine_text": "",
+      "reasons": [],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 0
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/objects/0e/470fccbea7b9fc281d7b83fe627bb5a6614af3",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 103
+    },
+    {
+      "classification": "DIRECTORY",
+      "is_file": false,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/objects/0f",
+      "quarantine_text": "",
+      "reasons": [],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 0
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/objects/0f/35a0e2735a647f4201738dd72948eb6c47b413",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 133
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/objects/0f/80c8ccaa6d172f5ca27a62f6508b9a1e210d93",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 244
+    },
+    {
+      "classification": "DIRECTORY",
+      "is_file": false,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/objects/12",
+      "quarantine_text": "",
+      "reasons": [],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 0
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/objects/12/33eff82050abcd053131fd15ab80f87ecc15c6",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 1946
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/objects/12/bc7fa7e05091e2d413d235ef695c1d95805c8a",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 539
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/objects/12/e34566f4017def336165ca3ad8490746e4c73d",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 144
+    },
+    {
+      "classification": "DIRECTORY",
+      "is_file": false,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/objects/13",
+      "quarantine_text": "",
+      "reasons": [],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 0
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/objects/13/5edbe75b5094a9a0f00b510f94743e3beeb7fd",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 215
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/objects/13/7db5cb0797b69b006d65c65aa751f5c45ee547",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 123
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/objects/13/97a638300ec564af33d63612ff217ea2c4012b",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 1607
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/objects/13/d31094c502b530097a5e254c008f697c3344e8",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 4686
+    },
+    {
+      "classification": "DIRECTORY",
+      "is_file": false,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/objects/14",
+      "quarantine_text": "",
+      "reasons": [],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 0
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/objects/14/03e0b05c566d6d14df5139fc536890d4311f24",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 3156
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/objects/14/d81dfbb57afbc3a2cd0b3b6310bc2c53b2133c",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 566
+    },
+    {
+      "classification": "DIRECTORY",
+      "is_file": false,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/objects/16",
+      "quarantine_text": "",
+      "reasons": [],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 0
+    },
+    {
+      "classification": "BLOCKED_METADATA_OR_CACHE",
+      "is_file": true,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/objects/16/eb95d1cca6cdc61889bdf0d9206ad0dfcec427",
+      "quarantine_text": "",
+      "reasons": [
+        "blocked_part"
+      ],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 1299
+    },
+    {
+      "classification": "DIRECTORY",
+      "is_file": false,
+      "line_count": 0,
+      "name": "Duat-Geodia/.git/objects/1a",
+      "quarantine_text": "",
+      "reasons": [],
+      "sha256_text": "",
+      "signals": {},
+      "size_bytes": 0
+    }
+  ],
+  "ok": true,
+  "output_dir": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076",
+  "policy": {
+    "blocked_parts": [
+      ".git",
+      ".hg",
+      ".svn",
+      ".venv",
+      "__pycache__",
+      "build",
+      "dist",
+      "node_modules",
+      "target"
+    ],
+    "max_text_bytes": 750000,
+    "raw_archive_extract": false,
+    "secret_like_paths_blocked": true,
+    "source_writes": false,
+    "text_quarantine_extract": true
+  },
+  "schema": "wabi.cerebro_archive_intake.v1",
+  "summary": {
+    "classification_counts": {
+      "BINARY_REVIEW": 13,
+      "BLOCKED_METADATA_OR_CACHE": 402,
+      "DIRECTORY": 258,
+      "TEXT_INDEXABLE": 215
+    },
+    "file_count": 630,
+    "member_count": 888,
+    "signal_counts": {
+      "ActionGate": 34,
+      "Claudio": 33,
+      "DUAT": 71,
+      "EML": 19,
+      "GEODIA": 49,
+      "Gauss-Bonnet": 33,
+      "GhostGate": 5,
+      "H_eff": 3,
+      "J_c": 232,
+      "NEC": 10,
+      "OSIT": 239,
+      "Phi_eff": 155,
+      "QNM": 6,
+      "R": 370,
+      "Sigma": 125,
+      "TUIP": 3,
+      "Wabi-Sabi": 103,
+      "WitnessLog": 227,
+      "agent_programming": 111,
+      "browser": 40,
+      "epsilon": 152,
+      "lambda": 143,
+      "nu": 395
+    },
+    "text_indexed_count": 215
+  },
+  "text_records_sample": [
+    {
+      "line_count": 49,
+      "member": "Duat-Geodia/.gitignore",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\7d9b22589f3d_gitignore.txt",
+      "signals": {
+        "agent_programming": 1
+      }
+    },
+    {
+      "line_count": 2,
+      "member": "Duat-Geodia/.npmrc",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\dc6b0dcba87c_npmrc.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 35,
+      "member": "Duat-Geodia/.replit",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\b9906beff3eb_replit.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 5,
+      "member": "Duat-Geodia/.replitignore",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\5edb6d17e4cd_replitignore.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 32,
+      "member": "Duat-Geodia/artifacts/api-server/.replit-artifact/artifact.toml",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\ab8b27519d2f_artifact_toml.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 126,
+      "member": "Duat-Geodia/artifacts/api-server/build.mjs",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\634d8a05fda6_build_mjs.txt",
+      "signals": {
+        "browser": 1
+      }
+    },
+    {
+      "line_count": 32,
+      "member": "Duat-Geodia/artifacts/api-server/package.json",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\8cc61b16458c_package_json.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 34,
+      "member": "Duat-Geodia/artifacts/api-server/src/app.ts",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\b273d262eaab_app_ts.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 25,
+      "member": "Duat-Geodia/artifacts/api-server/src/index.ts",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\05c72cb123c5_index_ts.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 0,
+      "member": "Duat-Geodia/artifacts/api-server/src/lib/.gitkeep",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\acc530fc8bcc_gitkeep.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 20,
+      "member": "Duat-Geodia/artifacts/api-server/src/lib/logger.ts",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\903d39e90c71_logger_ts.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 0,
+      "member": "Duat-Geodia/artifacts/api-server/src/middlewares/.gitkeep",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\a343e1465983_gitkeep.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 32,
+      "member": "Duat-Geodia/artifacts/api-server/src/routes/genesis.ts",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\b67312663a6a_genesis_ts.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 45,
+      "member": "Duat-Geodia/artifacts/api-server/src/routes/handoff.ts",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\de63fb1a9262_handoff_ts.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 11,
+      "member": "Duat-Geodia/artifacts/api-server/src/routes/health.ts",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\c09dc8e6b3a2_health_ts.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 16,
+      "member": "Duat-Geodia/artifacts/api-server/src/routes/index.ts",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\464d26026ec9_index_ts.txt",
+      "signals": {
+        "WitnessLog": 2
+      }
+    },
+    {
+      "line_count": 46,
+      "member": "Duat-Geodia/artifacts/api-server/src/routes/simulation.ts",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\1e8fee900530_simulation_ts.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 82,
+      "member": "Duat-Geodia/artifacts/api-server/src/routes/witness.ts",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\aad859aaf939_witness_ts.txt",
+      "signals": {
+        "WitnessLog": 17
+      }
+    },
+    {
+      "line_count": 17,
+      "member": "Duat-Geodia/artifacts/api-server/tsconfig.json",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\184bdbac9f5c_tsconfig_json.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 31,
+      "member": "Duat-Geodia/artifacts/duat-geodia/.replit-artifact/artifact.toml",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\ddfb72c6da8e_artifact_toml.txt",
+      "signals": {
+        "DUAT": 5,
+        "GEODIA": 5
+      }
+    },
+    {
+      "line_count": 20,
+      "member": "Duat-Geodia/artifacts/duat-geodia/components.json",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\1b129d7eb553_components_json.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 16,
+      "member": "Duat-Geodia/artifacts/duat-geodia/index.html",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\2bb78eee72ef_index_html.txt",
+      "signals": {
+        "DUAT": 1,
+        "GEODIA": 1
+      }
+    },
+    {
+      "line_count": 77,
+      "member": "Duat-Geodia/artifacts/duat-geodia/package.json",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\a9a94dc83c04_package_json.txt",
+      "signals": {
+        "DUAT": 1,
+        "GEODIA": 1
+      }
+    },
+    {
+      "line_count": 3,
+      "member": "Duat-Geodia/artifacts/duat-geodia/public/favicon.svg",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\bbd6e2848731_favicon_svg.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 38,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/App.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\f472ccd8cf79_app_tsx.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 23,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/CellInspector.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\916bd6ecc324_cellinspector_tsx.txt",
+      "signals": {
+        "GEODIA": 1
+      }
+    },
+    {
+      "line_count": 88,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/ClaimsPanel.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\99641c5c7c83_claimspanel_tsx.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 52,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/CodingAgentPanel.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\e7d84331dc59_codingagentpanel_tsx.txt",
+      "signals": {
+        "DUAT": 1,
+        "WitnessLog": 1
+      }
+    },
+    {
+      "line_count": 72,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/DuatMapPanel.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\f2f8da355ae4_duatmappanel_tsx.txt",
+      "signals": {
+        "DUAT": 1,
+        "EML": 1,
+        "GEODIA": 1,
+        "R": 2,
+        "WitnessLog": 1
+      }
+    },
+    {
+      "line_count": 84,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/EMLPanel.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\04379e20d42c_emlpanel_tsx.txt",
+      "signals": {
+        "EML": 3,
+        "GEODIA": 1,
+        "J_c": 2,
+        "OSIT": 2,
+        "Phi_eff": 2,
+        "R": 4,
+        "epsilon": 1,
+        "nu": 1
+      }
+    },
+    {
+      "line_count": 309,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/FalsifierPanel.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\fa6cf601844f_falsifierpanel_tsx.txt",
+      "signals": {
+        "R": 2,
+        "WitnessLog": 3,
+        "agent_programming": 3,
+        "epsilon": 2
+      }
+    },
+    {
+      "line_count": 106,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/GenesisPanel.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\1622897ea95e_genesispanel_tsx.txt",
+      "signals": {
+        "DUAT": 1
+      }
+    },
+    {
+      "line_count": 168,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/GeodiaGrid.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\303b043a8cec_geodiagrid_tsx.txt",
+      "signals": {
+        "GEODIA": 2,
+        "J_c": 4,
+        "OSIT": 1,
+        "Phi_eff": 2,
+        "R": 4,
+        "agent_programming": 1,
+        "epsilon": 8
+      }
+    },
+    {
+      "line_count": 135,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/HandoffPanel.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\d5ddb8151995_handoffpanel_tsx.txt",
+      "signals": {
+        "DUAT": 1,
+        "GEODIA": 1,
+        "agent_programming": 1
+      }
+    },
+    {
+      "line_count": 179,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/OperatorInventory.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\d8a3786c5f78_operatorinventory_tsx.txt",
+      "signals": {
+        "J_c": 6,
+        "OSIT": 1,
+        "Phi_eff": 2,
+        "R": 7,
+        "Sigma": 13,
+        "agent_programming": 3,
+        "epsilon": 4,
+        "nu": 1
+      }
+    },
+    {
+      "line_count": 269,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/PhysicsPanel.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\c09ef01a574c_physicspanel_tsx.txt",
+      "signals": {
+        "Phi_eff": 1
+      }
+    },
+    {
+      "line_count": 312,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/ReplayPanel.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\19aa8ce11923_replaypanel_tsx.txt",
+      "signals": {
+        "EML": 1,
+        "GEODIA": 1,
+        "J_c": 6,
+        "Phi_eff": 7,
+        "R": 5,
+        "Sigma": 4,
+        "agent_programming": 3,
+        "epsilon": 6
+      }
+    },
+    {
+      "line_count": 130,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/SensoriumPanel.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\7c6f107c95ba_sensoriumpanel_tsx.txt",
+      "signals": {
+        "GEODIA": 1,
+        "J_c": 2,
+        "OSIT": 1,
+        "Phi_eff": 4,
+        "R": 6,
+        "epsilon": 9
+      }
+    },
+    {
+      "line_count": 136,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/SimControls.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\e02b650ce75f_simcontrols_tsx.txt",
+      "signals": {
+        "agent_programming": 3
+      }
+    },
+    {
+      "line_count": 41,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/WitnessPanel.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\f62e219ca77e_witnesspanel_tsx.txt",
+      "signals": {
+        "WitnessLog": 4
+      }
+    },
+    {
+      "line_count": 76,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/custom/ExtraPixelComponents.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\f57bb5efd662_extrapixelcomponents_tsx.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 49,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/custom/PixelComponents.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\5072bda0da5b_pixelcomponents_tsx.txt",
+      "signals": {
+        "agent_programming": 1
+      }
+    },
+    {
+      "line_count": 55,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/ui/accordion.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\cc4b53d04627_accordion_tsx.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 139,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/ui/alert-dialog.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\782e65cace54_alert_dialog_tsx.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 59,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/ui/alert.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\6bb68006dd21_alert_tsx.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 5,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/ui/aspect-ratio.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\f01388bdec62_aspect_ratio_tsx.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 50,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/ui/avatar.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\a489df2324b3_avatar_tsx.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 43,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/ui/badge.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\4b308092216a_badge_tsx.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 115,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/ui/breadcrumb.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\d27b192b00ea_breadcrumb_tsx.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 83,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/ui/button-group.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\9b1bc72f10b7_button_group_tsx.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 65,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/ui/button.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\dcfad46ba356_button_tsx.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 213,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/ui/calendar.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\942e72a6204b_calendar_tsx.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 76,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/ui/card.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\d132ed3f9fee_card_tsx.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 260,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/ui/carousel.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\d4d17ad0105a_carousel_tsx.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 367,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/ui/chart.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\8df826c472cb_chart_tsx.txt",
+      "signals": {
+        "agent_programming": 1
+      }
+    },
+    {
+      "line_count": 28,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/ui/checkbox.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\c3b6ccf947a3_checkbox_tsx.txt",
+      "signals": {
+        "agent_programming": 1
+      }
+    },
+    {
+      "line_count": 11,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/ui/collapsible.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\e6640708eaa4_collapsible_tsx.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 153,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/ui/command.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\d48d31c5dd68_command_tsx.txt",
+      "signals": {
+        "agent_programming": 2
+      }
+    },
+    {
+      "line_count": 198,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/ui/context-menu.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\5fb658f474ec_context_menu_tsx.txt",
+      "signals": {
+        "agent_programming": 4
+      }
+    },
+    {
+      "line_count": 120,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/ui/dialog.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\8d8867089f43_dialog_tsx.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 116,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/ui/drawer.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\4adba8621c30_drawer_tsx.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 201,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/ui/dropdown-menu.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\d0c13a1ed8d7_dropdown_menu_tsx.txt",
+      "signals": {
+        "agent_programming": 4
+      }
+    },
+    {
+      "line_count": 104,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/ui/empty.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\5b20e48db431_empty_tsx.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 244,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/ui/field.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\12b5954d0d3f_field_tsx.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 176,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/ui/form.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\dfe9e95419d9_form_tsx.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 27,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/ui/hover-card.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\b506c108fcff_hover_card_tsx.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 168,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/ui/input-group.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\dd56c8b01e2f_input_group_tsx.txt",
+      "signals": {
+        "agent_programming": 1
+      }
+    },
+    {
+      "line_count": 69,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/ui/input-otp.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\4c464ecd98cf_input_otp_tsx.txt",
+      "signals": {
+        "agent_programming": 1
+      }
+    },
+    {
+      "line_count": 22,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/ui/input.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\ddaec5d8c78c_input_tsx.txt",
+      "signals": {
+        "agent_programming": 1
+      }
+    },
+    {
+      "line_count": 193,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/ui/item.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\e973293a8a6d_item_tsx.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 28,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/ui/kbd.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\57aa6637d2e0_kbd_tsx.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 26,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/ui/label.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\902884a15cce_label_tsx.txt",
+      "signals": {
+        "agent_programming": 1
+      }
+    },
+    {
+      "line_count": 254,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/ui/menubar.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\e86afe5840c4_menubar_tsx.txt",
+      "signals": {
+        "agent_programming": 5
+      }
+    },
+    {
+      "line_count": 128,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/ui/navigation-menu.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\45903508c8ab_navigation_menu_tsx.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 117,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/ui/pagination.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\6a376a423293_pagination_tsx.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 31,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/ui/popover.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\6ba2a5c7dfa7_popover_tsx.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 28,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/ui/progress.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\3c37b0333956_progress_tsx.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 42,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/ui/radio-group.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\8c52db2d0141_radio_group_tsx.txt",
+      "signals": {
+        "agent_programming": 1
+      }
+    },
+    {
+      "line_count": 45,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/ui/resizable.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\74dde5a7b163_resizable_tsx.txt",
+      "signals": {}
+    },
+    {
+      "line_count": 46,
+      "member": "Duat-Geodia/artifacts/duat-geodia/src/components/ui/scroll-area.tsx",
+      "quarantine_text": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\cerebro_archive_intake\\ReplitExport-lutren_tar_ccac616e3076\\text\\451be7d75dfa_scroll_area_tsx.txt",
+      "signals": {}
+    }
+  ],
+  "unknown": [
+    "Binary files and blocked metadata were inventoried but not semantically absorbed.",
+    "Quarantined text may still require human/agent review before becoming canon or production code."
+  ],
+  "workspace": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-"
+}

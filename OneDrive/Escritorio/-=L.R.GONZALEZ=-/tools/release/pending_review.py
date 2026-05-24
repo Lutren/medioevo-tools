@@ -91,6 +91,12 @@ PENDING_EXCLUDE_SUBSTRINGS = [
     "/docs/el_bardo.md",
     "/docs/applications/",
     "/docs/root_notes_review/",
+    "/docs/intake/desktop_lobby_atlas_dryrun_",
+    "/docs/intake/lrgonzalez_root_atlas_dryrun_",
+    "/docs/intake/medioevo_atlas_dryrun_",
+    "/docs/intake/user_home_non_onedrive_atlas_dryrun_",
+    "/editorial/canon10_pipeline/",
+    "/editorial/working_manuscripts/",
     "/installer/",
     "/medioevo_agent_hub/readme.md",
     "/mini_office/",
@@ -102,6 +108,7 @@ PENDING_EXCLUDE_SUBSTRINGS = [
     "/tv_audio/",
     "/website/",
     "/claudio - researchs/",
+    "/books/editorial/internal_exports/",
 ]
 
 CLAUDIO_ROOT = ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio"

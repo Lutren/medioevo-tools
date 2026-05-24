@@ -4,6 +4,8 @@ Fecha: 2026-04-29
 
 | id | severidad | riesgo | evidencia | impacto | mitigacion |
 |---|---|---|---|---|---|
+| R-026 | MEDIA | Estado publico/local puede desincronizarse entre Hub, POST curator y BrowserBridge | `qa_artifacts/release_validation/RUN_STATE_RECONCILIATION_PUBLIC_LOCAL_v0_1_20260518/*`, PR #6, deploy `https://99698d43.medioevo-site.pages.dev` | usuarios o agentes futuros pueden creer que Kimi/NVIDIA/DeepSeek corrieron, que POST fue importado o que BrowserBridge auto-aplica propuestas | mantener matriz unica, public copy low-claim, Kimi/NVIDIA/DeepSeek gates explicitos, no raw POST import y next run document-only |
+| R-025 | ALTA | POST y portafolios BRAIN_OS pueden ser absorbidos como canon/runtime por adopcion cruda | `docs/intake/BRAIN_OS_POST_ABSORPTION_CLEANUP_POSTERIOR_2026-05-18.*`, 19 fichas exactas y `SOURCE_INTAKE_REGISTER.md` posterior | mezcla de claims fuertes, assets sin procedencia, shadow copies de ZIP y portafolios internos en runtime/apps/publicacion | mantener `PublicationGate=BLOCK`, `RuntimeImport=BLOCK`, `RawAdoption=BLOCK`; usar solo fichas/deltas, falsificador/test por lane y `MIGRATION_LOG` antes de cualquier move/delete |
 | R-001 | CRITICA | Secretos reales en workspace | `.discord_token`, `.youtube_token.pickle`, `claudio\.env`, `claudio\.env.gumroad`, `claudio\claudio_secrets.json`, `claudio\gumroad_api.json` | filtracion si se empaqueta o publica | mantener fuera de Git/releases, rotar si hubo exposicion, crear `SECRET_SCAN_REPORT` y denylist |
 | R-002 | CRITICA | Videojuego/TCG mezclado con workspace publicable | `metaevo-tcg`, `claudio\tcg`, `runtime\game_bridge`, `PRODUCTOS_MEDIOEVO\04_AUDIOVISUAL_Y_TCG` | perdida de IP o publicacion accidental | crear `PRIVATE_GAME_BOUNDARY.md`, denylist de packaging y repo privado separado |
 | R-003 | ALTA | Historial Git pesado con archivos grandes | objeto Git de 2447.20 MB en `-=LIBROS\.git\objects`; zips grandes en `claudio\products` | repo dificil de clonar/publicar | no publicar repo actual; crear repo derivado limpio o filtrar historia con revision |
@@ -49,3 +51,22 @@ Fase 1 puede empezar solo con:
 - mapa de migracion;
 - politica de secrets;
 - allowlist/denylist de release.
+# 2026-05-18 - Kimi WebBridge Setup Guide v0.1
+
+| Risk | Status | Mitigation | Gate |
+| --- | --- | --- | --- |
+| Kimi setup guide used as implicit live-send approval | Controlled | Guide states no live call this run; future smoke requires double opt-in, local URL and public synthetic payload | KimiSendGate=BLOCK_THIS_RUN_NO_LIVE_CALL |
+| BrowserBridge status leaks private route or credential value | Controlled | Endpoint returns summarized state only; focal scans pass; URL value remains redacted/absent | CloudLLMGate=BLOCK_PRIVATE_WORKSPACE |
+| Council/proposal path auto-applies external content | Controlled | Status and UI keep `PROPOSAL_ONLY_NO_APPLY`; tests verify no live attempts | PublicationGate=BLOCK |
+| UI enables send/apply/workspace transfer without gates | Controlled | Send/apply/workspace buttons disabled and tested | BrowserBridgeGate=APPROVE_LOCAL_STATUS_AND_SETUP_DOCS |
+
+## 2026-05-18 - Agent Chat Persistence/Search v0.3
+
+- StateFingerprint: AGENT-CHAT-PERSISTENCE-SEARCH-v0-3-20260518.
+- Agent Chat now has append-only persistent JSONL storage, hash-chain verification, local keyword search, filters, thread reconstruction and internal JSONL/Markdown export.
+- Search/export/reconstruction do not execute tasks; draft creation still routes through TaskSpec/Workpack flows and execution remains behind GhostGate, rollback and WitnessLog.
+- UI exposes Agent Chat Search with filters, hash-chain status, results and thread panel.
+- Gates preserved: CloudLiveGate BLOCK_THIS_RUN, Kimi not run, NVIDIA DO_NOT_CALL, DeepSeek REVIEW_QUOTA_OR_BILLING, PublicationGate BLOCK.
+- Evidence: qa_artifacts/release_validation/RUN_AGENT_CHAT_PERSISTENCE_SEARCH_v0_3_20260518/.
+- Tests: Agent Chat focal 204 passed; Wabi 309 passed; safe-tests ok witness 40; 02_CLAUDIO 714 passed; GEODIA 74 passed; DUAT predictive 117 passed; compileall PASS; HTTP smoke PASS; SecretScan artifacts PASS; BoundaryScan PASS; ScienceClaimGate PASS.
+- Next: Claudio Mission Control dashboard v0.1 or public-safe Agent Chat architecture docs.

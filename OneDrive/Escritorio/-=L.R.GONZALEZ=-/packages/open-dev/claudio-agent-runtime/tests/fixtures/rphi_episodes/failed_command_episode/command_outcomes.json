@@ -1,0 +1,18 @@
+{
+  "commands": [
+    {
+      "event_id": "evt-failed-command-001",
+      "command": "python -m pytest tests/synthetic_failure -q",
+      "status": "failed",
+      "actiongate": "APPROVE",
+      "evidence": "failure log"
+    },
+    {
+      "event_id": "evt-failed-command-002",
+      "command": "python tools/local_recheck.py",
+      "status": "failed",
+      "actiongate": "REVIEW",
+      "evidence": "failure repeated"
+    }
+  ]
+}

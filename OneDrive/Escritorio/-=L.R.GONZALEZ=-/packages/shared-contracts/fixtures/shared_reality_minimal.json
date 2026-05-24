@@ -1,0 +1,11 @@
+{
+  "schema_version": "medioevo.shared_reality.v0.1",
+  "reality_id": "shared-reality-001",
+  "tick": 0,
+  "fused_observations": [{ "observation_id": "obs-visual-001", "weight": 0.86 }],
+  "confidence_field": { "chunk-0-0": 0.82 },
+  "unresolved_contradictions": [],
+  "canonical_state_estimate": { "light_reaches_tile": true },
+  "boundary": { "publication_gate": "BLOCK", "contains_private_data": false, "public_safe": true }
+}
+

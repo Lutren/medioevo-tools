@@ -1,0 +1,16 @@
+{
+  "schema_version": "claudio.task_board.v0.1",
+  "tasks": [
+    {
+      "id": "ep_rollback_success_001",
+      "title": "Synthetic reversible write restored",
+      "status": "completed",
+      "priority": "P1",
+      "owner": "rphi-calibration",
+      "evidence": [
+        "runtime/rollback/rollback-success-001/manifest.json"
+      ],
+      "handoff_created": true
+    }
+  ]
+}

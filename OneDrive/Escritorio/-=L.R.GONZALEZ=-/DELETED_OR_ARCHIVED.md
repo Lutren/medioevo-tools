@@ -85,6 +85,29 @@ Gate details:
 - Cleanup tool was corrected so `tools\release\__pycache__` is cleanable while
   product `release/` and `releases/` directories remain excluded.
 
+## SETO Solo-Agent Regenerable Cache Cleanup 2026-05-07
+
+Deleted generated local cache directories only. The pass ran after the user
+declared there was no concurrent agent and requested workspace ordering. No
+source files, releases, ZIPs, private assets, Git history, env folders, vendor
+folders, node modules or unique research sources were removed.
+
+| date | count | bytes | scope | evidence |
+|---|---:|---:|---|---|
+| 2026-05-07 | 92 cache directories / 858 files | 13,220,064 | allowlisted `__pycache__`, `.pytest_cache`, `.ruff_cache`, `.mypy_cache`, `.test_research`, `.test_research_storage`, `.test_session_storage`, `.test_sessions` under the workspace root | `qa_artifacts\release_validation\seto-cache-cleanup-dry-run-2026-05-07-solo-agent.json`; `qa_artifacts\release_validation\seto-cache-cleanup-result-2026-05-07-solo-agent.json` |
+| 2026-05-07 | 1 self-cache directory / 1 file | 15,176 | regenerated `tools\release\__pycache__` from cleanup validation; removed with `PYTHONDONTWRITEBYTECODE=1` | `qa_artifacts\release_validation\seto-cache-cleanup-post-validation-2026-05-07-solo-agent.json`; `qa_artifacts\release_validation\seto-cache-cleanup-self-cache-final-result-2026-05-07-solo-agent.json` |
+| 2026-05-07 | 0 final cache directories / 0 files | 0 | final residue check | `qa_artifacts\release_validation\seto-cache-cleanup-final-validation-2026-05-07-solo-agent.json` |
+| 2026-05-07 | 0 post-test cache directories / 0 files | 0 | residue check after Wabi test verification | `qa_artifacts\release_validation\seto-cache-cleanup-after-tests-validation-2026-05-07-solo-agent.json` |
+| 2026-05-07 | 0 final-session cache directories / 0 files | 0 | last residue check before handoff | `qa_artifacts\release_validation\seto-cache-cleanup-final-session-validation-2026-05-07-solo-agent.json` |
+
+Gate details:
+
+- ActionGate: `APPROVE`.
+- Blocked count: `0`.
+- Errors: `0`.
+- Git cache-delete safety check returned no tracked cache deletions.
+- Detailed report: `docs\intake\SETO_SOLO_AGENT_CLEANUP_PASS_2026-05-07.md`.
+
 ## Curador SETO Downloads Exact Duplicate Cleanup 2026-05-05
 
 Deleted only exact duplicate files under Downloads. Unique material was preserved.
@@ -444,6 +467,16 @@ Lobby sources were read completely, mapped to Atlas lanes, connected to existing
 |---|---:|---:|---:|---:|---|
 | 2026-05-06 | 17 | 6827 | 16 | 0 | `docs\intake\lobby_alejandria_full_absorption_2026-05-06_MANIFEST.json`; `docs\intake\lobby_alejandria_full_absorption_2026-05-06_RETIREMENTS.md` |
 
+## Curador SETO Lobby de Alejandria Escaner Sigiloso 2026-05-06
+
+| fecha | leidos | lineas | archivados | borrados | evidencia |
+|---|---:|---:|---:|---:|---|
+| 2026-05-06 | 2 | 74 | 1 | 0 | `docs\intake\lobby_alejandria_escaner_sigiloso_2026-05-06_MANIFEST.json`; `docs\intake\lobby_alejandria_escaner_sigiloso_2026-05-06_RETIREMENTS.md`; `docs\intake\LOBBY_ALEJANDRIA_LATEST_2026-05-06.md` |
+
+| accion | original | sha256 | destino | estado |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\OneDrive\Escritorio\Lobby de Alejandria\escaner sigiloso.txt` | `0C7CDDAA915D42C43D2303583A3E0B737BEEB53A54F574EE382AEFFD371E3D4E` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\lobby_alejandria\2026-05-06\20_curaduria_seto\0C7CDDAA915D42C4_escaner-sigiloso.txt` | `ABSORBIDO_ARCHIVO_FRIO / NETWORK_OBSERVER_BLOCK` |
+
 ## Curador SETO Downloads Atlas Absorption 2026-05-06
 
 Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
@@ -468,3 +501,858 @@ Sources were absorbed into the Atlas before retirement. Unique material was move
 |---|---|---|---|---|
 | `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\osit_observer_kernel.py` | `8016127A31A8E33035524B8091F88FE585534A1EF43EB5A28C8D69738BF35104` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-06\8016127A31A8E330_osit_observer_kernel.py` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
 | `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\README_OSIT_OBSERVER.md` | `55A7E980BDBD5B3E254A6992E7DD96B006B82A00042F5DCC6E9FCD17B64CFD3C` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-06\55A7E980BDBD5B3E_readme_osit_observer.md` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## SETO Global Regenerable Cache Cleanup 2026-05-06
+
+Deleted only approved regenerable cache directories after dry-run and boundary
+fix. No source files, releases, ZIPs, EXEs, envs, secrets, private game/TCG
+material, models, vendor/offensive repos or external targets were deleted.
+
+| date | directories | files | bytes | evidence |
+|---|---:|---:|---:|---|
+| 2026-05-06 | 300 | 2,093 | 33,453,397 | `docs\intake\SETO_GLOBAL_CLEANUP_PASS_2026-05-06.md`; `qa_artifacts\release_validation\seto-cache-cleanup-result-2026-05-06-global.json`; `qa_artifacts\release_validation\seto-cache-cleanup-final-result-2026-05-06-global.json`; `qa_artifacts\release_validation\seto-cache-cleanup-final-result-2-2026-05-06-global.json` |
+
+Operational cleanup:
+
+- Stopped 21 targeted Claudio background server/watchdog processes that were
+  regenerating cache residue.
+- Stopped 8 exact stray pytest/window processes that appeared during final
+  validation.
+- Left Codex/node processes for the current agent session running.
+- Removed final `tools\release\__pycache__`; `Test-Path` returned `False`.
+
+## Curador SETO Downloads Atlas Absorption 2026-05-06
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-06 | 1 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-06.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\ReplitExport-lutren (1).tar.gz` | `CCAC616E3076026284B3E3B5AD25E331FB66340D4ED992831AD5D8059E9AABE2` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-06\CCAC616E30760262_replitexport-lutren-1-.tar.gz` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-06
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-06 | 9 | 2 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-06.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\MEDIOEVO_CANON_AUTHORITY_MAP_v0_1.md` | `A11089A404F25B52FB43E0E2042F277C44A8712A45DE3655F274379B34F31A57` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-06\A11089A404F25B52_medioevo_canon_authority_map_v0_1.md` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\MEDIOEVO_CLAIMS_REGISTER_v0_2.csv` | `D9E36948FDAAE2F029B46774521D31EE413DC09F915D9F0B3C7E3C8AC939C04E` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-06\D9E36948FDAAE2F0_medioevo_claims_register_v0_2.csv` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\MEDIOEVO_CLAIMS_REGISTER_v0_2.md` | `2B5ECD850CA74D18D3FCE91422185CB88A2B0D3C86A87BFF3D20E2A9C2313504` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-06\2B5ECD850CA74D18_medioevo_claims_register_v0_2.md` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\MEDIOEVO_DOCUMENT_INVENTORY_v0_1.md` | `A3A70D7A70F1DDB62BC8E329CAFCEFC64A6367CBFC4F0B364DB9C3E84FF35023` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-06\A3A70D7A70F1DDB6_medioevo_document_inventory_v0_1.md` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\MEDIOEVO_LINE_AUDIT_v0_1.jsonl` | `D841A3B5B59329B23832259640975C5607935A97036B4CF72AF14F2D7761C8C4` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-06\D841A3B5B59329B2_medioevo_line_audit_v0_1.jsonl` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\MEDIOEVO_PUBLICATION_GATES_v0_1.md` | `74346C9A53832D59B525977FCF19ACFED63F04C1DC6E00F9897707FFA13F684E` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-06\74346C9A53832D59_medioevo_publication_gates_v0_1.md` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\MEDIOEVO_SIGMA_OBSERVER_PROFILE.example_v0_1.json` | `47C33E4EBBC4A96B1725A9F0D8611C94887359F34E405A5ED59FCA24345A503E` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-06\47C33E4EBBC4A96B_medioevo_sigma_observer_profile.example_v0_1.json` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\MEDIOEVO_SIGMA_OBSERVER_PROFILE.schema_v0_1.json` | `75C2C751CD1B5B4A1A07EE4424593D970F6B18A0971173E53F78968C7A7BFD7D` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-06\75C2C751CD1B5B4A_medioevo_sigma_observer_profile.schema_v0_1.json` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\MEDIOEVO_SIGMA_TEMPORAL_MODULE_v0_1.md` | `A396363DDB762B0CE6987E20197C4F8841E42658EB123890702E2239D1751206` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-06\A396363DDB762B0C_medioevo_sigma_temporal_module_v0_1.md` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `BORRADO` | `C:\Users\L-Tyr\Downloads\MEDIOEVO_PUBLICATION_GATES_v0_1 (1).md` | `74346C9A53832D59B525977FCF19ACFED63F04C1DC6E00F9897707FFA13F684E` | `C:\Users\L-Tyr\Downloads\MEDIOEVO_PUBLICATION_GATES_v0_1.md` | `exact duplicate in Downloads with generated ficha and canonical copy` |
+| `BORRADO` | `C:\Users\L-Tyr\Downloads\MEDIOEVO_CANON_AUTHORITY_MAP_v0_1 (1).md` | `A11089A404F25B52FB43E0E2042F277C44A8712A45DE3655F274379B34F31A57` | `C:\Users\L-Tyr\Downloads\MEDIOEVO_CANON_AUTHORITY_MAP_v0_1.md` | `exact duplicate in Downloads with generated ficha and canonical copy` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-06
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-06 | 6 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-06.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\DERIVATION_CHECKLIST_v0_1.md` | `17C5E3EFAB1AB348E8A82499F2CBB170994A18DA902346AC18032D08A3C04B52` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-06\17C5E3EFAB1AB348_derivation_checklist_v0_1.md` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\HANDOFF_PHYSICS_v0_1.md` | `0A2F1A2B703140571B870A0D328DE6BB03319E8B6C79F40E2E2ABE9A9236F45B` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-06\0A2F1A2B70314057_handoff_physics_v0_1.md` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\OSIT_QG_CORE_REWRITE_v0_1.md` | `8FC22438C5EF175D7024DD03054C65B69083A6533E7FBA94F4CABAD2A06D87E8` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-06\8FC22438C5EF175D_osit_qg_core_rewrite_v0_1.md` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\PAPER_OUTLINE_OSIT_QG_EFT_v0_1.md` | `9BDD9700D61904E8CD6FAC5ED8BB80016741F7CEE26933CD9AE5D8B730E1A4CB` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-06\9BDD9700D61904E8_paper_outline_osit_qg_eft_v0_1.md` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\PHYSICS_CLAIMS_REGISTER_v0_1.md` | `5A5326EB15B347FFD363216188F69558B34A63C11C2A8F64F215BF63A5C1FFC1` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-06\5A5326EB15B347FF_physics_claims_register_v0_1.md` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\PHYSICS_FALSIFIERS_v0_1.md` | `9685EAC6A84799D8FB7BBC7935C15BFCBE0B98EACCC02E9B8F3E27AD31BF86AF` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-06\9685EAC6A84799D8_physics_falsifiers_v0_1.md` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-07
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-07 | 1 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-07.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\MEDIOEVO_CLAIMS_REGISTER_v0_2.csv` | `D9E36948FDAAE2F029B46774521D31EE413DC09F915D9F0B3C7E3C8AC939C04E` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-07\D9E36948FDAAE2F0_medioevo_claims_register_v0_2.csv` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-07
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-07 | 11 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-07.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\00_README_MASTER.md` | `691F2D9FA01E6B0565B366C821B203E7B6005A544F6D376ECE8FAC29EFE5BDFA` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-07\691F2D9FA01E6B05_00_readme_master.md` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\01_MAPA_GENERAL.md` | `1159DF5043B759D088248F47A3749E5FE39566DA15D1BFEC9DBE66AD3411E143` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-07\1159DF5043B759D0_01_mapa_general.md` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\02_GLOSARIO_CANONICO.md` | `5A7DE43B01DB13C6571B195AB75FBEDCFFD0E19240A14EE682701A6304C3F86E` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-07\5A7DE43B01DB13C6_02_glosario_canonico.md` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\03_TEORIA_INFORMACION.md` | `79DBB8202E0B2E6D3A177620E2F09F13D4169BD85CC5D7EF38007B5881E69E17` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-07\79DBB8202E0B2E6D_03_teoria_informacion.md` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\04_TEORIA_IA_AGENTES.md` | `B21EDA2148F81248DAEFB31F02998BD6675F041D0C3DDE959E76CCC5B72844DB` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-07\B21EDA2148F81248_04_teoria_ia_agentes.md` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\05_TEORIA_FISICA_REAL.md` | `7D8BD2440D8976D0915BD25AD9A4780C4A8BF91423F68852F68E90EA9293C8E2` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-07\7D8BD2440D8976D0_05_teoria_fisica_real.md` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\06_HIPOTESIS_FISICAS_OSIT_TUIP_SIGMA.md` | `10C3095ABEBFA8C163D6DF16C6A949C1D4F8805E6291ABBF53C14ED7AB3B4F25` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-07\10C3095ABEBFA8C1_06_hipotesis_fisicas_osit_tuip_sigma.md` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\07_OBSERVACIONISMO.md` | `12A0653024016AEEE9ECB7B47EF756927F16DEB8FEA5B353A084EC1E11A46DBC` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-07\12A0653024016AEE_07_observacionismo.md` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\08_OBSERVACIONISMO_INVERSO.md` | `CF9D1E45E3C16471067FD2102ED4D4AA003188A817030FC139A23750F22D8BC8` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-07\CF9D1E45E3C16471_08_observacionismo_inverso.md` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\09_INGENIERIA_OBSERVACIONISTA.md` | `24714EAE0A97F89ED9F7E97E22FB24C5862092A9EDAA1C54D827DC32D30490F3` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-07\24714EAE0A97F89E_09_ingenieria_observacionista.md` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\10_WABI_SABI_CLAUDIO_AGI.md` | `C9312402FAC54A92CB3B103961A2460D3BB834CA118BCCD33242D6C764FC12B4` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-07\C9312402FAC54A92_10_wabi_sabi_claudio_agi.md` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-07
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-07 | 1 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-07.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\kimi_3.0.5.exe` | `DA6193EC73032DE366CACA3F2239570B8769AC0054D9F3EDAB3F670C52108E58` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-07\DA6193EC73032DE3_kimi_3.0.5.exe` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-08
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-08 | 1 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-08.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\medioevo_prompt_compression_experiment_bundle.zip` | `E2BC987C24F7D46706481033EDA3C5981241854EF2675CFEAD3770890817727C` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-08\E2BC987C24F7D467_medioevo_prompt_compression_experiment_bundle.zip` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-08
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-08 | 1 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-08.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\motor_medioevo_v22.py` | `395E51905F7CC862F127ED7B51409E28F3872C1F94D3FC243DCD83A2DC46C882` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-08\395E51905F7CC862_motor_medioevo_v22.py` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-08
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-08 | 1 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-08.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\MEDIOEVO_LOCAL_CORE_v3_DOCS.md` | `25408162325A39E502240F992AA683FCC202AC5D09211DE90B5879E4A1F3E3B0` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-08\25408162325A39E5_medioevo_local_core_v3_docs.md` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-09
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-09 | 1 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-09.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\De la Gestión a la Emergencia_ Cierre de Brechas Críticas para la AGI en el Marco MEDIOEVO OSIT.md` | `EFCB79DE47847BA1287B5BECA99901285E99E43EF10756B0A22590136BD73F24` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-09\EFCB79DE47847BA1_de-la-gestin-a-la-emergencia_-cierre-de-brechas-crticas-.md` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-10
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-10 | 1 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-10.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\VALIDATION_REPORT_NODE_UI (1).md` | `1D183B6313E549D8E0BAEFBA1E2FF3134A4AFA11E70DB0CCD18347F4A1C6C15E` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-10\1D183B6313E549D8_validation_report_node_ui-1.md` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-10
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-10 | 1 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-10.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\observacionist_solution.py` | `DA80716BF433D92C7C0C092A647C4E09C5D0126CC321ACC22E949BE34D9FE595` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-10\DA80716BF433D92C_observacionist_solution.py` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-10
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-10 | 1 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-10.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\MEDIOEVO_OSIT_RESUELTO_v10 (1).zip` | `6B382EA95DA8EC3D064870699F6B5485052F572E5021BAF0C8014633E21CED95` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-10\6B382EA95DA8EC3D_medioevo_osit_resuelto_v10-1.zip` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-10
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-10 | 1 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-10.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\MEDIOEVO_OSIT_AGI_v9.3_CALIBRATED.zip` | `2B4EFF80010C4A9F72560403E9BA266FD433E61EB2EAF070855AAEFB827FE23A` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-10\2B4EFF80010C4A9F_medioevo_osit_agi_v9.3_calibrated.zip` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-10
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-10 | 1 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-10.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\lovable-project-15e48d05-7be7-4ec9-ab77-5af7c665fb3c-2026-05-10.zip` | `A23266C1E548ABA7E5D636DD73FCCF3157F33905F8B85E97703E079D1DC65284` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-10\A23266C1E548ABA7_lovable-project-15e48d05-7be7-4ec9-ab77-5af7c665fb3c-202.zip` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-10
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-10 | 1 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-10.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\MEDIOEVO_OSIT_MASTER_CANON_v11_2_COMPLETE.zip` | `C7EC5FCF54C0D23767FF9941461FC5E7FD7463D72C7D4F194BFB6A815E3D9DD2` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-10\C7EC5FCF54C0D237_medioevo_osit_master_canon_v11_2_complete.zip` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-10
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-10 | 1 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-10.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\files.zip` | `A3BA3751EAE90BE8E0B902399B044EB28DE13EF122CC9217CB4B1571B495D6DC` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-10\A3BA3751EAE90BE8_files.zip` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-11
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-11 | 6 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-11.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\MEDIOEVO_OSIT_MASTER_CANON_v12_0_1_FINAL.zip` | `884952A2E3FE1BA742E26AAF3D750F96081D827697D83E8AFE38E118F56E6D99` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-11\884952A2E3FE1BA7_medioevo_osit_master_canon_v12_0_1_final.zip` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\MEDIOEVO_V12_FINAL_AUDIT_AND_VERSION.md` | `CABF64A6DC45C4AD1B7EFDA21280383C75A10F58FD6627DAAEB68904702B9988` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-11\CABF64A6DC45C4AD_medioevo_v12_final_audit_and_version.md` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\MEDIOEVO_V12_FINAL_AUDIT_PROMPT_MANIFEST.json` | `DD80C27AF0FACC790B04B78F3FBD80D52537137E9199E29104E034064985BAE5` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-11\DD80C27AF0FACC79_medioevo_v12_final_audit_prompt_manifest.json` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\MEDIOEVO_V12_FINAL_AUDIT_PROMPT_PACKAGE.zip` | `DBC48E21C72F64C60FCC12B6DB47DC602A2E141A6DE1289ACE26DD74033A4180` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-11\DBC48E21C72F64C6_medioevo_v12_final_audit_prompt_package.zip` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\PROMPT_CODEX_MEDIOEVO_V12_0_1_FINAL.md` | `534EF2B1A23F3096AACEF39BC0F88D5CA0D12F6AB6B87803FFF6AA4694B6DCCE` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-11\534EF2B1A23F3096_prompt_codex_medioevo_v12_0_1_final.md` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\PROMPT_CODEX_MEDIOEVO_V12_0_1_FINAL_FULL_PACKAGE.md` | `EE9F16E062CFD8BC47643DA132286BE1E70F9AD90DB1C1F3C1474E7C0575B4CB` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-11\EE9F16E062CFD8BC_prompt_codex_medioevo_v12_0_1_final_full_package.md` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-11
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-11 | 1 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-11.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\lovable-project-b8fad30e-4e58-4734-a54a-fb4c7a97d21b-2026-05-11 (1).zip` | `0CDFD1409E2F75822EAA5A8ED7173903CD9BD7A106BAE6F8A45583051EC82B66` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-11\0CDFD1409E2F7582_lovable-project-b8fad30e-4e58-4734-a54a-fb4c7a97d21b-202.zip` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-11
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-11 | 1 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-11.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\lovable-project-b8fad30e-4e58-4734-a54a-fb4c7a97d21b-2026-05-11.zip` | `34D148AA692749898FC6E6A031A3869CB4B0F65C94E69C7EB14121875A195600` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-11\34D148AA69274989_lovable-project-b8fad30e-4e58-4734-a54a-fb4c7a97d21b-202.zip` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-11
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-11 | 0 | 1 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-11.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `BORRADO` | `C:\Users\L-Tyr\Downloads\Unconfirmed 315930.crdownload` | `06B0A47C8C02E524D63C952CDD96A9883EA47E6A1B7985BD630F372942105015` | `regenerable_os_cache` | `regenerable local trash with ficha and hash` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-11
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-11 | 1 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-11.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\Codex Installer.exe` | `426F31457ECAAD88CC677DF967222BE37149305BB6185C8C7CB55CB6267C536E` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-11\426F31457ECAAD88_codex-installer.exe` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-12
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-12 | 2 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-12.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\MEDIOEVO_OSIT_v12_2_2_RECONSTRUIDA_NO_OMITIR_PART_01_CANON_RUNTIME.zip` | `6260C1A1F77261D537C5EC193F09206BD22102440F76AE19BE1ED8A23790EFD0` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-12\6260C1A1F77261D5_medioevo_osit_v12_2_2_reconstruida_no_omitir_part_01_can.zip` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\MEDIOEVO_OSIT_v12_2_2_RECONSTRUIDA_NO_OMITIR_PART_03C_SOURCE_DOCS_IMAGES.zip` | `5C657A66255C38C73CB822E2031C11C4B66961F9CA1420EB4FE7D8B815E8CCE9` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-12\5C657A66255C38C7_medioevo_osit_v12_2_2_reconstruida_no_omitir_part_03c_so.zip` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-12
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-12 | 0 | 2 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-12.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `BORRADO` | `C:\Users\L-Tyr\Downloads\Unconfirmed 206631.crdownload` | `2EB350F4467E6F8435EFCF6F9FF772AE8DFE7C1334DCCF2C28CA246FDE05DBAF` | `regenerable_os_cache` | `regenerable local trash with ficha and hash` |
+| `BORRADO` | `C:\Users\L-Tyr\Downloads\Unconfirmed 582375.crdownload` | `92F7012FB65510EABA8B2254E32EABB24B49670EABC63D34732752690074882E` | `regenerable_os_cache` | `regenerable local trash with ficha and hash` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-12
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-12 | 1 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-12.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\MEDIOEVO_OSIT_v12_2_4_MASTER_UNIFIED.zip` | `E0D6182E8391AD2AFC2CF0FDE5051160C5E67A131D5B7F12799FACEA8DAD2561` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-12\E0D6182E8391AD2A_medioevo_osit_v12_2_4_master_unified.zip` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-12
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-12 | 4 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-12.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\MEDIOEVO_OSIT_v12_2_5_MASTER_NO_OMITIR.zip.part000` | `17BBDC5C20C5075EBD53C6AE4BA538937223321E98658E2EB226672BDD6A544F` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-12\17BBDC5C20C5075E_medioevo_osit_v12_2_5_master_no_omitir.zip.part000` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\MEDIOEVO_OSIT_v12_2_5_MASTER_NO_OMITIR.zip.part002` | `2725E1B43F3B4A22D470E3133C0697940642960DC2FE57948FE1F4B8E988D09D` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-12\2725E1B43F3B4A22_medioevo_osit_v12_2_5_master_no_omitir.zip.part002` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\MEDIOEVO_OSIT_v12_2_5_MASTER_NO_OMITIR.zip.part003` | `8001A60A6F3C30D578A4E10E19BEDB858CD964428F560B941741E475175E47E4` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-12\8001A60A6F3C30D5_medioevo_osit_v12_2_5_master_no_omitir.zip.part003` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\MEDIOEVO_OSIT_v12_2_5_MASTER_NO_OMITIR.zip.part010` | `B0FC84CB0EF4D636F649BC0FFED5EF75C4E33ACE3CC0A27C4300CDDD01A67822` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-12\B0FC84CB0EF4D636_medioevo_osit_v12_2_5_master_no_omitir.zip.part010` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-12
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-12 | 2 | 1 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-12.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\MEDIOEVO_OSIT_v12_2_5_MASTER_NO_OMITIR.zip.part021` | `FD5CCAAFD7B39B84DE227A11EFBE36B140863BD7AFA1BD855161865DF287859A` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-12\FD5CCAAFD7B39B84_medioevo_osit_v12_2_5_master_no_omitir.zip.part021` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\MEDIOEVO_OSIT_v12_2_5_MASTER_NO_OMITIR.zip.part022` | `AF6BDE0DA4D8646E025CD989723A460432D42CD4E2A300BB8FE9BD6D761BF647` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-12\AF6BDE0DA4D8646E_medioevo_osit_v12_2_5_master_no_omitir.zip.part022` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `BORRADO` | `C:\Users\L-Tyr\Downloads\Unconfirmed 183512.crdownload` | `250781FB5DC82B33FC3B50DBE6296061CD28F31DB518C103F1001F2266F9267F` | `regenerable_os_cache` | `regenerable local trash with ficha and hash` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-12
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-12 | 1 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-12.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\MEDIOEVO_OSIT_v12_2_5_MASTER_NO_OMITIR.zip.part007` | `E6ABE075FA2E9AB742F1CA2093CF99165A6DD600D0E3B5B739CA38E56E1FB60D` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-12\E6ABE075FA2E9AB7_medioevo_osit_v12_2_5_master_no_omitir.zip.part007` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-12
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-12 | 2 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-12.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\Handoff_completo.mp4` | `9DF66891990C23912B884AFE6C5B415E662D22263754C746590E85355FC1FACE` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-12\9DF66891990C2391_handoff_completo.mp4` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\Residue_at_Eight.mp4` | `C64849B53F09E936CB4B68D14ED286375CAE3CFE5263FC47843304D73FD72AA6` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-12\C64849B53F09E936_residue_at_eight.mp4` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## BRAIN_OS visible-version consolidation 2026-05-13
+
+No ZIP package was deleted. Old/root-visible versions were moved to archive review so BRAIN_OS root keeps one active visible set.
+
+| date | archived/moved | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-13 | 9 files / 2995.57 MB | 0 ZIPs | `MIGRATION_MAP.md`; `-= BRAIN_OS =-\00_START_HERE\WORKSPACE_AUDIT\ZIP_REVIEW_RUN2.md` |
+
+| status | original path pattern | archive/canonical path | reason |
+|---|---|---|---|
+| `MOVED_ARCHIVE_REVIEW` | `-= BRAIN_OS =-\*__previous_*.zip` | `-= BRAIN_OS =-\09_ARCHIVE_REVIEW\ZIP_BACKUPS_EXPIRING\...` | old visible package versions, keep rollback |
+| `MOVED_ARCHIVE_REVIEW` | `-= BRAIN_OS =-\MEDIOEVO_OSIT_v12_2_5_MASTER_NO_OMITIR_RESTORED__*.zip` | `-= BRAIN_OS =-\09_ARCHIVE_REVIEW\ZIP_BACKUPS_EXPIRING\...` | superseded by v12_2_6 active root ZIPs |
+| `MOVED_ARCHIVE_REVIEW` | `-= BRAIN_OS =-\medioevo_visibility_publication_kit.zip` | `-= BRAIN_OS =-\09_ARCHIVE_REVIEW\ZIP_BACKUPS_EXPIRING\medioevo_visibility_publication_kit.zip` | superseded by `medioevo_visibility_publication_kit_v2.zip` |
+
+## Regenerable cache cleanup 2026-05-13
+
+Only approved cache directories were deleted after containment checks.
+
+| root | deleted dirs | deleted files | deleted bytes | evidence |
+|---|---:|---:|---:|---|
+| `-=L.R.GONZALEZ=-` | 31 | recorded in JSON | 3924194 | `qa_artifacts\release_validation\seto-cache-cleanup-result-2026-05-13.json` |
+| `-= BRAIN_OS =-` | 47 | 223 | 1112819 | containment-checked PowerShell output |
+
+## BRAIN_OS human root cleanup 2026-05-13
+
+No files were deleted in this pass. Non-human root files were moved into existing BRAIN_OS lanes so the BRAIN_OS root remains human-useful.
+
+| date | moved | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-13 | 22 files / 1009.124 MB | 0 | `MIGRATION_MAP.md`; `-= BRAIN_OS =-\00_START_HERE\WORKSPACE_AUDIT\TOOLS_AND_SHORTCUTS.md` |
+
+| status | original surface | destination class | reason |
+|---|---|---|---|
+| `MOVED_EXISTING_LANE` | BRAIN_OS root handoff/code patch files | `05_HANDOFF`, `08_QA_WITNESSLOG`, `09_EXPORTS_RELEASES`, `prompts`, `02_TOOLS_AND_APPS` | not human-facing daily files |
+| `MOVED_PROTECTED` | Desktop loose books/lore ZIPs | `-= BRAIN_OS =-\06_BOOKS_RPG_PROTECTED\books` | books/lore payloads should not sit on visible Desktop |
+| `MOVED_ARCHIVE_REVIEW` | Desktop `MEDIOEVO_OSIT_v12_2_5_MASTER_NO_OMITIR.zip` | `-= BRAIN_OS =-\09_ARCHIVE_REVIEW\DESKTOP_ROOT_INTAKE_20260513` | superseded package residue, kept for review |
+
+Current BRAIN_OS root verification:
+
+- `RootFileCount=16`
+- `DesiredCount=16`
+- `MissingDesired=0`
+- `UnexpectedRootFiles=0`
+
+## Curador SETO Downloads Atlas Absorption 2026-05-13
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-13 | 2 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-13.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\CODEX_PROMPT_ASIMOV_OSIT_COGPROG_v1 (1).md` | `73AECCE9D7A249EB1229908953DDF775862CC8E1049C839BF70F92E5F8B38ECD` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-13\73AECCE9D7A249EB_codex_prompt_asimov_osit_cogprog_v1-1.md` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\patch_asimov_osit_cogprog_v1 (1).py` | `41E5C434FDC08E5CCAA66986837F6D9B50DF2522FB3C472AFB65086C2B19200C` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-13\41E5C434FDC08E5C_patch_asimov_osit_cogprog_v1-1.py` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-14
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-14 | 1 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-14.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\files.zip` | `CF111806BCE15F146E6E3C061C9BA520B82DA0D3E16600D311223FDD04999098` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-14\CF111806BCE15F14_files.zip` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-14
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-14 | 1 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-14.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\lovable-project-e5b2c561-8209-4ac6-8e3a-b06ab4dbb983-2026-05-14.zip` | `9F7C6BE0954794EE69A0D517DA7B6A6CDE4713B193FE6DFF8F9C4F7512D1C5BB` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-14\9F7C6BE0954794EE_lovable-project-e5b2c561-8209-4ac6-8e3a-b06ab4dbb983-202.zip` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-14
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-14 | 1 | 1 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-14.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\medioevo-gm-lite-private-mvp.zip` | `0421D51E6C1EB76E7F060A589169DC8E42E7B22336F63C5E38B79D74D0CEF57C` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-14\0421D51E6C1EB76E_medioevo-gm-lite-private-mvp.zip` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `BORRADO` | `C:\Users\L-Tyr\Downloads\medioevo-gm-lite-private-mvp (1).zip` | `0421D51E6C1EB76E7F060A589169DC8E42E7B22336F63C5E38B79D74D0CEF57C` | `C:\Users\L-Tyr\Downloads\medioevo-gm-lite-private-mvp.zip` | `exact duplicate in Downloads with generated ficha and canonical copy` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-14
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-14 | 1 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-14.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\medioevo-campaign-save-2026-05-14.json` | `857A189895E86020AAE4F8F4113529D7316BA057D783D9A721EB2276291B5FEA` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-14\857A189895E86020_medioevo-campaign-save-2026-05-14.json` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-14
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-14 | 9 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-14.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\download (1).jpg` | `49E2080B950729AE77579AB1D3A9E9FF9D5AEF5BFDF968906A26268D5306846A` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-14\49E2080B950729AE_download-1.jpg` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\download (2).jpg` | `2BD6C10232C22F76221C48437E41BF90E27979D910A11FBDB996F4F482F91D16` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-14\2BD6C10232C22F76_download-2.jpg` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\download (3).jpg` | `8A7AD58DD96D63EF3D9FB5A1514F05A5B8D0286EE24056F2FCC9A3A7F1CDB95E` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-14\8A7AD58DD96D63EF_download-3.jpg` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\download.jpg` | `09E8D3D771B1F89FA1D5578907F85B33B0D4A865BB87949DF21DEE31EB795A3A` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-14\09E8D3D771B1F89F_download.jpg` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\images (1).jpg` | `20952343A5451EC858F993A1EFDE322407F2A255D775FE035AA5919C1ED8C8C5` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-14\20952343A5451EC8_images-1.jpg` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\images.jpg` | `A1FB0329ACA35E1A68B069A829E8AB828FC1D8C7564E566D7472739AE842C5CB` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-14\A1FB0329ACA35E1A_images.jpg` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\imgres.htm` | `9E67638362187296984C351EBAABDCA17372FFDA1F7BDBDCABBCE44D116BCBD9` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-14\9E67638362187296_imgres.htm` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\medioevo-gm-accessible-isometric-v0_3.zip` | `5C9C469B34DAFDBFD15C1622CE8D6C5B0E03D9D98FDC60B62381F41ABAD53426` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-14\5C9C469B34DAFDBF_medioevo-gm-accessible-isometric-v0_3.zip` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\medioevo-gm-saas-assets-v0_1.zip` | `8D2EB4E7A7EF2FD7D7CA8D058DD180F7183E950D78977ECD4EC9EAB9DAEC56CF` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-14\8D2EB4E7A7EF2FD7_medioevo-gm-saas-assets-v0_1.zip` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-14
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-14 | 1 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-14.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\project-bolt-sb1-yvfmocrc.zip` | `F5879D94B35E20B2B807801BB0244A4F0E4E757EAFED978CE5DBF0078C2A6983` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-14\F5879D94B35E20B2_project-bolt-sb1-yvfmocrc.zip` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-14
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-14 | 2 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-14.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\client_ready_lovable_ui_i18n_assets.zip` | `4E6FD62629D2AC39C54889D68CE4C61B538C080CC684790807699B4347A70DB5` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-14\4E6FD62629D2AC39_client_ready_lovable_ui_i18n_assets.zip` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\CursorUserSetup-x64-3.3.30.exe` | `E2FC32DEA36A261F29029D10DA13AB4A0A7DF8BB17161FEB328FD753CBCD6479` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-14\E2FC32DEA36A261F_cursorusersetup-x64-3.3.30.exe` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-14
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-14 | 1 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-14.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\CursorUserSetup-x64-3.4.17.exe` | `67923D361F1880970482AB1C263742BFE25692DD3CA17506C65DFAA653C661E7` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-14\67923D361F188097_cursorusersetup-x64-3.4.17.exe` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-14
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-14 | 1 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-14.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\project-bolt-sb1-1xako2fw.zip` | `6B88F7BDB092F093FAECF5FB3D5F9BF7723F5E0726A0702FDCB19ACD7A846AFB` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-14\6B88F7BDB092F093_project-bolt-sb1-1xako2fw.zip` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-15
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-15 | 1 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-15.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\medioevo-campaign-save-2026-05-15.json` | `5FF2361D3EE1BE02F62A0481A21F236CABDA3469190647006A458E1604E9CFBF` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-15\5FF2361D3EE1BE02_medioevo-campaign-save-2026-05-15.json` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-15
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-15 | 1 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-15.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\wabisabi_cli_provider_patch_v0_1.zip` | `693A35C7ECCE7BBFFAC5F4C10DD39A870A22F092D84DE85F6644FF93165743F1` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-15\693A35C7ECCE7BBF_wabisabi_cli_provider_patch_v0_1.zip` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-15
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-15 | 1 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-15.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\duat_agent_trading_cards_assets_v0_1.zip` | `FB5DC6605D7B05AAB38ED3B9772D98B3F119FC957FDA446F3B481FADAE13E9D5` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-15\FB5DC6605D7B05AA_duat_agent_trading_cards_assets_v0_1.zip` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Editorial Web Img Visual Dedupe Permanent Delete 2026-05-15
+
+Duplicados borrados por instruccion humana explicita despues de dry-run,
+hashes, rutas resueltas y manifest. La ruta activa
+`apps\editorial_web\img` resuelve a `E:\MEDIOEVO_ASSETS\editorial_web_img`.
+
+| date | archived | deleted | deleted_mb | evidence |
+|---|---:|---:|---:|---|
+| 2026-05-15 | 0 | 661 | 592.94 | `E:\MEDIOEVO_ASSETS\_archive\editorial_web_img_visual_dedupe_20260515-112042\reports\PERMANENT_DELETE_*.json` |
+
+| status | scope | count | reason |
+|---|---|---:|---|
+| `DELETED_PERMANENT` | non-TCG visual duplicates | 331 | exact/near visual duplicates already removed from active base and then permanently deleted |
+| `DELETED_PERMANENT` | map WebP duplicates | 2 | references changed to canonical JPG before deletion |
+| `DELETED_PERMANENT` | non-image duplicate Markdown files | 2 | exact duplicates, world atlas copy retained |
+| `DELETED_PERMANENT` | TCG unused duplicate files | 304 | exact duplicate TCG files not expected by card art resolver |
+| `DELETED_PERMANENT` | TCG alias-backed card JPG duplicates | 21 | `TCG_ART_OVERRIDES` added before deletion |
+| `DELETED_PERMANENT` | new TCG incoming exact duplicate | 1 | `History TC` copy retained at deletion time; duplicate staging copy deleted from `incoming_cards_20260515`; retained Ada Lovelace copy later moved into active inbox |
+
+Moved inside active asset root:
+
+| date | count | bytes | scope | evidence |
+|---|---:|---:|---|---|
+| 2026-05-15 | 10 | 29,512,565 | root PNG card-like assets moved to `img\tcg\incoming_cards_20260515`; no deletion | `E:\MEDIOEVO_ASSETS\_archive\editorial_web_img_visual_dedupe_20260515-112042\reports\ROOT_PNG_TAXONOMY_MOVE_2026-05-15.json` |
+| 2026-05-15 | 20 + 4 renamed | n/a | DUAT agent cards renamed in-place by visible card number/personaje; Ada Lovelace moved from `History TC` into the active inbox | `E:\MEDIOEVO_ASSETS\_archive\editorial_web_img_visual_dedupe_20260515-112042\reports\DUAT_AGENT_CARD_RENAME_LOG_2026-05-15.json`; `DUAT_AGENT_CARD_INCREMENTAL_RENAME_LOG_2026-05-15.json` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-15
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-15 | 0 | 1 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-15.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `BORRADO` | `C:\Users\L-Tyr\Downloads\988e8e85-7e96-4cb7-81f7-3fb8d2873cd8.tmp` | `BD347321AA4B87888664F998D2093DBA674407E5F8A03DA30BAEDAC3953131E3` | `regenerable_os_cache` | `regenerable local trash with ficha and hash` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-15
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-15 | 1 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-15.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\MEDIOEVO_DUAT_CIUDADES_BATCH_011_020_INDIVIDUAL.zip` | `510D57B71F20A4A7DF8CF6BC03337A45E8C9F0F86B80945A524CF44856BC2873` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-15\510D57B71F20A4A7_medioevo_duat_ciudades_batch_011_020_individual.zip` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-15
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-15 | 1 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-15.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\MEDIOEVO_DUAT_CITY_ATLAS_PRODUCTION_PLAN_v0_1.zip` | `2BBA6B92540C61F7F61928F2A81AD6DAB3747FF23861FEE3376830F36EA33E23` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-15\2BBA6B92540C61F7_medioevo_duat_city_atlas_production_plan_v0_1.zip` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-16
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-16 | 0 | 1 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-16.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `BORRADO` | `C:\Users\L-Tyr\Downloads\dee77880-eb75-489d-96e9-a3ac84dc271b.tmp` | `A65CCE89E46C54BA900FEA958F472DC6D8EB5E5667E76A87DC10F3B92C642BB3` | `regenerable_os_cache` | `regenerable local trash with ficha and hash` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-16
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-16 | 2 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-16.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\DUAT_TECH_TRADING_CARDS_BATCH_002.zip` | `26493E9A264DA91D4D4EF04182473918E11938C5CB09F317D505463F1DDD8182` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-16\26493E9A264DA91D_duat_tech_trading_cards_batch_002.zip` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\DUAT_tribes_cultures_batch_003_021_030.md` | `451846C74743710970E22AA47FB83DA805450ED992431F755B3089DB20FBB11D` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-16\451846C747437109_duat_tribes_cultures_batch_003_021_030.md` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-17
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-17 | 2 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-17.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\2deb86a9-7992-4c82-ba1a-386750b4790c.png` | `F16025D04D89B2C3010C02C246E453F19A24BECBC9A47588CB460A64319D4BD2` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-17\F16025D04D89B2C3_2deb86a9-7992-4c82-ba1a-386750b4790c.png` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\e4dbe52b-094a-4b71-9926-a0d45c1017fc.png` | `F424A214F6F8901750EBFB887A95CF1642FE33BEB86808295A08F9F8A8E99534` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-17\F424A214F6F89017_e4dbe52b-094a-4b71-9926-a0d45c1017fc.png` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-19
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-19 | 2 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-19.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\FibMob_EML_v3_radical.png` | `E3E5171BA3BBD2B4B4DA6A10ED37D038690D4F608AB16A6028DD1DCAD107F4D7` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-19\E3E5171BA3BBD2B4_fibmob_eml_v3_radical.png` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\FibMob_EML_v3_unisensorial.png` | `E18C8B1D9D3EDF8FF42491AAA0E9128E37A69ACBBEF67F2B194131C0B3954AF4` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-19\E18C8B1D9D3EDF8F_fibmob_eml_v3_unisensorial.png` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-19
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-19 | 1 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-19.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\files.zip` | `8739C76E681F900923B900C9DF0EF75CF421D39CABB54650C4B9AD19B6A76D85` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-19\8739C76E681F9009_files.zip` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-19
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-19 | 1 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-19.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\MEDIOEVO_PRO_ASSETS_WABI_DUAT_v0_1.zip` | `C1FEBEADAB9EADDBCE487D4100BBC84AF52216639A3795B38E4501481A0C03FB` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-19\C1FEBEADAB9EADDB_medioevo_pro_assets_wabi_duat_v0_1.zip` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-19
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-19 | 1 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-19.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\DUAT_RETROFUTURE_PIXEL_ASSETS_v0_9_REAL.zip` | `F38085CF0B36702652C9E4504A2585CE0F6E495E04F63280C2E0A6365706DD6A` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-19\F38085CF0B367026_duat_retrofuture_pixel_assets_v0_9_real.zip` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-19
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-19 | 2 | 1 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-19.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\CODEX_INTEGRATE_DUAT_PIXEL_ASSETS_v1_0.md` | `BB52A1D73F54230A22EC4B413462E18C80E67423B3330B873CB7F314FB3D9EDF` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-19\BB52A1D73F54230A_codex_integrate_duat_pixel_assets_v1_0.md` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\DUAT_RETROFUTURE_PIXEL_ASSET_BRIEF_v0_9.md` | `3470194175F006D138518BC63FE1E6A972D32F1E6F62664EC8EED0ECC3C382B3` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-19\3470194175F006D1_duat_retrofuture_pixel_asset_brief_v0_9.md` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `BORRADO` | `C:\Users\L-Tyr\Downloads\2c478f9c-600d-4c41-89d9-672453be1214.tmp` | `EBB68B834479F2FA5C939B0D8D410BCF0CF1B485FDC0EC7E4D0D53C0C23C5B71` | `regenerable_os_cache` | `regenerable local trash with ficha and hash` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-20
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-20 | 3 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-20.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\Claude Setup.exe` | `4EEA12BA8866E96592644D93895D282D3347AD3E61ACAE2E7D2C32E58D3D184F` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-20\4EEA12BA8866E965_claude-setup.exe` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\Microsoft.Services.Store.winmd` | `44F3A05334DE6CA0B43EBD17F6C7F1935630E026F049F28828566E364B7F41AA` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-20\44F3A05334DE6CA0_microsoft.services.store.winmd` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\WhatsApp Installer.exe` | `C14D471A1A770E81E8108915F829E4761F400EE1CEC88233E9780AB5049B3E85` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-20\C14D471A1A770E81_whatsapp-installer.exe` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-20
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-20 | 1 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-20.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\Claude Setup.exe` | `86C42BF48E8EAEA92C044C6457800E375C010B4A46F0623C120EA0BF1399AB02` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-20\86C42BF48E8EAEA9_claude-setup.exe` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-21
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-21 | 1 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-21.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\SDL2-devel-2.32.6-mingw.zip` | `5A58D900C3A8312EA8266230DBF44DF58364538A1FC1709479ABF0A32C54B36C` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-21\5A58D900C3A8312E_sdl2-devel-2.32.6-mingw.zip` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-22
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-22 | 1 | 1 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-22.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\OSIT_MetaOperator_Algebra_v1.docx` | `4C949B54A3951C82D131795E36FBA024A31DC53C78F21C9AC21E20A67D9C4642` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-22\4C949B54A3951C82_osit_metaoperator_algebra_v1.docx` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `BORRADO` | `C:\Users\L-Tyr\Downloads\OSIT_MetaOperator_Algebra_v1 (1).docx` | `4C949B54A3951C82D131795E36FBA024A31DC53C78F21C9AC21E20A67D9C4642` | `C:\Users\L-Tyr\Downloads\OSIT_MetaOperator_Algebra_v1.docx` | `exact duplicate in Downloads with generated ficha and canonical copy` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-23
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-23 | 1 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-23.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\gitignore` | `FE718E7BABB14F3CBAD2D97F08889B9CE5215ED3FE0E43B2B8CFBFB3B9B844E8` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-23\FE718E7BABB14F3C_gitignore` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-23
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-23 | 2 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-23.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\Invoice-ZO1CVZYY-0009.pdf` | `A12A05D65D03AB05CA958B82987CBABAD00244EDB53CDA84E50A4E294E7BAE21` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-23\A12A05D65D03AB05_invoice-zo1cvzyy-0009.pdf` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\Receipt-2967-9724-4199.pdf` | `CA49AF596F4FFEBF71B14989BAD32C4BA87CE0182EC04A0B10CF8E10257744F8` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-23\CA49AF596F4FFEBF_receipt-2967-9724-4199.pdf` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |

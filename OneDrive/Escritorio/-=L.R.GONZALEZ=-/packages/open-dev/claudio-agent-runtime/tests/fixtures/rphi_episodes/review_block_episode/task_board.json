@@ -1,0 +1,25 @@
+{
+  "schema_version": "claudio.task_board.v0.1",
+  "tasks": [
+    {
+      "id": "ep_review_001",
+      "title": "Synthetic action needs review",
+      "status": "review",
+      "priority": "P1",
+      "owner": "rphi-calibration",
+      "evidence": [
+        "docs/example-review.md"
+      ]
+    },
+    {
+      "id": "ep_block_001",
+      "title": "Synthetic unsafe action is blocked",
+      "status": "blocked",
+      "priority": "P0",
+      "owner": "rphi-calibration",
+      "evidence": [
+        "docs/example-block.md"
+      ]
+    }
+  ]
+}

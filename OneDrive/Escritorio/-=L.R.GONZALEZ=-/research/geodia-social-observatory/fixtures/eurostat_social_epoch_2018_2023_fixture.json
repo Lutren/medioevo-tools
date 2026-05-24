@@ -1,0 +1,151 @@
+{
+  "source_id": "eurostat_sdmx",
+  "source_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/",
+  "captured_at": "2026-05-14T16:05:00Z",
+  "captured_at_utc": "2026-05-14T16:05:00Z",
+  "retrieval_mode": "offline_fixture_from_public_api_snapshot",
+  "data_license": "Eurostat reuse notice applies; attribution required; no endorsement implied; dataset-specific terms require review before publication or commercial redistribution",
+  "license_terms_summary": "Eurostat data is generally reusable with attribution unless exceptions or dataset-specific notices apply; this local fixture is not a public redistribution license decision.",
+  "country_or_region": "DE",
+  "geography": "DE",
+  "year_range": "2018-2023",
+  "period": "2018-2023",
+  "publication_gate": "BLOCK",
+  "source_queries": [
+    "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/une_rt_a?lang=EN&geo=DE&sex=T&age=Y15-74&unit=PC_ACT&time=2018&time=2019&time=2020&time=2021&time=2022&time=2023",
+    "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tec00115?lang=EN&geo=DE&unit=CLV_PCH_PRE&time=2018&time=2019&time=2020&time=2021&time=2022&time=2023",
+    "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_mlexpec?lang=EN&geo=DE&sex=T&age=Y_LT1&unit=YR&time=2018&time=2019&time=2020&time=2021&time=2022&time=2023"
+  ],
+  "api_metadata": {
+    "agency": "ESTAT",
+    "format": "JSON-stat 2.0",
+    "retrieved_without_credentials": true,
+    "dataset_updates": {
+      "une_rt_a": "2026-04-29T15:00:00-06:00",
+      "tec00115": "2026-05-13T15:00:00-06:00",
+      "demo_mlexpec": "2026-05-13T15:00:00-06:00"
+    }
+  },
+  "indicators": [
+    {
+      "indicator": "unemployment_rate_15_74_total",
+      "source_indicator_id": "une_rt_a",
+      "label": "Unemployment by sex and age - annual data",
+      "unit": "PC_ACT",
+      "unit_label": "Percentage of population in the labour force",
+      "polarity": "negative",
+      "raw_values": {
+        "2018": 3.2,
+        "2019": 2.9,
+        "2020": 3.6,
+        "2021": 3.6,
+        "2022": 3.1,
+        "2023": 3.1
+      },
+      "normalized_values": {
+        "method": "delta_from_2018_divided_by_max_abs_first_or_one",
+        "2018": 0.0,
+        "2019": -0.09375,
+        "2020": 0.125,
+        "2021": 0.125,
+        "2022": -0.03125,
+        "2023": -0.03125
+      },
+      "status_flags": {
+        "2020": "b"
+      }
+    },
+    {
+      "indicator": "real_gdp_growth_volume_percent",
+      "source_indicator_id": "tec00115",
+      "label": "Real GDP growth rate - volume",
+      "unit": "CLV_PCH_PRE",
+      "unit_label": "Chain linked volumes, percentage change on previous period",
+      "polarity": "positive",
+      "raw_values": {
+        "2018": 1.1,
+        "2019": 1.0,
+        "2020": -4.1,
+        "2021": 3.9,
+        "2022": 1.8,
+        "2023": -0.9
+      },
+      "normalized_values": {
+        "method": "delta_from_2018_divided_by_max_abs_first_or_one",
+        "2018": 0.0,
+        "2019": -0.090909,
+        "2020": -4.727273,
+        "2021": 2.545455,
+        "2022": 0.636364,
+        "2023": -1.818182
+      },
+      "status_flags": {
+        "2022": "p",
+        "2023": "p"
+      }
+    },
+    {
+      "indicator": "life_expectancy_at_birth_total",
+      "source_indicator_id": "demo_mlexpec",
+      "label": "Life expectancy by age and sex",
+      "unit": "YR",
+      "unit_label": "Year",
+      "polarity": "positive",
+      "raw_values": {
+        "2018": 81.0,
+        "2019": 81.3,
+        "2020": 81.1,
+        "2021": 80.8,
+        "2022": 80.7,
+        "2023": 81.1
+      },
+      "normalized_values": {
+        "method": "delta_from_2018_divided_by_max_abs_first_or_one",
+        "2018": 0.0,
+        "2019": 0.003704,
+        "2020": 0.001235,
+        "2021": -0.002469,
+        "2022": -0.003704,
+        "2023": 0.001235
+      },
+      "status_flags": {
+        "2023": "b"
+      }
+    }
+  ],
+  "observations": [
+    {"indicator": "unemployment_rate_15_74_total", "source_indicator_id": "une_rt_a", "year": 2018, "value": 3.2, "unit": "PC_ACT", "polarity": "negative"},
+    {"indicator": "unemployment_rate_15_74_total", "source_indicator_id": "une_rt_a", "year": 2019, "value": 2.9, "unit": "PC_ACT", "polarity": "negative"},
+    {"indicator": "unemployment_rate_15_74_total", "source_indicator_id": "une_rt_a", "year": 2020, "value": 3.6, "unit": "PC_ACT", "polarity": "negative"},
+    {"indicator": "unemployment_rate_15_74_total", "source_indicator_id": "une_rt_a", "year": 2021, "value": 3.6, "unit": "PC_ACT", "polarity": "negative"},
+    {"indicator": "unemployment_rate_15_74_total", "source_indicator_id": "une_rt_a", "year": 2022, "value": 3.1, "unit": "PC_ACT", "polarity": "negative"},
+    {"indicator": "unemployment_rate_15_74_total", "source_indicator_id": "une_rt_a", "year": 2023, "value": 3.1, "unit": "PC_ACT", "polarity": "negative"},
+    {"indicator": "real_gdp_growth_volume_percent", "source_indicator_id": "tec00115", "year": 2018, "value": 1.1, "unit": "CLV_PCH_PRE", "polarity": "positive"},
+    {"indicator": "real_gdp_growth_volume_percent", "source_indicator_id": "tec00115", "year": 2019, "value": 1.0, "unit": "CLV_PCH_PRE", "polarity": "positive"},
+    {"indicator": "real_gdp_growth_volume_percent", "source_indicator_id": "tec00115", "year": 2020, "value": -4.1, "unit": "CLV_PCH_PRE", "polarity": "positive"},
+    {"indicator": "real_gdp_growth_volume_percent", "source_indicator_id": "tec00115", "year": 2021, "value": 3.9, "unit": "CLV_PCH_PRE", "polarity": "positive"},
+    {"indicator": "real_gdp_growth_volume_percent", "source_indicator_id": "tec00115", "year": 2022, "value": 1.8, "unit": "CLV_PCH_PRE", "polarity": "positive"},
+    {"indicator": "real_gdp_growth_volume_percent", "source_indicator_id": "tec00115", "year": 2023, "value": -0.9, "unit": "CLV_PCH_PRE", "polarity": "positive"},
+    {"indicator": "life_expectancy_at_birth_total", "source_indicator_id": "demo_mlexpec", "year": 2018, "value": 81.0, "unit": "YR", "polarity": "positive"},
+    {"indicator": "life_expectancy_at_birth_total", "source_indicator_id": "demo_mlexpec", "year": 2019, "value": 81.3, "unit": "YR", "polarity": "positive"},
+    {"indicator": "life_expectancy_at_birth_total", "source_indicator_id": "demo_mlexpec", "year": 2020, "value": 81.1, "unit": "YR", "polarity": "positive"},
+    {"indicator": "life_expectancy_at_birth_total", "source_indicator_id": "demo_mlexpec", "year": 2021, "value": 80.8, "unit": "YR", "polarity": "positive"},
+    {"indicator": "life_expectancy_at_birth_total", "source_indicator_id": "demo_mlexpec", "year": 2022, "value": 80.7, "unit": "YR", "polarity": "positive"},
+    {"indicator": "life_expectancy_at_birth_total", "source_indicator_id": "demo_mlexpec", "year": 2023, "value": 81.1, "unit": "YR", "polarity": "positive"}
+  ],
+  "events": [
+    {
+      "date": "2020-01-01",
+      "label": "2020 discontinuity marker",
+      "classification": "INFERENCIA",
+      "description": "Local modeling marker for visible 2020 discontinuities; not a causal claim."
+    }
+  ],
+  "caveats": [
+    "Eurostat API serves latest data and does not provide historical API versioning in this fixture.",
+    "Status flags `b` and `p` are preserved as caveats, not discarded.",
+    "Real GDP growth is a rate and can be negative; normalized values are QA aids only.",
+    "This fixture is not comparable to the World Bank Mexico fixture without harmonization.",
+    "publication_gate=BLOCK; no public or commercial use without review."
+  ]
+}

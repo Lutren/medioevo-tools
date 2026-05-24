@@ -1,0 +1,41 @@
+{
+  "schema": "duat/handoff/v1.4",
+  "fingerprint": "DUAT-v1.4-OSIT-OBSERVACIONISMO-FULL",
+  "R_est": 0.30,
+  "Phi_eff_est": 0.71,
+  "regime": "FUNCIONAL_REVIEW",
+  "actionGate": "REVIEW",
+  "implemented": {
+    "ositFormulaRegistry": true,
+    "scienceClaimGate": true,
+    "brainRuntimeIntegration": true,
+    "rpgExportIntegration": true,
+    "sourceInventory": true,
+    "observacionismoModuleState": true,
+    "visualQaScreenshots": true,
+    "audioProceduralFallbackQa": true,
+    "staticRenderBenchmarkOver30Fps": true
+  },
+  "qa": {
+    "tests": "105 files / 310 tests PASS",
+    "typecheck": "PASS",
+    "build": "PASS",
+    "httpSmoke": 200,
+    "headedFpsVerified": false,
+    "audibleAudioVerified": false,
+    "performanceGate": "STATIC_RENDER_FALLBACK_OVER_30FPS_HEADED_UNCONFIRMED",
+    "audioGate": "PROCEDURAL_PREVIEW_CONFIRMED_HUMAN_AUDIBLE_UNCONFIRMED",
+    "runDir": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/qa_artifacts/release_validation/RUN_DUAT_OSIT_OBSERVACIONISMO_FULL_v1_4_20260520"
+  },
+  "boundaries": {
+    "wabiExecutionAllowed": false,
+    "sandboxExecutionAllowed": false,
+    "realApplyAllowed": false,
+    "unknownCodeExecuted": false,
+    "assetsCopiedToPublic": false,
+    "publicationAllowed": false,
+    "cloudUsed": false,
+    "mcpExecution": false
+  },
+  "nextAction": "Manual headed FPS and audible audio verification, then operational UI/chrome performance pass or reviewed renderer dependency decision."
+}

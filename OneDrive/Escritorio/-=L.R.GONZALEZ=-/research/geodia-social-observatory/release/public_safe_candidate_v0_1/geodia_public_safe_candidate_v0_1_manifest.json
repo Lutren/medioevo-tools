@@ -1,0 +1,86 @@
+{
+  "package_id": "GEODIA_PUBLIC_SAFE_PACKAGE_CANDIDATE_v0.1",
+  "timestamp": "2026-05-15T01:34:07Z",
+  "package_status": "LOCAL_REVIEW_CANDIDATE",
+  "publication_gate": "BLOCK",
+  "external_publication": false,
+  "legal_review_required": true,
+  "human_review_required": true,
+  "raw_data_included": false,
+  "fixture_data_included": false,
+  "fixture_strategy": "schema_example_only_until_human_legal_review",
+  "files_included": [
+    "research/geodia-social-observatory/release/public_safe_candidate_v0_1/ATTRIBUTION_AND_TERMS_REVIEW.md",
+    "research/geodia-social-observatory/release/public_safe_candidate_v0_1/CLAIMS_BOUNDARY_PUBLIC_SAFE.md",
+    "research/geodia-social-observatory/release/public_safe_candidate_v0_1/EXCLUDED_FROM_PUBLIC_SAFE.md",
+    "research/geodia-social-observatory/release/public_safe_candidate_v0_1/fixtures/fixture_schema_example.json",
+    "research/geodia-social-observatory/release/public_safe_candidate_v0_1/fixtures/instructions_to_reproduce_fixture.md",
+    "research/geodia-social-observatory/release/public_safe_candidate_v0_1/geodia_public_safe_candidate_v0_1_manifest.json",
+    "research/geodia-social-observatory/release/public_safe_candidate_v0_1/QA_SUMMARY_PUBLIC_SAFE.md",
+    "research/geodia-social-observatory/release/public_safe_candidate_v0_1/README.md",
+    "research/geodia-social-observatory/release/public_safe_candidate_v0_1/RUNBOOK_PUBLIC_SAFE_REVIEW.md",
+    "research/geodia-social-observatory/release/public_safe_candidate_v0_1/source_cards/INEGI_SOURCE_CARD_PUBLIC_SAFE.md"
+  ],
+  "files_excluded": [
+    "research/geodia-social-observatory/fixtures/source_intake/inegi/raw/enoe_indicadores_estrategicos_2005_2026_mensual.xlsx",
+    "research/geodia-social-observatory/fixtures/source_intake/inegi/raw/",
+    "research/geodia-social-observatory/fixtures/world_bank_mexico_2018_2023_fixture.json",
+    "research/geodia-social-observatory/fixtures/eurostat_social_epoch_2018_2023_fixture.json",
+    "research/geodia-social-observatory/fixtures/inegi_mexico_social_2018_2023_fixture.json",
+    "research/geodia-social-observatory/release/internal_rc_v0_1/",
+    "source vaults, private prompts, private runtime state, books, RPG, TCG, DUAT private, Wabi-Sabi internals, Claudio private runtime"
+  ],
+  "hashes": {
+    "research/geodia-social-observatory/release/public_safe_candidate_v0_1/ATTRIBUTION_AND_TERMS_REVIEW.md": "db86bd988404e3799ae987379cd2a3c7080f5e6745e502f6f8ae2e2d3bba3347",
+    "research/geodia-social-observatory/release/public_safe_candidate_v0_1/CLAIMS_BOUNDARY_PUBLIC_SAFE.md": "89e2e865e3dd96b2e4e88fa822fd463176b0b28ed93be09ec5cc2d427ff5e595",
+    "research/geodia-social-observatory/release/public_safe_candidate_v0_1/EXCLUDED_FROM_PUBLIC_SAFE.md": "2cdacfbf05758323e5b7a030a773675836884ee869186696c1f23ac583f9fc1b",
+    "research/geodia-social-observatory/release/public_safe_candidate_v0_1/fixtures/fixture_schema_example.json": "cbf6f9fd9ee1b41dcd2187f04a48f777921cba57a3f32ac65e5a6ffe3e9cd730",
+    "research/geodia-social-observatory/release/public_safe_candidate_v0_1/fixtures/instructions_to_reproduce_fixture.md": "6194d293f8b87ac34eba0f6bfc8e7e6b52d5325b9899ef55bafe4ccc593e1ecd",
+    "research/geodia-social-observatory/release/public_safe_candidate_v0_1/QA_SUMMARY_PUBLIC_SAFE.md": "6ab5b66f5907bcb29832fffdea2818bbc4342239b705ed45dd31d3fbc62cabfe",
+    "research/geodia-social-observatory/release/public_safe_candidate_v0_1/README.md": "260336aeef618d330d1e48146581f9719d1bff41dbdcccb80e8fa115859bf42e",
+    "research/geodia-social-observatory/release/public_safe_candidate_v0_1/RUNBOOK_PUBLIC_SAFE_REVIEW.md": "4641bbfdc9e5fd874714a3c27925c7ed726bbec865ac162b300f3fd3385d66e7",
+    "research/geodia-social-observatory/release/public_safe_candidate_v0_1/source_cards/INEGI_SOURCE_CARD_PUBLIC_SAFE.md": "1f705bd16721e7a7cc4462773d29cdd908c8d661fd7984745e86963062f3d06b"
+  },
+  "scans": {
+    "SecretScan": {
+      "status": "PASS"
+    },
+    "BoundaryCheck": {
+      "status": "PASS"
+    },
+    "SourceAttributionScan": {
+      "status": "PASS"
+    },
+    "LicenseTermsScan": {
+      "status": "PASS"
+    },
+    "ForbiddenClaimsScan": {
+      "status": "PASS"
+    },
+    "PrivatePathScan": {
+      "status": "PASS"
+    },
+    "PublicationGateScan": {
+      "status": "PASS"
+    },
+    "FixturePublicSafeScan": {
+      "status": "PASS"
+    },
+    "RawDataExclusionScan": {
+      "status": "PASS"
+    },
+    "JsonValidationScan": {
+      "status": "PASS"
+    },
+    "ZipContentScan": {
+      "status": "RECORDED_IN_FINAL_REPORT"
+    }
+  },
+  "forbidden_claims_absent": true,
+  "license_status": "TERMS_DOCUMENTED_HUMAN_REVIEW_REQUIRED",
+  "source_intake_network_used": true,
+  "harmonization_network_used": false,
+  "network_used_for_package_creation": false,
+  "zip_path": "qa_artifacts/release_validation/geodia-public-safe-candidate-v0-1.zip",
+  "zip_sha256": "recorded_in_qa_sha256_and_final_report"
+}
