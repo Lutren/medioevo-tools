@@ -114,12 +114,16 @@ def build_file_patch_plan(
     summary: str,
     suffix: str | None = None,
     test_commands: list[str] | None = None,
+    gate: str = "APPROVE",
+    extra_reasons: list[str] | None = None,
 ) -> PatchPlan:
     return build_multi_file_patch_plan(
         workspace=workspace,
         changes=[{"target": target, "content": content, "suffix": suffix}],
         summary=summary,
         test_commands=test_commands,
+        gate=gate,
+        extra_reasons=extra_reasons,
     )
 
 
@@ -129,6 +133,8 @@ def build_multi_file_patch_plan(
     changes: list[dict[str, Any]],
     summary: str,
     test_commands: list[str] | None = None,
+    gate: str = "APPROVE",
+    extra_reasons: list[str] | None = None,
 ) -> PatchPlan:
     workspace = workspace.resolve()
     operations: list[PatchOperation] = []
@@ -178,13 +184,16 @@ def build_multi_file_patch_plan(
     )
     created_at = stamp()
     plan_id = f"patch-{created_at}-{plan_hash[:12]}"
+    reasons = ["text_patch_plan", "targets_inside_workspace", "sensitive_paths_blocked"]
+    if extra_reasons:
+        reasons.extend(str(reason) for reason in extra_reasons)
     return PatchPlan(
         plan_id=plan_id,
         created_at=created_at,
         workspace=str(workspace),
         summary=summary,
-        gate="APPROVE",
-        reasons=["text_patch_plan", "targets_inside_workspace", "sensitive_paths_blocked"],
+        gate=gate,
+        reasons=list(dict.fromkeys(reasons)),
         operations=operations,
         test_commands=commands,
     )

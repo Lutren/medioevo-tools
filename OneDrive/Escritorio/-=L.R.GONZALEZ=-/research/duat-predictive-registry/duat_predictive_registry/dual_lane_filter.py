@@ -7,6 +7,7 @@ from enum import Enum
 
 from .dual_output_policy import output_weights
 from .filter_bank import required_filter_ids
+from .forecast_gate import _epistemic_state_for_r, _regime_for_r
 from .r_vector import compute_r_total
 from .residue_classifier import classify_residue
 
@@ -128,3 +129,29 @@ def dual_lane_action_gate(packet: DualLanePacket) -> str:
     if packet.structured_residue and not packet.clean_signal:
         return "REVIEW"
     return "APPROVE"
+
+
+def dual_lane_canonical_state(packet: DualLanePacket) -> dict[str, object]:
+    """Canonical OSIT regime/state for a packet's noise residue (obsai-core).
+
+    NEW wiring: an additional pre-check available before a registry write. Sensitive
+    hits or a BLOQUEADO residue block; an INCOGNITA residue or a contradiction is at
+    least REVIEW. This does not change ``dual_lane_action_gate``'s thresholds (the
+    INCOGNITA->BLOCK canon decision is tracked separately).
+    """
+    r_noise = max(0.0, min(1.0, float(packet.R_noise)))
+    state = _epistemic_state_for_r(r_noise)
+    if packet.sensitive_hits or packet.r_vector.get("R_sensitive", 0.0) >= 0.80 or state == "BLOQUEADO":
+        gate = "BLOCK"
+    elif state == "INCOGNITA" or packet.contradictions:
+        gate = "REVIEW"
+    else:
+        gate = "APPROVE"
+    return {
+        "schema": "duat.predictive.dual_lane_canonical_state.v1",
+        "regime": _regime_for_r(r_noise),
+        "epistemic_state": state,
+        "gate": gate,
+        "R_noise": round(r_noise, 6),
+        "calibration": "DEMO_ONLY",
+    }

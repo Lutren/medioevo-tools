@@ -31,6 +31,7 @@ class ProgrammerAgent(BaseAgent):
                     runtime_root=self.config.runtime_root,
                     target=target,
                     code=code,
+                    intent=prompt,
                 )
             except Exception as exc:
                 return AgentResult(
@@ -56,6 +57,8 @@ class ProgrammerAgent(BaseAgent):
                 artifacts=artifacts,
                 evidence=[
                     f"target={patch.target}",
+                    f"action_gate={patch.gate}",
+                    f"gate_reasons={';'.join(patch.gate_reasons)}",
                     f"before_sha256={patch.before_hash}",
                     f"after_sha256={patch.after_hash}",
                     f"diff_written={patch.diff}",

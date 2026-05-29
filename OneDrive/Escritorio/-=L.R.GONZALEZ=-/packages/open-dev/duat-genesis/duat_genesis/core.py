@@ -8,6 +8,8 @@ from dataclasses import asdict, dataclass, field
 from statistics import mean, pvariance
 from typing import Any
 
+from .obsai_bridge import gate_observations
+
 
 SCHEMA_RUN = "duat.genesis.simulation_run.v1"
 SCHEMA_REPORT = "duat.genesis.report.v1"
@@ -135,6 +137,7 @@ def run_simulation(
     ticks: int = 5,
     rules: tuple[GenesisRule, ...] | None = None,
     observations: tuple[Observation, ...] | None = None,
+    block_on_jamming: bool = True,
 ) -> SimulationRun:
     if size < 2:
         raise ValueError("size must be >= 2")
@@ -150,6 +153,13 @@ def run_simulation(
     active_observations = observations or (
         Observation(observer_id="demo_observer", target_index=size // 2, signal=0.35, confidence=0.8),
     )
+    # OSIT observation gate (obsai-core estimate_regime): refuse to simulate on a
+    # BLOQUEADO observation instead of staying epistemic-state-blind.
+    observation_gate = gate_observations(active_observations)
+    if block_on_jamming and observation_gate["blocked"]:
+        raise ValueError(
+            "blocked_observation:" + ",".join(str(index) for index in observation_gate["blocking_indices"])
+        )
     rng = random.Random(_fingerprint({"seed": seed, "size": size, "ticks": ticks})[:16])
     states = [_initial_state(seed, size)]
     for tick in range(ticks):
@@ -178,6 +188,7 @@ def run_simulation(
             "data": "SYNTHETIC_ONLY",
             "private_engineering": "EXCLUDED",
             "prediction": "NOT_CLAIMED",
+            "observation_gate": observation_gate["gate"],
         },
     )
 

@@ -1,6 +1,13 @@
 import sqlite3
 
-from wabi_sabi.core.bridge import BridgeExecutor, MockRuntimeAdapter, WitnessLog
+from wabi_sabi.core.bridge import (
+    DEGRADED_MODEL_ID,
+    BridgeExecutor,
+    MockRuntimeAdapter,
+    WitnessLog,
+    phi_eff_for_residue,
+    regime_for_residue,
+)
 
 
 def test_deterministic_status_uses_no_llm(tmp_path):
@@ -71,6 +78,46 @@ def test_missing_evidence_adds_required_evidence(tmp_path):
 
     assert result.decision.required_evidence == ["source_hash_or_test_or_local_file_reference"]
     assert result.decision.r_estimate > 0.2
+
+
+def test_low_residue_keeps_optimo_or_functional_regime(tmp_path):
+    bridge = BridgeExecutor(tmp_path / "witness.sqlite")
+
+    result = bridge.execute(
+        "status local y validar json",
+        evidence_refs=["test_status"],
+        source="test",
+    )
+
+    assert result.decision.gate == "APPROVE"
+    assert result.decision.regime in {"OPTIMO", "FUNCIONAL"}
+
+
+def test_decision_regime_and_phi_eff_match_canonical_helpers(tmp_path):
+    bridge = BridgeExecutor(tmp_path / "witness.sqlite")
+
+    result = bridge.execute("clasifica pendientes", source="test")
+
+    r = result.decision.r_estimate
+    assert result.decision.regime == regime_for_residue(r)
+    assert result.decision.phi_eff == phi_eff_for_residue(r)
+
+
+def test_jamming_regime_forces_review_and_degrades_model(tmp_path):
+    bridge = BridgeExecutor(tmp_path / "witness.sqlite")
+    # Uncertain + coder language, no evidence, long text -> residue lands in the jamming band
+    # WITHOUT any hard-boundary block word, so the regime (not a block word) must force REVIEW.
+    filler = "detalle " * 130  # >800 chars
+    result = bridge.execute(
+        "quizas refactor el modulo python " + filler,
+        source="test",
+    )
+
+    assert result.decision.regime in {"JAMMING_TEMPRANO", "JAMMING"}
+    assert result.decision.r_estimate >= 0.45
+    assert result.decision.gate == "REVIEW"
+    assert result.decision.model_id == DEGRADED_MODEL_ID
+    assert any(reason.startswith("regime_jamming") for reason in result.decision.reasons)
 
 
 def test_witness_log_detects_payload_tampering(tmp_path):

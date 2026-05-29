@@ -11,6 +11,7 @@ from wabi_sabi.core.taskspec_review import (
     list_required_gates,
     normalize_taskspec_for_review,
     redact_taskspec,
+    run_ghost_gate,
     save_taskspec_draft,
 )
 
@@ -181,6 +182,31 @@ def test_block_apply_with_preview_uses_not_available_reason():
     assert result["reason"] == "APPLY_NOT_AVAILABLE_REVIEW_ONLY_V0_1"
     assert result["applied_to_sources"] is False
     assert result["gate_preview"]["apply_status"] == "BLOCKED"
+
+
+def test_run_ghost_gate_redacts_private_fields_without_applying():
+    ghost = run_ghost_gate(
+        {
+            "intent_name": "code_request",
+            "prompt": "secret raw user prompt that must not leak",
+            "changes": [{"target": "helpers.py", "content": "print('x')"}],
+        }
+    )
+
+    assert ghost["status"] == "GHOST_OK"
+    assert ghost["simulated"] is True
+    assert ghost["applied_to_sources"] is False
+    assert ghost["publication_gate"] == "BLOCK"
+    assert "prompt" in ghost["ghosted_fields"]
+    assert "content" in ghost["ghosted_fields"]
+    # The raw private prompt is hashed/redacted, never echoed back verbatim.
+    assert "secret raw user prompt that must not leak" not in json.dumps(ghost, ensure_ascii=False)
+
+
+def test_build_gate_preview_includes_ghost_gate():
+    preview = build_gate_preview({"intent_name": "code_request", "changes": [{"target": "a.py"}]})
+    assert preview["ghost_gate"]["status"] == "GHOST_OK"
+    assert preview["ghost_gate"]["applied_to_sources"] is False
 
 
 def test_list_required_gates_is_stable_minimum():

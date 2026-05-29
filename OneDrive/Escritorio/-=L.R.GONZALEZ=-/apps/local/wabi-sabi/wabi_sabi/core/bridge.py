@@ -11,6 +11,44 @@ from typing import Any, Protocol
 
 from wabi_sabi.core.gate import ActionGate
 
+try:  # Canonical OSIT regime / phi_eff come from obsai-core (single source of truth).
+    from obsai_core import estimate_regime as _obsai_estimate_regime
+    from obsai_core import phi_eff_power as _obsai_phi_eff_power
+except Exception:  # pragma: no cover - dependency-light fallback if obsai-core is absent.
+    _obsai_estimate_regime = None
+    _obsai_phi_eff_power = None
+
+
+# Mirrors obsai_core.metrics.estimate_regime. Canonical ladder documented in
+# packages/open-dev/obsai-core/docs/OSIT_CANON_REUSE_CONTRACT_2026-05-29.md
+_REGIME_BANDS = (
+    (0.15, "OPTIMO"),
+    (0.30, "FUNCIONAL"),
+    (0.45, "PRE_JAMMING"),
+    (0.60, "JAMMING_TEMPRANO"),
+)
+# Regimes where a low-residue conversation must never auto-APPROVE and the model is degraded.
+JAMMING_REGIMES = {"JAMMING_TEMPRANO", "JAMMING"}
+DEGRADED_MODEL_ID = "qwen2.5:0.5b"
+
+
+def regime_for_residue(r_estimate: float) -> str:
+    """Canonical OSIT regime label for a residue R in [0,1]."""
+    if _obsai_estimate_regime is not None:
+        return str(_obsai_estimate_regime(r_estimate).value)
+    value = max(0.0, min(1.0, float(r_estimate)))
+    for threshold, label in _REGIME_BANDS:
+        if value < threshold:
+            return label
+    return "JAMMING"
+
+
+def phi_eff_for_residue(r_estimate: float) -> float:
+    """Canonical phi_eff for a residue R (obsai phi_eff_power; == 1-R under default params)."""
+    if _obsai_phi_eff_power is not None:
+        return round(float(_obsai_phi_eff_power(r_estimate)), 3)
+    return round(max(0.0, 1.0 - max(0.0, min(1.0, float(r_estimate)))), 3)
+
 
 DETERMINISTIC_WORDS = {
     "hash",
@@ -117,6 +155,7 @@ class RouteDecision:
     reasons: list[str]
     blocked_actions: list[str] = field(default_factory=list)
     required_evidence: list[str] = field(default_factory=list)
+    regime: str = "FUNCIONAL"
 
     @property
     def allowed(self) -> bool:
@@ -195,7 +234,9 @@ class ResidueMeter:
 
 
 class BridgeActionGate:
-    def evaluate(self, envelope: TaskEnvelope, r_estimate: float) -> tuple[str, list[str], list[str]]:
+    def evaluate(
+        self, envelope: TaskEnvelope, r_estimate: float, regime: str = "FUNCIONAL"
+    ) -> tuple[str, list[str], list[str]]:
         text = envelope.raw_text.lower()
         base_gate = ActionGate().evaluate_text(envelope.raw_text)
         reasons = list(base_gate.reasons)
@@ -209,6 +250,10 @@ class BridgeActionGate:
             blocked_actions.extend(envelope.risk_flags)
         if base_gate.gate == "BLOCK" or blocked_actions:
             return "BLOCK", sorted(set(reasons)), sorted(set(blocked_actions))
+        # Canonical OSIT regime never lets a jamming-band conversation auto-APPROVE.
+        if regime in JAMMING_REGIMES:
+            reasons.append(f"regime_{regime.lower()}_requires_review")
+            return "REVIEW", sorted(set(reasons)), []
         if r_estimate >= 0.45:
             reasons.append("residue_requires_review")
             return "REVIEW", sorted(set(reasons)), []
@@ -337,18 +382,24 @@ class BridgeExecutor:
             source=source,
         ).finalize()
         r_estimate = self.residue_meter.estimate(envelope)
-        gate, gate_reasons, blocked_actions = self.gate.evaluate(envelope, r_estimate)
+        regime = regime_for_residue(r_estimate)
+        gate, gate_reasons, blocked_actions = self.gate.evaluate(envelope, r_estimate, regime)
         route, runtime, model_id, route_reasons = self.registry.select(envelope, gate)
+        # Degrade to the smallest model when the residue regime is in the jamming band.
+        if regime in JAMMING_REGIMES and model_id and model_id != DEGRADED_MODEL_ID:
+            model_id = DEGRADED_MODEL_ID
+            route_reasons = [*route_reasons, f"regime_{regime.lower()}_degrade_to_small_model"]
         decision = RouteDecision(
             gate=gate,
             route=route,
             runtime=runtime,
             model_id=model_id,
             r_estimate=r_estimate,
-            phi_eff=round(1.0 - r_estimate, 3),
+            phi_eff=phi_eff_for_residue(r_estimate),
             reasons=sorted(set(gate_reasons + route_reasons)),
             blocked_actions=blocked_actions,
             required_evidence=[] if evidence_refs else ["source_hash_or_test_or_local_file_reference"],
+            regime=regime,
         )
         if gate == "BLOCK":
             output = {

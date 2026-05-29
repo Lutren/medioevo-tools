@@ -38,6 +38,21 @@ from wabi_sabi.core.safe_executor import SafeExecutor
 from wabi_sabi.core.config import RuntimeConfig
 from wabi_sabi.engine import default_engine_manifest
 
+try:  # Canonical stable fingerprint from obsai-core (single source of truth).
+    from obsai_core import stable_fingerprint as _obsai_stable_fingerprint
+except Exception:  # pragma: no cover - hashlib fallback if obsai-core is absent.
+    _obsai_stable_fingerprint = None
+
+
+def _handoff_fingerprint(fields: dict[str, Any]) -> str:
+    """Stable SHA-256 fingerprint of the handoff-relevant fields (obsai-core when available)."""
+    if _obsai_stable_fingerprint is not None:
+        return _obsai_stable_fingerprint(fields)
+    import hashlib
+
+    canonical = json.dumps(fields, sort_keys=True, ensure_ascii=True, default=str)
+    return hashlib.sha256(canonical.encode("utf-8")).hexdigest()
+
 
 PROTECTED_CLOUD_HINTS = {
     ".env",
@@ -157,8 +172,23 @@ class ConversationSession:
             json.dumps({"workspace": str(self.workspace), "policy": "current_directory_with_confirmation"}, indent=2, ensure_ascii=False),
             encoding="utf-8",
         )
+        opening_fingerprint = _handoff_fingerprint(
+            {
+                "schema": "wabi.session_handoff.v1",
+                "session_dir": session_dir.name,
+                "updated": session_data["created_at"],
+                "workspace": str(self.workspace),
+                "mode": self.mode,
+                "provider": self.selected_provider,
+                "last_route": "session_open",
+                "last_gate": "APPROVE",
+                "last_ok": True,
+            }
+        )
         (session_dir / "handoff.md").write_text(
-            "# Wabi-Sabi Session Handoff\n\nEstado: sesion abierta.\n\nDo not: publicar, push, deploy, imprimir secretos o aplicar sin confirmacion.\n",
+            "# Wabi-Sabi Session Handoff\n\nEstado: sesion abierta.\n\n"
+            "Do not: publicar, push, deploy, imprimir secretos o aplicar sin confirmacion.\n\n"
+            f"Fingerprint:\n- sha256: {opening_fingerprint}\n",
             encoding="utf-8",
         )
         return session_dir
@@ -707,6 +737,19 @@ class ConversationSession:
         messages_path = self.session_dir / "messages.jsonl"
         with messages_path.open("a", encoding="utf-8", newline="\n") as handle:
             handle.write(json.dumps(record, ensure_ascii=False) + "\n")
+        fingerprint = _handoff_fingerprint(
+            {
+                "schema": "wabi.session_handoff.v1",
+                "session_dir": self.session_dir.name,
+                "updated": record["time"],
+                "workspace": str(self.workspace),
+                "mode": self.mode,
+                "provider": self.selected_provider,
+                "last_route": record["route"],
+                "last_gate": record["gate"],
+                "last_ok": record["ok"],
+            }
+        )
         handoff = [
             "# Wabi-Sabi Session Handoff",
             "",
@@ -728,6 +771,9 @@ class ConversationSession:
             "",
             "Next Contract:",
             "- Continue in the same REPL; ask normally, request /diff before apply, and use /rollback if a confirmed patch must be reverted.",
+            "",
+            "Fingerprint:",
+            f"- sha256: {fingerprint}",
         ]
         (self.session_dir / "handoff.md").write_text("\n".join(handoff) + "\n", encoding="utf-8")
 

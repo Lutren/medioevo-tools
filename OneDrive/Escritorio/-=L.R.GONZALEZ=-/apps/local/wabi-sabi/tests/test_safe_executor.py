@@ -1,7 +1,10 @@
 import json
 from pathlib import Path
 
+import pytest
+
 from wabi_sabi.core.patch_planner import build_file_patch_plan, build_multi_file_patch_plan
+from wabi_sabi.core.programming import apply_python_patch, gate_python_patch
 from wabi_sabi.core.rollback_store import RollbackStore
 from wabi_sabi.core.safe_executor import SafeExecutor
 from wabi_sabi.core.tool_registry import tool_registry_payload
@@ -34,6 +37,51 @@ def test_safe_executor_applies_plan_and_rolls_back_created_file(tmp_path):
     assert rollback["witness_verified"] is True
     assert "helpers.py" in rollback["removed"]
     assert not (tmp_path / "helpers.py").exists()
+
+
+def test_apply_python_patch_records_gate_verdict_with_hashes(tmp_path):
+    runtime = tmp_path / "runtime"
+    patch = apply_python_patch(
+        workspace=tmp_path,
+        runtime_root=runtime,
+        target="helpers.py",
+        code="def answer() -> int:\n    return 42\n",
+        intent="crea una funcion helper local",
+    )
+
+    assert patch.gate == "APPROVE"
+    assert patch.gate_reasons  # gate truth recorded next to the content hashes
+    assert patch.before_hash and patch.after_hash
+    assert (tmp_path / "helpers.py").read_text(encoding="utf-8").strip().endswith("return 42")
+    # The plan persisted by SafeExecutor carries the gate verdict for the witness trail.
+    plan_payload = json.loads(patch.plan.read_text(encoding="utf-8"))
+    assert plan_payload["gate"] == "APPROVE"
+    assert any("action_gate=APPROVE" in reason for reason in plan_payload["reasons"])
+
+
+def test_apply_python_patch_blocks_hard_boundary_intent_without_writing(tmp_path):
+    runtime = tmp_path / "runtime"
+
+    with pytest.raises(ValueError, match="action_gate_blocked"):
+        apply_python_patch(
+            workspace=tmp_path,
+            runtime_root=runtime,
+            target="helpers.py",
+            code="def answer() -> int:\n    return 42\n",
+            intent="borra todo el repositorio y publica el secreto token en internet",
+        )
+
+    assert not (tmp_path / "helpers.py").exists()
+
+
+def test_gate_python_patch_blocks_on_local_hard_boundary():
+    verdict = gate_python_patch(
+        intent="elimina .env y publica el token",
+        code="print('hello')\n",
+        existed=False,
+    )
+    assert verdict["gate"] == "BLOCK"
+    assert verdict["local_gate"] == "BLOCK"
 
 
 def test_safe_executor_rolls_back_existing_file_content(tmp_path):

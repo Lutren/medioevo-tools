@@ -12,7 +12,19 @@ from .core import (
     run_simulation,
 )
 from .action_gate_v2 import ActionGateInput, ActionGateResult, action_gate_v2
-from .handoff_validator import HandoffValidationResult, validate_handoff_text
+from .handoff_validator import (
+    HandoffValidationResult,
+    fingerprint_handoff,
+    validate_and_fingerprint,
+    validate_handoff_text,
+)
+from .obsai_bridge import (
+    classify_observation,
+    epistemic_state_for_residue,
+    gate_observations,
+    observation_residue,
+    regime_for_residue,
+)
 from .legacy_transfer import LEGACY_TRANSFER_DOCS, legacy_transfer_checklist
 from .module_registry import DUAT_MODULES, DuatModuleCard, get_modules_by_status, get_public_modules, validate_module_card
 from .public_prompts import PUBLIC_PROMPTS, get_public_prompt_keys
@@ -38,8 +50,15 @@ __all__ = [
     "SimulationRun",
     "WitnessEvent",
     "action_gate_v2",
+    "classify_observation",
+    "epistemic_state_for_residue",
     "event_to_jsonl",
     "falsify_run",
+    "fingerprint_handoff",
+    "gate_observations",
+    "observation_residue",
+    "regime_for_residue",
+    "validate_and_fingerprint",
     "get_modules_by_status",
     "get_public_modules",
     "get_public_prompt_keys",

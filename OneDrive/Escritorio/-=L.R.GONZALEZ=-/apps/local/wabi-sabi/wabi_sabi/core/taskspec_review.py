@@ -13,6 +13,7 @@ from wabi_sabi.core.tools import write_artifact
 TASKSPEC_REVIEW_SCHEMA = "wabi.taskspec_review.v0_1"
 TASKSPEC_APPLY_BLOCK_SCHEMA = "wabi.taskspec_review.apply_block.v0_1"
 TASKSPEC_GATE_PREVIEW_SCHEMA = "wabi.taskspec_gate_preview.v0_1"
+GHOST_GATE_SCHEMA = "wabi.ghost_gate.v0_1"
 PRIVATE_TEXT_KEYS = {
     "prompt",
     "message",
@@ -123,11 +124,57 @@ def block_apply_attempt(task_spec: Mapping[str, Any] | None = None) -> dict[str,
     }
 
 
+def _collect_private_keys(value: Any) -> set[str]:
+    found: set[str] = set()
+    if isinstance(value, Mapping):
+        for key, item in value.items():
+            if str(key) in PRIVATE_TEXT_KEYS:
+                found.add(str(key))
+            found |= _collect_private_keys(item)
+    elif isinstance(value, list):
+        for item in value:
+            found |= _collect_private_keys(item)
+    return found
+
+
+def run_ghost_gate(task_spec: Mapping[str, Any] | None = None) -> dict[str, Any]:
+    """GhostGate: simulate a TaskSpec with private/secret fields redacted, without
+    touching any source.
+
+    Returns the ghosted (redacted) view plus the explicit list of fields that were
+    stripped, so an apply preview can be reviewed safely. This is a simulation only:
+    ``applied_to_sources`` is always ``False`` and the publication gate stays BLOCK.
+    """
+    raw = dict(task_spec or {})
+    ghosted_fields = sorted(_collect_private_keys(raw))
+    redacted = redact_taskspec(raw)
+    review = normalize_taskspec_for_review(raw)
+    return redact_mapping(
+        {
+            "schema": GHOST_GATE_SCHEMA,
+            "status": "GHOST_OK",
+            "simulated": True,
+            "applied_to_sources": False,
+            "cloud_provider_called": False,
+            "graphics_live": False,
+            "publication_gate": "BLOCK",
+            "task_id": review["task_id"],
+            "fingerprint": review["fingerprint"],
+            "ghosted_fields": ghosted_fields,
+            "ghosted_field_count": len(ghosted_fields),
+            "affected_paths": list(review.get("affected_paths") or []),
+            "redacted_taskspec": redacted,
+            "next_safe_action": "Review the ghosted TaskSpec; no source was touched and apply remains blocked.",
+        }
+    )
+
+
 def build_gate_preview(task_spec: Mapping[str, Any] | None) -> dict[str, Any]:
     review = normalize_taskspec_for_review(task_spec or {})
     readiness = evaluate_apply_readiness(review)
     local_apply = _local_apply_readiness(review)
     local_ready = bool(local_apply.get("ready"))
+    ghost_gate = run_ghost_gate(task_spec or {})
     preview = {
         "schema": TASKSPEC_GATE_PREVIEW_SCHEMA,
         "status": "OK",
@@ -155,6 +202,7 @@ def build_gate_preview(task_spec: Mapping[str, Any] | None) -> dict[str, Any]:
         ),
         "readiness": readiness,
         "local_apply": local_apply,
+        "ghost_gate": ghost_gate,
         "cloud": {
             "involved": bool(review.get("needs_cloud")),
             "proposal_only": True,
@@ -229,8 +277,8 @@ def list_required_gates(task_spec: Mapping[str, Any] | None) -> list[dict[str, s
         },
         {
             "name": "GhostGate",
-            "status": "REQUIRED_FUTURE",
-            "reason": "Rollback and failure simulation required before apply.",
+            "status": "IMPLEMENTED_REVIEW_ONLY",
+            "reason": "Redacted TaskSpec simulation available via run_ghost_gate; apply still blocked in v0.1.",
         },
         {
             "name": "RollbackStore",

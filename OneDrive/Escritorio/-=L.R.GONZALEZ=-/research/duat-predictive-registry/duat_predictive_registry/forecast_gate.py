@@ -4,6 +4,39 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
+try:  # Canonical regime ladder from obsai-core (single source of truth).
+    from obsai_core import estimate_regime as _obsai_estimate_regime
+except Exception:  # pragma: no cover - dependency-light fallback.
+    _obsai_estimate_regime = None
+
+
+def _regime_for_r(r_pred: float) -> str:
+    """Canonical OSIT regime for R_pred (mirrors obsai_core.metrics.estimate_regime)."""
+    if _obsai_estimate_regime is not None:
+        return str(_obsai_estimate_regime(r_pred).value)
+    r = max(0.0, min(1.0, float(r_pred)))
+    if r < 0.15:
+        return "OPTIMO"
+    if r < 0.30:
+        return "FUNCIONAL"
+    if r < 0.45:
+        return "PRE_JAMMING"
+    if r < 0.60:
+        return "JAMMING_TEMPRANO"
+    return "JAMMING"
+
+
+def _epistemic_state_for_r(r_pred: float) -> str:
+    """Canonical R -> epistemic-state bridge (OSIT_CANON_REUSE_CONTRACT §2.4)."""
+    r = max(0.0, min(1.0, float(r_pred)))
+    if r < 0.15:
+        return "CERTEZA"
+    if r < 0.45:
+        return "INFERENCIA"
+    if r < 0.60:
+        return "INCOGNITA"
+    return "BLOQUEADO"
+
 
 @dataclass(frozen=True)
 class ForecastGateInput:
@@ -17,12 +50,7 @@ class ForecastGateInput:
     R_pred: float = 1.0
 
 
-def forecast_gate(gate_input: ForecastGateInput | dict[str, object]) -> dict[str, str]:
-    if isinstance(gate_input, ForecastGateInput):
-        item = gate_input
-    else:
-        item = ForecastGateInput(**gate_input)
-
+def _forecast_gate_core(item: ForecastGateInput) -> dict[str, str]:
     if not item.has_source_card:
         return {"gate": "REVIEW", "reason": "missing_source_card"}
     if not item.has_backtest:
@@ -44,3 +72,42 @@ def forecast_gate(gate_input: ForecastGateInput | dict[str, object]) -> dict[str
     if item.R_pred >= 0.35:
         return {"gate": "REVIEW", "reason": "r_pred_review"}
     return {"gate": "APPROVE", "reason": "forecast_gate_passed"}
+
+
+def forecast_gate(gate_input: ForecastGateInput | dict[str, object]) -> dict[str, str]:
+    if isinstance(gate_input, ForecastGateInput):
+        item = gate_input
+    else:
+        item = ForecastGateInput(**gate_input)
+
+    result = _forecast_gate_core(item)
+    # Annotate with the canonical OSIT regime/state (obsai-core). The gate DECISION is
+    # unchanged; thresholds are not renumbered here (canon decision is separate).
+    result.setdefault("regime", _regime_for_r(item.R_pred))
+    result.setdefault("epistemic_state", _epistemic_state_for_r(item.R_pred))
+    return result
+
+
+def obsai_forecast_precheck(r_pred: float) -> dict[str, object]:
+    """Strict canonical pre-check (NEW wiring) for before a prediction is emitted/written.
+
+    INCOGNITA/BLOQUEADO -> BLOCK, INFERENCIA at/above the review band -> REVIEW, else APPROVE.
+    This is an additional obsai-core guard; it does NOT replace or renumber forecast_gate.
+    """
+    regime = _regime_for_r(r_pred)
+    state = _epistemic_state_for_r(r_pred)
+    if state in {"INCOGNITA", "BLOQUEADO"}:
+        gate = "BLOCK"
+    elif state == "INFERENCIA" and float(r_pred) >= 0.35:
+        gate = "REVIEW"
+    else:
+        gate = "APPROVE"
+    return {
+        "schema": "duat.predictive.obsai_forecast_precheck.v1",
+        "regime": regime,
+        "epistemic_state": state,
+        "gate": gate,
+        "R_pred": round(float(r_pred), 6),
+        "calibration": "DEMO_ONLY",
+        "publication_gate": "BLOCK",
+    }

@@ -1,12 +1,18 @@
 from __future__ import annotations
 
 import py_compile
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 from textwrap import dedent
 
+from wabi_sabi.core.gate import ActionGate
 from wabi_sabi.core.patch_planner import build_file_patch_plan, resolve_workspace_text_target, sha256_text
 from wabi_sabi.core.safe_executor import SafeExecutor
+
+try:  # Canonical OSIT action gate from obsai-core (single source of truth).
+    from obsai_core import evaluate_action as _obsai_evaluate_action
+except Exception:  # pragma: no cover - degrade to the local keyword gate only.
+    _obsai_evaluate_action = None
 
 
 @dataclass(frozen=True)
@@ -21,10 +27,51 @@ class PatchResult:
     after_hash: str
     changed: bool
     verification: str
+    gate: str = "APPROVE"
+    gate_reasons: list[str] = field(default_factory=list)
 
 
 def resolve_python_target(workspace: Path, target: str | Path) -> Path:
     return resolve_workspace_text_target(workspace, target, suffix=".py")
+
+
+def gate_python_patch(*, intent: str, code: str, existed: bool) -> dict:
+    """Evaluate a scoped Python patch with the local ActionGate and obsai-core
+    ``evaluate_action`` (when importable) **before** anything is written.
+
+    Returns the recorded gate verdict so it can be stored next to the before/after
+    hashes. A hard-boundary intent (local BLOCK) or critical residue (obsai BLOCK)
+    blocks the write; obsai REVIEW is recorded but does not block a scoped local apply.
+    """
+    local = ActionGate().evaluate_text(intent or "")
+    reasons = [f"local:{reason}" for reason in local.reasons]
+    obsai_status = "unavailable"
+    theta: float | None = None
+    residue: float | None = None
+    if _obsai_evaluate_action is not None:
+        action = {
+            "action_type": "edit_file",
+            "input": intent or "scoped_python_code_patch",
+            "output": code[:1200],
+            "risk": 0.45 if existed else 0.25,
+            # SafeExecutor captures a rollback snapshot before writing, so the patch is reversible.
+            "reversibility": 0.9,
+            "self_check": {"summary": intent or "scoped_python_code_patch", "assumptions": ["scoped_single_file_python_patch"]},
+        }
+        result = _obsai_evaluate_action(action)
+        obsai_status = str(result.get("status", "REVIEW"))
+        theta = result.get("theta")
+        residue = result.get("scores", {}).get("R")
+        reasons.extend(f"obsai:{reason}" for reason in result.get("reasons", []))
+    final_gate = "BLOCK" if local.gate == "BLOCK" or obsai_status == "BLOCK" else "APPROVE"
+    return {
+        "gate": final_gate,
+        "reasons": list(dict.fromkeys(reasons)),
+        "theta": theta,
+        "residue": residue,
+        "obsai_status": obsai_status,
+        "local_gate": local.gate,
+    }
 
 
 def apply_python_patch(
@@ -33,6 +80,7 @@ def apply_python_patch(
     runtime_root: Path,
     target: str | Path,
     code: str,
+    intent: str = "",
 ) -> PatchResult:
     target_path = resolve_python_target(workspace, target)
     old_text = target_path.read_text(encoding="utf-8") if target_path.exists() else ""
@@ -42,12 +90,25 @@ def apply_python_patch(
 
     compile(new_text, str(target_path), "exec")
 
+    # WS1.1: the scoped write passes through ActionGate/evaluate_action before executing,
+    # and the gate verdict is carried into the plan + witness next to the content hashes.
+    verdict = gate_python_patch(intent=intent, code=new_text, existed=target_path.exists())
+    if verdict["gate"] == "BLOCK":
+        raise ValueError("action_gate_blocked:" + (",".join(verdict["reasons"]) or "hard_boundary"))
+
+    gate_reasons = [
+        f"action_gate={verdict['gate']}",
+        f"obsai_status={verdict['obsai_status']}",
+        *verdict["reasons"],
+    ]
     plan = build_file_patch_plan(
         workspace=workspace,
         target=target,
         content=new_text,
         summary="scoped_python_code_patch",
         suffix=".py",
+        gate=verdict["gate"],
+        extra_reasons=gate_reasons,
     )
     execution = SafeExecutor(workspace=workspace, runtime_root=runtime_root).execute(plan)
     if not execution.ok:
@@ -66,6 +127,8 @@ def apply_python_patch(
         after_hash=after_hash,
         changed=execution.changed,
         verification=execution.verification,
+        gate=verdict["gate"],
+        gate_reasons=gate_reasons,
     )
 
 
