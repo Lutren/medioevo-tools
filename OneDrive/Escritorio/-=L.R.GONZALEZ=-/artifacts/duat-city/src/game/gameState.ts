@@ -3,7 +3,7 @@ import { createCity } from "../sim/city";
 import { generateHandoff } from "../core/handoff";
 import { createDefaultPlayableSceneState } from "../scene/sceneState";
 import { createAudioGameFeelSnapshot } from "../audio/gameFeelAdapter";
-import type { GameState } from "./gameTypes";
+import type { GameState, FrequencyType } from "./gameTypes";
 
 export function createGameState(city: CityState = createCity()): GameState {
   const scene = city.playableScene ?? createDefaultPlayableSceneState();
@@ -29,6 +29,11 @@ export function createGameState(city: CityState = createCity()): GameState {
     audioGameFeel: createAudioGameFeelSnapshot({ ...city, playableScene: scene }),
     vibeHistory: [],
     handoff: generateHandoff(city),
+    coherencePsi: 1.0,
+    activeFrequencies: [],
+    absorbedFrequencies: {},
+    frequencySources: [],
+    inventory: [],
   };
 }
 
@@ -51,6 +56,24 @@ export function computeGameOsitMetrics(game: Pick<GameState, "scene" | "city">):
   };
 }
 
-function clamp01(value: number): number {
+export function clamp01(value: number): number {
   return Number(Math.max(0, Math.min(1, Number.isFinite(value) ? value : 0)).toFixed(3));
+}
+
+export function adjustCoherence(game: GameState, amount: number): void {
+  game.coherencePsi = clamp01(game.coherencePsi + amount);
+}
+
+export function absorbFrequency(game: GameState, frequency: FrequencyType): void {
+  game.absorbedFrequencies[frequency.name] = frequency;
+}
+
+export function triggerFrequency(game: GameState, frequencyName: string): boolean {
+  const frequency = game.absorbedFrequencies[frequencyName];
+  if (frequency && game.coherencePsi >= frequency.costPsi) {
+    game.coherencePsi -= frequency.costPsi;
+    game.activeFrequencies.push(frequency);
+    return true;
+  }
+  return false;
 }

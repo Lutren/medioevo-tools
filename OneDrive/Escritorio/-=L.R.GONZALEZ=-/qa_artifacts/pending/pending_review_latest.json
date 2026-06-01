@@ -1,7 +1,7 @@
 {
   "schema": "medioevo.pending_review.v1",
-  "generated_at": "2026-05-23T01:51:22+00:00",
-  "date": "2026-05-23",
+  "generated_at": "2026-06-01T06:12:07+00:00",
+  "date": "2026-06-01",
   "root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
   "policy": {
     "status": "snapshot_only_not_closure",
@@ -27,22 +27,7 @@
     "top_items": []
   },
   "kairos_fastlane": {
-    "exists": true,
-    "path": "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/observacionista/kairos_attention_hygiene/pendientes_fastlane_2026-05-01.json",
-    "schema": "claudio.kairos_attention_hygiene.v1",
-    "generated_at": "2026-05-01T00:08:52+00:00",
-    "stale": true,
-    "decision_count": 478,
-    "by_action": {
-      "defer": 325,
-      "hold_calibration": 103,
-      "queue_next": 50
-    },
-    "by_priority": {
-      "P0": 19,
-      "P1": 37,
-      "P2": 408,
-      "P3": 14
-    }
+    "exists": false,
+    "path": "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/observacionista/kairos_attention_hygiene/pendientes_fastlane_2026-05-01.json"
   }
 }

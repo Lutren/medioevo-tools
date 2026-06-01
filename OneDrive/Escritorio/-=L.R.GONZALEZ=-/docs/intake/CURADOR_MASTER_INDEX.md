@@ -1,12 +1,12 @@
 # Curador SETO Master Index
 
-Generated UTC: `2026-05-23T20:05:02.029454+00:00`
+Generated UTC: `2026-06-01T03:35:01.721533+00:00`
 
 Fuente canonica operativa para Downloads. SQLite es la base consultable; las fichas Markdown son la capa humana.
 
 | campo | valor |
 |---|---:|
-| archivos registrados | 303 |
+| archivos registrados | 352 |
 | grupos duplicados exactos detectados | 0 |
 | borrados seguros en este pase | 0 |
 | atlas main | `docs/intake/ATLAS_MAIN.md` |
@@ -16,8 +16,9 @@ Fuente canonica operativa para Downloads. SQLite es la base consultable; las fic
 
 | status | count |
 |---|---:|
-| `ARCHIVO_FRIO` | 273 |
+| `ARCHIVO_FRIO` | 320 |
 | `BASURA_REGENERABLE_BORRADA` | 8 |
+| `BLOQUEADO` | 2 |
 | `BORRADO_DUPLICADO` | 22 |
 
 ## Lanes
@@ -25,10 +26,10 @@ Fuente canonica operativa para Downloads. SQLite es la base consultable; las fic
 | lane | count |
 |---|---:|
 | `assets-review` | 45 |
-| `cleanup` | 91 |
-| `duat-lab` | 17 |
+| `cleanup` | 104 |
+| `duat-lab` | 19 |
 | `local-agent` | 16 |
-| `research-boundary` | 134 |
+| `research-boundary` | 168 |
 
 ## Duplicados exactos
 
@@ -40,23 +41,31 @@ Fuente canonica operativa para Downloads. SQLite es la base consultable; las fic
 | status | lane | decision | ficha | path |
 |---|---|---|---|---|
 | `ARCHIVO_FRIO` | `local-agent` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/F6C6EF1B838D31F4_claudio-local-code-agent.md` | `C:\Users\L-Tyr\Downloads\# CLAUDIO — LOCAL CODE AGENT.txt` |
+| `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/028200DF8DC0BC21_documento-consolidado-medioevo.md` | `C:\Users\L-Tyr\Downloads\# DOCUMENTO CONSOLIDADO MEDIOEVO -.txt` |
+| `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/98789635BDF8485C_gua-maestra-definitiva---medioev.md` | `C:\Users\L-Tyr\Downloads\# GUÍA MAESTRA DEFINITIVA - MEDIOEV.txt` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/2245E8985C47F65A_osit-os-sistema-operativo-observa.md` | `C:\Users\L-Tyr\Downloads\# OSIT-OS Sistema Operativo Observa.txt` |
 | `BORRADO_DUPLICADO` | `cleanup` | `DELETE_APPROVED_AFTER_HASH_EXECUTED` | `docs/intake/curador_fichas/downloads/2E9D8A6F6317789A_usrbinenv-python3.md` | `C:\Users\L-Tyr\Downloads\#!usrbinenv python3.txt` |
 | `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/3088FE23BA847E24_1.-estado.md` | `C:\Users\L-Tyr\Downloads\## 1. ESTADO.txt` |
 | `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/4ADDB3BFD8E99900_estado.md` | `C:\Users\L-Tyr\Downloads\## ESTADO.txt` |
 | `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/CD172E00C7756CD5_resumen-ejecutivo.md` | `C:\Users\L-Tyr\Downloads\### Resumen ejecutivo.txt` |
+| `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/35608C93DF3C1670_inteligencia-del-detalle.md` | `C:\Users\L-Tyr\Downloads\-=Inteligencia del detalle=-.txt` |
+| `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/DDA3688666871F7B_tudt.md` | `C:\Users\L-Tyr\Downloads\-=TUDT=-.txt` |
 | `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/691F2D9FA01E6B05_00_readme_master.md` | `C:\Users\L-Tyr\Downloads\00_README_MASTER.md` |
+| `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/524FF55B367887B2_01_--observacionismo.md` | `C:\Users\L-Tyr\Downloads\01_-= OBSERVACIONISMO =-.txt` |
 | `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/1159DF5043B759D0_01_mapa_general.md` | `C:\Users\L-Tyr\Downloads\01_MAPA_GENERAL.md` |
+| `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/94116FC62F95AC53_02_--observacionismo.md` | `C:\Users\L-Tyr\Downloads\02_-= OBSERVACIONISMO =-.txt` |
 | `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/5A7DE43B01DB13C6_02_glosario_canonico.md` | `C:\Users\L-Tyr\Downloads\02_GLOSARIO_CANONICO.md` |
 | `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/79DBB8202E0B2E6D_03_teoria_informacion.md` | `C:\Users\L-Tyr\Downloads\03_TEORIA_INFORMACION.md` |
 | `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/B21EDA2148F81248_04_teoria_ia_agentes.md` | `C:\Users\L-Tyr\Downloads\04_TEORIA_IA_AGENTES.md` |
 | `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/7D8BD2440D8976D0_05_teoria_fisica_real.md` | `C:\Users\L-Tyr\Downloads\05_TEORIA_FISICA_REAL.md` |
+| `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/F214A1507B0822C2_06_herramientas.md` | `C:\Users\L-Tyr\Downloads\06_HERRAMIENTAS.md` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/10C3095ABEBFA8C1_06_hipotesis_fisicas_osit_tuip_sigma.md` | `C:\Users\L-Tyr\Downloads\06_HIPOTESIS_FISICAS_OSIT_TUIP_SIGMA.md` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/12A0653024016AEE_07_observacionismo.md` | `C:\Users\L-Tyr\Downloads\07_OBSERVACIONISMO.md` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/CF9D1E45E3C16471_08_observacionismo_inverso.md` | `C:\Users\L-Tyr\Downloads\08_OBSERVACIONISMO_INVERSO.md` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/24714EAE0A97F89E_09_ingenieria_observacionista.md` | `C:\Users\L-Tyr\Downloads\09_INGENIERIA_OBSERVACIONISTA.md` |
 | `ARCHIVO_FRIO` | `assets-review` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `C:\Users\L-Tyr\Downloads\1.png` |
 | `ARCHIVO_FRIO` | `assets-review` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `C:\Users\L-Tyr\Downloads\10.png` |
+| `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/226D9FAE716CA822_10_markdowns_sintesis_2026-05-24_actualizado_2026-05-26.md` | `C:\Users\L-Tyr\Downloads\10_MARKDOWNS_SINTESIS_2026-05-24_ACTUALIZADO_2026-05-26.zip` |
 | `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/C9312402FAC54A92_10_wabi_sabi_claudio_agi.md` | `C:\Users\L-Tyr\Downloads\10_WABI_SABI_CLAUDIO_AGI.md` |
 | `ARCHIVO_FRIO` | `assets-review` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `C:\Users\L-Tyr\Downloads\11.png` |
 | `ARCHIVO_FRIO` | `assets-review` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `C:\Users\L-Tyr\Downloads\12.png` |
@@ -100,11 +109,15 @@ Fuente canonica operativa para Downloads. SQLite es la base consultable; las fic
 | `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/B4D92A26610B8208_agents.md` | `C:\Users\L-Tyr\Downloads\AGENTS.md` |
 | `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/5F46FE81903F06B7_ahora-que-he-estudiado-a-fondo-cada.md` | `C:\Users\L-Tyr\Downloads\Ahora que he estudiado a fondo cada.txt` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/7FE2A57D9D2EF97A_analisis_linea_por_linea_agente_local.md` | `C:\Users\L-Tyr\Downloads\ANALISIS_LINEA_POR_LINEA_AGENTE_LOCAL.csv` |
+| `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/D2AA5EAF0ACEA788_anexo-estilo-iv---transmedia-fusion.md` | `C:\Users\L-Tyr\Downloads\ANEXO ESTILO IV - TRANSMEDIA FUSION.txt` |
+| `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/6BE1F449426AD928_antigravity-x64.md` | `C:\Users\L-Tyr\Downloads\Antigravity-x64.exe` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/973F22C75987AC56_aqu-tienes-el-cdigo-completo-de.md` | `C:\Users\L-Tyr\Downloads\Aquí tienes el código completo de `.txt` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/6E5CD951DFB11C65_auditoria_observacionista_inversa_medioevo_v2.md` | `C:\Users\L-Tyr\Downloads\AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v2.pdf` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/EF1F567506C2B22F_auditoria_observacionista_inversa_medioevo_v2_pack.md` | `C:\Users\L-Tyr\Downloads\AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v2_PACK.zip` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/3F5EBDA3A9AD820A_auditoria_observacionista_inversa_medioevo_v3_complementada.md` | `C:\Users\L-Tyr\Downloads\AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v3_COMPLEMENTADA.pdf` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/2609B514DE952286_auditoria_observacionista_inversa_medioevo_v3_complementada_pack.md` | `C:\Users\L-Tyr\Downloads\AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v3_COMPLEMENTADA_PACK.zip` |
+| `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/3CF8C1308FF3739C_canon_01_continuidad.md` | `C:\Users\L-Tyr\Downloads\CANON_01_Continuidad.txt` |
+| `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/010547C738132AFB_canon_02_realidad.md` | `C:\Users\L-Tyr\Downloads\CANON_02_Realidad.txt` |
 | `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/86C42BF48E8EAEA9_claude-setup.md` | `C:\Users\L-Tyr\Downloads\Claude Setup.exe` |
 | `ARCHIVO_FRIO` | `local-agent` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/803FA12635AB4CB7_claudio_codex_agent.md` | `C:\Users\L-Tyr\Downloads\claudio_codex_agent.py` |
 | `BORRADO_DUPLICADO` | `local-agent` | `DELETE_APPROVED_AFTER_HASH_EXECUTED` | `docs/intake/curador_fichas/downloads/B8236884F87A4350_claudio_local_code_agent-1.md` | `C:\Users\L-Tyr\Downloads\claudio_local_code_agent (1).py` |
@@ -126,7 +139,11 @@ Fuente canonica operativa para Downloads. SQLite es la base consultable; las fic
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/4E6FD62629D2AC39_client_ready_lovable_ui_i18n_assets.md` | `C:\Users\L-Tyr\Downloads\client_ready_lovable_ui_i18n_assets.zip` |
 | `ARCHIVO_FRIO` | `local-agent` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/FC52A705B00E2127_code_agent.md` | `C:\Users\L-Tyr\Downloads\CODE_AGENT.md` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/426F31457ECAAD88_codex-installer.md` | `C:\Users\L-Tyr\Downloads\Codex Installer.exe` |
+| `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/2C73E85ADFE1919E_codex-medioevo-la-biblia-de-producc.md` | `C:\Users\L-Tyr\Downloads\CODEX MEDIOEVO LA BIBLIA DE PRODUCC.txt` |
 | `ARCHIVO_FRIO` | `duat-lab` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/BB52A1D73F54230A_codex_integrate_duat_pixel_assets_v1_0.md` | `C:\Users\L-Tyr\Downloads\CODEX_INTEGRATE_DUAT_PIXEL_ASSETS_v1_0.md` |
+| `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/747F226DFAFDB3BE_codex_osit_next_run_bios_controlled_2026-05-26.md` | `C:\Users\L-Tyr\Downloads\CODEX_OSIT_NEXT_RUN_BIOS_CONTROLLED_2026-05-26.md` |
+| `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/4EA05638726B567B_codex_osit_run2_vendor_bios_authorized_2026-05-26.md` | `C:\Users\L-Tyr\Downloads\CODEX_OSIT_RUN2_VENDOR_BIOS_AUTHORIZED_2026-05-26.md` |
+| `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/85825785365A4363_codex_osit_wabi_safe_system_setup_prompt_2026-05-26.md` | `C:\Users\L-Tyr\Downloads\CODEX_OSIT_WABI_SAFE_SYSTEM_SETUP_PROMPT_2026-05-26.md` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/73AECCE9D7A249EB_codex_prompt_asimov_osit_cogprog_v1-1.md` | `C:\Users\L-Tyr\Downloads\CODEX_PROMPT_ASIMOV_OSIT_COGPROG_v1 (1).md` |
 | `ARCHIVO_FRIO` | `local-agent` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/AF3E932E7438043D_coding_agent.md` | `C:\Users\L-Tyr\Downloads\coding_agent.py` |
 | `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/5C68D9B0E2729A1C_correcciones-necesarias-a-tu-formal.md` | `C:\Users\L-Tyr\Downloads\Correcciones necesarias a tu formal.txt` |
@@ -147,6 +164,7 @@ Fuente canonica operativa para Downloads. SQLite es la base consultable; las fic
 | `ARCHIVO_FRIO` | `assets-review` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `C:\Users\L-Tyr\Downloads\download (2).jpg` |
 | `ARCHIVO_FRIO` | `assets-review` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `C:\Users\L-Tyr\Downloads\download (3).jpg` |
 | `ARCHIVO_FRIO` | `assets-review` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `C:\Users\L-Tyr\Downloads\download.jpg` |
+| `ARCHIVO_FRIO` | `duat-lab` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/6609393DB7EEB94E_duat-telecom-bulletin.md` | `C:\Users\L-Tyr\Downloads\duat-telecom-bulletin.md` |
 | `ARCHIVO_FRIO` | `duat-lab` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/FB5DC6605D7B05AA_duat_agent_trading_cards_assets_v0_1.md` | `C:\Users\L-Tyr\Downloads\duat_agent_trading_cards_assets_v0_1.zip` |
 | `ARCHIVO_FRIO` | `duat-lab` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/2D90D5C1E4D4EC2F_duat_living_matrix_v07.md` | `C:\Users\L-Tyr\Downloads\duat_living_matrix_v07.zip` |
 | `ARCHIVO_FRIO` | `duat-lab` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/7356A5059329F3EC_duat_observacionismo.md` | `C:\Users\L-Tyr\Downloads\duat_observacionismo.py` |
@@ -160,16 +178,20 @@ Fuente canonica operativa para Downloads. SQLite es la base consultable; las fic
 | `ARCHIVO_FRIO` | `duat-lab` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/F38085CF0B367026_duat_retrofuture_pixel_assets_v0_9_real.md` | `C:\Users\L-Tyr\Downloads\DUAT_RETROFUTURE_PIXEL_ASSETS_v0_9_REAL.zip` |
 | `ARCHIVO_FRIO` | `duat-lab` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/26493E9A264DA91D_duat_tech_trading_cards_batch_002.md` | `C:\Users\L-Tyr\Downloads\DUAT_TECH_TRADING_CARDS_BATCH_002.zip` |
 | `ARCHIVO_FRIO` | `duat-lab` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/451846C747437109_duat_tribes_cultures_batch_003_021_030.md` | `C:\Users\L-Tyr\Downloads\DUAT_tribes_cultures_batch_003_021_030.md` |
+| `ARCHIVO_FRIO` | `duat-lab` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/67E263F38819EC99_duat_v4_snapshot_1780206401501.md` | `C:\Users\L-Tyr\Downloads\duat_v4_snapshot_1780206401501.json` |
 | `ARCHIVO_FRIO` | `assets-review` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `C:\Users\L-Tyr\Downloads\e4dbe52b-094a-4b71-9926-a0d45c1017fc.png` |
 | `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/51064A330D8DF783_entendido.-acto-como-el-arquitecto.md` | `C:\Users\L-Tyr\Downloads\Entendido. Actúo como el arquitecto.txt` |
 | `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/7015470ED32D1DFB_estado-r0.08-rgimen-de-integrac.md` | `C:\Users\L-Tyr\Downloads\ESTADO (R≈0.08, régimen de integrac.txt` |
 | `BORRADO_DUPLICADO` | `research-boundary` | `DELETE_APPROVED_AFTER_HASH_EXECUTED` | `docs/intake/curador_fichas/downloads/21E68B2B0B670E60_estado-r0.18-rgimen-observacion-1.md` | `C:\Users\L-Tyr\Downloads\ESTADO (R≈0.18, régimen observacion (1).txt` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/21E68B2B0B670E60_estado-r0.18-rgimen-observacion.md` | `C:\Users\L-Tyr\Downloads\ESTADO (R≈0.18, régimen observacion.txt` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/BE32A02C13C572D3_estado.md` | `C:\Users\L-Tyr\Downloads\ESTADO.txt` |
+| `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/644C7E88E09D0336_estos-son-todos-por-ahora.md` | `C:\Users\L-Tyr\Downloads\estos son todos por ahora.txt` |
 | `ARCHIVO_FRIO` | `assets-review` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `C:\Users\L-Tyr\Downloads\FibMob_EML_v3_radical.png` |
 | `ARCHIVO_FRIO` | `assets-review` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `C:\Users\L-Tyr\Downloads\FibMob_EML_v3_unisensorial.png` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/8739C76E681F9009_files.md` | `C:\Users\L-Tyr\Downloads\files.zip` |
+| `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/D2FF9A071701EE48_github-recovery-codes.md` | `C:\Users\L-Tyr\Downloads\github-recovery-codes.txt` |
 | `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/FE718E7BABB14F3C_gitignore.md` | `C:\Users\L-Tyr\Downloads\gitignore` |
+| `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/BCB772C1505FF1FC_gua-del-canon-maestro-medioevo.md` | `C:\Users\L-Tyr\Downloads\Guía del Canon Maestro Medioevo.docx` |
 | `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/9DF66891990C2391_handoff_completo.md` | `C:\Users\L-Tyr\Downloads\Handoff_completo.mp4` |
 | `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/0A2F1A2B70314057_handoff_physics_v0_1.md` | `C:\Users\L-Tyr\Downloads\HANDOFF_PHYSICS_v0_1.md` |
 | `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/70F77199A9B30831_he-construido-el-laboratorio-unific.md` | `C:\Users\L-Tyr\Downloads\He construido el laboratorio unific.txt` |
@@ -177,6 +199,7 @@ Fuente canonica operativa para Downloads. SQLite es la base consultable; las fic
 | `ARCHIVO_FRIO` | `assets-review` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `C:\Users\L-Tyr\Downloads\images.jpg` |
 | `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/9E67638362187296_imgres.md` | `C:\Users\L-Tyr\Downloads\imgres.htm` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/A12A05D65D03AB05_invoice-zo1cvzyy-0009.md` | `C:\Users\L-Tyr\Downloads\Invoice-ZO1CVZYY-0009.pdf` |
+| `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/62ED843AB17C4194_invoice-zo1cvzyy-0012.md` | `C:\Users\L-Tyr\Downloads\Invoice-ZO1CVZYY-0012.pdf` |
 | `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/DA6193EC73032DE3_kimi_3.0.5.md` | `C:\Users\L-Tyr\Downloads\kimi_3.0.5.exe` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/53BBF04CAA13A6AD_leaderboard_popnfw_2000.md` | `C:\Users\L-Tyr\Downloads\leaderboard_popnfw_2000.json` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/E088B14056C55AD3_leaderboard_psichi_2000.md` | `C:\Users\L-Tyr\Downloads\leaderboard_psichi_2000.json` |
@@ -184,6 +207,7 @@ Fuente canonica operativa para Downloads. SQLite es la base consultable; las fic
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/0CDFD1409E2F7582_lovable-project-b8fad30e-4e58-4734-a54a-fb4c7a97d21b-2026-05-11-1.md` | `C:\Users\L-Tyr\Downloads\lovable-project-b8fad30e-4e58-4734-a54a-fb4c7a97d21b-2026-05-11 (1).zip` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/34D148AA69274989_lovable-project-b8fad30e-4e58-4734-a54a-fb4c7a97d21b-2026-05-11.md` | `C:\Users\L-Tyr\Downloads\lovable-project-b8fad30e-4e58-4734-a54a-fb4c7a97d21b-2026-05-11.zip` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/9F7C6BE0954794EE_lovable-project-e5b2c561-8209-4ac6-8e3a-b06ab4dbb983-2026-05-14.md` | `C:\Users\L-Tyr\Downloads\lovable-project-e5b2c561-8209-4ac6-8e3a-b06ab4dbb983-2026-05-14.zip` |
+| `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/6393EAA08D642FF3_manifest_partes_descarga.md` | `C:\Users\L-Tyr\Downloads\MANIFEST_PARTES_DESCARGA.json` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/857A189895E86020_medioevo-campaign-save-2026-05-14.md` | `C:\Users\L-Tyr\Downloads\medioevo-campaign-save-2026-05-14.json` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/5FF2361D3EE1BE02_medioevo-campaign-save-2026-05-15.md` | `C:\Users\L-Tyr\Downloads\medioevo-campaign-save-2026-05-15.json` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/5C9C469B34DAFDBF_medioevo-gm-accessible-isometric-v0_3.md` | `C:\Users\L-Tyr\Downloads\medioevo-gm-accessible-isometric-v0_3.zip` |
@@ -265,12 +289,28 @@ Fuente canonica operativa para Downloads. SQLite es la base consultable; las fic
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/2E9D8A6F6317789A_observacionismo_v8_1_addons.md` | `C:\Users\L-Tyr\Downloads\observacionismo_v8_1_addons.txt` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/9CECC245362EF043_observacionismo_v8_integrator.md` | `C:\Users\L-Tyr\Downloads\observacionismo_v8_integrator.py` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/DA80716BF433D92C_observacionist_solution.md` | `C:\Users\L-Tyr\Downloads\observacionist_solution.py` |
+| `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/8C6DA334A8D04F83_opencode-desktop-installer.md` | `C:\Users\L-Tyr\Downloads\OpenCode Desktop Installer.exe` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/3D2424057A226AD0_osit-teora-completa-de-informacin-con-estado-y-tesis-del-agente-local-si.md` | `C:\Users\L-Tyr\Downloads\OSIT — Teoría Completa de Información con Estado y Tesis del Agente Local sin LLM.docx` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/A59D9A9C40C215E7_osit-teora-completa-de-informacin-con-estado-y-tesis-del-agente-local-si.md` | `C:\Users\L-Tyr\Downloads\OSIT — Teoría Completa de Información con Estado y Tesis del Agente Local sin LLM.pdf` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/5253B5F5371FB818_osit-qg-modulos-extendidos---optimizacion-y-nuevas-aplicaciones.md` | `C:\Users\L-Tyr\Downloads\OSIT-QG Modulos Extendidos - Optimizacion y Nuevas Aplicaciones.pdf` |
+| `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/F97BC2CB482DBC26_osit_medioevo_maestro_autosuficiente_2026-05-26.md` | `C:\Users\L-Tyr\Downloads\OSIT_MEDIOEVO_MAESTRO_AUTOSUFICIENTE_2026-05-26.zip` |
+| `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/8F9EE4D9F60DAC07_osit_medioevo_maestro_completo_sin_omisiones_rawtext_2026-05-26.zip.md` | `C:\Users\L-Tyr\Downloads\OSIT_MEDIOEVO_MAESTRO_COMPLETO_SIN_OMISIONES_RAWTEXT_2026-05-26.zip.part00` |
+| `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/5CB6A73864D0F9BB_osit_medioevo_maestro_completo_sin_omisiones_rawtext_2026-05-26.zip.md` | `C:\Users\L-Tyr\Downloads\OSIT_MEDIOEVO_MAESTRO_COMPLETO_SIN_OMISIONES_RAWTEXT_2026-05-26.zip.part01` |
+| `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/DA02364BD245A3F8_osit_medioevo_maestro_completo_sin_omisiones_rawtext_2026-05-26.zip.md` | `C:\Users\L-Tyr\Downloads\OSIT_MEDIOEVO_MAESTRO_COMPLETO_SIN_OMISIONES_RAWTEXT_2026-05-26.zip.part02` |
+| `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/1BF943AD6BF3D960_osit_medioevo_maestro_completo_sin_omisiones_rawtext_2026-05-26.zip.md` | `C:\Users\L-Tyr\Downloads\OSIT_MEDIOEVO_MAESTRO_COMPLETO_SIN_OMISIONES_RAWTEXT_2026-05-26.zip.part03` |
+| `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/75DE2B86913C6A35_osit_medioevo_maestro_completo_sin_omisiones_rawtext_2026-05-26.zip.md` | `C:\Users\L-Tyr\Downloads\OSIT_MEDIOEVO_MAESTRO_COMPLETO_SIN_OMISIONES_RAWTEXT_2026-05-26.zip.part04` |
+| `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/5876BC9A8C8C123C_osit_medioevo_maestro_completo_sin_omisiones_rawtext_2026-05-26.zip.md` | `C:\Users\L-Tyr\Downloads\OSIT_MEDIOEVO_MAESTRO_COMPLETO_SIN_OMISIONES_RAWTEXT_2026-05-26.zip.part05` |
+| `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/7E480EF9D18FB8AA_osit_medioevo_maestro_completo_sin_omisiones_rawtext_2026-05-26.zip.md` | `C:\Users\L-Tyr\Downloads\OSIT_MEDIOEVO_MAESTRO_COMPLETO_SIN_OMISIONES_RAWTEXT_2026-05-26.zip.part06` |
+| `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/62E3AB94EBF0C724_osit_medioevo_maestro_completo_sin_omisiones_rawtext_2026-05-26.zip.md` | `C:\Users\L-Tyr\Downloads\OSIT_MEDIOEVO_MAESTRO_COMPLETO_SIN_OMISIONES_RAWTEXT_2026-05-26.zip.part07` |
+| `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/230E3B1BC27CCBE7_osit_medioevo_maestro_completo_sin_omisiones_rawtext_2026-05-26.zip.md` | `C:\Users\L-Tyr\Downloads\OSIT_MEDIOEVO_MAESTRO_COMPLETO_SIN_OMISIONES_RAWTEXT_2026-05-26.zip.part08` |
+| `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/683DCDBD5FEA05A1_osit_medioevo_maestro_completo_sin_omisiones_rawtext_2026-05-26.zip.md` | `C:\Users\L-Tyr\Downloads\OSIT_MEDIOEVO_MAESTRO_COMPLETO_SIN_OMISIONES_RAWTEXT_2026-05-26.zip.part09` |
+| `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/4B7044C6302ED688_osit_medioevo_maestro_completo_sin_omisiones_rawtext_2026-05-26.zip.md` | `C:\Users\L-Tyr\Downloads\OSIT_MEDIOEVO_MAESTRO_COMPLETO_SIN_OMISIONES_RAWTEXT_2026-05-26.zip.sha256` |
+| `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/4108944F070CCF39_osit_medioevo_wabi_unificado_final_safe_2026_05_26.md` | `C:\Users\L-Tyr\Downloads\OSIT_MEDIOEVO_WABI_UNIFICADO_FINAL_SAFE_2026_05_26.zip` |
 | `BORRADO_DUPLICADO` | `research-boundary` | `DELETE_APPROVED_AFTER_HASH_EXECUTED` | `docs/intake/curador_fichas/downloads/4C949B54A3951C82_osit_metaoperator_algebra_v1-1.md` | `C:\Users\L-Tyr\Downloads\OSIT_MetaOperator_Algebra_v1 (1).docx` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/4C949B54A3951C82_osit_metaoperator_algebra_v1.md` | `C:\Users\L-Tyr\Downloads\OSIT_MetaOperator_Algebra_v1.docx` |
+| `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/18AC9DCF46948BAA_osit_navaja_suiza_completa.md` | `C:\Users\L-Tyr\Downloads\osit_navaja_suiza_COMPLETA.jsx` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/8016127A31A8E330_osit_observer_kernel.md` | `C:\Users\L-Tyr\Downloads\osit_observer_kernel.py` |
+| `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/877B6752B4E11211_osit_problems_v2-1.md` | `C:\Users\L-Tyr\Downloads\osit_problems_v2 (1).jsx` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/8FC22438C5EF175D_osit_qg_core_rewrite_v0_1.md` | `C:\Users\L-Tyr\Downloads\OSIT_QG_CORE_REWRITE_v0_1.md` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/82B77221A430CAF1_osit_qg_observacionismo.md` | `C:\Users\L-Tyr\Downloads\OSIT_QG_Observacionismo.pdf` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/76F80E0A9A273CBE_osit_resource_optimizer.md` | `C:\Users\L-Tyr\Downloads\osit_resource_optimizer.py` |
@@ -287,9 +327,11 @@ Fuente canonica operativa para Downloads. SQLite es la base consultable; las fic
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/41E5C434FDC08E5C_patch_asimov_osit_cogprog_v1-1.md` | `C:\Users\L-Tyr\Downloads\patch_asimov_osit_cogprog_v1 (1).py` |
 | `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/5A5326EB15B347FF_physics_claims_register_v0_1.md` | `C:\Users\L-Tyr\Downloads\PHYSICS_CLAIMS_REGISTER_v0_1.md` |
 | `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/9685EAC6A84799D8_physics_falsifiers_v0_1.md` | `C:\Users\L-Tyr\Downloads\PHYSICS_FALSIFIERS_v0_1.md` |
+| `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/7D862D73FB87A8F7_prime_residue_analyzer_arp_v0_1.md` | `C:\Users\L-Tyr\Downloads\prime_residue_analyzer_ARP_v0_1.zip` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/6B88F7BDB092F093_project-bolt-sb1-1xako2fw.md` | `C:\Users\L-Tyr\Downloads\project-bolt-sb1-1xako2fw.zip` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/F5879D94B35E20B2_project-bolt-sb1-yvfmocrc.md` | `C:\Users\L-Tyr\Downloads\project-bolt-sb1-yvfmocrc.zip` |
-| `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/534EF2B1A23F3096_prompt_codex_medioevo_v12_0_1_final.md` | `C:\Users\L-Tyr\Downloads\PROMPT_CODEX_MEDIOEVO_V12_0_1_FINAL.md` |
+| `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/43959AE194EB8870_prompt.md` | `C:\Users\L-Tyr\Downloads\Prompt.txt` |
+| `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/3F732A2E834E9F34_prompt_codex_medioevo_v12_0_1_final.md` | `C:\Users\L-Tyr\Downloads\PROMPT_CODEX_MEDIOEVO_V12_0_1_FINAL.md` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/EE9F16E062CFD8BC_prompt_codex_medioevo_v12_0_1_final_full_package.md` | `C:\Users\L-Tyr\Downloads\PROMPT_CODEX_MEDIOEVO_V12_0_1_FINAL_FULL_PACKAGE.md` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/58189EE0BFE00DDB_psi_chi_lab_v2.md` | `C:\Users\L-Tyr\Downloads\psi_chi_lab_v2.py` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/C71A7AA373E460BA_psi_chi_lab_v2_pack.md` | `C:\Users\L-Tyr\Downloads\psi_chi_lab_v2_pack.zip` |
@@ -309,10 +351,16 @@ Fuente canonica operativa para Downloads. SQLite es la base consultable; las fic
 | `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/C6549EB6F0AD5016_readme-2.md` | `C:\Users\L-Tyr\Downloads\README (2).md` |
 | `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/BDD573C85BC4FF40_readme.md` | `C:\Users\L-Tyr\Downloads\README.md` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/55A7E980BDBD5B3E_readme_osit_observer.md` | `C:\Users\L-Tyr\Downloads\README_OSIT_OBSERVER.md` |
+| `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/1DB374D08EAB5409_receipt-2869-6163-5247.md` | `C:\Users\L-Tyr\Downloads\Receipt-2869-6163-5247.pdf` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/CA49AF596F4FFEBF_receipt-2967-9724-4199.md` | `C:\Users\L-Tyr\Downloads\Receipt-2967-9724-4199.pdf` |
+| `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/CFDA92A72B5D24D6_reconstruir_zip_maestro_helper_2026-05-26.md` | `C:\Users\L-Tyr\Downloads\RECONSTRUIR_ZIP_MAESTRO_HELPER_2026-05-26.zip` |
+| `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/BF5C10B7457BCEA8_reconstruir_zip_maestro_linux_mac.md` | `C:\Users\L-Tyr\Downloads\reconstruir_zip_maestro_linux_mac.sh` |
+| `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/EA484B492431B2EA_reconstruir_zip_maestro_windows.md` | `C:\Users\L-Tyr\Downloads\RECONSTRUIR_ZIP_MAESTRO_WINDOWS.ps1` |
 | `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/CCAC616E30760262_replitexport-lutren-1-.tar.md` | `C:\Users\L-Tyr\Downloads\ReplitExport-lutren (1).tar.gz` |
 | `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/C64849B53F09E936_residue_at_eight.md` | `C:\Users\L-Tyr\Downloads\Residue_at_Eight.mp4` |
+| `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/BC4AC88587842E2E_resolucion_problemas_osit.md` | `C:\Users\L-Tyr\Downloads\resolucion_problemas_osit.html` |
 | `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/719126081FEB0CC8_resumen-breve-propongo-una-extensi.md` | `C:\Users\L-Tyr\Downloads\Resumen breve Propongo una extensió.txt` |
+| `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/6226E66F8F0BA9C5_saveweb2zip-com-app-base44-com.md` | `C:\Users\L-Tyr\Downloads\saveweb2zip-com-app-base44-com.zip` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/5A58D900C3A8312E_sdl2-devel-2.32.6-mingw.md` | `C:\Users\L-Tyr\Downloads\SDL2-devel-2.32.6-mingw.zip` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/DF5105E2E46D09C3_sensorium_inversion_lab.md` | `C:\Users\L-Tyr\Downloads\sensorium_inversion_lab.py` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/E16A7CB6EA4B884E_sensorium_inversion_lab_pack.md` | `C:\Users\L-Tyr\Downloads\sensorium_inversion_lab_pack.zip` |
@@ -321,6 +369,8 @@ Fuente canonica operativa para Downloads. SQLite es la base consultable; las fic
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/CE56E5DC5DB36079_smoke_test_results.md` | `C:\Users\L-Tyr\Downloads\smoke_test_results.json` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/88EA367ED89EA390_solicitud-de-auditora-observacioni.md` | `C:\Users\L-Tyr\Downloads\Solicitud de auditoría observacioni.txt` |
 | `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/ABD79343B9DF5240_this-synthesis-integrates-official.md` | `C:\Users\L-Tyr\Downloads\This synthesis integrates official.txt` |
+| `BLOQUEADO` | `research-boundary` | `KEEP_BLOCKED_BOUNDARY_NO_PUBLICATION` | `docs/intake/curador_fichas/downloads/8E9F966B43F29D4E_token-saver-1.md` | `C:\Users\L-Tyr\Downloads\token-saver (1).pdf` |
+| `BLOQUEADO` | `research-boundary` | `KEEP_BLOCKED_BOUNDARY_NO_PUBLICATION` | `docs/intake/curador_fichas/downloads/8E9F966B43F29D4E_token-saver-2.md` | `C:\Users\L-Tyr\Downloads\token-saver (2).pdf` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/C5380DE6BF94392D_tuip_sigma_core.md` | `C:\Users\L-Tyr\Downloads\tuip_sigma_core.py` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/62C6F2E56977F3AC_tuip_sigma_r2_1_pragmatic_canon.md` | `C:\Users\L-Tyr\Downloads\TUIP_SIGMA_R2_1_PRAGMATIC_CANON.md` |
 | `BASURA_REGENERABLE_BORRADA` | `cleanup` | `DELETE_REGENERABLE_AFTER_HASH_EXECUTED` | `docs/intake/curador_fichas/downloads/250781FB5DC82B33_unconfirmed-183512.md` | `C:\Users\L-Tyr\Downloads\Unconfirmed 183512.crdownload` |

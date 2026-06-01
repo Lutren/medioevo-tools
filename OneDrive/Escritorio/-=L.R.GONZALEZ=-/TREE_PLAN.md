@@ -68,6 +68,13 @@ Indices nuevos o existentes:
 - `data/INDEX.md`
 - `tools/INDEX.md`
 
+## 2026-05-31 - Consolidaciones ejecutadas
+
+- `apps/local/wabi-sabi/` archivado a `_archive/legacy/wabi-sabi-legacy-2026-05-31/`.
+  El runtime canónico de Wabi-Sabi está en `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-\02_CLAUDIO\wabi_sabi` y `core/wabi*.py`.
+- `scripts/wabi_sabi_startup.*` archivados junto con el legacy.
+- Wabi consolidation completada: un solo tronco operativo.
+
 ## Decision
 
 El arbol no se migra fisicamente en este ciclo. La forma limpia se mantiene por

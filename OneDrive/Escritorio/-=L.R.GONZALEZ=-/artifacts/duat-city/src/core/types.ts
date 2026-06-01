@@ -155,11 +155,13 @@ export interface District {
   maintenance: number;
   risk: number;
 }
-
 export interface CityContext {
   schema: "duat.city-context.v1";
   era: string;
+  activePlane: "base" | "medio" | "astral" | "nexus";
   climate: ClimateType;
+...
+
   geography: GeographyType;
   weather: "clear" | "rain" | "fog" | "storm" | "heatwave" | "ashfall";
   notes: string[];

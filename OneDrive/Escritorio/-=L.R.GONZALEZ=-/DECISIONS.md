@@ -1,5 +1,20 @@
 # DECISIONS
 
+## 2026-05-31 - Wabi-Sabi consolidation: BRAIN_OS como tronco canónico
+
+- Confirm `C:\Users\L-Tyr\OneDrive\Escritorio\-= BRAIN_OS =-\02_CLAUDIO\wabi_sabi` y `core/wabi*.py` como el runtime Wabi-Sabi canónico y activo.
+- Archive `apps/local/wabi-sabi` (generación anterior, 744 files, 52 entries) a `_archive/legacy/wabi-sabi-legacy-2026-05-31/`.
+- Consolidar `scripts/wabi_sabi_startup.ps1` y `.cmd` al archive.
+- Mantener un solo tronco Wabi-Sabi operativo; MEDIOEVO root queda como espejo técnico para runtime Claudio (API :47047, Hub :7474, MemPalace) y código no-Wabi.
+- No hubo publicación, push, deploy ni borrado destructivo.
+
+## 2026-05-31 - Analisis Experto de Arquitectura Ecosistémica
+
+- Conducted exhaustive structural and technical review of OSIT, Observacionismo, MOI, DUAT, Vibeforge, Wabi-Sabi, and the RPG.
+- Created analysis report in artifact directory and summarized active recommendations.
+- Keep primary execution mirror safe; no code modifications or deletions were performed.
+- Retain all publication gates as `BLOCK`.
+
 ## 2026-05-23 - Espejo BRAIN_OS Wabi UI chat endpoint
 
 - Keep BRAIN_OS as execution root for `/api/chat/message` fix.

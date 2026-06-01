@@ -47,7 +47,24 @@ Resultado:
 - `npm run typecheck`: PASS.
 - `npm run build`: PASS; Vite 5.4.21, 249 modules transformed.
 
-Inventario vivo:
+## Integracion DUAT Genesis (2026-05-29)
+
+Se integro `src/duatGenesis/` con motor de campo Float32Array, métricas LG, overlays y barrido.
+
+- `src/duatGenesis/engine.ts`: DuatEngine con modos duat/conway, observador activo, clipping corregido.
+- `src/duatGenesis/metrics.ts`: MetricsTracker, LG spectrum, dim_obs, atumScore, osirisScore, liveness, residue, Phi_eff, clipArtifactRatio, cosmology classification.
+- `src/duatGenesis/overlays.ts`: Render overlays ψ/gravity/light/observer-delta sobre Canvas 2D ImageData.
+- `src/duatGenesis/presets.ts`: Presets fertiles/infertiles documentados.
+- `src/duatGenesis/sweep.ts`: Barrido P2 configurable (fast, default, P2 configs) con export CSV/Markdown.
+- `src/tests/duatGenesis/`: Tests de determinismo, limites [0,1], observerStrength, clipArtifactRatio, render smoke.
+
+## Bloqueo Tecnico Actual (2026-05-29)
+
+- Tests no ejecutables: `@rollup/rollup-win32-x64-msvc` nativo faltante (monorepo instalado originalmente en Linux/WSL).
+- Build/typecheck pendientes de re-validacion tras resolver dependencias nativas.
+- Preinstall script de monorepo requiere `sh` no disponible en Windows.
+
+## Inventario vivo:
 
 - `docs/ENGINE_TRUTH_INVENTORY_2026-05-21.md`
 - `docs/CODEX_FINAL_HANDOFF_v1_5.md`

@@ -1,5 +1,32 @@
 # PENDIENTES_MASTER
 
+## 2026-05-31 - Consolidación Wabi + mejoras sistémicas
+
+Status: Wabi-Sabi consolidado a un solo tronco. Mejoras múltiples ejecutadas.
+
+| item | estado | evidencia |
+|---|---|---|
+| Wabi-Sabi consolidation | CERRADO | `apps/local/wabi-sabi` → `_archive/legacy/wabi-sabi-legacy-2026-05-31/`; canónico en BRAIN_OS `02_CLAUDIO/wabi_sabi` |
+| FlujoCRM checks | CERRADO_VERIFICADO | `npm run check` 5/5 PASS (2026-05-31) |
+| CI/CD pre-commit hooks | CREADO | `.githooks/pre-commit` con secret scan + python syntax + node check; `git config core.hooksPath .githooks` |
+| REPO_MANIFEST.json | CREADO | consolidación de VISIBILITY_MATRIX + PRODUCT_MAP + RISK_REGISTER en un solo JSON |
+| obsai-core README | MEJORADO | quick start, capabilities table, CLI docs más estratégicos |
+| duat-genesis README | MEJORADO | claims boundary más visible |
+| Cross-product integration | DOCUMENTADO | `docs/architecture/CROSS_PRODUCT_INTEGRATION_2026-05-31.md` |
+| obsai-core tests | VERIFICADO | `72 passed in 4.23s` |
+| Decisiones registradas | DECISIONS.md | Wabi consolidation añadida |
+
+### Gates que permanecen abiertos
+
+| item | gate | regla |
+|---|---|---|
+| Fragmentos cover asset & Gumroad | REVIEW_ASSET_PRODUCTION | requiere portada + revisión humana |
+| FlujoCRM clean-machine QA | REVIEW_CLEAN_VM | requiere máquina limpia Windows |
+| FlujoCRM legal/support review | REVIEW_LEGAL | requiere humano |
+| FlujoCRM code signing | REVIEW_SIGNING | requiere certificado o decisión unsigned |
+| Fragmentos publicación | BLOCK_PUBLICATION | hasta cover + QA + legal + humano |
+| Publicación GitHub obsai-core | REVIEW_PUBLICATION | requiere ActionGate + secret scan + PRIVATE_EXCLUSIONS |
+
 ## 2026-05-23 - Espejo tecnico BRAIN_OS Wabi `/api/chat/message`
 
 Status: sincronizado. La cola principal sigue en

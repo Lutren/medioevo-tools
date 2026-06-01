@@ -16,6 +16,12 @@ export function TaskPanel({ state }: TaskPanelProps) {
 
   return (
     <div className="section">
+      <button 
+        onClick={() => console.log("GM Action: Requesting Quest Update")}
+        style={{ fontSize: 10, marginBottom: 5, padding: "2px 5px" }}
+      >
+        Sync Quests
+      </button>
       <div className="section-title">Tasks ({active.length} active)</div>
       {active.map(task => (
         <div key={task.id} style={{ padding: "2px 0", borderBottom: "1px solid #21262d" }}>

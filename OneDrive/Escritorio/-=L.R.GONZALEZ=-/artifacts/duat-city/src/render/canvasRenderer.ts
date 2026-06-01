@@ -18,6 +18,9 @@ import { beginPixelRealismFrame, finishPixelRealismFrame } from "../pixelRealism
 import { capParticles } from "../pixelRealism/renderBudget";
 import { drawPlayableSceneOverlay } from "../scene/sceneRender";
 
+import { drawCelestialPass } from "./celestialRenderer";
+import type { CelestialState } from "../engine/celestialEngine";
+
 export interface RenderOptions {
   showHeatmap: boolean;
   showFibmob: boolean;
@@ -32,6 +35,7 @@ export interface RenderOptions {
   viewMode?: ViewMode;
   spriteResolver?: SpriteResolver;
   pixelRealismRuntime?: PixelRealismRuntime;
+  celestialState?: CelestialState;
 }
 
 export function renderCity(
@@ -69,6 +73,10 @@ export function renderCity(
       ? "#17100d"
       : "#111620";
   ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+
+  if (opts.celestialState && opts.spriteResolver) {
+    drawCelestialPass(ctx, opts.celestialState, opts.spriteResolver);
+  }
 
   // Visible tile range
   const startX = Math.max(0, Math.floor(cam.x));

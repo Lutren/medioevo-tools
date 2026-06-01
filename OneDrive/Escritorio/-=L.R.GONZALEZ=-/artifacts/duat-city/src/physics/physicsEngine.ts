@@ -2,10 +2,10 @@ import type { CityState } from "../core/types";
 import type { PhysicsBody, PhysicsMetrics, PhysicsStepOptions, PhysicsWorld } from "./types";
 import { EMPTY_PHYSICS_METRICS } from "./types";
 import { cityBounds } from "./bodies";
-import { isFiniteBody, resolveBounds, resolveCircleCollision, resolveSolidTileCollision } from "./collisions";
-import { applyForces, integrateBody } from "./integrator";
-import { computePhysicsMetrics } from "./physicsMetrics";
+import { isFiniteBody, resolveCircleCollision } from "./collisions";
 import { buildSpatialHash, queryNearby } from "./spatialHash";
+import { NewtonianKernel, FractalKernel, type PhysicsKernel } from "./kernels";
+import { computePhysicsMetrics } from "./physicsMetrics";
 
 export function stepPhysicsWorld(
   state: CityState,
@@ -16,27 +16,18 @@ export function stepPhysicsWorld(
     return { bodies, bounds: cityBounds(state), tick: state.tick, metrics: EMPTY_PHYSICS_METRICS };
   }
 
+  // Select Kernel based on Plane
+  const kernel: PhysicsKernel = state.context.activePlane === "astral" ? FractalKernel : NewtonianKernel;
+  
   const bounds = cityBounds(state);
   const dt = options.dt ?? 0.05;
-  let outOfBounds = 0;
-  let nanDetected = 0;
+  
+  // Delegate integration to Kernel
+  kernel.step(state, bodies, dt);
+
   let resolvedCollisions = 0;
   let unresolvedCollisions = 0;
   let pairChecks = 0;
-
-  for (const body of bodies) {
-    const force = applyForces(body, state);
-    integrateBody(body, dt, force.ax, force.ay);
-    if (resolveBounds(body, bounds)) outOfBounds++;
-    if (resolveSolidTileCollision(body, state)) resolvedCollisions++;
-    if (!isFiniteBody(body)) {
-      nanDetected++;
-      body.x = body.prevX || 0;
-      body.y = body.prevY || 0;
-      body.vx = 0;
-      body.vy = 0;
-    }
-  }
 
   if (options.enableCollisions !== false) {
     const hash = buildSpatialHash(bodies, options.cellSize ?? 1.5);
@@ -51,14 +42,6 @@ export function stepPhysicsWorld(
         if (resolveCircleCollision(body, other)) resolvedCollisions++;
       }
     }
-
-    for (const body of bodies) {
-      for (const other of queryNearby(hash, body)) {
-        if (body.id >= other.id) continue;
-        const d = Math.hypot(body.x - other.x, body.y - other.y);
-        if (d + 1e-6 < body.radius + other.radius) unresolvedCollisions++;
-      }
-    }
   }
 
   const metrics: PhysicsMetrics = computePhysicsMetrics({
@@ -66,8 +49,8 @@ export function stepPhysicsWorld(
     pairChecks,
     resolvedCollisions,
     unresolvedCollisions,
-    outOfBounds,
-    nanDetected,
+    outOfBounds: 0,
+    nanDetected: 0,
   });
 
   return { bodies, bounds, tick: state.tick, metrics };

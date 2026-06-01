@@ -1,0 +1,218 @@
+{
+  "schema": "medioevo.repo_manifest.v1",
+  "generated": "2026-05-31",
+  "description": "Consolidated product and package manifest for MEDIOEVO / CLAUDIO workspace",
+  "layers": {
+    "OPEN": {
+      "description": "Public-safe developer tools (MIT or review-pending)",
+      "packages": [
+        {
+          "name": "obsai-core",
+          "path": "packages/open-dev/obsai-core",
+          "status": "LOCAL_READY_FOR_PUBLIC",
+          "tests": "72 passed",
+          "deps": 0,
+          "notes": "cleanest public-safe package; candidate for 4th GitHub repo"
+        },
+        {
+          "name": "duat-genesis",
+          "path": "packages/open-dev/duat-genesis",
+          "status": "GITHUB_LIVE",
+          "repo": "https://github.com/Lutren/duat-genesis",
+          "tests": "3 passed",
+          "deps": 0
+        },
+        {
+          "name": "residueos",
+          "path": "packages/open-dev/residueos",
+          "status": "LOCAL_READY",
+          "tests": "unknown",
+          "deps": 0
+        },
+        {
+          "name": "claudio-agent-runtime",
+          "path": "packages/open-dev/claudio-agent-runtime",
+          "status": "LOCAL_P0_REVIEW",
+          "tests": "15 passed",
+          "deps": 0,
+          "blocker": "LEGAL_REVIEW_REQUIRED"
+        },
+        {
+          "name": "observacionismo-gate",
+          "path": "packages/open-dev/observacionismo-gate",
+          "status": "LOCAL_READY",
+          "tests": "unknown",
+          "deps": 0
+        },
+        {
+          "name": "obs-safe-integration-kit",
+          "path": "packages/open-dev/obs-safe-integration-kit",
+          "status": "LOCAL_READY",
+          "tests": "unknown",
+          "deps": 0
+        },
+        {
+          "name": "claudio-os-blueprint",
+          "path": "packages/open-dev/claudio-os-blueprint",
+          "status": "LOCAL_READY",
+          "tests": "none",
+          "notes": "blueprint only, no ISO"
+        },
+        {
+          "name": "gemma-observacionismo-cleanup",
+          "path": "packages/open-dev/gemma-observacionismo-cleanup",
+          "status": "LOCAL_READY",
+          "tests": "unknown",
+          "deps": 0
+        },
+        {
+          "name": "rapid-agent-guardian",
+          "path": "hackathons/google-rapid-agent-2026",
+          "status": "GITHUB_LIVE",
+          "repo": "https://github.com/Lutren/rapid-agent-guardian",
+          "tests": "unknown"
+        },
+        {
+          "name": "medioevo-osit-formal-lab",
+          "path": "publish_staging/open-dev/medioevo-osit-formal-lab",
+          "status": "GITHUB_LIVE",
+          "repo": "https://github.com/Lutren/medioevo-osit-formal-lab",
+          "tests": "12 passed"
+        }
+      ]
+    },
+    "COMMERCIAL": {
+      "description": "Sellable or released commercial products",
+      "packages": [
+        {
+          "name": "flujocrm",
+          "path": "apps/commercial/flujocrm",
+          "status": "QA_PASS_PUBLICATION_BLOCKED",
+          "tests": "4 smoke scripts pass",
+          "platform": "Electron/Windows",
+          "blocker": "clean-machine QA, legal review, code signing"
+        },
+        {
+          "name": "asistente-negocio",
+          "path": "apps/commercial/asistente-negocio",
+          "status": "QA_PASS_PUBLICATION_BLOCKED",
+          "platform": "Windows"
+        },
+        {
+          "name": "mini-office",
+          "path": "apps/commercial/mini-office",
+          "status": "QA_PASS_PUBLICATION_BLOCKED",
+          "platform": "Windows"
+        },
+        {
+          "name": "argus-desktop",
+          "path": "apps/commercial/argus-desktop",
+          "status": "COMMERCIAL_OR_INTERNAL",
+          "platform": "Electron"
+        },
+        {
+          "name": "duat-templates",
+          "path": "packages/paid/duat-templates",
+          "status": "GUMROAD_LIVE",
+          "url": "https://lrgonzalez.gumroad.com/l/duat-templates",
+          "platform": "digital download"
+        },
+        {
+          "name": "medioevo-agent-ops-pack",
+          "path": "packages/paid/medioevo-agent-ops-pack",
+          "status": "GUMROAD_LIVE",
+          "url": "https://lrgonzalez.gumroad.com/l/medioevo-agent-ops-pack",
+          "platform": "digital download"
+        }
+      ]
+    },
+    "BOOKS_EDITORIAL": {
+      "description": "Editorial material — all rights reserved unless noted",
+      "items": [
+        {
+          "name": "DESPERTAR Preview",
+          "status": "GUMROAD_LIVE",
+          "url": "https://lrgonzalez.gumroad.com/l/dmqgzi",
+          "notes": "public preview only"
+        },
+        {
+          "name": "Fragmentos",
+          "status": "QA_COMPLETE_COVER_GATE_REVIEW",
+          "pages": 688,
+          "notes": "internal export+QA done; needs cover asset for Gumroad"
+        },
+        {
+          "name": "Calibracion",
+          "status": "QA_COMPLETE_COVER_GATE_READY",
+          "pages": 477,
+          "notes": "internal export+QA done; ready for cover brief"
+        },
+        {
+          "name": "Deriva",
+          "status": "INTERNAL_EXPORT_DONE",
+          "notes": "internal export complete since 2026-05-17"
+        }
+      ]
+    },
+    "PRIVATE": {
+      "description": "DO NOT TOUCH — game, TCG, private research",
+      "paths": [
+        "game-private/",
+        "-=MEDIOEVO=-/-=LIBROS=/metaevo-tcg/",
+        "-=MEDIOEVO=-/-=LIBROS=/claudio/tcg/",
+        "-=MEDIOEVO=-/-=LIBROS=/claudio/runtime/game_bridge/",
+        "research/geodia-social-observatory/",
+        "research/obs-info-kernel/"
+      ]
+    },
+    "CORE_RUNTIME": {
+      "description": "Active runtime environments",
+      "locations": [
+        {
+          "name": "BRAIN_OS (active Wabi-Sabi + Claudio runtime)",
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\- = BRAIN_OS =-"
+        },
+        {
+          "name": "MEDIOEVO (Claudio API/Hub/MemPalace espejo técnico)",
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-"
+        }
+      ],
+      "apis": {
+        "claudio_api": "http://localhost:47047",
+        "claudio_hub": "http://localhost:7474",
+        "mempalace": "1926+ drawers at memory_vault"
+      }
+    }
+  },
+  "public_repos": [
+    {
+      "name": "duat-genesis",
+      "url": "https://github.com/Lutren/duat-genesis",
+      "status": "MIT, published",
+      "visibility": "public"
+    },
+    {
+      "name": "rapid-agent-guardian",
+      "url": "https://github.com/Lutren/rapid-agent-guardian",
+      "status": "MIT, published",
+      "visibility": "public"
+    },
+    {
+      "name": "medioevo-osit-formal-lab",
+      "url": "https://github.com/Lutren/medioevo-osit-formal-lab",
+      "status": "LEGAL_REVIEW_REQUIRED, staged",
+      "visibility": "public"
+    }
+  ],
+  "blockers": {
+    "publication_blocked": true,
+    "reasons": [
+      "PRODUCT_MAP: VISIBILITY_MATRIX and RISK_REGISTER not consolidated into single manifest",
+      "No clean-machine QA for FlujoCRM, Mini Office, Asistente Negocio",
+      "Code signing undecided for all commercial apps",
+      "Legal/support/privacy/terms review pending for all commercial products",
+      "Fragmentos and Calibracion need cover assets + human editorial review",
+      "No global license decision (root LICENSE = LEGAL_REVIEW_REQUIRED)"
+    ]
+  }
+}

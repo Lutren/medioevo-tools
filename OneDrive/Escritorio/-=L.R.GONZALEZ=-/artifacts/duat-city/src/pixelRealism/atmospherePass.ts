@@ -5,16 +5,19 @@ export function drawAtmospherePass(ctx: CanvasRenderingContext2D, state: CitySta
   ctx.save();
   const night = config.timeOfDay === "night";
   const interior = config.timeOfDay === "interior";
+  const thermal = config.thermalInfluence ?? 0;
+  const instability = config.networkInstability ?? 0;
+
   const grd = ctx.createLinearGradient(0, 0, 0, ctx.canvas.height);
   if (night) {
-    grd.addColorStop(0, "rgba(3, 9, 23, 0.26)");
-    grd.addColorStop(1, "rgba(6, 13, 20, 0.42)");
+    grd.addColorStop(0, `rgba(3, 9, ${Math.floor(23 + thermal * 50)}, ${0.26 + thermal * 0.1})`);
+    grd.addColorStop(1, `rgba(6, 13, ${Math.floor(20 + thermal * 50)}, ${0.42 + thermal * 0.1})`);
   } else if (interior) {
-    grd.addColorStop(0, "rgba(70, 36, 18, 0.18)");
-    grd.addColorStop(1, "rgba(22, 13, 11, 0.34)");
+    grd.addColorStop(0, `rgba(${Math.floor(70 + thermal * 80)}, 36, 18, 0.18)`);
+    grd.addColorStop(1, `rgba(${Math.floor(22 + thermal * 50)}, 13, 11, 0.34)`);
   } else {
-    grd.addColorStop(0, "rgba(66, 94, 109, 0.08)");
-    grd.addColorStop(1, "rgba(18, 22, 18, 0.22)");
+    grd.addColorStop(0, `rgba(66, 94, 109, ${0.08 + instability * 0.2})`);
+    grd.addColorStop(1, `rgba(18, 22, 18, ${0.22 + instability * 0.1})`);
   }
   ctx.fillStyle = grd;
   ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);

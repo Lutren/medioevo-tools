@@ -1,5 +1,35 @@
 # NEXT_SESSION_BRIEF MEDIOEVO/CLAUDIO
 
+## UPDATE 2026-05-31 - Consolidación sistémica y mejoras ejecutadas
+
+- Wabi-Sabi consolidation: legacy `apps/local/wabi-sabi` archivado a `_archive/legacy/wabi-sabi-legacy-2026-05-31/`. Tronco canónico: BRAIN_OS `02_CLAUDIO/wabi_sabi` + `core/wabi*.py`. MEDIOEVO queda como espejo técnico para runtime Claudio (API :47047, Hub :7474, MemPalace).
+- FlujoCRM: `npm run check` verificado 5/5 PASS (main.js, preload.js, 3 smokes). Build readiness: `SQLITE_STORAGE_QA_PASS/CURRENT_USER_INSTALL_QA_PASS/DO_NOT_PUBLISH_CHECKOUT`.
+- CI/CD: `.githooks/pre-commit` creado con secret scan + Python syntax + Node.js check. Activado via `git config core.hooksPath .githooks`.
+- Governance: `REPO_MANIFEST.json` creado consolidando VISIBILITY_MATRIX + PRODUCT_MAP + RISK_REGISTER en un solo JSON con todas las capas y blockers.
+- Open-source READMEs: obsai-core y duat-genesis tienen READMEs estratégicos mejorados con quick start, capabilities tables y claims boundaries más claras.
+- Integración: `docs/architecture/CROSS_PRODUCT_INTEGRATION_2026-05-31.md` creado con mapa de integración entre obsai-core, FlujoCRM, Argus, DUAT Lite.
+- obsai-core tests: 72 passed in 4.23s — sin regresiones.
+- DECISIONS.md: Wabi consolidation decision registrada.
+- PENDIENTES_MASTER.md: sesión documentada con gates abiertos.
+
+### Próxima Acción Verificable
+Revisión humana para desbloquear alguno de los gates abiertos:
+1. Fragmentos cover + Gumroad (portada + editorial review)
+2. FlujoCRM clean-machine QA + legal review + code signing decision
+3. Publicación GitHub de obsai-core (ActionGate + secret scan + PRIVATE_EXCLUSIONS)
+
+## UPDATE 2026-05-31 - Analisis Experto de Arquitectura Ecosistémica
+
+- Estado: Completado el análisis experto sistémico de OSIT, Observacionismo, MOI, DUAT, Vibeforge, Wabi-Sabi y el RPG.
+- Resultado: Generado un informe de arquitectura técnica completo en `C:\Users\L-Tyr\.gemini\antigravity-cli\brain\4fedd7f4-afde-4ec7-a052-ed684a8cb989\analisis_sistema_medioevo.md`.
+- Hallazgos: Se identificaron oportunidades clave para:
+  1. Integración de clasificación semántica híbrida local y parseador AST en Vibeforge.
+  2. UI/UX pulida, gráficos de residuo dinámicos y procesamiento asíncrono en DUAT.
+  3. Sandbox de ejecución y hash-chain criptográfico sellado en Wabi-Sabi.
+  4. Balanceo automatizado por simulador batch y hooks pre-commit estrictos en el RPG.
+- Evidencia: `SESSION_FINGERPRINT.json` actualizado y guardado correctamente.
+- Frontera: Este root se mantiene como espejo técnico y la publicación permanece bloqueada (`PublicationGate=BLOCK`).
+
 ## UPDATE 2026-05-23 - Espejo tecnico BRAIN_OS Wabi `/api/chat/message`
 
 - Ejecucion principal ocurrio en `-= BRAIN_OS =-`.

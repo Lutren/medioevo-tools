@@ -144,7 +144,7 @@ intake, refund draft and privacy draft. It remains
 
 ## Distribution Checklist
 
-- [x] `npm run check` passes. Verificado local 2026-05-05: `node --check main.js`, `node --check preload.js`, `smoke-main.cjs`, `smoke-preload.cjs` y `smoke-renderer.cjs` pasaron.
+- [x] `npm run check` passes. Verificado local 2026-05-31: `node --check main.js`, `node --check preload.js`, `smoke-main.cjs`, `smoke-preload.cjs` y `smoke-renderer.cjs` pasaron (5/5). Verificado también 2026-05-05.
 - [x] `npm audit --omit=dev --audit-level=high` passes. Recheck 2026-05-06: `found 0 vulnerabilities`.
 - [x] Source and artifact secret scans pass. Recheck 2026-05-06: source path `count_reported=0`; `dist\win-unpacked\FlujoCRM.exe` artifact scan `count_reported=0`.
 - [x] Current-user Windows install/launch/uninstall QA passes.

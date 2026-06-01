@@ -39,6 +39,7 @@ export interface PixelCell {
   reflectance?: number;
   roughness?: number;
   qState?: "00" | "01" | "10" | "11";
+  phaseState?: "solid" | "liquid" | "gas";
   solidity: number;
   friction: number;
   R: number;

@@ -27,6 +27,8 @@ export interface PixelRealismConfig {
   hideUiForCapture: boolean;
   vibePreset?: string;
   mood?: string;
+  thermalInfluence?: number;
+  networkInstability?: number;
 }
 
 export type PixelRenderPass =

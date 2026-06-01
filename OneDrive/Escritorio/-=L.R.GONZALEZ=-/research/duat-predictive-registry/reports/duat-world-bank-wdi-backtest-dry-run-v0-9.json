@@ -14,7 +14,7 @@
   "claims_scan": "PASS_LOW_CLAIM_INTERNAL_ONLY",
   "dry_run_internal_only": true,
   "electoral_prediction_allowed": false,
-  "generated_at_utc": "2026-05-19T07:06:36Z",
+  "generated_at_utc": "2026-05-30T02:13:07Z",
   "governance_run": "DUAT_WDI_LICENSE_COMPARABILITY_REVIEW_v0_8_1",
   "interpretation": "Internal dry-run only. Gates remain REVIEW/BLOCK, so results cannot be used as public prediction, ranking, causality, or benchmark evidence.",
   "leakage_preflight": {
@@ -22,7 +22,7 @@
     "status": "PASS"
   },
   "model_claim_allowed": false,
-  "payload_sha256": "a2f562f8131161e0b003e32c7b6a1065e41982dd505e4dd92320c3848b8e87e8",
+  "payload_sha256": "26c384422e7078cc43f85fcd743a75d0b3f83bc9807c13096d79c82d8095e153",
   "publication_gate": "BLOCK",
   "ranking_allowed": false,
   "run_id": "DUAT_WDI_BACKTEST_DRY_RUN_v0_9",

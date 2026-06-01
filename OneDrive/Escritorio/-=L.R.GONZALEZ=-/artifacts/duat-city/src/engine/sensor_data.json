@@ -1,0 +1,9 @@
+{
+  "thermalLoad": 0.0,
+  "wifiSignal": 0.0,
+  "orientation": {
+    "pitch": 0.0,
+    "roll": 0.0,
+    "yaw": 0.0
+  }
+}

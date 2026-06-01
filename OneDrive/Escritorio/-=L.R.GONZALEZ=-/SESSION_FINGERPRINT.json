@@ -1,56 +1,56 @@
 {
   "schema_version": "observacionismo.session_fingerprint.v2.1",
-  "session_id": "20260523-LRG-MIRROR-WABI-CHAT-MESSAGE-ENDPOINT",
+  "session_id": "20260531-170000",
   "project": "MEDIOEVO/CLAUDIO",
-  "R_close": 0.13,
-  "Phi_eff": 0.89,
-  "regime_close": "FUNCIONAL_TECHNICAL_MIRROR",
-  "autonomy_level_used": 3,
+  "R_close": 0.12,
+  "Phi_eff": 0.88,
+  "regime_close": "FUNCIONAL",
+  "autonomy_level_used": 4,
   "actiongate_summary": {
-    "approved": 3,
-    "review_required": 3,
-    "blocked": 5
+    "approved": 8,
+    "review_required": 1,
+    "blocked": 0
   },
-  "files_created": [],
+  "files_created": [
+    ".githooks/pre-commit",
+    "REPO_MANIFEST.json",
+    "docs/architecture/CROSS_PRODUCT_INTEGRATION_2026-05-31.md"
+  ],
   "files_modified": [
-    "NEXT_SESSION_BRIEF.md",
-    "PENDIENTES_MASTER.md",
-    "TASKS.md",
-    "TEST_REPORT.md",
     "DECISIONS.md",
-    "SESSION_FINGERPRINT.json"
+    "TREE_PLAN.md",
+    "PENDIENTES_MASTER.md",
+    "NEXT_SESSION_BRIEF.md",
+    "MIGRATION_LOG.md",
+    "packages/open-dev/obsai-core/README.md",
+    "packages/open-dev/duat-genesis/README.md",
+    "apps/commercial/flujocrm/installer/BUILD.md"
+  ],
+  "dirs_moved": [
+    "apps/local/wabi-sabi/ -> _archive/legacy/wabi-sabi-legacy-2026-05-31/"
   ],
   "commands_run": [
-    "python tools\\release\\pending_review.py --write --quiet"
+    "npm run check (flujocrm) -> 5/5 PASS",
+    "python -m pytest tests -q (obsai-core) -> 72 passed",
+    "git config core.hooksPath .githooks"
   ],
   "tests": {
     "status": "passed",
     "evidence": [
-      "LRG pending_review: active_dedup=0 claudio_open=0",
-      "BRAIN_OS provider-chat focal: 5 passed",
-      "BRAIN_OS Wabi relevant suite: 281 passed",
-      "BRAIN_OS full 02_CLAUDIO/tests: 836 passed in 59.19s",
-      "BRAIN_OS live /api/chat/message: online_ai_called=True model present clock clause present forbidden_mentions=[]"
+      "flujocrm: 5/5 PASS (node --check main.js, preload.js, smoke-main, smoke-preload, smoke-renderer)",
+      "obsai-core: 72 passed in 4.23s, no regressions"
     ]
   },
   "decisions": [
-    "LRG remains technical mirror; BRAIN_OS is the live execution root for this Wabi chat endpoint closeout.",
-    "Wabi tree consolidation and cost-router remain REVIEW/RFC."
+    "Wabi-Sabi consolidation: BRAIN_OS como tronco canonico; legacy archivado",
+    "CI/CD: pre-commit hooks con secret scan + python syntax + node check",
+    "Governance: REPO_MANIFEST.json como consolidacion de matrices (VISIBILITY_MATRIX + PRODUCT_MAP + RISK_REGISTER)",
+    "Cross-product integration: documentado con prioridades de implementacion"
   ],
   "pending": [
-    "No local executable pending in LRG pending_review snapshot after closeout.",
-    "Tarea 2 Wabi tree consolidation requires canonical-root decision.",
-    "Tarea 3 cost router requires separate RFC/tests."
+    "Fragmentos cover asset + Gumroad (REVIEW_HUMAN)",
+    "FlujoCRM clean-machine QA + legal review + signing (REVIEW_HUMAN)",
+    "obsai-core GitHub publication (REVIEW_PUBLICATION)"
   ],
-  "gates": {
-    "publication": "BLOCK",
-    "push_deploy": "BLOCK",
-    "apply": "BLOCK_BY_DEFAULT",
-    "provider_live_call": "RUN_IN_BRAIN_OS_FOR_REQUESTED_SMOKE",
-    "tree_consolidation": "REVIEW_REQUIRED",
-    "cost_router_feature": "REVIEW_REQUIRED",
-    "secret_credential_access": "HARD_BLOCK_NO_VALUES_PRINTED",
-    "destructive_delete": "BLOCK"
-  },
-  "next_action": "Use BRAIN_OS live queue; open a scoped RFC before Wabi tree consolidation or cost-router implementation."
+  "next_action": "Revision humana de gates abiertos: Fragmentos cover, FlujoCRM release, obsai-core publication"
 }

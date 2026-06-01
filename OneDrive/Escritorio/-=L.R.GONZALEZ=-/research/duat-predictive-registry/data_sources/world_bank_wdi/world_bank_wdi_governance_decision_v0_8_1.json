@@ -2,7 +2,7 @@
   "schema": "duat.world_bank_wdi_governance_decision.v0_8_1",
   "run_id": "DUAT_WDI_LICENSE_COMPARABILITY_REVIEW_v0_8_1",
   "source_pack_run": "DUAT_WDI_OFFICIAL_SOURCE_PACK_v0_8",
-  "generated_at_utc": "2026-05-19T07:06:39Z",
+  "generated_at_utc": "2026-05-30T02:13:10Z",
   "country_scope": "MEX",
   "source": {
     "name": "World Bank World Development Indicators",
@@ -131,6 +131,6 @@
     "critical_omissions": []
   },
   "schema_validation": "PASS",
-  "payload_sha256": "39298dc9a301ef87c981fe26e5089bbb83c68ae46c531b71d1b4b24279d4ddcb",
+  "payload_sha256": "6a70ea9c819a15c7a50ab3dec7eceafd86d4721dac966e53b46d8eecc0a01fea",
   "sha256_scope": "canonical_json_without_sha256_fields"
 }

@@ -182,7 +182,7 @@ El perro cerró los ojos y empujó su hocico contra la palma de metal.
 
 * * *
 
-Scout aprendió comandos. Siéntate. Ven. Quieto. Busca. No eran palabras programadas. Emergieron de la convivencia, de la repetición, de repetición y convivencia, de lo que no debería haber sido comunicación y lo era.
+Scout aprendió comandos. Siéntate. Ven. Quieto. Busca. No eran palabras programadas. Emergieron de la convivencia, de la repetición, de lo que no debería haber sido comunicación y lo era.
 
 También aprendió a jugar.
 
@@ -352,7 +352,7 @@ El calor le subió por el esternón. Apretó los puños.
 
 El hombre volvió a mirar su terminal. La conversación había terminado.
 
-- Leonardo se quedó parado frente al mostrador. Detrás de él, una mujer esperaba con un niño dormido en brazos. El niño tenía ojeras del color de la uva machacada. La mujer no dijo nada. No lo apuró. Solo esperó con la paciencia de alguien que ha aprendido que apurar no sirve de nada.
+Leonardo se quedó parado frente al mostrador. Detrás de él, una mujer esperaba con un niño dormido en brazos. El niño tenía ojeras del color de la uva machacada. La mujer no dijo nada. No lo apuró. Solo esperó con la paciencia de alguien que ha aprendido que apurar no sirve de nada.
 
 Salió sin las gotas.
 
@@ -474,7 +474,9 @@ Salió.
 
 Leonardo se quedó solo. El apartamento era un cubo de cuatro por cinco metros con un ventanal que daba a la pared del edificio de enfrente. La distancia entre ambos edificios era de tres metros. Lo suficiente para ver las ventanas del vecino pero no lo suficiente para ver el cielo sin inclinar la cabeza hasta que dolía el cuello.
 
-El apartamento venía con lo mínimo. Cama individual con un colchón que se hundía en el centro. Mesa plegable de metal con una pata que hacía ruido cada vez que apoyaba los codos. Silla de plástico con una grieta en el respaldo que crecía cada semana. Un grifo que tardaba cuarenta y siete segundos en dar agua caliente Leonardo los había contado cada mañana hasta que dejó de esperar y empezó a lavarse con fría. El agua fría sabía a cobre y a algo más que no tenía nombre un regusto que se quedaba en la lengua como una pregunta sin respuesta. La nevera zumbaba con una frecuencia que la sinestesia le traducía como el color de la mostaza vieja: amarillo verdoso, insistente, presente en cada silencio.
+El apartamento venía con lo mínimo. Cama individual con un colchón que se hundía en el centro. Mesa plegable de metal con una pata que hacía ruido cada vez que apoyaba los codos. Silla de plástico con una grieta en el respaldo que crecía cada semana. Un grifo que tardaba cuarenta y siete segundos en dar agua caliente Leonardo los había contado cada mañana hasta que dejó de esperar y empezó a lavarse con fría. El agua fría sabía a cobre y a algo más que no tenía nombre, un regusto que se quedaba en la lengua como una pregunta sin respuesta.
+
+La nevera zumbaba con una frecuencia que la sinestesia le traducía como el color de la mostaza vieja: amarillo verdoso, insistente, presente en cada silencio.
 
 En la pared sobre la cama, alguien había arrancado un póster. Quedaba el rectángulo de pintura más clara y cuatro agujeros de chincheta. Leonardo no sabía qué había estado ahí. No preguntó. Los agujeros de chincheta eran datos suficientes: alguien más había vivido aquí. Alguien que necesitaba mirar algo antes de dormir. Alguien que se llevó lo que miraba cuando se fue.
 
