@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "medioevo.agent_chat.message.v0_2",
+  "type": "object",
+  "required": [
+    "message_id",
+    "room",
+    "sender",
+    "recipient",
+    "mentions",
+    "body",
+    "message_type",
+    "linked_task_id",
+    "linked_workpack_id",
+    "created_at",
+    "hash",
+    "previous_hash",
+    "redaction_status"
+  ],
+  "properties": {
+    "message_id": {
+      "type": "string"
+    },
+    "room": {
+      "type": "string"
+    },
+    "sender": {
+      "type": "string"
+    },
+    "recipient": {
+      "type": "string"
+    },
+    "mentions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "body": {
+      "type": "string"
+    },
+    "message_type": {
+      "enum": [
+        "CHAT",
+        "SYSTEM",
+        "TASK",
+        "WORKPACK",
+        "GATE",
+        "WITNESS"
+      ]
+    },
+    "linked_task_id": {
+      "type": "string"
+    },
+    "linked_workpack_id": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "hash": {
+      "type": "string"
+    },
+    "previous_hash": {
+      "type": "string"
+    },
+    "redaction_status": {
+      "enum": [
+        "PASS",
+        "REVIEW",
+        "BLOCK"
+      ]
+    }
+  }
+}

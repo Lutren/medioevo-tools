@@ -1,0 +1,40 @@
+{
+  "version": "v0.2",
+  "mode": "LOCAL_ONLY",
+  "chat_style": "MSN_90S_LOCAL",
+  "routing_enabled": true,
+  "execution_from_chat": "BLOCK_UNLESS_TASKSPEC_GHOSTGATE_ROLLBACK",
+  "allowed_rooms": [
+    "general",
+    "wabi",
+    "duat",
+    "canon",
+    "qa",
+    "release",
+    "workpacks"
+  ],
+  "allowed_actions": [
+    "SEND_MESSAGE",
+    "MENTION_AGENT",
+    "CREATE_TASKSPEC_DRAFT",
+    "CREATE_WORKPACK_DRAFT",
+    "CREATE_MULTI_STEP_WORKPACK_DRAFT",
+    "ATTACH_MESSAGE_TO_WORKPACK",
+    "SCHEDULE_WORKPACK",
+    "POST_STATUS_UPDATE",
+    "OPEN_EVIDENCE"
+  ],
+  "blocked_actions": [
+    "EXECUTE_WITHOUT_GATE",
+    "PUBLISH",
+    "PUSH",
+    "DEPLOY",
+    "RUN_CLOUD",
+    "RUN_NVIDIA",
+    "DELETE_DIRECT"
+  ],
+  "cloud_live_gate": "BLOCK_THIS_RUN",
+  "nvidia_smoke_gate": "DO_NOT_CALL",
+  "publication_gate": "BLOCK",
+  "secret_values_printed": false
+}

@@ -1,0 +1,15 @@
+{
+  "version": "v0.3",
+  "mode": "LOCAL_ONLY",
+  "storage": "APPEND_ONLY_JSONL",
+  "search_index": "LOCAL_ONLY",
+  "export_allowed": [
+    "JSONL",
+    "MARKDOWN_INTERNAL"
+  ],
+  "public_export_allowed": false,
+  "execution_from_search": "BLOCK",
+  "requires_redaction": true,
+  "requires_hash_chain": true,
+  "publication_gate": "BLOCK"
+}

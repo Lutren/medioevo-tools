@@ -1,0 +1,87 @@
+{
+  "$schema": "json-schema-draft-2020-12",
+  "$id": "medioevo.workpack_scheduler.queue.v0_1",
+  "type": "object",
+  "required": [
+    "queue_id",
+    "workpack_id",
+    "title",
+    "lane",
+    "priority",
+    "dependencies",
+    "status",
+    "assigned_agent",
+    "attempts",
+    "max_retries",
+    "last_error",
+    "next_action",
+    "scheduled_at",
+    "updated_at",
+    "witness_event_id"
+  ],
+  "properties": {
+    "queue_id": {
+      "type": "string"
+    },
+    "workpack_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "lane": {
+      "type": "string"
+    },
+    "priority": {
+      "type": "integer"
+    },
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "status": {
+      "enum": [
+        "APPROVED",
+        "BLOCKED",
+        "DRAFT",
+        "EXECUTED",
+        "FAILED",
+        "READY",
+        "REVIEW",
+        "ROLLED_BACK",
+        "RUNNING",
+        "SCHEDULED",
+        "SKIPPED_DEPENDENCY"
+      ]
+    },
+    "assigned_agent": {
+      "type": "string"
+    },
+    "attempts": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "max_retries": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "last_error": {
+      "type": "string"
+    },
+    "next_action": {
+      "type": "string"
+    },
+    "scheduled_at": {
+      "type": "string"
+    },
+    "updated_at": {
+      "type": "string"
+    },
+    "witness_event_id": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

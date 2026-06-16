@@ -1,0 +1,43 @@
+{
+  "schema": "medioevo.local_execute.task_spec.v0_2",
+  "task_id": "local-execute-docs-demo",
+  "title": "Docs Local Execute v0.2 demo",
+  "lane": "DOCS_LOCAL",
+  "intent": "Create a local-only acceptance note.",
+  "source": "LOCAL_EXECUTE_v0_2",
+  "allowed_targets": [
+    "docs/local_execute/LOCAL_EXECUTE_v0_2_ACCEPTANCE_NOTE.md"
+  ],
+  "blocked_targets": [
+    ".env",
+    "credentials",
+    "Fragmentos",
+    "canon completo",
+    "runtime privado",
+    "PUBLICATION",
+    "CLOUD",
+    "NVIDIA"
+  ],
+  "expected_outputs": [
+    "docs/local_execute/LOCAL_EXECUTE_v0_2_ACCEPTANCE_NOTE.md"
+  ],
+  "tests_required": [
+    {
+      "type": "file_contains",
+      "target": "docs/local_execute/LOCAL_EXECUTE_v0_2_ACCEPTANCE_NOTE.md",
+      "contains": "status: PASS"
+    }
+  ],
+  "operation": {
+    "type": "write_text",
+    "content": "# Local Execute v0.2 Acceptance Note\n\nstatus: PASS\nmode: LOCAL_ONLY\npublication_gate: BLOCK\ncloud_live_gate: BLOCK_THIS_RUN\nnvidia_smoke_gate: DO_NOT_CALL\n\nThis local note verifies docs allowlist execution with TaskSpec, GhostGate, rollback and WitnessLog.\n"
+  },
+  "rollback_required": true,
+  "witness_required": true,
+  "publication_gate": "BLOCK",
+  "cloud_allowed": false,
+  "nvidia_allowed": false,
+  "direct_delete_allowed": false,
+  "created_at": "2026-06-15T08:17:59Z",
+  "secret_values_printed": false
+}

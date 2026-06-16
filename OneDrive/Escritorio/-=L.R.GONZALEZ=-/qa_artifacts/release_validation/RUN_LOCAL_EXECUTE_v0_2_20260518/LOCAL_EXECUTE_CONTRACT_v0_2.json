@@ -1,0 +1,42 @@
+{
+  "version": "v0.2",
+  "mode": "LOCAL_ONLY",
+  "allowed_lanes": [
+    "SANDBOX",
+    "DOCS_LOCAL"
+  ],
+  "blocked_lanes": [
+    "PUBLICATION",
+    "CLOUD",
+    "NVIDIA",
+    "REMOTE_COMPUTE",
+    "PROTECTED_MATERIAL"
+  ],
+  "requires_task_spec": true,
+  "requires_ghostgate_pass": true,
+  "requires_rollback": true,
+  "requires_witnesslog": true,
+  "direct_delete_allowed": false,
+  "publication_gate": "BLOCK",
+  "allowlist": [
+    {
+      "lane": "SANDBOX",
+      "root": "WABI_RUNTIME_LOCAL_EXECUTE/"
+    },
+    {
+      "lane": "SANDBOX",
+      "root": "WABI_WORKPACK_RUNTIME/"
+    },
+    {
+      "lane": "DOCS_LOCAL",
+      "root": "docs/local_execute/"
+    },
+    {
+      "lane": "DOCS_LOCAL",
+      "root": "RUN_LOCAL_EXECUTE_v0_2_20260518/"
+    }
+  ],
+  "cloud_live_gate": "BLOCK_THIS_RUN",
+  "nvidia_smoke_gate": "DO_NOT_CALL",
+  "secret_values_printed": false
+}

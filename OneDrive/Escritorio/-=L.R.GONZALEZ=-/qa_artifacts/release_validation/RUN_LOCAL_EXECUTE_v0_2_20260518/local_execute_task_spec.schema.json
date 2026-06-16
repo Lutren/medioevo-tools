@@ -1,0 +1,69 @@
+{
+  "$schema": "json-schema-draft-2020-12",
+  "$id": "medioevo.local_execute.task_spec.v0_2",
+  "type": "object",
+  "required": [
+    "task_id",
+    "title",
+    "lane",
+    "intent",
+    "allowed_targets",
+    "blocked_targets",
+    "expected_outputs",
+    "tests_required",
+    "rollback_required",
+    "witness_required",
+    "publication_gate"
+  ],
+  "properties": {
+    "task_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "lane": {
+      "enum": [
+        "SANDBOX",
+        "DOCS_LOCAL"
+      ]
+    },
+    "intent": {
+      "type": "string"
+    },
+    "allowed_targets": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "blocked_targets": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "expected_outputs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "tests_required": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "rollback_required": {
+      "const": true
+    },
+    "witness_required": {
+      "const": true
+    },
+    "publication_gate": {
+      "const": "BLOCK"
+    }
+  },
+  "additionalProperties": true
+}

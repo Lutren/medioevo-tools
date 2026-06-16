@@ -1,0 +1,127 @@
+{
+  "$schema": "json-schema-draft-2020-12",
+  "$id": "medioevo.multi_step_workpack.v0_2",
+  "type": "object",
+  "required": [
+    "workpack_id",
+    "title",
+    "lane",
+    "assigned_agent",
+    "status",
+    "steps",
+    "rollback_policy",
+    "publication_gate"
+  ],
+  "properties": {
+    "workpack_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "lane": {
+      "enum": [
+        "SANDBOX",
+        "DOCS_LOCAL"
+      ]
+    },
+    "assigned_agent": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "APPROVED",
+        "BLOCKED",
+        "DRAFT",
+        "EXECUTED",
+        "FAILED",
+        "PARTIAL",
+        "READY",
+        "ROLLED_BACK",
+        "RUNNING",
+        "SCHEDULED"
+      ]
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "step_id",
+          "title",
+          "lane",
+          "depends_on",
+          "task_spec_path",
+          "ghostgate_path",
+          "rollback_snapshot_path",
+          "expected_outputs",
+          "tests_required",
+          "status",
+          "witness_event_id"
+        ],
+        "properties": {
+          "step_id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "lane": {
+            "type": "string"
+          },
+          "depends_on": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "task_spec_path": {
+            "type": "string"
+          },
+          "ghostgate_path": {
+            "type": "string"
+          },
+          "rollback_snapshot_path": {
+            "type": "string"
+          },
+          "expected_outputs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "tests_required": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "status": {
+            "enum": [
+              "APPROVED",
+              "BLOCKED",
+              "EXECUTED",
+              "FAILED",
+              "PENDING",
+              "READY",
+              "ROLLED_BACK",
+              "RUNNING",
+              "SKIPPED_DEPENDENCY"
+            ]
+          },
+          "witness_event_id": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "rollback_policy": {
+      "const": "STEP_FIRST_THEN_WORKPACK"
+    },
+    "publication_gate": {
+      "const": "BLOCK"
+    }
+  },
+  "additionalProperties": true
+}

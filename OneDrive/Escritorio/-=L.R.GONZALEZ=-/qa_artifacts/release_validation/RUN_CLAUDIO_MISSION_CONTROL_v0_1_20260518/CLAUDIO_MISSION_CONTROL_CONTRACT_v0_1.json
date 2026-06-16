@@ -1,0 +1,33 @@
+{
+  "version": "v0.1",
+  "mode": "LOCAL_ONLY_READONLY",
+  "mutations_allowed": false,
+  "execution_allowed": false,
+  "inputs": [
+    "agent_chat",
+    "agent_hub",
+    "local_hub",
+    "workpacks",
+    "scheduler",
+    "browser_bridge",
+    "provider",
+    "tree_health",
+    "coding_acceptance",
+    "risks",
+    "tasks",
+    "handoff"
+  ],
+  "blocked_actions": [
+    "EXECUTE",
+    "PUBLISH",
+    "PUSH",
+    "DEPLOY",
+    "RUN_CLOUD",
+    "RUN_KIMI",
+    "RUN_NVIDIA",
+    "RUN_DEEPSEEK",
+    "DELETE_DIRECT"
+  ],
+  "publication_gate": "BLOCK",
+  "secret_values_printed": false
+}

@@ -1,0 +1,88 @@
+{
+  "$schema": "json-schema-draft-2020-12",
+  "$id": "medioevo.claudio_mission_control.state.v0_1",
+  "type": "object",
+  "required": [
+    "mission_control_version",
+    "status",
+    "generated_at",
+    "agents",
+    "workpacks",
+    "scheduler",
+    "chat",
+    "gates",
+    "provider",
+    "browser_bridge",
+    "tree_health",
+    "risks",
+    "next_actions",
+    "evidence",
+    "mutations_allowed",
+    "execution_allowed",
+    "publication_gate"
+  ],
+  "properties": {
+    "mission_control_version": {
+      "const": "v0.1"
+    },
+    "status": {
+      "enum": [
+        "PASS",
+        "REVIEW",
+        "BLOCK"
+      ]
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "agents": {
+      "type": "object"
+    },
+    "workpacks": {
+      "type": "object"
+    },
+    "scheduler": {
+      "type": "object"
+    },
+    "chat": {
+      "type": "object"
+    },
+    "gates": {
+      "type": "object"
+    },
+    "provider": {
+      "type": "object"
+    },
+    "browser_bridge": {
+      "type": "object"
+    },
+    "tree_health": {
+      "type": "object"
+    },
+    "risks": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "next_actions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "evidence": {
+      "type": "object"
+    },
+    "mutations_allowed": {
+      "const": false
+    },
+    "execution_allowed": {
+      "const": false
+    },
+    "publication_gate": {
+      "const": "BLOCK"
+    }
+  },
+  "additionalProperties": true
+}

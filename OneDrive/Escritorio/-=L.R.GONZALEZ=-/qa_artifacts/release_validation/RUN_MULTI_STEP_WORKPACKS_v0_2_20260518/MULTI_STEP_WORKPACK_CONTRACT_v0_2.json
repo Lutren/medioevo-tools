@@ -1,0 +1,31 @@
+{
+  "version": "v0.2",
+  "mode": "LOCAL_ONLY",
+  "execution_model": "MANUAL_TICK",
+  "scheduler": "WORKPACK_SCHEDULER_v0_1",
+  "execution_engine": "LOCAL_EXECUTE_v0_2",
+  "max_concurrency": 1,
+  "allowed_lanes": [
+    "SANDBOX",
+    "DOCS_LOCAL"
+  ],
+  "blocked_lanes": [
+    "PUBLICATION",
+    "CLOUD",
+    "NVIDIA",
+    "DEEPSEEK",
+    "REMOTE_COMPUTE",
+    "PROTECTED_MATERIAL"
+  ],
+  "requires_task_spec_per_step": true,
+  "requires_ghostgate_per_step": true,
+  "requires_rollback_per_step": true,
+  "requires_witnesslog_per_step": true,
+  "supports_full_workpack_rollback": true,
+  "direct_delete_allowed": false,
+  "publication_gate": "BLOCK",
+  "cloud_live_gate": "BLOCK_THIS_RUN",
+  "nvidia_smoke_gate": "DO_NOT_CALL",
+  "deepseek_gate": "REVIEW_QUOTA_OR_BILLING",
+  "secret_values_printed": false
+}

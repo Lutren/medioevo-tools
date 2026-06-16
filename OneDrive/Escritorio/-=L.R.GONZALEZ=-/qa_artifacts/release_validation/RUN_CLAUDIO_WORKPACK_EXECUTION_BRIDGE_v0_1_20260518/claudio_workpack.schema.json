@@ -1,0 +1,78 @@
+{
+  "$schema": "json-schema-draft-2020-12",
+  "$id": "medioevo.claudio_workpack.v0_1",
+  "type": "object",
+  "required": [
+    "workpack_id",
+    "source_task_id",
+    "title",
+    "lane",
+    "assigned_agent",
+    "task_spec_path",
+    "ghostgate_path",
+    "rollback_snapshot_path",
+    "expected_outputs",
+    "tests_required",
+    "witnesslog_path",
+    "status",
+    "publication_gate"
+  ],
+  "properties": {
+    "workpack_id": {
+      "type": "string"
+    },
+    "source_task_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "lane": {
+      "enum": [
+        "SANDBOX",
+        "DOCS_LOCAL"
+      ]
+    },
+    "assigned_agent": {
+      "type": "string"
+    },
+    "task_spec_path": {
+      "type": "string"
+    },
+    "ghostgate_path": {
+      "type": "string"
+    },
+    "rollback_snapshot_path": {
+      "type": "string"
+    },
+    "expected_outputs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "tests_required": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "witnesslog_path": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "DRAFT",
+        "READY",
+        "APPROVED",
+        "EXECUTED",
+        "ROLLED_BACK",
+        "BLOCKED"
+      ]
+    },
+    "publication_gate": {
+      "const": "BLOCK"
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "medioevo.agent_chat.persistent_message.v0_3",
+  "type": "object",
+  "required": [
+    "message_id",
+    "room",
+    "sender",
+    "recipient",
+    "mentions",
+    "body",
+    "message_type",
+    "linked_task_id",
+    "linked_workpack_id",
+    "linked_witness_id",
+    "created_at",
+    "tags",
+    "redaction_status",
+    "hash",
+    "previous_hash"
+  ],
+  "properties": {
+    "message_id": {
+      "type": "string"
+    },
+    "room": {
+      "type": "string"
+    },
+    "sender": {
+      "type": "string"
+    },
+    "recipient": {
+      "type": "string"
+    },
+    "mentions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "body": {
+      "type": "string"
+    },
+    "message_type": {
+      "enum": [
+        "CHAT",
+        "GATE",
+        "SYSTEM",
+        "TASK",
+        "WITNESS",
+        "WORKPACK"
+      ]
+    },
+    "linked_task_id": {
+      "type": "string"
+    },
+    "linked_workpack_id": {
+      "type": "string"
+    },
+    "linked_witness_id": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "redaction_status": {
+      "enum": [
+        "PASS",
+        "REVIEW",
+        "BLOCK"
+      ]
+    },
+    "hash": {
+      "type": "string"
+    },
+    "previous_hash": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

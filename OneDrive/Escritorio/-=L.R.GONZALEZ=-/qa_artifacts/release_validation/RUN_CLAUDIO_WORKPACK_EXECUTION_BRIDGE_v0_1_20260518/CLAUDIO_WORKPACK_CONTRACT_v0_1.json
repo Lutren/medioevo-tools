@@ -1,0 +1,26 @@
+{
+  "version": "v0.1",
+  "mode": "LOCAL_ONLY",
+  "execution_engine": "LOCAL_EXECUTE_v0_2",
+  "allowed_lanes": [
+    "SANDBOX",
+    "DOCS_LOCAL"
+  ],
+  "blocked_lanes": [
+    "PUBLICATION",
+    "CLOUD",
+    "NVIDIA",
+    "REMOTE_COMPUTE",
+    "PROTECTED_MATERIAL"
+  ],
+  "requires_task_spec": true,
+  "requires_ghostgate_pass": true,
+  "requires_rollback": true,
+  "requires_witnesslog": true,
+  "requires_workpack_manifest": true,
+  "direct_delete_allowed": false,
+  "publication_gate": "BLOCK",
+  "cloud_live_gate": "BLOCK_THIS_RUN",
+  "nvidia_smoke_gate": "DO_NOT_CALL",
+  "secret_values_printed": false
+}
