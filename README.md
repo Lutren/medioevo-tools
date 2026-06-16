@@ -45,6 +45,19 @@ MIT - use it, modify it, distribute it.
 | KDP Pipeline | Stable |
 | Multi-AI Orchestrator | Beta |
 
+## Agent Skills
+
+The MEDIOEVO project also maintains a curated library of **agent skills** — cognitive building blocks for local-first AI agents operating under the OSIT (Outcome-First System Interaction) framework.
+
+| Skill | Domain | Purpose |
+|---|---|---|
+| [wabi-cli-ux](https://github.com/Lutren/medioevo-skills/tree/main/wabi-cli-ux) | UX/UI | TUI enhancement for Wabi-Sabi AI Runtime |
+| [prompt-comparativo](https://github.com/Lutren/medioevo-skills/tree/main/prompt-comparativo) | Agentic AI | Comparative analysis of autonomous agent prompts |
+| [osit-anti-caos](https://github.com/Lutren/medioevo-skills/tree/main/osit-anti-caos) | Forensic Architecture | 4-phase protocol for chaotic codebase archaeology |
+| [osit-fable](https://github.com/Lutren/medioevo-skills/tree/main/osit-fable) | Autonomy / Safety | Calibrated Fable 5 autonomy emulator |
+
+See the full collection at: **[github.com/Lutren/medioevo-skills](https://github.com/Lutren/medioevo-skills)**
+
 ## Contributing
 
 Pull requests and issues are welcome.
