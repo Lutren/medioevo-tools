@@ -1,9 +1,0 @@
-{
-  "generated_at": "2026-05-13T23:27:58",
-  "sample_words": 3669,
-  "replacement_characters": 0,
-  "pass02_marker": false,
-  "best_seller_claim_allowed": false,
-  "publication_allowed_when_host_gate_allows": true,
-  "source_private_packet_sha256": "4B5DBAAFB686B2C0DDD582ACC9756B1CC1FAADCD759D2E32F160BB779ACFF651"
-}

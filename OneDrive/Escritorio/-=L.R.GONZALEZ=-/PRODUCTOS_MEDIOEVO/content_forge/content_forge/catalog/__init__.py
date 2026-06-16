@@ -1,1 +1,0 @@
-"""Curated asset catalog helpers."""

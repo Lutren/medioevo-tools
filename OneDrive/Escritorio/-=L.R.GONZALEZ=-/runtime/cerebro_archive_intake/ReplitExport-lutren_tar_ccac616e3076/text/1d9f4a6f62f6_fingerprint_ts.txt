@@ -1,8 +1,0 @@
-export function generateFingerprint() {
-  const chars = '0123456789ABCDEF';
-  let hex = '';
-  for (let i = 0; i < 8; i++) {
-    hex += chars[Math.floor(Math.random() * 16)];
-  }
-  return `DUAT-GEODIA-${hex}`;
-}
