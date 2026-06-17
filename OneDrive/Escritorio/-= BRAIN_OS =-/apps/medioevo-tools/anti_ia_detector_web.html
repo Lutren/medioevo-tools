@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Anti-IA Detector — MEDIOEVO Tools</title>
 <meta name="description" content="Detecta patrones de escritura artificial en tu prosa. Canon L.R. Gonzalez: em dashes, aperturas circulares, relleno, marcadores vacios.">
+<script src="https://js.stripe.com/v3/" async></script>
 <style>
 /* ─── Variables (BRAIN_OS palette) ─── */
 :root {
@@ -439,7 +440,61 @@ function updateQuotaUI() {
   }
 }
 
-// ── Licencia ────────────────────────────────────────────────────────────────
+// ── Stripe / Pagos ───────────────────────────────────────────────────────────
+
+const STRIPE_PUBLISHABLE_KEY = 'pk_test_REPLACE_WITH_YOUR_STRIPE_PUBLISHABLE_KEY'; // Reemplazar con tu clave pública de Stripe
+const STRIPE_PRICE_ID_ANTI_IA = 'price_REPLACE_WITH_YOUR_PRICE_ID'; // Price ID para anti-IA detector (50 usos, $3)
+const STRIPE_PRICE_ID_FACTCHECK = 'price_REPLACE_WITH_YOUR_PRICE_ID_FACTCHECK'; // Price ID para fact-checker
+
+let stripe = null;
+
+async function initStripe() {
+  if (typeof Stripe !== 'undefined' && STRIPE_PUBLISHABLE_KEY && !STRIPE_PUBLISHABLE_KEY.includes('REPLACE')) {
+    try {
+      stripe = Stripe(STRIPE_PUBLISHABLE_KEY);
+    } catch (e) {
+      console.warn('Stripe init failed:', e);
+    }
+  }
+}
+
+async function redirectToStripeCheckout(priceId, productName) {
+  if (!stripe) {
+    await initStripe();
+  }
+  if (!stripe) {
+    // Fallback a Gumroad si Stripe no está configurado
+    window.open('https://lutren.gumroad.com', '_blank', 'noopener');
+    return;
+  }
+  try {
+    const response = await fetch('/api/create-checkout-session', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ price_id: priceId, product_name: productName })
+    });
+    const data = await response.json();
+    if (data.url) {
+      window.location.href = data.url;
+    } else if (data.sessionId) {
+      const result = await stripe.redirectToCheckout({ sessionId: data.sessionId });
+      if (result.error) {
+        console.error('Stripe redirect error:', result.error);
+        // Fallback a Gumroad
+        window.open('https://lutren.gumroad.com', '_blank', 'noopener');
+      }
+    } else {
+      // Fallback a Gumroad si no hay backend
+      window.open('https://lutren.gumroad.com', '_blank', 'noopener');
+    }
+  } catch (e) {
+    console.error('Stripe checkout error:', e);
+    // Fallback a Gumroad
+    window.open('https://lutren.gumroad.com', '_blank', 'noopener');
+  }
+}
+
+// ── Licencia (Gumroad legacy) ────────────────────────────────────────────────
 
 function validateLicenseFormat(key) {
   // Formato Gumroad: XXXXXXXX-XXXXXXXX-XXXXXXXX-XXXXXXXX (alfanum, 8 grupos)
@@ -468,11 +523,16 @@ document.getElementById('activateBtn').addEventListener('click', () => {
   document.getElementById('licensePanel').classList.remove('open');
 });
 
-// ── Modal ────────────────────────────────────────────────────────────────────
+// ── Modal / Compra ──────────────────────────────────────────────────────────
 
-document.getElementById('openModal').addEventListener('click', e => {
+document.getElementById('openModal').addEventListener('click', async e => {
   e.preventDefault();
-  document.getElementById('quotaOverlay').classList.add('show');
+  // Intentar Stripe Checkout primero, fallback a modal si no está configurado
+  if (STRIPE_PUBLISHABLE_KEY && !STRIPE_PUBLISHABLE_KEY.includes('REPLACE')) {
+    await redirectToStripeCheckout(STRIPE_PRICE_ID_ANTI_IA, 'Anti-IA Detector (50 usos)');
+  } else {
+    document.getElementById('quotaOverlay').classList.add('show');
+  }
 });
 document.getElementById('closeModal').addEventListener('click', () => {
   document.getElementById('quotaOverlay').classList.remove('show');
@@ -548,6 +608,7 @@ document.getElementById('clearBtn').addEventListener('click', () => {
 
 // ── Init ──────────────────────────────────────────────────────────────────────
 updateQuotaUI();
+initStripe();
 </script>
 </body>
 </html>

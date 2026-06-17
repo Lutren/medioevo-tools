@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Brain OS Fact Checker — Verificador Epistémico OSIT</title>
 <meta name="description" content="Verifica claims con metodología OSIT: R estimado, estados epistémicos, fingerprint SHA3-256.">
+<script src="https://js.stripe.com/v3/" async></script>
 <style>
 :root {
   --bg:       #0a0c0e;
@@ -266,6 +267,54 @@ claimInput.addEventListener("keydown", e => {
 modeSelect.addEventListener("change", e => {
   modeBadge.textContent = e.target.value.toUpperCase();
 });
+
+// ── Stripe / Pagos (para versión Pro futura) ────────────────────────────────
+
+const STRIPE_PUBLISHABLE_KEY = 'pk_test_REPLACE_WITH_YOUR_STRIPE_PUBLISHABLE_KEY';
+const STRIPE_PRICE_ID_FACTCHECK_PRO = 'price_REPLACE_WITH_YOUR_PRICE_ID';
+
+let stripe = null;
+
+async function initStripe() {
+  if (typeof Stripe !== 'undefined' && STRIPE_PUBLISHABLE_KEY && !STRIPE_PUBLISHABLE_KEY.includes('REPLACE')) {
+    try {
+      stripe = Stripe(STRIPE_PUBLISHABLE_KEY);
+    } catch (e) {
+      console.warn('Stripe init failed:', e);
+    }
+  }
+}
+
+async function redirectToStripeCheckout(priceId, productName) {
+  if (!stripe) {
+    if (typeof Stripe !== 'undefined' && STRIPE_PUBLISHABLE_KEY && !STRIPE_PUBLISHABLE_KEY.includes('REPLACE')) {
+      try {
+        stripe = Stripe(STRIPE_PUBLISHABLE_KEY);
+      } catch (e) {
+        console.warn('Stripe init failed:', e);
+      }
+    }
+  }
+  if (!stripe) return;
+  try {
+    const response = await fetch('/api/create-checkout-session', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ price_id: priceId, product_name: productName })
+    });
+    const data = await response.json();
+    if (data.url) {
+      window.location.href = data.url;
+    } else if (data.sessionId && stripe) {
+      const result = await stripe.redirectToCheckout({ sessionId: data.sessionId });
+      if (result.error) console.error('Stripe redirect error:', result.error);
+    }
+  } catch (e) {
+    console.error('Stripe checkout error:', e);
+  }
+}
+
+initStripe();
 </script>
 </body>
 </html>
