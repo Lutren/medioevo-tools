@@ -1,10 +1,129 @@
+# BRAIN_OS .gitignore - Generado 2026-06-18
+
+# === Dependencies ===
 node_modules/
+.pnp
+.pnp.js
+
+# === Python ===
 __pycache__/
-node_modules/
-__pycache__/
-*.pyc
+*.py[cod]
+*.class
 .pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.venv/
+venv/
+ENV/
+
+# === Build outputs ===
 dist/
 build/
-tools/vendor/openai-symphony/elixir/deps/
-tools/vendor/openai-symphony/elixir/_build/
+.next/
+out/
+*.egg-info/
+
+# === IDE/Editor ===
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# === Logs ===
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# === Runtime data ===
+*.pid
+*.port
+*.url
+wabi_ui.stderr.log
+wabi_ui.stdout.log
+
+# === AI Agent artifacts (DO NOT COMMIT) ===
+.codex/
+.openclaw/
+.claude/projects/
+.gemini/
+.cursor/
+.aider/
+.continue/
+.factory/
+.roo/
+.vibe/
+.kilocode/
+.qoder/
+.junie/
+.iflow/
+.kode/
+.codeartsdoer/
+.codebuddy/
+.codemaker/
+.codestudio/
+.commandcode/
+.neovate/
+.nemo-code/
+.pochi/
+.moxby/
+.mux/
+.jazz/
+.zencoder/
+.qoder-cn/
+.terramind/
+.snowflake/
+.summer/
+.tabnine/
+.tinycloud/
+.trae/
+.trae-cn/
+.visualizers/
+.reasonix/
+.sentinel/
+.vibe/
+.kimi/
+.kimi-webbridge/
+
+# === BRAIN_OS Specific ===
+# Large assets (use Git LFS or external storage)
+assets/WABI_VISUALS/
+assets/img/
+assets/thumbnails/
+assets/video/
+assets/audio/
+books/rpg/protected/
+releases/publish_staging/
+releases/exports/
+releases/backups/
+_archive/
+
+# === Local config ===
+private/
+.env
+.env.local
+.env.*.local
+
+# === Temporary ===
+*.tmp
+*.temp
+.tmp/
+temp/
+tmp/
+.sandbox/
+.sandbox-bin/
+
+# === Test artifacts (rotating) ===
+02_CLAUDIO/qa_witnesslog/
+02_CLAUDIO/qa_artifacts/
+data/runtime/outputs/
+02_CLAUDIO/runtime/outputs/
+02_CLAUDIO/runtime/cerebro_archive_intake/
+
+# === OSIT/MEDIOEVO Specific ===
+*.beam
+*.beam.*
