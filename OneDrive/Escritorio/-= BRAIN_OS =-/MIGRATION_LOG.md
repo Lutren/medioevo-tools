@@ -84,6 +84,50 @@ Documentos fuente cuyo contenido fue absorbido completamente en skills canónico
 
 ---
 
+## 2026-06-18 — Limpieza basura temporal `pending_for_review/` (FASE 0 ULTRATHINK)
+
+Eliminación de 24 archivos temporales (capturas de pantalla, ipython tmp) que no son trabajo curado.
+
+| Fecha | Origen | Destino | Razón | Evidencia | Hash |
+|-------|--------|---------|-------|-----------|------|
+| 2026-06-18 | `pending_for_review/*.png` (24 archivos) | **ELIMINADOS** (papelera OneDrive) | Basura temporal: capturas ipython, gráficos SRE/SRTR, visualizaciones EPN. No son docs de trabajo. | Ver lista abajo | N/A (eliminados) |
+
+**Archivos eliminados (5.2 MB):**
+- 13 capturas `ipython-tmp-*.png` (timestamps 2026-06-18T03:46 - T06:26)
+- `EPN_visualization.png`, `fig1_hysteresis_loops.png`, `fig2_area_vs_taumem.png`
+- `SRE_benchmark.png`, `SRE_benchmark_structural.png`, `SRE_v01_unified*.png` (2), `SRE_v02_OSIT_complete.png`
+- `SRTR_benchmark_comparison.png`, `SRTR_v01_analysis.png`
+
+**Archivos MANTENIDOS (18 docs de trabajo):**
+- `ARQUITECTURA REAL.txt`, `Claude*.txt` (4), `Continúo desde donde me quedé..txt`
+- `Entiendo. Quieres un servidor MCP f.txt`, `ESTADO CERTEZA.txt`, `ESTADO INFERENCIA.txt`
+- `Gemini 2.txt`, `Grrmini.txt`, `hysteresis_test.py`
+- `Kimi*.txt` (4), `Time Loop Trajectory Theory.docx`
+- `user_pasted_clipboard_long_content_as_file_nbo necesitamos a;os.txt`
+- `WABI-SABI MCP Server v4.0 - OSITStr.txt`
+
+**Verificación post-limpieza:**
+- `python tools/workbench_guard.py verify` → **OK** (35/35, baseline actualizado)
+- `pending_for_review/` ahora contiene solo 18 archivos de trabajo legítimos
+
+**Rollback:** Restaurar desde papelera de OneDrive (archivos eliminados 2026-06-18 ~14:30).
+
+---
+
+## 2026-06-18 — Consolidación post-conflicto de esquemas (Claude / ULTRAPLAN)
+
+> Detalle completo: `docs/ESTADO_CONSOLIDACION_2026-06-18.md`. Manifiesto: `_CUARENTENA_2026-06-18/MANIFEST.csv`.
+
+Verificado: `workbench_guard verify` 32 OK / 0 faltantes; smoke EXIT 0; zonas protegidas NO tocadas (LEY SUPREMA respetada). Decisión canónica: witness/runtime/qa_artifacts viven en `02_CLAUDIO/` (+ `08_QA_WITNESSLOG` tail); el esquema 06-17 en `data/*` (parcial, no referenciado por código) → cuarentena.
+
+| Origen | Destino | Razón | Rollback |
+|--------|---------|-------|----------|
+| `_archive/` (migration_baseline + osit_core_backup + legacy, ~766MB) | `_CUARENTENA_2026-06-18/_archive/` | baselines/legacy redundantes (live + E snapshot) | Move-Item back |
+| `…/curador_seto/source_archive/downloads/` 10 instaladores (~1055MB) | `_CUARENTENA_2026-06-18/runtime_installers/` | instaladores re-descargables | re-descargar / Move-Item back |
+| `data/witnesslog` + `data/runtime` + `data/qa_artifacts` | `_CUARENTENA_2026-06-18/data_06-17-scheme/` | esquema 06-17 parcial | Move-Item back |
+
+**PRESERVADO (NO BORRAR):** material maestro OSIT/MEDIOEVO en `02_CLAUDIO/runtime/curador_seto/source_archive/downloads/` (rawtext part00-09 + masters v11/v12); `E:\BRAIN_OS_BODEGA` = respaldo del árbol RETIRADO `-=L.R.GONZALEZ=-`. ZIP de origen obsai-core NO en disco → papelera online OneDrive.
+
 ## Plantilla para futuras entradas
 
 ```markdown
@@ -94,4 +138,162 @@ Documentos fuente cuyo contenido fue absorbido completamente en skills canónico
 | YYYY-MM-DD | `ruta/origen` | `ruta/destino` | Justificación | Qué valida | SHA256 |
 
 **Rollback:** comando exacto para revertir.
-```
+```## 2026-06-19 03:32:51 -- BACKUP PRE-DESTRUCTIVO
+- **Zona:** WORKBENCH
+- **Path original:** -=LR WORKING BENCH=- no borrar\-=NO BORRAR  WORKBENCH_MAESTRO =-\10_OBSERVACIONISMO
+- **Hash original:** 440bb489cf18abb8a7da070033aab95f85a476f6068058af3e17049e3c800753
+- **Backup:** _archive\workbench_backups\2026-06-19\033251/
+- **Hash backup:** 440bb489cf18abb8a7da070033aab95f85a476f6068058af3e17049e3c800753 (VERIFICADO: OK)
+- **Ejecutor:** workbench_guard.py backup
+- **Nota:** Backup automatico pre-accion destructiva (requiere autorizacion humana separada)
+
+## 2026-06-19 03:34:15 -- BACKUP PRE-DESTRUCTIVO
+- **Zona:** WORKBENCH
+- **Path original:** -=LR WORKING BENCH=- no borrar\-=NO BORRAR  WORKBENCH_MAESTRO =-\15_OSIT
+- **Hash original:** d031221726001b8d64b9d6e52592615a0bd3b4ccf8255d2424ab12d351103f11
+- **Backup:** _archive\workbench_backups\2026-06-19\033415/
+- **Hash backup:** d031221726001b8d64b9d6e52592615a0bd3b4ccf8255d2424ab12d351103f11 (VERIFICADO: OK)
+- **Ejecutor:** workbench_guard.py backup
+- **Nota:** Backup automatico pre-accion destructiva (requiere autorizacion humana separada)
+
+## 2026-06-19 03:34:15 -- BACKUP PRE-DESTRUCTIVO
+- **Zona:** WORKBENCH
+- **Path original:** -=LR WORKING BENCH=- no borrar\-=NO BORRAR  WORKBENCH_MAESTRO =-\17_MARCO
+- **Hash original:** 49c49d7f012141542fd39f9c990471f79cd35df46a8e9bcf4656828f950b6f36
+- **Backup:** _archive\workbench_backups\2026-06-19\033415/
+- **Hash backup:** 49c49d7f012141542fd39f9c990471f79cd35df46a8e9bcf4656828f950b6f36 (VERIFICADO: OK)
+- **Ejecutor:** workbench_guard.py backup
+- **Nota:** Backup automatico pre-accion destructiva (requiere autorizacion humana separada)
+
+## 2026-06-19 03:34:16 -- BACKUP PRE-DESTRUCTIVO
+- **Zona:** WORKBENCH
+- **Path original:** -=LR WORKING BENCH=- no borrar\-=NO BORRAR  WORKBENCH_MAESTRO =-\09_HISTORIA_ROADMAP
+- **Hash original:** ee646bf4c68617951b12e1cab5172ce9f3e6707c6565fe5773b15a7d90f11d0d
+- **Backup:** _archive\workbench_backups\2026-06-19\033416/
+- **Hash backup:** ee646bf4c68617951b12e1cab5172ce9f3e6707c6565fe5773b15a7d90f11d0d (VERIFICADO: OK)
+- **Ejecutor:** workbench_guard.py backup
+- **Nota:** Backup automatico pre-accion destructiva (requiere autorizacion humana separada)
+
+## 2026-06-19 03:34:16 -- BACKUP PRE-DESTRUCTIVO
+- **Zona:** WORKBENCH
+- **Path original:** -=LR WORKING BENCH=- no borrar\-=NO BORRAR  WORKBENCH_MAESTRO =-\14_SKILLS
+- **Hash original:** 39e91a75c033396b8dce216c4fd9e9ba6447b30c162697791550562d7c2ea604
+- **Backup:** _archive\workbench_backups\2026-06-19\033416/
+- **Hash backup:** 39e91a75c033396b8dce216c4fd9e9ba6447b30c162697791550562d7c2ea604 (VERIFICADO: OK)
+- **Ejecutor:** workbench_guard.py backup
+- **Nota:** Backup automatico pre-accion destructiva (requiere autorizacion humana separada)
+
+## 2026-06-19 03:34:29 -- BACKUP PRE-DESTRUCTIVO
+- **Zona:** WORKBENCH
+- **Path original:** -=LR WORKING BENCH=- no borrar\-=NO BORRAR  WORKBENCH_MAESTRO =-\04_WABI_SABI
+- **Hash original:** 427374e4030e3dcc0e93cc963c5dab47a9ad5808dfbc443ddc3fab2106f7bb56
+- **Backup:** _archive\workbench_backups\2026-06-19\033429/
+- **Hash backup:** 427374e4030e3dcc0e93cc963c5dab47a9ad5808dfbc443ddc3fab2106f7bb56 (VERIFICADO: OK)
+- **Ejecutor:** workbench_guard.py backup
+- **Nota:** Backup automatico pre-accion destructiva (requiere autorizacion humana separada)
+
+## 2026-06-19 03:34:56 -- BACKUP PRE-DESTRUCTIVO
+- **Zona:** WORKBENCH
+- **Path original:** -=LR WORKING BENCH=- no borrar\-=NO BORRAR  WORKBENCH_MAESTRO =-\08_MATEMATICAS\03_RESEARCH_LAB
+- **Hash original:** 0386f29db3518d7b4a3cc46e02b91f51cb30d2ed7609cbc6c568f5eb01777ca6
+- **Backup:** _archive\workbench_backups\2026-06-19\033452/
+- **Hash backup:** 0386f29db3518d7b4a3cc46e02b91f51cb30d2ed7609cbc6c568f5eb01777ca6 (VERIFICADO: OK)
+- **Ejecutor:** workbench_guard.py backup
+- **Nota:** Backup automatico pre-accion destructiva (requiere autorizacion humana separada)
+
+## 2026-06-19 03:35:24 -- BACKUP PRE-DESTRUCTIVO
+- **Zona:** WORKBENCH
+- **Path original:** -=LR WORKING BENCH=- no borrar\-=NO BORRAR  WORKBENCH_MAESTRO =-\intake
+- **Hash original:** 438a6c5f2a7531c395c92ec560bcc97bd663cdd2f1015685e2e097bef0b1eba4
+- **Backup:** _archive\workbench_backups\2026-06-19\033523/
+- **Hash backup:** 438a6c5f2a7531c395c92ec560bcc97bd663cdd2f1015685e2e097bef0b1eba4 (VERIFICADO: OK)
+- **Ejecutor:** workbench_guard.py backup
+- **Nota:** Backup automatico pre-accion destructiva (requiere autorizacion humana separada)
+
+## 2026-06-19 03:35:24 -- BACKUP PRE-DESTRUCTIVO
+- **Zona:** WORKBENCH
+- **Path original:** -=LR WORKING BENCH=- no borrar\-=NO BORRAR  WORKBENCH_MAESTRO =-\pending_for_review\Recovery\A
+- **Hash original:** 113d654ce60420635f543734a00f409d586932e0d0e347edf93d2a8db9d67e10
+- **Backup:** _archive\workbench_backups\2026-06-19\033524/
+- **Hash backup:** 113d654ce60420635f543734a00f409d586932e0d0e347edf93d2a8db9d67e10 (VERIFICADO: OK)
+- **Ejecutor:** workbench_guard.py backup
+- **Nota:** Backup automatico pre-accion destructiva (requiere autorizacion humana separada)
+
+## 2026-06-19 03:35:24 -- BACKUP PRE-DESTRUCTIVO
+- **Zona:** WORKBENCH
+- **Path original:** -=LR WORKING BENCH=- no borrar\-=NO BORRAR  WORKBENCH_MAESTRO =-\pending_for_review\Recovery\B
+- **Hash original:** af6a642affde30e60d1ae42dbff22d26ba8b869812dde92846a2196c93139de5
+- **Backup:** _archive\workbench_backups\2026-06-19\033524/
+- **Hash backup:** af6a642affde30e60d1ae42dbff22d26ba8b869812dde92846a2196c93139de5 (VERIFICADO: OK)
+- **Ejecutor:** workbench_guard.py backup
+- **Nota:** Backup automatico pre-accion destructiva (requiere autorizacion humana separada)
+
+## 2026-06-19 03:35:24 -- BACKUP PRE-DESTRUCTIVO
+- **Zona:** WORKBENCH
+- **Path original:** -=LR WORKING BENCH=- no borrar\-=NO BORRAR  WORKBENCH_MAESTRO =-\pending_for_review\Recovery\C
+- **Hash original:** 5045a44b756be07b5bafd8db3df5d689507d74938e5cc8356957e8f2af32d16c
+- **Backup:** _archive\workbench_backups\2026-06-19\033524/
+- **Hash backup:** 5045a44b756be07b5bafd8db3df5d689507d74938e5cc8356957e8f2af32d16c (VERIFICADO: OK)
+- **Ejecutor:** workbench_guard.py backup
+- **Nota:** Backup automatico pre-accion destructiva (requiere autorizacion humana separada)
+
+## 2026-06-19 03:35:24 -- BACKUP PRE-DESTRUCTIVO
+- **Zona:** WORKBENCH
+- **Path original:** -=LR WORKING BENCH=- no borrar\-=NO BORRAR  WORKBENCH_MAESTRO =-\pending_for_review\Recovery\D
+- **Hash original:** 912448dfd74a7e31fbc032b6a5d6ed29db36af006da1d44ed690d3b4b2fdd03f
+- **Backup:** _archive\workbench_backups\2026-06-19\033524/
+- **Hash backup:** 912448dfd74a7e31fbc032b6a5d6ed29db36af006da1d44ed690d3b4b2fdd03f (VERIFICADO: OK)
+- **Ejecutor:** workbench_guard.py backup
+- **Nota:** Backup automatico pre-accion destructiva (requiere autorizacion humana separada)
+
+## 2026-06-19 03:35:25 -- BACKUP PRE-DESTRUCTIVO
+- **Zona:** WORKBENCH
+- **Path original:** -=LR WORKING BENCH=- no borrar\-=NO BORRAR  WORKBENCH_MAESTRO =-\pending_for_review\Recovery\E
+- **Hash original:** af6a642affde30e60d1ae42dbff22d26ba8b869812dde92846a2196c93139de5
+- **Backup:** _archive\workbench_backups\2026-06-19\033525/
+- **Hash backup:** af6a642affde30e60d1ae42dbff22d26ba8b869812dde92846a2196c93139de5 (VERIFICADO: OK)
+- **Ejecutor:** workbench_guard.py backup
+- **Nota:** Backup automatico pre-accion destructiva (requiere autorizacion humana separada)
+
+## 2026-06-19 03:35:25 -- BACKUP PRE-DESTRUCTIVO
+- **Zona:** WORKBENCH
+- **Path original:** -=LR WORKING BENCH=- no borrar\-=NO BORRAR  WORKBENCH_MAESTRO =-\pending_for_review\Recovery\f
+- **Hash original:** 600456a2747922dd20b03ee8e2ace3e999aa1604950206f6d5dc44034a7e6036
+- **Backup:** _archive\workbench_backups\2026-06-19\033525/
+- **Hash backup:** 600456a2747922dd20b03ee8e2ace3e999aa1604950206f6d5dc44034a7e6036 (VERIFICADO: OK)
+- **Ejecutor:** workbench_guard.py backup
+- **Nota:** Backup automatico pre-accion destructiva (requiere autorizacion humana separada)
+
+## 2026-06-19 03:35:25 -- BACKUP PRE-DESTRUCTIVO
+- **Zona:** WORKBENCH
+- **Path original:** -=LR WORKING BENCH=- no borrar\-=NO BORRAR  WORKBENCH_MAESTRO =-\pending_for_review\Recovery\G
+- **Hash original:** 9cc752d592c434e89890b737b207dc09715faf93dc0791fc5860aaaaaa5a2f19
+- **Backup:** _archive\workbench_backups\2026-06-19\033525/
+- **Hash backup:** 9cc752d592c434e89890b737b207dc09715faf93dc0791fc5860aaaaaa5a2f19 (VERIFICADO: OK)
+- **Ejecutor:** workbench_guard.py backup
+- **Nota:** Backup automatico pre-accion destructiva (requiere autorizacion humana separada)
+
+---
+
+## 2026-06-19 — BORRADO AUTORIZADO: Absorción WORKBENCH_MAESTRO
+
+- **Autorización:** "si, autorizo todo" — Tyr, 2026-06-19, esta sesión
+- **Auditor:** Claude Sonnet 4.6
+- **Método:** SHA256 archivo por archivo vs. sistema canónico
+- **Backup:** `_archive/workbench_backups/2026-06-19/` — todos verificados hash OK
+- **verify() post-acción:** exit 0 — 28 OK, 0 faltantes
+
+| Carpeta | Archivos | Canónico | Hash Backup |
+|---------|---------|----------|-------------|
+| `17_MARCO/` | 28 | `CANON_MASTER/` | 49c49d7f... |
+| `04_WABI_SABI/` | 120 | `02_CLAUDIO/wabi_sabi/` | 427374e4... |
+| `10_OBSERVACIONISMO/` | 1 | `02_CLAUDIO/wabi_sabi/` | 440bb489... |
+| `15_OSIT/` | 5 | `02_CLAUDIO/wabi_sabi/` | d0312217... |
+| `09_HISTORIA_ROADMAP/` | 50 | `LIVE_STATE/` | ee646bf4... |
+| `14_SKILLS/` | 26 dirs | `02_CLAUDIO/wabi_sabi/skills/osits/` | 39e91a75... |
+| `08_MATEMATICAS/03_RESEARCH_LAB/` | 556 | = 18_TEORIAS_ESPECULATIVAS (copia) | 0386f29d... |
+| `_PAQUETES/` | 0 | vacío | N/A |
+| `intake/` | ~46 | transitorio | 438a6c5f... |
+| `pending_for_review/Recovery/A-G` | 128 | supersedido por CANON_MASTER | varios... |
+| `20_BLUEPRINTS/` (7 archivos raíz) | 7 | `02_CLAUDIO/docs/` | SHA256 OK |
+

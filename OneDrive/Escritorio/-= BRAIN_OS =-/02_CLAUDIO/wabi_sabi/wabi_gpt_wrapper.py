@@ -99,6 +99,16 @@ MODE_CONFIGS: dict[str, dict] = {
         "osit_format": True,
         "kintsugi": True,
     },
+    # Pragmático: análisis/construcción iterativo, local-first, autonomía alta
+    "pragmatic": {
+        "T": 0.5,
+        "residue": True,
+        "alternatives": True,
+        "witness": True,
+        "osit_format": True,
+        "kintsugi": True,
+        "local_first": True,
+    },
 }
 
 
