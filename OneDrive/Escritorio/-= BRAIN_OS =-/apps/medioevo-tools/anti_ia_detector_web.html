@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Anti-IA Detector — MEDIOEVO Tools</title>
 <meta name="description" content="Detecta patrones de escritura artificial en tu prosa. Canon L.R. Gonzalez: em dashes, aperturas circulares, relleno, marcadores vacios.">
-<script src="https://js.stripe.com/v3/" async></script>
 <style>
 /* ─── Variables (BRAIN_OS palette) ─── */
 :root {
@@ -20,6 +19,7 @@
   --green:    #7fe3b0;
   --red:      #e8304a;
   --blue:     #4a9eff;
+  --purple:   #a855f7;
   --text:     #c8cdd6;
   --dim:      #6a7280;
   --font:     ui-monospace,'Courier New',monospace;
@@ -49,6 +49,8 @@ header {
 
 .brand { color: var(--brass); font-size: .87rem; font-weight: 700; letter-spacing: .08em; }
 .sub   { color: var(--dim);   font-size: .72rem; flex: 1; }
+.header-site { font-size: .68rem; color: var(--dim); text-decoration: none; }
+.header-site:hover { color: var(--brass-dk); }
 
 /* ─── Quota bar ─── */
 .quota-bar {
@@ -140,6 +142,7 @@ textarea[readonly] { border-color: var(--bg3); color: var(--dim); }
   cursor: pointer;
   transition: border-color .15s, color .15s, box-shadow .15s;
   white-space: nowrap;
+  text-decoration: none;
 }
 .btn:hover { border-color: var(--brass-dk); color: var(--text); }
 .btn:disabled { opacity: .38; cursor: not-allowed; }
@@ -148,12 +151,19 @@ textarea[readonly] { border-color: var(--bg3); color: var(--dim); }
 .btn-danger  { border-color: rgba(232,48,74,.5); color: var(--red); }
 .btn-danger:hover { border-color: var(--red); }
 .btn-cta {
-  border-color: var(--cyan);
-  color: var(--cyan);
-  background: rgba(36,232,255,.07);
+  border-color: var(--purple);
+  color: var(--purple);
+  background: rgba(168,85,247,.07);
   font-size: .72rem;
 }
-.btn-cta:hover { box-shadow: 0 0 8px rgba(36,232,255,.25); color: var(--text); }
+.btn-cta:hover { box-shadow: 0 0 8px rgba(168,85,247,.25); color: var(--text); border-color: var(--purple); }
+.btn-gumroad {
+  border-color: var(--cyan);
+  color: var(--cyan);
+  background: rgba(36,232,255,.05);
+  font-size: .72rem;
+}
+.btn-gumroad:hover { box-shadow: 0 0 8px rgba(36,232,255,.18); color: var(--text); }
 
 /* ─── Actions row ─── */
 .actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
@@ -221,7 +231,7 @@ footer a:hover { color: var(--brass); }
 .quota-overlay {
   display: none;
   position: fixed; inset: 0;
-  background: rgba(10,12,14,.88);
+  background: rgba(10,12,14,.92);
   z-index: 100;
   align-items: center; justify-content: center;
 }
@@ -231,16 +241,26 @@ footer a:hover { color: var(--brass); }
   border: 1px solid var(--border);
   border-radius: 6px;
   padding: 28px 32px;
-  max-width: 420px; width: 90%;
+  max-width: 440px; width: 90%;
   text-align: center;
 }
-.quota-modal h2 { color: var(--brass); font-size: 1rem; margin-bottom: 12px; letter-spacing: .06em; }
-.quota-modal p  { color: var(--dim);   font-size: .8rem; margin-bottom: 18px; line-height: 1.6; }
+.quota-modal h2 { color: var(--brass); font-size: 1rem; margin-bottom: 10px; letter-spacing: .06em; }
+.quota-modal p  { color: var(--dim);   font-size: .8rem; margin-bottom: 16px; line-height: 1.6; }
 .quota-modal .price {
-  font-size: 1.6rem; color: var(--cyan); font-weight: 700; margin-bottom: 4px;
+  font-size: 1.6rem; color: var(--purple); font-weight: 700; margin-bottom: 4px;
 }
 .quota-modal .price-note { font-size: .72rem; color: var(--dim); margin-bottom: 20px; }
-.modal-actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.modal-actions {
+  display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.modal-divider {
+  font-size: .65rem; color: var(--dim); margin: 4px 0 12px;
+  display: flex; align-items: center; gap: 8px;
+}
+.modal-divider::before, .modal-divider::after {
+  content: ''; flex: 1; height: 1px; background: var(--border);
+}
 </style>
 </head>
 <body>
@@ -249,6 +269,7 @@ footer a:hover { color: var(--brass); }
 <header>
   <span class="brand">⚜ ANTI-IA DETECTOR</span>
   <span class="sub">Detecta prosa artificial — Canon L.R. Gonzalez</span>
+  <a href="https://medioevo.space" class="header-site" target="_blank" rel="noopener">medioevo.space ↗</a>
 </header>
 
 <!-- Quota bar -->
@@ -257,12 +278,12 @@ footer a:hover { color: var(--brass); }
   <span id="premiumBadge" style="display:none; color: var(--green);">✓ Licencia activa — usos ilimitados</span>
   <button class="btn-link" id="toggleLicense">¿Tienes una licencia?</button>
   <span style="flex:1"></span>
-  <a href="https://lutren.gumroad.com/l/anti-ia-detector" class="btn-link" id="openModal" style="color:var(--amber)" target="_blank" rel="noopener">Comprar 50 usos · $3</a>
+  <button class="btn-link" id="openModal" style="color:var(--amber)">Comprar 50 usos · $3</button>
 </div>
 
 <!-- License key panel -->
 <div class="license-panel" id="licensePanel">
-  <label for="licenseInput">Clave de licencia Gumroad:</label>
+  <label for="licenseInput">Clave de licencia:</label>
   <input type="text" id="licenseInput" placeholder="XXXX-XXXX-XXXX-XXXX" maxlength="40">
   <button class="btn" id="activateBtn">Activar</button>
   <span id="licenseMsg" style="font-size:.72rem; color:var(--dim)"></span>
@@ -308,13 +329,13 @@ footer a:hover { color: var(--brass); }
 
 <!-- Footer -->
 <footer>
-  <span>Canon L.R. Gonzalez (es-MX) — deteccion sin modificacion, la decision es tuya</span>
+  <span>Canon L.R. Gonzalez (es-MX) · deteccion sin modificacion, la decision es tuya</span>
   <span>
-    <a href="https://lutren.gumroad.com/l/anti-ia-detector" target="_blank" rel="noopener">Comprar licencia</a>
+    <a href="https://medioevo.space" target="_blank" rel="noopener">medioevo.space</a>
     &nbsp;·&nbsp;
     <a href="https://github.com/Lutren/medioevo-tools" target="_blank" rel="noopener">Codigo fuente (MIT)</a>
     &nbsp;·&nbsp;
-    <a href="https://medioevo.space" target="_blank" rel="noopener">medioevo.space</a>
+    <a href="https://lutren.gumroad.com" target="_blank" rel="noopener">Gumroad</a>
   </span>
 </footer>
 
@@ -322,15 +343,22 @@ footer a:hover { color: var(--brass); }
 <div class="quota-overlay" id="quotaOverlay">
   <div class="quota-modal">
     <h2>LIMITE DIARIO ALCANZADO</h2>
-    <p>Usaste tus 3 analisis gratuitos de hoy. El limite se reinicia cada dia a medianoche (hora local).</p>
+    <p>Usaste tus 3 analisis gratuitos de hoy.<br>El limite se reinicia a medianoche (hora local).</p>
     <div class="price">$3</div>
     <div class="price-note">50 analisis · sin vencimiento · un solo pago</div>
+
+    <div class="modal-actions" id="stripeAction" style="display:none">
+      <button class="btn btn-cta" id="stripeBtn">Pagar con tarjeta (Stripe) →</button>
+    </div>
+
+    <div class="modal-divider" id="modalDivider" style="display:none">o</div>
+
     <div class="modal-actions">
-      <a href="https://lutren.gumroad.com/l/anti-ia-detector" target="_blank" rel="noopener" class="btn btn-cta">Comprar en Gumroad →</a>
+      <a href="https://lutren.gumroad.com/l/anti-ia-detector" target="_blank" rel="noopener" class="btn btn-gumroad" id="gumroadBtn">Comprar en Gumroad →</a>
       <button class="btn" id="closeModal">Cerrar</button>
     </div>
-    <p style="margin-top:16px; font-size:.68rem;">
-      ¿Ya tienes una clave? Cierra esto y usa el campo "¿Tienes una licencia?" en la barra superior.
+    <p style="margin-top:14px; font-size:.68rem; color:var(--dim)">
+      ¿Ya tienes una clave? Cierra esto y usa "¿Tienes una licencia?" en la barra superior.
     </p>
   </div>
 </div>
@@ -338,8 +366,34 @@ footer a:hover { color: var(--brass); }
 <script>
 "use strict";
 
-// ── Canon L.R. Gonzalez — patrones de prosa artificial ──────────────────────
+/* ─── CONFIGURACION ─────────────────────────────────────────────────────────
+   Rellenar con tus claves reales de Stripe y Gumroad.
+   La publishable key (pk_live_/pk_test_) es segura en el frontend.
+   El Stripe Payment Link es la forma mas simple: no requiere backend.
+   ─────────────────────────────────────────────────────────────────────────── */
+const CONFIG = {
+  FREE_LIMIT: 3,
 
+  // Stripe — opcion 1: Payment Link (mas simple, sin backend)
+  // Crear en: dashboard.stripe.com → Pagos → Payment Links → Crear
+  // Formato: https://buy.stripe.com/XXXXXX
+  STRIPE_PAYMENT_LINK: '',
+
+  // Stripe — opcion 2: Checkout con publishable key (requiere Cloudflare Worker en /api/checkout)
+  // Obtener en: dashboard.stripe.com → Developers → API Keys
+  STRIPE_PUBLISHABLE_KEY: '',
+  STRIPE_PRICE_ID: '',
+
+  // Gumroad
+  GUMROAD_PRODUCT_URL: 'https://lutren.gumroad.com/l/anti-ia-detector',
+
+  // Gumroad License API (validacion server-side)
+  // Requiere Cloudflare Worker en medioevo.space/api/validate-license
+  // que haga proxy a: POST https://api.gumroad.com/v2/licenses/verify
+  LICENSE_VALIDATE_URL: '',  // dejar vacio para validacion solo de formato
+};
+
+/* ─── Canon L.R. Gonzalez — patrones de prosa artificial ─────────────────── */
 const PATTERNS = [
   { type: "em-dash",  label: "Em dash (—)",       re: /[—–]/g },
   { type: "em-dash",  label: "Guion largo ( - )",  re: / - /g },
@@ -400,33 +454,24 @@ function updateStats(text) {
     text.trim() ? text.trim().split(/\s+/).length : 0;
 }
 
-// ── Cuota ───────────────────────────────────────────────────────────────────
-
-const FREE_LIMIT = 3;
-const TODAY_KEY  = () => 'aia_day_' + new Date().toISOString().slice(0, 10);
+/* ─── Cuota ─────────────────────────────────────────────────────────────────── */
+const TODAY_KEY   = () => 'aia_day_' + new Date().toISOString().slice(0, 10);
 const LICENSE_KEY = 'aia_license';
 
-function hasLicense() {
-  return !!localStorage.getItem(LICENSE_KEY);
-}
-
-function getUsed() {
-  return parseInt(localStorage.getItem(TODAY_KEY()) || '0', 10);
-}
-
+function hasLicense() { return !!localStorage.getItem(LICENSE_KEY); }
+function getUsed()    { return parseInt(localStorage.getItem(TODAY_KEY()) || '0', 10); }
 function incrementUsed() {
   const k = TODAY_KEY();
   localStorage.setItem(k, String(getUsed() + 1));
 }
-
 function remaining() {
   if (hasLicense()) return Infinity;
-  return Math.max(0, FREE_LIMIT - getUsed());
+  return Math.max(0, CONFIG.FREE_LIMIT - getUsed());
 }
 
 function updateQuotaUI() {
-  const rem = remaining();
-  const el  = document.getElementById('quotaDisplay');
+  const rem     = remaining();
+  const el      = document.getElementById('quotaDisplay');
   const premium = document.getElementById('premiumBadge');
   if (hasLicense()) {
     el.parentElement.style.display = 'none';
@@ -440,99 +485,97 @@ function updateQuotaUI() {
   }
 }
 
-// ── Stripe / Pagos ───────────────────────────────────────────────────────────
+/* ─── Pago — Stripe + Gumroad ───────────────────────────────────────────────
+   Prioridad: Stripe Payment Link → Stripe Checkout → Gumroad
+   ─────────────────────────────────────────────────────────────────────────── */
 
-const STRIPE_PUBLISHABLE_KEY = 'pk_test_REPLACE_WITH_YOUR_STRIPE_PUBLISHABLE_KEY'; // Reemplazar con tu clave pública de Stripe
-const STRIPE_PRICE_ID_ANTI_IA = 'price_REPLACE_WITH_ANTI_IA_PRICE_ID'; // Price ID para anti-IA detector (50 usos, $3)
-const STRIPE_PRICE_ID_FACTCHECK = 'price_REPLACE_WITH_FACTCHECK_PRICE_ID'; // Price ID para fact-checker
-
-let stripe = null;
-
-async function initStripe() {
-  if (typeof Stripe !== 'undefined' && STRIPE_PUBLISHABLE_KEY && !STRIPE_PUBLISHABLE_KEY.includes('REPLACE')) {
-    try {
-      stripe = Stripe(STRIPE_PUBLISHABLE_KEY);
-    } catch (e) {
-      console.warn('Stripe init failed:', e);
-    }
-  }
+function initModal() {
+  const hasStripe = CONFIG.STRIPE_PAYMENT_LINK || CONFIG.STRIPE_PUBLISHABLE_KEY;
+  document.getElementById('stripeAction').style.display  = hasStripe ? 'flex'  : 'none';
+  document.getElementById('modalDivider').style.display  = hasStripe ? 'flex'  : 'none';
 }
 
-async function redirectToStripeCheckout(priceId, productName) {
-  if (!stripe) {
-    await initStripe();
-  }
-  if (!stripe) {
-    // Fallback a Gumroad si Stripe no está configurado
-    window.open('https://lutren.gumroad.com', '_blank', 'noopener');
+async function handleStripeCheckout() {
+  // Opcion 1: Payment Link (sin backend)
+  if (CONFIG.STRIPE_PAYMENT_LINK) {
+    window.open(CONFIG.STRIPE_PAYMENT_LINK, '_blank', 'noopener');
     return;
   }
-  try {
-    const response = await fetch('/api/create-checkout-session', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ price_id: priceId, product_name: productName })
-    });
-    const data = await response.json();
-    if (data.url) {
-      window.location.href = data.url;
-    } else if (data.sessionId) {
-      const result = await stripe.redirectToCheckout({ sessionId: data.sessionId });
-      if (result.error) {
-        console.error('Stripe redirect error:', result.error);
-        // Fallback a Gumroad
-        window.open('https://lutren.gumroad.com', '_blank', 'noopener');
-      }
-    } else {
-      // Fallback a Gumroad si no hay backend
-      window.open('https://lutren.gumroad.com', '_blank', 'noopener');
+  // Opcion 2: Stripe Checkout via Cloudflare Worker
+  if (CONFIG.STRIPE_PUBLISHABLE_KEY && CONFIG.STRIPE_PRICE_ID) {
+    try {
+      const res = await fetch('/api/checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          price_id:    CONFIG.STRIPE_PRICE_ID,
+          product:     'anti-ia-detector',
+          success_url: window.location.origin + '/success.html',
+          cancel_url:  window.location.href,
+        })
+      });
+      const data = await res.json();
+      if (data.url) { window.location.href = data.url; return; }
+    } catch (e) {
+      console.warn('Stripe Worker no disponible:', e);
     }
-  } catch (e) {
-    console.error('Stripe checkout error:', e);
-    // Fallback a Gumroad
-    window.open('https://lutren.gumroad.com', '_blank', 'noopener');
   }
+  // Fallback: Gumroad
+  window.open(CONFIG.GUMROAD_PRODUCT_URL, '_blank', 'noopener');
 }
 
-// ── Licencia (Gumroad legacy) ────────────────────────────────────────────────
+/* ─── Licencia ──────────────────────────────────────────────────────────────── */
 
 function validateLicenseFormat(key) {
-  // Formato Gumroad: XXXXXXXX-XXXXXXXX-XXXXXXXX-XXXXXXXX (alfanum, 8 grupos)
-  // O formato corto: XXXX-XXXX-XXXX-XXXX
   return /^[A-Z0-9]{4,8}(-[A-Z0-9]{4,8}){3,7}$/i.test(key.trim());
+}
+
+async function validateLicenseRemote(key) {
+  if (!CONFIG.LICENSE_VALIDATE_URL) return true; // sin backend: confiar en formato
+  try {
+    const res = await fetch(CONFIG.LICENSE_VALIDATE_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ license_key: key })
+    });
+    const data = await res.json();
+    return data.success === true;
+  } catch {
+    return true; // si el Worker no responde, dejar pasar (no bloquear al usuario)
+  }
 }
 
 document.getElementById('toggleLicense').addEventListener('click', () => {
   document.getElementById('licensePanel').classList.toggle('open');
 });
 
-document.getElementById('activateBtn').addEventListener('click', () => {
+document.getElementById('activateBtn').addEventListener('click', async () => {
   const key = document.getElementById('licenseInput').value.trim();
   const msg = document.getElementById('licenseMsg');
   if (!key) { msg.textContent = 'Ingresa tu clave.'; msg.style.color = 'var(--red)'; return; }
   if (!validateLicenseFormat(key)) {
-    msg.textContent = 'Formato no valido. Revisa que copiaste la clave completa de Gumroad.';
+    msg.textContent = 'Formato no valido. Verifica que copiaste la clave completa.';
     msg.style.color = 'var(--red)';
     return;
   }
-  // Almacenar la clave (confianza del cliente)
+  msg.textContent = 'Verificando...'; msg.style.color = 'var(--dim)';
+  const valid = await validateLicenseRemote(key);
+  if (!valid) {
+    msg.textContent = 'Clave no valida o ya utilizada.';
+    msg.style.color = 'var(--red)';
+    return;
+  }
   localStorage.setItem(LICENSE_KEY, key);
   msg.textContent = 'Licencia activada. Usos ilimitados desbloqueados.';
   msg.style.color = 'var(--green)';
   updateQuotaUI();
-  document.getElementById('licensePanel').classList.remove('open');
+  setTimeout(() => document.getElementById('licensePanel').classList.remove('open'), 1200);
 });
 
-// ── Modal / Compra ──────────────────────────────────────────────────────────
+/* ─── Modal ─────────────────────────────────────────────────────────────────── */
 
-document.getElementById('openModal').addEventListener('click', async e => {
-  e.preventDefault();
-  // Intentar Stripe Checkout primero, fallback a modal si no está configurado
-  if (STRIPE_PUBLISHABLE_KEY && !STRIPE_PUBLISHABLE_KEY.includes('REPLACE')) {
-    await redirectToStripeCheckout(STRIPE_PRICE_ID_ANTI_IA, 'Anti-IA Detector (50 usos)');
-  } else {
-    document.getElementById('quotaOverlay').classList.add('show');
-  }
+document.getElementById('openModal').addEventListener('click', () => {
+  document.getElementById('quotaOverlay').classList.add('show');
 });
 document.getElementById('closeModal').addEventListener('click', () => {
   document.getElementById('quotaOverlay').classList.remove('show');
@@ -541,14 +584,15 @@ document.getElementById('quotaOverlay').addEventListener('click', e => {
   if (e.target === document.getElementById('quotaOverlay'))
     document.getElementById('quotaOverlay').classList.remove('show');
 });
+document.getElementById('stripeBtn').addEventListener('click', handleStripeCheckout);
 
-// ── Analizar ─────────────────────────────────────────────────────────────────
+/* ─── Analizar ────────────────────────────────────────────────────────────── */
 
 function doAnalyze() {
   const text = document.getElementById('textInput').value;
   if (!text.trim()) return;
 
-  if (!hasLicense() && getUsed() >= FREE_LIMIT) {
+  if (!hasLicense() && getUsed() >= CONFIG.FREE_LIMIT) {
     document.getElementById('quotaOverlay').classList.add('show');
     return;
   }
@@ -565,11 +609,9 @@ function doAnalyze() {
 }
 
 document.getElementById('processBtn').addEventListener('click', doAnalyze);
-
 document.getElementById('textInput').addEventListener('keydown', e => {
   if (e.ctrlKey && e.key === 'Enter') doAnalyze();
 });
-
 document.getElementById('fileInput').addEventListener('change', function () {
   const f = this.files[0];
   if (!f) return;
@@ -582,7 +624,7 @@ document.getElementById('fileInput').addEventListener('change', function () {
   reader.readAsText(f);
 });
 
-// ── Copiar ────────────────────────────────────────────────────────────────────
+/* ─── Copiar / Limpiar ────────────────────────────────────────────────────── */
 
 document.getElementById('copyBtn').addEventListener('click', () => {
   const t = document.getElementById('textInput').value;
@@ -592,9 +634,6 @@ document.getElementById('copyFlagged').addEventListener('click', () => {
   const t = document.getElementById('textOutput').value;
   if (t) navigator.clipboard.writeText(t).catch(() => {});
 });
-
-// ── Limpiar ───────────────────────────────────────────────────────────────────
-
 document.getElementById('clearBtn').addEventListener('click', () => {
   ['textInput','textOutput'].forEach(id => document.getElementById(id).value = '');
   document.getElementById('flagsList').innerHTML =
@@ -606,9 +645,9 @@ document.getElementById('clearBtn').addEventListener('click', () => {
   document.getElementById('fileInput').value = '';
 });
 
-// ── Init ──────────────────────────────────────────────────────────────────────
+/* ─── Init ────────────────────────────────────────────────────────────────── */
 updateQuotaUI();
-initStripe();
+initModal();
 </script>
 </body>
 </html>
