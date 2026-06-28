@@ -270,8 +270,10 @@ modeSelect.addEventListener("change", e => {
 
 // ── Stripe / Pagos (para versión Pro futura) ────────────────────────────────
 
-const STRIPE_PUBLISHABLE_KEY = 'pk_test_REPLACE_WITH_YOUR_STRIPE_PUBLISHABLE_KEY';
-const STRIPE_PRICE_ID_FACTCHECK_PRO = 'price_REPLACE_WITH_FACTCHECK_PRO_PRICE_ID';
+const STRIPE_PUBLISHABLE_KEY = 'pk_live_51TDDcuBzItJPECbixDW4Plfh5kGfRLmYG4euKeWdecq2zWifXfMgfqTB4ihoHYvF7pNgOrreKRvxQa1FiBL0GPNb0093PqvBvA';
+const STRIPE_PRICE_ID_FACTCHECK_PRO = 'price_1TnCk1BzItJPECbis1ZJqjMJ';
+// Payment link directo (sin backend) — factcheck pro:
+const STRIPE_PAYMENT_LINK_FACTCHECK_PRO = 'https://buy.stripe.com/14A4gyctp2niarR1oDfbq02';
 
 let stripe = null;
 
